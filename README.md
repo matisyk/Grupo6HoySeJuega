@@ -55,3 +55,8 @@ https://www.booking.com/
 https://e-desk.net/ 
 
 Integrantes del equipo:
+
+- Franco García:
+  -> Tengo 28 años, soy de Mendoza, pero actualmente vivo en Bs As y trabajoo en el casino de Tigre, en el área técnica en la video vigilancia y seguridad.
+  -> Me gusta aprender y aplicar ese conocimiento en lo que quiero formular. Suelo ser persistent y tratar de cumplir mis proyectos, con subidas y bajadas, como dijo Yoda: "Do it or not, but dont try"
+  -> Respecto a la programación me gusta el backend y lo que tiene qu ver con la experiencia del usuario (UX).  
