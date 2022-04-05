@@ -60,3 +60,8 @@ Integrantes del equipo:
   -> Tengo 28 años, soy de Mendoza, pero actualmente vivo en Bs As y trabajoo en el casino de Tigre, en el área técnica en la video vigilancia y seguridad.
   -> Me gusta aprender y aplicar ese conocimiento en lo que quiero formular. Suelo ser persistent y tratar de cumplir mis proyectos, con subidas y bajadas, como dijo Yoda: "Do it or not, but dont try"
   -> Respecto a la programación me gusta el backend y lo que tiene qu ver con la experiencia del usuario (UX).  
+  
+- Clara Dardanelli:
+  -> Tengo 27 años, soy de CABA. 
+  -> Soy muy detallista, y me gusta entender la lógica de las cosas. La verdad que facilmente me "bajoneo" pero si me gusta tirar para adelante y me siento bien cuando las cosas salen. 
+  -> Siempre me dio curiosidad explorar más la parte de diseño y lo que sería el front end, quizás algún día haga algo más sobre eso, pero por el momento quisiera ver todo el panorama ya que me veo reflejada en cosas de ambas tareas.
