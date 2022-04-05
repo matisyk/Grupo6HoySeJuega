@@ -1,7 +1,8 @@
 # Grupo6HoySeJuega
 Es una pagina web destinada a la reserva de canchas de diferentes deportes. 
 Se pueden crear los perfiles Jugador, Equipo y Cancha.
-El objetivo es garantizarle a las canchas que las reservas no se perderán y a personas con intención de realizar un deporte en equipo como hobby puedan alquilar canchas que se encuentren disponibles.
+El objetivo es la triangulación de canchas disponibles a equipos y jugadores que tengan la intención de realizar un deporte en equipo como hobby puedan alquilar canchas.
+El publico al que se apunta es a cualquier persona que quiera facilitar la gestión de reservas de canchas y jugadores. 
 
 Perfil Jugador: debe registrarse y especificar:
 - *Nombre, apellido y edad
@@ -65,3 +66,8 @@ Integrantes del equipo:
   -> Tengo 27 años, soy de CABA. 
   -> Soy muy detallista, y me gusta entender la lógica de las cosas. La verdad que facilmente me "bajoneo" pero si me gusta tirar para adelante y me siento bien cuando las cosas salen. 
   -> Siempre me dio curiosidad explorar más la parte de diseño y lo que sería el front end, quizás algún día haga algo más sobre eso, pero por el momento quisiera ver todo el panorama ya que me veo reflejada en cosas de ambas tareas.
+  
+  - Camila Borzillo
+  -> Tengo 24 años, soy de CABA. 
+  -> No tengo experiencia previa en programación, pero si en analisis de datos. Pero creo que me gusta más el front end y lo relacionado al UX.  
+  -> Siempre estoy interesada en aprender cosas nuevas y soy responsable con las actividades que hago. 
