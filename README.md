@@ -71,3 +71,8 @@ Integrantes del equipo:
   -> Tengo 24 años, soy de CABA. 
   -> No tengo experiencia previa en programación, pero si en analisis de datos. Pero creo que me gusta más el front end y lo relacionado al UX.  
   -> Siempre estoy interesada en aprender cosas nuevas y soy responsable con las actividades que hago. 
+
+- Jorge Mejias:
+  -> Soy de Venezuela, actualmente vivo en Argentina (Capital Federal) y trabajo en una estacion de servicio Shell (Experto). Tengo 24 años y soy TSU en Ing Informatica.
+  -> Siempre he sido afin a todas las areas de la informatica he estudiado un poco de todo pero lo que mas me apasiona y por lo que estoy aca es la programacion.
+  -> Mi objetivo en este curso es conseguir las herramientas para desarrollarme en el ambito profesional y poder ejercer.
