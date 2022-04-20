@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Formulario de datos</title>
+
+  <!--=====================================
+	PLUGINS DE CSS
+	======================================-->
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/formularioDatosJugador.css">
+
+</head>
+
+<body>
+  <div class="d-flex justify-content-center text-center">
+    <form class="p-5 bg-light" method="post">
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="nombre">Nombre:</label>
+          <input type="text" class="form-control" id="nombre" name="registroNombre">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="apellido">Apellido:</label>
+          <input type="text" class="form-control" id="apellido" name="registroApellido">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="edad">Edad:</label>
+          <input type="number" class="form-control" id="edad" name="registroEdad" step="any">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="telefono">Telefono:</label>
+          <input type="number" class="form-control" id="telefono" name="registroTelefono">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="telefono2">Contacto de emergencia:</label>
+          <input type="number" class="form-control" id="telefono2" name="registroTelefono2">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div>
+          <label for="deporte">Deporte que juego:</label>
+          <select name="posicion" id="deporte" name="registroDeDeporte">
+            <option value="0">-</option>
+            <option value="1">Futbol</option>
+          </select>
+          <select name="posicion" id="deporte2" name="registroDeDeporte2">
+            <option value="0">-</option>
+            <option value="1">Paddle</option>
+          </select>
+          <select name="posicion" id="deporte3" name="registroDeDeporte3">
+            <option value="0">-</option>
+            <option value="1">Basquet</option>
+          </select>
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="ubicacionJ">Zona de juego:</label>
+          <input type="text" class="form-control" id="ubicacionJ" name="registroUbicacionJ">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="dias">Dias para jugar:</label>
+          <select name="dias" id="dias" name="registroDeDias">
+            <option value="0">-</option>
+            <option value="1">Lunes</option>
+          </select>
+          <select name="dias" id="dias" name="registroDeDias1">
+            <option value="0">-</option>
+            <option value="1">Martes</option>
+          </select>
+          <select name="dias" id="dias" name="registroDeDias2">
+            <option value="0">-</option>
+            <option value="1">Miercoles</option>
+          </select>
+          <select name="dias" id="dias" name="registroDeDias3">
+            <option value="0">-</option>
+            <option value="1">Jueves</option>
+          </select>
+          <select name="dias" id="dias" name="registroDeDias4">
+            <option value="0">-</option>
+            <option value="1">Viernes</option>
+          </select>
+          <select name="dias" id="dias" name="registroDeDias5">
+            <option value="0">-</option>
+            <option value="1">Sabados</option>
+          </select>
+          <select name="dias" id="dias" name="registroDeDias6">
+            <option value="0">-</option>
+            <option value="1">Domingos</option>
+          </select>
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="horarios">Horarios para jugar:</label>
+          <input type="time" class="form-control" id="horarios" name="registroHorarios">
+          <input type="time" class="form-control" id="horarios" name="registroHorarios2">
+          <input type="time" class="form-control" id="horarios" name="registroHorarios3">
+          <input type="time" class="form-control" id="horarios" name="registroHorarios4">
+          <input type="time" class="form-control" id="horarios" name="registroHorarios5">
+          <input type="time" class="form-control" id="horarios" name="registroHorarios6">
+          <input type="time" class="form-control" id="horarios" name="registroHorarios7">
+        </div>
+      </div>
+      <!--=====================================-->
+      <div class="form-group">
+        <div class="input-group">
+          <label for="autoValoracion">Auto valoración:</label>
+          <select name="autovaloracion" id="autoValoracion" name="registroAutoValoracion">
+            <option value="0">-</option>
+            <option value="1">Estrella</option>
+            <option value="2">Copadito</option>
+            <option value="3">Me defiendo</option>ç
+          </select>
+        </div>
+        <br>
+        <!--=====================================-->
+        <div class="form-group">
+          <div>
+            <form name="subida-imagenes" type="POST" enctype="multipart/formdata">
+              <input type="file" name="imagen1" />
+              <input type="submit" name="subir-imagen" value="Cargar foto de perfil" class="btn btn-primary" />
+            </form>
+          </div>
+          <br>
+          <div>
+            <button type="submit" class="btn btn-primary">Registrar datos</button>
+          </div>
+          <br>
+          <div class="alert alert-success">Gracias! Hora de jugar</div>
+
+    </form>
+
+  </div>
+
+
+</body>
