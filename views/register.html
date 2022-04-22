@@ -14,7 +14,7 @@
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../public/css/register.css">
+  <link rel="stylesheet" href="register.css">
 
 </head>
 
@@ -28,15 +28,19 @@
       <ul class="nav nav-justified py-2 nav-pills">
 
         <li class="nav-item">
-          <a class="nav-link active" href="../views/register.html">Registrarse</a>
+          <a class="nav-link active" href="register.html">Registrarse</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="../views/login.html">Ingresar</a>
+          <a class="nav-link" href="login.html">Ingresar</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="../views/index.html">Inicio</a>
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#">Salir</a>
         </li>
 
       </ul>
@@ -117,27 +121,39 @@
           </div>
 
         </div>
-        <div>
+        <!--  <div>
           <select name="menu">
             <option value="0">Jugador</option>
             <option value="1"> Dueño de Cancha</option>
           </select>
         </div>
-        <br>
         <div>
-          <button type="submit" class="btn btn-primary" >Registrar datos primarios</button>
+          <button type="submit" class="btn btn-primary">Registrar Jugador</button>
         </div>
         <br>
-        <div class="alert alert-success">El usuario ha sido registrado</div>
+        <div>
+          <button type="submit" class="btn btn-primary">Registrar Dueño de cancha</button>
+        </div>-->
+
         <br>
         <div class="container-fluid  bg-light">
           <div class="container">
             <ul class="nav nav-justified py-2 nav-pills">
               <li class="nav-item">
-                <a class="nav-link active" href="../views/formularioDatosJugador.html">Siguiente</a>
+                <a class="nav-link active" href="../views/formularioDatosJugador.html">Registrar Jugador</a>
+              </li>
+
+              <li class="nav-item" style="margin-left: 10px;">
+                <a class="nav-link active" href="../views/formularioDatosCancha.html">Registrar cancha</a>
               </li>
             </ul>
           </div>
+        </div>
+        <br>
+        <div class="alert alert-success">
+          El usuario ha sido registrado
+        </div>
+      </div>
     </form>
 
   </div>
