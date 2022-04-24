@@ -14,37 +14,63 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!--=====================================
 	PLUGINS DE JS
 	======================================-->
-  <link rel="stylesheet" href="../public/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
+  
+  <script>
+    function openNav() {
+      document.getElementById("menu").style.display = "block";
+    }
+
+    function closeNav() {
+      document.getElementById("menu").style.display = "none";
+    }
+  </script>
 </head>
 
 <body>
-  <!--=====================================
-CABECERA
-======================================-->
+
   <header class="main-header">
-
-    <div>
-
-      <div>
-        <img src="../public/img/logo.png" alt="Logo de se juega?" class="logo">
-        <ul class="nav nav-justified py-2 copy-header nav-pills ">
-
-          <li class="nav-item">
-            <a class="nav-link active b1" href="../views/register.html">Registrarse</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active b2" href="../views/login.html">Iniciar sesion</a>
-          </li>
-
-        </ul>
-
+    <div id="menu" class="menu">
+      <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+      <div class="menu-cont">
+        <a class="nav-link" href="../views/login.html">Iniciar sesion</a>
+        <a class="nav-link" href="../views/register.html">Registrarse</a>
+        <a href="#">Sobre Nosotros</a>
+        <a href="#">Contacto de desarrollo</a>
       </div>
-
     </div>
-    
+    <div class="copy-header">
+      <img src="../public/img/logo-nuevo.png" alt="Logo de se juega?" class="logo">
+      <img src="../public/img/slide2.jpg" class="rounded" alt="Slide" class="slide">
+      <span class="menu-font" onclick="openNav()">&#9776;</span>
+    </div>
+  </header>
+<br>
+  <footer>
+
+    Esto de acá abajo es el footor
+
+    <div class="redes">
+      <i class="fa-brands fa-instagram"></i>
+      <br>
+      <i class="fa-brands fa-facebook"></i>
+      <br>
+      <i class="fa-brands fa-whatsapp"></i>
+      <br>
+      <i class="fa-regular fa-envelope"></i>
+      <br>
+      <i class="fa-solid fa-screwdriver-wrench"></i>
+    </div>
+
+
+
+
+  </footer>
+
 </body>
 
 </html>
