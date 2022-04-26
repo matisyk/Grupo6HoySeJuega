@@ -180,4 +180,12 @@ button:active {
     transform: translateY(-0.1em);
   }
 }
+.volver{
+  background-color: rgba(255, 0, 0, 0.721);
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 850px;
+  align-items: flex-end;
+  font-size: 10px
+}
 
