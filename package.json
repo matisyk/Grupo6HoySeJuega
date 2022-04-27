@@ -18,6 +18,7 @@
   "homepage": "https://github.com/cborzillo/Grupo6HoySeJuega#readme",
   "dependencies": {
     "@waaark/luge": "^0.6.7-beta",
+    "express": "^4.18.0",
     "nodemodule": "^0.3.0"
   }
 }
