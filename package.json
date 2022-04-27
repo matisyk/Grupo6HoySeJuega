@@ -1,0 +1,22 @@
+{
+  "name": "grupo6hoysejuega-13.37.55",
+  "version": "1.0.0",
+  "description": "Es una pagina web destinada a la reserva de canchas de diferentes deportes.  Se pueden crear los perfiles Jugador, Equipo y Cancha. El objetivo es la triangulación de canchas disponibles a equipos y jugadores que tengan la intención de realizar un deporte en equipo como hobby puedan alquilar canchas. El publico al que se apunta es a cualquier persona que quiera facilitar la gestión de reservas de canchas y jugadores.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cborzillo/Grupo6HoySeJuega.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cborzillo/Grupo6HoySeJuega/issues"
+  },
+  "homepage": "https://github.com/cborzillo/Grupo6HoySeJuega#readme",
+  "dependencies": {
+    "nodemodule": "^0.3.0"
+  }
+}
