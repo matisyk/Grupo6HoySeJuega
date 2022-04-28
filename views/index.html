@@ -9,7 +9,7 @@
 
   <!-- PLUGINS DE CSS -->
 
-  <link href="../public/css/style.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,40 +18,28 @@
   <!--=====================================
 	PLUGINS DE JS
 	======================================-->
-  <link rel="stylesheet" href="/path/to/luge.css">
-  <script src="/path/to/luge.js"></script>
-  
   <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-  <script>
-    function openNav() {
-      document.getElementById("menu").style.display = "block";
-    }
-
-    function closeNav() {
-      document.getElementById("menu").style.display = "none";
-    }
-  </script>
 </head>
 
 <body>
-
   <header class="main-header">
-    <div id="menu" class="menu">
-      <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
-      <div class="menu-cont">
-        <a href="./login.html">Iniciar sesion</a>
-        <a href="./register.html">Registrarse</a>
-        <a href="./sobreNosotros.html">Sobre Nosotros</a>
-        <a href="#">Contacto de desarrollo</a>
+    <div class="menu">
+      <div class="copy-header">
+        <img src="/img/logo-nuevo2.jpg" alt="Logo de se juega?" class="logo">
+        <div class="menu-cont">
+          <a class="txtNav1" href="./login">Iniciar sesion</a>
+          <a class="txtNav2" href="./register">Registrarse</a>
+          <a class="txtNav3" href="./sobreNosotros">Sobre Nosotros</a>
+          <a class="txtNav4" href="#">Contacto de desarrollo</a>
+        </div>
       </div>
     </div>
-    <div class="copy-header">
-      <img src="../public/img/logo-nuevo.png" alt="Logo de se juega?" class="logo">
-      <img src="../public/img/slide2.jpg" class="rounded" alt="Slide" class="slide">
-      <span class="menu-font" onclick="openNav()">&#9776;</span>
-    </div>
   </header>
+  
+  <div class="wrapper">wrapper, aquí va el contenido. HAZ SCROLL, VERÁS QUE NO HACE SALTO</div>
+
   <br>
   <footer>
 
@@ -81,11 +69,9 @@
       <li><i class="fa-solid fa-screwdriver-wrench"></i></li>
     </ul>
 
-
-
-
   </footer>
 
+  <script src="/js/menuScroll.js"></script>
 </body>
 
 </html>
