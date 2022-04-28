@@ -10,6 +10,7 @@
   <!-- PLUGINS DE CSS -->
 
   <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/jdSlider.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,7 +21,9 @@
 	======================================-->
   <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+  <!-- jdSlider -->
+  <!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+  <script src="/js/jdSlider.js"></script>
 </head>
 
 <body>
@@ -38,37 +41,32 @@
     </div>
   </header>
 
-  <div id=“slide” class=“row”>
+  <div class="container-fluid p-0">
+    <section class="jd-slider slideshow">
+      <div class="slide-inner">
+        <ul class="slide-area">
+          <li>
+            <img src="/img/baner/slide01.jpg">
+          </li>
+          <li>
+            <img src="/img/baner/slide02.jpg">
+          </li>
+          <li>
+            <img src="/img/baner/slide03.jpg">
+          </li>
+          <li>
+            <img src="/img/baner/slide04.jpg">
+          </li>
+        </ul>
+      </div>
 
-    <ul>
-
-      <li>
-        <img src="img/baner/slide01.jpg" class="img-banner">
-      </li>
-
-      <!---
-      <li>
-        <img src="img/baner/slide02.jpg">
-      </li>
-      <li>
-        <img src="img/baner/slide03.jpg">
-      </li>
-      <li>
-        <img src="img/baner/slide04.jpg">
-      </li>
-    </ul>-->
-      <!--<ol id="paginacion">
-
-      <li item="1"><span class="fa fa-circle"></span></li>
-      <li item="2"><span class="fa fa-circle"></span></li>
-      <li item="3"><span class="fa fa-circle"></span></li>
-      <li item="4"><span class="fa fa-circle"></span></li>
-    </ol>
-    <div class="flechas" id="retroceder"><span class="fa fa-chevron-left"></span></div>
-    <div class="flechas" id="avanzar"><span class="fa fa-chevron-right"></span></div>-->
-
-
-
+      <a class="prev" href="#">
+        <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+      </a>
+      <a class="next" href="#">
+        <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
+      </a>
+    </section>
 
   </div>
 
@@ -76,13 +74,13 @@
 
     <div class="jugador-home">
       <p> Si sos jugador puedes:
-      <ol>
-        <li>Armar tu perfil de jugador</li>
-        <li>Informar o sumarte a un equipo</li>
-        <li>Encontrar tu cancha</li>
-        <li>Y a jugar!!!</li>
+        <ol>
+          <li>Armar tu perfil de jugador</li>
+          <li>Informar o sumarte a un equipo</li>
+          <li>Encontrar tu cancha</li>
+          <li>Y a jugar!!!</li>
 
-      </ol>
+        </ol>
       </p>
       <div class="imagen-home imagen-jugador">
 
@@ -94,11 +92,11 @@
 
     <div class="cancha-home">
       <p>Si sos dueño de cancha puedes:
-      <ol>
-        <li>Registrar tu cancha</li>
-        <li>Ofrecer tus servicios</li>
-        <li>Crear torneos</li>
-      </ol>
+        <ol>
+          <li>Registrar tu cancha</li>
+          <li>Ofrecer tus servicios</li>
+          <li>Crear torneos</li>
+        </ol>
       </p>
 
       <div class="imagen-home2 imagen-cancha"><img src="/img/cancha-home.jpg" alt="imagen-cancha"></div>
@@ -141,8 +139,8 @@
     </ul>
 
   </footer>
-  <script src="/js/slide/slide.js"></script>
-  <script src="/js/menuScroll.js"></script>
+  <script src="/js/script.js"></script>
+  <script src="/menuScroll.js"></script>
 </body>
 
 </html>
