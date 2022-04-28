@@ -184,6 +184,7 @@ html {
   text-align: center;
   position: fixed;
   z-index: 10;
+  margin-bottom: 500px;
 }
 
 .wrapper {
@@ -215,13 +216,20 @@ SLIDESHOW
 	top:85%;
 	text-shadow:0px 0px 5px black;
 }
+body{ background-image:url(/img/blue-background.webp) ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
 
 .main-home {
   display: flex;
   position: relative;
   justify-content: flex-start;
-  margin: 20px;
-
+  margin: 40px;
+  color:white;
 }
 
 .main-home ol li {
@@ -244,13 +252,13 @@ SLIDESHOW
 
 .img-publicidad1 {
   position: absolute;
-  left: 1300px
+  left: 1280px
 }
 
 .img-publicidad2 {
   position: absolute;
-  left: 1300px;
-  top: 250px
+  left: 1280px;
+  top: 310px
 }
 
 .imagen-home {
@@ -264,14 +272,14 @@ SLIDESHOW
 }
 
 .imagen-home2 {
-  width: 190px;
-  height: 130px;
+  width: 220px;
+  height: 150px;
   border-radius: 30px;
   background: #fff;
   box-shadow: 15px 15px 30px #bebebe,
     -15px -15px 30px #ffffff;
   border: solid black 1px;
-  margin-top: 50px
+  margin-top: 48px
 }
 
 .imagen-jugador img {
@@ -284,7 +292,7 @@ SLIDESHOW
 }
 
 .imagen-cancha img {
-  width: 170px;
+  width: 200px;
   display: block;
   margin: 7px 8px;
   background-position: center;
@@ -298,4 +306,9 @@ SLIDESHOW
 
 .jugador-home{
   margin-left: 80px;
+}
+
+.titulo-home{
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
 }
