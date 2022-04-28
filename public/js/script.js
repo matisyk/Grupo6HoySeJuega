@@ -7,3 +7,4 @@ $('.slideshow').jdSlider({
 	isCursor:true //Pausar animación con el mouse
 
 });
+

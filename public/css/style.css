@@ -182,6 +182,8 @@ html {
   background: linear-gradient(to right, rgb(35, 35, 35), rgb(246, 211, 211), rgb(255, 255, 255));
   color: white;
   text-align: center;
+  position: fixed;
+  z-index: 10;
 }
 
 .wrapper {
