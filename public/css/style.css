@@ -171,8 +171,7 @@ html {
 .fixed {
   position: fixed;
   top: 0;
-<<<<<<< HEAD
-=======
+
 }
 /*=============================================
 SLIDESHOW
@@ -264,5 +263,5 @@ SLIDESHOW
 #slide ul li .textoSlide h3{
 	background: rgba(0,0,0,.5);
 	padding-bottom:10px;
->>>>>>> 35477fc7a4cd0fb9ce79eca0649114507773c050
+
 }
