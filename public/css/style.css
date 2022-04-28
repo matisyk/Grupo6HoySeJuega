@@ -42,13 +42,6 @@ HEADER
   color: #000000;
 }
 
-.menu .close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  font-size: 48px;
-}
-
 .txtNav1 {
   margin-left: 10px;
   border: solid 2px rgb(137, 148, 165);
@@ -85,13 +78,6 @@ HEADER
   background-size: cover;
 }
 
-.menu-font {
-  font-size: 80px;
-  cursor: pointer;
-  display: flex;
-  justify-content: start;
-  color: rgb(188, 22, 22);
-}
 
 .logo {
   width: 25.5%;
@@ -103,15 +89,10 @@ HEADER
   margin: 0;
 }
 
-.slide {
-  width: 50%;
-}
-
 .copy-header {
   display: flex;
   justify-content: start;
   width: 100%;
-
   transition: 2s;
   cursor: pointer;
 }
@@ -120,7 +101,7 @@ HEADER
   font-size: 30px;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background: linear-gradient(to right, red, orange, yellow, green, blue);
   width: 100%;
 }
 
@@ -183,7 +164,7 @@ html {
   color: white;
   text-align: center;
   position: fixed;
-  z-index: 10;
+  z-index: 1;
   margin-bottom: 500px;
 }
 
@@ -191,12 +172,6 @@ html {
   height: 2000px;
   width: 100%;
   padding-top: 20px;
-}
-
-.fixed {
-  position: fixed;
-  top: 0;
-
 }
 
 /*=============================================
@@ -252,13 +227,14 @@ body{ background-image:url(/img/blue-background.webp) ;
 
 .img-publicidad1 {
   position: absolute;
-  left: 1280px
+  left: 1200px;
+  bottom: 55px;
 }
 
 .img-publicidad2 {
   position: absolute;
-  left: 1280px;
-  top: 310px
+  left: 1200px;
+  top: 275px;
 }
 
 .imagen-home {
