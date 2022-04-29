@@ -7,6 +7,15 @@
   box-sizing: border-box;
 }
 
+
+body{ background-image:url(/img/probando-fondo-2.png) ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  
+}
+
 /*=============================================
 HEADER
 =============================================
@@ -17,6 +26,26 @@ HEADER
   background-attachment: fixed;
   background-size: cover;
 }*/
+
+.header {
+  border-top: 1px solid white;
+  background: white;
+  color: #333;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+
+.menu {
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(to right, rgb(35, 35, 35), rgb(246, 211, 211), rgb(255, 255, 255));
+  color: white;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  margin-bottom: 500px;
+}
 
 .menu-cont {
   display: flex;
@@ -34,12 +63,29 @@ HEADER
   font-size: 28px;
   text-decoration: none;
   transition: 1s;
-
 }
 
 .menu a:hover,
 .menu a:focus {
   color: #000000;
+}
+
+.copy-header {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  transition: 2s;
+  cursor: pointer;
+}
+
+.logo {
+  width: 25.5%;
+  display: flex;
+  align-items: start;
+  border: solid 1px rgb(0, 0, 0);
+  border-radius: 0 30px 30px 0;
+  padding: 0px 0px;
+  margin: 0;
 }
 
 .txtNav1 {
@@ -78,24 +124,143 @@ HEADER
   background-size: cover;
 }
 
-
-.logo {
-  width: 25.5%;
-  display: flex;
-  align-items: start;
-  border: solid 1px rgb(0, 0, 0);
-  border-radius: 0 30px 30px 0;
-  padding: 0px 0px;
-  margin: 0;
-}
-
-.copy-header {
-  display: flex;
-  justify-content: start;
+.wrapper {
+  height: 2000px;
   width: 100%;
-  transition: 2s;
-  cursor: pointer;
+  padding-top: 20px;
 }
+
+/*=============================================
+SLIDESHOW
+=============================================*/
+
+.slide-area li{
+	position: relative;
+}
+
+.slide-text{
+	position: absolute;
+	color:#fff;
+	width:70%;
+	text-align:center;
+	left:50%;
+	transform: translate(-50%, -50%);
+	top:85%;
+	text-shadow:0px 0px 5px black;
+}
+
+
+/*----MAIN----*/
+
+
+.main-home {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  margin: 40px;
+  color:white;
+  opacity: 75%;
+}
+
+.titulito-home{
+  font-family: 'Bangers', cursive;
+  font-size: 30px;
+}
+
+.main-home ol li {
+  list-style-type: decimal;
+  list-style-position: inside;
+  font-family: 'Kalam', cursive;
+  font-size: 20px;
+}
+
+.jugador-home{
+  margin-left: 80px;
+}
+
+.imagen-jugador-fondo {
+  width: 260px;
+  border-radius: 30px;
+  background: rgb(7, 7, 49);
+  box-shadow: 10px 10px 30px black,
+    -10px -10px 30px black;
+  border: solid black 1px;
+  margin-top: 50px;
+  margin-left: 5px;
+   display: flex;
+}
+
+.jugador{
+  width:300px
+}
+.imagen-jugador img{
+  width: 140px;
+  border-radius: 100px;
+  background: rgb(7, 7, 49);
+  border: solid 2px gray;
+  display: block;
+  margin: 8px;
+  padding: 5px;
+}
+
+.datos-lucas{
+  font-family: 'Kalam', cursive;
+  margin: 15px 5px;
+}
+
+.cita-lucas{
+  margin-top: 10px;
+font-size: 10px;
+}
+
+.cancha-home {
+  margin-left: 350px
+}
+
+.imagen-cancha-fondo {
+  width: 220px;
+  height: 150px;
+  border-radius: 30px;
+  background: #fff;
+  box-shadow: 10px 10px 30px black,
+    -10px -10px 30px black;
+  border: solid black 1px;
+  margin-top: 48px
+}
+
+.imagen-cancha img {
+  width: 200px;
+  display: block;
+  margin: 7px 8px;
+  background-position: center;
+  border-radius: 20px;
+}
+
+
+.publicidades {
+  flex-direction: column;
+
+}
+
+.publicidades img {
+  width: 200px;
+}
+
+.img-publicidad1 {
+  position: absolute;
+  left: 1200px;
+  bottom: 55px;
+}
+
+.img-publicidad2 {
+  position: absolute;
+  left: 1200px;
+  top: 275px;
+}
+
+
+/*----FOOTER----*/
+
 
 .redes {
   font-size: 30px;
@@ -140,151 +305,4 @@ HEADER
 
 .fa-screwdriver-wrench {
   background-color: #000000;
-}
-
-body,
-html {
-  margin: 0;
-  padding: 0;
-}
-
-.header {
-  border-top: 1px solid white;
-  background: white;
-  color: #333;
-  height: 150px;
-  width: 100%;
-  text-align: center;
-}
-
-.menu {
-  height: 80px;
-  width: 100%;
-  background: linear-gradient(to right, rgb(35, 35, 35), rgb(246, 211, 211), rgb(255, 255, 255));
-  color: white;
-  text-align: center;
-  position: fixed;
-  z-index: 1;
-  margin-bottom: 500px;
-}
-
-.wrapper {
-  height: 2000px;
-  width: 100%;
-  padding-top: 20px;
-}
-
-/*=============================================
-SLIDESHOW
-=============================================*/
-.slide-area li{
-	position: relative;
-}
-
-.slide-text{
-	position: absolute;
-	color:#fff;
-	width:70%;
-	text-align:center;
-	left:50%;
-	transform: translate(-50%, -50%);
-	top:85%;
-	text-shadow:0px 0px 5px black;
-}
-body{ background-image:url(/img/blue-background.webp) ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  
-}
-
-.main-home {
-  display: flex;
-  position: relative;
-  justify-content: flex-start;
-  margin: 40px;
-  color:white;
-}
-
-.main-home ol li {
-  list-style-type: decimal;
-  list-style-position: inside;
-}
-
-.img-banner {
-  width: 100vw;
-}
-
-.publicidades {
-  flex-direction: column;
-
-}
-
-.publicidades img {
-  width: 200px;
-}
-
-.img-publicidad1 {
-  position: absolute;
-  left: 1200px;
-  bottom: 55px;
-}
-
-.img-publicidad2 {
-  position: absolute;
-  left: 1200px;
-  top: 275px;
-}
-
-.imagen-home {
-  width: 170px;
-  height: 154px;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 15px 15px 30px #bebebe,
-    -15px -15px 30px #ffffff;
-  border: solid black 1px;
-}
-
-.imagen-home2 {
-  width: 220px;
-  height: 150px;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 15px 15px 30px #bebebe,
-    -15px -15px 30px #ffffff;
-  border: solid black 1px;
-  margin-top: 48px
-}
-
-.imagen-jugador img {
-  width: 140px;
-  display: block;
-  margin: auto;
-  background-position: center;
-  padding-top: 5px;
-  border-radius: 20px;
-}
-
-.imagen-cancha img {
-  width: 200px;
-  display: block;
-  margin: 7px 8px;
-  background-position: center;
-  border-radius: 20px;
-}
-
-
-.cancha-home {
-  margin-left: 350px
-}
-
-.jugador-home{
-  margin-left: 80px;
-}
-
-.titulo-home{
-  font-family: 'Bangers', cursive;
-  font-size: 30px;
 }
