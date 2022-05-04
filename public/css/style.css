@@ -13,7 +13,6 @@ body{ background-image:url(/img/probando-fondo-2.png) ;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  
 }
 
 /*=============================================
@@ -27,12 +26,12 @@ HEADER
   background-size: cover;
 }*/
 
-.header {
+header {
   border-top: 1px solid white;
   background: white;
   color: #333;
-  height: 150px;
-  width: 100%;
+  height: 80px;
+  width: 100vw;
   text-align: center;
 }
 
@@ -48,7 +47,7 @@ HEADER
 }
 
 .menu-cont {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
@@ -60,7 +59,7 @@ HEADER
   padding: 8px;
   color: #000000;
   display: block;
-  font-size: 28px;
+  font-size: 20px;
   text-decoration: none;
   transition: 1s;
 }
@@ -158,7 +157,7 @@ SLIDESHOW
   position: relative;
   margin: 3%;
   color:white;
-  opacity: 75%;
+  
 }
 
 .titulito-home{
@@ -177,24 +176,11 @@ SLIDESHOW
   width: 50%;
 }
 
-.imagen-jugador-fondo {
-  width: 200px;
-  border-radius: 30px;
-  background: rgb(7, 7, 49);
-  box-shadow: 10px 10px 30px black,
-    -10px -10px 30px black;
-  border: solid black 1px;
-  margin-top: 5px;
-  margin-left: 5px;
-   display: flex;
-}
-
 
 .imagen-jugador img{
   width: 100px;
   border-radius: 100px;
   background: rgb(7, 7, 49);
-  border: solid 2px gray;
   display: block;
   margin: 8px;
   padding: 5px;
@@ -216,23 +202,13 @@ SLIDESHOW
   width:50%
 }
 
-.imagen-cancha-fondo {
-  width: 220px;
-  height: 150px;
-  border-radius: 30px;
-  background: #fff;
-  box-shadow: 10px 10px 30px black,
-    -10px -10px 30px black;
-  border: solid black 1px;
-  margin-top: 48px
-}
-
 .imagen-cancha img {
-  width: 200px;
+  width: 180px;
   display: block;
   margin: 7px 8px;
   background-position: center;
   border-radius: 20px;
+
 }
 
 .publicidades{
@@ -293,33 +269,19 @@ SLIDESHOW
 
 
 @media (min-width: 425px){
-  .jugador-home{
-    margin-left: 5%;
-  }
+  .principal-home{
+   }
+ 
   
-  .imagen-jugador-fondo {
-    width: 260px;
-    border-radius: 30px;
-    background: rgb(7, 7, 49);
-    box-shadow: 10px 10px 30px black,
-      -10px -10px 30px black;
-    border: solid black 1px;
-    margin-top: 50px;
-    margin-left: 5px;
-     display: flex;
-  }
-  
-  .jugador{
-    width:300px
-  }
   .imagen-jugador img{
     width: 140px;
-    border-radius: 100px;
-    background: rgb(7, 7, 49);
-    border: solid 2px gray;
-    display: block;
-    margin: 8px;
-    padding: 5px;
+  }
+  
+  .imagen-cancha img{
+    width:200px
+  }
+  .cancha-home{
+    margin: 0;
   }
   
   .datos-lucas{
@@ -329,32 +291,7 @@ SLIDESHOW
   
   .cita-lucas{
     margin-top: 10px;
-  font-size: 10px;
   }
-  
-  .cancha-home {
-    margin-left: 20%
-  }
-  
-  .imagen-cancha-fondo {
-    width: 220px;
-    height: 150px;
-    border-radius: 30px;
-    background: #fff;
-    box-shadow: 10px 10px 30px black,
-      -10px -10px 30px black;
-    border: solid black 1px;
-    margin-top: 48px
-  }
-  
-  .imagen-cancha img {
-    width: 200px;
-    display: block;
-    margin: 7px 8px;
-    background-position: center;
-    border-radius: 20px;
-  }
-
 
   }
 
@@ -364,9 +301,12 @@ SLIDESHOW
     position: relative;
     margin: 40px;
     color:white;
-    opacity: 75%;
   }
   
+  .principal-home{
+    flex-direction: row;
+  }
+
   .titulito-home{
     font-family: 'Bangers', cursive;
     font-size: 30px;
@@ -377,22 +317,17 @@ SLIDESHOW
     list-style-position: inside;
     font-family: 'Kalam', cursive;
     font-size: 20px;
+    width: max-content;
   }
-  
+  .menu-cont{
+    display: flex;
+  }
+.menu-hamburguesa
+  {
+    display: none;
+  }
   .jugador-home{
     margin-left: 5%;
-  }
-  
-  .imagen-jugador-fondo {
-    width: 260px;
-    border-radius: 30px;
-    background: rgb(7, 7, 49);
-    box-shadow: 10px 10px 30px black,
-      -10px -10px 30px black;
-    border: solid black 1px;
-    margin-top: 50px;
-    margin-left: 5px;
-     display: flex;
   }
   
   .jugador{
@@ -400,55 +335,29 @@ SLIDESHOW
   }
   .imagen-jugador img{
     width: 140px;
-    border-radius: 100px;
-    background: rgb(7, 7, 49);
-    border: solid 2px gray;
-    display: block;
-    margin: 8px;
-    padding: 5px;
   }
   
+  .imagen-jugador{
+    display: flex;
+    flex-direction: row;
+  }
+
   .datos-lucas{
     font-family: 'Kalam', cursive;
-    margin: 15px 5px;
+    margin: 40px 5px;
   }
   
   .cita-lucas{
     margin-top: 10px;
-  font-size: 10px;
   }
   
   .cancha-home {
     margin-left: 50%
   }
-  
-  .imagen-cancha-fondo {
-    width: 220px;
-    height: 150px;
-    border-radius: 30px;
-    background: #fff;
-    box-shadow: 10px 10px 30px black,
-      -10px -10px 30px black;
-    border: solid black 1px;
-    margin-top: 48px
-  }
-  
-  .imagen-cancha img {
-    width: 200px;
-    display: block;
-    margin: 7px 8px;
-    background-position: center;
-    border-radius: 20px;
-  }
-  
-  
+
   .publicidades {
     flex-direction: column;
   
-  }
-  
-  .publicidades img {
-    width: 200px;
   }
   
   .img-publicidad1 {
