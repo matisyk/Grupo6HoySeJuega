@@ -39,6 +39,10 @@ app.get('/FormularioCancha', (req, res) => {
   res.sendFile(path.resolve("./views/formularioDatosCancha.html"))
 });
 
+app.get('/VistaCancha', (req, res) => {
+
+  res.sendFile(path.resolve("./views/vistaCancha.html"))
+});
 
 
 app.listen(8080, () => {
