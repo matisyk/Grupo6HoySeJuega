@@ -3,12 +3,13 @@
   padding: 0px;
   list-style: none;
   text-decoration: none;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   box-sizing: border-box;
 }
 
-
-body{ background-image:url(/img/probando-fondo-2.png) ;
+body {
+  background-image: url(/img/probando-fondo-2.png);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -38,7 +39,12 @@ header {
 .menu {
   height: 80px;
   width: 100%;
-  background: linear-gradient(to right, rgb(35, 35, 35), rgb(246, 211, 211), rgb(255, 255, 255));
+  background: linear-gradient(
+    to right,
+    rgb(35, 35, 35),
+    rgb(246, 211, 211),
+    rgb(255, 255, 255)
+  );
   color: white;
   text-align: center;
   position: fixed;
@@ -88,39 +94,39 @@ header {
 }
 
 .txtNav1 {
-  margin-left: 10px;
-  border: solid 2px rgb(137, 148, 165);
+  margin-left: 25px;
   border-radius: 30px;
-  background-color: rgb(54, 108, 200);
-  background-image: url(../img/fondoBotones1.jpg);
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   background-size: cover;
+  font-family: "Bangers", cursive;
 }
 
 .txtNav2 {
-  margin-left: 10px;
-  border: solid 2px rgb(137, 148, 165);
+  margin-left: 25px;
   border-radius: 30px;
-  background-color: rgb(54, 108, 200);
-  background-image: url(../img/fondoBotones2.jpg);
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   background-size: cover;
+  font-family: "Bangers", cursive;
 }
 
 .txtNav3 {
-  margin-left: 10px;
-  border: solid 2px rgb(137, 148, 165);
+  margin-left: 25px;
   border-radius: 30px;
-  background-color: rgb(54, 108, 200);
-  background-image: url(../img/fondoBotones3.jpg);
+  border: solid 2px rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
   background-size: cover;
+  font-family: "Bangers", cursive;
 }
 
 .txtNav4 {
-  margin-left: 10px;
-  border: solid 2px rgb(137, 148, 165);
+  margin-left: 25px;
+  border: solid 2px rgb(0, 0, 0);
   border-radius: 30px;
-  background-color: rgb(54, 108, 200);
-  background-image: url(../img/fondoBotones4.jpg);
+  background-color: rgb(255, 255, 255);
   background-size: cover;
+  font-family: "Bangers", cursive;
 }
 
 .wrapper {
@@ -133,51 +139,47 @@ header {
 SLIDESHOW
 =============================================*/
 
-.slide-area li{
-	position: relative;
+.slide-area li {
+  position: relative;
 }
 
-.slide-text{
-	position: absolute;
-	color:#fff;
-	width:70%;
-	text-align:center;
-	left:50%;
-	transform: translate(-50%, -50%);
-	top:85%;
-	text-shadow:0px 0px 5px black;
+.slide-text {
+  position: absolute;
+  color: #fff;
+  width: 70%;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 85%;
+  text-shadow: 0px 0px 5px black;
 }
-
 
 /*----MAIN----*/
-
 
 .principal-home {
   display: flex;
   position: relative;
   margin: 3%;
-  color:white;
-  
+  color: white;
 }
 
-.titulito-home{
-  font-family: 'Bangers', cursive;
+.titulito-home {
+  font-family: "Bangers", cursive;
   font-size: 30px;
 }
 
 .main-home ol li {
   list-style-type: decimal;
   list-style-position: inside;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
   font-size: 20px;
 }
 
-.jugador-home{
+.jugador-home {
   width: 50%;
 }
 
-
-.imagen-jugador img{
+.imagen-jugador img {
   width: 100px;
   border-radius: 100px;
   background: rgb(7, 7, 49);
@@ -186,20 +188,20 @@ SLIDESHOW
   padding: 5px;
 }
 
-.nombre-lucas{
-  font-family: 'Kalam', cursive;
+.nombre-lucas {
+  font-family: "Kalam", cursive;
   margin: 40px 5px;
 }
 
-.cita-lucas{
-  margin:0px;
+.cita-lucas {
+  margin: 0px;
   font-size: 10px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
 }
 
 .cancha-home {
   margin-left: 20%;
-  width:50%
+  width: 50%;
 }
 
 .imagen-cancha img {
@@ -208,10 +210,9 @@ SLIDESHOW
   margin: 7px 8px;
   background-position: center;
   border-radius: 20px;
-
 }
 
-.publicidades{
+.publicidades {
   display: flex;
 }
 
@@ -220,7 +221,6 @@ SLIDESHOW
 }
 
 /*----FOOTER----*/
-
 
 .redes {
   font-size: 30px;
@@ -267,105 +267,100 @@ SLIDESHOW
   background-color: #000000;
 }
 
+@media (min-width: 425px) {
+  .principal-home {
+  }
 
-@media (min-width: 425px){
-  .principal-home{
-   }
- 
-  
-  .imagen-jugador img{
+  .imagen-jugador img {
     width: 140px;
   }
-  
-  .imagen-cancha img{
-    width:200px
+
+  .imagen-cancha img {
+    width: 200px;
   }
-  .cancha-home{
+  .cancha-home {
     margin: 0;
   }
-  
-  .datos-lucas{
-    font-family: 'Kalam', cursive;
+
+  .datos-lucas {
+    font-family: "Kalam", cursive;
     margin: 15px 5px;
   }
-  
-  .cita-lucas{
+
+  .cita-lucas {
     margin-top: 10px;
   }
+}
 
-  }
-
-@media (min-width: 769px){
+@media (min-width: 769px) {
   .main-home {
     display: flex;
     position: relative;
     margin: 40px;
-    color:white;
+    color: white;
   }
-  
-  .principal-home{
+
+  .principal-home {
     flex-direction: row;
   }
 
-  .titulito-home{
-    font-family: 'Bangers', cursive;
+  .titulito-home {
+    font-family: "Bangers", cursive;
     font-size: 30px;
   }
-  
+
   .main-home ol li {
     list-style-type: decimal;
     list-style-position: inside;
-    font-family: 'Kalam', cursive;
+    font-family: "Kalam", cursive;
     font-size: 20px;
     width: max-content;
   }
-  .menu-cont{
+  .menu-cont {
     display: flex;
   }
-.menu-hamburguesa
-  {
+  .menu-hamburguesa {
     display: none;
   }
-  .jugador-home{
+  .jugador-home {
     margin-left: 5%;
   }
-  
-  .jugador{
-    width:300px
+
+  .jugador {
+    width: 300px;
   }
-  .imagen-jugador img{
+  .imagen-jugador img {
     width: 140px;
   }
-  
-  .imagen-jugador{
+
+  .imagen-jugador {
     display: flex;
     flex-direction: row;
   }
 
-  .datos-lucas{
-    font-family: 'Kalam', cursive;
+  .datos-lucas {
+    font-family: "Kalam", cursive;
     margin: 40px 5px;
   }
-  
-  .cita-lucas{
+
+  .cita-lucas {
     margin-top: 10px;
   }
-  
+
   .cancha-home {
-    margin-left: 50%
+    margin-left: 50%;
   }
 
   .publicidades {
     flex-direction: column;
-  
   }
-  
+
   .img-publicidad1 {
     position: absolute;
     right: 0px;
     bottom: 114px;
   }
-  
+
   .img-publicidad2 {
     position: absolute;
     right: 0px;

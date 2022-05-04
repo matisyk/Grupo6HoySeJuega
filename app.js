@@ -15,9 +15,13 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve("./views/index.html"))
 });
 
-app.get('/login', (req, res) => {
+app.get('/loginPlayer', (req, res) => {
 
-  res.sendFile(path.resolve("./views/login.html"))
+  res.sendFile(path.resolve("./views/loginPlayer.html"))
+});
+app.get('/loginCourt', (req, res) => {
+
+  res.sendFile(path.resolve("./views/loginCourt.html"))
 });
 
 app.get('/register', (req, res) => {
@@ -39,7 +43,11 @@ app.get('/FormularioCancha', (req, res) => {
   res.sendFile(path.resolve("./views/formularioDatosCancha.html"))
 });
 
-app.get('/VistaCancha', (req, res) => {
+app.get('/vv', (req, res) => {
+
+  res.sendFile(path.resolve("./views/vistaCancha.html"))
+});
+app.post('/vistaCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/vistaCancha.html"))
 });

@@ -1,0 +1,139 @@
+body {
+  background-image: url(../img/fondo2.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: "Bangers", cursive;
+}
+.botonera-inicial{
+  width: 28%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  background: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.657);
+  border-radius: 20px;
+  box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(102, 100, 98, 0.75);
+  margin-top: 50px;
+  margin-left: 500px;
+}
+.contenedor-mayor{
+  display: flex; 
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-top: 30px;
+  font-size: 20px;
+  width: 400px;
+  height: 460px;
+  padding: 20px;
+  margin-left: 500px;
+  background: #edebeb;
+  border: 2px solid rgba(0, 0, 0, 0.657);
+  border-radius: 20px;
+  box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(102, 100, 98, 0.75);
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+.contenedor-menor{
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+.contenedor-menor2{
+  font-size: 13px;
+  margin-top: 20px;
+}
+.recordar{
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: white;
+}
+/* From uiverse.io by @alexruix */
+.card {
+ width: 300px;
+ padding: 1.9rem 1.2rem;
+ text-align: center;
+ background: #2a2b38;
+}
+
+/*Inputs*/
+.field {
+ margin-top: .5rem;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: .5em;
+ background-color: #1f2029;
+ border-radius: 4px;
+ padding: .5em 1em;
+}
+
+.input-icon {
+ height: 1em;
+ width: 1em;
+ fill: #ffeba7;
+}
+
+.input-field {
+ background: none;
+ border: none;
+ outline: none;
+ width: 100%;
+ color: #d3d3d3;
+}
+
+/*Text*/
+.title {
+ margin-bottom: 1rem;
+ font-size: 1.5em;
+ font-weight: 500;
+ color: #f5f5f5;
+}
+
+/*Buttons*/
+.btn {
+ margin: 1rem;
+ border: none;
+ border-radius: 4px;
+ font-weight: bold;
+ font-size: .8em;
+ text-transform: uppercase;
+ padding: 0.6em 1.2em;
+ background-color: #ffeba7;
+ color: #5e6681;
+ box-shadow: 0 8px 24px 0 rgb(255 235 167 / 20%);
+ transition: all .3s ease-in-out;
+}
+
+.btn-link {
+ color: #f5f5f5;
+ display: block;
+ font-size: .75em;
+ transition: color .3s ease-out;
+ font-family: "Kalam", cursive;
+}
+
+/*Hover & focus*/
+.field input:focus::placeholder {
+ opacity: 0;
+ transition: opacity .3s;
+}
+
+.btn:hover {
+ background-color: #5e6681;
+ color: #ffeba7;
+ box-shadow: 0 8px 24px 0 rgb(16 39 112 / 20%);
+}
+
+.btn-link:hover {
+ color: #ffeba7;
+}
