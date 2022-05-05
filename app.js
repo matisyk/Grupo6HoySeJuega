@@ -54,7 +54,7 @@ app.get('/formularioJugador', (req, res) => {
   res.sendFile(path.resolve("./views/formularioDatosJugador.html"))
 });
 
-app.get('/FormularioCancha', (req, res) => {
+app.get('/formularioCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/formularioDatosCancha.html"))
 });

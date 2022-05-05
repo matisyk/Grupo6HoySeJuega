@@ -176,7 +176,7 @@ SLIDESHOW
 }
 
 .titulito-home {
-  font-family: "Bangers", cursive;
+  font-family: 'Bebas Neue', cursive;
   font-size: 30px;
 }
 
@@ -185,6 +185,7 @@ SLIDESHOW
   list-style-position: inside;
   font-family: "Kalam", cursive;
   font-size: 20px;
+  padding: 0;
 }
 
 .jugador-home {
@@ -315,7 +316,6 @@ SLIDESHOW
   }
 
   .titulito-home {
-    font-family: "Bangers", cursive;
     font-size: 30px;
   }
 

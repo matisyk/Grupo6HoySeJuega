@@ -255,10 +255,12 @@
   text-decoration: none;
   color: #000000;
   font-family: kalam;
+  visibility: none;
 }
 
 .horarios:hover{
   font-size: 30px;
+  visibility: visible;
 }
 
 .boton-registrar-cancha{
