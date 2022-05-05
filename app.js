@@ -43,7 +43,7 @@ app.get('/FormularioCancha', (req, res) => {
   res.sendFile(path.resolve("./views/formularioDatosCancha.html"))
 });
 
-app.get('/vv', (req, res) => {
+app.get('/vistaCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/vistaCancha.html"))
 });
@@ -52,6 +52,10 @@ app.post('/vistaCancha', (req, res) => {
   res.sendFile(path.resolve("./views/vistaCancha.html"))
 });
 
+app.get('/registrarCancha', (req, res) => {
+
+  res.sendFile(path.resolve("./views/registrarCancha.html"))
+});
 
 app.listen(8080, () => {
   console.log('El servidor del proyecto integrador esta corriendo');
