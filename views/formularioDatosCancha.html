@@ -18,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Kalam&family=Roboto&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -51,7 +53,7 @@
   </div>
   <br>
   <div class="formulario-div2">
-    <form class="div1" method="post">
+    <form class="div1" action="/loginCourt" method="post">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
@@ -84,29 +86,30 @@
       <div class="form-group">
         <div class="input-group">
           <div>
-                <div class="entre-divs">
-                  <label for="funcionalidades" name="funcionalidades">Funcionalidades Extras:</label>
+            <div class="entre-divs">
+              <label for="funcionalidades" name="funcionalidades">Funcionalidades Extras:</label>
 
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Iluminación Nocturna</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Estacionamiento</label>  
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Wifi</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Vestuarios</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Duchas</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Parrilla</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Quincho</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Heladeras</label>
-                  <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Parlantes</label>
-                </div>
-                <div><label for="valor">Valor:</label><input type="text" class="entre-divs"></div>
-                <div><label for="medios-de-pago" name="medios-de-pago">Medios de pago aceptados:</label>
-                <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Transferencia Bancaria</label>
-                <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Mercado Pago</label>
-                <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Modo</label>
-                <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Efectivo</label>
-                </div>
-                <div class="img-cancha">
-                  <label for="img-cancha">Cargar imágenes de la cancha: <input type="file" name="img-cancha" accept=".jpg" multiple></label>
-                
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Iluminación Nocturna</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Estacionamiento</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Wifi</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Vestuarios</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Duchas</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Parrilla</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Quincho</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Heladeras</label>
+              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Parlantes</label>
+            </div>
+            <div><label for="valor">Valor:</label><input type="text" class="entre-divs"></div>
+            <div><label for="medios-de-pago" name="medios-de-pago">Medios de pago aceptados:</label>
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Transferencia Bancaria</label>
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Mercado Pago</label>
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Modo</label>
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Efectivo</label>
+            </div>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes de la cancha: <input type="file" name="img-cancha" accept=".jpg"
+                  multiple></label>
+
             </div>
           </div>
           <div class="entre-divs9">
@@ -122,11 +125,15 @@
               </div>
               <span>DALE...</span>
             </button>
-            <a href="./register"><button class="volver" >Volver</button></a>
+            <div>
+              <form action="./register" method="post"></form>
+              <a><button class="volver">Volver</button></a>
+            </div>
           </div>
         </div>
+        <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de vender</div>
       </div>
     </form>
   </div>
-  <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div>
+
 </body>
