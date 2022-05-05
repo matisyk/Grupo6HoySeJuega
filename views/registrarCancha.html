@@ -9,24 +9,36 @@
 </head>
 <body>
 
-<div class="card">
-<label name="id">Identificación de la cancha:</label>
-<input type="text" placeholder="Cancha 1" required >
+    <div class="tarjeta">
+        <div class="item-tarjeta">
+            <label name="id">Identificación de la cancha:</label>
+            <input type="text" placeholder="Ej: Cancha 1" required >
+        </div>
 
-<label name="registroDeDeporte">Deporte:</label>
-            <div>
-              <select name="posicion" id="deporte" name="registroDeDeporte">
-                <option value="0">-</option>
-                <option value="1">Futbol</option>
-                <option value="2">Paddle</option>
-                <option value="3">Basquet</option>
-              </select>
-            </div>
-<label name="capacidad">Capacidad de la cancha:</label>
-<input type="text" placeholder="10 jugadores" accept=".jpg .png" multiple>
+        <div class="item-tarjeta">
+            <label name="registroDeDeporte">Deporte:</label>
+                <select name="posicion" id="deporte" name="registroDeDeporte">
+                    <option value="0">-</option>
+                    <option value="1">Futbol</option>
+                    <option value="2">Paddle</option>
+                    <option value="3">Basquet</option>
+                </select>
+        </div>
+        
+        <div class="item-tarjeta">
+            <label name="capacidad">Capacidad de la cancha:</label>
+            <input class="foto" type="text" placeholder="Ej: 10 jugadores" accept=".jpg .png" multiple>
+        </div> 
 
-<label name="cargar-imagen">Cargar imagen</label>
-<input type="file" >
-</div>
+        <div class="item-tarjeta">
+            <label name="cargar-imagen">Cargar imagen</label>
+            <input type="file" >
+        </div>
+        
+        <div class="item-tarjeta">
+            <button type="submit" name="enviar">Enviar</button>
+        </div>
+    </div>
+
 </body>
 </html
