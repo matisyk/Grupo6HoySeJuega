@@ -161,15 +161,17 @@
     padding:20px;
     border-radius: 5px;
     margin: 100px;
+    text-decoration: none;
 
 }
 .sin-canchas{
     text-align:center ;
     color: #fff;
+    margin: 100px;
 }
 
 p{
-    margin:100px
+    margin:200px
 }
 
 
