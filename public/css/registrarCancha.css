@@ -42,6 +42,42 @@
     margin-top: 10px;
 }
 
+
+.otro-item-tarjeta ol li{
+  padding: 5px;
+  margin: 10px 20px;
+  padding: 5px;
+    text-align: left;
+}
+.dia-horario input{
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 5px;
+    text-align: left;
+}
+
+.lunes{
+margin-right: 38px;
+}
+.martes{
+  margin-right: 26px; 
+}
+.miercoles{
+  margin-right: 5px;
+}
+.jueves{
+  margin-right: 29px;
+}
+.viernes{
+  margin-right: 21px;
+}
+.sabado{
+  margin-right: 22px;
+}
+.domingo{
+  margin-right: 7px;
+}
 /* From uiverse.io */
 button {
     height: 30px;

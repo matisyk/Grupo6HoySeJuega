@@ -73,14 +73,26 @@ app.get('/registrarCancha', (req, res) => {
   res.sendFile(path.resolve("./views/registrarCancha.html"))
 });
 
+app.get('/agenda', (req, res) => {
+
+  res.sendFile(path.resolve("./views/agenda.html"))
+});
+
 app.get('/perfilDeJugador', (req, res) => {
 
   res.sendFile(path.resolve("./views/perfilDeJugador.html"))
 });
+
+app.get('/reservarCancha', (req, res) => {
+
+  res.sendFile(path.resolve("./views/reservarCancha.html"))
+});
+
 app.post('/perfilDeJugador', (req, res) => {
 
   res.sendFile(path.resolve("./views/perfilDeJugador.html"))
 });
+
 
 app.listen(8080, () => {
   console.log('El servidor del proyecto integrador esta corriendo');

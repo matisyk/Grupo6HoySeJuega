@@ -153,8 +153,21 @@
 .datos-del-lugar{
     background-color: #fff;
     padding: 100px;
+    display: flex;
+}
+.datos-del-lugar img{
+  margin-right: 40px;
+  border-radius: 10px;
+  width: 200px;
 }
 
+.nombre h2{
+  font-family: Bangers;
+}
+.datos{
+  font-family: Kalam;
+  font-size: 20px;
+}
 .boton-registrar-cancha{
     color:#000000;
     background-color: #fff;

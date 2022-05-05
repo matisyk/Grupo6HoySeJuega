@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    
+}
+
+body {
+    background-image: url(/img/probando-fondo-2.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+.agenda{
+    display: flex;
+    margin:50px;
+    background-color: rgb(54, 174, 230);
+}
+
+.columna{
+    border: solid black 1px;
+    width: 180px;
+
+}
+h2{
+    padding: 20px;
+    text-align: center;
+}
+.filas{
+    font-size: 1em
+}
+.filas-horarios div{
+    padding: 10px;
+    border: solid black 1px;
+    height: 20px;
+    font-size: 23px;
+    text-align: center;
+    
+}
+
+.filas button{
+    width: 100%;
+    padding: 10px;
+    height: 42px;
+}

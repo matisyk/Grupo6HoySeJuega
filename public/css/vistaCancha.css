@@ -161,22 +161,23 @@
     display: flex;
     margin: 50px 0;
   }
-    .card {
+    .tarjeta {
       width: 220px;
       height: 190px;
       background: #f0f0f0;
       border-radius: 10px;
       text-align: center;
       transition: all 0.5s;
-      margin: 40px
+      margin: 40px;
+      position: relative;
     }
     
-    .card:hover {
+    .tarjeta:hover {
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
       background-color: #4bb8ff;
     }
     
-    .card .blob {
+    .tarjeta .blob {
       height: 10px;
       width: 75%;
       border-radius: 0 0 30px 30px;
@@ -186,11 +187,11 @@
       transition: all 0.3s;
     }
     
-    .card:hover .blob {
+    .tarjeta:hover .blob {
       height: 0;
     }
     
-    .card .img img{
+    .tarjeta .img img{
       display: flex;
       margin: 30px auto 10px auto;
       width: 70px;
@@ -203,7 +204,7 @@
       transition: all 0.5s;
     }
     
-    .card:hover .img img{
+    .tarjeta:hover .img img{
       width: 100%;
       height: 70%;
       border-radius: 10px 0 0;
@@ -212,7 +213,7 @@
       z-index: 99999;
     }
     
-    .card h2 {
+    .tarjeta h2 {
       padding: 15px 10px;
       font-size: 25px;
       transition: all 0.1s;
@@ -221,36 +222,44 @@
       font-family: "Bangers", cursive;
     }
     
-    .card span {
+    .tarjeta span {
       font-size: 18px;
     }
     
-    .card:hover h2 {
+    .tarjeta:hover h2 {
       opacity: 0;
       width: 100%;
       position: absolute;
       transition: all 0.5s;
     }
     
-    .card>p {
+    .tarjeta>p {
       opacity: 0;
       transition: all 0.75s;
     }
     
-    .card>p>svg {
+    .tarjeta>p>svg {
       padding: 5px;
     }
     
-    .card:hover>p {
+    .tarjeta:hover>p {
       position: absolute;
-      bottom: 15px;
-      left: 35px;
+      bottom: 5px;
+      left: -125px;
       opacity: 1;
       transition: all 0.1s;
     }
 
 
+.horarios a{
+  text-decoration: none;
+  color: #000000;
+  font-family: kalam;
+}
 
+.horarios:hover{
+  font-size: 30px;
+}
 
 .boton-registrar-cancha{
     color:#000000;

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/registrarCancha.css">
+    <link rel="stylesheet" href="./css/reservarCancha.css">
+</head>
+<body>
+
+    <div class="tarjeta">
+
+        <div class="item-tarjeta">
+            <label name="lugar">Lugar:</label>
+            <input type="text" placeholder="Ej: Club los Alamos" required >
+        </div>
+
+        <div class="item-tarjeta">
+            <label name="id">Identificación de la cancha:</label>
+            <input type="text" placeholder="Ej: Cancha 1" required >
+        </div>
+
+        <div class="item-tarjeta">
+            <label name="registroDeDeporte">Deporte:</label>
+                <select name="posicion" id="deporte" name="registroDeDeporte">
+                    <option value="0">-</option>
+                    <option value="1">Futbol</option>
+                    <option value="2">Paddle</option>
+                    <option value="3">Basquet</option>
+                </select>
+        </div>
+        
+        <div class="item-tarjeta">
+            <label name="capacidad">Cantidad de jugadores:</label>
+            <input class="foto" type="text" placeholder="Ej: 10 jugadores" accept=".jpg .png" multiple>
+        </div> 
+       
+        <div class="otro-item-tarjeta">
+            <div class="item-tarjeta"><label  name="horarios">Buscar disponibilidad horaria:</label></div>
+                <select>
+                    <option value="-">Elegir día</option>
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miércoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                    <option value="sabado">Sabado</option>
+                    <option value="domingo">Domingo</option>
+                </select>
+                <input type="time" class="form-control" id="horarios" name="registroHorarios">
+        </div>  
+
+        <div class="item-tarjeta">
+          <a href="/vistaCancha"><button type="submit" name="enviar">Enviar</button></a> 
+        </div>
+    </div>
+
+</body>
+</html
