@@ -75,6 +75,18 @@ header {
   color: #000000;
 }
 
+.menu-hamburguesa{
+  background-color: #1259c3;
+    color: white;
+    display: block;
+    max-width: 50px;
+    padding: 10px 0px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 25px;
+    margin: auto
+}
+
 .copy-header {
   display: flex;
   justify-content: start;
@@ -268,9 +280,7 @@ SLIDESHOW
 }
 
 @media (min-width: 425px) {
-  .principal-home {
-  }
-
+  
   .imagen-jugador img {
     width: 140px;
   }
