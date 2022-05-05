@@ -18,6 +18,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Kalam&family=Roboto&display=swap"
+    rel="stylesheet">
 
 </head>
 
@@ -25,7 +27,7 @@
   <h1>Registro de datos personales</h1>
   <h6>Todo los datos del formulario son de caracter obligatorio </h6>
   <div class="formulario-div">
-    <form class="div1" method="post">
+    <form class="div1" action="/loginPlayer" method="post">
       <!--=====================================-->
       <div class="form-group">
         <div class="input-group">
@@ -51,14 +53,14 @@
           </div>
           <div class="entre-divs4">
             <label for="autoValoracion">Auto valoración:</label>
-            <div>
-              <select name="autovaloracion" id="autoValoracion" name="registroAutoValoracion">
-                <option value="0">-</option>
-                <option value="1">Estrella</option>
-                <option value="2">Copadito</option>
-                <option value="3">Me defiendo</option>ç
-              </select>
-            </div>
+            <br>
+            <select name="autovaloracion" id="autoValoracion" name="registroAutoValoracion">
+              <option value="0">-</option>
+              <option value="1">Estrella</option>
+              <option value="2">Copadito</option>
+              <option value="3">Me defiendo</option>ç
+            </select>
+
           </div>
         </div>
       </div>
@@ -66,7 +68,7 @@
   </div>
   <br>
   <div class="formulario-div2">
-    <form class="div1" method="post">
+    <form class="div1" action="/loginPlayer" method="post">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
@@ -214,11 +216,15 @@
               </div>
               <span>DALE...</span>
             </button>
-            <a href="./register"><button class="volver" >Volver</button></a>
+            <div>
+              <a href="./register"><button class="volver">Volver</button></a>
+            </div>
           </div>
         </div>
+        <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div>
       </div>
+      
     </form>
   </div>
-  <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div>
+  
 </body>
