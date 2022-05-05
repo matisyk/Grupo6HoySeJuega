@@ -10,20 +10,12 @@ const publicPath = path.resolve(__dirname, './public')
 
 app.use(express.static(publicPath));
 
+// Metodos get
 app.get('/', (req, res) => {
 
   res.sendFile(path.resolve("./views/index.html"))
 });
-app.post('/', (req, res) => {
-
-  res.sendFile(path.resolve("./views/index.html"))
-});
-
 app.get('/loginPlayer', (req, res) => {
-
-  res.sendFile(path.resolve("./views/loginPlayer.html"))
-});
-app.post('/loginPlayer', (req, res) => {
 
   res.sendFile(path.resolve("./views/loginPlayer.html"))
 });
@@ -31,16 +23,7 @@ app.get('/loginCourt', (req, res) => {
 
   res.sendFile(path.resolve("./views/loginCourt.html"))
 });
-app.post('/loginCourt', (req, res) => {
-
-  res.sendFile(path.resolve("./views/loginCourt.html"))
-});
-
 app.get('/register', (req, res) => {
-
-  res.sendFile(path.resolve("./views/register.html"))
-});
-app.post('/register', (req, res) => {
 
   res.sendFile(path.resolve("./views/register.html"))
 });
@@ -63,11 +46,6 @@ app.get('/vistaCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/vistaCancha.html"))
 });
-app.post('/vistaCancha', (req, res) => {
-
-  res.sendFile(path.resolve("./views/vistaCancha.html"))
-});
-
 app.get('/registrarCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/registrarCancha.html"))
@@ -86,6 +64,34 @@ app.get('/perfilDeJugador', (req, res) => {
 app.get('/reservarCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/reservarCancha.html"))
+});
+
+
+// Metodos post
+
+
+app.post('/', (req, res) => {
+
+  res.sendFile(path.resolve("./views/index.html"))
+});
+
+app.post('/loginPlayer', (req, res) => {
+
+  res.sendFile(path.resolve("./views/loginPlayer.html"))
+});
+
+app.post('/loginCourt', (req, res) => {
+
+  res.sendFile(path.resolve("./views/loginCourt.html"))
+});
+app.post('/register', (req, res) => {
+
+  res.sendFile(path.resolve("./views/register.html"))
+});
+
+app.post('/vistaCancha', (req, res) => {
+
+  res.sendFile(path.resolve("./views/vistaCancha.html"))
 });
 
 app.post('/perfilDeJugador', (req, res) => {
