@@ -25,7 +25,7 @@ h6 {
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 10px;
-  font-size: 30px;
+  font-size: 20px;
 }
 .formulario-div2 {
   display: inline-block;
@@ -40,7 +40,6 @@ h6 {
   padding: 20px;
   padding-bottom: 50px;
   background: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.657);
   border-radius: 20px;
   box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
@@ -48,6 +47,10 @@ h6 {
   margin-left: 10px;
   padding-left: 60px;
 }
+.form-control{
+  margin-bottom: 20px;
+}
+
 .entre-divs {
   margin-left: 10px;
 }
