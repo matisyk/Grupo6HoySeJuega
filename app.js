@@ -14,8 +14,16 @@ app.get('/', (req, res) => {
 
   res.sendFile(path.resolve("./views/index.html"))
 });
+app.post('/', (req, res) => {
+
+  res.sendFile(path.resolve("./views/index.html"))
+});
 
 app.get('/loginPlayer', (req, res) => {
+
+  res.sendFile(path.resolve("./views/loginPlayer.html"))
+});
+app.post('/loginPlayer', (req, res) => {
 
   res.sendFile(path.resolve("./views/loginPlayer.html"))
 });
@@ -23,8 +31,16 @@ app.get('/loginCourt', (req, res) => {
 
   res.sendFile(path.resolve("./views/loginCourt.html"))
 });
+app.post('/loginCourt', (req, res) => {
+
+  res.sendFile(path.resolve("./views/loginCourt.html"))
+});
 
 app.get('/register', (req, res) => {
+
+  res.sendFile(path.resolve("./views/register.html"))
+});
+app.post('/register', (req, res) => {
 
   res.sendFile(path.resolve("./views/register.html"))
 });
@@ -55,6 +71,15 @@ app.post('/vistaCancha', (req, res) => {
 app.get('/registrarCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/registrarCancha.html"))
+});
+
+app.get('/perfilDeJugador', (req, res) => {
+
+  res.sendFile(path.resolve("./views/perfilDeJugador.html"))
+});
+app.post('/perfilDeJugador', (req, res) => {
+
+  res.sendFile(path.resolve("./views/perfilDeJugador.html"))
 });
 
 app.listen(8080, () => {
