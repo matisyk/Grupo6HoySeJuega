@@ -12,7 +12,40 @@
 background-color: #e8e8e8
   }
 
-  
+  /* header */
+
+.fa-solid.fa-bell:before {
+  color: rgb(255, 136, 0);
+  padding: 10px;
+}
+.txtNav5 {
+  margin-left: 35px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  font-family: "Bangers", cursive;
+}
+
+.txtNav6{
+  margin-left: 85px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  font-family: "Bangers", cursive;
+}
+.menu-cont2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: 200px;
+}
+.bajar-slider{
+  height: 50%
+}
   /*=============================================
   SLIDESHOW
   =============================================*/
@@ -65,8 +98,6 @@ main{
   padding: 0.8em;
   padding-top: 1.4em;
 }
-
-
 
 .cancha {
     width: 190px;
@@ -141,53 +172,12 @@ main{
   right: 0;bottom: 0;
   margin: 20px;
 }
-  /*----FOOTER----*/
+/* footer */
 
-.redes {
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(to right, red, orange, yellow, green, blue);
-    width: 100%;
-  }
-  
-  .redes i {
-    border: solid 1px white;
-    border-radius: 100%;
-    padding: 10px 10px;
-    margin: 0 10px;
-    color: white;
-    transition: 2s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-  
-  .redes i:hover {
-    opacity: 0.8;
-  }
-  
-  .fa-whatsapp {
-    background-color: #075e54;
-  }
-  
-  .fa-facebook {
-    background-color: #3b5998;
-  }
-  
-  .fa-instagram {
-    background-color: #c13584;
-  }
-  
-  .fa-envelope {
-    background-color: #0089f8;
-  }
-  
-  .fa-screwdriver-wrench {
-    background-color: #000000;
-  }
-  
+  .footer-main2 ul {
+  height: 40px;
+  padding: 10px;
+}
   @media (min-width: 425px) {
     .main{
         display: flex;
