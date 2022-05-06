@@ -44,6 +44,11 @@ MAIN
   position: relative;
   margin: 3%;
   color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 30px;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0) 100%);
 }
 
 .titulito-home {
@@ -51,13 +56,33 @@ MAIN
   font-size: 30px;
 }
 
-.main-home ol li {
+.main-home ol li{
   list-style-type: decimal;
   list-style-position: inside;
   font-family: "Kalam", cursive;
   font-size: 20px;
   padding: 0;
+  text-decoration: none;
+  color: #ebebeb;
 }
+
+.main-home ol li a{
+  list-style-type: decimal;
+  list-style-position: inside;
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+  padding: 0;
+  text-decoration: none;
+  color: #ebebeb;
+}
+
+
+.main-home ol li:hover{
+font-size: 30px;
+}
+.main-home ol li a:hover{
+  font-size: 30px;
+  }
 
 .jugador-home {
   width: 50%;
