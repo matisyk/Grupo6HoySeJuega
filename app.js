@@ -66,6 +66,11 @@ app.get('/reservarCancha', (req, res) => {
   res.sendFile(path.resolve("./views/reservarCancha.html"))
 });
 
+app.get('/elegirCancha', (req, res) => {
+
+  res.sendFile(path.resolve("./views/elegirCancha.html"))
+});
+
 
 // Metodos post
 
