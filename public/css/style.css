@@ -41,9 +41,13 @@ header {
   width: 100%;
   background: linear-gradient(
     to right,
-    rgb(35, 35, 35),
-    rgb(246, 211, 211),
-    rgb(255, 255, 255)
+    #000000,
+    #000000,
+     #000000,
+     #0166F7,
+    #0166F7,
+    #BD6CCA,
+    #BD6CCA
   );
   color: white;
   text-align: center;
