@@ -28,52 +28,59 @@
   }*/
   
   header {
-    border-top: 1px solid white;
-    background: white;
-    color: #333;
-    height: 80px;
-    width: 100vw;
-    text-align: center;
-  }
+  border-top: 0px solid white;
+  background: white;
+  color: #333;
+  height: 80px;
+  width: 100vw;
+  text-align: center;
+}
+
+.menu {
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    #000000,
+    #000000,
+     #000000,
+     #0166F7,
+    #0166F7,
+    #BD6CCA,
+    #BD6CCA
+  );
+  color: white;
+  text-align: center;
+  position: fixed;
+  z-index: 1;
+  margin-bottom: 500px;
+}
+
+.menu-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: 40px;
+}
+
+.menu a {
+  padding: 8px;
+  color: #000000;
+  display: block;
+  font-size: 20px;
+  text-decoration: none;
+  transition: 0.50s;
+}
+
+.menu a:hover,
+.menu a:focus {
+  background-color: black;
+  text-decoration: none;
+  color: #fff;
   
-  .menu {
-    height: 80px;
-    width: 100%;
-    background: linear-gradient(
-      to right,
-      rgb(35, 35, 35),
-      rgb(246, 211, 211),
-      rgb(255, 255, 255)
-    );
-    color: white;
-    text-align: center;
-    position: fixed;
-    z-index: 1;
-    margin-bottom: 500px;
-  }
-  
-  .menu-cont {
-    display: none;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-    margin-left: 40px;
-  }
-  
-  .menu a {
-    padding: 8px;
-    color: #000000;
-    display: block;
-    font-size: 20px;
-    text-decoration: none;
-    transition: 1s;
-  }
-  
-  .menu a:hover,
-  .menu a:focus {
-    color: #000000;
-  }
+}
   
   .menu-hamburguesa{
     background-color: #1259c3;
