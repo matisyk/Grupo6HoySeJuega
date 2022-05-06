@@ -54,7 +54,7 @@ background-color: #e8e8e8
 }
 
 .menu-cont {
-  display: none;
+  display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
