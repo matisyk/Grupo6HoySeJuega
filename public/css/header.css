@@ -105,3 +105,34 @@ header {
   font-family: "Bangers", cursive;
 }
 
+/* header */
+
+.fa-solid.fa-bell:before {
+  color: rgb(255, 136, 0);
+  padding: 10px;
+}
+.txtNav5 {
+  margin-left: 35px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  font-family: "Bangers", cursive;
+}
+
+.txtNav6{
+  margin-left: 85px;
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 30px;
+  background-color: rgb(255, 255, 255);
+  background-size: cover;
+  font-family: "Bangers", cursive;
+}
+.menu-cont2{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  margin-left: 200px;
+}

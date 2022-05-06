@@ -70,6 +70,10 @@ app.get('/elegirCancha', (req, res) => {
 
   res.sendFile(path.resolve("./views/elegirCancha.html"))
 });
+app.get('/shiping', (req, res) => {
+
+  res.sendFile(path.resolve("./views/shiping.html"))
+});
 
 
 // Metodos post
