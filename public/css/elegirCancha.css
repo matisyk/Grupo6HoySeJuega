@@ -178,7 +178,9 @@ main{
                 -15px -15px 30px #ffffff;
     margin: 20px;
    }
-
+.cancha:hover{
+    width: 280px;
+}
 
 .imagen-cancha{
     width:100%;
@@ -193,6 +195,12 @@ main{
     width:20px;
 }
 
+.deporte{
+    margin: 10px 20px 0px 20px;
+}
+.zona{
+    margin-left:20px
+}
   /*----FOOTER----*/
 
 .redes {
