@@ -67,12 +67,12 @@ Integrantes del equipo:
   -> Soy muy detallista, y me gusta entender la lógica de las cosas. La verdad que facilmente me "bajoneo" pero si me gusta tirar para adelante y me siento bien cuando las cosas salen. 
   -> Siempre me dio curiosidad explorar más la parte de diseño y lo que sería el front end, quizás algún día haga algo más sobre eso, pero por el momento quisiera ver todo el panorama ya que me veo reflejada en cosas de ambas tareas.
   
-  - Camila Borzillo
-  -> Tengo 24 años, soy de CABA. 
-  -> No tengo experiencia previa en programación, pero si en analisis de datos. Pero creo que me gusta más el front end y lo relacionado al UX.  
-  -> Siempre estoy interesada en aprender cosas nuevas y soy responsable con las actividades que hago. 
 
 - Jorge Mejias:
   -> Soy de Venezuela, actualmente vivo en Argentina (Capital Federal) y trabajo en una estacion de servicio Shell (Experto). Tengo 24 años y soy TSU en Ing Informatica.
   -> Siempre he sido afin a todas las areas de la informatica he estudiado un poco de todo pero lo que mas me apasiona y por lo que estoy aca es la programacion.
   -> Mi objetivo en este curso es conseguir las herramientas para desarrollarme en el ambito profesional y poder ejercer.
+
+
+
+Archivo de trello: https://trello.com/invite/b/EvxqMdmK/c12a26a46ee5357764c279936764fb00/grupo06-proyecto-integrador
