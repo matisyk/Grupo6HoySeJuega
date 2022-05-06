@@ -52,13 +52,13 @@ MAIN
 
 .datos-del-lugar {
   padding: 10px;
-  width: 30%;
+  width: 220px ;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 20px;
-  border: 1px solid rgb(36, 36, 36);
   border-radius: 10px;
+  transition: all 1s;
 }
 .datos-del-lugar-b {
   background-color: #fff;
@@ -214,7 +214,10 @@ p {
 }
 
 .img-container:hover:before {
-  opacity: 0.75;
+  opacity: 0.50;
+}
+.img-container img:hover{
+  left:0;
 }
 
 .img-container ol {
@@ -233,4 +236,5 @@ p {
 .datos-del-lugar-b:hover {
   width: 50%;
   transition: top 5s linear;
+  max-width: max-content;
 }
