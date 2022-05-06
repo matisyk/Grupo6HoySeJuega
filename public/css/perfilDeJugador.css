@@ -1,161 +1,211 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url(/img/probando-fondo-2.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
-  /*=============================================
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/img/probando-fondo-2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/* header */
+
+.fa-solid.fa-bell:before {
+  color: rgb(255, 136, 0);
+  padding: 10px;
+}
+/*=============================================
 MAIN
 =============================================*/
 
-
-.datos-del-lugar{
-    background-color: #fff;
-    padding: 100px;
-    display: flex;
-    padding-bottom: 10px;
+.datos-del-lugar {
+  padding: 10px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  border: 1px solid rgb(36, 36, 36);
+  border-radius: 10px;
 }
-.datos-del-lugar img{
+.datos-del-lugar-b {
+  background-color: #fff;
+}
+.datos-del-lugar img {
   margin-right: 40px;
   border-radius: 10px;
   width: 200px;
 }
 
-.nombre h2{
+.nombre h2 {
   font-family: Bangers;
 }
-.datos{
+.datos {
   font-family: Kalam;
   font-size: 20px;
 }
-.boton-registrar-cancha{
-    color:#000000;
-    background-color: #fff;
-    padding:20px;
-    border-radius: 5px;
-    margin: 100px;
-
+.boton-registrar-cancha {
+  color: #000000;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 100px;
 }
-.sin-canchas{
-    text-align:center ;
-    color: #fff;
-    
+.sin-canchas {
+  text-align: center;
+  color: #fff;
 }
 
-p{
-    margin:100px
+p {
+  margin: 100px;
 }
 
 button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button.learn-more {
- width: 12rem;
- height: auto;
+  width: 12rem;
+  height: auto;
 }
 
 button.learn-more .circle {
-     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 3rem;
-    height: 3rem;
-    background: #000000;
-    border-radius: 1.625rem;
-    margin-left: 30px;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #000000;
+  border-radius: 1.625rem;
+  margin-left: 30px;
 }
 
 button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
 }
 
 button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
 }
 
 button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
 }
 
 button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 2px;
-    left: 40px;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: #ffffff;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 10px;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 2px;
+  left: 40px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 button:hover .circle {
- width: 100%;
+  width: 100%;
 }
 
 button:hover .circle .icon.arrow {
- background: #fff;
- transform: translate(1rem, 0);
- 
+  background: #fff;
+  transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
- color: #fff;
- font-size: 13px;
- width: 70%;
+  color: #fff;
+  font-size: 13px;
+  width: 70%;
 }
 
-.sin-canchas{
-    text-align:center ;
-    color: #fff;
-    margin: 20px;
+.sin-canchas {
+  text-align: center;
+  color: #fff;
+  margin: 20px;
 }
 
-p{
-    margin:200px
+p {
+  margin: 200px;
+}
+
+.img-container {
+  width: 550px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.img-container:before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+  transition: opacity 0.3s linear;
+  margin: 0;
+}
+
+.img-container:hover:before {
+  opacity: 0.75;
+}
+
+.img-container ol {
+  width: inherit;
+  color: rgb(0, 0, 0);
+  margin-left: 180px;
+  text-align: start;
+  position: absolute;
+  top: 100%;
+  transition: top 0.5s linear;
+}
+
+.img-container:hover ol {
+  top: 10px;
+}
+.datos-del-lugar-b:hover {
+  width: 50%;
+  transition: top 5s linear;
 }
