@@ -26,9 +26,10 @@ MAIN
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 50px;
   border-radius: 10px;
   transition: all 1s;
+  margin-bottom: 70px;
 }
 .datos-del-lugar-b {
   background-color: #fff;
@@ -41,8 +42,22 @@ MAIN
 
 .nombre h2 {
   font-family: Bangers;
+  font-size: 25px;
+  
 }
-.datos {
+.edad {
+  font-family: Kalam;
+  font-size: 20px;
+}
+.tel {
+  font-family: Kalam;
+  font-size: 20px;
+}
+.telem {
+  font-family: Kalam;
+  font-size: 20px;
+}
+.autoValoracion {
   font-family: Kalam;
   font-size: 20px;
 }
@@ -77,8 +92,9 @@ button {
 }
 
 button.learn-more {
-  width: 12rem;
+  width: 24rem;
   height: auto;
+  margin: 20px 5px 30px 0;
 }
 
 button.learn-more .circle {
@@ -125,8 +141,8 @@ button.learn-more .circle .icon.arrow::before {
 button.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
-  top: 2px;
-  left: 40px;
+  top: -5px;
+  left: 25px;
   right: 0;
   bottom: 0;
   padding: 0.75rem 0;
@@ -136,7 +152,25 @@ button.learn-more .button-text {
   line-height: 1.6;
   text-align: center;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 15px;
+  
+}
+button.learn-more .button-text2 {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: -5px;
+  left: 25px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #000000;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 15px;
+  
 }
 
 button:hover .circle {
@@ -148,10 +182,11 @@ button:hover .circle .icon.arrow {
   transform: translate(1rem, 0);
 }
 
-button:hover .button-text {
-  color: #fff;
-  font-size: 13px;
-  width: 70%;
+button:hover .button-text2 {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  width: 100%;
+  left: 25px;
 }
 
 .sin-canchas {
@@ -164,7 +199,7 @@ p {
   margin: 200px;
 }
 
-.img-container {
+.img-container1 {
   width: 550px;
   height: 200px;
   position: relative;
@@ -172,7 +207,7 @@ p {
   cursor: pointer;
 }
 
-.img-container:before {
+.img-container1:before {
   content: "";
   width: inherit;
   height: inherit;
@@ -183,28 +218,58 @@ p {
   margin: 0;
 }
 
-.img-container:hover:before {
+.img-container1:hover:before {
   opacity: 0.50;
 }
-.img-container img:hover{
+.img-container1 img:hover{
   left:0;
 }
 
-.img-container ol {
+.img-container1 ol {
   width: inherit;
   color: rgb(0, 0, 0);
-  margin-left: 180px;
+  margin-left: 200px;
   text-align: start;
   position: absolute;
   top: 100%;
-  transition: top 0.5s linear;
+  transition: top 0.3s linear;
+  font-size: 13px
 }
 
-.img-container:hover ol {
-  top: 10px;
+.img-container1:hover ol {
+  top: -5px;
+  
 }
 .datos-del-lugar-b:hover {
   width: 50%;
-  transition: top 5s linear;
+  transition: top 1s linear;
   max-width: max-content;
+}
+
+.separador1{
+  width: 20%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius:30px;
+font-family: "Bangers", cursive;
+margin: 30px 0 50px 10%;
+}
+.separador2{
+  width: 20%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius:30px;
+font-family: "Bangers", cursive;
+margin: 30px 0 50px 40%;
+}
+.separador3{
+  width: 15%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius:30px;
+font-family: "Bangers", cursive;
+margin: 30px 0 50px 10%;
 }
