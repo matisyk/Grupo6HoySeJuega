@@ -113,20 +113,18 @@ header {
 }
 .txtNav5 {
   margin-left: 35px;
-  border: solid 2px rgb(0, 0, 0);
   border-radius: 30px;
-  background-color: rgb(255, 255, 255);
   background-size: cover;
   font-family: "Bangers", cursive;
+  color: #ebebeb;
 }
 
 .txtNav6{
   margin-left: 85px;
-  border: solid 2px rgb(0, 0, 0);
   border-radius: 30px;
-  background-color: rgb(255, 255, 255);
   background-size: cover;
   font-family: "Bangers", cursive;
+  color: #ebebeb;
 }
 .menu-cont2{
   display: flex;
