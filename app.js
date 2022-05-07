@@ -74,7 +74,10 @@ app.get('/shiping', (req, res) => {
 
   res.sendFile(path.resolve("./views/shiping.html"))
 });
+app.get('/reservaCancha', (req, res) => {
 
+  res.sendFile(path.resolve("./views/reservaCancha.html"))
+});
 
 // Metodos post
 
