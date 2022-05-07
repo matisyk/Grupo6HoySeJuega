@@ -8,17 +8,16 @@ header {
 }
 
 .menu {
-  height:130px;
+  height: 130px;
   width: 100%;
   background: linear-gradient(
     to right,
     #000000,
     #000000,
-     #000000,
-     #0166F7,
-    #0166F7,
-    #BD6CCA,
-    #BD6CCA
+    #0166f7,
+    #0166f7,
+    #bd6cca,
+    #bd6cca
   );
   color: white;
   text-align: center;
@@ -42,7 +41,7 @@ header {
   display: block;
   font-size: 30px;
   text-decoration: none;
-  transition: 0.50s;
+  transition: 0.5s;
 }
 
 .menu a:hover,
@@ -50,7 +49,6 @@ header {
   background-color: black;
   text-decoration: none;
   color: #fff;
-  
 }
 
 .copy-header {
@@ -113,26 +111,24 @@ header {
 }
 .txtNav5 {
   margin-left: 35px;
-  border: solid 2px rgb(0, 0, 0);
   border-radius: 30px;
-  background-color: rgb(255, 255, 255);
+  color: #ebebeb;
   background-size: cover;
   font-family: "Bangers", cursive;
 }
 
-.txtNav6{
-  margin-left: 85px;
-  border: solid 2px rgb(0, 0, 0);
+.txtNav6 {
+  margin-left: 25px;
   border-radius: 30px;
-  background-color: rgb(255, 255, 255);
+  color: #ebebeb;
   background-size: cover;
   font-family: "Bangers", cursive;
 }
-.menu-cont2{
+.menu-cont2 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin-left: 200px;
+  margin-left: 250px;
 }
