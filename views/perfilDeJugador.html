@@ -40,11 +40,11 @@
         <div class="menu-cont2">
           <a class="txtNav1" href="/reservarCancha">Buscar Canchas</a>
           <a class="txtNav1" href="#">Mi equipo</a>
-          <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
           <a class="txtNav4" href="#"> <i class="fa-solid fa-person-running"></i> Nos falta uno</a>
           <a class="txtNav5" href="/shiping">
             <i class="fa-solid fa-cart-shopping"></i> Mi reserva
           </a>
+          <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
           <a class="txtNav6" href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Chau
           </a>
 
@@ -113,222 +113,263 @@
           </div>
         </section>
         <div class="div-selector">
-        <section class="selector">
-           <div class="separador4">
-             <h1>¿Hoy se juega?</h1>
-           </div>
-           <section>
-          <div class="switch-button">
-            
-            <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
-            
-            <label for="switch-label" class="switch-button__label"></label>
+          <section class="selector">
+            <div class="separador4">
+              <h1>¿Hoy se juega?</h1>
+            </div>
+            <section>
+              <label class="rocker rocker-small">
+                <input type="checkbox">
+                <span class="switch-left">Si</span>
+                <span class="switch-right">No</span>
+              </label>
+
+            </section>
+          </section>
+          <div class="div-ultimo-partido">
+            <section class="ultimo-partido">
+              <div class="titulo-U-P">
+                <h1>ÚLTIMO PARTIDO</h1>
+              </div>
+              <section class="vs">
+                <h2> Los borrachines <span> VS </span>
+                  <span2> Los mangines</span2>
+                </h2>
+              </section>
+              <h4 class="valoracion">Valoración del partido</h4>
+              <form class="estrellas">
+                <p class="clasificacion">
+                  <input id="radio1" type="radio" name="estrellas" value="5">
+
+                  <label for="radio1">★</label>
+
+                  <input id="radio2" type="radio" name="estrellas" value="4">
+
+                  <label for="radio2">★</label>
+
+                  <input id="radio3" type="radio" name="estrellas" value="3">
+
+                  <label for="radio3">★</label>
+
+                  <input id="radio4" type="radio" name="estrellas" value="2">
+
+                  <label for="radio4">★</label>
+
+                  <input id="radio5" type="radio" name="estrellas" value="1">
+
+                  <label for="radio5">★</label>
+                </p>
+              </form>
+              <h4 class="valoracion2">Comentarios:</h4>
+              <textarea class="cuadroComentario" type="text" name="comentarioDelJugador" placeholder="Comentarios de las instalaciones y el equipo."></textarea>
+              <form method="get" action="/perfilDeJugador">
+              <button action="/perfilDeJugador" type="submit" class="btn btn-primary enviarComentario">Enviar</button>
+            </form>
           </div>
-          <h6 class="estado-activo-ina">Inactivo<span style="color:black;">/</span><span style="color: #00a878; font-family: kalam;">
-              Activo</span></h6>
-        </section> 
         </div>
-      <div class="separador1">
-        <h1>PRÓXIMOS PARTIDOS</h1>
-      </div>
-      <section>
-        <!-- TABLA DE RESERVAS -->
+        <br>
+        <br>
+        <div class="separador1" id="proximoPartido">
+          <h1>PRÓXIMOS PARTIDOS</h1>
+        </div>
+        <section>
+          <!-- TABLA DE RESERVAS -->
 
 
-        <div class="container-fluid">
+          <div class="container-fluid">
 
-          <div class="container">
+            <div class="container">
 
-            <div class="panel panel-default">
+              <div class="panel panel-default">
 
 
-              <!-- CABECERA DE TABLA DE RESERVAS -->
+                <!-- CABECERA DE TABLA DE RESERVAS -->
 
-              <div class="panel-heading cabeceraCarrito">
-                <!-- <h4 style="color:rgb(0, 0, 0); font-family: Kalam;font-size: 25px; margin-left: 10px;"> Próximos
+                <div class="panel-heading cabeceraCarrito">
+                  <!-- <h4 style="color:rgb(0, 0, 0); font-family: Kalam;font-size: 25px; margin-left: 10px;"> Próximos
                   partidos</h4> -->
-                <div class="col-md-2 col-sm-7 col-xs-12 text-start">
+                  <div class="col-md-2 col-sm-7 col-xs-12 text-start">
 
-                  <h3>
-                    <small>MAPS</small>
-                  </h3>
+                    <h3>
+                      <small>MAPS</small>
+                    </h3>
 
-                </div>
-                <div class="col-md-4 col-sm-7 col-xs-12 text-start">
+                  </div>
+                  <div class="col-md-4 col-sm-7 col-xs-12 text-start">
 
-                  <h3>
-                    <small>DETALLLE</small>
-                  </h3>
+                    <h3>
+                      <small>DETALLLE</small>
+                    </h3>
 
-                </div>
-                <div class="col-sm-2 col-xs-0 text-start">
+                  </div>
+                  <div class="col-sm-2 col-xs-0 text-start">
 
-                  <h3>
-                    <small>CANCHA</small>
-                  </h3>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-0 text-center">
-
-                  <h3>
-                    <small>DÍA Y HORARIO</small>
-                  </h3>
-
-                </div>
-
-
-                <div class="col-md-2 col-sm-1 col-xs-0 text-center">
-
-                  <h3>
-                    <small>ESTADO</small>
-                  </h3>
-
-                </div>
-
-              </div>
-
-              <!-- CUERPO DE RESERVAS -->
-
-              <div class="panel-body cuerpoCarrito">
-
-                <!-- RESERVA 1 -->
-
-                <div clas="row itemCarrito">
-
-                  <div class="col-sm-2 col-xs-12">
-
-                    <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre.
-                      Aires</a>
+                    <h3>
+                      <small>CANCHA</small>
+                    </h3>
 
                   </div>
 
-                  <div class="col-sm-4 col-xs-12">
+                  <div class="col-md-2 col-sm-1 col-xs-0 text-center">
 
-                    <br>
-
-                    <p class="tituloCarritoCompra text-left">Cancha de 14 jugadores - cesped sintético</p>
-
-                  </div>
-
-                  <div class="col-md-2 col-sm-1 col-xs-12">
-
-                    <br>
-
-                    <p class="precioCarritoCompra text-start">Flow futbol</p>
+                    <h3>
+                      <small>DÍA Y HORARIO</small>
+                    </h3>
 
                   </div>
 
-                  <div class="col-md-2 col-sm-3 col-xs-8">
 
-                    <br>
+                  <div class="col-md-2 col-sm-1 col-xs-0 text-center">
 
-                    <div class="col-xs-12">
+                    <h3>
+                      <small>ESTADO</small>
+                    </h3>
 
-                      <center>
+                  </div>
 
-                        <div class="item-tarjeta"><label name="horarios">Lunes 10/5 22:00 hs</label></div>
+                </div>
 
-                      </center>
+                <!-- CUERPO DE RESERVAS -->
+
+                <div class="panel-body cuerpoCarrito">
+
+                  <!-- RESERVA 1 -->
+
+                  <div clas="row itemCarrito">
+
+                    <div class="col-sm-2 col-xs-12">
+
+                      <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre.
+                        Aires</a>
+
+                    </div>
+
+                    <div class="col-sm-4 col-xs-12">
+
+                      <br>
+
+                      <p class="tituloCarritoCompra text-left">Cancha de 14 jugadores - cesped sintético</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-1 col-xs-12">
+
+                      <br>
+
+                      <p class="precioCarritoCompra text-start">Flow futbol</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-xs-8">
+
+                      <br>
+
+                      <div class="col-xs-12">
+
+                        <center>
+
+                          <div class="item-tarjeta"><label name="horarios">Lunes 10/5 22:00 hs</label></div>
+
+                        </center>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+
+                      <br>
+
+                      <p>
+
+                        <strong>Reservado</strong>
+
+                      </p>
 
                     </div>
 
                   </div>
 
-                  <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+                  <div class="clearfix"></div>
 
-                    <br>
+                  <hr>
 
-                    <p>
+                  <!-- RESERVA 2 -->
 
-                      <strong>Reservado</strong>
+                  <div clas="row itemCarrito">
 
-                    </p>
+                    <div class="col-sm-2 col-xs-12">
 
-                  </div>
+                      <a href="https://goo.gl/maps/GwzF4C22edXxABfY6">Constitución 1590, San Fernando</a>
 
-                </div>
+                    </div>
 
-                <div class="clearfix"></div>
+                    <div class="col-sm-4 col-xs-12">
 
-                <hr>
+                      <br>
 
-                <!-- RESERVA 2 -->
+                      <p class="tituloCarritoCompra text-left">Cancha de 22 jugadores - Cesped </p>
 
-                <div clas="row itemCarrito">
+                    </div>
 
-                  <div class="col-sm-2 col-xs-12">
+                    <div class="col-md-2 col-sm-1 col-xs-12">
 
-                    <a href="https://goo.gl/maps/GwzF4C22edXxABfY6">Constitución 1590, San Fernando</a>
+                      <br>
 
-                  </div>
+                      <p class="precioCarritoCompra text-start">Al toque futbol</p>
 
-                  <div class="col-sm-4 col-xs-12">
+                    </div>
 
-                    <br>
+                    <div class="col-md-2 col-sm-3 col-xs-8">
 
-                    <p class="tituloCarritoCompra text-left">Cancha de 22 jugadores - Cesped </p>
+                      <br>
 
-                  </div>
+                      <div class="col-xs-12">
 
-                  <div class="col-md-2 col-sm-1 col-xs-12">
+                        <center>
 
-                    <br>
+                          <div class="item-tarjeta"><label name="horarios">Sábado 15/5 11:00 hs</label></div>
 
-                    <p class="precioCarritoCompra text-start">Al toque futbol</p>
+                        </center>
 
-                  </div>
+                      </div>
 
-                  <div class="col-md-2 col-sm-3 col-xs-8">
+                    </div>
 
-                    <br>
+                    <div class="col-md-2 col-sm-1 col-xs-4 text-center">
 
-                    <div class="col-xs-12">
+                      <br>
 
-                      <center>
+                      <p>
 
-                        <div class="item-tarjeta"><label name="horarios">Sábado 15/5 11:00 hs</label></div>
+                        <strong>Reservado</strong>
 
-                      </center>
+                      </p>
 
                     </div>
 
                   </div>
 
-                  <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+                  <div class="clearfix"></div>
 
-                    <br>
+                  <hr>
 
-                    <p>
+                  <!-- AGREGAR MAS RESERVAS -->
 
-                      <strong>Reservado</strong>
 
-                    </p>
 
-                  </div>
+
 
                 </div>
-
-                <div class="clearfix"></div>
-
-                <hr>
-
-                <!-- AGREGAR MAS RESERVAS -->
-
-
-
-
-
+                <button class="learn-more">
+                  <a href="/reservarCancha"><span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text2">Nueva Reserva</span></a>
+                </button>
               </div>
-              <button class="learn-more">
-                <a href="/reservarCancha"><span class="circle" aria-hidden="true">
-                    <span class="icon arrow"></span>
-                  </span>
-                  <span class="button-text2">Nueva Reserva</span></a>
-              </button>
             </div>
           </div>
-        </div>
     </div>
     </section>
     <div class="separador2">

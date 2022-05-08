@@ -344,12 +344,8 @@ margin: 30px 0 50px 10%;
 }
 .separador4{
   width: 100%;
-
   text-align: center;
- 
 font-family: "Bangers", cursive;
-
-
 }
 .div-selector{
 margin-top: 30px;
@@ -372,4 +368,266 @@ top: -300px;
   text-align: center;
   font-size: 20px;
 
+}
+/* BOTON DE ACTIVO O NO */
+
+.rocker {
+  display: inline-block;
+  position: relative;
+  font-size: 10em;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #888;
+  width: 7em;
+  height: 4em;
+  overflow: hidden;
+  border-bottom: 0.5em solid #eee;
+  left: 40px;
+  top: -5px;
+  
+}
+
+.rocker-small {
+  font-size: 1.2em;
+ /* Sizes the switch */
+  margin: 1em;
+}
+
+.rocker::before {
+  content: "";
+  position: absolute;
+  top: 0.5em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(235, 235, 235);
+  border: 0.5em solid #eee;
+  border-bottom: 0;
+}
+
+.rocker input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch-left,
+.switch-right {
+  cursor: pointer;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 2.5em;
+  width: 3em;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.switch-left {
+  height: 2.4em;
+  width: 2.75em;
+  left: 0.85em;
+  bottom: 0.4em;
+  background-color: #ddd;
+  -webkit-transform: rotate(15deg) skewX(15deg);
+      -ms-transform: rotate(15deg) skewX(15deg);
+          transform: rotate(15deg) skewX(15deg);
+}
+
+.switch-right {
+  right: 0.5em;
+  bottom: 0;
+  background-color: #bd5757;
+  color: #fff;
+}
+
+.switch-left::before,
+.switch-right::before {
+  content: "";
+  position: absolute;
+  width: 0.4em;
+  height: 2.45em;
+  bottom: -0.45em;
+  background-color: #ccc;
+  -webkit-transform: skewY(-65deg);
+      -ms-transform: skewY(-65deg);
+          transform: skewY(-65deg);
+}
+
+.switch-left::before {
+  left: -0.4em;
+}
+
+.switch-right::before {
+  right: -0.375em;
+  background-color: transparent;
+  -webkit-transform: skewY(65deg);
+      -ms-transform: skewY(65deg);
+          transform: skewY(65deg);
+}
+
+input:checked + .switch-left {
+  background-color: #0da946;
+  color: #fff;
+  bottom: 0px;
+  left: 0.5em;
+  height: 2.5em;
+  width: 3em;
+  -webkit-transform: rotate(0deg) skewX(0deg);
+      -ms-transform: rotate(0deg) skewX(0deg);
+          transform: rotate(0deg) skewX(0deg);
+}
+
+input:checked + .switch-left::before {
+  background-color: transparent;
+  width: 3.0833em;
+}
+
+input:checked + .switch-left + .switch-right {
+  background-color: #ddd;
+  color: #888;
+  bottom: 0.4em;
+  right: 0.8em;
+  height: 2.4em;
+  width: 2.75em;
+  -webkit-transform: rotate(-15deg) skewX(-15deg);
+      -ms-transform: rotate(-15deg) skewX(-15deg);
+          transform: rotate(-15deg) skewX(-15deg);
+}
+
+input:checked + .switch-left + .switch-right::before {
+  background-color: #ccc;
+}
+
+
+input:focus + .switch-left {
+  color: #333;
+}
+
+input:checked:focus + .switch-left {
+  color: #fff;
+}
+
+input:focus + .switch-left + .switch-right {
+  color: #fff;
+}
+
+input:checked:focus + .switch-left + .switch-right {
+  color: #333;
+}
+
+/* Ultimo partido*/
+
+.div-ultimo-partido{
+margin-top: 30px;
+ width: 190%;
+ position: relative;
+}
+.ultimo-partido{
+  position: absolute;
+left: 980px;
+top: -300px;
+ border: 8px solid rgb(205, 136, 72);
+  border-radius:30px;
+ width: 80%; 
+  background-color: rgb(255, 255, 255);
+  height: 450px;
+}
+.vs h2{
+  font-size:26px;
+  font-family: kalam;
+  padding: 10px;
+  margin-left: 10px;
+}
+.vs span2{
+  font-size:26px;
+  font-family: kalam;
+  padding: 10px 0 10px 10px;
+}
+.valoracion{
+  font-size:26px;
+  font-family: "Bangers", cursive;
+  margin-left: 110px;
+  color: #bd5757;
+}
+.valoracion2{
+  font-size:26px;
+  font-family: "Bangers", cursive;
+  margin: 70px 0 20px 15px;
+  color: #000000;
+}
+.titulo-U-P{
+  width: 100%;
+  text-align: center;
+font-family: "Bangers", cursive;
+text-decoration: underline;
+}
+/* Estrellas */
+
+#form {
+  width: 250px;
+  margin: 0 auto;
+  height: 50px;
+  position: relative;
+}
+
+#form p {
+  text-align: start;
+}
+
+#form label {
+  font-size: 40px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  color: grey;
+}
+
+.clasificacion {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+  position:absolute;
+  left: 135px;
+}
+
+label:hover,
+label:hover ~ label {
+  color: orange;
+}
+
+input[type="radio"]:checked ~ label {
+  color: orange;
+}
+.estrellas label{
+  font-size: 30px;
+}
+
+.cuadroComentario{
+  margin-left: 25px;
+  width: 90%;
+  height: 20%;
+}
+.cuadroComentario::-webkit-input-placeholder{
+  text-align: center;
+  line-height: 70px;
+}
+.enviarComentario{
+  margin-left: 338px;
+  margin-top: 5px;
 }
