@@ -1,45 +1,31 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-  }
- 
-  body{  
-background-color: #e8e8e8
-  }
-
-
-  /*=============================================
-  SLIDESHOW
-  =============================================*/
-  
-  .slide-area li {
-    position: relative;
-  }
-  
-  .slide-text {
-    position: absolute;
-    color: #fff;
-    width: 70%;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 85%;
-    text-shadow: 0px 0px 5px black;
-  }
-
-/*----MAIN----*/
-main{
-    background-color: #e8e8e8;
-    background-size: cover;
-    padding: 40px;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
 }
 
-/* From uiverse.io by @satyamchaudharydev */
+body {
+  background-image: url(/img/probando-fondo-2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+/*----MAIN----*/
+main {
+  background-image: url(/img/probando-fondo-2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 40px;
+}
+
+/* Tarjetas */
 .card {
   --width: 190px;
   --height: 210px;
@@ -67,49 +53,48 @@ main{
 }
 
 .cancha {
-    width: 190px;
-    height: 254px;
-    border-radius: 30px;
-    background: #e0e0e0;
-    background: linear-gradient(
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  background: linear-gradient(
       180deg,
       rgba(22, 24, 30, 0) 0%,
       rgba(22, 24, 30, 0.7) 65.28%
     ),
     linear-gradient(0deg, rgba(22, 24, 30, 0.4), rgba(22, 24, 30, 0.4));
-    color: #ebebeb;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    box-shadow: 15px 15px 30px #bebebe,
-                -15px -15px 30px #ffffff;
-    margin: 20px;
-    position: relative;
-   }
-
-.cancha:hover{
-    width: 280px;
+  color: #ebebeb;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  margin: 20px;
+  position: relative;
 }
 
-.imagen-cancha{
-    width:100%;
-    height: 50%;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+/*.cancha img:hover {
+  width: 200px;
+}*/
+
+.imagen-cancha {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
 }
 
-.cinco-estrellas{
-    margin:10px
+.cinco-estrellas {
+  margin: 10px;
 }
-.cinco-estrellas img{
-    width:20px;
+.cinco-estrellas img {
+  width: 20px;
 }
 
-.deporte{
-    margin: 10px 20px 0px 20px;
+.deporte {
+  margin: 10px 20px 0px 20px;
 }
-.zona{
-    margin-left:20px;
-    width:70%
+.zona {
+  margin-left: 20px;
+  width: 70%;
 }
 
 .cancha button {
@@ -127,34 +112,59 @@ main{
 
 .cancha button:hover {
   opacity: 0.8;
-  transform: scale(1.1);
+  transform: scale(1);
+  border: solid 5px green;
+   color: black
+ 
 }
 
 .cancha .boton-mas {
   color: #fff;
-  padding: 0.5em 0.8em;
+  padding: 0.3em 0.5em;
   background: rgba(249, 249, 249, 0.2);
   border-radius: 14px;
   position: absolute;
-  right: 0;bottom: 0;
+  right: 0;
+  bottom: 0;
   margin: 20px;
+  font-size: 20px
+  
 }
-/* footer */
+/*separador*/
 
-  .footer-main2 ul {
-  height: 40px;
+.separador1 h1 {
+  width: 15%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: "Bangers", cursive;
+  margin: 15px;
+  font-size: 20px;
   padding: 10px;
+  color: red;
 }
-  @media (min-width: 425px) {
-    .main{
-        display: flex;
-        flex-direction: row ;
-        flex-wrap: wrap;
+.separador2 h1 {
+  width: 15%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  font-family: "Bangers", cursive;
+  margin: 15px;
+  font-size: 20px;
+  padding: 10px;
+  color: red;
+}
+@media (min-width: 425px) {
+  .main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 
-    }
-     }
-
-  /*@media (min-width: 769px) {
+/*@media (min-width: 769px) {
   .cancha{
       box-shadow: none;
       background-color: #e8e8e8;}
