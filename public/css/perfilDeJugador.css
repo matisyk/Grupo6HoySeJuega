@@ -104,7 +104,7 @@ p {
   margin: 100px;
 }
 
-button {
+button3 {
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -118,13 +118,13 @@ button {
   font-family: inherit;
 }
 
-button.learn-more {
+button3.learn-more {
   width: 24rem;
   height: auto;
   margin: 20px 5px 30px 0;
 }
 
-button.learn-more .circle {
+button3.learn-more .circle {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: relative;
   display: block;
@@ -136,7 +136,7 @@ button.learn-more .circle {
   margin-left: 30px;
 }
 
-button.learn-more .circle .icon {
+button3.learn-more .circle .icon {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: 0;
@@ -145,7 +145,7 @@ button.learn-more .circle .icon {
   background: #fff;
 }
 
-button.learn-more .circle .icon.arrow {
+button3.learn-more .circle .icon.arrow {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   left: 0.625rem;
   width: 1.125rem;
@@ -153,7 +153,7 @@ button.learn-more .circle .icon.arrow {
   background: none;
 }
 
-button.learn-more .circle .icon.arrow::before {
+button3.learn-more .circle .icon.arrow::before {
   position: absolute;
   content: "";
   top: -0.29rem;
@@ -165,7 +165,7 @@ button.learn-more .circle .icon.arrow::before {
   transform: rotate(45deg);
 }
 
-button.learn-more .button-text {
+button3.learn-more .button-text {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: -5px;
@@ -181,7 +181,7 @@ button.learn-more .button-text {
   text-transform: uppercase;
   font-size: 15px;
 }
-button.learn-more .button-text2 {
+button3.learn-more .button-text2 {
   transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
   position: absolute;
   top: -5px;
@@ -198,16 +198,16 @@ button.learn-more .button-text2 {
   font-size: 15px;
 }
 
-button:hover .circle {
+button3:hover .circle {
   width: 100%;
 }
 
-button:hover .circle .icon.arrow {
+button3:hover .circle .icon.arrow {
   background: #fff;
   transform: translate(1rem, 0);
 }
 
-button:hover .button-text2 {
+button3:hover .button-text2 {
   color: rgb(255, 255, 255);
   font-size: 18px;
   width: 100%;
