@@ -12,33 +12,36 @@ body {
   }
 .agenda{
     display: flex;
-    margin:50px;
-    background-color: rgb(54, 174, 230);
+    justify-content: center;
 }
 
 .columna{
-    border: solid black 1px;
-    width: 180px;
-
+    width: 130px;
+    text-align: center;
 }
 h2{
     padding: 20px;
     text-align: center;
+    color: #ebebeb;
 }
 .filas{
-    font-size: 1em
+    font-size: 1em;
+    margin:20px
 }
 .filas-horarios div{
     padding: 10px;
-    border: solid black 1px;
-    height: 20px;
+    height: 22px;
     font-size: 23px;
     text-align: center;
+    background-color: #73b8ae;
+    border-radius: 10px;
     
 }
 
 .filas button{
-    width: 100%;
+    width: 100px;
     padding: 10px;
     height: 42px;
+    border:none;
+    border-radius: 10px;
 }

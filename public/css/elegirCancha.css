@@ -23,6 +23,8 @@ main {
   background-attachment: fixed;
   background-size: cover;
   padding: 40px;
+  display: flex;
+  flex-direction: row;
 }
 
 /* Tarjetas */
