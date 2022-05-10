@@ -26,6 +26,12 @@ main {
   display: flex;
   flex-direction: row;
 }
+.buscar-nuevo{
+text-decoration: none;
+font-size: 20px;
+color: white;
+margin: 20px;
+}
 
 /* Tarjetas */
 .card {
@@ -141,7 +147,7 @@ main {
   border: 1px solid black;
   border-radius: 10px;
   font-family: "Bangers", cursive;
-  margin: 15px;
+  margin: 50px 20px 20px 20px;
   font-size: 20px;
   padding: 10px;
   color: red;
@@ -153,7 +159,7 @@ main {
   border: 1px solid black;
   border-radius: 10px;
   font-family: "Bangers", cursive;
-  margin: 15px;
+  margin: 50px 20px 20px 20px;
   font-size: 20px;
   padding: 10px;
   color: red;

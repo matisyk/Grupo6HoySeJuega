@@ -51,6 +51,11 @@ app.get('/registrarCancha', (req, res) => {
   res.sendFile(path.resolve("./views/registrarCancha.html"))
 });
 
+app.get('/crearTorneo', (req, res) => {
+
+  res.sendFile(path.resolve("./views/crearTorneo.html"))
+});
+
 app.get('/agenda', (req, res) => {
 
   res.sendFile(path.resolve("./views/agenda.html"))

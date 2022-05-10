@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar reserva</title>
+    <title>Crear Torneo</title>
 
     <!--CSS PROPIOS-->
     <link rel="stylesheet" href="./css/registrarCancha.css">
@@ -30,8 +30,8 @@
             </select>
         </div>
         <div class="item-tarjeta">
-            <label name="lugar">Zona</label>
-            <input type="text" placeholder="Ej: San Fernando" required>
+            <label name="cantidad">Cantidad de Equipos:</label>
+            <input type="text">
         </div>
         <div class="item-tarjeta">
             <label name="lugar">Lugar:</label>
@@ -62,7 +62,7 @@
         </div>
 
         <div class="otro-item-tarjeta">
-            <div class="item-tarjeta"><label name="horarios">Buscar disponibilidad horaria:</label></div>
+            <div class="item-tarjeta"><label name="horarios">Día a realizarse:</label></div>
             <select>
                 <option value="-">Elegir día</option>
                 <option value="lunes">Lunes</option>
@@ -76,12 +76,13 @@
             <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
         </div>
 
-<div>
-<input type="checkbox"><option value=""></option>
-</div>
+        <div class="item-tarjeta">
+            <label name="premio">Premio</label>
+            <input type="text" placeholder="$$$">
+        </div>
 
         <div class="item-tarjeta boton-enviar">
-            <a href="/elegirCancha"><button type="submit" name="enviar">Buscar</button></a>
+            <a href="/elegirCancha"><button type="submit" name="enviar">Crear Torneo</button></a>
         </div>
     </div>
 
