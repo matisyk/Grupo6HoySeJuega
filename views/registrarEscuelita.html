@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Torneo</title>
+
+    <!--CSS PROPIOS-->
+    <link rel="stylesheet" href="./css/registrarCancha.css">
+    <link rel="stylesheet" href="./css/reservarCancha.css">
+    <link rel="stylesheet" href="./css/globalForm.css">
+    <!-- CSS EXTERNOS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Kalam&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="tarjeta">
+        <div class="item-tarjeta">
+            <label name="registroDeDeporte">Deporte:</label>
+            <select name="posicion" id="deporte" name="registroDeDeporte">
+                <option value="0">-</option>
+                <option value="1">Futbol</option>
+                <option value="2">Paddle</option>
+                <option value="3">Basquet</option>
+            </select>
+        </div>
+        <div class="item-tarjeta">
+            <label name="cantidad">Cantidad máx. de alumnos:</label>
+            <input type="text">
+        </div>
+
+        <div class="edad">
+            <div class="item-tarjeta">
+            <label name="edad-min">Edad mínima:</label>
+            <input type="text">
+        </div>
+        
+        <div class="item-tarjeta">
+            <label name="edad-max">Edad máxima:</label>
+            <input type="text">
+        </div>
+        </div>
+
+        <div class="item-tarjeta">
+            <label name="lugar">Género:</label>
+            <select>
+                <option value="-">Elegir opción</option>
+                <option value="lunes">Femenino</option>
+                <option value="martes">Masculino</option>
+                <option value="miercoles">Mixto</option>
+            </select>
+        </div>
+
+        <div class="otro-item-tarjeta">
+            <div class="item-tarjeta"><label name="horarios">Día a realizarse:</label></div>
+            <select>
+                <option value="-">Elegir día</option>
+                <option value="lunes">Lunes</option>
+                <option value="martes">Martes</option>
+                <option value="miercoles">Miércoles</option>
+                <option value="jueves">Jueves</option>
+                <option value="viernes">Viernes</option>
+                <option value="sabado">Sabado</option>
+                <option value="domingo">Domingo</option>
+            </select>
+            <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
+        </div>
+
+        <div class="item-tarjeta">
+            <label name="premio">Valor mensual</label>
+            <input type="text" placeholder="$$$">
+        </div>
+
+        <div class="item-tarjeta boton-enviar">
+            <a href="/elegirCancha"><button type="submit" name="enviar">Registrar</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html
