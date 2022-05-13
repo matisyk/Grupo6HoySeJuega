@@ -143,7 +143,7 @@ MEDIA Q
     width: 200px;
   }
   .cancha-home {
-    margin: 0;
+    margin-left: 10%;
   }
 
   .datos-lucas {
@@ -156,7 +156,7 @@ MEDIA Q
   }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 1200px) {
   .main-home {
     display: flex;
     position: relative;
@@ -210,8 +210,8 @@ MEDIA Q
     margin-top: 10px;
   }
 
-  .cancha-home {
-    margin-left: 50%;
+  .cancha-home{
+    margin-left: 150px;
   }
 
   .publicidades {
