@@ -26,13 +26,20 @@ header {
   margin-bottom: 500px;
 }
 
+.menu-hamburguesa i{
+  position: absolute;
+  right: 50px;
+  top: 50px;
+  font-size: 30px;
+}
+
 .menu-cont {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  
+  visibility: hidden;
 }
 
 .menu a {
@@ -149,13 +156,15 @@ header {
   margin-left: 150px;
 }
 
-@media (min-width: 425px) {
+@media (min-width: 570px) {
   .menu a {
     font-size: 140%;
   }
+  .menu-hamburguesa{visibility: hidden; }
+  .menu-cont{visibility: visible;}
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
   .menu a {
     font-size: 180%;
   }

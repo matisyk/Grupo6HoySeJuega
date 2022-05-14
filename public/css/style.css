@@ -115,7 +115,7 @@ font-size: 30px;
 }
 
 .imagen-cancha img {
-  width: 180px;
+  width: 150px;
   display: block;
   margin: 7px 8px;
   background-position: center;
@@ -133,7 +133,7 @@ font-size: 30px;
 MEDIA Q
 =============================================*/
 
-@media (min-width: 425px) {
+@media (min-width: 570px) {
   
   .imagen-jugador img {
     width: 140px;
