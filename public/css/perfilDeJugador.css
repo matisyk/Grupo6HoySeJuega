@@ -44,23 +44,30 @@ body {
 /*=============================================
 MAIN
 =============================================*/
-
+main{
+  margin: 0 150px;
+}
 .contenedorDelMain {
   display: flex;
   flex-direction: row;
 }
+div.container-fluid{
+  padding-left: 0px;
+}
+
 .datos-del-lugar {
   padding: 10px;
   width: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px;
+  margin-top: 50px;
   border-radius: 10px;
   margin-bottom: 70px;
 }
 .datos-del-lugar-b {
   background-color: #fff;
+  width: 100px;
 }
 .datos-del-lugar img {
   margin-right: 40px;
@@ -88,13 +95,7 @@ MAIN
   font-family: Kalam;
   font-size: 20px;
 }
-.boton-registrar-cancha {
-  color: #000000;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  margin: 100px;
-}
+
 .sin-canchas {
   text-align: center;
   color: #fff;
@@ -225,6 +226,34 @@ p {
 }
 
 .img-container1 {
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+
+.img-container1:before {
+  content: "";
+  position: absolute;
+  background: rgb(255, 255, 255);
+  opacity: 0;
+}
+
+.img-container1 ol {
+  width: inherit;
+  color: rgb(0, 0, 0);
+  margin-left: 200px;
+  text-align: start;
+  position: absolute;
+  
+  font-size: 13px;
+  top: -5px;
+}
+.datos-del-lugar-b{
+  width: 100%;
+}
+
+
+/*.img-container1 {
   width: 550px;
   height: 200px;
   position: relative;
@@ -342,17 +371,13 @@ p {
   font-family: "Bangers", cursive;
 }
 .div-selector {
-  margin-top: 30px;
+  
   width: 20%;
-  position: relative;
+ 
 }
 .selector {
-  position: absolute;
-  left: 680px;
-  top: -320px;
   border: 1px solid black;
   border-radius: 30px;
-  width: 80%;
   background-color: white;
 }
 .estado-activo-ina {
@@ -527,8 +552,8 @@ input:checked:focus + .switch-left + .switch-right {
 }
 .ultimo-partido {
   position: absolute;
-  left: 980px;
-  top: -390px;
+  left: 900px;
+  top: -300px;
   border: 8px solid rgb(205, 136, 72);
   border-radius: 30px;
   width: 80%;
@@ -635,9 +660,6 @@ input[type="radio"]:checked ~ label {
   border-radius: 30px;
  
   margin: 30px 0 50px 10%;
-  position: absolute;
-  left: 650px;
-  top: -150px;
 }
 .batiSeñalEquipo h1{
  font-family: "Bangers", cursive;
