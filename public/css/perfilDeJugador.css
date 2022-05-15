@@ -44,14 +44,17 @@ body {
 /*=============================================
 MAIN
 =============================================*/
+
 main{
-  margin: 0 200px;
+
+  margin: 0 150px;
+
 }
 .contenedorDelMain {
   display: flex;
   flex-direction: row;
 }
-div.container-fluid{
+div.container-fluid {
   padding-left: 0px;
 }
 
@@ -61,39 +64,42 @@ div.container-fluid{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 20px;
   border-radius: 10px;
   margin-bottom: 70px;
+  margin-left: -130px;
 }
 .datos-del-lugar-b {
   background-color: #fff;
-  width: 100px;
+  width: 310px;
+  height: 160px
 }
 .datos-del-lugar img {
-  margin-right: 40px;
-  border-radius: 10px;
-  width: 200px;
+  border-radius: 100px;
+  width: 100px;
+  margin: 50px 18px 18px 0px;
 }
 
-.nombre h2 {
+.nombre {
   font-family: Bangers;
-  font-size: 25px;
+  font-size: 20px;
+  color: #000;
 }
 .edad {
   font-family: Kalam;
-  font-size: 20px;
+  font-size: 15px;
 }
 .tel {
   font-family: Kalam;
-  font-size: 20px;
+  font-size: 105x;
 }
 .telem {
   font-family: Kalam;
-  font-size: 20px;
+  font-size: 15px;
 }
 .autoValoracion {
   font-family: Kalam;
-  font-size: 20px;
+  font-size: 15px;
 }
 
 .sin-canchas {
@@ -215,16 +221,6 @@ button3:hover .button-text2 {
   left: 25px;
 }
 
-.sin-canchas {
-  text-align: center;
-  color: #fff;
-  margin: 20px;
-}
-
-p {
-  margin: 200px;
-}
-
 .img-container1 {
   width: 100%;
   height: 200px;
@@ -244,14 +240,13 @@ p {
   margin-left: 200px;
   text-align: start;
   position: absolute;
-  
+
   font-size: 13px;
   top: -5px;
 }
-.datos-del-lugar-b{
+/* .datos-del-lugar-b{
   width: 100%;
-}
-
+} */
 
 /*.img-container1 {
   width: 550px;
@@ -261,7 +256,7 @@ p {
   cursor: pointer;
 }
 
-.img-container1:before {
+/* /* .img-container1:before {
   content: "";
   width: inherit;
   height: inherit;
@@ -270,14 +265,14 @@ p {
   opacity: 0;
   transition: opacity 0.3s linear;
   margin: 0;
-}
+} 
 
 .img-container1:hover:before {
   opacity: 0.5;
 }
 .img-container1 img:hover {
   left: 0;
-}
+} */
 
 .img-container1 ol {
   width: inherit;
@@ -285,19 +280,19 @@ p {
   margin-left: 200px;
   text-align: start;
   position: absolute;
-  top: 100%;
-  transition: top 0.3s linear;
-  font-size: 13px;
+  top: 9%;
+  left: -38%;
 }
 
-.img-container1:hover ol {
+/* .img-container1:hover ol {
   top: -5px;
 }
 .datos-del-lugar-b:hover {
   width: 50%;
   transition: top 1s linear;
   max-width: max-content;
-}
+} */
+
 /* BOTON DE ACTIVO E INACTIVO */
 :root {
   --color-green: #00a878;
@@ -345,7 +340,7 @@ p {
   border: 1px solid black;
   border-radius: 30px;
   font-family: "Bangers", cursive;
-  margin: 30px 0 50px 10%;
+  margin: -70px 0 50px 10%;
 }
 .separador2 {
   width: 20%;
@@ -371,14 +366,13 @@ p {
   font-family: "Bangers", cursive;
 }
 .div-selector {
-  
-  width: 30%;
- 
+  width: 20%;
 }
 .selector {
   padding-top: 10px;
   border-radius: 20px;
   background-color: white;
+  width: 250px;
 }
 .estado-activo-ina {
   font-family: Kalam;
@@ -400,7 +394,7 @@ p {
   height: 4em;
   overflow: hidden;
   border-bottom: 0.5em solid #eee;
-  left: 40px;
+  left: 50px;
   top: -5px;
 }
 
@@ -647,22 +641,24 @@ input[type="radio"]:checked ~ label {
   margin-top: 5px;
 }
 /* Tarjeta de equipo */
-.señal{
-  height:40px;
-  position:relative
+.señal {
+  height: 44px;
+  position: relative;
+  left: 280px;
+  top: -207px;
 }
-.batiSeñalEquipo{
-  width: 80%;
+.batiSeñalEquipo {
+  width: 250px;
   height: 400%;
   background-color: white;
   text-align: center;
   border: 1px solid black;
   border-radius: 30px;
- 
+
   margin: 30px 0 50px 10%;
 }
-.batiSeñalEquipo h1{
- font-family: "Bangers", cursive;
+.batiSeñalEquipo h1 {
+  font-family: "Bangers", cursive;
   font-size: 20px;
 }
 button {
@@ -683,7 +679,7 @@ button {
   -ms-transform: translateY(8px);
   transform: translateY(8px);
   position: absolute;
-  left: 5px;
+  left: 20px;
   top: 65px;
 }
 
