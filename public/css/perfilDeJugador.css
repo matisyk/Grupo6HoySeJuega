@@ -48,7 +48,8 @@ MAIN
 .nombre {
   font-family: Bangers;
   font-size: 20px;
-  color: #ebebeb
+  color: #ebebeb;
+  margin-top: 10px;
 }
 .edad {
   font-family: Kalam;
@@ -293,7 +294,7 @@ button3:hover .button-text2 {
 }
 /* PARTE DEL MAIN */
 .separador1 {
-  width: 20%;
+  width: fit-content;
   background-color: white;
   text-align: center;
   border: 1px solid black;
@@ -302,7 +303,7 @@ button3:hover .button-text2 {
   margin: -70px 0 50px 10%;
 }
 .separador2 {
-  width: 20%;
+  width: fit-content;
   background-color: white;
   text-align: center;
   border: 1px solid black;
@@ -617,7 +618,7 @@ input[type="radio"]:checked ~ label {
   text-align: center;
   border-radius: 20px;
   padding-top: 10px;
-  margin: 21px 20%;
+  margin: 21px 0%;
 }
 .batiSeñalEquipo h1 {
   font-family: "Bangers", cursive;
@@ -734,7 +735,7 @@ div.container-fluid {
   .batiSeñalEquipo{
     position: absolute;
     top: 250px;
-    left: -290px;
+    left: -280px;
     min-width: 300px;
     max-width: 150%;
   }

@@ -200,13 +200,6 @@ header {
   margin-bottom: 500px;
 }
 
-.menu-hamburguesa i{
-  position: absolute;
-  right: 50px;
-  top: 50px;
-  font-size: 30px;
-}
-
 .menu-cont {
   display: flex;
   flex-direction: row;
