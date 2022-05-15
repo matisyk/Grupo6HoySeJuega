@@ -7,7 +7,7 @@ body {
   font-family: "Bangers", cursive;
 }
 .botonera-inicial{
-  width: 28%;
+  width: 20%;
   height: 5%;
   display: flex;
   justify-content: center;
@@ -19,20 +19,18 @@ body {
   box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
   -moz-box-shadow: 10px 10px 64px 0px rgba(102, 100, 98, 0.75);
-  margin-top: 50px;
-  margin-left: 500px;
+  margin: 50px auto;
 }
 .contenedor-mayor{
   display: flex; 
   justify-content: center;
   text-align: center;
   align-items: center;
-  margin-top: 30px;
   font-size: 20px;
   width: 400px;
   height: 460px;
   padding: 20px;
-  margin-left: 500px;
+  margin: 30px auto;
   background: #edebeb;
   border: 2px solid rgba(0, 0, 0, 0.657);
   border-radius: 20px;
@@ -43,6 +41,11 @@ body {
   padding-bottom: 0;
 
 }
+
+.container{
+  min-width:fit-content;
+}
+
 .contenedor-menor{
   font-size: 15px;
   margin-bottom: 40px;
