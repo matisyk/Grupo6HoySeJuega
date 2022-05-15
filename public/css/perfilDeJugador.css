@@ -45,7 +45,7 @@ body {
 MAIN
 =============================================*/
 main{
-  margin: 0 150px;
+  margin: 0 200px;
 }
 .contenedorDelMain {
   display: flex;
@@ -372,12 +372,12 @@ p {
 }
 .div-selector {
   
-  width: 20%;
+  width: 30%;
  
 }
 .selector {
-  border: 1px solid black;
-  border-radius: 30px;
+  padding-top: 10px;
+  border-radius: 20px;
   background-color: white;
 }
 .estado-activo-ina {
