@@ -607,7 +607,7 @@ input[type="radio"]:checked ~ label {
 .señal {
   height: 44px;
   position: relative;
-  left: 50vw;
+  left: 280px;
   top: -207px; 
 }
 .batiSeñalEquipo {
@@ -642,7 +642,7 @@ button {
   -ms-transform: translateY(8px);
   transform: translateY(8px);
   position: absolute;
-  left: 0px;
+  left: 12px;
   top: 65px;
 }
 
@@ -734,7 +734,6 @@ div.container-fluid {
     top: 250px;
     left: -280px;
     max-width: 150%;
-   
   }
 
   .ultimo-partido{
