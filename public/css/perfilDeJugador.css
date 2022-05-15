@@ -192,7 +192,7 @@ button3:hover .button-text2 {
   height: 200px;
   position: relative;
   margin-left: 10%;
-  color:#ebebeb
+  color:#ebebeb;
 }
 
 .img-container1 ol {
@@ -294,22 +294,22 @@ button3:hover .button-text2 {
 }
 /* PARTE DEL MAIN */
 .separador1 {
-  width: fit-content;
-  background-color: white;
+  width: 100vw;
   text-align: center;
-  border: 1px solid black;
-  border-radius: 30px;
+  border-top: 1px solid #ebebeb;
   font-family: "Bangers", cursive;
-  margin: -70px 0 50px 10%;
+  margin: 200px 0 50px 0;
+  padding-top: 100px;
+  color: #ebebeb;
 }
 .separador2 {
-  width: fit-content;
-  background-color: white;
+  width: 100vw;
   text-align: center;
-  border: 1px solid black;
-  border-radius: 30px;
+  border-top: 1px solid #ebebeb;
   font-family: "Bangers", cursive;
-  margin: 30px 0 50px 40%;
+  margin: 100px 0 50px 0;
+  padding-top: 100px;
+  color: #ebebeb
 }
 .separador3 {
   width: 15%;
@@ -335,7 +335,7 @@ button3:hover .button-text2 {
   border-radius: 20px;
   background-color: white;
   width: 40vw;
-  margin-left:30%
+  margin-left:30%;
 }
 .estado-activo-ina {
   font-family: Kalam;
@@ -357,8 +357,7 @@ button3:hover .button-text2 {
   height: 4em;
   overflow: hidden;
   border-bottom: 0.5em solid #eee;
-  left: 50px;
-  top: -5px;
+  margin: auto
 }
 
 .rocker-small {
@@ -503,7 +502,7 @@ input:checked:focus + .switch-left + .switch-right {
 /* Ultimo partido*/
 
 .div-ultimo-partido {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 190%;
 
 }
@@ -608,7 +607,7 @@ input[type="radio"]:checked ~ label {
 .señal {
   height: 44px;
   position: relative;
-  left: 280px;
+  left: 50vw;
   top: -207px; 
 }
 .batiSeñalEquipo {
@@ -643,7 +642,7 @@ button {
   -ms-transform: translateY(8px);
   transform: translateY(8px);
   position: absolute;
-  left: 12px;
+  left: 0px;
   top: 65px;
 }
 
@@ -708,15 +707,14 @@ button:hover:before {
 
 div.container-fluid {
   padding-left: 0px;
+  width: 100vw;
 }
 @media (min-width: 570px){
-  main{
-    margin: 0 150px;
-  }
 
   .datos-del-lugar {
     margin-left: 0;
-    border-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
     max-width: 1200px;
   }
   
@@ -728,7 +726,6 @@ div.container-fluid {
   }
 .selector{
   margin-left: 0;
-  min-width: 300px;
   max-width: 150%;
 }
 
@@ -736,14 +733,25 @@ div.container-fluid {
     position: absolute;
     top: 250px;
     left: -280px;
-    min-width: 300px;
     max-width: 150%;
+   
   }
 
   .ultimo-partido{
     position: absolute;
     top: 0px;
-    left: 600px;
+    left: 40vw;
+    width: 350px;
+  }
+}
+
+@media (min-width: 900px){
+  main{
+    margin: 0 150px;
+  }
+
+  .ultimo-partido{
+    left: 400px;
     width: 500px;
   }
 }
