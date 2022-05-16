@@ -47,6 +47,11 @@
     <div class="menu">
       <div class="copy-header">
         <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
+       
+        <a href="#" class="menu-hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+      </a>
+       
         <div class="menu-cont2">
           <a class="txtNav1" href="/reservarCancha">Buscar Canchas</a>
           <a class="txtNav1" href="#">Mi equipo</a>
@@ -94,31 +99,40 @@
         </section>
       </section>
     </div>
+
+
     <div class="div-selector">
-      <section class="selector">
-        <div class="separador4">
-          <h1>¿Hoy se juega?</h1>
+      <div class="parte-1">
+        <section class="selector">
+          <div class="separador4">
+            <h1>¿Hoy se juega?</h1>
+          </div>
+
+          <section>
+            <label class="rocker rocker-small">
+              <input type="checkbox">
+              <span class="switch-left">Si</span>
+              <span class="switch-right">No</span>
+            </label>
+          </section>
+
+        </section>
+        <!-- Equipo Tarjeta -->
+        <div class="señal">
+          <section class="batiSeñalEquipo">
+            <h1>Llamá a tu equipo con la </h1>
+            <a href="/equipo">
+              <button>
+                <span>BATI SEÑAL</span>
+              </button>
+            </a>
+          </section>
         </div>
-        <section>
-          <label class="rocker rocker-small">
-            <input type="checkbox">
-            <span class="switch-left">Si</span>
-            <span class="switch-right">No</span>
-          </label>
-        </section>
-      </section>
-      <!-- Equipo Tarjeta -->
-      <div class="señal">
-        <section class="batiSeñalEquipo">
-          <h1>Llamá a tu equipo con la </h1>
-          <a href="/equipo">
-            <button>
-              <span>BATI SEÑAL</span>
-            </button>
-          </a>
-        </section>
-      </div>
+      <div>
+
       <!--Box de ultimo partido-->
+      <div class="parte-2">
+
       <section>
         <div class="div-ultimo-partido">
           <section class="ultimo-partido">
@@ -160,12 +174,20 @@
             <form method="get" action="/perfilDeJugador">
               <button2 action="/perfilDeJugador" type="submit" class="btn btn-primary enviarComentario">Enviar</button2>
             </form>
-        </div>
-      </section>
-    </div>
+
+           </div>
+          </section>
+          </div>
+        </div> 
+    <br><br><br>
+    <br><br><br>
+    
+
     <div class="separador1" id="proximoPartido">
       <h1>PRÓXIMOS PARTIDOS</h1>
     </div>
+
+
     <section>
       <!-- TABLA DE RESERVAS -->
 

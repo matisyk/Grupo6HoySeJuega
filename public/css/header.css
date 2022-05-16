@@ -215,7 +215,6 @@ header {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  visibility: hidden;
 }
 
 .menu a {
