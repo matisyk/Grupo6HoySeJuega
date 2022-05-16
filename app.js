@@ -92,6 +92,10 @@ app.get('/equipo', (req, res) => {
 
   res.sendFile(path.resolve("./views/equipo.html"))
 });
+app.get('/perfilCanchaVista', (req, res) => {
+
+  res.sendFile(path.resolve("./views/vistaCanchaInfo.html"))
+});
 
 // Metodos post
 

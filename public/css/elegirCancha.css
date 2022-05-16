@@ -90,8 +90,23 @@ margin: 20px;
   border-top-right-radius: 30px;
 }
 
+button4{
+  position: relative;
+  left:138px;
+  top: -32px;
+  color: rgb(0, 0, 0);
+    padding: 0.1em 0.5em;
+    background: rgba(255, 255, 255, 0.871);
+    border-radius: 50px;
+    bottom: 0;
+    margin: 20px;
+    font-size: 20px;
+  
+}
+
 .cinco-estrellas {
   margin: 10px;
+  margin-top: -20px;
 }
 .cinco-estrellas img {
   width: 20px;
