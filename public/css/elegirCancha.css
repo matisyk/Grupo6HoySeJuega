@@ -25,13 +25,25 @@ main {
   padding: 40px;
   display: flex;
   flex-direction: row;
+  margin: auto;
 }
+
 .buscar-nuevo{
 text-decoration: none;
 font-size: 20px;
+font-family: Kalam;
 color: white;
 margin: 20px;
+background-color: rgba(89, 103, 151, 0.7);
+border-radius: 10px;
+padding: 10px;
 }
+
+.buscar-nuevo:hover{
+  background-color: rgba(22, 24, 30, 0.7);
+}
+
+
 
 /* Tarjetas */
 .card {
@@ -74,7 +86,7 @@ margin: 20px;
   color: #ebebeb;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 500;
-  box-shadow: 15px 15px 30px #bebebe, -15px -15px 30px #ffffff;
+  box-shadow: 15px 15px 30px #080643, -15px -15px 30px #4830cd;
   margin: 20px;
   position: relative;
 }
@@ -156,28 +168,20 @@ button4{
 /*separador*/
 
 .separador1 h1 {
-  width: 15%;
-  background-color: white;
-  text-align: center;
-  border: 1px solid black;
+  width: 300px;
   border-radius: 10px;
   font-family: "Bangers", cursive;
-  margin: 50px 20px 20px 20px;
-  font-size: 20px;
-  padding: 10px;
-  color: red;
+  margin: 50px 20px 30px 20px;
+  font-size: 30px;
+  color: white
 }
 .separador2 h1 {
-  width: 15%;
-  background-color: white;
-  text-align: center;
-  border: 1px solid black;
+  width: 300px;
   border-radius: 10px;
   font-family: "Bangers", cursive;
-  margin: 50px 20px 20px 20px;
-  font-size: 20px;
-  padding: 10px;
-  color: red;
+  margin: 50px 20px 30px 20px;
+  font-size: 30px;
+  color: white
 }
 @media (min-width: 425px) {
   .main {
