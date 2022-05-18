@@ -13,10 +13,8 @@ header {
   background: linear-gradient(
     to right,
     #000000,
-    #000000,
-    #0166f7,
-    #0166f7,
-    #bd6cca,
+    #000000,    
+    #0166f7,   
     #bd6cca
   );
   color: white;
@@ -156,7 +154,8 @@ header {
   margin-left: 150px;
 }
 
-@media (min-width: 570px) {
+
+@media (min-width: 1200px) {
   .menu a {
     font-size: 140%;
   }
@@ -190,9 +189,9 @@ header {
     to right,
     #000000,
     #000000,
+    
     #0166f7,
-    #0166f7,
-    #bd6cca,
+    
     #bd6cca
   );
   color: white;
