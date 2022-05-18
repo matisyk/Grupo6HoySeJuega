@@ -43,13 +43,12 @@ MAIN
 .principal-home {
   display: flex;
   position: relative;
-  margin: 3%;
   color: white;
   background-color: black;
   border-radius: 5px;
   padding: 10%;
   background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0) 100%);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0) 100%);
 }
 
 .titulito-home {
@@ -62,20 +61,20 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
 }
 
 .main-home ol li{
-  list-style-type: decimal;
+  
   list-style-position: inside;
   font-family: "Kalam", cursive;
-  font-size: 20px;
+  
   padding: 0;
   text-decoration: none;
   color: #ebebeb;
 }
 
 .main-home ol li a{
-  list-style-type: decimal;
+  
   list-style-position: inside;
   font-family: "Kalam", cursive;
-  font-size: 20px;
+  
   padding: 0;
   text-decoration: none;
   color: #ebebeb;
@@ -94,7 +93,7 @@ font-size: 30px;
 }
 
 .imagen-jugador img {
-  width: 100px;
+  
   border-radius: 100px;
   background: rgb(7, 7, 49);
   display: block;
@@ -109,19 +108,18 @@ font-size: 30px;
 
 .cita-lucas {
   margin: 0px;
-  font-size: 10px;
+   
   font-family: "Kalam", cursive;
 }
 
-.cancha-home {
-  margin-left: 20%;
-  width: 50%;
-}
 
+.image_field{
+  width: 35vw;
+}
 .imagen-cancha img {
-  width: 150px;
-  display: block;
-  margin: 7px 8px;
+  
+  
+  
   background-position: center;
   border-radius: 20px;
 }
@@ -133,22 +131,95 @@ font-size: 30px;
 .publicidades img {
   width: 200px;
 }
+
+.datos-lucas {
+  font-family: "Kalam", cursive;
+  margin: 15px 5px;
+}
+
+.cita-lucas {
+  margin-top: 10px;
+}
+
+.titulito-home{
+  font-size: 40px;
+}
+
+.bottom_main{
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  margin: 8px;
+  text-align: justify;
+  border: solid 5px #ebebeb;
+  background-color:#ebebeb;
+  border-radius: 10px;
+  
+
+}
+.image_field{
+  width: 35vw;
+}
+
+.redes{
+  margin-top: 10px;
+}
+
+.home_info {
+  font-size: 20px;
+}
+
+.principal-home{
+  display: flex;
+  flex-direction: column;
+  
+}
+.jugador-home{
+  width: 100%;
+}
+
+.player_mobile{
+  background-color: rgba(235, 235, 235, 0.25);
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.imagen-jugador{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+
+}
+.image_lucas{
+  width: 40vw;
+  
+}
+
+.datos-lucas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+}
+
+.cancha-home{
+  margin-top: 15px;   
+}
+
+.image_field{
+  width: 60vw;
+  
+}
+.imagen-cancha{
+padding-bottom: 15px;
+}
 /*=============================================
 MEDIA Q
 =============================================*/
 
-@media (min-width: 570px) {
-  
-  .imagen-jugador img {
-    width: 140px;
-  }
-
-  .imagen-cancha img {
-    width: 200px;
-  }
-  .cancha-home {
-    margin-left: 10%;
-  }
+@media (min-width: 450px) {  
 
   .datos-lucas {
     font-family: "Kalam", cursive;
@@ -158,7 +229,84 @@ MEDIA Q
   .cita-lucas {
     margin-top: 10px;
   }
+
+  .titulito-home{
+    font-size: 40px;
+  }
+
+  .bottom_main{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 8px;
+    text-align: justify;
+    border: solid 5px #ebebeb;
+    background-color:#ebebeb;
+    border-radius: 10px;
+    
+
+  }
+  .image_field{
+    width: 35vw;
+  }
+  
+  .redes{
+    margin-top: 10px;
+  }
+
+  .home_info {
+    font-size: 20px;
+  }
+
+  .principal-home{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .jugador-home{
+    width: 100%;
+  }
+
+  .player_mobile{
+    background-color: rgba(235, 235, 235, 0.25);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .imagen-jugador{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+
+  }
+  .image_lucas{
+    width: 40vw;
+    
+  }
+
+  .datos-lucas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+  }
+
+  .cancha-home{
+    margin-top: 15px;   
+  }
+
+  .image_field{
+    width: 60vw;
+    
+  }
+.imagen-cancha{
+  padding-bottom: 15px;
 }
+  
+
+  
 
 @media (min-width: 1200px) {
   .main-home {
