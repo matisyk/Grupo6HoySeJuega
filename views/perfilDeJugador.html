@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="./css/perfilDeJugador.css">
   <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/headerJugador.css" rel="stylesheet" />
-  <link href="/css/footer.css" rel="stylesheet" />
+  <link href="/css/footerJugador.css" rel="stylesheet" />
 
 
   <!-- CSS EXTERNOS -->
@@ -47,11 +47,11 @@
     <div class="menu">
       <div class="copy-header">
         <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
-       
+
         <a href="#" class="menu-hamburguesa">
           <i class="fa-solid fa-bars"></i>
-      </a>
-       
+        </a>
+
         <div class="menu-cont2">
           <a class="txtNav1" href="/reservarCancha">Buscar Canchas</a>
           <a class="txtNav1" href="/equipo">Mi equipo</a>
@@ -128,470 +128,453 @@
             </a>
           </section>
         </div>
-      <div>
+        <div>
 
-      <!--Box de ultimo partido-->
-      <div class="parte-2">
+          <!--Box de ultimo partido-->
+          <div class="parte-2">
 
-      <section>
-        <div class="div-ultimo-partido">
-          <section class="ultimo-partido">
-            <div class="titulo-U-P">
-              <h1>ÚLTIMO PARTIDO</h1>
-            </div>
-            <section class="vs">
-              <h2> Los borrachines <span> VS </span>
-                <span2> Los mangines</span2>
-              </h2>
+            <section>
+              <div class="div-ultimo-partido">
+                <section class="ultimo-partido">
+                  <div class="titulo-U-P">
+                    <h1>ÚLTIMO PARTIDO</h1>
+                  </div>
+                  <section class="vs">
+                    <h2> Los Piratas <span> VS </span>
+                      <span2> Los Carlitos</span2>
+                    </h2>
+                  </section>
+                  <h4 class="valoracion">Valoración del partido</h4>
+                  <form class="estrellas">
+                    <p class="clasificacion">
+                      <input id="radio1" type="radio" name="estrellas" value="5">
+
+                      <label for="radio1">★</label>
+
+                      <input id="radio2" type="radio" name="estrellas" value="4">
+
+                      <label for="radio2">★</label>
+
+                      <input id="radio3" type="radio" name="estrellas" value="3">
+
+                      <label for="radio3">★</label>
+
+                      <input id="radio4" type="radio" name="estrellas" value="2">
+
+                      <label for="radio4">★</label>
+
+                      <input id="radio5" type="radio" name="estrellas" value="1">
+
+                      <label for="radio5">★</label>
+                    </p>
+                  </form>
+                  <h4 class="valoracion2">Comentarios:</h4>
+                  <textarea class="cuadroComentario" type="text" name="comentarioDelJugador"
+                    placeholder="Comentarios de las instalaciones y el equipo."></textarea>
+                  <form method="get" action="/perfilDeJugador">
+                    <button2 action="/perfilDeJugador" type="submit" class="btn btn-primary enviarComentario">Enviar
+                    </button2>
+                  </form>
+
+              </div>
             </section>
-            <h4 class="valoracion">Valoración del partido</h4>
-            <form class="estrellas">
-              <p class="clasificacion">
-                <input id="radio1" type="radio" name="estrellas" value="5">
-
-                <label for="radio1">★</label>
-
-                <input id="radio2" type="radio" name="estrellas" value="4">
-
-                <label for="radio2">★</label>
-
-                <input id="radio3" type="radio" name="estrellas" value="3">
-
-                <label for="radio3">★</label>
-
-                <input id="radio4" type="radio" name="estrellas" value="2">
-
-                <label for="radio4">★</label>
-
-                <input id="radio5" type="radio" name="estrellas" value="1">
-
-                <label for="radio5">★</label>
-              </p>
-            </form>
-            <h4 class="valoracion2">Comentarios:</h4>
-            <textarea class="cuadroComentario" type="text" name="comentarioDelJugador"
-              placeholder="Comentarios de las instalaciones y el equipo."></textarea>
-            <form method="get" action="/perfilDeJugador">
-              <button2 action="/perfilDeJugador" type="submit" class="btn btn-primary enviarComentario">Enviar</button2>
-            </form>
-
-           </div>
-          </section>
           </div>
-        </div> 
-    <br><br><br>
-    <br><br><br>
-    
+        </div>
 
-    <div class="separador1" id="proximoPartido">
-      <h1>PRÓXIMOS PARTIDOS</h1>
-    </div>
+        <div class="separador1" id="proximoPartido">
+          <h1>PRÓXIMOS PARTIDOS</h1>
+        </div>
 
 
-    <section>
-      <!-- TABLA DE RESERVAS -->
+        <section>
+          <!-- TABLA DE RESERVAS -->
 
 
-      <div class="container-fluid">
+          <div class="container-fluid">
 
-        <div class="container">
+            <div class="container">
 
-          <div class="panel panel-default">
+              <div class="panel panel-default">
 
 
-            <!-- CABECERA DE TABLA DE RESERVAS -->
+                <!-- CABECERA DE TABLA DE RESERVAS -->
 
-            <div class="panel-heading cabeceraCarrito">
-              <!-- <h4 style="color:rgb(0, 0, 0); font-family: Kalam;font-size: 25px; margin-left: 10px;"> Próximos
+                <div class="panel-heading cabeceraCarrito">
+                  <!-- <h4 style="color:rgb(0, 0, 0); font-family: Kalam;font-size: 25px; margin-left: 10px;"> Próximos
                   partidos</h4> -->
-              <div class="col-md-2 col-sm-7 col-xs-12 text-start">
+                  <div class="col-md-2 col-sm-7 col-xs-2 text-start">
 
-                <h3>
-                  <small>MAPS</small>
-                </h3>
+                    <h3>
+                      <small>MAPS</small>
+                    </h3>
 
-              </div>
-              <div class="col-md-4 col-sm-7 col-xs-12 text-start">
+                  </div>
+                  <div class="col-md-4 col-sm-7 col-xs-2 text-center">
 
-                <h3>
-                  <small>EQUIPO</small>
-                </h3>
+                    <h3>
+                      <small>EQUIPO</small>
+                    </h3>
 
-              </div>
-              <div class="col-sm-2 col-xs-0 text-start">
+                  </div>
+                  <div class="col-sm-2 col-xs-2 text-start">
 
-                <h3>
-                  <small>CANCHA</small>
-                </h3>
+                    <h3>
+                      <small>CANCHA</small>
+                    </h3>
 
-              </div>
+                  </div>
 
-              <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+                  <div class="col-md-2 col-sm-1 col-xs-4 text-end">
 
-                <h3>
-                  <small>DÍA Y HORARIO</small>
-                </h3>
+                    <h3>
+                      <small>DÍA Y HORA</small>
+                    </h3>
 
-              </div>
+                  </div>
 
 
-              <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+                  <div class="col-md-2 col-sm-1 col-xs-2 text-start">
 
-                <h3>
-                  <small>ESTADO</small>
-                </h3>
-
-              </div>
-
-            </div>
-
-            <!-- CUERPO DE RESERVAS -->
-
-            <div class="panel-body cuerpoCarrito">
-
-              <!-- RESERVA 1 -->
-
-              <div clas="row itemCarrito">
-
-                <div class="col-sm-2 col-xs-12">
-
-                  <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre. Buenos Aires</a>
-
-                </div>
-
-                <div class="col-sm-4 col-xs-12">
-
-                  <br>
-
-                  <p class="tituloCarritoCompra text-left">LOS TORTUGAS</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-12">
-
-                  <br>
-
-                  <p class="precioCarritoCompra text-start">Flow futbol</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-3 col-xs-8">
-
-                  <br>
-
-                  <div class="col-xs-12">
-
-                    <center>
-
-                      Lunes 10/5 22:00hs
-
-                    </center>
+                    <h3>
+                      <small>ESTADO</small>
+                    </h3>
 
                   </div>
 
                 </div>
 
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+                <!-- CUERPO DE RESERVAS -->
 
-                  <br>
+                <div class="panel-body cuerpoCarrito">
 
-                  <p>
+                  <!-- RESERVA 1 -->
 
-                    <strong>Reservado</strong>
+                  <div clas="row itemCarrito">
 
-                  </p>
+                    <div class="col-sm-2 col-xs-2">
+
+                      <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre. Buenos Aires</a>
+
+                    </div>
+
+                    <div class="col-sm-4 col-xs-2 text-start margin-left-0" style="margin-left: 0">
+
+                      <br>
+
+                      <p class="tituloCarritoCompra text-left">Tortugas</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-1 col-xs-3">
+
+                      <br>
+
+                      <p class="precioCarritoCompra text-start">Flow futbol</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-xs-2 text-start">
+
+                      <br>
+
+                      <div class="col-xs-2 text-start">
+
+                        <center>
+
+                          Lunes 10/5 22:00hs
+
+                        </center>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-1 col-xs-3">
+
+                      <br>
+
+                      <p class="text-end reserva">
+
+                        <strong>Reservado</strong>
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <hr>
+
+                  <!-- RESERVA 2 -->
+
+                  <div clas="row itemCarrito">
+
+                    <div class="col-sm-2 col-xs-2">
+
+                      <a href="https://goo.gl/maps/GwzF4C22edXxABfY6">Consti. 1590, San Fernando, Buenos Aires</a>
+                    </div>
+
+                    <div class="col-sm-4 col-xs-2 text-start margin-left-0" style="margin-left: 0">
+
+                      <br>
+
+                      <p class="tituloCarritoCompra text-left">Piratas</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-1 col-xs-3">
+
+                      <br>
+
+                      <p class="precioCarritoCompra text-start">Al toque</p>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-3 col-xs-2 text-start">
+
+                      <br>
+
+                      <div class="col-xs-2 text-start">
+
+                        <center>
+
+                          Sábado 15/5 11:00hs
+
+                        </center>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-2 col-sm-1 col-xs-3">
+
+                      <br>
+
+                      <p class="text-end reserva">
+
+                        <strong>Reservado</strong>
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  <div class="clearfix"></div>
+
+                  <hr>
+
+                  <!-- AGREGAR MAS RESERVAS -->
+
+                </div>
+                <button3 class="learn-more">
+                  <a href="/reservarCancha"><span class="circle" aria-hidden="true">
+                      <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text2">Nueva Reserva</span></a>
+                </button3>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+      <div class="separador2">
+        <h1>Escuelita de futbol</h1>
+      </div>
+      <section>
+        <!-- TABLA DE RESERVAS -->
+
+
+        <div class="container-fluid">
+
+          <div class="container">
+
+            <div class="panel panel-default">
+
+
+              <!-- CABECERA DE TABLA DE RESERVAS -->
+
+              <div class="panel-heading cabeceraCarrito">
+
+                <div class="col-md-2 col-sm-7 col-xs-2 text-start">
+
+                  <h3>
+                    <small>MAPS</small>
+                  </h3>
+
+                </div>
+
+                <div class="col-md-4 col-sm-7 col-xs-3 text-start">
+
+                  <h3>
+                    <small>HORARIO</small>
+                  </h3>
+
+                </div>
+                <div class="col-sm-2 col-xs-2 text-start">
+
+                  <h3>
+                    <small>CLUB</small>
+                  </h3>
+
+                </div>
+
+                <div class="col-md-2 col-sm-1 col-xs-3 text-start jugadora">
+
+                  <h3>
+                    <small>JUGADOR/A
+                    </small>
+                  </h3>
+
+                </div>
+
+
+                <div class="col-md-2 col-sm-1 col-xs-2 text-center mes">
+
+                  <h3>
+                    <small>MES</small>
+                  </h3>
 
                 </div>
 
               </div>
 
-              <div class="clearfix"></div>
+              <!-- CUERPO DE RESERVAS -->
 
-              <hr>
+              <div class="panel-body cuerpoCarrito">
 
-              <!-- RESERVA 2 -->
+                <!-- RESERVA 1 -->
 
-              <div clas="row itemCarrito">
+                <div clas="row itemCarrito">
 
-                <div class="col-sm-2 col-xs-12">
+                  <div class="col-sm-2 col-xs-2">
+                    <br>
+                    <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre.
+                      Aires</a>
 
-                  <a href="https://goo.gl/maps/GwzF4C22edXxABfY6">Constitución 1590, San Fernando</a>
+                  </div>
 
-                </div>
+                  <div class="col-sm-4 col-xs-3">
 
-                <div class="col-sm-4 col-xs-12">
+                    <br>
 
-                  <br>
+                    <p class="tituloCarritoCompra text-center">Lunes Miercoles Viernes 18:00_hs</p>
 
-                  <p class="tituloCarritoCompra text-left">LOS PIRATAS </p>
+                  </div>
 
-                </div>
+                 <div class="col-md-2 col-sm-1 col-xs-3 text-center">
 
-                <div class="col-md-2 col-sm-1 col-xs-12">
+                   <br>
 
-                  <br>
+                   <p class="text-left">Flow junior Futbol</p>
 
-                  <p class="precioCarritoCompra text-start">Al toque futbol</p>
+                 </div>
 
-                </div>
+                  <div class="col-md-2 col-sm-3 col-xs-2">
 
-                <div class="col-md-2 col-sm-3 col-xs-8">
+                    <br>
 
-                  <br>
+                    <p class="text-left">
 
-                  <div class="col-xs-12">
+                    Franco  2013
+                    </p>
 
-                    <center>
+                  </div>
 
-                     Sábado 15/5 11:00hs
+                  <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
-                    </center>
+                    <br>
+
+                    <p>
+
+                      04/2022 <span><strong> Pagado</strong></span>
+
+                    </p>
 
                   </div>
 
                 </div>
 
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+                <div class="clearfix"></div>
 
-                  <br>
+                <hr>
 
-                  <p>
+                <!-- RESERVA 2 -->
 
-                    <strong>Reservado</strong>
+                <div clas="row itemCarrito">
 
-                  </p>
+                  <div class="col-sm-2 col-xs-2">
+                    <br>
+                    <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre.
+                      Aires</a>
+
+                  </div>
+
+                  <div class="col-sm-4 col-xs-3">
+
+                    <br>
+
+                    <p class="tituloCarritoCompra text-center">Lunes Miercoles Viernes 18:00_hs</p>
+
+                  </div>
+
+                  <div class="col-md-2 col-sm-1 col-xs-3 text-center">
+
+                    <br>
+
+                    <p class="text-left">Flow junior Futbol</p>
+
+                  </div>
+
+                  <div class="col-md-2 col-sm-3 col-xs-2">
+
+                    <br>
+
+                    <p class="text-left">
+
+                      Franco 2013
+                    </p>
+
+                  </div>
+
+                  <div class="col-md-2 col-sm-1 col-xs-2 text-center">
+
+                    <br>
+
+                    <p>
+
+                      04/2022 <span><strong> Pagado</strong></span>
+
+                    </p>
+
+                  </div>
 
                 </div>
 
+                <div class="clearfix"></div>
+
+                <hr>
+                <!-- AGREGAR MAS RESERVAS -->
+
               </div>
-
-              <div class="clearfix"></div>
-
-              <hr>
-
-              <!-- AGREGAR MAS RESERVAS -->
-
+              <button3 class="learn-more">
+                <a href="#"><span class="circle" aria-hidden="true">
+                    <span class="icon arrow"></span>
+                  </span>
+                  <span class="button-text2">Buscar escuelita</span></a>
+              </button3>
             </div>
-            <button3 class="learn-more">
-              <a href="/reservarCancha"><span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text2">Nueva Reserva</span></a>
-            </button3>
           </div>
         </div>
-      </div>
-      </div>
-    </section>
-    <div class="separador2">
-      <h1>Escuelita de futbol</h1>
     </div>
-    <section>
-      <!-- TABLA DE RESERVAS -->
-
-
-      <div class="container-fluid">
-
-        <div class="container">
-
-          <div class="panel panel-default">
-
-
-            <!-- CABECERA DE TABLA DE RESERVAS -->
-
-            <div class="panel-heading cabeceraCarrito">
-
-              <div class="col-md-2 col-sm-7 col-xs-12 text-start">
-
-                <h3>
-                  <small>MAPS</small>
-                </h3>
-
-              </div>
-              <div class="col-md-4 col-sm-7 col-xs-12 text-start">
-
-                <h3>
-                  <small>DÍA Y HORARIO</small>
-                </h3>
-
-              </div>
-              <div class="col-sm-2 col-xs-0 text-start">
-
-                <h3>
-                  <small>CLUB</small>
-                </h3>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-0 text-center">
-
-                <h3>
-                  <small>HIJO / CATEGORÍA
-                  </small>
-                </h3>
-
-              </div>
-
-
-              <div class="col-md-2 col-sm-1 col-xs-0 text-center">
-
-                <h3>
-                  <small>MES</small>
-                </h3>
-
-              </div>
-
-            </div>
-
-            <!-- CUERPO DE RESERVAS -->
-
-            <div class="panel-body cuerpoCarrito">
-
-              <!-- RESERVA 1 -->
-
-              <div clas="row itemCarrito">
-
-                <div class="col-sm-2 col-xs-12">
-
-                  <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">Almte. Brown 371, Tigre.
-                    Aires</a>
-
-                </div>
-
-                <div class="col-sm-4 col-xs-12">
-
-                  <br>
-
-                  <p class="tituloCarritoCompra text-left">Lunes - Miercoles - Viernes 18:00 hs</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-12">
-
-                  <br>
-
-                  <p class="precioCarritoCompra text-start">Flow junior Futbol</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-3 col-xs-8">
-
-                  <br>
-
-                  <div class="col-xs-12">
-
-                    <center>
-
-                      <div class="item-tarjeta"><label name="hijo_categoria"></label>Franco - 2013</div>
-
-                    </center>
-
-                  </div>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
-
-                  <br>
-
-                  <p>
-
-                    04/2022 <span><strong> Pagado</strong></span>
-
-                  </p>
-
-                </div>
-
-              </div>
-
-              <div class="clearfix"></div>
-
-              <hr>
-
-              <!-- RESERVA 2 -->
-
-              <div clas="row itemCarrito">
-
-                <div class="col-sm-2 col-xs-12">
-
-                  <a href="https://goo.gl/maps/GwzF4C22edXxABfY6">Constitución 1590, San Fernando</a>
-
-                </div>
-
-                <div class="col-sm-4 col-xs-12">
-
-                  <br>
-
-                  <p class="tituloCarritoCompra text-left">Martes - Miercoles - Jueves 14:00 hs</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-12">
-
-                  <br>
-
-                  <p class="precioCarritoCompra text-start">Al toque Futbol</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-3 col-xs-8">
-
-                  <br>
-
-                  <div class="col-xs-12">
-
-                    <center>
-
-                      <div class="item-tarjeta"><label name="hijo_categoria"></label>Clara - 2011</div>
-
-                    </center>
-
-                  </div>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
-
-                  <br>
-
-                  <p>
-
-                    05/2022 <span><strong> Pagado</strong></span>
-
-                  </p>
-
-                </div>
-
-              </div>
-
-
-              <div class="clearfix"></div>
-
-              <hr>
-
-              <!-- AGREGAR MAS RESERVAS -->
-
-
-
-
-
-            </div>
-            <button3 class="learn-more">
-              <a href="#"><span class="circle" aria-hidden="true">
-                  <span class="icon arrow"></span>
-                </span>
-                <span class="button-text2">Buscar escuelita</span></a>
-            </button3>
-          </div>
-        </div>
-      </div>
-      </div>
     </section>
   </main>
   <br>
   <br>
   <br>
-  <footer class="footer-main">
+  <footer1 class="footer-main">
 
     <ul class="redes">
       <li>
@@ -615,7 +598,7 @@
       <li><i class="fa-solid fa-screwdriver-wrench"></i></li>
     </ul>
 
-  </footer>
+  </footer1>
   <script src="/js/script.js"></script>
 </body>
 
