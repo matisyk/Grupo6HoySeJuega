@@ -23,10 +23,16 @@ h1{
 }
 
 .datos-del-lugar{
-    background-color: #fff;
+    background-color: rgb(22, 24, 30);
+    color: #ebebeb;
     padding: 100px;
     margin-bottom: 100px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 80px;
 }
+
+
 
     /* TARJETA */
 
@@ -35,6 +41,8 @@ h1{
     flex-wrap: wrap;
     justify-content: center;
     margin: 50px 0;
+    padding-bottom: 50px ;
+    border-bottom: #8d9ee8 solid 1px;
   }
     .tarjeta {
       width: 220px;
@@ -338,4 +346,14 @@ h2{
 .categoria{
   margin-left: 5px;
   font-size: 15px;
+}
+
+@media (min-width:1200px){
+.datos-del-lugar
+ { border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;}
+
+  h2{
+    margin-left: 200px;
+  }
 }
