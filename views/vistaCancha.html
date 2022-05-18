@@ -52,67 +52,100 @@
     </div>
   </header>
 
-
-
   <main>
-    <section>
-      <div class="container-fluid p-0 bajar-slider">
-        <section class="jd-slider slideshow">
-          <div class="slide-inner">
-            <ul class="slide-area">
-              <li>
-                <img src="/img/baner/slide001.jpg">
-              </li>
-              <li>
-                <img src="/img/baner/BEERS.jpg">
-              </li>
-              <li>
-                <img src="/img/baner/slide002.jpg">
-              </li>
-              <li>
-                <img src="/img/baner/slide003.png">
-              </li>
-            </ul>
-          </div>
-
-          <a class="prev" href="#">
-            <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
-          </a>
-          <a class="next" href="#">
-            <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
-          </a>
-        </section>
 
       </div>
     </section>
     <div class="datos-del-lugar">
-      <h2>Club San Cristobal</h2>
+      <h1>Club San Cristobal</h1>
       <h4>Dirección: Calle Tierra Fertil 4562 </h4>
     </div>
     <!---<p class="sin-canchas">Aún no tienes canchas registradas</p>--->
 
 
+    <h2>Tus canchas:</h2> 
     <div class="tarjetas">
       <div class="tarjeta">
         <div class="blob"></div>
         <span class="img"><a href="/agenda"><img src="/img/img-canchas/cancha-home.jpg" alt=""></a></span>
-        <h2>Cancha<br><span>1</span></h2>
+        <h3>Cancha<br><span>1</span></h3>
         
       </div>
 
       <div class="tarjeta">
         <div class="blob"></div>
         <span class="img"><a href="/agenda"><img src="/img/img-canchas/otra-cancha.jpg" alt=""></a></span>
-        <h2>Cancha<br><span>2</span></h2>
+        <h3>Cancha<br><span>2</span></h3>
       </div>
 
         <div class="tarjeta">
           <div class="blob"></div>
           <span class="img"><a href="/agenda"><img src="/img/img-canchas/cancha-paddle.jpg" alt=""></a></span>
-          <h2>Cancha<br><span>3</span></h2>
+          <h3>Cancha<br><span>3</span></h3>
           </div>
     </div>
 
+
+  <h2>Tus escuelitas:</h2> 
+    <div class="tarjetas">
+      <div class="tarjeta tarjeta-esc">
+        <div class="blob"></div>
+        <span class="img img-escuelita"><a href="/agenda"><img src="/img/pelota-de-futbol.png" alt=""></a></span>
+        <h3>Futbol <br><span class="categoria">Categoría 2010</span> </h3>
+        <p class="descrip-tarjeta-esc">
+          <ul>
+          <li>Profesor: Flavio Gutiérrez </li>
+          <li>Día: Martes 16hs. </li>
+          <li>Cancha: 2 </li>
+          <li>Cantidad de alumnos: 7</li>
+          <li>Precio: $3500</li></ul>
+          </p>
+ 
+            <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+  
+            <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
+
+      </div>
+
+      <div class="tarjeta tarjeta-esc">
+        <div class="blob"></div>
+        <span class="img img-escuelita"><a href="/agenda"><img src="/img/palo-hockey.png" alt="" class="palo-hockey"></a></span>
+        <h3>Hockey <br><span class="categoria"> Categoría Gorriones</span></h3>
+        <p class="descrip-tarjeta-esc">
+          <ul>
+          <li>Profesor: Romina Salvado </li>
+          <li>Día: Miércoles 20hs. </li>
+          <li>Cancha: 1 </li>
+          <li>Cantidad de alumnos: 10</li>
+          <li>Precio: $2500</li></ul>
+          </p>
+ 
+            <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+  
+            <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
+      </div>
+
+        <div class="tarjeta tarjeta-esc">
+          <div class="blob"></div>
+          <span class="img img-escuelita"><a href="/agenda"><img src="/img/raqueta-tenis.png" alt=""></a></span>
+          <h3>Tenis<br><span class="categoria"> Categoría Alevines</span></h3>
+          <p class="descrip-tarjeta-esc">
+            <ul>
+            <li>Profesor: Javier Dominguez </li>
+            <li>Día: Jueves 19hs. </li>
+            <li>Cancha: 3 </li>
+            <li>Cantidad de alumnos: 4</li>
+            <li>Precio: $6000</li></ul>
+            </p>
+   
+              <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+    
+              <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
+          </div>
+    </div>
+
+
+<div class="botones-registro">
     <button class="learn-more">
       <a href="/registrarCancha"><span class="circle" aria-hidden="true">
           <span class="icon arrow"></span>
@@ -127,7 +160,33 @@
     </button>
 
 
+    <button class="learn-more">
+      <a href="/crearEscuelita"><span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Registrá tus escuelitas</span></a>
 
+    </button>
+
+
+    <button>
+      <a href="/crearEscuelita" class="boton-registrar-cancha"> </a>
+    </button>
+
+    <button class="learn-more">
+      <a href="/crearTorneo"><span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">Creá tus torneos</span></a>
+
+    </button>
+
+
+    <button>
+      <a href="/crearTorneo" class="boton-registrar-cancha"> </a>
+    </button>
+  </div>
+  
     <br>
     <br>
     <br>
