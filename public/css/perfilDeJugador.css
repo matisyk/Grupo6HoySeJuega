@@ -36,8 +36,8 @@ MAIN
 }
 .datos-del-lugar-b {
   background-color: rgb(22, 24, 30);
-  width: 103vw;
-  height: 200px
+  width: 100vw;
+  height: 200px;
 }
 .datos-del-lugar img {
   border-radius: 100px;
@@ -718,20 +718,26 @@ button:hover:before {
 div.container-fluid {
   padding: 0px !important;
   margin: 0 !important;
-  width: 102.8vw;
   /* margin-left: 15px; */
 }
 .container{
-  padding: 0 !important;
-  margin: 0 !important;
+  width: 100vw;
+  padding: 0px !important;
 }
 p.reserva {
     margin-left: 30px;
 }
+.panel{
+  width: 100vw;
+  margin: 0 !important;
+}
+
 @media (min-width: 570px){
 
+
   .datos-del-lugar {
-    margin-left: 0;
+    margin: auto;
+    margin-bottom: 40px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     max-width: 1200px;
@@ -744,7 +750,6 @@ p.reserva {
     padding-left: 30%;
   }
 .selector{
-  margin-left: 0;
   max-width: 150%;
 }
 
@@ -753,29 +758,43 @@ p.reserva {
     top: 250px;
     left: -280px;
     max-width: 150%;
+    margin-left: 15%;
   }
 
   .ultimo-partido{
     position: absolute;
     top: 0px;
-    left: 40vw;
+    left: 39vw;
     width: 350px;
+    margin: 0;
   }
-}
 .jugadora small {
     margin: 10px;
 }
 .mes small {
     margin: 20px;
 }
+.separador1 {
+  margin-top: 400px;
 
-@media (min-width: 900px){
-  main{
-    margin: 0 150px;
+}
+
+@media (min-width:768px){ 
+.ultimo-partido{
+  left: 45vw;
+width: 250%; }
+}
+} 
+
+@media (min-width:1200px){
+  .selector{
+    margin-left: 55%;
+  }
+  .batiSeñalEquipo{
+    margin-left: 55%;
   }
 
-  .ultimo-partido{
-    left: 400px;
-    width: 500px;
-  }
+.ultimo-partido{
+  width: 220%;
+}
 }

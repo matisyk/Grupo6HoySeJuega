@@ -7,7 +7,7 @@ FOOTER
 .footer-main ul {
   height: 100%;
   padding: 15px;
-  width: 103%;
+  width: 100vw;
 }
 .footer-main3 ul {
   height: 80px;
@@ -22,7 +22,7 @@ FOOTER
   display: flex;
   justify-content: center;
   background: rgb(255, 255, 255);
-  width: 100%;
+  width: 100vw;
 }
 
 .redes i {
