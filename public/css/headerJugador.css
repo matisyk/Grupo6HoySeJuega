@@ -1,11 +1,9 @@
 header {
   border: 0px solid rgb(0, 0, 0);
-  height: 140px;
+  height: 130.25px;
   text-align: center;
 }
-.main-header{
-  
-}
+
 .menu {
   height: 135px;
   width: 100%;
@@ -55,6 +53,12 @@ header {
   background-color: black;
   text-decoration: none;
   color: #fff;
+}
+
+.copy-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
 }
 
 /* .copy-header {
@@ -134,7 +138,6 @@ header {
   justify-content: flex-start;
   align-items: center;
   text-align: center;
-  margin-left: 100px;
   visibility: hidden;
 }
 .menu-cont3 {
@@ -158,14 +161,14 @@ header {
   .menu a {
     font-size: 140%;
   }
-  .menu-hamburguesa{visibility: hidden; }
-  .menu-cont2{visibility: visible;}
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .menu a {
     font-size: 180%;
   }
+  .menu-hamburguesa{visibility: hidden; }
+  .menu-cont2{visibility: visible;}
   .menu-cont{
     margin-left:20%
   }
@@ -226,7 +229,6 @@ header {
 
 .copy-header {
   display: flex;
-  justify-content: start;
   width: 100vw;
   transition: 2s;
   cursor: pointer;
