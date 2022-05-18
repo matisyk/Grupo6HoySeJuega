@@ -2,11 +2,13 @@
 CARRITO DE COMPRAS
 =============================================*/
 .cabeceraCarrito{
-	height:40px;
+	height:60px;
+	display: flex;
+	align-items: center;
 }
 
-.cabeceraCarrito h3{
-	margin-top:-5px
+h3{
+	margin: 0 !important;
 }
 
 .cabeceraCheckout{
@@ -23,4 +25,11 @@ CHECKOUT
 
 .formEnvio{
 	display:none;
+}
+
+
+
+body{
+	background: rgb(2,0,36);
+	background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(19,124,187,1) 100%);
 }
