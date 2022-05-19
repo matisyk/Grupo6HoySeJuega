@@ -25,6 +25,10 @@ app.use('/login', loginRouter);
 const registerRouter = require('./routes/registerRout');
 app.use('/register', registerRouter);
 
+// userOwner
+const userOwnerRouter = require('./routes/userOwnerRout');
+app.use('/userOwner', userOwnerRouter);
+
 // userPlayer
 
 const userPlayerRouter = require('./routes/userPlayerRout');
