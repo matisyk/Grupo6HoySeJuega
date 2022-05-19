@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="./css/perfilDeJugador.css">
   <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
-  <link href="/css/footer.css" rel="stylesheet" />
 
   <!-- CSS EXTERNOS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -32,26 +31,8 @@
 </head>
 
 <body>
-  <header class="main-header">
-    <div class="menu">
-      <div class="copy-header">
-        <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
-        <div class="menu-cont4">
-          <a class="txtNav1" href="/vistaCancha">Mi perfil</a>
-          <a class="txtNav1" href="/registrarCancha">Registrar canchas</a>
-          <a class="txtNav1" href="#"><i class="fa-solid fa-futbol"></i> Escuelita</a>
-          <a class="txtNav4" href="#"><i class="fa-solid fa-trophy"></i> Torneos</a>
-          <a class="txtNav5" href="/reservaCancha">
-            <i class="fa-solid fa-calendar-days"></i> Reservas
-          </a>
-          <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
-          <a class="txtNav6" href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Chau
-          </a>
 
-        </div>
-      </div>
-    </div>
-  </header>
+  <%- include('./headerOwner') %>
 
   <main>
     
@@ -257,31 +238,9 @@
   
   <br>
   <br>
-  <footer class="footer-main">
 
-    <ul class="redes">
-      <li>
-        <a href="https://www.instapgram.com" style="text-decoration:none">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </li>
-      <li>
-        <a href="https://www.facebook.com" style="text-decoration:none">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-      </li>
-      <li><a href="https://www.whatsapp.com/?lang=es" style="text-decoration:none">
-          <i class="fa-brands fa-whatsapp"></i>
-        </a>
-      </li>
-      <li><a href="mailto:frangarcia93@icloud.com" style="text-decoration:none">
-          <i class="fa-regular fa-envelope"></i>
-        </a>
-      </li>
-      <li><i class="fa-solid fa-screwdriver-wrench"></i></li>
-    </ul>
+  <%- include('../footer') %>
 
-  </footer>
   <script src="/js/script.js"></script>
 </body>
 
