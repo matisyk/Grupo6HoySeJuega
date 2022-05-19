@@ -18,18 +18,31 @@
 /*=============================================
 MAIN
 =============================================*/
-
+h1{
+  font-family: Bangers;
+}
 
 .datos-del-lugar{
-    background-color: #fff;
+    background-color: rgb(22, 24, 30);
+    color: #ebebeb;
     padding: 100px;
+    margin-bottom: 100px;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 80px;
 }
+
+
 
     /* TARJETA */
 
   .tarjetas{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 50px 0;
+    padding-bottom: 50px ;
+    border-bottom: #8d9ee8 solid 1px;
   }
     .tarjeta {
       width: 220px;
@@ -66,8 +79,6 @@ MAIN
       margin: 30px auto 10px auto;
       width: 70px;
       height: 70px;
-      background-color: #4bb8ff;
-      border-radius: 50%;
       font-size: 11px;
       justify-content: center;
       align-items: center;
@@ -76,24 +87,21 @@ MAIN
     
     .tarjeta:hover .img img{
       width: 100%;
-      height: 70%;
+      height: 100%;
       border-radius: 10px 0 0;
       margin: 0 auto;
-      background-color: #f0f0f0;
       z-index: 99999;
     }
     
-    .tarjeta h2 {
-      padding: 15px 10px;
+    .tarjeta h3 {
+      padding: 10px 10px;
       font-size: 25px;
       transition: all 0.1s;
       z-index: 99;
       line-height: 17px;
       font-family: "Bangers", cursive;
-    }
-    
-    .tarjeta span {
-      font-size: 18px;
+      text-align: center;
+      
     }
     
     .tarjeta:hover h2 {
@@ -103,19 +111,25 @@ MAIN
       transition: all 0.5s;
     }
     
-    .tarjeta>ul {
+    .tarjeta>ul{
       opacity: 0;
       transition: all 0.75s;
+      padding-left: 15px;
+      text-align: left;
+      position: absolute;
+      top: 50px;
     }
     
+.tarjeta ul li{
+  font-family: Kalam;
+}
+
     .tarjeta>ul>svg {
       padding: 5px;
     }
     
     .tarjeta:hover>ul {
-      position: absolute;
-      bottom: 5px;
-      left: -125px;
+      
       opacity: 1;
       transition: all 0.1s;
     }
@@ -133,6 +147,25 @@ MAIN
   visibility: visible;
 }
 
+
+.tarjeta:hover .img-escuelita{
+visibility: hidden;
+}
+
+.tarjeta-esc{
+  transition: all 1s;
+}
+
+.descrip-tarjeta-esc p ul{
+  visibility: hidden;
+  margin: 0;
+  position: absolute;
+  top:0;
+  margin-top: 20px;
+}
+.tarjeta:hover .descrip-tarjeta-esc{
+  visibility: visible;
+}
 /* From uiverse.io */
 button {
  position: relative;
@@ -151,6 +184,8 @@ button {
 button.learn-more {
  width: 12rem;
  height: auto;
+ margin-left: 70px;
+ flex-direction: column;
 }
 
 button.learn-more .circle {
@@ -233,6 +268,92 @@ button:hover .button-text {
     margin: 100px;
 }
 
+.tarjeta-esc:hover{
+  height: 220px;
+  margin-bottom: 0;
+}
+
 p{
-    margin:200px
+    margin:200px;
+}
+
+
+.boton-editar {
+  color: rgb(14, 14, 65);
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  font-size: 20px;
+  visibility: hidden;
+  padding: 0.3em 0.5em;
+}
+
+.boton-editar:hover{
+  color:#fff;
+  background: rgba(23, 56, 76, 0.2);
+  border-radius: 14px;
+}
+
+.boton-eliminar{
+  color: rgb(14, 14, 65);
+  padding: 0.3em 0.5em;
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  margin: 10px;
+  font-size: 20px;
+  visibility: hidden;
+}
+button.boton-eliminar:hover{
+  color:red;
+  background: rgba(23, 56, 76, 0.2);
+  border-radius: 14px;
+}
+
+.tarjeta-esc:hover .boton-editar{
+  visibility: visible;
+}
+
+.tarjeta-esc:hover .boton-eliminar{
+  visibility: visible;
+}
+
+.tarjeta-esc:hover h3{
+display: flex;
+text-align:start
+ 
+}
+
+h2{
+  font-family: Bangers;
+ margin:100px ;
+ color: #ebebeb;
+ 
+}
+
+.img .palo-hockey img{
+  padding: 10px;
+  background-color: #ebebeb;
+  width: 100px;
+  
+}
+
+.clase{
+  margin-top: 5px;
+}
+
+.categoria{
+  margin-left: 5px;
+  font-size: 15px;
+}
+
+@media (min-width:1200px){
+.datos-del-lugar
+ { border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;}
+
+  h2{
+    margin-left: 200px;
+  }
 }

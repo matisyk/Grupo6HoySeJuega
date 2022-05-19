@@ -1,0 +1,63 @@
+/*=============================================
+FOOTER
+=============================================*/
+.footer-main{
+  width: 100%;
+}
+.footer-main ul {
+  height: 100%;
+  padding: 15px;
+  width: 100vw;
+}
+.footer-main3 ul {
+  height: 80px;
+  padding: 15px;
+}
+.footer-main3 {
+  padding: 15px;
+  background-color:#c13584
+}
+.redes {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  width: 100vw;
+}
+
+.redes i {
+  border: solid 1px white;
+  border-radius: 100%;
+  padding: 10px 10px;
+  margin: 0 10px;
+  color: white;
+  transition: 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.redes i:hover {
+  opacity: 0.8;
+}
+
+.fa-whatsapp {
+  background-color: #075e54;
+}
+
+.fa-facebook {
+  background-color: #3b5998;
+}
+
+.fa-instagram {
+  background-color: #c13584;
+}
+
+.fa-envelope {
+  background-color: #000000;
+}
+
+.fa-screwdriver-wrench {
+  background-color: #000000;
+}
