@@ -13,14 +13,23 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('src/views'))
 
+// home
 const homeRouter = require('./routes/homeRout');
 app.use('/', homeRouter);
 
+// login
 const loginRouter = require('./routes/loginRout');
 app.use('/login', loginRouter);
 
+// register
 const registerRouter = require('./routes/registerRout');
 app.use('/register', registerRouter);
+
+// userPlayer
+
+const userPlayerRouter = require('./routes/userPlayerRout');
+app.use('/userPlayer', userPlayerRouter);
+
 
 
 
