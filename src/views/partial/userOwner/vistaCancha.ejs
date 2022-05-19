@@ -10,7 +10,6 @@
  <!--CSS PROPIOS-->
   <link href="/css/vistaCancha.css" rel="stylesheet" />
   <link href="/css/jdSlider.css" rel="stylesheet" />
-  <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
 
   <!-- CSS EXTERNOS -->
@@ -30,27 +29,9 @@
 
 </head>
 
-<body>
-  <header class="main-header">
-    <div class="menu">
-      <div class="copy-header">
-        <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
-        <div class="menu-cont4">
-          <a class="txtNav1" href="/vistaCancha">Mi perfil</a>
-          <a class="txtNav1" href="/registrarCancha">Registrar canchas</a>
-          <a class="txtNav1" href="/registrarEscuelita"><i class="fa-solid fa-futbol"></i> Escuelita</a>
-          <a class="txtNav4" href="/crearTorneo"><i class="fa-solid fa-trophy"></i> Torneos</a>
-          <a class="txtNav5" href="/reservaCancha">
-            <i class="fa-solid fa-calendar-days"></i> Reservas
-          </a>
-          <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
-          <a class="txtNav6" href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Chau
-          </a>
+<%- include('./headerOwner') %>
 
-        </div>
-      </div>
-    </div>
-  </header>
+<body>
 
   <main>
 
