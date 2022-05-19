@@ -14,11 +14,13 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve('src/views'))
 
 const homeRouter = require('./routes/homeRout');
-
-
 app.use('/', homeRouter);
 
+const loginRouter = require('./routes/loginRout');
+app.use('/login', loginRouter);
 
+const registerRouter = require('./routes/registerRout');
+app.use('/register', registerRouter);
 
 
 
@@ -27,119 +29,119 @@ app.use('/', homeRouter);
 
 //   res.sendFile(path.resolve("src/views/index.html"))
 // });
-app.get('/loginPlayer', (req, res) => {
+// app.get('/loginPlayer', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/loginPlayer.html"))
-});
-app.get('/loginCourt', (req, res) => {
+//   res.sendFile(path.resolve("src/views/loginPlayer.html"))
+// });
+// app.get('/loginCourt', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/loginCourt.html"))
-});
-app.get('/register', (req, res) => {
+//   res.sendFile(path.resolve("src/views/loginCourt.html"))
+// });
+// app.get('/register', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/register.html"))
-});
-app.get('/sobreNosotros', (req, res) => {
+//   res.sendFile(path.resolve("src/views/register.html"))
+// });
+// app.get('/sobreNosotros', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/sobreNosotros.html"))
-});
+//   res.sendFile(path.resolve("src/views/sobreNosotros.html"))
+// });
 
-app.get('/formularioJugador', (req, res) => {
+// app.get('/formularioJugador', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/formularioDatosJugador.html"))
-});
+//   res.sendFile(path.resolve("src/views/formularioDatosJugador.html"))
+// });
 
-app.get('/formularioCancha', (req, res) => {
+// app.get('/formularioCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/formularioDatosCancha.html"))
-});
+//   res.sendFile(path.resolve("src/views/formularioDatosCancha.html"))
+// });
 
-app.get('/vistaCancha', (req, res) => {
+// app.get('/vistaCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/vistaCancha.html"))
-});
-app.get('/registrarCancha', (req, res) => {
+//   res.sendFile(path.resolve("src/views/vistaCancha.html"))
+// });
+// app.get('/registrarCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/registrarCancha.html"))
-});
+//   res.sendFile(path.resolve("src/views/registrarCancha.html"))
+// });
 
-app.get('/registrarEscuelita', (req, res) => {
+// app.get('/registrarEscuelita', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/registrarEscuelita.html"))
-});
+//   res.sendFile(path.resolve("src/views/registrarEscuelita.html"))
+// });
 
-app.get('/crearTorneo', (req, res) => {
+// app.get('/crearTorneo', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/crearTorneo.html"))
-});
+//   res.sendFile(path.resolve("src/views/crearTorneo.html"))
+// });
 
-app.get('/agenda', (req, res) => {
+// app.get('/agenda', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/agenda.html"))
-});
+//   res.sendFile(path.resolve("src/views/agenda.html"))
+// });
 
-app.get('/perfilDeJugador', (req, res) => {
+// app.get('/perfilDeJugador', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/perfilDeJugador.html"))
-});
+//   res.sendFile(path.resolve("src/views/perfilDeJugador.html"))
+// });
 
-app.get('/reservarCancha', (req, res) => {
+// app.get('/reservarCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/reservarCancha.html"))
-});
+//   res.sendFile(path.resolve("src/views/reservarCancha.html"))
+// });
 
-app.get('/elegirCancha', (req, res) => {
+// app.get('/elegirCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/elegirCancha.html"))
-});
-app.get('/shiping', (req, res) => {
+//   res.sendFile(path.resolve("src/views/elegirCancha.html"))
+// });
+// app.get('/shiping', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/shiping.html"))
-});
-app.get('/reservaCancha', (req, res) => {
+//   res.sendFile(path.resolve("src/views/shiping.html"))
+// });
+// app.get('/reservaCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/reservaCancha.html"))
-});
-app.get('/equipo', (req, res) => {
+//   res.sendFile(path.resolve("src/views/reservaCancha.html"))
+// });
+// app.get('/equipo', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/equipo.html"))
-});
-app.get('/perfilCanchaVista', (req, res) => {
+//   res.sendFile(path.resolve("src/views/equipo.html"))
+// });
+// app.get('/perfilCanchaVista', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/vistaCanchaInfo.html"))
-});
+//   res.sendFile(path.resolve("src/views/vistaCanchaInfo.html"))
+// });
 
-// Metodos post
+// // Metodos post
 
 
-app.post('/', (req, res) => {
+// app.post('/', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/index.html"))
-});
+//   res.sendFile(path.resolve("src/views/index.html"))
+// });
 
-app.post('/loginPlayer', (req, res) => {
+// app.post('/loginPlayer', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/loginPlayer.html"))
-});
+//   res.sendFile(path.resolve("src/views/loginPlayer.html"))
+// });
 
-app.post('/loginCourt', (req, res) => {
+// app.post('/loginCourt', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/loginCourt.html"))
-});
-app.post('/register', (req, res) => {
+//   res.sendFile(path.resolve("src/views/loginCourt.html"))
+// });
+// app.post('/register', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/register.html"))
-});
+//   res.sendFile(path.resolve("src/views/register.html"))
+// });
 
-app.post('/vistaCancha', (req, res) => {
+// app.post('/vistaCancha', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/vistaCancha.html"))
-});
+//   res.sendFile(path.resolve("src/views/vistaCancha.html"))
+// });
 
-app.post('/perfilDeJugador', (req, res) => {
+// app.post('/perfilDeJugador', (req, res) => {
 
-  res.sendFile(path.resolve("src/views/perfilDeJugador.html"))
-});
+//   res.sendFile(path.resolve("src/views/perfilDeJugador.html"))
+// });
 
 
 app.listen(8080, () => {
