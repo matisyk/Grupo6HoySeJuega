@@ -21,3 +21,4 @@ Sprint 2-3 ->
 5. Dejar de hacer:
 
 - Dejar de hacer un seguimiento constante del estado de tareas asiganadas a otros compañeros y poner más énfasis en las tareas asiganadas. 
+- Mezcla de idiomas

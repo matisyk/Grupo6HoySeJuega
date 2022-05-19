@@ -10,11 +10,23 @@ const publicPath = path.resolve(__dirname, './public')
 
 app.use(express.static(publicPath));
 
-// Metodos get
-app.get('/', (req, res) => {
+app.set('view engine', 'ejs');
+app.set('views', path.resolve('src/views'))
 
-  res.sendFile(path.resolve("src/views/index.html"))
-});
+const homeRouter = require('./routes/homeRout');
+
+
+app.use('/', homeRouter);
+
+
+
+
+
+// Metodos get
+// app.get('/', (req, res) => {
+
+//   res.sendFile(path.resolve("src/views/index.html"))
+// });
 app.get('/loginPlayer', (req, res) => {
 
   res.sendFile(path.resolve("src/views/loginPlayer.html"))
