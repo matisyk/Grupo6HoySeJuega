@@ -116,10 +116,7 @@ font-size: 30px;
 .image_field{
   width: 35vw;
 }
-.imagen-cancha img {
-  
-  
-  
+.imagen-cancha img {  
   background-position: center;
   border-radius: 20px;
 }
@@ -305,7 +302,7 @@ MEDIA Q
   padding-bottom: 15px;
 }
   
-
+}
   
 
 @media (min-width: 1200px) {
