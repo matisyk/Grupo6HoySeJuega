@@ -34,7 +34,8 @@ app.use('/userOwner', userOwnerRouter);
 const userPlayerRouter = require('./routes/userPlayerRout');
 app.use('/userPlayer', userPlayerRouter);
 
-
+const SobreNosotrosRouter = require('./routes/userPlayerRout');
+app.use('/SobreNosotrosPlayer', SobreNosotrosRouter);
 
 
 // Metodos get
