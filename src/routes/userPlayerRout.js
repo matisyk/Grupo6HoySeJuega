@@ -7,6 +7,7 @@ const userPlayerController = require('../controllers/userPlayerController')
 router.get('/', userPlayerController.vistaJugador);
 
 router.get('/profilePlayer', userPlayerController.perfilDeJugador);
+router.post('/profilePlayer', userPlayerController.perfilDeJugador);
 
 router.get('/shiping', userPlayerController.shiping);
 
