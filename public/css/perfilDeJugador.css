@@ -17,12 +17,16 @@ body {
   width: 100vw;
 }
 
-
+.row {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+.panel-body {
+  padding: 0 0 0 10px !important;
+}
 /*=============================================
 MAIN
 =============================================*/
-
-
 
 .datos-del-lugar {
   padding: 10px;
@@ -30,9 +34,7 @@ MAIN
   display: flex;
   align-items: center;
   justify-content: center;
- 
-  margin-bottom: 40px;
-  
+  margin-bottom: 10px;
 }
 .datos-del-lugar-b {
   background-color: rgb(22, 24, 30);
@@ -193,17 +195,16 @@ button3:hover .button-text2 {
   height: 200px;
   position: relative;
   margin-left: 10%;
-  color:#ebebeb;
+  color: #ebebeb;
 }
 
 .img-container1 ol {
- 
   margin-left: 170px;
   text-align: start;
   position: absolute;
   font-size: 13px;
   top: 9%;
-  color:#ebebeb
+  color: #ebebeb;
 }
 /* .datos-del-lugar-b{
   width: 100%;
@@ -305,12 +306,12 @@ button3:hover .button-text2 {
 }
 .separador2 {
   width: 100vw;
-    text-align: center;
-    /* border-top: 1px solid #ebebeb; */
-    font-family: "Bangers", cursive;
-    margin: 30px 0 20px 0;
-    /* padding-top: 100px; */
-    color: #ebebeb;
+  text-align: center;
+  /* border-top: 1px solid #ebebeb; */
+  font-family: "Bangers", cursive;
+  margin: 30px 0 20px 0;
+  /* padding-top: 100px; */
+  color: #ebebeb;
 }
 .separador3 {
   width: 15%;
@@ -331,15 +332,16 @@ button3:hover .button-text2 {
 }
 .div-selector {
   width: 20%;
-  position: relative
+  position: relative;
 }
 
 .selector {
   padding-top: 10px;
   border-radius: 20px;
   background-color: white;
-  width: 40vw;
-  margin-left:15%;
+  width: 150px;
+  margin-left: 10%;
+  border: 4px solid rgb(205, 136, 72);
 }
 .estado-activo-ina {
   font-family: Kalam;
@@ -361,14 +363,14 @@ button3:hover .button-text2 {
   height: 4em;
   overflow: hidden;
   border-bottom: 0.5em solid #eee;
-  margin: auto
+  margin: auto;
 }
 
 .rocker-small {
   font-size: 1.2em;
   /* Tamano del switch */
   margin: 1em;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 
 .rocker::before {
@@ -509,16 +511,14 @@ input:checked:focus + .switch-left + .switch-right {
 .div-ultimo-partido {
   margin-top: -60px;
   width: 190%;
-
 }
 .ultimo-partido {
- 
-  border: 8px solid rgb(205, 136, 72);
+  border: 4px solid rgb(205, 136, 72);
   border-radius: 30px;
-  width: 90vw;
+  width: 350px;
   background-color: rgb(255, 255, 255);
   height: 450px;
-  margin: 0 30px;
+  margin: 0 10px;
   justify-content: center;
   text-align: center;
 }
@@ -533,8 +533,8 @@ input:checked:focus + .switch-left + .switch-right {
   font-family: kalam;
   padding: 10px 0 10px 10px;
 }
-.vs span{
-  font-weight: bold; 
+.vs span {
+  font-weight: bold;
   margin-left: 10px;
 }
 .valoracion {
@@ -584,7 +584,6 @@ label {
   unicode-bidi: bidi-override;
   display: flex;
   justify-content: center;
-
 }
 
 label:hover,
@@ -616,28 +615,31 @@ input[type="radio"]:checked ~ label {
   height: 44px;
   position: relative;
   left: 280px;
-  top: -207px; 
+  top: -207px;
 }
 .batiSeñalEquipo {
-      width: 55vw;
-    height: 390%;
-    background-color: white;
-    text-align: center;
-    border-radius: 20px;
-    padding-top: 10px;
-    margin: 34px 0%;
-    position: relative;
-    right: 80px;
+  width: 200px;
+  height: 183px;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px;
+  padding-top: 10px;
+  margin: 22px 0%;
+  position: relative;
+  top: 2px;
+  right: 115px;
+  border: 4px solid rgb(205, 136, 72);
 }
 .batiSeñalEquipo h1 {
   font-family: "Bangers", cursive;
   font-size: 20px;
+  margin-top: 23px;
 }
 
 button {
   border: none;
   position: relative;
-  width: 220px;
+  width: 180px;
   height: 75px;
   padding: 0;
   z-index: 2;
@@ -652,8 +654,8 @@ button {
   -ms-transform: translateY(8px);
   transform: translateY(8px);
   position: absolute;
-  left: 5px;
-  top: 65px;
+  left: 6px;
+  top: 82px;
 }
 
 button:after {
@@ -676,10 +678,10 @@ button:hover:after {
 button span {
   position: absolute;
   width: 100%;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 100;
-  left: 54%;
-  top: 39%;
+  left: 52%;
+  top: 45%;
   letter-spacing: 3px;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
@@ -714,91 +716,165 @@ button:hover:before {
   width: 100%;
 }
 
-
 div.container-fluid {
   padding: 0px !important;
   margin: 0 !important;
   /* margin-left: 15px; */
 }
-.container{
+.container {
   width: 100vw;
   padding: 0px !important;
 }
 p.reserva {
-    margin-left: 30px;
+  margin-left: 30px;
 }
-.panel{
+.panel {
   width: 100vw;
   margin: 0 !important;
 }
 
-@media (min-width: 570px){
-
-
-  .datos-del-lugar {
-    margin: auto;
-    margin-bottom: 40px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    max-width: 1200px;
+@media (min-width: 425px) {
+  .selector {
+    margin-left: 30%;
   }
-  
-  .datos-del-lugar-b {
-    width: 100vw;
-  }
-  .datos-del-lugar ol li{
-    padding-left: 30%;
-  }
-.selector{
-  max-width: 150%;
-}
-
-  .batiSeñalEquipo{
-    position: absolute;
-    top: 250px;
-    left: -280px;
-    max-width: 150%;
-    margin-left: 15%;
+  .rocker-small {
+    font-size: 1.2em;
+    margin: 1em;
+    margin-left: 15px;
   }
 
-  .ultimo-partido{
-    position: absolute;
-    top: 0px;
-    left: 39vw;
-    width: 350px;
-    margin: 0;
+  .batiSeñalEquipo {
+    width: 217px;
+    height: 183px;
+    background-color: white;
+    text-align: center;
+    border-radius: 20px;
+    padding-top: 10px;
+    margin: 22px 0%;
+    position: relative;
+    top: 2px;
+    right: 98px;
+    border: 4px solid rgb(205, 136, 72);
   }
-.jugadora small {
-    margin: 10px;
-}
-.mes small {
-    margin: 20px;
-}
-.separador1 {
-  margin-top: 400px;
-
-}
-
-@media (min-width:768px){ 
-.ultimo-partido{
-  left: 45vw;
-width: 250%; }
-}
-} 
-
-@media (min-width:1200px){
-  .selector{
-    margin-left: 55%;
+  button {
+    left: 15px;
   }
-  .batiSeñalEquipo{
-    margin-left: 55%;
+  .ultimo-partido {
+    margin: 0 40px;
   }
 
-.ultimo-partido{
-  width: 220%;
-}
-.datos-del-lugar {
-    margin: 0 0 30px 0;
-    max-width: 100vw;
+  @media (min-width: 768px) {
+    .datos-del-lugar {
+      margin: auto;
+      margin-bottom: 40px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      max-width: 1200px;
+    }
+
+    .datos-del-lugar-b {
+      width: 100vw;
+    }
+    .datos-del-lugar ol li {
+      padding-left: 30%;
+    }
+    .selector {
+      max-width: 150%;
+    }
+
+    .batiSeñalEquipo {
+      position: absolute;
+      top: 250px;
+      left: -280px;
+      max-width: 150%;
+      margin-left: 15%;
+    }
+
+    .ultimo-partido {
+      position: absolute;
+      top: 0px;
+      left: 39vw;
+      width: 350px;
+      margin: 0;
+    }
+    .jugadora small {
+      margin: 10px;
+    }
+    .mes small {
+      margin: 20px;
+    }
+    .separador1 {
+      margin-top: 400px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .ultimo-partido {
+      left: 45vw;
+      width: 250%;
+    }
+    .selector {
+      width: 250px;
+    }
+    .separador4 h1 {
+      font-size: 35px;
+    }
+    .rocker-small {
+      font-size: 1.2em;
+      margin: 0.1em;
+      margin-left: 50px;
+      margin-bottom: 10px;
+    }
+    .batiSeñalEquipo {
+      position: absolute;
+      top: 200px;
+      left: -258px;
+      margin-left: 15%;
+      width: 250px;
+      height: 170px;
+    }
+    .batiSeñalEquipo h1 {
+      font-family: "Bangers", cursive;
+      font-size: 23px;
+      margin-top: 25px;
+    }
+    button {
+      left: 20px;
+      top: 70px;
+    }
+    .separador1 {
+      margin-top: 340px;
+    }
+    .datos-del-lugar-b {
+      width: 93%;
+    margin-top: 20px;
+    margin-left: 30px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .selector {
+      margin-left: 55%;
+    }
+    .batiSeñalEquipo {
+      margin-left: 45%;
+    }
+
+    .ultimo-partido {
+      width: 220%;
+    }
+    .datos-del-lugar {
+      margin: 0 0 30px 0;
+      max-width: 100vw;
+    }
+    .datos-del-lugar-b {
+      width: 93%;
+      margin-top: 20px;
+      margin-left: 35px;
+    }
+    button {
+      left: 30px;
+      top: 70px;
+    }
   }
 }

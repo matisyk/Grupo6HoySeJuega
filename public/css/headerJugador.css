@@ -7,21 +7,14 @@ header {
 .menu {
   height: 135px;
   width: 100vw;
-  background: linear-gradient(
-    to right,
-    #000000,
-    #000000,
-    #0166f7,
-    #bd6cca
-  );
+  background: linear-gradient(to right, #000000, #000000, #0166f7, #bd6cca);
   color: white;
   text-align: center;
   position: fixed;
   z-index: 5;
- 
 }
 
-.menu-hamburguesa i{
+.menu-hamburguesa i {
   position: absolute;
   right: 20px;
   top: 50px;
@@ -36,7 +29,6 @@ header {
   align-items: center;
   text-align: center;
   visibility: hidden;
-  
 }
 
 .menu a {
@@ -55,7 +47,7 @@ header {
   color: #fff;
 }
 
-.copy-header{
+.copy-header {
   display: flex;
   justify-content: space-between;
   width: 100vw;
@@ -117,7 +109,7 @@ header {
 }
 .txtNav5 {
   margin-left: 5px;
-  border-radius: 30px;   
+  border-radius: 30px;
   color: #ebebeb;
   background-size: cover;
   font-family: "Bangers", cursive;
@@ -167,161 +159,186 @@ header {
   .menu a {
     font-size: 180%;
   }
-  .menu-hamburguesa{visibility: hidden; }
-  .menu-cont2{visibility: visible;}
-  .menu-cont{
-    margin-left:20%
+  .menu-hamburguesa {
+    visibility: hidden;
+  }
+  .menu-cont2 {
+    visibility: visible;
+    font-size: 10px;
+  }
+  .menu-cont {
+    margin-left: 20%;
+  }
+  .menu {
+    background: linear-gradient(
+      to right,
+      #000000,
+      #000000f5,
+      #0166f7,
+      #0166f7,
+      #bd6cca,
+      #bd6cca
+    );
+  }
+  .logo {
+    height: 100px;
+    display: flex;
+    align-items: start;
+    border: solid 1px #000000;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0px 0px;
+    margin: 15px 0 0px 15px;
   }
 }
-@media (min-width: 1200px) {
-  
+@media (min-width: 1024px) {
   header {
-  border-top: 0px solid white;
-  background: white;
-  color: #333;
-  height: 130px;
-  width: 100vw;
-  text-align: center;
-}
+    border-top: 0px solid white;
+    background: white;
+    color: #333;
+    height: 130px;
+    width: 100vw;
+    text-align: center;
+  }
 
-.menu {
-  height: 130px;
-  width: 100%;
-  background: linear-gradient(
-    to right,
-    #000000,
-    #000000,
-    #0166f7,
-    #0166f7,
-    #bd6cca,
-    #bd6cca
-  );
-  color: white;
-  text-align: center;
-  position: fixed;
-  z-index: 1;
-  margin-bottom: 500px;
-}
+  .menu {
+    height: 130px;
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #000000,
+      #000000,
+      #0166f7,
+      #0166f7,
+      #bd6cca,
+      #bd6cca
+    );
+    color: white;
+    text-align: center;
+    position: fixed;
+    z-index: 1;
+    margin-bottom: 500px;
+  }
 
-.menu-cont {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  visibility: hidden;
-}
+  .menu-cont {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+  }
+  .menu-cont2 {
+    font-size: 13px;
+  }
 
-.menu a {
-  padding: 8px;
-  /*color: #000000;*/
-  display: block;
-  text-decoration: none;
-  transition: 0.5s;
-}
+  .menu a {
+    padding: 8px;
+    /*color: #000000;*/
+    display: block;
+    text-decoration: none;
+    transition: 0.5s;
+  }
 
-.menu a:hover,
-.menu a:focus {
-  background-color: black;
-  text-decoration: none;
-  color: #fff;
-}
+  .menu a:hover,
+  .menu a:focus {
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+  }
+  .copy-header {
+    display: flex;
+    width: 100vw;
+    transition: 2s;
+    cursor: pointer;
+  }
 
-.copy-header {
-  display: flex;
-  width: 100vw;
-  transition: 2s;
-  cursor: pointer;
-}
+  .logo {
+    height: 120px;
+    display: flex;
+    align-items: start;
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 0 30px 30px 0;
+    padding: 0px 0px;
+    margin: 5px 0 5px 40px;
+  }
 
-.logo {
-  height: 120px;
-  display: flex;
-  align-items: start;
-  border: solid 1px rgb(0, 0, 0);
-  border-radius: 0 30px 30px 0;
-  padding: 0px 0px;
-  margin: 5px 0 5px 40px;
-}
-
-.txtNav1 {
-  margin-left: 25px;
-  border-radius: 30px;
-  /*border: solid 2px rgb(0, 0, 0);
+  .txtNav1 {
+    margin-left: 25px;
+    border-radius: 30px;
+    /*border: solid 2px rgb(0, 0, 0);
   background-color: rgb(255, 255, 255);*/
-  color: #ebebeb;
-  background-size: cover;
-  font-family: "Bangers", cursive;
-}
+    color: #ebebeb;
+    background-size: cover;
+    font-family: "Bangers", cursive;
+  }
 
-.txtNav2 {
-  margin-left: 25px;
-  border-radius: 30px;
-  color: #ebebeb;
-  background-size: cover;
-  font-family: "Bangers", cursive;
-}
+  .txtNav2 {
+    margin-left: 5px;
+    border-radius: 30px;
+    color: #ebebeb;
+    background-size: cover;
+    font-family: "Bangers", cursive;
+  }
 
-.txtNav3 {
-  margin-left: 25px;
-  border-radius: 30px;
-  color: #ebebeb;
-  background-size: cover;
-  font-family: "Bangers", cursive;
-}
+  .txtNav3 {
+    margin-left: 25px;
+    border-radius: 30px;
+    color: #ebebeb;
+    background-size: cover;
+    font-family: "Bangers", cursive;
+  }
 
-.txtNav4 {
-  margin-left: 25px;
-  border-radius: 30px;
-  color: #ebebeb;
-  background-size: cover;
-  font-family: "Bangers", cursive;
-}
+  .txtNav4 {
+    margin-left: 25px;
+    border-radius: 30px;
+    color: #ebebeb;
+    background-size: cover;
+    font-family: "Bangers", cursive;
+  }
 
-.fa-solid.fa-bell:before {
-  color: rgb(255, 136, 0);
-  padding: 10px;
-}
-.txtNav5 {
-  margin-left: 35px;
-  border-radius: 30px;   
-  color: #ebebeb;
-  background-size: cover;
-  font-family: "Bangers", cursive;
-  color: #ebebeb;
-}
+  .fa-solid.fa-bell:before {
+    color: rgb(255, 136, 0);
+    padding: 10px;
+  }
+  .txtNav5 {
+    margin-left: 35px;
+    border-radius: 30px;
+    color: #ebebeb;
+    background-size: cover;
+    font-family: "Bangers", cursive;
+    color: #ebebeb;
+  }
 
-.txtNav6 {
-  margin-left: 25px;
-  border-radius: 30px;
-  color: #ebebeb;
-  background-size: cover;
-  font-family: "Bangers", cursive;
-  color: #ebebeb;
-}
-.menu-cont2 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  
-}
-.menu-cont3 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  margin-left: 200px;
-}
-.menu-cont4 {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  text-align: center;
-  margin-left: 150px;
-}
-
+  .txtNav6 {
+    margin-right: 10px;
+    margin-left: 0px;
+    border-radius: 30px;
+    color: #ebebeb;
+    background-size: cover;
+    font-family: "Bangers", cursive;
+    color: #ebebeb;
+  }
+  .menu-cont2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+  }
+  .menu-cont3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-left: 200px;
+  }
+  .menu-cont4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    margin-left: 150px;
+  }
 }
