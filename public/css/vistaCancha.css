@@ -47,7 +47,7 @@ h1{
     .tarjeta {
       width: 220px;
       height: 190px;
-      background: #f0f0f0;
+      background: white;
       border-radius: 10px;
       text-align: center;
       transition: all 0.5s;
@@ -57,7 +57,6 @@ h1{
     
     .tarjeta:hover {
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
-      background-color: #4bb8ff;
     }
     
     .tarjeta .blob {
@@ -110,6 +109,10 @@ h1{
       position: absolute;
       transition: all 0.5s;
     }
+
+    .tarjetas-canchas img{
+      border-radius: 50px;
+    }
     
     .tarjeta>ul{
       opacity: 0;
@@ -147,9 +150,12 @@ h1{
   visibility: visible;
 }
 
+.tarjeta .img-escuelita{
+  transition: opacity 1s;
+}
 
 .tarjeta:hover .img-escuelita{
-visibility: hidden;
+opacity: 0.1;
 }
 
 .tarjeta-esc{
