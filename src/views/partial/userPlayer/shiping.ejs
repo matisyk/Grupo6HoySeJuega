@@ -8,9 +8,9 @@
   <title> Hoy se juega</title>
 
   <!--CSS PROPIOS-->
-  <link rel="stylesheet" href="./css/shiping.css">
+  <link rel="stylesheet" href="/css/shiping.css">
   <link rel="stylesheet" href="/css/jdSlider.css" />
-  <link rel="stylesheet" href="/css/header.css" />
+  <link rel="stylesheet" href="/css/headerJugador.css" />
   <link rel="stylesheet" href="/css/footer.css" />
 
   <!-- CSS EXTERNOS -->
@@ -36,7 +36,11 @@
     <div class="menu">
       <div class="copy-header">
         <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
+        <a href="#" class="menu-hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </a>
         <div class="menu-cont2">
+
           <a class="txtNav1" href="/UserPlayer/ProfilePlayer">Mi perfil</a>
           <a class="txtNav5" href="/UserPlayer/reserveCourt">
             Buscar canchas
@@ -73,34 +77,29 @@
 
           <div class="panel-heading cabeceraCarrito">
 
-            <div class="col-md-6 col-sm-7 col-xs-12 text-center">
+            <div class="col-md-6 col-sm-7 col-xs-6 text-center">
 
               <h3>
-                <small>PRODUCTO</small>
-              </h3>
-
-            </div>
-            <div class="col-sm-2 col-xs-0 text-center">
-
-              <h3>
-                <small>VALOR TOTAL</small>
+                <small style="color: black;">CANCHA</small>
               </h3>
 
             </div>
 
-            <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+            <div class="col-md-4 col-sm-4 col-xs-3 text-center">
 
               <h3>
-                <small>DÍA Y HORARIO</small>
+                <small style="color: black;"><i class="fa-solid fa-calendar-days"></i> <i
+                    class="fa-solid fa-clock"></i></small>
               </h3>
+
 
             </div>
 
 
-            <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+            <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
               <h3>
-                <small>RESERVA</small>
+                <small style="color: black;">RESERVA</small>
               </h3>
 
             </div>
@@ -114,11 +113,11 @@
 
             <div clas="row itemCarrito">
 
-              <div class="col-sm-1 col-xs-12">
+              <div class="col-sm-1 col-xs-2">
 
                 <br>
 
-                <button class="btn btn-default backColor">
+                <button class="btn btn-default backColor text-start">
 
                   <i class="fa fa-times"></i>
 
@@ -126,49 +125,21 @@
 
               </div>
 
-              <div class="col-sm-1 col-xs-12">
-
-                <figure>
-
-                  <img style="margin-top:10px;" src="/img/img-canchas/cancha_sintetica.jpg" class="img-thumbnail">
-
-                </figure>
-
-              </div>
-
-              <div class="col-sm-4 col-xs-12">
+              <div class="col-sm-5 col-xs-4">
 
                 <br>
 
-                <p class="tituloCarritoCompra text-left">Los Alamos / Para: 14 jugadores / Cesped sintetico</p>
+                <p class="tituloCarritoCompra text-center">Los Alamos / Cesped sintetico</p>
 
               </div>
 
-              <div class="col-md-2 col-sm-1 col-xs-12">
+              <div class="col-md-4 col-sm-4 col-xs-3 text-center">
 
                 <br>
-
-                <p class="precioCarritoCompra text-center">$<span>5.000</span></p>
-
+                <p>Lunes 22:00 hs</p>
               </div>
 
-              <div class="col-md-2 col-sm-3 col-xs-8">
-
-                <br>
-
-                <div class="col-xs-12">
-
-                  <center>
-
-                    <div class="item-tarjeta"><label name="horarios">Lunes - 22:00 hs</label></div>
-
-                  </center>
-
-                </div>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+              <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
                 <br>
 
@@ -190,11 +161,11 @@
 
             <div clas="row itemCarrito">
 
-              <div class="col-sm-1 col-xs-12">
+              <div class="col-sm-1 col-xs-2">
 
                 <br>
 
-                <button class="btn btn-default backColor">
+                <button class="btn btn-default backColor text-start">
 
                   <i class="fa fa-times"></i>
 
@@ -202,62 +173,33 @@
 
               </div>
 
-              <div class="col-sm-1 col-xs-12">
-
-                <figure>
-
-                  <img style="margin-top:10px;" src="/img/img-canchas/cancha-home.jpg" class="img-thumbnail">
-
-                </figure>
-
-              </div>
-
-              <div class="col-sm-4 col-xs-12">
+              <div class="col-sm-5 col-xs-4">
 
                 <br>
 
-                <p class="tituloCarritoCompra text-left">Los Alamos / Para: 14 jugadores / Cesped sintetico</p>
+                <p class="tituloCarritoCompra text-center">Los Alamos / Cesped sintetico</p>
 
               </div>
 
-              <div class="col-md-2 col-sm-1 col-xs-12">
+              <div class="col-md-4 col-sm-4 col-xs-3 text-center">
 
                 <br>
-
-                <p class="precioCarritoCompra text-center">$<span>8.000</span></p>
-
+                <p>Sábado 22:00 hs</p>
               </div>
 
-              <div class="col-md-2 col-sm-3 col-xs-8">
-
-                <br>
-
-                <div class="col-xs-12">
-
-                  <center>
-
-                    <div class="item-tarjeta"><label name="horarios">Sábado - 23:00 hs</label></div>
-
-                  </center>
-
-                </div>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+              <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
                 <br>
 
                 <p>
 
-                  <strong>$<span>2.300</span></strong>
+                  <strong>$<span>1.000</span></strong>
 
                 </p>
 
               </div>
 
             </div>
-
             <div class="clearfix"></div>
 
             <hr>
@@ -269,29 +211,23 @@
 
 
           <div class="panel-body sumaCarrito">
-
-            <div class="col-md-4 col-sm-6 col-xs-12 pull-right well">
-
+            <div class="col-md-3 col-sm-6 col-xs-12 pull-right well">
               <div class="col-xs-6">
-
                 <h4>TOTAL:</h4>
-
               </div>
-
               <div class="col-xs-6">
-
                 <h4 class="sumaSubTotal">
 
-                  <strong>$<span>3300</span></strong>
+                  <strong>$<span>2200</span></strong>
 
                 </h4>
-
               </div>
-
             </div>
-
           </div>
-
+          <div class="ganacia-empresa" style="margin-left: 20px;">
+          <h10> Se aplica un 10% de recargo por servicios de reserva online</h10>
+          </div>
+          <br>
           <div class="panel-heading cabeceraCheckout">
             <a href="/UserPlayer/ProfilePlayer">
               <button class="btn btn-default backColor btn-lg pull-right">REALIZAR PAGO</button></a>
@@ -304,5 +240,5 @@
 
     </div>
   </main>
-
+<%- include('../footer') %>
 </body>

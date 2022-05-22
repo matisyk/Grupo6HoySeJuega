@@ -1,35 +1,75 @@
 /*=============================================
 CARRITO DE COMPRAS
 =============================================*/
-.cabeceraCarrito{
-	height:60px;
-	display: flex;
-	align-items: center;
+.cabeceraCarrito {
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
-h3{
-	margin: 0 !important;
+h3 {
+  margin: 0 !important;
 }
 
-.cabeceraCheckout{
-	height:66px;
+.cabeceraCheckout {
+  height: 66px;
 }
 
 /*=============================================
 CHECKOUT
 =============================================*/
 
-.contenidoCheckout, .contenidoCheckout .row{
-	padding:0px 20px;
+.contenidoCheckout,
+.contenidoCheckout .row {
+  padding: 0px 20px;
 }
 
-.formEnvio{
-	display:none;
+.formEnvio {
+  display: none;
 }
 
+body {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    141deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(19, 124, 187, 1) 100%
+  );
+}
 
+.container-fluid {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.panel-body {
+  padding: 0 !important;
+}
 
-body{
-	background: rgb(2,0,36);
-	background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(19,124,187,1) 100%);
+@media (min-width: 768px) {
+  .container-fluid {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  .container {
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+  .ganacia-empresa {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-right: 20px;
+  }
+  .well {
+    margin-right: 20px;
+  }
 }
