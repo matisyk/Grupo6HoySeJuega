@@ -35,6 +35,16 @@ SLIDESHOW
   top: 85%;
   text-shadow: 0px 0px 5px black;
 }
+.prev {
+  font-size: 13px !important;
+  top: 70px !important;
+  left: -15px !important;
+}
+.next {
+  font-size: 13px !important;
+  top: 70px !important;
+  left: 362px !important;
+}
 
 /*=============================================
 MAIN
@@ -46,54 +56,63 @@ MAIN
   color: white;
   background-color: black;
   border-radius: 5px;
-  padding: 10%;
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,0) 100%);
+  padding: 30px 5px 0 60px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    181deg,
+    rgb(13 6 141) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  height: 1200px;
 }
 
 .titulito-home {
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+}
+.titulito-home1 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+}
+.titulito-home2 {
+  font-family: "Bebas Neue", cursive;
   font-size: 30px;
 }
 
-.main-home ol{
+.main-home ol {
   padding-left: 0;
 }
 
-.main-home ol li{
-  
+.main-home ol li {
   list-style-position: inside;
   font-family: "Kalam", cursive;
-  
   padding: 0;
   text-decoration: none;
   color: #ebebeb;
 }
 
-.main-home ol li a{
-  
+.main-home ol li a {
   list-style-position: inside;
   font-family: "Kalam", cursive;
-  
+
   padding: 0;
   text-decoration: none;
   color: #ebebeb;
 }
 
-
-.main-home ol li:hover{
-font-size: 30px;
-}
-.main-home ol li a:hover{
+.main-home ol li:hover {
   font-size: 30px;
-  }
+}
+.main-home ol li a:hover {
+  font-size: 30px;
+}
 
 .jugador-home {
   width: 50%;
 }
 
 .imagen-jugador img {
-  
   border-radius: 100px;
   background: rgb(7, 7, 49);
   display: block;
@@ -108,25 +127,25 @@ font-size: 30px;
 
 .cita-lucas {
   margin: 0px;
-   
+
   font-family: "Kalam", cursive;
 }
 
-
-.image_field{
+.image_field {
   width: 35vw;
 }
-.imagen-cancha img {  
+.imagen-cancha img {
   background-position: center;
   border-radius: 20px;
 }
 
 .publicidades {
   display: flex;
+  margin-left: 35px;
 }
 
 .publicidades img {
-  width: 200px;
+  width: 150px;
 }
 
 .datos-lucas {
@@ -138,27 +157,31 @@ font-size: 30px;
   margin-top: 10px;
 }
 
-.titulito-home{
+.titulito-home {
+  font-size: 40px;
+}
+.titulito-home1 {
+  font-size: 40px;
+}
+.titulito-home2 {
   font-size: 40px;
 }
 
-.bottom_main{
+.bottom_main {
   display: flex;
   flex-direction: column;
   padding: 30px;
   margin: 8px;
   text-align: justify;
   border: solid 5px #ebebeb;
-  background-color:#ebebeb;
+  background-color: #ebebeb;
   border-radius: 10px;
-  
-
 }
-.image_field{
+.image_field {
   width: 35vw;
 }
 
-.redes{
+.redes {
   margin-top: 10px;
 }
 
@@ -166,16 +189,15 @@ font-size: 30px;
   font-size: 20px;
 }
 
-.principal-home{
+.principal-home {
   display: flex;
   flex-direction: column;
-  
 }
-.jugador-home{
+.jugador-home {
   width: 100%;
 }
 
-.player_mobile{
+.player_mobile {
   background-color: rgba(235, 235, 235, 0.25);
   margin-left: 15px;
   display: flex;
@@ -183,41 +205,72 @@ font-size: 30px;
   align-items: center;
   text-align: center;
 }
-.imagen-jugador{
+.player_mobile2 {
+  background-color: rgba(235, 235, 235, 0.25);
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.imagen-jugador {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 15px;
-
 }
-.image_lucas{
+.image_lucas {
   width: 40vw;
-  
 }
 
-.datos-lucas{
+.datos-lucas {
   display: flex;
   flex-direction: column;
-  align-items: center;    
+  align-items: center;
 }
 
-.cancha-home{
-  margin-top: 15px;   
+.cancha-home {
+  margin-top: 15px;
 }
 
-.image_field{
+.image_field {
   width: 60vw;
-  
 }
-.imagen-cancha{
-padding-bottom: 15px;
+.imagen-cancha {
+  padding-bottom: 15px;
 }
 /*=============================================
 MEDIA Q
 =============================================*/
-
-@media (min-width: 450px) {  
-
+@media (min-width: 425px) {
+  .prev {
+    font-size: 13px !important;
+    top: 70px !important;
+    left: -15px !important;
+  }
+  .next {
+    font-size: 13px !important;
+    top: 70px !important;
+    left: 412px !important;
+  }
+  .slide-text {
+    position: absolute;
+    color: #fff;
+    width: 60%;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 85%;
+    text-shadow: 0px 0px 5px black;
+  }
+  .publicidades {
+    margin-left: 40px;
+  }
+  .publicidades img {
+    width: 170px;
+  }
+}
+@media (min-width: 768px) {
   .datos-lucas {
     font-family: "Kalam", cursive;
     margin: 15px 5px;
@@ -227,27 +280,31 @@ MEDIA Q
     margin-top: 10px;
   }
 
-  .titulito-home{
+  .titulito-home {
+    font-size: 40px;
+  }
+  .titulito-home1 {
+    font-size: 40px;
+  }
+  .titulito-home2 {
     font-size: 40px;
   }
 
-  .bottom_main{
+  .bottom_main {
     display: flex;
     flex-direction: column;
     padding: 30px;
     margin: 8px;
     text-align: justify;
     border: solid 5px #ebebeb;
-    background-color:#ebebeb;
+    background-color: #ebebeb;
     border-radius: 10px;
-    
-
   }
-  .image_field{
+  .image_field {
     width: 35vw;
   }
-  
-  .redes{
+
+  .redes {
     margin-top: 10px;
   }
 
@@ -255,16 +312,15 @@ MEDIA Q
     font-size: 20px;
   }
 
-  .principal-home{
+  .principal-home {
     display: flex;
     flex-direction: column;
-    
   }
-  .jugador-home{
+  .jugador-home {
     width: 100%;
   }
 
-  .player_mobile{
+  .player_mobile {
     background-color: rgba(235, 235, 235, 0.25);
     margin-left: 15px;
     display: flex;
@@ -272,110 +328,293 @@ MEDIA Q
     align-items: center;
     text-align: center;
   }
-  .imagen-jugador{
+  .player_mobile2 {
+    background-color: rgba(235, 235, 235, 0.25);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .imagen-jugador {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
-
   }
-  .image_lucas{
+  .image_lucas {
     width: 40vw;
-    
-  }
-
-  .datos-lucas{
-    display: flex;
-    flex-direction: column;
-    align-items: center;    
-  }
-
-  .cancha-home{
-    margin-top: 15px;   
-  }
-
-  .image_field{
-    width: 60vw;
-    
-  }
-.imagen-cancha{
-  padding-bottom: 15px;
-}
-  
-}
-  
-
-@media (min-width: 1200px) {
-  .main-home {
-    display: flex;
-    position: relative;
-    margin: 40px;
-    color: white;
-  }
-
-  .principal-home {
-    flex-direction: row;
-  }
-
-  .titulito-home {
-    font-size: 30px;
-  }
-
-  .main-home ol li {
-    list-style-type: decimal;
-    list-style-position: inside;
-    font-family: "Kalam", cursive;
-    font-size: 20px;
-    width: max-content;
-  }
-  .menu-cont {
-    display: flex;
-  }
-  .menu-hamburguesa {
-    display: none;
-  }
-  .jugador-home {
-    margin-left: 5%;
-  }
-
-  .jugador {
-    width: 300px;
-  }
-  .imagen-jugador img {
-    width: 140px;
-  }
-
-  .imagen-jugador {
-    display: flex;
-    flex-direction: row;
   }
 
   .datos-lucas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cancha-home {
+    margin-top: 15px;
+  }
+
+  .image_field {
+    width: 60vw;
+  }
+  .imagen-cancha {
+    padding-bottom: 15px;
+  }
+  .publicidades {
+    margin: 20px 0 20px 0;
+  }
+  img.img-publicidad2 {
+    margin-left: 150px;
+  }
+  img.img-publicidad1 {
+    margin-left: 150px;
+  }
+  .prev {
+    font-size: 23px !important;
+    top: 120px !important;
+    left: -17px !important;
+  }
+  .next {
+    font-size: 23px !important;
+    top: 120px !important;
+    left: 746px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .prev {
+    font-size: 33px !important;
+    top: 150px !important;
+    left: -15px !important;
+  }
+  .next {
+    font-size: 33px !important;
+    top: 150px !important;
+    left: 993px !important;
+  }
+  .datos-lucas {
     font-family: "Kalam", cursive;
-    margin: 40px 5px;
+    margin: 15px 5px;
   }
 
   .cita-lucas {
     margin-top: 10px;
+    position: relative;
+    top: -370px;
+    right: 265px;
+    font-size: 17px;
   }
 
-  .cancha-home{
-    margin-left: 150px;
+  .titulito-home {
+    font-size: 40px;
+    position: relative;
+    top: -440px;
+    right: 180px;
+  }
+  .titulito-home2 {
+    font-size: 40px;
+  }
+  .titulito-home1 {
+    font-size: 40px;
+    position: relative;
+    top: 10px;
+    right: 33px;
   }
 
-  .publicidades {
+  .bottom_main {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 8px;
+    text-align: justify;
+    border: solid 5px #ebebeb;
+    background-color: #ebebeb;
+    border-radius: 10px;
+  }
+  .image_field {
+    width: 35vw;
+  }
+
+  .redes {
+    margin-top: 10px;
+  }
+
+  .home_info {
+    font-size: 20px;
+  }
+
+  .principal-home {
+    display: flex;
     flex-direction: column;
   }
-
-  .img-publicidad1 {
-    position: absolute;
-    right: 0px;
-    bottom: 114px;
+  .jugador-home {
+    width: 100%;
   }
 
-  .img-publicidad2 {
+  .player_mobile {
+    background-color: rgba(235, 235, 235, 0.25);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 400px;
+    height: 500px;
+  }
+  .player_mobile2 {
+    background-color: rgba(235, 235, 235, 0.25);
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 450px;
+    height: 500px;
+    position: relative;
+    top: -850px;
+    right: -420px;
+    padding-top: 10px;
+  }
+  .imagen-jugador img {
+    border-radius: 50px;
+    background: rgb(7, 7, 49);
+    display: block;
+    margin: 8px;
+    padding: 5px;
+    position: relative;
+    right: 295px;
+    top: -300px;
+  }
+  .imagen-jugador {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  }
+  .image_lucas {
+    width: 50%;
+  }
+
+  .datos-lucas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cancha-home {
+    margin-top: 15px;
+  }
+
+  .image_field {
+    width: 95%;
+  }
+  .imagen-cancha {
+    padding-bottom: 15px;
+  }
+  .publicidades {
+    margin: 20px 0 20px 0;
+  }
+  img.img-publicidad2 {
+    margin-left: 150px;
+  }
+  img.img-publicidad1 {
+    margin-left: 250px;
+  }
+  .main-home ol {
+    padding-left: 0;
+    padding-right: 30px;
+  }
+  .publicidades img {
+    width: 200px;
+  }
+}
+@media (min-width: 1440px) {
+  .principal-home {
+  display: flex;
+  position: relative;
+  color: white;
+  background-color: black;
+  border-radius: 5px;
+  padding: 30px 5px 0 60px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    181deg,
+    rgb(13 6 141) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 0) 100%
+  );
+  height: 600px;
+}
+  .prev {
+    font-size: 43px !important;
+    top: 250px !important;
+    left: -17px !important;
+  }
+  .next {
+    font-size: 43px !important;
+    top: 250px !important;
+    left: 1400px !important;
+  }
+  .datos-lucas {
+    font-family: "Kalam", cursive;
+    margin: 15px 5px;
+  }
+  .imagen-jugador img {
+    right: 500px;
+  }
+  .cita-lucas {
+    right: 472px;
+  }
+  .titulito-home {
+    right: 380px;
+  }
+  .publicidades {
+    margin: 20px 0 20px 0;
+    position: relative;
+    top: -500px;
+    right: -730px;
+    width: 25%;
+  }
+  img.img-publicidad2 {
+    margin-left: 30px;
+  }
+  .bottom_main {
     position: absolute;
-    right: 0px;
-    top: 275px;
+    top: 1250px;
+  }
+}
+@media (min-width: 1600px) {
+  .prev {
+    font-size: 43px !important;
+    top: 250px !important;
+    left: -17px !important;
+  }
+  .next {
+    font-size: 43px !important;
+    top: 250px !important;
+    left: 1559px !important;
+  }
+  .imagen-jugador img {
+    right: 580px;
+  }
+  .cita-lucas {
+    right: 555px;
+  }
+  .titulito-home {
+    right: 465px;
+    font-size: 50px;
+  }
+  .player_mobile2 {
+    top: -865px;
+    right: -500px;
+  }
+  .publicidades {
+    margin: 20px 0 20px 0;
+    position: relative;
+    top: -500px;
+    right: -855px;
+    width: 25%;
   }
 }
