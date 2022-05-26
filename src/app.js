@@ -37,6 +37,7 @@ app.use('/userPlayer', userPlayerRouter);
 const SobreNosotrosRouter = require('./routes/userPlayerRout');
 app.use('/SobreNosotrosPlayer', SobreNosotrosRouter);
 
+console.log('prueba');
 
 // Metodos get
 // app.get('/', (req, res) => {
