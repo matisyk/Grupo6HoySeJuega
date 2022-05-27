@@ -1,9 +1,10 @@
+console.log("entre")
  var current = 0;
  var imagenes = new Array();
 
  $(document).ready(function () {
    var numImages = 6;
-   if (numImages <= 3) {
+   if (numImages <= 2) {
      $('.right-arrow').css('display', 'none');
      $('.left-arrow').css('display', 'none');
    }
@@ -48,3 +49,5 @@
      return false;
    });
  });
+
+ console.log("entre")
