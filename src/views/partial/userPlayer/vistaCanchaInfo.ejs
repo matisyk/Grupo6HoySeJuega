@@ -10,7 +10,7 @@
   <!--CSS PROPIOS-->
   <link href="/css/vistaCanchaInfo.css" rel="stylesheet" />
   <link href="/css/jdSliderVistaCancha.css" rel="stylesheet" />
-  <link href="/css/header.css" rel="stylesheet" />
+  <link href="/css/headerJugador.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
 
 
@@ -56,6 +56,9 @@
     <div class="menu">
       <div class="copy-header">
         <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
+        <a href="#" class="menu-hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </a>
         <div class="menu-cont2">
           <a class="txtNav1" href="/UserPlayer/ProfilePlayer">Mi perfil</a>
           <a class="txtNav1" href="/UserPlayer/team">Mi equipo</a>
@@ -83,24 +86,21 @@
             </a>
           </li>
           <li class="detalle2">
-            <i class="fa-solid fa-shower"></i> <span>Vestuarios </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> SI</span>
+            <i class="fa-solid fa-shower"></i> <span>Vestuarios </span>
           </li>
           <li class="detalle2">
-            <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> SI</span>
+            <i class="fa-solid fa-utensils"></i><span> Parrilas </span>
           </li>
         </ol>
       </div>
       <div class="datos3-del-lugar">
         <ol>
           <li class="detalle2">
-            <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> SI</span>
+            <i class="fa-solid fa-car"></i><span> Estacionamiento </span>
           </li>
           <li class="detalle2">
-            <i class="fa-solid fa-credit-card"></i><span> Medios de pagos </span><span></span> <i
-              class="fa-solid fa-arrow-right-long"></i></span><span> Tarjeta de credito - efectivo - Mercado
+            <i class="fa-solid fa-credit-card"></i><span> Medios de pagos: </span><span> Tarjeta de credito - Efectivo
+              Mercado
               pago</span>
           </li>
           <li class="detalle2">
@@ -111,28 +111,65 @@
       </div>
 
     </div>
+    <div class="">
+      <ul class="galeria">
+        <li><a href="#img1"><img src="/img/img-canchas/cancha-home.jpg">
+            <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+          </a>
 
-    <!-- </div>
-    <div id="carrusel">
-      <a href="#" class="left-arrow"><i class="fa-solid fa-arrow-left"></i></a>
-      <a href="#" class="right-arrow"><i class="fa-solid fa-arrow-right"></i></a>
-      <div class="carrusel">
+        </li>
+        <li><a href="#img2"><img src="/img/parrillas/p1.jpeg">
+            <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+          </a>
 
-        <div class="product" id="product_1">
-          <img src="/img/img-canchas/cancha-home.jpg" />
+        </li>
+        <li><a href="#img3"><img src="/img/parrillas/e1.jpeg">
+            <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+          </a>
+
+        </li>
+        <!-- <li><a href="#img4"><img src="http://neo-deco.es/wp-content/uploads/2013/01/Paisaje-de-monta%C3%B1a.jpg"></a>
+        </li> -->
+      </ul>
+
+      <div class="modal" id="img1">
+        <h3>Canchas</h3>
+        <div class="imagen">
+          <a href="">&#60;</a>
+          <a href=""><img src="/img/img-canchas/cancha-home.jpg"></a>
+          <a href=""><img src="/img/parrillas/c2.jpeg"></a>
+          <a href=""><img src="/img/parrillas/c3.jpeg"> </a>
+          <a href="#img2">></a>
+
+
         </div>
-        <div class="product" id="product_2">
-          <img src="/img/img-canchas/cancha-home.jpg" />
-        </div>
-        <div class="product" id="product_3">
-          <img src="/img/img-canchas/cancha-home.jpg" />
-        </div>
+        <a class="cerrar" href="">X</a>
       </div>
-    </div> -->
 
+      <div class="modal" id="img2">
+        <h3>Parrilla y bufete</h3>
+        <div class="imagen">
+          <a href="#img1">&#60;</a>
+          <a href=""><img src="/img/parrillas/p1.jpeg"></a>
+          <a href=""><img src="/img/parrillas/p3.jpeg"></a>
+          <a href=""><img src="/img/parrillas/p2.jpeg"></a>
+          <a href="#img3">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+      </div>
 
-    <!---<p class="sin-canchas">Aún no tienes canchas registradas</p>--->
-
+      <div class="modal" id="img3">
+        <h3>Estacionamiento</h3>
+        <div class="imagen">
+          <a href="#img2">&#60;</a>
+          <a href=""><img src="/img/parrillas/e1.jpeg"></a>
+          <a href=""><img src="/img/parrillas/e3.jpeg"></a>
+          <a href=""><img src="/img/parrillas/e2.png"></a>
+          <a href="#img1">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+      </div>
+    </div>
 
     <div class="tarjetas">
       <div class="tarjeta">
@@ -170,7 +207,6 @@
   </section>
   <br>
   <br>
-  <br>
   <section>
     <!-- TABLA DE RESERVAS -->
 
@@ -187,38 +223,35 @@
           <div class="panel-heading cabeceraCarrito">
             <!-- <h4 style="color:rgb(0, 0, 0); font-family: Kalam;font-size: 25px; margin-left: 10px;"> Próximos
                   partidos</h4> -->
-            <div class="col-md-2 col-sm-7 col-xs-12 text-center">
+            <div class="col-md-2 col-sm-2 col-xs-2 text-center">
 
               <h3>
                 <small>CANCHA</small>
               </h3>
 
             </div>
-            <div class="col-md-4 col-sm-7 col-xs-12 text-center">
+            <div class="col-md-3 col-sm-2 col-xs-2 text-center">
 
               <h3>
                 <small>DETALLE</small>
               </h3>
 
             </div>
-            <div class="col-sm-2 col-xs-0 text-start">
+            <div class="col-md-2 col-sm-2 col-xs-3 text-start">
 
               <h3>
                 <small>CANT. JUGADORES</small>
               </h3>
 
             </div>
-
-            <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+            <div class="col-md-3 col-sm-4 col-xs-2 text-center">
 
               <h3>
                 <small>VALOR POR EQUIPO</small>
               </h3>
 
             </div>
-
-
-            <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+            <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
               <h3>
                 <small>RESERVAR</small>
@@ -236,222 +269,30 @@
 
             <div clas="row itemCarrito">
 
-              <div class="col-sm-2 col-xs-12 text-center">
+              <div class="col-md-2 col-sm-2 col-xs-2 text-center">
                 <br>
                 <p>1</p>
               </div>
-
-              <div class="col-sm-4 col-xs-12">
-
-                <br>
-
-                <p class="tituloCarritoCompra text-center">Cancha de cesped cintético</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-12">
-
-                <br>
-
-                <p class="precioCarritoCompra text-center">14</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-3 col-xs-8">
-
-                <br>
-
-                <div class="col-xs-12">
-
-                  <center>
-
-                    $3500
-
-                  </center>
-
-                </div>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-4 text-center">
-
-                <br>
-
-                <p>
-
-                  <a href="/agenda"><i class="fa-solid fa-calendar-days" style="color: green; font-size:
-                    20px;"></i></a>
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="clearfix"></div>
-
-            <hr>
-
-            <!-- RESERVA 2 -->
-
-            <div clas="row itemCarrito">
-
-              <div class="col-sm-2 col-xs-12 text-center">
-                <br>
-                <p>2</p>
-              </div>
-
-              <div class="col-sm-4 col-xs-12">
+              <div class="col-md-3 col-sm-2 col-xs-2">
 
                 <br>
 
                 <p class="tituloCarritoCompra text-center">Cancha de cesped cintético</p>
 
               </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-12">
-
-                <br>
-
-                <p class="precioCarritoCompra text-center">14</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-3 col-xs-8">
+              <div class="col-md-2 col-sm-3 col-xs-3">
 
                 <br>
 
-                <div class="col-xs-12">
-
-                  <center>
-
-                    $3500
-
-                  </center>
-
-                </div>
+                <p class="precioCarritoCompra">14</p>
 
               </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+              <div class="col-md-3 col-sm-3 col-xs-2 text-center">
 
                 <br>
-
-                <p>
-
-                  <a href="/agenda"><i class="fa-solid fa-calendar-days" style="color: green; font-size:
-                    20px;"></i></a>
-
-                </p>
-
+                <p>$3500</p>
               </div>
-
-            </div>
-
-            <div class="clearfix"></div>
-
-            <hr>
-            <!-- RESERVA 3 -->
-
-            <div clas="row itemCarrito">
-
-              <div class="col-sm-2 col-xs-12 text-center">
-                <br>
-                <p>3</p>
-              </div>
-
-              <div class="col-sm-4 col-xs-12">
-
-                <br>
-
-                <p class="tituloCarritoCompra text-center">Cancha de cesped cintético</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-12">
-
-                <br>
-
-                <p class="precioCarritoCompra text-center">22</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-3 col-xs-8">
-
-                <br>
-
-                <div class="col-xs-12">
-
-                  <center>
-
-                    $6000
-
-                  </center>
-
-                </div>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-4 text-center">
-
-                <br>
-
-                <p>
-
-                  <a href="/agenda"><i class="fa-solid fa-calendar-days" style="color: green; font-size:
-                    20px;"></i></a>
-
-                </p>
-
-              </div>
-
-            </div>
-
-            <div class="clearfix"></div>
-
-            <hr>
-            <!-- RESERVA 4 -->
-
-            <div clas="row itemCarrito">
-
-              <div class="col-sm-2 col-xs-12 text-center">
-                <br>
-                <p>4</p>
-              </div>
-
-              <div class="col-sm-4 col-xs-12">
-
-                <br>
-
-                <p class="tituloCarritoCompra text-center">Cancha de cesped cintético</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-12">
-
-                <br>
-
-                <p class="precioCarritoCompra text-center">22</p>
-
-              </div>
-
-              <div class="col-md-2 col-sm-3 col-xs-8">
-
-                <br>
-
-                <div class="col-xs-12">
-
-                  <center>
-
-                    $6000
-
-                  </center>
-
-                </div>
-
-              </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+              <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
                 <br>
 
@@ -488,40 +329,37 @@
 
             <!-- CABECERA DE TABLA DE RESERVAS -->
 
-            <div class="panel-heading cabeceraCarrito">
+            <div class="panel-heading cabeceraCarrito2">
 
-              <div class="col-md-2 col-sm-7 col-xs-12 text-center">
+              <div class="col-md-2 col-sm-7 col-xs-2 text-center" style="padding-left: 5px">
 
                 <h3>
-                  <small>CATEGORIA</small>
+                  <small class="categoria">CATEGORIA</small>
                 </h3>
 
               </div>
-              <div class="col-md-4 col-sm-7 col-xs-12 text-center">
+              <div class="col-md-4 col-sm-7 col-xs-3 ">
 
                 <h3>
-                  <small>DETALLE</small>
+                  <small class="text-center" >DETALLE</small>
                 </h3>
 
               </div>
-              <div class="col-sm-2 col-xs-0 text-start">
+              <div class="col-sm-2 col-xs-2 text-start">
 
                 <h3>
-                  <small>CANT. ALUMNOS</small>
+                  <small>GÉNERO</small>
                 </h3>
 
               </div>
-
-              <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+              <div class="col-md-2 col-sm-2 col-xs-2 text-center">
 
                 <h3>
-                  <small>VALOR POR MES</small>
+                  <small>VALOR </small>
                 </h3>
 
               </div>
-
-
-              <div class="col-md-2 col-sm-1 col-xs-0 text-center">
+              <div class="col-md-2 col-sm-1 col-xs-2 text-center">
 
                 <h3>
                   <small>RESERVAR</small>
@@ -539,12 +377,12 @@
 
               <div clas="row itemCarrito">
 
-                <div class="col-sm-2 col-xs-12 text-center">
+                <div class="col-sm-2 col-xs-2 text-center">
                   <br>
                   <p>2000</p>
                 </div>
 
-                <div class="col-sm-4 col-xs-12">
+                <div class="col-sm-4 col-xs-3">
 
                   <br>
 
@@ -552,152 +390,21 @@
 
                 </div>
 
-                <div class="col-md-2 col-sm-1 col-xs-12">
+                <div class="col-md-2 col-sm-2 col-xs-2 text-center">
 
                   <br>
 
-                  <p class="precioCarritoCompra text-center">MIXTO</p>
+                  <p>MIXTO</p>
 
                 </div>
 
-                <div class="col-md-2 col-sm-3 col-xs-8">
+                <div class="col-md-2 col-sm-2 col-xs-2">
 
                   <br>
-
-                  <div class="col-xs-12">
-
-                    <center>
-
-                      $2000
-
-                    </center>
-
-                  </div>
-
+                  <p class="valor"> $2000 </p>
                 </div>
 
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
-
-                  <br>
-
-                  <p>
-
-                    <a href="/shiping">
-                      <i class="fa-solid fa-user-plus" style="color: green; font-size:
-                    20px;"></i></a>
-
-                  </p>
-
-                </div>
-
-              </div>
-
-              <div class="clearfix"></div>
-
-              <hr>
-
-              <!-- RESERVA 2 -->
-
-              <div clas="row itemCarrito">
-
-                <div class="col-sm-2 col-xs-12 text-center">
-                  <br>
-                  <p>2009</p>
-                </div>
-
-                <div class="col-sm-4 col-xs-12">
-
-                  <br>
-
-                  <p class="tituloCarritoCompra text-center">Cancha de cesped cintético</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-12">
-
-                  <br>
-
-                  <p class="precioCarritoCompra text-center">FEMENINO</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-3 col-xs-8">
-
-                  <br>
-
-                  <div class="col-xs-12">
-
-                    <center>
-
-                      $1500
-
-                    </center>
-
-                  </div>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
-
-                  <br>
-
-                  <p>
-
-                    <a href="/shiping">
-                      <i class="fa-solid fa-user-plus" style="color: green; font-size:
-                    20px;"></i></a>
-
-                  </p>
-
-                </div>
-
-              </div>
-
-              <div class="clearfix"></div>
-
-              <hr>
-              <!-- RESERVA 3 -->
-
-              <div clas="row itemCarrito">
-
-                <div class="col-sm-2 col-xs-12 text-center">
-                  <br>
-                  <p>2010</p>
-                </div>
-
-                <div class="col-sm-4 col-xs-12">
-
-                  <br>
-
-                  <p class="tituloCarritoCompra text-center">Cancha de parquet</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-12">
-
-                  <br>
-
-                  <p class="precioCarritoCompra text-center">MASCULINO</p>
-
-                </div>
-
-                <div class="col-md-2 col-sm-3 col-xs-8">
-
-                  <br>
-
-                  <div class="col-xs-12">
-
-                    <center>
-
-                      $1000
-
-                    </center>
-
-                  </div>
-
-                </div>
-
-                <div class="col-md-2 col-sm-1 col-xs-4 text-center">
+                <div class="col-md-2 col-sm-2 col-xs-3 text-center">
 
                   <br>
 

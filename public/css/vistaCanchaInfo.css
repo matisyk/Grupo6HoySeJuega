@@ -1,110 +1,116 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url(/img/probando-fondo-2.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/img/probando-fondo-2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 /*=============================================
 MAIN
 =============================================*/
 
-
-.datos-del-lugar{
-    background-color: #fff;
-    padding: 20px 10px 10px 20px;
-    width: 100%;
-    height: 40%;
+.datos-del-lugar {
+  background-color: #fff;
+  padding: 10px;
+  width: 100%;
+  height: 0%;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
-.datos-del-lugar h2{
-  margin: 50px;
+.datos-del-lugar h2 {
+  margin-top: 20px;
   color: rgb(0, 0, 0);
-  width: 50%;
+  width: 100%;
   font-family: "Bangers", cursive;
- 
-
+  font-size: 50px;
+  margin-left: 6px;
 }
-.datos2-del-lugar{
-  margin-left: -200px;
-  margin-top: 15px;
+.datos2-del-lugar {
+  margin-top: 30px;
   width: 50%;
-  
+  position: relative;
+  top: 9px;
+  right: 10px;
+  font-size: 16px;
 }
-.datos3-del-lugar{
-  margin-left: -200px;
+.datos3-del-lugar {
+  margin-left: 0px;
   margin-top: 5px;
   width: 50%;
-  
+  position: relative;
+  top: 5px;
+  right: 0px;
+  font-size: 15px;
 }
-.datos2-del-lugar ol li a{
+.datos2-del-lugar ol li a {
   text-decoration: none;
-color: #000000;}
-
-.detalle2{
-  margin-top: 10px
+  color: #000000;
 }
-    /* TARJETA */
 
-  .tarjetas{
-    display: flex;
-    margin: 30px 0;
-  }
-    .tarjeta {
-      width: 400px;
-      height: 190px;
-      background: #f0f0f0;
-      border-radius: 10px;
-      text-align: center;
-      transition: all 0.5s;
-      margin: 40px;
-      position: relative;
-    }
-    
-    .tarjeta:hover {
-      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
-      background-color: #ffffff;
-    }
-    
-    .tarjeta .blob {
-      height: 10px;
-      width: 75%;
-      border-radius: 0 0 30px 30px;
-      margin: 0 auto;
-      background-color: #4bb8ff;
-      visibility: visible;
-      transition: all 0.3s;
-    }
-    
-    .tarjeta:hover .blob {
-      height: 0;
-    }
-    
-    .tarjeta .img img{
-      display: flex;
-      margin: 30px auto 10px auto;
-      width: 70px;
-      height: 70px;
-      background-color: #ffffff;
-      border-radius: 50%;
-      font-size: 11px;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.5s;
-    }
-    
-    /* .tarjeta:hover .img img{
+.detalle2 {
+  margin-top: 10px;
+}
+/* TARJETA */
+
+.tarjetas {
+  display: flex;
+  margin: -65px 0 30px 7px;
+}
+.tarjeta {
+  width: 100px;
+  height: 130px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  margin: 40px 10px;
+  position: relative;
+}
+
+.tarjeta:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+  background-color: #ffffff;
+}
+
+.tarjeta .blob {
+  height: 10px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: #4bb8ff;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+.tarjeta:hover .blob {
+  height: 0;
+}
+
+.tarjeta .img img {
+  display: flex;
+  margin: 20px auto 0 auto;
+  width: 60px;
+  height: 50px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+/* .tarjeta:hover .img img{
       width: 100%;
       height: 100%;
       border-radius: 10px 0 0;
@@ -112,95 +118,737 @@ color: #000000;}
       background-color: #f0f0f0;
       z-index: 99999;
     } */
-    
-    .tarjeta h2 {
-      padding: 15px 10px;
-      font-size: 25px;
-      transition: all 0.1s;
-      z-index: 99;
-      line-height: 17px;
-      font-family: "Bangers", cursive;
-    }
-    .tarjeta i {
-      padding: 15px 10px;
-      font-size: 25px;
-      transition: all 0.1s;
-      z-index: 99;
-      line-height: 17px;
-      opacity: 0;
-      text-decoration: none;
-      color: #000000;
-    }
-    .tarjeta span {
-      font-size: 18px;
-    }
-    
-    .tarjeta:hover h2 {
-      opacity: 0;
-      width: 100%;
-      position: absolute;
-      transition: all 0.5s;
-    }
-    .tarjeta:hover i {
-      opacity: 100;
-      width: 100%;
-      position: absolute;
-      transition: all 0.5s;
-      left: 4px;
-      top: 120px;
-      text-decoration: none;
-    }
-    .tarjeta>ul {
-      opacity: 0;
-      transition: all 0.75s;
-    }
-    
-    .tarjeta>ul>svg {
-      padding: 5px;
-    }
-    
-    .tarjeta:hover>ul {
-      position: absolute;
-      bottom: 5px;
-      left: -125px;
-      opacity: 1;
-      transition: all 0.1s;
-    }
 
+.tarjeta h2 {
+  padding: 10px;
+  font-size: 18px;
+  transition: all 0.1s;
+  z-index: 99;
+  line-height: 17px;
+  font-family: "Bangers", cursive;
+  margin-top: 5px;
+}
+.tarjeta i {
+  padding: 15px 10px;
+  font-size: 25px;
+  transition: all 0.1s;
+  z-index: 99;
+  line-height: 17px;
+  opacity: 0;
+  text-decoration: none;
+  color: #000000;
+}
+.tarjeta span {
+  font-size: 18px;
+}
 
-.horarios a{
+.tarjeta:hover h2 {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+.tarjeta:hover i {
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s;
+  left: 2px;
+  top: 75px;
+  text-decoration: none;
+}
+.tarjeta > ul {
+  opacity: 0;
+  transition: all 0.75s;
+}
+
+.tarjeta > ul > svg {
+  padding: 5px;
+}
+
+.tarjeta:hover > ul {
+  position: absolute;
+  bottom: 5px;
+  left: -125px;
+  opacity: 1;
+  transition: all 0.1s;
+}
+
+.horarios a {
   text-decoration: none;
   color: #000000;
   font-family: kalam;
   visibility: none;
 }
 
-.horarios:hover{
+.horarios:hover {
   font-size: 30px;
   visibility: visible;
 }
 
 button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button.learn-more {
- width: 12rem;
- height: auto;
+  width: 12rem;
+  height: auto;
 }
 
 button.learn-more .circle {
-     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #000000;
+  border-radius: 1.625rem;
+  margin-left: 30px;
+}
+
+button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+button:hover .circle {
+  width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+  color: #fff;
+  font-size: 13px;
+  width: 70%;
+}
+
+.sin-canchas {
+  text-align: center;
+  color: #fff;
+  margin: 100px;
+}
+
+p {
+  margin: 200px;
+}
+.separador1 {
+  width: 60%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-family: "Bangers", cursive;
+  margin: -30px 0px 0px 20%;
+}
+.separador1 h1 {
+  font-size: 25px;
+  margin-top: 13px;
+}
+.separador2 {
+  width: 60%;
+  background-color: white;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 30px;
+  font-family: "Bangers", cursive;
+  margin: 10px 0px 45px 20%;
+}
+.separador2 h1 {
+  font-size: 25px;
+  margin-top: 13px;
+}
+/*Estilos de la galeria*/
+
+.galeria {
+  width: 90%;
+  margin: 20px auto 0 auto;
+  list-style: none;
+  padding: 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.galeria li {
+  margin: -15px;
+}
+
+.galeria img {
+  width: 140px;
+  height: 100px;
+}
+.fa-circle-plus:before,
+.fa-plus-circle:before {
+  content: "\f055";
+  color: white;
+  position: relative;
+  left: 117px;
+  /* top: 10px; */
+  bottom: 55px;
+  font-size: 20px;
+}
+/*Estilos del modal*/
+
+.modal {
+  display: none;
+}
+
+.modal:target {
+  display: block;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.modal h3 {
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+  margin: 15px 0;
+}
+
+.imagen {
+  width: 100%;
+  height: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen a {
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.imagen a:nth-child(2) {
+  margin: 0;
+  height: 100%;
+  flex-shrink: 2;
+}
+
+.imagen img {
+  width: 500px;
+  height: 100%;
+  max-width: 100%;
+  border: 7px solid #fff;
+  box-sizing: border-box;
+}
+
+.cerrar {
+  display: block;
+  background: #fff;
+  width: 35px;
+  height: 35px;
+  margin: 15px auto;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 25px;
+}
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.container {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.cabeceraCarrito h3 {
+  font-size: 15px;
+  text-align: start;
+}
+.cabeceraCarrito2 h3 {
+  font-size: 15px;
+  text-align: start;
+}
+.panel-heading {
+  padding: 0 !important;
+  height: 90px !important;
+}
+
+.panel-body {
+  /* padding: 15px; */
+  padding: 0px !important;
+}
+
+@media (min-width: 425px) {
+  .datos-del-lugar h2 {
+    margin-left: 30px;
+  }
+
+  .galeria img {
+    width: 145px;
+  }
+
+  .tarjetas {
+    margin: -65px 0 30px 30px;
+  }
+
+  .separador1 h1 {
+    font-size: 30px;
+    margin-top: 13px;
+  }
+  .separador2 h1 {
+    font-size: 30px;
+    margin-top: 13px;
+  }
+}
+
+@media (min-width: 768px) {
+  .datos-del-lugar h2 {
+    margin-left: 170px;
+    font-size: 60px;
+  }
+
+  .galeria img {
+    width: 200px;
+    height: 150px;
+  }
+  .fa-circle-plus:before,
+  .fa-plus-circle:before {
+    left: 165px;
+    bottom: 57px;
+    font-size: 30px;
+  }
+  .tarjetas {
+    margin: -65px 0 30px 125px;
+  }
+  .tarjeta {
+    width: 150px;
+  }
+  .separador1 {
+    width: 40%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Bangers", cursive;
+    margin: -30px 0px 0px 31%;
+  }
+  .separador1 h1 {
+    font-size: 40px;
+    margin-top: 13px;
+    margin-top: 13px;
+  }
+  .separador2 {
+    width: 40%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Bangers", cursive;
+    margin: 30px 0px 40px 31%;
+  }
+  .separador2 h1 {
+    font-size: 40px;
+    margin-top: 13px;
+  }
+  .cabeceraCarrito h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .cabeceraCarrito2 h3 {
+    font-size: 25px;
+    text-align: center;
+  }
+  p.precioCarritoCompra {
+    padding-left: 38px;
+  }
+  i.fa-solid.fa-calendar-days {
+    padding-left: 35px;
+  }
+  small.categoria {
+    padding-left: 20px;
+  }
+  p.valor {
+    padding-left: 25px;
+  }
+}
+@media (min-width: 1024px) {
+  .datos-del-lugar h2 {
+    margin-left: 275px;
+    font-size: 70px;
+  }
+  .datos2-del-lugar {
+    margin-top: 30px;
+    width: 50%;
+    position: relative;
+    top: -10px;
+    right: -25px;
+    font-size: 20px;
+  }
+  .datos3-del-lugar {
+    margin-left: 0px;
+    margin-top: 5px;
+    width: 50%;
+    position: relative;
+    top: 5px;
+    right: 20px;
+    font-size: 18px;
+  }
+  .galeria img {
+    width: 280px;
+    height: 200px;
+  }
+  .fa-circle-plus:before {
+    left: 240px;
+    bottom: 60px;
+    font-size: 34px;
+  }
+  .tarjeta {
+    width: 200px;
+    height: 160px;
+  }
+  .tarjetas {
+    margin: -65px 0 30px 176px;
+  }
+  .tarjeta .img img {
+    display: flex;
+    margin: 20px auto 20px auto;
+    width: 80px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+  .tarjeta h2 {
+    padding: 10px;
+    font-size: 25px;
+    transition: all 0.1s;
+    z-index: 99;
+    line-height: 17px;
+    font-family: "Bangers", cursive;
+    margin-top: -4px;
+  }
+  p.precioCarritoCompra {
+    padding-left: 55px;
+  }
+  p.valor {
+    padding-left: 43px;
+  }
+}
+@media (min-width: 1440px) {
+  i.fa-solid.fa-calendar-days {
+    padding-left: 10px;
+  }
+  .galeria img {
+    width: 400px;
+    height: 300px;
+  }
+  .fa-circle-plus:before {
+    left: 345px;
+    bottom: 75px;
+    font-size: 45px;
+  }
+  .tarjeta {
+    width: 300px;
+    height: 200px;
+  }
+  .tarjeta .img img {
+    width: 100px;
+    height: 100px;
+  }
+  .tarjeta h2 {
+    padding: 10px;
+    font-size: 30px;
+    transition: all 0.1s;
+    z-index: 99;
+    line-height: 17px;
+    font-family: "Bangers", cursive;
+    margin-top: 0px;
+  }
+  .tarjetas {
+    margin: -63px 0 40px 245px;
+  }
+  .separador1 h1 {
+    font-size: 50px;
+  }
+  .separador2 h1 {
+    font-size: 50px;
+  }
+  .separador1 {
+    width: 30%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Bangers", cursive;
+    margin: -30px 0px 0px 36%;
+  }
+  .separador2 {
+    width: 29%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Bangers", cursive;
+    margin: 30px 0px 40px 37%;
+  }
+  body {
+    font-size: 20px !important;
+  }
+  .cabeceraCarrito h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .cabeceraCarrito2 h3 {
+    font-size: 34px;
+    text-align: center;
+  }
+}
+@media (min-width: 1600px) {
+  .datos-del-lugar {
+    background-color: #fff;
+    padding: 20px 10px 10px 20px;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+  }
+  .datos-del-lugar h2 {
+    margin: 50px;
+    color: rgb(0, 0, 0);
+    width: 50%;
+    font-family: "Bangers", cursive;
+  }
+  .datos2-del-lugar {
+    position: static;
+    margin-left: -220px;
+    margin-top: 15px;
+    width: 50%;
+    font-size: 30px;
+  }
+  .datos3-del-lugar {
+    position: static;
+    margin-left: 633px;
+    margin-top: -95px;
+    width: 50%;
+    font-size: 25px;
+}
+  .datos2-del-lugar ol li a {
+    text-decoration: none;
+    color: #000000;
+  }
+
+  .detalle2 {
+    margin-top: 10px;
+  }
+  /* TARJETA */
+
+  .tarjetas {
+    display: flex;
+    margin: -50px 0 30px 85px;
+  }
+  .tarjeta {
+    width: 400px;
+    height: 190px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.5s;
+    margin: 40px;
+    position: relative;
+  }
+
+  .tarjeta:hover {
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+    background-color: #ffffff;
+  }
+
+  .tarjeta .blob {
+    height: 10px;
+    width: 75%;
+    border-radius: 0 0 30px 30px;
+    margin: 0 auto;
+    background-color: #4bb8ff;
+    visibility: visible;
+    transition: all 0.3s;
+  }
+
+  .tarjeta:hover .blob {
+    height: 0;
+  }
+
+  .tarjeta .img img {
+    display: flex;
+    margin: 30px auto 10px auto;
+    width: 70px;
+    height: 70px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    font-size: 11px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+  }
+
+  /* .tarjeta:hover .img img{
+      width: 100%;
+      height: 100%;
+      border-radius: 10px 0 0;
+      margin: 0 auto;
+      background-color: #f0f0f0;
+      z-index: 99999;
+    } */
+
+  .tarjeta h2 {
+    padding: 29px 10px;
+    font-size: 35px;
+    transition: all 0.1s;
+    z-index: 99;
+    line-height: 17px;
+    font-family: "Bangers", cursive;
+}
+  .tarjeta i {
+    padding: 15px 10px;
+    font-size: 25px;
+    transition: all 0.1s;
+    z-index: 99;
+    line-height: 17px;
+    opacity: 0;
+    text-decoration: none;
+    color: #000000;
+  }
+  .tarjeta span {
+    font-size: 18px;
+  }
+
+  .tarjeta:hover h2 {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+  }
+  .tarjeta:hover i {
+    opacity: 100;
+    width: 100%;
+    position: absolute;
+    transition: all 0.5s;
+    left: 4px;
+    top: 120px;
+    text-decoration: none;
+  }
+  .tarjeta > ul {
+    opacity: 0;
+    transition: all 0.75s;
+  }
+
+  .tarjeta > ul > svg {
+    padding: 5px;
+  }
+
+  .tarjeta:hover > ul {
+    position: absolute;
+    bottom: 5px;
+    left: -125px;
+    opacity: 1;
+    transition: all 0.1s;
+  }
+
+  .horarios a {
+    text-decoration: none;
+    color: #000000;
+    font-family: kalam;
+    visibility: none;
+  }
+
+  .horarios:hover {
+    font-size: 30px;
+    visibility: visible;
+  }
+
+  button {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    background: transparent;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+  }
+
+  button.learn-more {
+    width: 12rem;
+    height: auto;
+  }
+
+  button.learn-more .circle {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
     position: relative;
     display: block;
     margin: 0;
@@ -209,41 +857,41 @@ button.learn-more .circle {
     background: #000000;
     border-radius: 1.625rem;
     margin-left: 30px;
-}
+  }
 
-button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
-}
+  button.learn-more .circle .icon {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: #fff;
+  }
 
-button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
-}
+  button.learn-more .circle .icon.arrow {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    left: 0.625rem;
+    width: 1.125rem;
+    height: 0.125rem;
+    background: none;
+  }
 
-button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
-}
+  button.learn-more .circle .icon.arrow::before {
+    position: absolute;
+    content: "";
+    top: -0.29rem;
+    right: 0.0625rem;
+    width: 0.625rem;
+    height: 0.625rem;
+    border-top: 0.125rem solid #fff;
+    border-right: 0.125rem solid #fff;
+    transform: rotate(45deg);
+  }
 
-button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: -5px;
+  button.learn-more .button-text {
+    transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+    position: absolute;
+    top: -5px;
     left: 40px;
     right: 0;
     bottom: 0;
@@ -255,48 +903,161 @@ button.learn-more .button-text {
     text-align: center;
     text-transform: uppercase;
     font-size: 10px;
-}
+  }
 
-button:hover .circle {
- width: 100%;
-}
+  button:hover .circle {
+    width: 100%;
+  }
 
-button:hover .circle .icon.arrow {
- background: #fff;
- transform: translate(1rem, 0);
- 
-}
+  button:hover .circle .icon.arrow {
+    background: #fff;
+    transform: translate(1rem, 0);
+  }
 
-button:hover .button-text {
- color: #fff;
- font-size: 13px;
- width: 70%;
-}
+  button:hover .button-text {
+    color: #fff;
+    font-size: 13px;
+    width: 70%;
+  }
 
-.sin-canchas{
-    text-align:center ;
+  .sin-canchas {
+    text-align: center;
     color: #fff;
     margin: 100px;
-}
+  }
 
-p{
-    margin:200px
+  p {
+    margin: 200px;
+  }
+  .separador1 {
+    width: 25%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Bangers", cursive;
+    margin: 60px 0px 0px 38%;
 }
-.separador1 {
-  width: 20%;
-  background-color: white;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 30px;
-  font-family: "Bangers", cursive;
-  margin: 60px 0px 0px 40%;
+  .separador2 {
+    width: 25%;
+    background-color: white;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 30px;
+    font-family: "Bangers", cursive;
+    margin: 30px 0 50px 38%;
 }
-.separador2 {
-  width: 20%;
-  background-color: white;
-  text-align: center;
-  border: 1px solid black;
-  border-radius: 30px;
-  font-family: "Bangers", cursive;
-  margin: 30px 0 50px 40%;
+  /*Estilos de la galeria*/
+
+  .galeria {
+    width: 90%;
+    margin: 40px auto 0 auto;
+    list-style: none;
+    padding: 20px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .galeria li {
+    margin: 5px;
+  }
+
+  .galeria img {
+    width: 450px;
+    height: 300px;
+  }
+  .fa-circle-plus:before {
+    content: "\f055";
+    color: white;
+    position: relative;
+    left: 395px;
+    /* top: 10px; */
+    bottom: 75px;
+}
+  /*Estilos del modal*/
+
+  .modal {
+    display: none;
+  }
+
+  .modal:target {
+    display: block;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal h3 {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .imagen {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imagen a {
+    color: #fff;
+    font-size: 40px;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+
+  .imagen a:nth-child(2) {
+    margin: 0;
+    height: 100%;
+    flex-shrink: 2;
+  }
+
+  .imagen img {
+    width: 500px;
+    height: 100%;
+    max-width: 100%;
+    border: 7px solid #fff;
+    box-sizing: border-box;
+  }
+
+  .cerrar {
+    display: block;
+    background: #fff;
+    width: 35px;
+    height: 35px;
+    margin: 15px auto;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+    color: #000;
+    padding: 5px;
+    border-radius: 50%;
+    line-height: 25px;
+  }
+  body {
+    font-size: 20px !important;
+  }
+  .cabeceraCarrito h3 {
+    font-size: 28px;
+    text-align: center;
+  }
+  .cabeceraCarrito2 h3 {
+    font-size: 34px;
+    text-align: center;
+  }
+  .datos-del-lugar h2 {
+        margin-left: 20px;
+    font-size: 80px;
+    margin-top: 116px;
+}
 }
