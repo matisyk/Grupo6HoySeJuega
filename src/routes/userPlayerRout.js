@@ -6,17 +6,17 @@ const userPlayerController = require('../controllers/userPlayerController')
 
 router.get('/', userPlayerController.vistaJugador);
 
-router.get('/profilePlayer', userPlayerController.perfilDeJugador);
-router.post('/profilePlayer', userPlayerController.perfilDeJugador);
+router.get('/perfilDeJugador', userPlayerController.perfilDeJugador);
+router.post('/perfilDeJugador', userPlayerController.perfilDeJugador);
 
-router.get('/shiping', userPlayerController.shiping);
+router.get('/carrito', userPlayerController.shiping);
 
-router.get('/reserveCourt', userPlayerController.reservarCancha);
+router.get('/reservarCancha', userPlayerController.reservarCancha);
 
-router.get('/courtView', userPlayerController.vistaCanchaInfo);
+router.get('/vistaCanchaInfo', userPlayerController.vistaCanchaInfo);
 
-router.get('/chooseCourt', userPlayerController.elegirCancha);
+router.get('/elegirCancha', userPlayerController.elegirCancha);
 
-router.get('/team', userPlayerController.equipo);
+router.get('/equipo', userPlayerController.equipo);
 
 module.exports = router;

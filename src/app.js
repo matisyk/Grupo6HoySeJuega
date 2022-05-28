@@ -109,9 +109,9 @@ console.log('prueba');
 
 //   res.sendFile(path.resolve("src/views/elegirCancha.html"))
 // });
-// app.get('/shiping', (req, res) => {
+// app.get('/carrito', (req, res) => {
 
-//   res.sendFile(path.resolve("src/views/shiping.html"))
+//   res.sendFile(path.resolve("src/views/carrito.html"))
 // });
 // app.get('/reservaCancha', (req, res) => {
 

@@ -12,7 +12,7 @@ const userPlayerController = {
 
   shiping: (req, res) => {
 
-    res.render("partial/userPlayer/shiping")
+    res.render("partial/userPlayer/carrito")
   },
   reservarCancha: (req, res) => {
 

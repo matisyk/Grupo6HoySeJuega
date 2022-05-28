@@ -46,7 +46,7 @@ https://www.gradadiez.com/liga-santander/alineaciones/mi-equipo/#iBC_MyTeamBlock
 https://alquilatucancha.com/
 
 Por su estetica:
-https://www.sporteasy.net/es/teams/sports/football_5/ 
+https://www.sporteasy.net/es/equipos/sports/football_5/ 
 
 Por el armado de equipos:
 https://app-sorteos.com/es/apps/sortear-grupos-online
