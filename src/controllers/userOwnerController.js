@@ -34,6 +34,6 @@ const userOwnerController = {
   
         res.render("partial/userOwner/detalle")
       },
-  }
+}
   
   module.exports = userOwnerController
