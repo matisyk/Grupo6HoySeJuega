@@ -25,6 +25,9 @@ app.use('/login', loginRouter);
 const registerRouter = require('./routes/registerRout');
 app.use('/register', registerRouter);
 
+const registerRouter2 = require('./routes/productsRegisterOwner');
+app.use('/register', registerRouter2);
+
 // userOwner
 const userOwnerRouter = require('./routes/userOwnerRout');
 app.use('/userOwner', userOwnerRouter);

@@ -1,9 +1,9 @@
 const registerController = {
 
-  formularioDatosCancha: (req, res) => {
+  // formularioDatosCancha: (req, res) => {
 
-    res.render("partial/register/formularioDatosCancha")
-  },
+    // res.render("partial/register/formularioDatosCancha")
+  // },
 
   formularioDatosJugador: (req, res) => {
 
