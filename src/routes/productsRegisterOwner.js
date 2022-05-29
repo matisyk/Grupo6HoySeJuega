@@ -30,14 +30,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage: storage })
 
 
-/*** GET ALL PRODUCTS ***/ 
+/*** CREATE ONE PRODUCT ***/ 
 
-router.get('/registerOwner', productsController.index); 
-
-// /*** CREATE ONE PRODUCT ***/ 
-
-// router.get('/create', productsController.create); 
-// router.post('/create', upload.any(), productsController.store); 
+router.get('/registerOwner', productsController.create); 
+router.post('/registerOwner', upload.any("img-cancha"), productsController.store); 
 
 
 // /*** GET ONE PRODUCT ***/ 

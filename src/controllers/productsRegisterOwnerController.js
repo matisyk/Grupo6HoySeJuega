@@ -7,12 +7,6 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
-	// Root - Show all products
-	index: (req, res) => {
-		
-		res.render("partial/register/formularioDatosCancha")
-
-	},
 
     // Detail - Detail from one product
 	detalle: (req, res) => {
@@ -27,18 +21,18 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 
-		res.render("product-create-form")
+		res.render("partial/register/formularioDatosCancha")
 
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
 
-		let image
+		let image;
 		if(req.files[0] != undefined){
-			image = req.files[0].filename
+			image = req.files[0].filename;
 		}else{
-			image = "default-image.png"
+			image = "estrella-gris.png";
 		}
 
 		let newProduct = {
@@ -47,11 +41,11 @@ const controller = {
 			image: image
 		}
 
-		products.push(newProduct)
+		products.push(newProduct);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 		
-		res.redirect("/products")
+		res.redirect("/userOwner/vistaCancha");
 
 	},
 
