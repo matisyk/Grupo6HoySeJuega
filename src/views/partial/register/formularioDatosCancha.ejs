@@ -2,9 +2,9 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Formulario de datos</title>
 
@@ -13,20 +13,19 @@
 	======================================-->
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/css/formularioDatosJugador.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/css/formularioDatosCancha.css" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Kalam&family=Roboto&display=swap"
-    rel="stylesheet">
-
+    rel="stylesheet" />
 </head>
 
 <body>
   <h1>Registro de Cancha</h1>
-  <h6>Todo los datos del formulario son de caracter obligatorio </h6>
+  <h6>Todo los datos del formulario son de caracter obligatorio</h6>
   <div class="formulario-div">
     <form class="div1" method="post">
       <!--=====================================-->
@@ -34,34 +33,35 @@
         <div class="input-group">
           <div>
             <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="registroNombre">
+            <input type="text" class="form-control" id="nombre" name="registroNombre" />
           </div>
           <div class="entre-divs">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="registroApellido">
+            <input type="text" class="form-control" id="apellido" name="registroApellido" />
           </div>
           <div class="entre-divs2">
             <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="registroTelefono">
+            <input type="number" class="form-control" id="telefono" name="registroTelefono" />
           </div>
           <div class="entre-divs3">
             <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="registroTelefono2">
+            <input type="number" class="form-control" id="telefono2" name="registroTelefono2" />
           </div>
         </div>
       </div>
     </form>
   </div>
-  <br>
+  <br />
   <div class="formulario-div2">
-    <form class="div1" action="/userOwner/vistaCancha" method="post">
+    <form class="div2" action="/userOwner/vistaCancha" method="post">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
             <div>
               <label for="nombreCancha">Nombre del lugar: </label>
-              <input type="text" class="form-control" id="nombreCancha" name="registroNombreCancha">
+              <input type="text" class="form-control" id="nombreCancha" name="registroNombreCancha" />
             </div>
+            <br>
             <label for="deporte">Deporte:</label>
             <div>
               <select name="posicion" id="deporte" name="registroDeDeporte">
@@ -80,38 +80,102 @@
           </div>
           <div class="entre-divs">
             <label for="ubicacionJ">Dirección:</label>
-            <input type="text" class="form-control" id="ubicacionJ" name="registroUbicacionJ">
+            <input type="text" class="form-control" id="ubicacionJ" name="registroUbicacionJ" />
           </div>
         </div>
       </div>
+      <br>
       <div class="form-group">
         <div class="input-group">
           <div>
             <div class="entre-divs">
-              <label for="funcionalidades" name="funcionalidades">Funcionalidades Extras:</label>
-
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Iluminación Nocturna</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Estacionamiento</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Wifi</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Vestuarios</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Duchas</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Parrilla</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Quincho</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Heladeras</label>
-              <label for="funcionalidades"><input name="funcionalidades" type="checkbox">Parlantes</label>
+              <label for="funcionalidades" name="funcionalidades">Funcionalidades Extras:</label><br /><br>
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Iluminación
+                Nocturna</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Estacionamiento</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Wifi</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Vestuarios</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Duchas</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Parrilla</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Quincho</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Grabación de partidos</label><br />
+              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
+                  type="checkbox" /> Seguridad</label><br />
             </div>
-            <div><label for="valor">Valor:</label><input type="text" class="entre-divs"></div>
-            <div><label for="medios-de-pago" name="medios-de-pago">Medios de pago aceptados:</label>
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Transferencia Bancaria</label>
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Mercado Pago</label>
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Modo</label>
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago">Efectivo</label>
+            <br>
+            <br>
+            <div>
+              <label for="medios-de-pago" name="medios-de-pago">Medios de pago aceptados:</label>
+              <br>
+              <br>
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" /> Transferencia
+                Bancaria</label>
+              <br />
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" />  Mercado
+                Pago
+              </label>
+              <br />
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" /> Modo</label><br />
+              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" /> Efectivo</label>
             </div>
             <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la cancha: <input type="file" name="img-cancha" accept=".jpg"
-                  multiple></label>
-
+              <label for="img-cancha">Cargar imágenes de la cancha:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
             </div>
+            <br>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes de la cancha:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+            </div>
+            <br>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes de la cancha:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+            </div>
+            <br>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes de la parrilla:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+            </div>
+            <br>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes de la parrilla:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+            </div>
+            <br>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes de la parrilla:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+            </div>
+            <br>
+            <div class="img-cancha">
+              <label for="img-cancha">Cargar imágenes extras del lugar:
+                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+            </div>
+            <br>
+             <div class="img-cancha">
+               <label for="img-cancha">Cargar imágenes extras del lugar:
+                 <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+             </div>
+             <br>
+              <div class="img-cancha">
+                <label for="img-cancha">Cargar imágenes extras del lugar:
+                  <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+              </div>
+              <br>
+               <div class="img-cancha">
+                 <label for="img-cancha">Cargar imágenes extras del lugar:
+                   <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
+               </div>
+               <br>
           </div>
           <div class="entre-divs9">
             <button>
@@ -130,18 +194,19 @@
         </div>
       </div>
     </form>
-    <br>
-    <br>
+    <br />
+    <br />
     <div class="container">
       <div>
-          <a href="/register"><button class="volver">Volver</button></a>
-        </div>
-        <br>
-        <br>
-        <div class="alert alert-success divAlerta">¡Gracias por registrarse!
-        </div>
-  </div>
+        <a href="/register"><button class="volver">Volver</button></a>
+      </div>
+      <br />
+      <br />
+      <div class="alert alert-success divAlerta">
+        ¡Gracias por registrarse!
+      </div>
     </div>
-    
-
+  </div>
 </body>
+
+</html>
