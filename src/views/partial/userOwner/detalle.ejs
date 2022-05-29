@@ -8,8 +8,10 @@
 </head>
 <body>
     <%- include('./headerOwner.ejs') %>
+    
     <img src="/images/products/<%= product.imagenCancha %>" alt="product image">
     <h2>Nombre del lugar: <%= product.nombreDelLugar %></h2>
     <h4>Direccion:<%= product.direccion %></h4>
+    <p>Deportes:</p><%= product.deporte1 %>
 </body>
 </html>
