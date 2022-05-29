@@ -1,13 +1,13 @@
 body{
   font-family: "Bangers", cursive;
+  background-image: url('/img/probando-fondo-2.png');
 }
 
 h1 {
   text-align: center;
-  margin: 15px;
-  margin-top: 50px;
+  margin: 50px;
   font-size: 50px;
-  color: rgb(5, 44, 173)
+  color: #ebebeb
 }
 h6 {
   color: red;
@@ -18,23 +18,14 @@ h6 {
 }
 
 .formulario-div {
-  display: inline-block;
-  flex-direction: row;
-  width: 90%;
-  padding-left: 90px;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  width: 70%;
   font-size: 20px;
+  margin: auto;
 }
 .formulario-div2 {
-  display: inline-block;
-  flex-direction: row;
-  width: 90%;
-  padding-left: 90px;
-  justify-content: space-between;
-  padding-bottom: 60px;
+  width: 70%;
   font-size: 20px;
+  margin: auto;
 }
 .div1 {
   padding: 20px;
