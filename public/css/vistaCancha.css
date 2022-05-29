@@ -34,6 +34,7 @@ h1{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 .datos-del-lugar h2{
@@ -63,6 +64,19 @@ h1{
   text-decoration: none;
 color: #ebebeb;}
 
+.boton-editar-superior{
+  color: #ebebeb;
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  padding: 0.3em 0.5em;
+  font-size: 20px;
+}
+
+.boton-editar-superior:hover{
+  background: rgba(106, 142, 164, 0.2);
+  border-radius: 14px;
+}
 
 .detalle2{
   margin-top: 10px
@@ -350,11 +364,11 @@ button.boton-eliminar:hover{
   border-radius: 14px;
 }
 
-.tarjeta-esc:hover .boton-editar{
+.tarjeta:hover .boton-editar{
   visibility: visible;
 }
 
-.tarjeta-esc:hover .boton-eliminar{
+.tarjeta:hover .boton-eliminar{
   visibility: visible;
 }
 

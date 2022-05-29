@@ -29,6 +29,11 @@ const userOwnerController = {
   
         res.render("partial/userOwner/vistaCancha")
       },
+
+      detalle: (req, res) => {
+  
+        res.render("partial/userOwner/detalle")
+      },
   }
   
   module.exports = userOwnerController
