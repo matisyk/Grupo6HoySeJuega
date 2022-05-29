@@ -34,10 +34,9 @@ app.use('/userOwner', userOwnerRouter);
 const userPlayerRouter = require('./routes/userPlayerRout');
 app.use('/userPlayer', userPlayerRouter);
 
-const SobreNosotrosRouter = require('./routes/userPlayerRout');
-app.use('/SobreNosotrosPlayer', SobreNosotrosRouter);
+const sobreNosotrosRouter = require('./routes/sobreNosotrosRout');
+app.use('/sobreNosotros', sobreNosotrosRouter);
 
-console.log('prueba');
 
 // Metodos get
 // app.get('/', (req, res) => {

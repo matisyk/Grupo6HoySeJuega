@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 
 
-const homeController = require('../controllers/sobreNosotrosController')
+const sobreNosotrosController = require('../controllers/sobreNosotrosController')
 
 router.get('/', sobreNosotrosController.sobreNosotros);
 

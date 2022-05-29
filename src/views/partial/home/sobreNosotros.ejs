@@ -7,222 +7,316 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Hoy se juega</title>
 
- <!--CSS PROPIOS-->
+  <!--CSS PROPIOS-->
+  <link href="/css/vistaCanchaInfo.css" rel="stylesheet" />
+  <link href="/css/jdSliderVistaCancha.css" rel="stylesheet" />
+  <link href="/css/headerJugador.css" rel="stylesheet" />
+  <link href="/css/footer.css" rel="stylesheet" />
 
+
+  <!-- CSS EXTERNOS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Kalam&family=Roboto&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-  <!--=====================================
-	PLUGINS DE JS
-	======================================-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/bootstraps/plugins/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- PLUGINS DE JS -->
   <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/js/swiffy-slider.min.js" crossorigin="anonymous"
+    defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/swiffy-slider@1.5.3/dist/css/swiffy-slider.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
 </head>
 
-<body style="margin:40px;">
-  <h1>
-    # Grupo6HoySeJuega
-  </h1>
-  <p>
-    Es una pagina web destinada a la reserva de canchas de diferentes deportes.Se pueden crear los perfiles Jugador,
-    Equipo y Cancha.
-  </p>
-  <p>
-    El objetivo es la triangulación de canchas disponibles a equipos y jugadores que tengan la intención de realizar
-    un deporte en equipo como hobby puedan alquilar canchas.
-  </p>
-  <p>
-    El publico al que se apunta es a cualquier persona que quiera facilitar la gestión de reservas de canchas y
-    jugadores.
-  </p>
-  <p>
-    Perfil Jugador: debe registrarse y especificar:
-  </p>
-  <ul>
-    <li>
-      Nombre, apellido y edad
-    </li>
-    <li>
-      Deportes de interés
-    </li>
-    <li>
-      Telefono de contacto y de emergencia (información que solo obtendrá el administrador de la cancha)
-    </li>
-    <li>
-      Dirección de correo electronico
-    </li>
-    <li>
-      Posición de preferencia
-    </li>
-    <li>
-      Foto
-    </li>
-    <li>
-      Ubicación preferida
-    </li>
-    <li>
-      Disponibilidad horaria
-    </li>
-    <li>
-      Pertenencia a algún equipo
-    </li>
-    <li>
-      Puede ser capitán de un solo equipo
-    </li>
-    <li>
-      Puede unirse a los equipos que desee.
-    </li>
-    <li>
-      Se debe abonar por cada reserva en forma proporcional. En caso de que la reserva ya este realizada por el equipo,
-      el pago irá directamente al capitán del mismo. En caso de que no esta hecha, cada miembro abonará en el momento de
-      la reserva.
-    </li>
-    <li>
-      Autonivelación (Bajo - Intermedio - Alto)
-    </li>
-    <li>
-      Puede puntuar a un equipo
-    </li>
-  </ul>
-  <p>
-    Perfil Cancha: debe registrarse y especificar:
-  </p>
-  <ul>
-    <li>
-      Nombre de la cancha
-    </li>
-    <li>
-      Ubicación
-    </li>
-    <li>
-      Cantidad de canchas
-    </li>
-    <li>
-      Especificar los medios de pago aceptados
-    </li>
-    <li>
-      Funcionalidades extras (Parrilla, comedor, buffet)
-    </li>
-    <li>
-      Capacidad de cada cancha (Cantidad de Jugadores)
-    </li>
-    <li>
-      Debe abonar una membresia mensual
-    </li>
-    <li>
-      Puede puntuar equipos en base a sus conductas (Esta calificación solo será visible a otros perfiles Cancha)
-    </li>
-    <li>
-      Puede aceptar o declinar reservas.
-    </li>
-  </ul>
-  <p>
-    Perfil Equipo:
-  </p>
-  <li>
-    Debe tener un capitan que será el encargado de crear el equipo y de realizar la reserva
-  </li>
-  <li>
-    Debe especificar cantidad de miembros del equipo (Poder mostrar los integrantes al ingresar allí)
-  </li>
-  <li>
-    Capacidad de convocatoria de miembros
-  </li>
-  <li>
-    Ubicación preferida
-  </li>
-  <li>
-    El perfil equipo mostrará automaticamente un rango de edad de los miembros
-  </li>
-  <li>
-    Puede puntuar la cancha / otros equipos / jugadores
-  </li>
-  <p>
-    Referencias:
-  </p>
-  <ul>
-    <p>
-      Por la funcionalidad/tematica:
-    </p>
-    <li>
-      http://www.footalist.es/crear-mi-equipo/
-      https://www.gradadiez.com/liga-santander/alineaciones/mi-equipo/#iBC_MyTeamBlockFormation
-      https://alquilatucancha.com/
-    </li>
-    <br>
-    <p>
-      Por su estetica:
-    </p>
-    <li>
-      https://www.sporteasy.net/es/equipos/sports/football_5/
-    </li>
-    <br>
-    <p>
-      Por el armado de equipos:
-    </p>
-    <li>
-      https://app-sorteos.com/es/apps/sortear-grupos-online
-    </li>
-    <br>
-    <p>
-      Por el sistema de reservas:
-    </p>
-    <li>
-      https://www.booking.com/
-      https://e-desk.net/
-    </li>
-  </ul>
-  <br>
-  <p>
-    Integrantes del equipo:
-  </p>
-  <ul>
-    <p>
-      Franco García:
-    </p>
-    <li>
-      -> Tengo 28 años, soy de Mendoza, pero actualmente vivo en Bs As y trabajoo en el casino de Tigre, en el área
-      técnica en la video vigilancia y seguridad.
-      -> Me gusta aprender y aplicar ese conocimiento en lo que quiero formular. Suelo ser persistent y tratar de
-      cumplir mis proyectos, con subidas y bajadas, como dijo Yoda: "Do it or not, but dont try"
-      -> Respecto a la programación me gusta el backend y lo que tiene qu ver con la experiencia del usuario (UX).
-    </li>
-    <br>
-    <p>
-      Clara Dardanelli:
-    </p>
-    <li>
-      -> Tengo 27 años, soy de CABA.
-      -> Soy muy detallista, y me gusta entender la lógica de las cosas. La verdad que facilmente me "bajoneo" pero si
-      me gusta tirar para adelante y me siento bien cuando las cosas salen.
-      -> Siempre me dio curiosidad explorar más la parte de diseño y lo que sería el front end, quizás algún día haga
-      algo más sobre eso, pero por el momento quisiera ver todo el panorama ya que me veo reflejada en cosas de ambas
-      tareas.
-    </li>
-    <br>
-    <p>
-      Camila Borzillo
-    </p>
-    <li>
-      -> Tengo 24 años, soy de CABA.
-      -> No tengo experiencia previa en programación, pero si en analisis de datos. Pero creo que me gusta más el front
-      end y lo relacionado al UX.
-      -> Siempre estoy interesada en aprender cosas nuevas y soy responsable con las actividades que hago.
-    </li>
-    <br>
-    <p>
-      Jorge Mejias:
-    </p>
-    <li>
-      -> Soy de Venezuela, actualmente vivo en Argentina (Capital Federal) y trabajo en una estacion de servicio Shell
-      (Experto). Tengo 24 años y soy TSU en Ing Informatica.
-      -> Siempre he sido afin a todas las areas de la informatica he estudiado un poco de todo pero lo que mas me
-      apasiona y por lo que estoy aca es la programacion.
-      -> Mi objetivo en este curso es conseguir las herramientas para desarrollarme en el ambito profesional y poder
-      ejercer.
-    </li>
-  </ul>
+<body>
+  <header class="main-header">
+    <div class="menu">
+      <div class="copy-header">
+        <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
+        <a href="#" class="menu-hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+        <div class="menu-cont2">
+          <a class="txtNav1" href="/UserPlayer/perfilDeJugador">Mi perfil</a>
+          <a class="txtNav1" href="/UserPlayer/equipo">Mi equipo</a>
+          <a class="txtNav4" href="#"> <i class="fa-solid fa-person-running"></i> Nos falta uno</a>
+          <a class="txtNav5" href="/UserPlayer/carrito">
+            <i class="fa-solid fa-cart-shopping"></i> Mi reserva
+          </a>
+          <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
+          <a class="txtNav6" href="/"><i class="fa-solid fa-arrow-right-from-bracket"></i> Chau
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+    <div class="tarjetas1">
+      <div class="tarjeta">
+        <div class="blob"></div>
+        <span class="imgg"><img src="/img/nosotros/clara.png" alt=""></span>
+        <h2>Clara Dardanelli</h2>
+        <p>Hola soy </p>
+
+      </div>
+
+      <div class="tarjeta">
+        <div class="blob"></div>
+        <span class="imgg">
+          <img src="/img/nosotros/franco.jpg" alt="">
+        </span>
+        <h2>Franco García</h2>
+        <p>Hola soy </p>
+      </div>
+
+      <div class="tarjeta">
+        <div class="blob"></div>
+        <span class="imgg">
+          <img src="/img/nosotros/mati.jpg" alt="">
+        </span>
+        <h2>Matias</h2>
+        <p>Hola soy </p>
+      </div>
+    </div>
+    <div style="padding: 50px; color:black">
+      <h3>
+        # Grupo6HoySeJuega
+      </h3>
+      <h3>
+        Es una pagina web destinada a la reserva de canchas de diferentes deportes.Se pueden crear los perfiles
+        Jugador,
+        Equipo y Cancha.
+      </h3>
+      <h3>
+        El objetivo es la triangulación de canchas disponibles a equipos y jugadores que tengan la intención de
+        realizar
+        un deporte en equipo como hobby puedan alquilar canchas.
+      </h3>
+      <h3>
+        El publico al que se apunta es a cualquier persona que quiera facilitar la gestión de reservas de canchas y
+        jugadores.
+      </h3>
+      <h3>
+        Perfil Jugador: debe registrarse y especificar:
+      </h3>
+      <ul>
+        <li>
+          Nombre, apellido y edad
+        </li>
+        <li>
+          Deportes de interés
+        </li>
+        <li>
+          Telefono de contacto y de emergencia (información que solo obtendrá el administrador de la cancha)
+        </li>
+        <li>
+          Dirección de correo electronico
+        </li>
+        <li>
+          Posición de preferencia
+        </li>
+        <li>
+          Foto
+        </li>
+        <li>
+          Ubicación preferida
+        </li>
+        <li>
+          Disponibilidad horaria
+        </li>
+        <li>
+          Pertenencia a algún equipo
+        </li>
+        <li>
+          Puede ser capitán de un solo equipo
+        </li>
+        <li>
+          Puede unirse a los equipos que desee.
+        </li>
+        <li>
+          Se debe abonar por cada reserva en forma proporcional. En caso de que la reserva ya este realizada por el
+          equipo,
+          el pago irá directamente al capitán del mismo. En caso de que no esta hecha, cada miembro abonará en el
+          momento de
+          la reserva.
+        </li>
+        <li>
+          Autonivelación (Bajo - Intermedio - Alto)
+        </li>
+        <li>
+          Puede puntuar a un equipo
+        </li>
+      </ul>
+      <p>
+        Perfil Cancha: debe registrarse y especificar:
+      </p>
+      <ul>
+        <li>
+          Nombre de la cancha
+        </li>
+        <li>
+          Ubicación
+        </li>
+        <li>
+          Cantidad de canchas
+        </li>
+        <li>
+          Especificar los medios de pago aceptados
+        </li>
+        <li>
+          Funcionalidades extras (Parrilla, comedor, buffet)
+        </li>
+        <li>
+          Capacidad de cada cancha (Cantidad de Jugadores)
+        </li>
+        <li>
+          Debe abonar una membresia mensual
+        </li>
+        <li>
+          Puede puntuar equipos en base a sus conductas (Esta calificación solo será visible a otros perfiles Cancha)
+        </li>
+        <li>
+          Puede aceptar o declinar reservas.
+        </li>
+      </ul>
+      <p>
+        Perfil Equipo:
+      </p>
+      <li>
+        Debe tener un capitan que será el encargado de crear el equipo y de realizar la reserva
+      </li>
+      <li>
+        Debe especificar cantidad de miembros del equipo (Poder mostrar los integrantes al ingresar allí)
+      </li>
+      <li>
+        Capacidad de convocatoria de miembros
+      </li>
+      <li>
+        Ubicación preferida
+      </li>
+      <li>
+        El perfil equipo mostrará automaticamente un rango de edad de los miembros
+      </li>
+      <li>
+        Puede puntuar la cancha / otros equipos / jugadores
+      </li>
+      <p>
+        Referencias:
+      </p>
+      <ul>
+        <p>
+          Por la funcionalidad/tematica:
+        </p>
+        <li>
+          http://www.footalist.es/crear-mi-equipo/
+          https://www.gradadiez.com/liga-santander/alineaciones/mi-equipo/#iBC_MyTeamBlockFormation
+          https://alquilatucancha.com/
+        </li>
+        <br>
+        <p>
+          Por su estetica:
+        </p>
+        <li>
+          https://www.sporteasy.net/es/equipos/sports/football_5/
+        </li>
+        <br>
+        <p>
+          Por el armado de equipos:
+        </p>
+        <li>
+          https://app-sorteos.com/es/apps/sortear-grupos-online
+        </li>
+        <br>
+        <p>
+          Por el sistema de reservas:
+        </p>
+        <li>
+          https://www.booking.com/
+          https://e-desk.net/
+        </li>
+      </ul>
+      <br>
+      <p>
+        Integrantes del equipo:
+      </p>
+      <ul>
+        <p>
+          Franco García:
+        </p>
+        <li>
+          -> Tengo 28 años, soy de Mendoza, pero actualmente vivo en Bs As y trabajoo en el casino de Tigre, en el
+          área
+          técnica en la video vigilancia y seguridad.
+          -> Me gusta aprender y aplicar ese conocimiento en lo que quiero formular. Suelo ser persistent y tratar de
+          cumplir mis proyectos, con subidas y bajadas, como dijo Yoda: "Do it or not, but dont try"
+          -> Respecto a la programación me gusta el backend y lo que tiene qu ver con la experiencia del usuario (UX).
+        </li>
+        <br>
+        <p>
+          Clara Dardanelli:
+        </p>
+        <li>
+          -> Tengo 27 años, soy de CABA.
+          -> Soy muy detallista, y me gusta entender la lógica de las cosas. La verdad que facilmente me "bajoneo"
+          pero
+          si
+          me gusta tirar para adelante y me siento bien cuando las cosas salen.
+          -> Siempre me dio curiosidad explorar más la parte de diseño y lo que sería el front end, quizás algún día
+          haga
+          algo más sobre eso, pero por el momento quisiera ver todo el panorama ya que me veo reflejada en cosas de
+          ambas
+          tareas.
+        </li>
+        <br>
+        <p>
+          Camila Borzillo
+        </p>
+        <li>
+          -> Tengo 24 años, soy de CABA.
+          -> No tengo experiencia previa en programación, pero si en analisis de datos. Pero creo que me gusta más el
+          front
+          end y lo relacionado al UX.
+          -> Siempre estoy interesada en aprender cosas nuevas y soy responsable con las actividades que hago.
+        </li>
+        <br>
+        <p>
+          Jorge Mejias:
+        </p>
+        <li>
+          -> Soy de Venezuela, actualmente vivo en Argentina (Capital Federal) y trabajo en una estacion de servicio
+          Shell
+          (Experto). Tengo 24 años y soy TSU en Ing Informatica.
+          -> Siempre he sido afin a todas las areas de la informatica he estudiado un poco de todo pero lo que mas me
+          apasiona y por lo que estoy aca es la programacion.
+          -> Mi objetivo en este curso es conseguir las herramientas para desarrollarme en el ambito profesional y
+          poder
+          ejercer.
+        </li>
+      </ul>
+    </div>
+  </main>
 </body>
 
 </html>
