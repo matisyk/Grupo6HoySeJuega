@@ -13,6 +13,6 @@ router.get('/registrarEscuelita', userOwnerController.registrarEscuelita);
 router.get('/reservaCancha', userOwnerController.reservaCancha);
 router.get('/vistaCancha', userOwnerController.vistaCancha);
 router.post('/vistaCancha', userOwnerController.vistaCancha);
-router.get('/detalle/:id', userOwnerController.detalle);
+router.get('/editarCancha/:id/', userOwnerController.edit); 
 
 module.exports = router;

@@ -13,6 +13,9 @@ app.use(express.static(publicPath));
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('src/views'))
 
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'))
+
 // home
 const homeRouter = require('./routes/homeRout');
 app.use('/', homeRouter);
