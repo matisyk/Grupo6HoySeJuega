@@ -1,44 +1,28 @@
 body{
   font-family: "Bangers", cursive;
+  background-image: url('/img/probando-fondo-2.png');
 }
 
 h1 {
   text-align: center;
-  margin: 15px;
-  margin-top: 50px;
+  margin: 50px;
   font-size: 50px;
-  color: rgb(5, 44, 173)
-}
-h6 {
-  color: red;
-  font-size: 15px;
-  margin-top: 60px;
-  text-align: center;
-  text-decoration: underline;
+  color: #ebebeb
 }
 
 .formulario-div {
-  display: inline-block;
-  flex-direction: row;
-  width: 90%;
-  padding-left: 90px;
-  justify-content: space-between;
-  padding-top: 20px;
-  padding-bottom: 10px;
+  margin: auto;
+  width: 45%;
   font-size: 20px;
 }
 .formulario-div2 {
-  display: inline-block;
-  flex-direction: row;
-  width: 90%;
-  padding-left: 90px;
-  justify-content: space-between;
-  padding-bottom: 60px;
+  margin: auto;
+  width: 45%;
   font-size: 20px;
 }
 .div1 {
   padding: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   background: #ffffff;
   border-radius: 20px;
   box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
@@ -104,7 +88,7 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-left: 300px;
+  margin-left: 350px;
   margin-top: 20px;
 }
 
@@ -142,21 +126,28 @@ margin-bottom: 5px;
 
 /* Boton de enviar datos*/
 button {
-  font-family: inherit;
-    font-size: 30px;
+    font-family: inherit;
+    font-size: 25px;
     text-align: center;
     background: rgb(14, 84, 225);
     color: rgb(0, 0, 0);
-    padding: 0.7em 1em;
-    padding-left: 0.9em;
+    padding: 0.5em 0.5em;
+   
     display: flex;
     align-items: center;
-    border: solid 1px black;
     border-radius: 16px;
     overflow: hidden;
     transition: all 0.6s;
     width: 50%;
     height: 60%;
+}
+
+.volver{
+  background-color: rgba(255, 0, 0, 0.721);
+  margin-left: 80px;
+  align-items: center;
+  font-size: 25px;
+  width: 50%;
 }
 
 button span {
@@ -195,11 +186,5 @@ button:active {
     transform: translateY(-0.1em);
   }
 }
-.volver{
-  background-color: rgba(255, 0, 0, 0.721);
-  margin-left: 100px;
-  align-items: center;
-  font-size: 30px;
-  width: 55%;
-}
+
 
