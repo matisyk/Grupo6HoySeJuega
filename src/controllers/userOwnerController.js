@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-const productsFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const ownersFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
+const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 
 const userOwnerController = {
 
@@ -31,22 +31,14 @@ const userOwnerController = {
       },
 
       vistaCancha: (req, res) => {
-  
+        let id = req.params.id
+        let userOwner = owners.find(userOwner => userOwner.id == id)
         res.render("partial/userOwner/vistaCancha")
       },
 
       detalle: (req, res) => {
   
         res.render("partial/userOwner/detalle")
-      },
-
-      edit: (req, res) => {
-		
-        let id = req.params.id
-        let product = products.find(product => product.id == id)
-    
-        res.render("partial/userOwner/editarCancha", {product})
-    
       },
 }
   

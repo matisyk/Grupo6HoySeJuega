@@ -11,8 +11,8 @@ router.get('/crearTorneo', userOwnerController.crearTorneo);
 router.get('/registrarCancha', userOwnerController.registrarCancha);
 router.get('/registrarEscuelita', userOwnerController.registrarEscuelita);
 router.get('/reservaCancha', userOwnerController.reservaCancha);
-router.get('/vistaCancha', userOwnerController.vistaCancha);
+router.get('/vistaCancha/:id', userOwnerController.vistaCancha);
 router.post('/vistaCancha', userOwnerController.vistaCancha);
-router.get('/editarCancha/:id/', userOwnerController.edit); 
+
 
 module.exports = router;

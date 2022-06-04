@@ -15,7 +15,7 @@ const validateRegister =[
     body ('apellido').notEmpty().withMessage('Debe completar el campo "Apellido"')
 ]
 
-router.get('/editOwnerForm', registerController.editOwnerForm);
+router.get('/editOwnerForm/:id/', registerController.editOwnerForm);
 
 router.get('/editPlayerForm', registerController.editPlayerForm);
 
