@@ -31,16 +31,24 @@
         <ol>
           <li class="detalle1">
             <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
-              <i class="fa-solid fa-location-dot"></i> <span>Almte. Brown 371, Tigre. Buenos Aires</span>
+              <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.direccion %></span>
             </a>
           </li>
           <li class="detalle2">
-            <i class="fa-solid fa-shower"></i> <span><%= userOwner.servicios4 %></span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> SI</span>
+            <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.vestuarios%> </span>
+          </li>
+          <li class="detalle2">
+            <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.duchas%> </span>
           </li>
           <li class="detalle2">
             <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> SI</span>
+                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.parrilla%></span>
+          </li>
+          <li class="detalle2">
+            <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quincho%></span>
           </li>
         </ol>
       </div>
@@ -48,20 +56,38 @@
         <ol>
           <li class="detalle2">
             <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> SI</span>
+                class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.estacionamiento%></span>
           </li>
           <li class="detalle2">
-            <i class="fa-solid fa-credit-card"></i><span> Medios de pagos </span><span></span> <i
-              class="fa-solid fa-arrow-right-long"></i></span><span> Tarjeta de credito - efectivo - Mercado
-              pago</span>
+            <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.wifi%></span>
           </li>
           <li class="detalle2">
-            <i class="fa-solid fa-video"></i><span> Grabación de partidos </span><span><i
-                class="fa-solid fa-arrow-right-long"></i></span> </span><span> SI</span>
+            <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.iluminacion%></span>
+            </li>
+                <li class="detalle2">
+                  <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
+                      class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.transferencia%></span>
+                </li>
+                <li class="detalle2">
+                  <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
+                      class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.mercadoPago%></span>
+                </li>
+                <li class="detalle2">
+                  <span><i class="fa-solid fa-mobile-retro"></i> Modo </span><span> <i
+                      class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.modo%></span>
+                </li>
+                <li class="detalle2">
+                  <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
+                      class="fa-solid fa-arrow-right-long"></i></span><span>  <%= userOwner.efectivo%></span>
+                </li>
+            
           </li>
+          
         </ol>
       </div>
-      <button class="boton-editar-superior"><a href="../register/editOwnerForm/<%= userOwner.id%>"><i class="fa-solid fa-pencil"></i></a></button>
+      <button class="boton-editar-superior"><a href='../../register/editOwnerForm/<%= userOwner.id%>'><i class="fa-solid fa-pencil"></i></a></button>
     </div>
 
     <h2>Tus canchas:</h2> 

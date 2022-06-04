@@ -33,7 +33,7 @@ const userOwnerController = {
       vistaCancha: (req, res) => {
         let id = req.params.id
         let userOwner = owners.find(userOwner => userOwner.id == id)
-        res.render("partial/userOwner/vistaCancha")
+        res.render("partial/userOwner/vistaCancha", {userOwner})
       },
 
       detalle: (req, res) => {
