@@ -223,3 +223,9 @@ button:active {
   right:-350px;
   bottom: 800px;
 }
+.img-cancha2{
+  position: relative;
+    right: -500px;
+    bottom: 896px;
+    width: 200px;
+}
