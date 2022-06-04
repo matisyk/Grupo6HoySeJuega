@@ -105,8 +105,8 @@ h1 {
     height: 50px;
     width: 310px;
     position: relative;
-    top: 700px;
-    left: -150px;
+    top:-700px;
+    left: 400px;
 }
 
 .divCargar{

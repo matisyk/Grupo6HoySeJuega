@@ -27,8 +27,8 @@ body {
   align-items: center;
   margin: 30px auto;
   font-size: 20px;
-  width: 430px;
-  height: 600px;
+  width: 470px;
+  height: 340px;
   padding: 20px;
   background: #edebeb;
   border: 2px solid rgba(0, 0, 0, 0.657);
@@ -41,7 +41,7 @@ body {
 }
 
 .contenedor-opciones div ul li a {
-  font-size: 10px;
+  font-size: 18px;
   width: 70%;
   display: flex;
   flex-direction: row;
@@ -52,10 +52,14 @@ body {
   margin-top: 20px;
 }
 .opcion1 {
-  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 .opcion2 {
-  margin-right: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 body {
   background-image: url(../img/fondo2.jpg);
@@ -67,7 +71,7 @@ body {
 }
 /* From uiverse.io by @alexruix */
 .card {
-  width: 300px;
+  width: 400px;
   padding: 1.9rem 1.2rem;
   text-align: center;
   background: #2a2b38;
@@ -144,4 +148,10 @@ body {
 
 .btn-link:hover {
   color: #ffeba7;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #0c5460 !important;
 }
