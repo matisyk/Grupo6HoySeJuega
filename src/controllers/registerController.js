@@ -8,27 +8,29 @@ const registerController = {
 
   formularioDatosCancha: (req, res) => {
 
-  res.render("partial/register/formularioDatosCancha")
- },
+    res.render("partial/register/formularioDatosCancha")
+  },
 
   formularioDatosJugador: (req, res) => {
 
     res.render("partial/register/formularioDatosJugador")
   },
 
-   register: (req, res) => {
+  register: (req, res) => {
 
-     res.render("partial/register/register")
-   },
+    res.render("partial/register/register")
+  },
 
-   editOwnerForm: (req, res) => {
-		let id = req.params.id
-		let userOwner = owners.find(userOwner => userOwner.id == id)
+  editOwnerForm: (req, res) => {
+    let id = req.params.id
+    let userOwner = owners.find(userOwner => userOwner.id == id)
 
-		res.render('partial/register/editOwnerForm', {userOwner})
-	},
+    res.render('partial/register/editOwnerForm', {
+      userOwner
+    })
+  },
 
-   editPlayerForm: (req, res) => {
+  editPlayerForm: (req, res) => {
     res.render('partial/register/editPlayerForm')
   }
 

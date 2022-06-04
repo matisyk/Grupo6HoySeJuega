@@ -1,70 +1,71 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-    text-decoration: none;
-    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url(/img/probando-fondo-2.png);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-  }
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/img/probando-fondo-2.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 /*=============================================
 MAIN
 =============================================*/
-h1{
+h1 {
   font-family: Bangers;
   width: 100px;
 }
 
-.datos-del-lugar{
-    background-color: rgb(22, 24, 30);
-    color: #ebebeb;
-    padding: 100px;
-    margin-bottom: 100px;
-    max-width: 1200px;
-    margin: auto;
-    margin-bottom: 80px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: relative;
-}
-
-.datos-del-lugar h2{
-  margin: 50px 0 50px 50px;
+.datos-del-lugar {
+  background-color: rgb(22, 24, 30);
   color: #ebebeb;
-  width: 25%;
-  font-family: "Bangers", cursive;
+  padding: 100px;
+  margin-bottom: 100px;
+  max-width: 1200px;
+  margin: auto;
+  margin-bottom: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
 }
 
-.datos2-del-lugar{
+.datos-del-lugar h2 {
+  margin: 0;
+  color: #ebebeb;
+  width: 18%;
+  font-family: "Bangers", cursive;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.datos2-del-lugar {
   margin: 15px 20px 0px 20px;
   width: 30%;
-  
 }
-.datos2-del-lugar ol{
+.datos2-del-lugar ol {
   padding-left: 0;
   width: 50%;
 }
 
-.datos3-del-lugar{
+.datos3-del-lugar {
   margin-left: -200px;
   margin-top: 5px;
   width: 30%;
-  
 }
-.datos2-del-lugar ol li a{
+.datos2-del-lugar ol li a {
   text-decoration: none;
-color: #ebebeb;}
+  color: #ebebeb;
+}
 
-.boton-editar-superior{
+.boton-editar-superior {
   color: #ebebeb;
   position: absolute;
   bottom: 50px;
@@ -73,263 +74,258 @@ color: #ebebeb;}
   font-size: 20px;
 }
 
-.boton-editar-superior:hover{
+.boton-editar-superior:hover {
   background: rgba(106, 142, 164, 0.2);
   border-radius: 14px;
 }
 
-.detalle2{
-  margin-top: 10px
+.detalle2 {
+  margin-top: 10px;
 }
-    /* TARJETA */
+/* TARJETA */
 
-  .tarjetas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 50px 200px;
-    background-color: rgba(225, 225, 225, 0.2);
-    border-radius: 10px;
-  }
-    .tarjeta {
-      width: 220px;
-      height: 190px;
-      background: white;
-      border-radius: 10px;
-      text-align: center;
-      transition: all 0.5s;
-      margin: 40px;
-      position: relative;
-    }
-    
-    .tarjeta:hover {
-      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
-    }
-    
-    .tarjeta .blob {
-      height: 10px;
-      width: 75%;
-      border-radius: 0 0 30px 30px;
-      margin: 0 auto;
-      background-color: #4bb8ff;
-      visibility: visible;
-      transition: all 0.3s;
-    }
-    
-    .tarjeta:hover .blob {
-      height: 0;
-    }
-    
-    .tarjeta .img img{
-      display: flex;
-      margin: 30px auto 10px auto;
-      width: 70px;
-      height: 70px;
-      font-size: 11px;
-      justify-content: center;
-      align-items: center;
-      transition: all 0.5s;
-    }
-    
-    .tarjeta:hover .img img{
-      width: 100%;
-      height: 100%;
-      border-radius: 10px 0 0;
-      margin: 0 auto;
-      z-index: 99999;
-    }
-    
-    .tarjeta h3 {
-      padding: 10px 10px;
-      font-size: 25px;
-      transition: all 0.1s;
-      z-index: 99;
-      line-height: 17px;
-      font-family: "Bangers", cursive;
-      text-align: center;
-      
-    }
-    
-    .tarjeta:hover h2 {
-      opacity: 0;
-      width: 100%;
-      position: absolute;
-      transition: all 0.5s;
-    }
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px 200px;
+  background-color: rgba(225, 225, 225, 0.2);
+  border-radius: 10px;
+}
+.tarjeta {
+  width: 220px;
+  height: 190px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.5s;
+  margin: 40px;
+  position: relative;
+}
 
-    .tarjetas-canchas img{
-      border-radius: 50px;
-    }
-    
-    .tarjeta>ul{
-      opacity: 0;
-      transition: all 0.75s;
-      padding-left: 15px;
-      text-align: left;
-      position: absolute;
-      top: 50px;
-    }
-    
-.tarjeta ul li{
+.tarjeta:hover {
+  box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.623);
+}
+
+.tarjeta .blob {
+  height: 10px;
+  width: 75%;
+  border-radius: 0 0 30px 30px;
+  margin: 0 auto;
+  background-color: #4bb8ff;
+  visibility: visible;
+  transition: all 0.3s;
+}
+
+.tarjeta:hover .blob {
+  height: 0;
+}
+
+.tarjeta .img img {
+  display: flex;
+  margin: 30px auto 10px auto;
+  width: 70px;
+  height: 70px;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.tarjeta:hover .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 0 0;
+  margin: 0 auto;
+  z-index: 99999;
+}
+
+.tarjeta h3 {
+  padding: 10px 10px;
+  font-size: 25px;
+  transition: all 0.1s;
+  z-index: 99;
+  line-height: 17px;
+  font-family: "Bangers", cursive;
+  text-align: center;
+}
+
+.tarjeta:hover h2 {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  transition: all 0.5s;
+}
+
+.tarjetas-canchas img {
+  border-radius: 50px;
+}
+
+.tarjeta > ul {
+  opacity: 0;
+  transition: all 0.75s;
+  padding-left: 15px;
+  text-align: left;
+  position: absolute;
+  top: 50px;
+}
+
+.tarjeta ul li {
   font-family: Kalam;
 }
 
-    .tarjeta>ul>svg {
-      padding: 5px;
-    }
-    
-    .tarjeta:hover>ul {
-      
-      opacity: 1;
-      transition: all 0.1s;
-    }
+.tarjeta > ul > svg {
+  padding: 5px;
+}
 
+.tarjeta:hover > ul {
+  opacity: 1;
+  transition: all 0.1s;
+}
 
-.horarios a{
+.horarios a {
   text-decoration: none;
   color: #000000;
   font-family: kalam;
   visibility: none;
 }
 
-.horarios:hover{
+.horarios:hover {
   font-size: 30px;
   visibility: visible;
 }
 
-.tarjeta .img-escuelita{
+.tarjeta .img-escuelita {
   transition: opacity 1s;
 }
 
-.tarjeta:hover .img-escuelita{
-opacity: 0.1;
+.tarjeta:hover .img-escuelita {
+  opacity: 0.1;
 }
 
-.tarjeta-esc{
+.tarjeta-esc {
   transition: all 1s;
 }
 
-.descrip-tarjeta-esc p ul{
+.descrip-tarjeta-esc p ul {
   visibility: hidden;
   margin: 0;
   position: absolute;
-  top:0;
+  top: 0;
   margin-top: 20px;
 }
-.tarjeta:hover .descrip-tarjeta-esc{
+.tarjeta:hover .descrip-tarjeta-esc {
   visibility: visible;
 }
 /* From uiverse.io */
 button {
- position: relative;
- display: inline-block;
- cursor: pointer;
- outline: none;
- border: 0;
- vertical-align: middle;
- text-decoration: none;
- background: transparent;
- padding: 0;
- font-size: inherit;
- font-family: inherit;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 button.learn-more {
- width: 12rem;
- height: auto;
- margin-left: 70px;
- flex-direction: column;
+  width: 12rem;
+  height: auto;
+  margin-left: 70px;
+  flex-direction: column;
 }
 
 button.learn-more .circle {
-     transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-    position: relative;
-    display: block;
-    margin: 0;
-    width: 3rem;
-    height: 3rem;
-    background: #000000;
-    border-radius: 1.625rem;
-    margin-left: 30px;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #000000;
+  border-radius: 1.625rem;
+  margin-left: 30px;
 }
 
 button.learn-more .circle .icon {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: 0;
- bottom: 0;
- margin: auto;
- background: #fff;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
 }
 
 button.learn-more .circle .icon.arrow {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- left: 0.625rem;
- width: 1.125rem;
- height: 0.125rem;
- background: none;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
 }
 
 button.learn-more .circle .icon.arrow::before {
- position: absolute;
- content: "";
- top: -0.29rem;
- right: 0.0625rem;
- width: 0.625rem;
- height: 0.625rem;
- border-top: 0.125rem solid #fff;
- border-right: 0.125rem solid #fff;
- transform: rotate(45deg);
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
 }
 
 button.learn-more .button-text {
- transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
- position: absolute;
- top: -5px;
-    left: 40px;
-    right: 0;
-    bottom: 0;
-    padding: 0.75rem 0;
-    margin: 0 0 0 1.85rem;
-    color: #ffffff;
-    font-weight: 700;
-    line-height: 1.6;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 10px;
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: -5px;
+  left: 40px;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 button:hover .circle {
- width: 100%;
+  width: 100%;
 }
 
 button:hover .circle .icon.arrow {
- background: #fff;
- transform: translate(1rem, 0);
- 
+  background: #fff;
+  transform: translate(1rem, 0);
 }
 
 button:hover .button-text {
- color: #fff;
- font-size: 13px;
- width: 70%;
+  color: #fff;
+  font-size: 13px;
+  width: 70%;
 }
 
-.sin-canchas{
-    text-align:center ;
-    color: #fff;
-    margin: 100px;
+.sin-canchas {
+  text-align: center;
+  color: #fff;
+  margin: 100px;
 }
 
-.tarjeta-esc:hover{
+.tarjeta-esc:hover {
   height: 220px;
   margin-bottom: 0;
 }
 
-p{
-    margin:200px;
+p {
+  margin: 200px;
 }
-
 
 .boton-editar {
   color: rgb(14, 14, 65);
@@ -342,13 +338,13 @@ p{
   padding: 0.3em 0.5em;
 }
 
-.boton-editar:hover{
-  color:#fff;
+.boton-editar:hover {
+  color: #fff;
   background: rgba(23, 56, 76, 0.2);
   border-radius: 14px;
 }
 
-.boton-eliminar{
+.boton-eliminar {
   color: rgb(14, 14, 65);
   padding: 0.3em 0.5em;
   position: absolute;
@@ -358,55 +354,53 @@ p{
   font-size: 20px;
   visibility: hidden;
 }
-button.boton-eliminar:hover{
-  color:red;
+button.boton-eliminar:hover {
+  color: red;
   background: rgba(23, 56, 76, 0.2);
   border-radius: 14px;
 }
 
-.tarjeta:hover .boton-editar{
+.tarjeta:hover .boton-editar {
   visibility: visible;
 }
 
-.tarjeta:hover .boton-eliminar{
+.tarjeta:hover .boton-eliminar {
   visibility: visible;
 }
 
-.tarjeta-esc:hover h3{
-display: flex;
-text-align:start
- 
+.tarjeta-esc:hover h3 {
+  display: flex;
+  text-align: start;
 }
 
-h2{
+h2 {
   font-family: Bangers;
- margin:100px ;
- color: #ebebeb;
- 
+  margin: 100px;
+  color: #ebebeb;
 }
 
-.img .palo-hockey img{
+.img .palo-hockey img {
   padding: 10px;
   background-color: #ebebeb;
   width: 100px;
-  
 }
 
-.clase{
+.clase {
   margin-top: 5px;
 }
 
-.categoria{
+.categoria {
   margin-left: 5px;
   font-size: 15px;
 }
 
-@media (min-width:1200px){
-.datos-del-lugar
- { border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;}
+@media (min-width: 1200px) {
+  .datos-del-lugar {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
 
-  h2{
+  h2 {
     margin-left: 200px;
   }
 }
