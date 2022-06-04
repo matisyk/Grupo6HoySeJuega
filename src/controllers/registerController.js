@@ -15,5 +15,13 @@ const registerController = {
      res.render("partial/register/register")
    },
 
+   editOwnerForm: (req, res) => {
+     res.render('partial/register/editOwnerForm')
+   },
+
+   editPlayerForm: (req, res) => {
+    res.render('partial/register/editPlayerForm')
+  }
+
 }
 module.exports = registerController
