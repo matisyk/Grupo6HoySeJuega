@@ -6,10 +6,10 @@ const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 
 const registerController = {
 
-  // formularioDatosCancha: (req, res) => {
+  formularioDatosCancha: (req, res) => {
 
-    // res.render("partial/register/formularioDatosCancha")
-  // },
+  res.render("partial/register/formularioDatosCancha")
+ },
 
   formularioDatosJugador: (req, res) => {
 
