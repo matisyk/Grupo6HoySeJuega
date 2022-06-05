@@ -38,7 +38,6 @@
   <!-- PLUGINS DE JS -->
   <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="/js/jdSlider.js"></script>
 
 
 </head>
@@ -79,23 +78,30 @@
                 <img src="/img/jugador-home.jpg">
                 <ol>
                   <li>
-                    <h2 class="nombre">Roberto Gómez</h2>
+                    <h2 class="nombre" name="nombre"> <%= userPlayer.nombre %> <span
+                        class="nombre"><%= userPlayer.apellido %></span>
+                    </h2>
                   </li>
                 </ol>
                 <ol2>
                   <li>
-                    <h6 class="edad">Edad: 28</h6>
+                    <h6 class="edad" name="edad">Edad: <span><%= userPlayer.edad %></span></h6>
                   </li>
                   <li>
-                    <h6 class="tel">Telefono: 011-556847</h6>
+                    <h6 class="tel" name="telefono">Telefono: <span class="tel"><%= userPlayer.telefono %></span></h6>
                   </li>
                   <li>
-                    <h6 class="telem">Telefono: 011-458452</h6>
+                    <h6 class="telem" name="zonaDeJuego">Ubicación: <span class="telem"><%= userPlayer.zonaDeJuego %></span></h6>
                   </li>
                   <li>
-                    <h6 class="autoValoracion">Auto Valoración: Casi Messi</h6>
+                    <h6 class="autoValoracion" name="autoValoracion">Auto Valoración: <span class="autoValoracion"><%= userPlayer.autoValoracion %></span></h6>
                   </li>
-                  <button5 class="boton-editar-superior"><a href=''><i class="fa-solid fa-pencil"></i></a></button5>
+                  <li>
+                    <h6 class="telem" name="zonaDeJuego">Posición: <span
+                        class="telem"><%= userPlayer.categoria %></span></h6>
+                  </li>
+                  <button5 class="boton-editar-superior"><a href='../../register/editPlayerForm/<%=userPlayer.id%>'><i
+                        class="fa-solid fa-pencil"></i></a></button5>
                 </ol2>
               </div>
             </div>

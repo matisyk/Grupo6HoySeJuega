@@ -1,3 +1,9 @@
+const fs = require('fs');
+const path = require('path');
+const PlayerFilePath = path.join(__dirname, '../database/userPlayerDataBase.json');
+const players = JSON.parse(fs.readFileSync(PlayerFilePath, 'utf-8'));
+
+
 const userPlayerController = {
 
   vistaJugador: (req, res) => {
@@ -7,10 +13,14 @@ const userPlayerController = {
 
   perfilDeJugador: (req, res) => {
 
-    res.render("partial/userPlayer/perfilDeJugador")
+    let id = req.params.id
+    let userPlayer = players.find(userPlayer => userPlayer.id == id)
+    res.render("partial/userPlayer/perfilDeJugador", {
+      userPlayer
+    })
   },
 
-  shiping: (req, res) => {
+  carrito: (req, res) => {
 
     res.render("partial/userPlayer/carrito")
   },

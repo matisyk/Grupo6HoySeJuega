@@ -26,38 +26,38 @@
 <body>
   <h1>Registro de datos personales</h1>
     <div class="formulario-div">
-    <form class="div1" action="/loginPlayer" method="post">
+    <form class="div1" action="/register/editPlayerForm/<%=userPlayer.id%>?_method=PUT" method="POST">
       <!--=====================================-->
       <div class="form-group">
         <div class="input-group">
           <div>
             <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="registroNombre">
+            <input type="text" class="form-control" id="nombre" name="nombre" value="<%= userPlayer.nombre %>">
           </div>
           <div class="entre-divs">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="registroApellido">
+            <input type="text" class="form-control" id="apellido" name="apellido" value="<%= userPlayer.apellido %>">
           </div>
           <div class="entre-divs">
             <label for="edad">Edad:</label>
-            <input type="number" class="form-control" id="edad" name="registroEdad" step="any">
+            <input type="number" class="form-control" id="edad" name="edad" value="<%= userPlayer.edad%>">
           </div>
           <div class="entre-divs2">
             <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="registroTelefono">
+            <input type="number" class="form-control" id="telefono" name="telefono" value="<%= userPlayer.telefono%>">
           </div>
           <div class="entre-divs3">
             <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="registroTelefono2">
+            <input type="number" class="form-control" id="telefono2" name="telefono2" value="<%= userPlayer.telefono2%>">
           </div>
           <div class="entre-divs4">
             <label for="autoValoracion">Auto valoración:</label>
             <br>
-            <select name="autovaloracion" id="autoValoracion" name="registroAutoValoracion">
-              <option value="0">-</option>
-              <option value="1">Estrella</option>
-              <option value="2">Copadito</option>
-              <option value="3">Me defiendo</option>ç
+            <select name="autovaloracion" id="autoValoracion" name="autoValoracion">
+              <option value="<%= userPlayer.autoValoracion %>"> <%= userPlayer.autoValoracion %></option>
+              <option value="Estrella">Estrella</option>
+              <option value="Copadito">Copadito</option>
+              <option value="Me defiendo">Me defiendo</option>
             </select>
 
           </div>
@@ -73,23 +73,27 @@
           <div class="entre-divs">
             <label for="deporte">Deporte que juego:</label>
             <div>
-              <select name="posicion" id="deporte" name="registroDeDeporte">
-                <option value="0">-</option>
-                <option value="1">Futbol</option>
+              <select id="deporte1" name="deporte1">
+                <option value="<%= userPlayer.deporte1 %>"><%= userPlayer.deporte1 %></option>
+                <option value="Futbol">Si</option>
+                <option value="No elgi deporte">No</option>
               </select>
-              <select name="posicion" id="deporte2" name="registroDeDeporte2">
-                <option value="0">-</option>
-                <option value="1">Paddle</option>
+              <select id="deporte2" name="deporte2">
+                <option value="<%= userPlayer.deporte2 %>"><%= userPlayer.deporte2 %></option>
+                <option value="Padel">Si</option>
+                <option value="No elgi deporte">No</option>
               </select>
-              <select name="posicion" id="deporte3" name="registroDeDeporte3">
-                <option value="0">-</option>
-                <option value="1">Basquet</option>
+              <select id="deporte3" name="deporte3">
+                <option value="<%= userPlayer.deporte3 %>"><%= userPlayer.deporte3 %></option>
+                <option value="Basquet">Si</option>
+                <option value="No elgi deporte">No</option>
               </select>
             </div>
           </div>
           <div class="entre-divs">
-            <label for="ubicacionJ">Zona de juego:</label>
-            <input type="text" class="form-control" id="ubicacionJ" name="registroUbicacionJ">
+            <label for="zonaDeJuego">Zona de juego:</label>
+            <input type="text" class="form-control" id="zonaDeJuego" name="zonaDeJuego"
+              value="<%= userPlayer.zonaDeJuego %>">
           </div>
         </div>
       </div>

@@ -18,6 +18,6 @@ const validateRegister =[
 router.get('/editOwnerForm/:id/', registerController.editOwnerForm);
 router.put('/editOwnerForm/:id/', registerController.update);
 
-router.get('/editPlayerForm', registerController.editPlayerForm);
+router.get('/editPlayerForm/:id/', registerController.editPlayerForm);
 
 module.exports = router;

@@ -1,7 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const ownersFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
+const playersFilePath = path.join(__dirname, '../database/userPlayerDataBase.json');
 const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
+const player = JSON.parse(fs.readFileSync(playersFilePath, 'utf-8'));
 
 
 const registerController = {
@@ -67,7 +69,11 @@ const registerController = {
 
 
   editPlayerForm: (req, res) => {
-    res.render('partial/register/editPlayerForm')
+    let id = req.params.id
+    let userPlayer = player.find(userPlayer => userPlayer.id == id)
+    res.render('partial/register/editPlayerForm', {
+    userPlayer
+    })
   }
 
 }
