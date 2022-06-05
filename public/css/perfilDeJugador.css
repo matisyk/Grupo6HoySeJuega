@@ -695,6 +695,16 @@ p.reserva {
   width: 100vw;
   margin: 0 !important;
 }
+button5.boton-editar-superior {
+        position: relative;
+    top: -15px;
+    left: 142px;
+    font-size: 12px;
+  }
+  .fa-solid,
+  .fas {
+    color: white;
+  }
 
 @media (min-width: 425px) {
   .img-container1 ol {
@@ -747,6 +757,16 @@ p.reserva {
   }
   .ultimo-partido {
     margin: 0 40px;
+  }
+ button5.boton-editar-superior {
+    position: relative;
+    top: -9px;
+    left: 177px;
+    font-size: 15px;
+  }
+  .fa-solid,
+  .fas {
+    color: white;
   }
 }
 
@@ -872,6 +892,16 @@ p.reserva {
     margin-top: 20px;
     margin-left: 30px;
   }
+  button5.boton-editar-superior {
+        position: relative;
+    top: 8px;
+    left: 258px;
+    font-size: 17px;
+  }
+  .fa-solid,
+  .fas {
+    color: white;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -932,6 +962,16 @@ p.reserva {
   button {
     left: 30px;
     top: 70px;
+  }
+  button5.boton-editar-superior {
+        position: relative;
+    top: -30px;
+    left: 390px;
+    font-size: 20px;
+  }
+  .fa-solid,
+  .fas {
+    color: white;
   }
 }
 @media (min-width: 1440px) {
@@ -1027,6 +1067,16 @@ p.reserva {
   }
   .titulo-U-P h1 {
     font-size: 40px;
+  }
+  button5.boton-editar-superior {
+    position: relative;
+    top: -45px;
+    left: 480px;
+    font-size: 25px;
+  }
+  .fa-solid,
+  .fas {
+    color: white;
   }
 }
 @media (min-width: 1600px) {
@@ -1125,5 +1175,15 @@ p.reserva {
   }
   .valoracion2 {
     font-size: 20px;
+  }
+  button5.boton-editar-superior {
+    position: relative;
+    top: -62px;
+    left: 560px;
+    font-size: 30px;
+  }
+  .fa-solid,
+  .fas {
+    color: white;
   }
 }
