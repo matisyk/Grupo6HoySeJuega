@@ -31,6 +31,9 @@ app.use('/register', registerRouter);
 const registerRouter2 = require('./routes/productsRegisterOwner');
 app.use('/register', registerRouter2);
 
+const registerRouter3 = require('./routes/registerPlayerRout');
+app.use('/register', registerRouter3);
+
 // userOwner
 const userOwnerRouter = require('./routes/userOwnerRout');
 app.use('/userOwner', userOwnerRouter);

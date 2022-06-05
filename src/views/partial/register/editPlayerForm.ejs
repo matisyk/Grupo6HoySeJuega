@@ -24,10 +24,9 @@
 </head>
 
 <body>
-  <h1>Registro de datos personales</h1>
+  <h1>Modificar datos personales</h1>
     <div class="formulario-div">
-    <form class="div1" action="/register/editPlayerForm/<%=userPlayer.id%>?_method=PUT" method="POST">
-      <!--=====================================-->
+    <form class="div1" action="/register/editPlayerForm/<%=userPlayer.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <div class="input-group">
           <div>
@@ -70,23 +69,28 @@
     <form class="div1" action="/loginPlayer" method="post">
       <div class="form-group">
         <div class="input-group">
-          <div class="entre-divs">
+          <div class="entre-divs10">
             <label for="deporte">Deporte que juego:</label>
             <div>
               <select id="deporte1" name="deporte1">
                 <option value="<%= userPlayer.deporte1 %>"><%= userPlayer.deporte1 %></option>
                 <option value="Futbol">Si</option>
-                <option value="No elgi deporte">No</option>
+                <option value="Sin definir">No</option>
               </select>
               <select id="deporte2" name="deporte2">
                 <option value="<%= userPlayer.deporte2 %>"><%= userPlayer.deporte2 %></option>
                 <option value="Padel">Si</option>
-                <option value="No elgi deporte">No</option>
+                <option value="Sin definir">No</option>
               </select>
               <select id="deporte3" name="deporte3">
                 <option value="<%= userPlayer.deporte3 %>"><%= userPlayer.deporte3 %></option>
                 <option value="Basquet">Si</option>
-                <option value="No elgi deporte">No</option>
+                <option value="Sin definir">No</option>
+              </select>
+              <select id="deporte4" name="deporte3">
+                <option value="<%= userPlayer.deporte4 %>"><%= userPlayer.deporte4 %></option>
+                <option value="Tenis">Si</option>
+                <option value="Sin definir">No</option>
               </select>
             </div>
           </div>
@@ -104,105 +108,116 @@
               <div class="entre-divs5">
                 <label for="dias">Dias para jugar:</label>
                 <div class="divDias2">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia1" name="dia1">
+                    <option value="<%= userPlayer.dia1 %>"><%= userPlayer.dia1 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
                 <div class="divDias">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia2" name="dia2">
+                    <option value="<%= userPlayer.dia2 %>"><%= userPlayer.dia2 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
                 <div class="divDias">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia3" name="dia3">
+                    <option value="<%= userPlayer.dia3 %>"><%= userPlayer.dia3 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
                 <div class="divDias">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia4" name="dia4">
+                    <option value="<%= userPlayer.dia4 %>"><%= userPlayer.dia4 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
                 <div class="divDias">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia5" name="dia5">
+                    <option value="<%= userPlayer.dia5 %>"><%= userPlayer.dia5 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
                 <div class="divDias">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia6" name="dia6">
+                    <option value="<%= userPlayer.dia6 %>"><%= userPlayer.dia6 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
                 <div class="divDias">
-                  <select name="dias" id="dias" name="registroDeDias">
-                    <option value="0">-</option>
-                    <option value="1">Lunes</option>
-                    <option value="2">Martes</option>
-                    <option value="3">Miercoles</option>
-                    <option value="4">Jueves</option>
-                    <option value="5">Viernes</option>
-                    <option value="6">Sabados</option>
-                    <option value="7">Domingos</option>
+                  <select id="dia7" name="dia7">
+                    <option value="<%= userPlayer.dia7 %>"><%= userPlayer.dia7 %></option>
+                    <option value="lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Míercoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sábado</option>
+                    <option value="Domingo">Domingo</option>
+                    <option value="No juego">No juego</option>
                   </select>
                 </div>
               </div>
               <div class="entre-divs7">
                 <label for="horarios">Horarios para jugar:</label>
-                <input type="time" class="form-control" id="horarios" name="registroHorarios">
-                <input type="time" class="form-control" id="horarios" name="registroHorarios2">
-                <input type="time" class="form-control" id="horarios" name="registroHorarios3">
-                <input type="time" class="form-control" id="horarios" name="registroHorarios4">
-                <input type="time" class="form-control" id="horarios" name="registroHorarios5">
-                <input type="time" class="form-control" id="horarios" name="registroHorarios6">
-                <input type="time" class="form-control" id="horarios" name="registroHorarios7">
+                <input type="time" class="form-control" id="horarios" name="hora1" value="<%= userPlayer.hora1%>">
+                <input type="time" class="form-control" id="horarios" name="hora2" value="<%= userPlayer.hora2%>">
+                <input type="time" class="form-control" id="horarios" name="hora3" value="<%= userPlayer.hora3%>">
+                <input type="time" class="form-control" id="horarios" name="hora4" value="<%= userPlayer.hora4%>">
+                <input type="time" class="form-control" id="horarios" name="hora5" value="<%= userPlayer.hora5%>">
+                <input type="time" class="form-control" id="horarios" name="hora6" value="<%= userPlayer.hora6%>">
+                <input type="time" class="form-control" id="horarios" name="hora7" value="<%= userPlayer.hora7%>">
               </div>
               <div class="entre-divs8">
-                <form name="subida-imagenes" type="POST" enctype="multipart/formdata">
-                  <input type="file" name="imagen1" />
-                  <input type="submit" name="subir-imagen" value="Cargar" class="btn btn-primary divCargar" />
-                </form>
+                <label for="image" class="form-label">
+                <figure >
+                  <img class="fotoPerfil"
+                    src="/img/<%= userPlayer.imagen %>" alt="imagen de producto">
+                </figure>
+                </label>
+                <input type="file" name="image" class="form-input"
+                  style="padding: 10px 0 10px 10px; width: 100%;">
               </div>
             </div>
           </div>
@@ -219,15 +234,16 @@
               </div>
               <span>DALE...</span>
             </button>
-            <div>
-              <a href="/register"><button class="volver">Volver</button></a>
-            </div>
+            
           </div>
         </div>
         <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div>
       </div>
       
     </form>
+    <div>
+              <a href="/userPlayer/perfilDeJugador/1"><button class="volver">Volver</button></a>
+            </div>
   </div>
   
 </body>
