@@ -205,8 +205,9 @@ button3:hover .button-text2 {
   position: absolute;
   font-size: 13px;
   top: 4%;
-    right: 32px;
+  right: 44px;
   color: #ebebeb;
+  padding-left: 0;
 }
 .img-container1 ol2 {
   margin-left: 170px;
@@ -696,23 +697,23 @@ p.reserva {
   margin: 0 !important;
 }
 button5.boton-editar-superior {
-        position: relative;
-    top: -7px;
-    left: 160px;
-    font-size: 15px;
-  }
-  .fa-solid,
-  .fas {
-    color: white;
-  }
+  position: relative;
+  top: 8px;
+  left: 155px;
+  font-size: 15px;
+}
+.fa-solid,
+.fas {
+  color: white;
+}
 
 @media (min-width: 425px) {
   .img-container1 ol {
     margin-left: 0px;
     text-align: start;
     position: absolute;
-       top: -7%;
-    right: 50px;
+    top: -7%;
+    right: 43px;
     color: #ebebeb;
   }
   .nombre {
@@ -726,26 +727,26 @@ button5.boton-editar-superior {
     text-align: start;
     position: absolute;
     /* font-size: 13px; */
-        top: 17%;
+    top: 17%;
     right: 25px;
     color: #ebebeb;
   }
   .edad {
-  font-family: Kalam;
-  font-size: 17px;
-}
-.tel {
-  font-family: Kalam;
-  font-size: 17px;
-}
-.telem {
-  font-family: Kalam;
-  font-size: 17px;
-}
-.autoValoracion {
-  font-family: Kalam;
-  font-size: 17px;
-}
+    font-family: Kalam;
+    font-size: 17px;
+  }
+  .tel {
+    font-family: Kalam;
+    font-size: 17px;
+  }
+  .telem {
+    font-family: Kalam;
+    font-size: 17px;
+  }
+  .autoValoracion {
+    font-family: Kalam;
+    font-size: 17px;
+  }
   .selector {
     margin-left: 30%;
   }
@@ -774,10 +775,10 @@ button5.boton-editar-superior {
   .ultimo-partido {
     margin: 0 40px;
   }
- button5.boton-editar-superior {
+  button5.boton-editar-superior {
     position: relative;
-    top: -8px;
-    left: 209px;
+    top: 5px;
+    left: 185px;
     font-size: 15px;
   }
   .fa-solid,
@@ -836,8 +837,8 @@ button5.boton-editar-superior {
     margin-left: 0px;
     text-align: start;
     position: absolute;
-        top: 26%;
-    right: 330px;
+    top: 26%;
+    right: 300px;
     color: #ebebeb;
   }
   .nombre {
@@ -909,9 +910,9 @@ button5.boton-editar-superior {
     margin-left: 30px;
   }
   button5.boton-editar-superior {
-        position: relative;
+    position: relative;
     top: -5px;
-    left: 303px;
+    left: 255px;
     font-size: 17px;
   }
   .fa-solid,
@@ -926,7 +927,7 @@ button5.boton-editar-superior {
     text-align: start;
     position: absolute;
     top: 23%;
-    right: 450px;
+    right: 408px;
     color: #ebebeb;
   }
   .nombre {
@@ -980,9 +981,9 @@ button5.boton-editar-superior {
     top: 70px;
   }
   button5.boton-editar-superior {
-        position: relative;
-  top: -25px;
-    left: 405px;
+    position: relative;
+    top: -25px;
+    left: 348px;
     font-size: 20px;
   }
   .fa-solid,
@@ -994,7 +995,7 @@ button5.boton-editar-superior {
     width: 190px;
     margin: 6px 18px 15px 17px;
     height: fit-content;
-}
+  }
 }
 @media (min-width: 1440px) {
   .img-container1 ol {
@@ -1002,7 +1003,7 @@ button5.boton-editar-superior {
     text-align: start;
     position: absolute;
     top: 15%;
-    right: 600px;
+    right: 538px;
     color: #ebebeb;
   }
   .nombre {
@@ -1093,7 +1094,7 @@ button5.boton-editar-superior {
   button5.boton-editar-superior {
     position: relative;
     top: -28px;
-    left: 490px;
+    left: 435px;
     font-size: 25px;
   }
   .fa-solid,
@@ -1105,7 +1106,7 @@ button5.boton-editar-superior {
     width: 190px;
     margin: 6px 18px 15px 17px;
     height: fit-content;
-}
+  }
 }
 @media (min-width: 1600px) {
   .img-container1 ol {
@@ -1113,7 +1114,7 @@ button5.boton-editar-superior {
     text-align: start;
     position: absolute;
     top: 15%;
-    right: 700px;
+    right: 650px;
     color: #ebebeb;
   }
   .nombre {
@@ -1206,8 +1207,8 @@ button5.boton-editar-superior {
   }
   button5.boton-editar-superior {
     position: relative;
-    top: -48px;
-    left: 560px;
+    top: -53px;
+    left: 497px;
     font-size: 30px;
   }
   .fa-solid,
@@ -1219,5 +1220,5 @@ button5.boton-editar-superior {
     width: 190px;
     margin: 1px 18px 15px 17px;
     height: fit-content;
-}
+  }
 }
