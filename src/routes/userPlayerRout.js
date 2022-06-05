@@ -8,10 +8,10 @@ const userPlayerController = require('../controllers/userPlayerController')
 
 router.get('/', userPlayerController.vistaJugador);
 
-router.get('/perfilDeJugador', userPlayerController.perfilDeJugador);
+router.get('/perfilDeJugador/:id', userPlayerController.perfilDeJugador);
 router.post('/perfilDeJugador', userPlayerController.perfilDeJugador);
 
-router.get('/carrito', userPlayerController.shiping);
+router.get('/carrito', userPlayerController.carrito);
 
 router.get('/reservarCancha', userPlayerController.reservarCancha);
 
