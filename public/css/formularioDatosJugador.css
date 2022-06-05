@@ -102,8 +102,9 @@ h1 {
 .divCargar{
 font-size: 10px;
 }
-#autoValoracion{
-  font-size: 10px;
+#autoValoracion {
+    font-size: 18px;
+    width: 120px;
 }
 .divDias{
   margin-top: 20px;

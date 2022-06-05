@@ -1,16 +1,16 @@
 [{
     "id": 1,
-    "nombre": "Fernando",
+    "nombre": "Franco",
     "apellido": "Garcia",
-    "edad": "38",
-    "telefono": "555420",
-    "telefono2": "545110",
+    "edad": "28",
+    "telefono": "2615995585",
+    "telefono2": "2613356722",
     "autoValoracion": "Estrella",
     "categoria": "Delantero",
     "deporte1": "Futbol",
-    "deporte2": "padel",
-    "deporte3": "basquet",
-    "deporte4": "tenis",
+    "deporte2": "Sin definr",
+    "deporte3": "Basquet",
+    "deporte4": "Sin definr",
     "zonaDeJuego": "San Fernando",
     "dia1": "lunes",
     "dia2": "miercoles",
@@ -26,6 +26,6 @@
     "hora5": "",
     "hora6": "",
     "hora7": "",
-    "imagen": "jugador-home.jpg"
+    "imagen": "jugador2.jpeg"
   }
 ]
