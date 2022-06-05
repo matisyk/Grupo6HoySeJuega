@@ -30,6 +30,42 @@ const registerController = {
     })
   },
 
+  update: (req, res) => {
+
+		let id = req.params.id
+		let ownerToEdit = owners.find(owner => owner.id == id)
+
+		let image
+		if (req.files[0] != undefined) {
+			image = req.files[0].filename
+		} else {
+			image = ownerToEdit.image
+		}
+
+		ownerToEdit = {
+			id: ownerToEdit.id,
+			...req.body,
+			image: image,
+		}
+
+		let newowner = owners.map(owner => {
+
+			if (owner.id == ownerToEdit.id) {
+
+				return owner = {
+					...ownerToEdit
+				};
+			}
+
+			return owner
+		})
+
+		fs.writeFileSync(ownersFilePath, JSON.stringify(newowner));
+
+		res.redirect('../userOwner/vistaCancha' + ownerToEdit.id)
+	},
+
+
   editPlayerForm: (req, res) => {
     res.render('partial/register/editPlayerForm')
   }

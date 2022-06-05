@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="widthh=device-widthh, initial-scale=1" />
 
   <title>Formulario de datos</title>
 
@@ -24,163 +24,105 @@
 </head>
 
 <body>
-  <h1>Modificar datos</h1>
-  <div class="formulario-div" >
-    <form action="/register/editOwnerForm/<%= userOwner.id%>?_method=PUT" class="div1" method="POST" enctype="multipart/form-data">
-      <!--=====================================-->
-      <div class="form-group">
-        <div class="input-group">
-          <div>
-            <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="nombre" value=" <%= userOwner.nombre%>"/>
-          </div>
-          <div class="entre-divs">
-            <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" />
-          </div>
-          <div class="entre-divs2">
-            <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="registroTelefono" />
-          </div>
-          <div class="entre-divs3">
-            <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="registroTelefono2" />
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-  <br />
+  <h1>Modificar Datos</h1>
   <div class="formulario-div2">
-    <form class="div2" action="/register/registerOwner" method="POST" enctype="multipart/form-data">
+    <form class="div2" action="/register/editOwnerForm/<%=userOwner.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
             <div>
-              <label for="nombreCancha">Nombre del lugar: </label>
-              <input type="text" class="form-control" id="nombreCancha" name="registroNombreCancha" />
+              <label for="nombre">Nombre: </label>
+              <input id="nombre" name="nombre" class="form-control" type="nombre" value = '<%=userOwner.nombre%>' required>
             </div>
-            <br>
-            <label for="deporte">Deporte:</label>
+            <br><br>
             <div>
-              <select name="posicion" id="deporte" name="registroDeDeporte">
-                <option value="0">-</option>
-                <option value="1">Futbol</option>
-              </select>
-              <select name="posicion" id="deporte2" name="registroDeDeporte2">
-                <option value="0">-</option>
-                <option value="1">Paddle</option>
-              </select>
-              <select name="posicion" id="deporte3" name="registroDeDeporte3">
-                <option value="0">-</option>
-                <option value="1">Basquet</option>
-              </select>
+              <label for="apellido">Apellido: </label>
+              <input id="apellido" name="apellido" class="form-control" type="apellido" value='<%=userOwner.apellido%>' required>
             </div>
+            <br><br>
+            <div>
+              <label for="nombreDelLugar">Nombre del lugar: </label>
+              <input type="text" class="form-control" id="nombreDelLugar" name="nombreDelLugar" value='<%=userOwner.nombreDelLugar%>'/>
+            </div>
+            <br><br>
+            <label for="direccion">Dirección:</label>
+            <input type="text" class="form-control" id="direccion" name="direccion" value='<%=userOwner.direccion%>' />
+            <br><br>
+            <label for="telefono">Telefono:</label>
+            <input type="number" class="form-control" id="telefono" name="telefono" value='<%=userOwner.telefono%>' />
+            <br><br>
+            <label for="telefono2">Contacto de emergencia:</label>
+            <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=userOwner.telefono2%>' />
           </div>
-          <div class="entre-divs">
-            <label for="ubicacionJ">Dirección:</label>
-            <input type="text" class="form-control" id="ubicacionJ" name="registroUbicacionJ" />
+          <div class="entre-divs" style="margin-left: 100px;">
+            <label>Servicios:</label><br />
+
+            <label class="funcionalidades1" for="iluminacion">Iluminación <input name="iluminacion" type="check"
+                value="<%=userOwner.iluminacion%>" style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <input name="estacionamiento"
+                type="check" value="<%=userOwner.estacionamiento%>" style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="wifi">Wifi <input name="wifi" type="check" value="<%=userOwner.wifi%>"
+                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="vestuarios">Vestuarios <input name="vestuarios" type="check" value="<%=userOwner.vestuarios%>"
+                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="duchas">Duchas <input name="duchas" type="check" value="<%=userOwner.duchas%>"
+                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="parrilla">Parrilla <input name="parrilla" type="check" value="<%=userOwner.parrilla%>"
+                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="quincho">Quincho <input name="quincho" type="check" value="<%=userOwner.quincho%>"
+                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <div>
+              <label>Medios de pago aceptados:</label>
+              <br>
+              <br>
+              <label for="transferencia"> Transferencia <input type="check" value="<%=userOwner.transferencia%>"
+                  style="width: 30px; text-align: center; margin-left: 20px" name="transferencia"
+                  class="mediosDePago" /></label>
+              <br />
+              <label for="mercadoPago">Mercado
+                Pago <input type="check" value="<%=userOwner.mercadoPago%>" style="width: 30px; text-align: center; margin-left: 20px"
+                  name="mercadoPago" class="mediosDePago" />
+              </label>
+              <br />
+              <label for="modo">Modo <input type="check" value="<%=userOwner.modo%>"
+                  style="width: 30px; text-align: center; margin-left: 20px" name="modo" class="mediosDePago" />
+              </label><br />
+              <label for="efectivo">Efectivo <input type="check" value="<%=userOwner.efectivo%>"
+                  style="width: 30px; text-align: center; margin-left: 20px" name="efectivo" class="mediosDePago" />
+              </label>
+            </div>
           </div>
         </div>
       </div>
       <br>
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <div class="form-group">
         <div class="input-group">
-          <div>
-            <div class="entre-divs">
-              <label for="funcionalidades" name="funcionalidades">Funcionalidades Extras:</label><br /><br>
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Iluminación
-                Nocturna</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Estacionamiento</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Wifi</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Vestuarios</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Duchas</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Parrilla</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Quincho</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Grabación de partidos</label><br />
-              <label class="funcionalidades1" for="funcionalidades"><input name="funcionalidades"
-                  type="checkbox" /> Seguridad</label><br />
-            </div>
-            <br>
-            <br>
-            <div>
-              <label for="medios-de-pago" name="medios-de-pago">Medios de pago aceptados:</label>
-              <br>
-              <br>
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" /> Transferencia
-                Bancaria</label>
-              <br />
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" />  Mercado
-                Pago
-              </label>
-              <br />
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" /> Modo</label><br />
-              <label for="medios-de-pago"><input type="checkbox" name="medios-de-pago" class="mediosDePago" /> Efectivo</label>
-            </div>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la cancha:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la cancha:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la cancha:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la parrilla:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la parrilla:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes de la parrilla:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-            <div class="img-cancha">
-              <label for="img-cancha">Cargar imágenes extras del lugar:
-                <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-            </div>
-            <br>
-             <div class="img-cancha">
-               <label for="img-cancha">Cargar imágenes extras del lugar:
-                 <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-             </div>
-             <br>
-              <div class="img-cancha">
-                <label for="img-cancha">Cargar imágenes extras del lugar:
-                  <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-              </div>
-              <br>
-               <div class="img-cancha">
-                 <label for="img-cancha">Cargar imágenes extras del lugar:
-                   <input type="file" name="img-cancha" accept=".jpg" multiple /></label>
-               </div>
-               <br>
+          <br>
+          <div class="img-cancha">
+            <label for="imagenCancha">Cargar imágenes de la cancha:
+              <input type="file" name="imagenCancha" accept=".jpg" multiple /></label>
           </div>
-          <div class="entre-divs9">
-            <button>
+          <br>
+          <br>
+          <div class="img-cancha">
+            <label for="imagenComedor">Cargar imágenes de la parrilla:
+              <input type="file" name="imagenComedor" accept=".jpg" multiple /></label>
+          </div>
+          <br>
+          <br>
+          <div class="img-cancha">
+            <label for="imagenOtras">Cargar imágenes extras del lugar:
+              <input type="file" name="imagenOtras" accept=".jpg" multiple /></label>
+          </div>
+          <br>
+        </div>
+        <div class="entre-divs9">
+          <a href="/register/registerOwner/">
+            <button type="submit">
               <div class="svg-wrapper-1">
                 <div class="svg-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" widthh="24" height="24">
                     <path fill="none" d="M0 0h24v24H0z"></path>
                     <path
                       d="M177.1 228.6L207.9 320h96.5l29.62-91.38L256 172.1L177.1 228.6zM255.1 0C114.6 0 .0001 114.6 .0001 256S114.6 512 256 512s255.1-114.6 255.1-255.1S397.4 0 255.1 0zM416.6 360.9l-85.4-1.297l-25.15 81.59C290.1 445.5 273.4 448 256 448s-34.09-2.523-50.09-6.859L180.8 359.6l-85.4 1.297c-18.12-27.66-29.15-60.27-30.88-95.31L134.3 216.4L106.6 135.6c21.16-26.21 49.09-46.61 81.06-58.84L256 128l68.29-51.22c31.98 12.23 59.9 32.64 81.06 58.84L377.7 216.4l69.78 49.1C445.8 300.6 434.8 333.2 416.6 360.9z" />
@@ -189,22 +131,23 @@
               </div>
               <span>DALE...</span>
             </button>
-          </div>
+          </a>
         </div>
       </div>
-    </form>
-    <br />
-    <br />
-    <div class="container">
-      <div>
-        <a href="/register"><button class="volver">Volver</button></a>
-      </div>
-      <br />
-      <br />
-      <div class="alert alert-success divAlerta">
-        ¡Gracias por registrarse!
-      </div>
+  </div>
+  </form>
+  <br />
+  <br />
+  <div class="container">
+    <div>
+      <a href="/register"><button class="volver">Volver</button></a>
     </div>
+    <br />
+    <br />
+    <div class="alert alert-success divAlerta">
+      ¡Gracias por registrarse!
+    </div>
+  </div>
   </div>
 </body>
 
