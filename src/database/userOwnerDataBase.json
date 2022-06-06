@@ -1,4 +1,3 @@
-
 [{
   "id": 1,
   "nombre": "Raul",
@@ -198,4 +197,48 @@
   "modo": "Si",
   "efectivo": "Si",
   "image": "imagenCancha-1654373599195-581496051.jpg"
+}, {
+  "id": 10,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "francodj93@gmail.com",
+  "password": "153258Fgg",
+  "nombreDelLugar": "Los Alamos",
+  "direccion": "sobremonte 60",
+  "telefono": "2615995585",
+  "telefono2": "123456789",
+  "iluminacion": "Si",
+  "estacionamiento": "No",
+  "wifi": "Si",
+  "vestuarios": "No",
+  "duchas": "Si",
+  "parrilla": "NO",
+  "quincho": "Si",
+  "transferencia": "Si",
+  "mercadoPago": "NO",
+  "modo": "Si",
+  "efectivo": "NO",
+  "image": "imagenCancha-1654551084231-823691920.jpeg"
+}, {
+  "id": 11,
+  "nombre": "1234",
+  "apellido": "1234",
+  "email": "sda@sdas",
+  "password": "dasda",
+  "nombreDelLugar": "",
+  "direccion": "",
+  "telefono": "",
+  "telefono2": "",
+  "iluminacion": "Si",
+  "estacionamiento": "Si",
+  "wifi": "Si",
+  "vestuarios": "Si",
+  "duchas": "Si",
+  "parrilla": "Si",
+  "quincho": "Si",
+  "transferencia": "Si",
+  "mercadoPago": "Si",
+  "modo": "Si",
+  "efectivo": "Si",
+  "image": "estrella-gris.png"
 }]

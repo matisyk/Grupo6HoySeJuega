@@ -6,14 +6,14 @@ const path = require ('path')
 
 
 // ************ Controller Require ************
-const registerPlayerController = require('../controllers/registerPlayerController');
+const productsController = require('../controllers/productsRegisterPlayerController');
 
 // ************ MULTER ************
 
 const storage = multer.diskStorage({
   
   destination: function (req, file, cb) {
-    cb(null, '/img/jugadores')
+    cb(null, 'public/img/jugadores')
   },
 
   filename: function (req, file, cb) {
@@ -32,22 +32,22 @@ const upload = multer({ storage: storage })
 
 /*** CREATE ONE PRODUCT ***/ 
 
-router.get('/registerPlayer', registerPlayerController.create); 
-router.post('/registerPlayer', upload.any("img"), registerPlayerController.store); 
+router.get('/registerPlayer', productsController.create); 
+router.post('/registerPlayer', upload.any("img-cancha"), productsController.store); 
 
 
 // /*** GET ONE PRODUCT ***/ 
 
-// router.get('/detail/:id/', registerPlayerController.detail); 
+// router.get('/detail/:id/', productsController.detail); 
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-//router.get('/editarCancha/:id/', registerPlayerController.edit); 
-// router.patch('/edit/:id/',upload.any(), registerPlayerController.update); 
+// router.get('/editarCancha/:id/', productsController.edit); 
+// router.patch('/edit/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 
-// router.delete('/delete/:id', registerPlayerController.destroy); 
+// router.delete('/delete/:id', productsController.destroy); 
 
 
 module.exports = router;
