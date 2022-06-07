@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const PlayerFilePath = path.join(__dirname, '../database/userPlayerDataBase.json');
 const players = JSON.parse(fs.readFileSync(PlayerFilePath, 'utf-8'));
+const ownersFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
+const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 
 
 const userPlayerController = {
@@ -30,10 +32,11 @@ const userPlayerController = {
   },
 
   vistaCanchaInfo: (req, res) => {
-
-    res.render("partial/userPlayer/vistaCanchaInfo")
+    let id = req.params.id
+    let userOwner = owners.find(userOwner => userOwner.id == id)
+    res.render("partial/userPlayer/vistaCanchaInfo", {userOwner})
   },
-
+  
   elegirCancha: (req, res) => {
 
     res.render("partial/userPlayer/elegirCancha")

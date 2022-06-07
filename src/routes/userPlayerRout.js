@@ -15,7 +15,8 @@ router.get('/carrito', userPlayerController.carrito);
 
 router.get('/reservarCancha', userPlayerController.reservarCancha);
 
-router.get('/vistaCanchaInfo', userPlayerController.vistaCanchaInfo);
+router.get('/vistaCanchaInfo/:id', userPlayerController.vistaCanchaInfo);
+router.post('/vistaCanchaInfo', userPlayerController.vistaCanchaInfo);
 
 router.get('/elegirCancha', userPlayerController.elegirCancha);
 
