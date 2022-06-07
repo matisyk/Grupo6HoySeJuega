@@ -697,9 +697,11 @@ p.reserva {
   margin: 0 !important;
 }
 button5.boton-editar-superior {
-  position: relative;
-  top: 8px;
-  left: 155px;
+      position: static;
+    /* justify-content: end; */
+    /* top: 9px; */
+    /* left: 114px; */
+    margin-left: 139px;
   font-size: 15px;
 }
 .fa-solid,
@@ -776,10 +778,12 @@ button5.boton-editar-superior {
     margin: 0 40px;
   }
   button5.boton-editar-superior {
-    position: relative;
-    top: 5px;
-    left: 185px;
-    font-size: 15px;
+    position: static;
+    /* justify-content: end; */
+    /* top: 9px; */
+    /* left: 114px; */
+    margin-left: 159px;
+  font-size: 15px;
   }
   .fa-solid,
   .fas {
@@ -910,10 +914,12 @@ button5.boton-editar-superior {
     margin-left: 30px;
   }
   button5.boton-editar-superior {
-    position: relative;
-    top: -5px;
-    left: 255px;
-    font-size: 17px;
+   position: static;
+    /* justify-content: end; */
+    /* top: 9px; */
+    /* left: 114px; */
+    margin-left: 242px;
+  font-size: 15px;
   }
   .fa-solid,
   .fas {
@@ -975,16 +981,19 @@ button5.boton-editar-superior {
     width: 93%;
     margin-top: 20px;
     margin-left: 35px;
+    height: 282px;
   }
   button {
     left: 30px;
     top: 70px;
   }
   button5.boton-editar-superior {
-    position: relative;
-    top: -25px;
-    left: 348px;
-    font-size: 20px;
+    position: static;
+    /* justify-content: end; */
+    /* top: 9px; */
+    /* left: 114px; */
+    margin-left: 293px;
+  font-size: 20px;
   }
   .fa-solid,
   .fas {
@@ -1066,6 +1075,7 @@ button5.boton-editar-superior {
     margin-left: 115px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 308px;
   }
   button {
     width: 250px;
@@ -1092,9 +1102,11 @@ button5.boton-editar-superior {
     font-size: 40px;
   }
   button5.boton-editar-superior {
-    position: relative;
-    top: -28px;
-    left: 435px;
+    position: static;
+    /* justify-content: end; */
+    /* top: 9px; */
+    /* left: 114px; */
+    margin-left: 283px;
     font-size: 25px;
   }
   .fa-solid,
@@ -1183,6 +1195,7 @@ button5.boton-editar-superior {
     margin-left: 120px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    height: 332px;
   }
   button {
     width: 250px;
@@ -1206,9 +1219,11 @@ button5.boton-editar-superior {
     font-size: 20px;
   }
   button5.boton-editar-superior {
-    position: relative;
-    top: -53px;
-    left: 497px;
+    position: static;
+    /* justify-content: end; */
+    /* top: 9px; */
+    /* left: 114px; */
+    margin-left: 309px;
     font-size: 30px;
   }
   .fa-solid,

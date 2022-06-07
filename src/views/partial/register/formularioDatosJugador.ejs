@@ -37,6 +37,17 @@
             <label for="apellido">Apellido:</label>
             <input type="text" class="form-control" id="apellido" name="apellido">
           </div>
+          <br>
+          <div class="entre-divs">
+            <label for="email">Mail: </label>
+            <input id="email" class="form-control" name="email" type="email" required>
+          </div>
+          <br>
+          <div class="contrasena">
+            <label for="contraseña" >Contraseña: </label>
+            <input id="pwd" name="password" class="form-control" type="password" required>
+          </div>
+          <br>
           <div class="entre-divs">
             <label for="edad">Edad:</label>
             <input type="number" class="form-control" id="edad" name="edad">
@@ -51,26 +62,20 @@
           </div>
           <div class="entre-divs3">
             <label for="categoria">Posición:</label>
-            <input type="number" class="form-control" id="categoria" name="categoria">
+            <input type="text" class="form-control" id="categoria" name="categoria">
           </div>
           <div class="entre-divs4">
             <label for="autoValoracion">Auto valoración:</label>
             <br>
-            <select name="autovaloracion" id="autoValoracion" name="autoValoracion">
+            <select name="autoValoracion" id="autoValoracion" name="autoValoracion">
               <option value="-"> Elegir opción</option>
               <option value="Estrella">Estrella</option>
               <option value="Copadito">Copadito</option>
-              <option value="Me defiendo">Me defiendo</option>
+              <option value="Juego">Juego</option>
             </select>
-
           </div>
         </div>
       </div>
-    </form>
-  </div>
-  <br>
-  <div class="formulario-div2">
-    <form class="div1" action="/register/registerPlayer" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs10">
@@ -79,26 +84,27 @@
               <select id="deporte1" name="deporte1">
                 <option value="">Elegir opción</option>
                 <option value="Futbol">Futbol</option>
-                <option value="Sin definir">Sin definir</option>
+                <option value="">-</option>
               </select>
               <select id="deporte2" name="deporte2">
                 <option value="">Elegir opción</option>
                 <option value="Padel">Padel</option>
-                <option value="Sin definir">Sin definir</option>
+                <option value="">-</option>
               </select>
               <select id="deporte3" name="deporte3">
                 <option value="">Elegir opción</option>
                 <option value="Basquet">Basquet</option>
-                <option value="Sin definir">Sin definir</option>
+                <option value="">-</option>
               </select>
               <select id="deporte4" name="deporte3">
                 <option value="">Elegir opción</option>
                 <option value="Tenis">Tenis</option>
-                <option value="Sin definir">Sin definir</option>
+                <option value="">-</option>
               </select>
             </div>
           </div>
-          <div class="entre-divs">
+          
+          <div class="entre-divs zona">
             <label for="zonaDeJuego">Zona de juego:</label>
             <input type="text" class="form-control" id="zonaDeJuego" name="zonaDeJuego">
           </div>
@@ -213,7 +219,8 @@
                 <input type="time" class="form-control" id="horarios" name="hora7">
               </div>
               <div class="entre-divs8">
-                <input type="file" name="image" class="form-input" style="padding: 10px 0 10px 10px; width: 100%;">
+                <input type="file" name="imagenJugador" accept=".jpg" multiple class="form-input"
+                  sstyle="padding: 10px 0 10px 10px;width: 100%;margin-bottom: 20px;">
               </div>
             </div>
           </div>
@@ -234,12 +241,13 @@
             </a>
           </div>
         </div>
-        <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div>
+        <!-- <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div> -->
       </div>
-
     </form>
-    <div>
-      <a href="/register"><button class="volver">Volver</button></a>
-    </div>
   </div>
+  <br>
+  <div>
+    <a href="/register"><button5 class="volver">Volver</button5></a>
+  </div>
+
 </body>
