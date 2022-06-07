@@ -63,40 +63,62 @@
             <input type="number" class="form-control" id="telefono2" name="telefono2" />
           </div>
           <div class="entre-divs" style="margin-left: 100px;">
-            <label>Servicios:</label><br />
+            <label>Servicios:</label><br /> <br />
+            
 
-            <label class="funcionalidades1" for="iluminacion">Iluminación <input name="iluminacion" type="check"
-                value="Si" style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
-            <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <input name="estacionamiento"
-                type="check" value="Si" style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
-            <label class="funcionalidades1" for="wifi">Wifi <input name="wifi" type="check" value="Si"
-                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
-            <label class="funcionalidades1" for="vestuarios">Vestuarios <input name="vestuarios" type="check" value="Si"
-                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
-            <label class="funcionalidades1" for="duchas">Duchas <input name="duchas" type="check" value="Si"
-                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
-            <label class="funcionalidades1" for="parrilla">Parrilla <input name="parrilla" type="check" value="Si"
-                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
-            <label class="funcionalidades1" for="quincho">Quincho <input name="quincho" type="check" value="Si"
-                style="width: 30px; text-align: center; margin-left: 20px" /> </label><br />
+            <label class="funcionalidades1" for="iluminacion">Iluminación  <select name="iluminacion" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br />
+            <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br /> 
+            <label class="funcionalidades1" for="wifi">Wifi <select name="wifi" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br /> 
+            <label class="funcionalidades1" for="vestuarios">Vestuarios <select name="vestuarios" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br /> 
+            <label class="funcionalidades1" for="duchas">Duchas <select name="duchas" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br /> 
+            <label class="funcionalidades1" for="parrilla">Parrilla <select name="parrilla" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br /> 
+            <label class="funcionalidades1" for="quincho">Quincho <select name="quincho" size="1">
+              <option label="Si" value="Si"></option>
+              <option selected="selected" label="No" value="No"></option>
+            </select></label><br /> <br />
             <div>
               <label>Medios de pago aceptados:</label>
               <br>
               <br>
-              <label for="transferencia"> Transferencia <input type="check" value="Si"
-                  style="width: 30px; text-align: center; margin-left: 20px" name="transferencia"
-                  class="mediosDePago" /></label>
+              <label for="transferencia"> Transferencia <select name="transferencia" size="1">
+                <option label="Si" value="Si"></option>
+                <option selected="selected" label="No" value="No"></option>
+              </select></label>
               <br />
               <label for="mercadoPago">Mercado
-                Pago <input type="check" value="Si" style="width: 30px; text-align: center; margin-left: 20px"
-                  name="mercadoPago" class="mediosDePago" />
+                Pago <select name="mercadoPago" size="1">
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select>
               </label>
               <br />
-              <label for="modo">Modo <input type="check" value="Si"
-                  style="width: 30px; text-align: center; margin-left: 20px" name="modo" class="mediosDePago" />
+              <label for="modo">Modo <select name="modo" size="1">
+                <option label="Si" value="Si"></option>
+                <option selected="selected" label="No" value="No"></option>
+              </select>
               </label><br />
-              <label for="efectivo">Efectivo <input type="check" value="Si"
-                  style="width: 30px; text-align: center; margin-left: 20px" name="efectivo" class="mediosDePago" />
+              <label for="efectivo">Efectivo <select name="efectivo" size="1">
+                <option label="Si" value="Si"></option>
+                <option selected="selected" label="No" value="No"></option>
+              </select></label><br />
               </label>
             </div>
           </div>
