@@ -72,6 +72,12 @@ Integrantes del equipo:
   -> Soy de Venezuela, actualmente vivo en Argentina (Capital Federal) y trabajo en una estacion de servicio Shell (Experto). Tengo 24 años y soy TSU en Ing Informatica.
   -> Siempre he sido afin a todas las areas de la informatica he estudiado un poco de todo pero lo que mas me apasiona y por lo que estoy aca es la programacion.
   -> Mi objetivo en este curso es conseguir las herramientas para desarrollarme en el ambito profesional y poder ejercer.
+  
+- Matias Sykuler:
+  -> Tengo 20 años, soy de CABA. Trabajo en DeFy education y estoy estudiando actuario en UBA.
+  -> Trato de cada dia esforzarme un poco mas, me encanta entender como funciona todo y me suelo dar mania para resolver las cosas. Soy muy exigente con lo
+  que hago y me frustro un poco cuando no me sale.
+  -> Me gusta mas la parte del Back pero quiero ser Fullstack para llegar a ser dev de web3.
 
 
 
