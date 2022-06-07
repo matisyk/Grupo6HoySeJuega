@@ -8,6 +8,11 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 
+	register: (req, res) => {
+
+		res.render("partial/register/register")
+	  },
+
     // Detail - Detail from one product
 	detalle: (req, res) => {
 
@@ -45,7 +50,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 		
-		res.redirect("/userOwner/vistaCancha");
+		res.redirect("/userOwner/vistaCancha/1/");
 
 	},
 
@@ -55,7 +60,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("editarCancha", {product})
+		res.render("partial/register/editOwnerForm", {product})
 
 	},
 	// Update - Method to update
@@ -95,7 +100,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
 
-		res.redirect("/products/detail/" + productToEdit.id)
+		res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
 
 	},
 

@@ -29,6 +29,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage })
 
+router.get('/', productsController.register);
 
 /*** CREATE ONE PRODUCT ***/ 
 
@@ -42,8 +43,8 @@ router.post('/registerOwner', upload.any("img-cancha"), productsController.store
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-router.get('/editarCancha/:id/', productsController.edit); 
-// router.patch('/edit/:id/',upload.any(), productsController.update); 
+router.get('/editOwnerForm/:id/', productsController.edit);
+router.patch('/editOwnerForm/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 

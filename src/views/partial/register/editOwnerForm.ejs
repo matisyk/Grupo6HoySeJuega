@@ -26,40 +26,40 @@
 <body>
   <h1>Modificar Datos</h1>
   <div class="formulario-div2">
-    <form class="div2" action="/register/editOwnerForm/<%=userOwner.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form class="div2" action="/register/editOwnerForm/<%=product.id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
             <div>
               <label for="nombre">Nombre: </label>
-              <input id="nombre" name="nombre" class="form-control" type="nombre" value = '<%=userOwner.nombre%>' required>
+              <input id="nombre" name="nombre" class="form-control" type="nombre" value = '<%=product.nombre%>' required>
             </div>
             <br><br>
             <div>
               <label for="apellido">Apellido: </label>
-              <input id="apellido" name="apellido" class="form-control" type="apellido" value='<%=userOwner.apellido%>' required>
+              <input id="apellido" name="apellido" class="form-control" type="apellido" value='<%=product.apellido%>' required>
             </div>
             <br><br>
             <div>
               <label for="nombreDelLugar">Nombre del lugar: </label>
-              <input type="text" class="form-control" id="nombreDelLugar" name="nombreDelLugar" value='<%=userOwner.nombreDelLugar%>'/>
+              <input type="text" class="form-control" id="nombreDelLugar" name="nombreDelLugar" value='<%=product.nombreDelLugar%>'/>
             </div>
             <br><br>
             <label for="direccion">Dirección:</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" value='<%=userOwner.direccion%>' />
+            <input type="text" class="form-control" id="direccion" name="direccion" value='<%=product.direccion%>' />
             <br><br>
             <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono" value='<%=userOwner.telefono%>' />
+            <input type="number" class="form-control" id="telefono" name="telefono" value='<%=product.telefono%>' />
             <br><br>
             <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=userOwner.telefono2%>' />
+            <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=product.telefono2%>' />
           </div>
           <div class="entre-divs" style="margin-left: 100px;">
 
             <div class="servicios">
               <label>Servicios:</label><br /> <br />
               <label class="funcionalidades1" for="iluminacion">Iluminación  <select name="iluminacion" size="1">
-                <% if(userOwner.iluminacion == "Si"){ %>
+                <% if(product.iluminacion == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -68,7 +68,7 @@
                 <% } %>
               </select></label><br />
               <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento" size="1">
-                <% if(userOwner.estacionamiento == "Si"){ %>
+                <% if(product.estacionamiento == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -77,7 +77,7 @@
                 <% } %>
               </select></label><br /> 
               <label class="funcionalidades1" for="wifi">Wifi <select name="wifi" size="1">
-                <% if(userOwner.wifi == "Si"){ %>
+                <% if(product.wifi == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -86,7 +86,7 @@
                 <% } %>
               </select></label><br /> 
               <label class="funcionalidades1" for="vestuarios">Vestuarios <select name="vestuarios" size="1">
-                <% if(userOwner.vestuarios == "Si"){ %>
+                <% if(product.vestuarios == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -95,7 +95,7 @@
                 <% } %>
               </select></label><br /> 
               <label class="funcionalidades1" for="duchas">Duchas <select name="duchas" size="1">
-                <% if(userOwner.duchas == "Si"){ %>
+                <% if(product.duchas == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -104,7 +104,7 @@
                 <% } %>
               </select></label><br /> 
               <label class="funcionalidades1" for="parrilla">Parrilla <select name="parrilla" size="1">
-                <% if(userOwner.parrilla == "Si"){ %>
+                <% if(product.parrilla == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -113,7 +113,7 @@
                 <% } %>
               </select></label><br /> 
               <label class="funcionalidades1" for="quincho">Quincho <select name="quincho" size="1">
-                <% if(userOwner.quincho == "Si"){ %>
+                <% if(product.quincho == "Si"){ %>
                   <option selected="selected" label="Si" value="Si"></option>
                   <option label="No" value="No"></option>
                 <% } else { %>
@@ -128,7 +128,7 @@
                 <br>
                 <br>
                 <label class="funcionalidades1" for="transferencia"> Transferencia <select name="transferencia" size="1">
-                  <% if(userOwner.transferencia == "Si"){ %>
+                  <% if(product.transferencia == "Si"){ %>
                     <option selected="selected" label="Si" value="Si"></option>
                     <option label="No" value="No"></option>
                   <% } else { %>
@@ -139,7 +139,7 @@
                 <br />
                 <label class="funcionalidades1" for="mercadoPago">Mercado
                   Pago <select name="mercadoPago" size="1">
-                    <% if(userOwner.mercadoPago == "Si"){ %>
+                    <% if(product.mercadoPago == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -150,7 +150,7 @@
                 </label>
                 <br />
                 <label class="funcionalidades1" for="modo">Modo <select name="modo" size="1">
-                  <% if(userOwner.modo == "Si"){ %>
+                  <% if(product.modo == "Si"){ %>
                     <option selected="selected" label="Si" value="Si"></option>
                     <option label="No" value="No"></option>
                   <% } else { %>
@@ -160,7 +160,7 @@
                 </select>
                 </label><br />
                 <label class="funcionalidades1" for="efectivo">Efectivo <select name="efectivo" size="1">
-                  <% if(userOwner.efectivo == "Si"){ %>
+                  <% if(product.efectivo == "Si"){ %>
                     <option selected="selected" label="Si" value="Si"></option>
                     <option label="No" value="No"></option>
                   <% } else { %>
