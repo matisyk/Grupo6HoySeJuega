@@ -1,23 +1,26 @@
 [{
   "id": 1,
-  "identificacion": "cancha1",
-  "deporte": "futbol",
-  "cantidadDeJugadores": 10,
-  "tipoDeCancha": "cesped sintético",
-  "valor": 1000
-}, {
-  "id": 2,
-  "identificacion": "C",
+  "identificacion": "Cancha 1",
   "deporte": "",
   "capacidad": "",
   "tipoDeCancha": "",
-  "valor": "",
+  "valor": "1000",
+  "enviar": "",
+  "category": "cancha",
+  "image": "estrella-gris.png"
+}, {
+  "id": 2,
+  "identificacion": "Cancha2",
+  "deporte": "",
+  "capacidad": "",
+  "tipoDeCancha": "",
+  "valor": "1000",
   "enviar": "",
   "category": "cancha",
   "image": "estrella-gris.png"
 }, {
   "id": 3,
-  "identificacion": "Cancha 2",
+  "identificacion": "Cancha 3",
   "deporte": "padel",
   "capacidad": "4",
   "tipoDeCancha": "cemento",
@@ -27,7 +30,7 @@
   "image": "estrella-gris.png"
 }, {
   "id": 4,
-  "identificacion": "Cancha 5",
+  "identificacion": "Cancha 4",
   "deporte": "voley",
   "capacidad": "10",
   "tipoDeCancha": "ladrillo",
@@ -37,21 +40,21 @@
   "image": "estrella-gris.png"
 }, {
   "id": 5,
-  "identificacion": "Cancha 4",
+  "identificacion": "Cancha 5",
   "deporte": "basquet",
   "capacidad": "",
   "tipoDeCancha": "",
-  "valor": "",
+  "valor": "1000",
   "enviar": "",
   "category": "cancha",
   "image": "estrella-gris.png"
 }, {
   "id": 6,
-  "identificacion": "Cancha 4",
+  "identificacion": "Cancha 6",
   "deporte": "basquet",
   "capacidad": "",
   "tipoDeCancha": "",
-  "valor": "",
+  "valor": "1000",
   "enviar": "",
   "category": "cancha",
   "image": "estrella-gris.png"
