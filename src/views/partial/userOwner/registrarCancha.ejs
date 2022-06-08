@@ -9,33 +9,55 @@
 </head>
 <body>
 
+<form action="/userOwner/registrarCancha" method="POST" enctype="multipart/form-data">
+
     <div class="tarjeta">
         <div class="item-tarjeta">
-            <label name="id">Identificación de la cancha:</label>
-            <input type="text" placeholder="Ej: Cancha 1" required >
+            <label>Identificación de la cancha:</label>
+            <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required >
         </div>
 
         <div class="item-tarjeta">
-            <label name="registroDeDeporte">Deporte:</label>
-                <select name="posicion" id="deporte" name="registroDeDeporte">
-                    <option value="0">-</option>
-                    <option value="1">Futbol</option>
-                    <option value="2">Paddle</option>
-                    <option value="3">Basquet</option>
+            <label>Deporte:</label>
+                <select id="deporte" name="deporte">
+                    <option value="" >Elegir un deporte</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
                 </select>
         </div>
+
         
         <div class="item-tarjeta">
-            <label name="capacidad">Capacidad de la cancha:</label>
-            <input class="foto" type="text" placeholder="Ej: 10 jugadores" accept=".jpg .png" multiple>
+            <label>Cantidad de jugadores:</label>
+            <input type="number" name="capacidad" placeholder="Ej: 10">
         </div> 
 
         <div class="item-tarjeta">
-            <label name="cargar-imagen">Cargar imagen</label>
-            <input type="file" >
+            <label>Tipo de cancha</label>
+                <select id="deporte" name="tipoDeCancha">
+                    <option value="" >Elegir una clase</option>
+                    <option value="cespedS">Césped sintético</option>
+                    <option value="cesped">Césped</option>
+                    <option value="cemento">Cemento</option>
+                    <option value="parque">Parqué</option>
+                    <option value="ladrillo">Ladrillo</option>
+                </select>
+        </div>
+
+        <div class="item-tarjeta">
+            <label>Cargar imagen</label>
+            <input class="foto" type="file" name="image" accept=".jpg .png" multiple>
         </div>
        
-        <div class="otro-item-tarjeta">
+        <div class="item-tarjeta">
+            <label>Precio:</label> <span> $ </span>
+            <input type="number" name="valor" placeholder="Ej:pesos argentinos ">
+        </div> 
+
+        <!---<div class="otro-item-tarjeta">
             <div class="item-tarjeta"><label  name="horarios">Disponibilidad horaria:</label></div>
             <ol class="dias-horarios">
             <li class="dia-horario"><span class="dia lunes"> Lunes:</span>Desde <input type="time" class="form-control" id="horarios" name="registroHorarios"> Hasta <input type="time" class="form-control" id="horarios" name="registroHorarios"></li>
@@ -46,12 +68,12 @@
             <li class="dia-horario"><span class="dia sabado">Sábado:</span> Desde <input type="time" class="form-control" id="horarios" name="registroHorarios6"> Hasta <input type="time" class="form-control" id="horarios" name="registroHorarios"></li>
             <li class="dia-horario"><span class="dia domingo">Domingo:</span> Desde <input type="time" class="form-control" id="horarios" name="registroHorarios7"> Hasta <input type="time" class="form-control" id="horarios" name="registroHorarios"></li>
           </ol>
-        </div>  
+        </div>  --->
 
         <div class="item-tarjeta">
-          <a href="/userOwner/vistaCancha"><button type="submit" name="enviar">Enviar</button></a> 
+          <button type="submit" name="enviar">Enviar</button>
         </div>
     </div>
-
+</form>
 </body>
 </html

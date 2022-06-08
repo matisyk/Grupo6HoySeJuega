@@ -38,6 +38,9 @@ app.use('/register', registerRouter3);
 const userOwnerRouter = require('./routes/userOwnerRout');
 app.use('/userOwner', userOwnerRouter);
 
+const registerCourt = require('./routes/productsCourtRout');
+app.use('/userOwner', registerCourt);
+
 // userPlayer
 
 const userPlayerRouter = require('./routes/userPlayerRout');

@@ -1,14 +1,30 @@
-[ { "id": 1, 
-
-    "identificacion": "cancha1", 
-    
-    "deporte": "futbol", 
-    
-    "disponible": "SI",
-    
-    "cantidad de jugadores": 10 ,
-    
-    "tipo de cancha": "cesped sintético",
-    
-    "valor": 1000
-     } ]
+[
+    {
+        "id": 1,
+        "identificacion": "cancha1",
+        "deporte": "futbol",
+        "cantidadDeJugadores": 10,
+        "tipoDeCancha": "cesped sintético",
+        "valor": 1000
+    },
+    {
+        "id": 2,
+        "identificacion": "C",
+        "deporte": "",
+        "capacidad": "",
+        "tipoDeCancha": "",
+        "valor": "",
+        "enviar": "",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 3,
+        "identificacion": "Cancha 2",
+        "deporte": "padel",
+        "capacidad": "4",
+        "tipoDeCancha": "cemento",
+        "valor": "800",
+        "enviar": "",
+        "image": "estrella-gris.png"
+    }
+]
