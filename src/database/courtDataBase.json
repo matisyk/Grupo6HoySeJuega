@@ -58,4 +58,31 @@
   "enviar": "",
   "category": "cancha",
   "image": "estrella-gris.png"
+}, {
+  "id": 7,
+  "identificacion": "cancha 7",
+  "deporte": "futbol",
+  "capacidad": "22",
+  "tipoDeCancha": "cesped",
+  "valor": "5000",
+  "enviar": "",
+  "category": "cancha",
+  "image": "estrella-gris.png"
+}, {
+  "id": 8,
+  "identificacion": "cancha 8",
+  "category": "cancha",
+  "capacidad": "22",
+  "tipoDeCancha": "cesped",
+  "valor": "10000",
+  "enviar": "",
+  "image": "estrella-gris.png"
+}, {
+  "id": 9,
+  "identificacion": "cancha 9",
+  "category": "cancha",
+  "capacidad": "14",
+  "tipoDeCancha": "cesped",
+  "valor": "3000",
+  "image": "estrella-gris.png"
 }]

@@ -56,7 +56,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("partial/register/editOwnerForm", {product})
+		res.render("partial/userOwner/editarCancha", {product})
 
 	},
 	// Update - Method to update

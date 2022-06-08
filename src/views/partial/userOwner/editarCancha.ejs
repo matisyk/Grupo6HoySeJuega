@@ -8,15 +8,14 @@
 </head>
 <body>
         <%- include('./headerOwner.ejs') %>
-    <form action="/products/edit/<%= product.id%>?_method=PUT" method="POST">
-        <img src="/images/products/<%= product.imagenCancha %>" alt="product image">
+    <form action="/products/edit/<%= cancha.id %>?_method=PUT" method="POST">
+        <img src="/images/products/" alt="product image">
         <div class="col-12 col-md-6">
             <label for="name" class="form-label">Nombre del lugar:</label>
-            <input type="text" id="name" name="name" value="<%= product.nombreDelLugar%>" class="form-input">
+            <input type="text" id="name" name="name" value="<%= cancha.identificacion %>>" class="form-input">
         </div>
     
-        <h4>Direccion:<%= product.direccion %></h4>
-        <p>Deportes:</p><%= product.deporte1 %>
+        
     </form>
 </body>
 </html>

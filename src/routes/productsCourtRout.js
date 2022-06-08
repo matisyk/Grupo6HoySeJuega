@@ -42,7 +42,7 @@ router.post('/registrarCancha', upload.any("img-cancha"), productsController.sto
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-router.get('/editOwnerForm/:id/', productsController.edit);
+router.get('/editCourt/:id/', productsController.edit);
 router.patch('/editOwnerForm/:id/',upload.any(), productsController.update); 
 
 
