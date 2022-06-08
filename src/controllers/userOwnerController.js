@@ -7,6 +7,7 @@ const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 const courtFilePath = path.join(__dirname, '../database/courtDataBase.json');
 const courts = JSON.parse(fs.readFileSync(courtFilePath, 'utf-8'));
 
+const canchas = courts.filter(court => court.category == 'cancha');
 
 const userOwnerController = {
 
@@ -38,7 +39,7 @@ const userOwnerController = {
       vistaCancha: (req, res) => {
         let id = req.params.id
         let userOwner = owners.find(userOwner => userOwner.id == id)
-        res.render("partial/userOwner/vistaCancha", {userOwner})
+        res.render("partial/userOwner/vistaCancha", {userOwner, canchas})
       },
       canchas: (req, res) => {
         let id = req.params.id
