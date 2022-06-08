@@ -31,11 +31,11 @@
         <div class="input-group">
           <div>
             <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="nombre">
+            <input type="text" class="form-control" id="nombre" name="nombre" required>
           </div>
           <div class="entre-divs">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido">
+            <input type="text" class="form-control" id="apellido" name="apellido" required>
           </div>
           <br>
           <div class="entre-divs">
@@ -50,11 +50,11 @@
           <br>
           <div class="entre-divs">
             <label for="edad">Edad:</label>
-            <input type="number" class="form-control" id="edad" name="edad">
+            <input type="number" class="form-control" id="edad" name="edad" required>
           </div>
           <div class="entre-divs2">
             <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono">
+            <input type="number" class="form-control" id="telefono" name="telefono" required>
           </div>
           <div class="entre-divs3">
             <label for="telefono2">Contacto de emergencia:</label>
@@ -62,16 +62,26 @@
           </div>
           <div class="entre-divs3">
             <label for="categoria">Posición:</label>
-            <input type="text" class="form-control" id="categoria" name="categoria">
+            <input type="text" class="form-control" id="categoria" name="categoria" required>
           </div>
           <div class="entre-divs4">
             <label for="autoValoracion">Auto valoración:</label>
             <br>
-            <select name="autoValoracion" id="autoValoracion" name="autoValoracion">
-              <option value="-"> Elegir opción</option>
+            <select name="autoValoracion" id="autoValoracion" required>
+              <option selected disabled value="-"> Elegir opción</option>
               <option value="Estrella">Estrella</option>
               <option value="Copadito">Copadito</option>
               <option value="Juego">Juego</option>
+            </select>
+          </div>
+          <div class="entre-divs4">
+            <label for="Ubicacion">Ubicación:</label>
+            <br>
+            <select name="ubicacion" id="ubicacion" required>
+              <option selected disabled value="-"> Elegir opción</option>
+              <option value="Estrella">Belgrano</option>
+              <option value="Copadito">Palermo</option>
+              <option value="Juego">Tigre</option>
             </select>
           </div>
         </div>

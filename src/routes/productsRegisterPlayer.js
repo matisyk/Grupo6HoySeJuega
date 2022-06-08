@@ -35,6 +35,9 @@ const upload = multer({ storage: storage })
 router.get('/registerPlayer', productsController.create); 
 router.post('/registerPlayer', upload.any("img-cancha"), productsController.store); 
 
+/*** REDIRECT ***/ 
+
+router.get('/userPlayer/welcome', productsController.redirect); 
 
 // /*** GET ONE PRODUCT ***/ 
 
@@ -42,8 +45,8 @@ router.post('/registerPlayer', upload.any("img-cancha"), productsController.stor
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-// router.get('/editarCancha/:id/', productsController.edit); 
-// router.patch('/edit/:id/',upload.any(), productsController.update); 
+router.get('/editPlayerForm/:id/', productsController.edit); 
+router.patch('/editPlayerForm/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 

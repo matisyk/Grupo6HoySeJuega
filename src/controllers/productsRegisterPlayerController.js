@@ -32,7 +32,7 @@ const controller = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename;
 		}else{
-			image = "estrella-gris.png";
+			image = "imagenJugador-1654556031834-517220025.jpeg";
 		}
 
 		let newProduct = {
@@ -45,7 +45,15 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 		
-		res.redirect("/userPlayer/perfilDeJugador");
+		res.redirect("/register/userPlayer/welcome/");
+
+	},
+
+	// Redirect
+	redirect: (req, res) => {
+
+		let id = products.length;
+		res.render("partial/register/redireccion2", {id});
 
 	},
 
@@ -55,7 +63,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("editarCancha", {product})
+		res.render("partial/register/editPlayerForm", {product})
 
 	},
 	// Update - Method to update
@@ -95,7 +103,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
 
-		res.redirect("/products/detail/" + productToEdit.id)
+		res.redirect("/userPlayer/perfilDeJugador/" + productToEdit.id)
 
 	},
 

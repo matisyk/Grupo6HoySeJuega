@@ -26,42 +26,52 @@
 <body>
   <h1>Modificar datos personales</h1>
     <div class="formulario-div">
-    <form class="div1" action="/register/editPlayerForm/<%=userPlayer.id%>?_method=PUT" method="POST" enctype="multipart/form-data">
+    <form class="div1" action="/register/editPlayerForm/<%=product.id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <div class="input-group">
           <div>
             <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="nombre" value="<%= userPlayer.nombre %>">
+            <input type="text" class="form-control" id="nombre" name="nombre" value="<%= product.nombre %>">
           </div>
           <div class="entre-divs">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" value="<%= userPlayer.apellido %>">
+            <input type="text" class="form-control" id="apellido" name="apellido" value="<%= product.apellido %>">
           </div>
           <div class="entre-divs">
             <label for="edad">Edad:</label>
-            <input type="number" class="form-control" id="edad" name="edad" value="<%= userPlayer.edad%>">
+            <input type="number" class="form-control" id="edad" name="edad" value="<%= product.edad%>">
           </div>
           <div class="entre-divs2">
             <label for="telefono">Teléfono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono" value="<%= userPlayer.telefono%>">
+            <input type="number" class="form-control" id="telefono" name="telefono" value="<%= product.telefono%>">
           </div>
           <div class="entre-divs3">
             <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="telefono2" value="<%= userPlayer.telefono2%>">
+            <input type="number" class="form-control" id="telefono2" name="telefono2" value="<%= product.telefono2%>">
           </div>
           <div class="entre-divs3">
             <label for="categoria">Posición:</label>
             <input type="text" class="form-control" id="categoria" name="categoria"
-              value="<%= userPlayer.categoria%>">
+              value="<%= product.categoria%>">
           </div>
           <div class="entre-divs4">
             <label for="autoValoracion">Auto valoración:</label>
             <br>
             <select name="autovaloracion" id="autoValoracion" name="autoValoracion">
-              <option value="<%= userPlayer.autoValoracion %>"> <%= userPlayer.autoValoracion %></option>
+              <option value="<%= product.autoValoracion %>"> <%- product.autoValoracion %></option>
               <option value="Estrella">Estrella</option>
               <option value="Copadito">Copadito</option>
-              <option value="Me defiendo">Me defiendo</option>
+              <option value="Juego">Juego</option>
+            </select>
+          </div>
+          <div class="entre-divs4">
+            <label for="Ubicacion">Ubicación:</label>
+            <br>
+            <select name="ubicacion" id="ubicacion" required>
+              <option value="<%= product.ubicacion %>"> <%- product.ubicacion %></option>
+              <option value="Estrella">Belgrano</option>
+              <option value="Copadito">Palermo</option>
+              <option value="Juego">Tigre</option>
             </select>
           </div>
         </div>
@@ -216,7 +226,7 @@
               <div class="entre-divs8">
                 <label for="image" class="form-label">
                   <figure>
-                    <img class="fotoPerfil" src="/img/jugadores/<%= userPlayer.image %>" alt="imagen de producto">
+                    <img class="fotoPerfil" src="/img/jugadores/<%= product.image %>" alt="imagen de producto">
                   </figure>
                 </label>
                 <input type="file" name="image" class="form-input" style="padding: 10px 0 10px 10px; width: 100%;">
@@ -224,7 +234,7 @@
             </div>
           </div> 
     <div class="entre-divs9">
-      <a href="/userPlayer/perfilDeJugador/">
+      <a href="/product/perfilDeJugador/">
         <button>
           <div class="svg-wrapper-1">
             <div class="svg-wrapper">
@@ -246,7 +256,7 @@
     </div>
     <br>
     <div>
-      <a href="/userPlayer/perfilDeJugador/1">
+      <a href="/product/perfilDeJugador/1">
         <button5 class="volver">Volver</button5>
       </a>
     </div>

@@ -36,6 +36,9 @@ router.get('/', productsController.register);
 router.get('/registerOwner', productsController.create); 
 router.post('/registerOwner', upload.any("img-cancha"), productsController.store); 
 
+/*** REDIRECT ***/ 
+
+router.get('/userOwner/welcome', productsController.redirect); 
 
 // /*** GET ONE PRODUCT ***/ 
 
