@@ -26,7 +26,7 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 
-		res.render("partial/register/formularioDatosCancha")
+		res.render("partial/register/formularioDatosCancha");
 
 	},
 	
@@ -37,7 +37,7 @@ const controller = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename;
 		}else{
-			image = "estrella-gris.png";
+			image = "imagenCancha-1654372985364-494608673.jpg";
 		}
 
 		let newProduct = {
@@ -50,7 +50,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 		
-		res.redirect("/userOwner/vistaCancha/1/");
+		res.redirect("/userOwner/vistaCancha/" + newProduct.id);
 
 	},
 
