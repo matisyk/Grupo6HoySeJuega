@@ -50,7 +50,15 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 		
-		res.redirect("/userOwner/vistaCancha/" + newProduct.id);
+		res.redirect("/register/userOwner/welcome/");
+
+	},
+
+	// Redirect
+	redirect: (req, res) => {
+
+		let id = products.length;
+		res.render("partial/register/redireccion", {id});
 
 	},
 

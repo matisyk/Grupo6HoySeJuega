@@ -363,5 +363,28 @@
         "modo": "No",
         "efectivo": "No",
         "image": "estrella-gris.png"
+    },
+    {
+        "id": 17,
+        "nombre": "jjj",
+        "apellido": "djds",
+        "email": "a@ha.coma",
+        "password": "dkakdd",
+        "nombreDelLugar": "ajdao",
+        "direccion": "dfjasj",
+        "telefono": "913931",
+        "telefono2": "301303",
+        "iluminacion": "No",
+        "estacionamiento": "No",
+        "wifi": "No",
+        "vestuarios": "No",
+        "duchas": "No",
+        "parrilla": "No",
+        "quincho": "No",
+        "transferencia": "No",
+        "mercadoPago": "No",
+        "modo": "No",
+        "efectivo": "No",
+        "image": "imagenCancha-1654372985364-494608673.jpg"
     }
 ]
