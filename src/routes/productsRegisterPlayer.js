@@ -45,8 +45,8 @@ router.get('/userPlayer/welcome', productsController.redirect);
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-// router.get('/editarCancha/:id/', productsController.edit); 
-// router.patch('/edit/:id/',upload.any(), productsController.update); 
+router.get('/editPlayerForm/:id/', productsController.edit); 
+router.patch('/editPlayerForm/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 

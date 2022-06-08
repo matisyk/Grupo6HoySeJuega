@@ -63,7 +63,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("editarCancha", {product})
+		res.render("partial/register/editPlayerForm", {product})
 
 	},
 	// Update - Method to update
@@ -103,7 +103,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
 
-		res.redirect("/products/detail/" + productToEdit.id)
+		res.redirect("/userPlayer/perfilDeJugador/" + productToEdit.id)
 
 	},
 
