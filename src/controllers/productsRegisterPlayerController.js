@@ -32,7 +32,7 @@ const controller = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename;
 		}else{
-			image = "estrella-gris.png";
+			image = "imagenJugador-1654556031834-517220025.jpeg";
 		}
 
 		let newProduct = {
@@ -45,7 +45,15 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
 		
-		res.redirect("/userPlayer/perfilDeJugador");
+		res.redirect("/register/userPlayer/welcome/");
+
+	},
+
+	// Redirect
+	redirect: (req, res) => {
+
+		let id = products.length;
+		res.render("partial/register/redireccion2", {id});
 
 	},
 
