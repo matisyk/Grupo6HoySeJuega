@@ -62,12 +62,12 @@
 
 /* line 52, public/src/scss/jquery.jdSlider.scss */
 .jd-slider .prev {
-	left: 0;
+	left: 385px;
 }
 
 /* line 57, public/src/scss/jquery.jdSlider.scss */
 .jd-slider .next {
-	right: 0;
+	right: 385px;
 }
 
 /* line 62, public/src/scss/jquery.jdSlider.scss */

@@ -64,7 +64,9 @@ h1 {
   text-decoration: none;
   color: #ebebeb;
 }
-
+img.user-img {
+  max-width: 200px;
+}
 .boton-editar-superior {
   color: #ebebeb;
   position: absolute;
@@ -88,7 +90,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 50px 200px;
+  margin: 50px 620px;
   background-color: rgba(225, 225, 225, 0.2);
   border-radius: 10px;
 }
