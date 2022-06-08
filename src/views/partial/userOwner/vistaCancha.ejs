@@ -26,8 +26,11 @@
 
     <!---<p class="sin-canchas">Aún no tienes canchas registradas</p>--->
     <div class="datos-del-lugar background">
-
+      <% if (typeof userOwner.image != "undefined") { %>
         <img src="/img/products/<%= userOwner.image %>">
+      <% } else {%>
+        <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
+      <% } %> 
     <h2><%= userOwner.nombreDelLugar %></h2>
       
       <div class="datos2-del-lugar">
