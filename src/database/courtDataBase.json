@@ -1,0 +1,14 @@
+[ { "id": 1, 
+
+    "identificacion": "cancha1", 
+    
+    "deporte": "futbol", 
+    
+    "disponible": "SI",
+    
+    "cantidad de jugadores": 10 ,
+    
+    "tipo de cancha": "cesped sintético",
+    
+    "valor": 1000
+     } ]
