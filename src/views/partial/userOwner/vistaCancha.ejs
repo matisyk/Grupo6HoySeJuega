@@ -32,13 +32,16 @@
       <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
       <% } %>
       <h2><%= userOwner.nombreDelLugar %></h2>
-
       <div class="datos2-del-lugar">
         <ol>
           <li class="detalle1">
             <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
               <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.direccion %></span>
             </a>
+          </li>
+          <li class="detalle2">
+            <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.iluminacion%></span>
           </li>
           <li class="detalle2">
             <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
@@ -56,6 +59,10 @@
             <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
                 class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quincho%></span>
           </li>
+          <li class="detalle2">
+            <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
+                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.wifi%></span>
+          </li>
         </ol>
       </div>
       <div class="datos3-del-lugar">
@@ -63,14 +70,6 @@
           <li class="detalle2">
             <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
                 class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.estacionamiento%></span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.wifi%></span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.iluminacion%></span>
           </li>
           <li class="detalle2">
             <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
@@ -93,11 +92,11 @@
 
         </ol>
       </div>
-      <button class="boton-editar-superior"><a href='../../register/editOwnerForm/<%= userOwner.id%>'><i
-            class="fa-solid fa-pencil"></i></a></button>
+      <button class="boton-editar-superior"><a class='lapizUser'
+          href='../../register/editOwnerForm/<%= userOwner.id%>'><i class="fa-solid fa-pencil"></i></a></button>
     </div>
 
-    <h2>Tus canchas:</h2>
+    <h2 class="titulo1">Tus canchas:</h2>
 
     <div class="container-fluid p-0 bajar-slider">
       <section class="jd-slider slideshow">
@@ -108,8 +107,7 @@
               <div class="tarjetas tarjetas-canchas">
                 <div class="tarjeta">
                   <div class="blob"></div>
-                  <span class="img"><a href="/userOwner/agenda"><img src="/img/<%= cancha.image %>"
-                        alt=""></a></span>
+                  <span class="img"><a href="/userOwner/agenda"><img src="/img/<%= cancha.image %>" alt=""></a></span>
                   <h3><%= cancha.identificacion %></h3>
                   <h3>$ <%= cancha.valor %></h3>
                   <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
@@ -132,9 +130,22 @@
       </section>
 
     </div>
+    <div class="botones-registro">
+      <button class="learn-more">
+        <a href="/userOwner/registrarCancha"><span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Registrá tus Canchas</span></a>
+
+      </button>
 
 
-    <h2>Tus escuelitas:</h2>
+      <button>
+        <a href="/userOwner/registrarCancha" class="boton-registrar-cancha"> </a>
+      </button>
+    </div>
+
+    <h2 class="titulo2">Tus escuelitas:</h2>
 
     <div class="container-fluid p-0 bajar-slider">
       <section class="jd-slider slideshow">
@@ -156,122 +167,13 @@
                       <li>Precio: $2000</li>
                     </ul>
                   </p>
-
                   <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
-
-                </div>
-
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/palo-hockey.png" alt=""
-                        class="palo-hockey"></a></span>
-                  <h3>Hockey <br><span class="categoria"> Categoría Gorriones</span></h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Profesor: Romina Salvado </li>
-                      <li>Día: Miércoles 20hs. </li>
-                      <li>Cancha: 1 </li>
-                      <li>Cantidad de alumnos: 10</li>
-                      <li>Precio: $2500</li>
-                    </ul>
-                  </p>
-
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
-                </div>
-
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/raqueta-tenis.png"
-                        alt=""></a></span>
-                  <h3>Tenis<br><span class="categoria"> Categoría Alevines</span></h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Profesor: Javier Dominguez </li>
-                      <li>Día: Jueves 19hs. </li>
-                      <li>Cancha: 3 </li>
-                      <li>Cantidad de alumnos: 4</li>
-                      <li>Precio: $6000</li>
-                    </ul>
-                  </p>
-
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-
                   <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
                 </div>
               </div>
-
             </li>
-
-            <li>
-              <div class="tarjetas">
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelita"><img src="/img/pelota-de-futbol.png" alt=""></span>
-                  <h3>Futbol <br><span class="categoria">Categoría 2010</span> </h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Profesor: Flavio Gutiérrez </li>
-                      <li>Día: Martes 16hs. </li>
-                      <li>Cancha: 2 </li>
-                      <li>Cantidad de alumnos: 7</li>
-                      <li>Precio: $3500</li>
-                    </ul>
-                  </p>
-
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
-
-                </div>
-
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelita"><img src="/img/palo-hockey.png" alt="" class="palo-hockey"></span>
-                  <h3>Hockey <br><span class="categoria"> Categoría Gorriones</span></h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Profesor: Romina Salvado </li>
-                      <li>Día: Miércoles 20hs. </li>
-                      <li>Cancha: 1 </li>
-                      <li>Cantidad de alumnos: 10</li>
-                      <li>Precio: $2500</li>
-                    </ul>
-                  </p>
-
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
-                </div>
-
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelita"><img src="/img/raqueta-tenis.png" alt=""></span>
-                  <h3>Tenis<br><span class="categoria"> Categoría Alevines</span></h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Profesor: Javier Dominguez </li>
-                      <li>Día: Jueves 19hs. </li>
-                      <li>Cancha: 3 </li>
-                      <li>Cantidad de alumnos: 4</li>
-                      <li>Precio: $6000</li>
-                    </ul>
-                  </p>
-
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
-                </div>
-              </div>
-
-            </li>
-
           </ul>
         </div>
-
         <a class="prev" href="#">
           <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
         </a>
@@ -279,48 +181,66 @@
           <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
         </a>
       </section>
-
     </div>
-
-
-
     <div class="botones-registro">
-      <button class="learn-more">
-        <a href="/userOwner/registrarCancha"><span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Registrá tus canchas</span></a>
-
-      </button>
-
-
-      <button>
-        <a href="/userOwner/registrarCancha" class="boton-registrar-cancha"> </a>
-      </button>
-
-      <br><br>
-
-
       <button class="learn-more">
         <a href="/userOwner/registrarEscuelita"><span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
-          <span class="button-text">Registrá tus escuelitas</span></a>
-
+          <span class="button-text">Escuelitas</span></a>
       </button>
-
-
       <button>
         <a href="/userOwner/registrarEscuelita" class="boton-registrar-cancha"> </a>
       </button>
+    </div>
 
-      <br><br>
+    <h2 class="titulo2">Torneos:</h2>
 
+    <div class="container-fluid p-0 bajar-slider">
+      <section class="jd-slider slideshow">
+        <div class="slide-inner">
+          <ul class="slide-area">
+            <li>
+              <div class="tarjetas">
+                <div class="tarjeta tarjeta-esc">
+                  <div class="blob"></div>
+                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/padel.jpg"
+                        alt=""></a></span>
+                  <h3>Padel <br><span class="categoria">Categoría 2000</span> </h3>
+                  <p class="descrip-tarjeta-esc">
+                    <ul>
+                      <li>Profesor: Romina López </li>
+                      <li>Día: Lunes 17hs. </li>
+                      <li>Cancha: 5 </li>
+                      <li>Cantidad de alumnos: 6</li>
+                      <li>Precio: $2000</li>
+                    </ul>
+                  </p>
+                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <a class="prev" href="#">
+          <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+        </a>
+        <a class="next" href="#">
+          <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
+        </a>
+      </section>
+    </div>
+
+    <div class="botones-registro">
+
+    </div>
+    <div class="botones-registro">
       <button class="learn-more">
         <a href="/userOwner/crearTorneo"><span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
-          <span class="button-text"> Creá tus torneos</span></a>
+          <span class="button-text"> Torneos</span></a>
 
       </button>
 

@@ -124,7 +124,7 @@ header {
   font-family: "Bangers", cursive;
   color: #ebebeb;
 }
-.menu-cont2 {
+.menu-cont4 {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -147,6 +147,7 @@ header {
   align-items: center;
   text-align: center;
   margin-left: 150px;
+  visibility: hidden;
 }
 
 @media (min-width: 450px) {
@@ -162,10 +163,13 @@ header {
   .menu-hamburguesa {
     visibility: hidden;
   }
-  .menu-cont2 {
+  .menu-cont4 {
     visibility: visible;
-    font-size: 10px;
-  }
+    font-size: 12px;
+}
+  .menu-cont4 {
+  margin-left: 50px;
+}
   .menu-cont {
     margin-left: 20%;
   }
@@ -189,6 +193,7 @@ header {
     padding: 0px 0px;
     margin: 15px 0 0px 15px;
   }
+
 }
 @media (min-width: 1024px) {
   header {
@@ -227,10 +232,6 @@ header {
     text-align: center;
     visibility: hidden;
   }
-  .menu-cont2 {
-    font-size: 13px;
-  }
-
   .menu a {
     padding: 8px;
     /*color: #000000;*/
@@ -318,7 +319,7 @@ header {
     font-family: "Bangers", cursive;
     color: #ebebeb;
   }
-  .menu-cont2 {
+  .menu-cont4 {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -342,12 +343,12 @@ header {
     margin-left: 150px;
   }
   @media (min-width:1440px){
-   .menu-cont2 {
+   .menu-cont4 {
     font-size: 20px;
   } 
   }
   @media (min-width:1600px){
-   .menu-cont2 {
+   .menu-cont4 {
     font-size: 20px;
     margin-right: 25px;
   } 
