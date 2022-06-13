@@ -4,16 +4,67 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Editar cancha <%- product.id %> </title>
+    <link rel="stylesheet" href="/css/registrarCancha.css">
 </head>
 <body>
         <%- include('./headerOwner.ejs') %>
-    <form action="/products/edit/<%= cancha.id %>?_method=PUT" method="POST">
-        <img src="/images/products/" alt="product image">
-        <div class="col-12 col-md-6">
-            <label for="name" class="form-label">Nombre del lugar:</label>
-            <input type="text" id="name" name="name" value="<%= cancha.identificacion %>>" class="form-input">
+    <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST">
+        <div class="tarjeta">
+            <div class="item-tarjeta">
+                <label>Identificación de la cancha:</label>
+                <input type="text" placeholder="Ej: Cancha 1" name="identificacion" value="<%= product.identificacion %> " required >
+            </div>
+    <div style="display:none">
+        <select name="category" >
+        <option value="cancha">cancha</option>
+    </div>
+            <div class="item-tarjeta">
+                <label>Deporte:</label>
+                    <select id="deporte" name="deporte">
+                        <option value="" >Elegir un deporte</option>
+                        <option value="futbol">Futbol</option>
+                        <option value="padel">Padel</option>
+                        <option value="basquet">Basquet</option>
+                        <option value="tenis">Tenis</option>
+                        <option value="voley">Voley</option>
+                    </select>
+            </div>
+    
+            
+            <div class="item-tarjeta">
+                <label>Cantidad de jugadores:</label>
+                <input type="number" name="capacidad" placeholder="Ej: 10" value="<%= product.capacidad %>">
+            </div> 
+    
+            <div class="item-tarjeta">
+                <label>Tipo de cancha</label>
+                    <select id="deporte" name="tipoDeCancha">
+                        <option value="" >Elegir una clase</option>
+                        <option value="cespedS">Césped sintético</option>
+                        <option value="cesped">Césped</option>
+                        <option value="cemento">Cemento</option>
+                        <option value="parque">Parqué</option>
+                        <option value="ladrillo">Ladrillo</option>
+                    </select>
+            </div>
+    
+            <div class="item-tarjeta">
+                <label>Cargar imagen</label>
+                <input class="foto" type="file" name="image" accept=".jpg .png" multiple>
+                <label style="font-size: small;"><%= product.image %> </label>
+            </div>
+           
+            <div class="item-tarjeta">
+                <label>Precio:</label> <span> $ </span>
+                <input type="number" name="valor" placeholder="Ej:pesos argentinos" value="<%= product.valor %>">
+            </div> 
+
+            <div class="item-tarjeta">
+                <button type="submit">Enviar</button>
+            </div>
         </div>
+
     
         
     </form>

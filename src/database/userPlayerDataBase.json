@@ -1,1 +1,35 @@
-[{"id":1,"nombre":"juan","apellido":"Yasmin","edad":"28","telefono":"1156489","telefono2":"55648895","categoria":"Arquera","autovaloracion":"","ubicacion":"Estrella","deporte1":"","deporte2":"","deporte3":["",""],"zonaDeJuego":"","dia1":"","dia2":"","dia3":"","dia4":"","dia5":"","dia6":"","dia7":"","hora1":"","hora2":"","hora3":"","hora4":"","hora5":"","hora6":"","hora7":"","image":"image-1654555147844-754503800.webp"}]
+[
+    {
+        "id": 1,
+        "nombre": "juan",
+        "apellido": "Yasmin",
+        "edad": "28",
+        "telefono": "1156489",
+        "telefono2": "55648895",
+        "categoria": "Arquera",
+        "autovaloracion": "",
+        "ubicacion": "Estrella",
+        "deporte1": "",
+        "deporte2": "",
+        "deporte3": [
+            "",
+            ""
+        ],
+        "zonaDeJuego": "",
+        "dia1": "",
+        "dia2": "",
+        "dia3": "",
+        "dia4": "",
+        "dia5": "",
+        "dia6": "",
+        "dia7": "",
+        "hora1": "",
+        "hora2": "",
+        "hora3": "",
+        "hora4": "",
+        "hora5": "",
+        "hora6": "",
+        "hora7": "",
+        "image": "image-1654555147844-754503800.webp"
+    }
+]
