@@ -9,7 +9,7 @@
 </head>
 <body>
         <%- include('./headerOwner.ejs') %>
-    <form action="/products/edit/<%= product.id %>?_method=PATCH" method="POST">
+    <form action="/userOwner/editCourt/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label>Identificación de la cancha:</label>
