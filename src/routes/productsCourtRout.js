@@ -43,11 +43,11 @@ router.post('/registrarCancha', upload.any("img-cancha"), productsController.sto
 // /*** EDIT ONE PRODUCT ***/ 
 
 router.get('/editCourt/:id/', productsController.edit);
-router.patch('/editOwnerForm/:id/',upload.any(), productsController.update); 
+router.patch('/editCourt/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 
-// router.delete('/delete/:id', productsController.destroy); 
+router.delete('/delete/:id', productsController.destroy); 
 
 
 module.exports = router;

@@ -102,13 +102,12 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy : (req, res) => {
-		
 		let id = req.params.id
 		let productToDelete = products.filter(product => product.id != id)
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete));
 
-		res.redirect("/")
+		res.redirect("/userOwner/vistaCancha/" + id)
 
 	}
 };

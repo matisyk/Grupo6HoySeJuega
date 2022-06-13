@@ -688,9 +688,9 @@ p {
     border-bottom-right-radius: 10px;
   }
 
-  h2 {
+  /**h2 {
     margin-left: 200px;
-  }
+  }**/
 }
 
 @media (min-width: 1440px) {
