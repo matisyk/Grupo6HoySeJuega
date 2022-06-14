@@ -41,6 +41,9 @@ app.use('/userOwner', userOwnerRouter);
 const registerCourt = require('./routes/productsCourtRout');
 app.use('/userOwner', registerCourt);
 
+const registerSchool = require('./routes/productsSchoolRout');
+app.use('/userOwner', registerSchool);
+
 // userPlayer
 
 const userPlayerRouter = require('./routes/userPlayerRout');
