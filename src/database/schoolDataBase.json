@@ -1,3 +1,19 @@
 [
-    {}
+    {
+        "id": 1,
+        "deporte": "Futbol",
+        "alumnos": "10",
+        "edad-min": "18",
+        "edad-max": "60",
+        "genero": "Masculino",
+        "dia": "lunes",
+        "valor": "1000",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 2
+    },
+    {
+        "id": 3
+    }
 ]
