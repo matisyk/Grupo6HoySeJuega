@@ -29,10 +29,17 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 
+		let image;
+		if(req.files[0] != undefined){
+			image = req.files[0].filename;
+		}else{
+			image = "estrella-gris.png";
+		}
+
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
-			...req.body 
-			//image: image
+			...req.body, 
+			image: image
 		}
 
 		products.push(newProduct);

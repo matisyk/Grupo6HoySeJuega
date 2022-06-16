@@ -33,7 +33,7 @@ const upload = multer({ storage: storage })
 /*** CREATE ONE PRODUCT ***/ 
 
 router.get('/registrarEscuelita', productsController.create); 
-router.post('/registrarEscuelita', productsController.store); 
+router.post('/registrarEscuelita',upload.any(), productsController.store); 
 
 
 // /*** GET ONE PRODUCT ***/ 

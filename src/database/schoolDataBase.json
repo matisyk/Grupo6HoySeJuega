@@ -11,9 +11,16 @@
         "image": "estrella-gris.png"
     },
     {
-        "id": 2
-    },
-    {
-        "id": 3
+        "id": 2,
+        "deporte": "Futbol",
+        "alumnos": "10",
+        "edad-min": "10",
+        "edad-max": "100",
+        "genero": "Femenino",
+        "dia": "martes",
+        "registroHorarios": "",
+        "valor": "1000",
+        "enviar": "",
+        "image": "estrella-gris.png"
     }
 ]
