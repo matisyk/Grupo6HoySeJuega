@@ -56,7 +56,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("partial/userOwner/editarCancha", {product})
+		res.render("partial/userOwner/editarEscuelita", {product})
 
 	},
 	// Update - Method to update
@@ -96,7 +96,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
 
-		res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
+		res.redirect("/userOwner/vistaCancha/10")
 
 	},
 

@@ -3,10 +3,10 @@
         "id": 1,
         "deporte": "Futbol",
         "alumnos": "10",
-        "edad-min": "18",
-        "edad-max": "60",
+        "edadMin": "18",
+        "edadMax": "60",
         "genero": "Masculino",
-        "dia": "lunes",
+        "dia": "Lunes",
         "valor": "1000",
         "image": "estrella-gris.png"
     },
@@ -14,13 +14,11 @@
         "id": 2,
         "deporte": "Futbol",
         "alumnos": "10",
-        "edad-min": "10",
-        "edad-max": "100",
+        "edadMin": "10",
+        "edadMax": "100",
         "genero": "Femenino",
-        "dia": "martes",
-        "registroHorarios": "",
+        "registroHorarios": "20:30",
         "valor": "1000",
-        "enviar": "",
         "image": "estrella-gris.png"
     }
 ]

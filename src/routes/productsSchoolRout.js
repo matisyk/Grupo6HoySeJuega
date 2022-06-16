@@ -42,8 +42,8 @@ router.post('/registrarEscuelita',upload.any(), productsController.store);
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-//router.get('/editSchool/:id/', productsController.edit);
-//router.patch('/editSchool/:id/',upload.any(), productsController.update); 
+router.get('/editSchool/:id/', productsController.edit);
+router.patch('/editSchool/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 

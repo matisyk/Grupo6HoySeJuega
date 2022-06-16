@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Escuelita</title>
+    <title>Crear Escuelita <%- product.id %></title>
 
     <!--CSS PROPIOS-->
     <link rel="stylesheet" href="/css/registrarCancha.css">
@@ -19,12 +19,12 @@
 
 <body>
 
-    <form action="/userOwner/registrarEscuelita" enctype="multipart/form-data" method="POST">
+    <form action="/userOwner/editSchool/<%= product.id %>?_method=PATCH" enctype="multipart/form-data" method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label name="registroDeDeporte">Deporte:</label>
                 <select name="deporte" id="deporte">
-                    <option selected disabled>Elegir opcion</option>
+                    <option selected disabled>Seleccionar</option>
                     <option value="Futbol">Futbol</option>
                     <option value="Padel">Padel</option>
                     <option value="Basquet">Basquet</option>
@@ -34,25 +34,25 @@
             </div>
             <div class="item-tarjeta">
                 <label name="cantidad">Cantidad máx. de alumnos:</label>
-                <input type="number" name="alumnos" id="alumnos">
+                <input type="number" name="alumnos" id="alumnos" value="<%= product.alumnos %>">
             </div>
     
             <div class="edad">
                 <div class="item-tarjeta">
                 <label name="edad-min">Edad mínima:</label>
-                <input type="number" name="edad-min" id="edad-min">
+                <input type="number" name="edadMin" id="edadMin" value="<%= product.edadMin %>">
             </div>
             
             <div class="item-tarjeta">
                 <label name="edad-max">Edad máxima:</label>
-                <input type="number" name="edad-max" id="edad-max">
+                <input type="number" name="edadMax" id="edadMax" value="<%= product.edadMax %>">
             </div>
             </div>
     
             <div class="item-tarjeta">
                 <label name="lugar">Género:</label>
                 <select name="genero" id="genero">
-                    <option selected disabled>Elegir opción</option>
+                    <option selected disabled>Seleccionar</option>
                     <option value="Femenino">Femenino</option>
                     <option value="Masculino">Masculino</option>
                     <option value="Mixto">Mixto</option>
@@ -62,25 +62,25 @@
             <div class="otro-item-tarjeta">
                 <div class="item-tarjeta"><label name="horarios">Día a realizarse:</label></div>
                 <select name="dia" id="dia">
-                    <option selected disabled>Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="martes">Martes</option>
-                    <option value="miercoles">Miércoles</option>
-                    <option value="jueves">Jueves</option>
-                    <option value="viernes">Viernes</option>
-                    <option value="sabado">Sabado</option>
-                    <option value="domingo">Domingo</option>
+                    <option selected disabled>Seleccionar</option>
+                    <option value="Lunes">Lunes</option>
+                    <option value="Martes">Martes</option>
+                    <option value="Miercoles">Miércoles</option>
+                    <option value="Jueves">Jueves</option>
+                    <option value="Viernes">Viernes</option>
+                    <option value="Sabado">Sabado</option>
+                    <option value="Domingo">Domingo</option>
                 </select>
-                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
+                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios" value="<%= product.registroHorarios %>">
             </div>
     
             <div class="item-tarjeta">
                 <label name="premio">Valor mensual</label>
-                <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor">
+                <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor" value="<%= product.valor %>">
             </div>
     
             <div class="item-tarjeta boton-enviar">
-                <button type="submit" name="enviar">Registrar</button>
+                <button type="submit">Registrar</button>
             </div>
         </div>
     </form>
