@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const productsFilePath = path.join(__dirname, '../database/courtDataBase.json');
+const productsFilePath = path.join(__dirname, '../database/torneoDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -22,7 +22,7 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 
-		res.render("partial/userOwner/registrarCancha")
+		res.render("partial/userOwner/crearTorneo")
 
 	},
 	
@@ -56,7 +56,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("partial/userOwner/editarCancha", {product})
+		res.render("partial/userOwner/crearTorneo", {product})
 
 	},
 	// Update - Method to update

@@ -6,7 +6,7 @@ const path = require ('path')
 
 
 // ************ Controller Require ************
-const productsController = require('../controllers/productsSchoolController');
+const productsController = require('../controllers/productsTorneoController');
 
 // ************ MULTER ************
 
@@ -32,8 +32,8 @@ const upload = multer({ storage: storage })
 
 /*** CREATE ONE PRODUCT ***/ 
 
-router.get('/registrarEscuelita', productsController.create); 
-router.post('/registrarEscuelita',upload.any(), productsController.store); 
+router.get('/crearTorneo', productsController.create); 
+router.post('/crearTorneo',upload.any(), productsController.store); 
 
 
 // /*** GET ONE PRODUCT ***/ 
@@ -42,8 +42,8 @@ router.post('/registrarEscuelita',upload.any(), productsController.store);
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-router.get('/editSchool/:id/', productsController.edit);
-router.patch('/editSchool/:id/',upload.any(), productsController.update); 
+router.get('/editTorneo/:id/', productsController.edit);
+router.patch('/editTorneo/:id/',upload.any(), productsController.update); 
 
 
 // /*** DELETE ONE PRODUCT***/ 
