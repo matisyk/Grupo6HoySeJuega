@@ -1,5 +1,16 @@
 [
     {
         "id": 1
+    },
+    {
+        "id": 2,
+        "posicion": "Futbol",
+        "cantidad": "10",
+        "edad-min": "10",
+        "edad-max": "100",
+        "fecha-torneo": "2022-06-28",
+        "registroHorarios": "20:45",
+        "premio": "1000",
+        "image": "estrella-gris.png"
     }
 ]
