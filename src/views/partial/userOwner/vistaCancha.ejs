@@ -110,10 +110,11 @@
                   <span class="img"><a href="/userOwner/agenda"><img src="/img/<%= cancha.image %>" alt=""></a></span>
                   <h3><%= cancha.identificacion %></h3>
                   <h3>$ <%= cancha.valor %></h3>
+
                   <form action="/userOwner/delete/<%= cancha.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
-                  
+
 
                   <button class="boton-editar"><a href="/userOwner/editCourt/<%= cancha.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
@@ -154,27 +155,35 @@
       <section class="jd-slider slideshow">
         <div class="slide-inner">
           <ul class="slide-area">
+            <% escuelitas.forEach (escuelita => { %>
             <li>
               <div class="tarjetas">
                 <div class="tarjeta tarjeta-esc">
                   <div class="blob"></div>
-                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/padel.jpg"
+                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/<%= escuelita.image %>"
                         alt=""></a></span>
-                  <h3>Padel <br><span class="categoria">Categoría 2000</span> </h3>
+                  <h3><%= escuelita.deporte %> <br><span class="categoria">Categoría
+                      <%= escuelita.categoria %> </span> </h3>
                   <p class="descrip-tarjeta-esc">
                     <ul>
-                      <li>Profesor: Romina López </li>
-                      <li>Día: Lunes 17hs. </li>
-                      <li>Cancha: 5 </li>
+                      <li>Profesor: <%= escuelita.image %> </li>
+                      <li>Día: <%= escuelita.dia %> - <%= escuelita.registroHorarios %> </li>
+                      <li>Cancha: <%= escuelita.cantidad %> </li>
                       <li>Cantidad de alumnos: 6</li>
-                      <li>Precio: $2000</li>
+                      <li>Precio: <%= escuelita.valor %></li>
                     </ul>
                   </p>
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
+                  <form action="/userOwner/delete/<%= escuelita.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+                  </form>
+
+
+                  <button class="boton-editar"><a href="/userOwner/editCourt/<%= escuelita.id%>"><i
+                        class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
             </li>
+            <% }) %>
           </ul>
         </div>
         <a class="prev" href="#">

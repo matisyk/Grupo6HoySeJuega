@@ -31,7 +31,6 @@
         "dia": "jueves",
         "registroHorarios": "20:00",
         "valor": "5000",
-        "enviar": "",
         "image": "estrella-gris.png"
     },
     {
@@ -44,7 +43,6 @@
         "dia": "domingo",
         "registroHorarios": "10:00",
         "valor": "4000",
-        "enviar": "",
         "image": "estrella-gris.png"
     },
     {
@@ -56,7 +54,6 @@
         "genero": "Masculino",
         "dia": "miercoles",
         "registroHorarios": "19:30",
-        "valor": "3500",
-        "enviar": ""
+        "valor": "3500"
     }
 ]
