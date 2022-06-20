@@ -32,18 +32,18 @@
             </div>
             <div class="item-tarjeta">
                 <label>Cantidad de Equipos:</label>
-                <input name="cantidad" type="text">
+                <input name="cantidad" value="<%= product.cantidad %> " type="text">
             </div>
     
             <div class="edad">
                 <div class="item-tarjeta">
                 <label>Edad mínima:</label>
-                <input name="edadMin" type="text">
+                <input name="edadMin" value="<%= product.edadMin %>" type="text">
             </div>
             
             <div class="item-tarjeta">
                 <label >Edad máxima:</label>
-                <input name="edadMax" type="text">
+                <input name="edadMax" value="<%= product.edadMax %>" type="text">
             </div>
             </div>
     
@@ -61,8 +61,8 @@
     <div class="item-tarjeta">
         <label>Fecha del torneo:</label>
         <br> De:
-        <input name="fechaInicio" type="date">
-        Hasta: <input name="fechaFinal" type="date">
+        <input name="fechaInicio" type="date" value="<%= product.fechaInicio %>">
+        Hasta: <input name="fechaFinal" type="date" value="<%= product.fechaFinal %>">
     </div>
     
             <div class="otro-item-tarjeta">
@@ -77,12 +77,12 @@
                     <option value="Sabado">Sabado</option>
                     <option value="Domingo">Domingo</option>
                 </select>
-                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
+                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios" value="<%= product.registroHorarios %>">
             </div>
     
             <div class="item-tarjeta">
                 <label>Premio</label>
-                <input type="text" name="premio" placeholder="$$$">
+                <input type="text" name="premio" placeholder="$$$" value="<%= product.premio %>">
             </div>
     
             <div class="item-tarjeta boton-enviar">
