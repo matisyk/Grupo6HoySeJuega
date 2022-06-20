@@ -56,7 +56,7 @@ const controller = {
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("partial/userOwner/crearTorneo", {product})
+		res.render("partial/userOwner/editarTorneo", {product})
 
 	},
 	// Update - Method to update
