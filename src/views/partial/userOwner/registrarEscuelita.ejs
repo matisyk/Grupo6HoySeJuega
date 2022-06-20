@@ -22,7 +22,7 @@
     <form action="/userOwner/registrarEscuelita" enctype="multipart/form-data" method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
-                <label name="registroDeDeporte">Deporte:</label>
+                <label>Deporte:</label>
                 <select name="deporte" id="deporte">
                     <option selected disabled>Elegir opcion</option>
                     <option value="Futbol">Futbol</option>
@@ -32,25 +32,27 @@
                     <option value="Tenis">Tenis</option>
                 </select>
             </div>
+
+            <div class="edad">
+                <div class="item-tarjeta">
+                <label>Cancha a utilizar:</label>
+                <input type="number" name="cancha" id="cancha">
+            </div>
+
             <div class="item-tarjeta">
-                <label name="cantidad">Cantidad máx. de alumnos:</label>
+                <label>Cantidad máx. de alumnos:</label>
                 <input type="number" name="alumnos" id="alumnos">
             </div>
     
             <div class="edad">
                 <div class="item-tarjeta">
-                <label name="edad-min">Edad mínima:</label>
+                <label name="edad-min">Categoría</label>
                 <input type="number" name="edad-min" id="edad-min">
             </div>
             
-            <div class="item-tarjeta">
-                <label name="edad-max">Edad máxima:</label>
-                <input type="number" name="edad-max" id="edad-max">
-            </div>
-            </div>
     
             <div class="item-tarjeta">
-                <label name="lugar">Género:</label>
+                <label>Género:</label>
                 <select name="genero" id="genero">
                     <option selected disabled>Elegir opción</option>
                     <option value="Femenino">Femenino</option>
@@ -60,7 +62,7 @@
             </div>
     
             <div class="otro-item-tarjeta">
-                <div class="item-tarjeta"><label name="horarios">Día a realizarse:</label></div>
+                <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                 <select name="dia" id="dia">
                     <option selected disabled>Elegir día</option>
                     <option value="lunes">Lunes</option>
