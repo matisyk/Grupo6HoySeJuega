@@ -1,1 +1,75 @@
-[{"id":1,"identificacion":"Cancha 1  ","category":"cancha","capacidad":"1","tipoDeCancha":"","valor":"1000","image":"estrella-gris.png"},{"id":2,"identificacion":"Cancha2","deporte":"","capacidad":"","tipoDeCancha":"","valor":"1000","enviar":"","category":"cancha","image":"estrella-gris.png"},{"id":3,"identificacion":"Cancha 3","deporte":"padel","capacidad":"4","tipoDeCancha":"cemento","valor":"800","enviar":"","category":"cancha","image":"estrella-gris.png"},{"id":4,"identificacion":"Cancha 4","deporte":"voley","capacidad":"10","tipoDeCancha":"ladrillo","valor":"1500","enviar":"","category":"cancha","image":"estrella-gris.png"},{"id":5,"identificacion":"Cancha 5","deporte":"basquet","capacidad":"","tipoDeCancha":"","valor":"1000","enviar":"","category":"cancha","image":"estrella-gris.png"},{"id":6,"identificacion":"Cancha 6","deporte":"basquet","capacidad":"","tipoDeCancha":"","valor":"1000","enviar":"","category":"cancha","image":"estrella-gris.png"},{"id":7,"identificacion":"cancha 7   ","category":"cancha","capacidad":"24","tipoDeCancha":"","valor":"5000","image":"estrella-gris.png"}]
+[
+    {
+        "id": 1,
+        "identificacion": "Cancha 1  ",
+        "category": "cancha",
+        "capacidad": "1",
+        "tipoDeCancha": "",
+        "valor": "1000",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 2,
+        "identificacion": "Cancha2",
+        "deporte": "",
+        "capacidad": "",
+        "tipoDeCancha": "",
+        "valor": "1000",
+        "enviar": "",
+        "category": "cancha",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 3,
+        "identificacion": "Cancha 3",
+        "deporte": "padel",
+        "capacidad": "4",
+        "tipoDeCancha": "cemento",
+        "valor": "800",
+        "enviar": "",
+        "category": "cancha",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 4,
+        "identificacion": "Cancha 4",
+        "deporte": "voley",
+        "capacidad": "10",
+        "tipoDeCancha": "ladrillo",
+        "valor": "1500",
+        "enviar": "",
+        "category": "cancha",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 5,
+        "identificacion": "Cancha 5",
+        "deporte": "basquet",
+        "capacidad": "",
+        "tipoDeCancha": "",
+        "valor": "1000",
+        "enviar": "",
+        "category": "cancha",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 6,
+        "identificacion": "Cancha 6",
+        "deporte": "basquet",
+        "capacidad": "",
+        "tipoDeCancha": "",
+        "valor": "1000",
+        "enviar": "",
+        "category": "cancha",
+        "image": "estrella-gris.png"
+    },
+    {
+        "id": 7,
+        "identificacion": "cancha 7   ",
+        "category": "cancha",
+        "capacidad": "24",
+        "tipoDeCancha": "",
+        "valor": "5000",
+        "image": "estrella-gris.png"
+    }
+]
