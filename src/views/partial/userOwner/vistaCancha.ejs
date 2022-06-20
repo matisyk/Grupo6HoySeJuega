@@ -155,30 +155,30 @@
       <section class="jd-slider slideshow">
         <div class="slide-inner">
           <ul class="slide-area">
-            <% escuelitas.forEach (escuelita => { %>
+            <% escuelitas.forEach (escuelitas => { %>
             <li>
               <div class="tarjetas">
                 <div class="tarjeta tarjeta-esc">
                   <div class="blob"></div>
-                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/<%= escuelita.image %>"
+                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/<%= escuelitas.image %>"
                         alt=""></a></span>
-                  <h3><%= escuelita.deporte %> <br><span class="categoria">Categoría
-                      <%= escuelita.categoria %> </span> </h3>
+                  <h3><%= escuelitas.deporte %> <br><span class="categoria">Categoría
+                      <%= escuelitas.categoria %> </span> </h3>
                   <p class="descrip-tarjeta-esc">
                     <ul>
-                      <li>Profesor: <%= escuelita.image %> </li>
-                      <li>Día: <%= escuelita.dia %> - <%= escuelita.registroHorarios %> </li>
-                      <li>Cancha: <%= escuelita.cantidad %> </li>
-                      <li>Cantidad de alumnos: 6</li>
-                      <li>Precio: <%= escuelita.valor %></li>
+                      <li>Profesor: <%= escuelitas.profesor %> </li>
+                      <li>Día: <%= escuelitas.dia %> - <%= escuelitas.registroHorarios %> </li>
+                      <li>Cancha: <%= escuelitas.cancha %> </li>
+                      <li>Cantidad de alumnos: <%= escuelitas.alumnos %></li>
+                      <li>Precio: <%= escuelitas.valor %></li>
                     </ul>
                   </p>
-                  <form action="/userOwner/delete/<%= escuelita.id %>?_method=DELETE" method="POST">
+                  <form action="/userOwner/delete/<%= escuelitas.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
 
-                  <button class="boton-editar"><a href="/userOwner/editCourt/<%= escuelita.id%>"><i
+                  <button class="boton-editar"><a href="/userOwner/editCourt/<%= escuelitas.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
@@ -196,13 +196,13 @@
     </div>
     <div class="botones-registro">
       <button class="learn-more">
-        <a href="/userOwner/registrarEscuelita"><span class="circle03 circle" aria-hidden="true">
+        <a href="/userOwner/registrarescuelitas"><span class="circle03 circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
-          <span class="button-text">Escuelitas</span></a>
+          <span class="button-text">escuelitas</span></a>
       </button>
       <button>
-        <a href="/userOwner/registrarEscuelita" class="boton-registrar-cancha"> </a>
+        <a href="/userOwner/registrarescuelitas" class="boton-registrar-cancha"> </a>
       </button>
     </div>
 
@@ -216,7 +216,7 @@
               <div class="tarjetas">
                 <div class="tarjeta tarjeta-esc">
                   <div class="blob"></div>
-                  <span class="img img-escuelita"><a href="/userOwner/agenda"><img src="/img/padel.jpg"
+                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/padel.jpg"
                         alt=""></a></span>
                   <h3>Padel <br><span class="categoria">Categoría 2000</span> </h3>
                   <p class="descrip-tarjeta-esc">

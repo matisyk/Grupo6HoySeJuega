@@ -1,59 +1,17 @@
 [
     {
         "id": 1,
-        "deporte": "Futbol",
-        "alumnos": "10",
-        "edadMin": "18",
-        "edadMax": "60",
-        "genero": "Masculino",
-        "dia": "Lunes",
-        "valor": "1000",
-        "image": "estrella-gris.png"
-    },
-    {
-        "id": 2,
-        "deporte": "Futbol",
-        "alumnos": "10",
-        "edadMin": "10",
-        "edadMax": "100",
-        "genero": "Femenino",
-        "registroHorarios": "20:30",
-        "valor": "1000",
-        "image": "estrella-gris.png"
-    },
-    {
-        "id": 3,
-        "deporte": "Futbol",
-        "cancha": "4",
-        "alumnos": "10",
-        "edad-min": "2000",
-        "genero": "Masculino",
-        "dia": "jueves",
-        "registroHorarios": "20:00",
-        "valor": "5000",
-        "image": "estrella-gris.png"
-    },
-    {
-        "id": 4,
+        "profesor": "Roberto",
         "deporte": "Basquet",
         "cancha": "5",
         "alumnos": "24",
-        "edad-min": "1998",
+        "categoria": "1998",
         "genero": "Mixto",
         "dia": "domingo",
         "registroHorarios": "10:00",
         "valor": "4000",
-        "image": "estrella-gris.png"
-    },
-    {
-        "id": 5,
-        "deporte": "Padel",
-        "cancha": "4",
-        "alumnos": "5",
-        "edad-min": "2005",
-        "genero": "Masculino",
-        "dia": "miercoles",
-        "registroHorarios": "19:30",
-        "valor": "3500"
+        "image": "estrella-gris.png",
+        "category": "escuelita"
     }
+    
 ]
