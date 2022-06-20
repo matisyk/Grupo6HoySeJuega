@@ -111,7 +111,7 @@
                   <h3><%= cancha.identificacion %></h3>
                   <h3>$ <%= cancha.valor %></h3>
 
-                  <form action="/userOwner/delete/<%= cancha.id %>?_method=DELETE" method="POST">
+                  <form action="/userOwner/delete/court/<%= cancha.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
@@ -173,7 +173,7 @@
                       <li>Precio: <%= escuelitas.valor %></li>
                     </ul>
                   </p>
-                  <form action="/userOwner/delete/<%= escuelitas.id %>?_method=DELETE" method="POST">
+                  <form action="/userOwner/delete/school/<%= escuelitas.id %>?_method=DELETE" method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 

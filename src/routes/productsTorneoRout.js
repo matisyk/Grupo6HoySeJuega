@@ -47,7 +47,7 @@ router.patch('/editTorneo/:id/',upload.any(), productsController.update);
 
 
 // /*** DELETE ONE PRODUCT***/ 
-//router.delete('/delete/:id', productsController.destroy); 
+//router.delete('/delete/torneo/:id', productsController.destroy); 
 
 
 module.exports = router;

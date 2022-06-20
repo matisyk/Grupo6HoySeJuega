@@ -12,6 +12,19 @@
         "valor": "4000",
         "image": "estrella-gris.png",
         "category": "escuelita"
+    },
+    {
+        "id": 2,
+        "profesor": "Fran",
+        "deporte": "Basquet",
+        "cancha": "5",
+        "alumnos": "24",
+        "categoria": "2005",
+        "genero": "Mixto",
+        "dia": "domingo",
+        "registroHorarios": "10:00",
+        "valor": "4000",
+        "image": "estrella-gris.png",
+        "category": "escuelita"
     }
-    
 ]
