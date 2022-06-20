@@ -29,17 +29,12 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 
-		let image;
-		if(req.files[0] != undefined){
-			image = req.files[0].filename;
-		}else{
-			image = "estrella-gris.png";
-		}
+		
 
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body, 
-			image: image
+		
 		}
 
 		products.push(newProduct);
@@ -69,20 +64,6 @@ const controller = {
 		console.log("🚀 ~ file: productsController.js ~ line 78 ~ req.files", req.files)
 
 
-		let image
-		if(req.files[0] != undefined){
-			image = req.files[0].filename
-		}else{
-			image = productToEdit.image
-		}
-		
-		
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-		
 		let newProduct = products.map(product => {
 
 			if (product.id == productToEdit.id) {
