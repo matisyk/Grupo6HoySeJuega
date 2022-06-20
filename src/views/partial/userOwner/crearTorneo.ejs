@@ -48,8 +48,8 @@
             </div>
     
             <div class="item-tarjeta">
-                <label name="genero">Género:</label>
-                <select>
+                <label>Género:</label>
+                <select name="genero">
                     <option value="" disabled selected>Elegir opción</option>
                     <option value="Lunes">Femenino</option>
                     <option value="Martes">Masculino</option>
@@ -61,13 +61,13 @@
     <div class="item-tarjeta">
         <label>Fecha del torneo:</label>
         <br> De:
-        <input name="fecha-torneo" type="date">
-        Hasta: <input type="date">
+        <input name="fecha-inicio" type="date">
+        Hasta: <input name="fecha-final" type="date">
     </div>
     
             <div class="otro-item-tarjeta">
-                <div class="item-tarjeta"><label name="horarios">Día a realizarse:</label></div>
-                <select>
+                <div class="item-tarjeta"><label>Día a realizarse:</label></div>
+                <select name="horarios">
                     <option value="" disabled selected>Elegir día</option>
                     <option value="Lunes">Lunes</option>
                     <option value="Martes">Martes</option>
