@@ -9,6 +9,12 @@ const courts = JSON.parse(fs.readFileSync(courtFilePath, 'utf-8'));
 
 const canchas = courts.filter(court => court.category == 'cancha');
 
+//Escuelitas 
+const schoolFilePath = path.join(__dirname, '../database/schoolDataBase.json');
+const schools = JSON.parse(fs.readFileSync(schoolFilePath, 'utf-8'));
+
+const escuelitas = schools.filter(school => school.category == 'cancha');
+
 const userOwnerController = {
 
     agenda: (req, res) => {
@@ -39,12 +45,17 @@ const userOwnerController = {
       vistaCancha: (req, res) => {
         let id = req.params.id
         let userOwner = owners.find(userOwner => userOwner.id == id)
-        res.render("partial/userOwner/vistaCancha", {userOwner, canchas})
+        res.render("partial/userOwner/vistaCancha", {userOwner, canchas, escuelitas})
       },
       canchas: (req, res) => {
         let id = req.params.id
         let cancha = courts.find(cancha =>cancha.id == id)
         res.render("partial/userOwner/vistaCancha", {cancha})
+      },
+      escuelita: (req, res) => {
+        let id = req.params.id
+        let escuelita = schools.find(escuelita =>escuelita.id == id)
+        res.render("partial/userOwner/vistaCancha", {escuelita})
       },
 
       detalle: (req, res) => {
