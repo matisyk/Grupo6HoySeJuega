@@ -16,6 +16,10 @@ app.set('views', path.resolve('src/views'))
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'))
 
+//session
+const session = require ('express-session')
+app.use (session({secret:'Shh, es un secreto'}))
+
 // home
 const homeRouter = require('./routes/homeRout');
 app.use('/', homeRouter);
