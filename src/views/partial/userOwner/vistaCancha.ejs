@@ -212,20 +212,21 @@
       <section class="jd-slider slideshow">
         <div class="slide-inner">
           <ul class="slide-area">
+            <% torneos.forEach (torneos => { %>
             <li>
               <div class="tarjetas">
                 <div class="tarjeta tarjeta-esc">
                   <div class="blob"></div>
-                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/padel.jpg"
+                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/<%= torneos.image%>"
                         alt=""></a></span>
-                  <h3>Padel <br><span class="categoria">Categoría 2000</span> </h3>
+                  <h3><%= torneos.deporte%> <br><span class="categoria"><%= torneos.categoria%></span> </h3>
                   <p class="descrip-tarjeta-esc">
                     <ul>
-                      <li>Profesor: Romina López </li>
-                      <li>Día: Lunes 17hs. </li>
-                      <li>Cancha: 5 </li>
-                      <li>Cantidad de alumnos: 6</li>
-                      <li>Precio: $2000</li>
+                      <li>Día Inicio: <%= torneos.fechaInicio%> - <%= torneos.registroHorarios%> </li>
+                      <li>Día Fin: <%= torneos.fechaFinal%> - <%= torneos.registroHorarios%>. </li>
+                      <li>Cantidad de equipos: <%= torneos.cantidadEquipos%></li>
+                      <li>Precio: $ <%= torneos.valor%></li>
+                      <li>Premio: $ <%= torneos.premio%></li>
                     </ul>
                   </p>
                   <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
@@ -233,6 +234,7 @@
                 </div>
               </div>
             </li>
+            <% }) %>
           </ul>
         </div>
         <a class="prev" href="#">

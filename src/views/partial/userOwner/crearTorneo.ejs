@@ -30,23 +30,26 @@
                     <option value="Basquet">Basquet</option>
                 </select>
             </div>
+
+            <div class="edad">
+                <div style="display:none">
+                    <input name="category" value="torneo" type="text">
+                </div>
+            </div>
+
             <div class="item-tarjeta">
                 <label>Cantidad de Equipos:</label>
-                <input name="cantidad" type="text">
+                <input name="cantidadEquipos" type="number">
             </div>
-    
+
             <div class="edad">
                 <div class="item-tarjeta">
-                <label>Edad mínima:</label>
-                <input name="edadMin" type="text">
+                    <label>Categoría:</label>
+                    <input name="categoria" type="number">
+                </div>
+
             </div>
-            
-            <div class="item-tarjeta">
-                <label >Edad máxima:</label>
-                <input name="edadMax" type="text">
-            </div>
-            </div>
-    
+
             <div class="item-tarjeta">
                 <label>Género:</label>
                 <select name="genero">
@@ -56,18 +59,21 @@
                     <option value="Mixto">Mixto</option>
                 </select>
             </div>
-    
-    
-    <div class="item-tarjeta">
-        <label>Fecha del torneo:</label>
-        <br> De:
-        <input name="fechaInicio" type="date">
-        Hasta: <input name="fechaFinal" type="date">
-    </div>
-    
+
+
+            <div class="item-tarjeta">
+                <label>Fecha del torneo</label>
+                <br>
+                <br> De:
+                <input name="fechaInicio" type="date">
+                <br>
+                <br>
+                Hasta: <input name="fechaFinal" type="date">
+            </div>
+
             <div class="otro-item-tarjeta">
                 <div class="item-tarjeta"><label>Día a realizarse:</label></div>
-                <select name="horarios">
+                <select name="dia">
                     <option value="" disabled selected>Elegir día</option>
                     <option value="Lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -79,15 +85,15 @@
                 </select>
                 <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
             </div>
-    
+            <div class="item-tarjeta">
+                <label>Valor por equipo:</label>
+                <input type="number" name="valor" placeholder="$">
+            </div>
             <div class="item-tarjeta">
                 <label>Premio</label>
-                <input type="text" name="premio" placeholder="$$$">
+                <input type="number" name="premio" placeholder="$">
             </div>
-    <div style="display:none">
-        <select name="category">
-            <option value="torneo">torneo</option>
-    </div>
+
             <div class="item-tarjeta boton-enviar">
                 <button type="submit">Crear Torneo</button>
             </div>

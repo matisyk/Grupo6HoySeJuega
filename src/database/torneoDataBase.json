@@ -1,19 +1,45 @@
-[
-    {
-        "id": 1
-    },
-    {
-        "id": 2,
-        "deporte": "Futbol",
-        "cantidad": "10",
-        "edadMin": "10",
-        "edadMax": "100",
-        "genero": "Lunes",
-        "fechaInicio": "2022-06-27",
-        "fechaFinal": "2022-06-30",
-        "horarios": "Lunes",
-        "registroHorarios": "20:50",
-        "premio": "1000",
-        "image": "estrella-gris.png"
-    }
-]
+[{
+    "id": 1
+}, {
+    "id": 8,
+    "deporte": "Futbol",
+    "category": "torneo",
+    "cantidadEquipos": "1",
+    "categoria": "1",
+    "genero": "Femenino",
+    "fechaInicio": "2022-06-09",
+    "fechaFinal": "2022-06-09",
+    "dia": "Miercoles",
+    "registroHorarios": "21:21",
+    "valor": "11",
+    "premio": "100000",
+    "image": "estrella-gris.png"
+}, {
+    "id": 9,
+    "deporte": "Futbol",
+    "category": "torneo",
+    "cantidadEquipos": "1",
+    "categoria": "1",
+    "genero": "Femenino",
+    "fechaInicio": "2022-06-09",
+    "fechaFinal": "2022-06-09",
+    "dia": "Miercoles",
+    "registroHorarios": "21:21",
+    "valor": "11",
+    "premio": "100000",
+    "image": "estrella-gris.png"
+}, {
+    "id": 10,
+    "deporte": "Futbol",
+    "category": "torneo",
+    "cantidadEquipos": "1",
+    "categoria": "2000",
+    "genero": "Femenino",
+    "fechaInicio": "2022-06-09",
+    "fechaFinal": "2022-06-09",
+    "dia": "Miercoles",
+    "registroHorarios": "21:21",
+    "valor": "1500",
+    "premio": "100000",
+    "image": "estrella-gris.png"
+}]
