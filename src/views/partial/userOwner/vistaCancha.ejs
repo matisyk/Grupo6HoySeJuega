@@ -229,8 +229,13 @@
                       <li>Premio: $ <%= torneos.premio%></li>
                     </ul>
                   </p>
-                  <button class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-                  <button class="boton-editar"><i class="fa-solid fa-pencil"></i></button>
+                  <form action="/userOwner/delete/torneo/<%= torneos.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+                  </form>
+
+
+                  <button class="boton-editar"><a href="/userOwner/editTorneo/<%= torneos.id%>"><i
+                        class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
             </li>
