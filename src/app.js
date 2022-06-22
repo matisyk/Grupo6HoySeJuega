@@ -6,9 +6,11 @@ const path = require("path");
 
 app.use(express.static('public'));
 
-const publicPath = path.resolve('../public')
+const publicPath = path.resolve('../public');
 
 app.use(express.static(publicPath));
+
+app.use(express.urlencoded({ extended: false }));
 
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('src/views'))
