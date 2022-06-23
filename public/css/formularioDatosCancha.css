@@ -10,6 +10,12 @@ h1 {
   color: #ebebeb
 }
 
+.text-danger.msg{
+  font-size: small;
+  margin: 2px;
+  padding: 2px;
+}
+
 .formulario-div {
   width: 70%;
   font-size: 20px;
@@ -44,7 +50,7 @@ h1 {
   height: 1100px;
 }
 .form-control{
-  margin-bottom: 20px;
+  margin-bottom: 2%;
 }
 
 .entre-divs {

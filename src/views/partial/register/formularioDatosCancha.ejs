@@ -34,7 +34,7 @@
               <label for="nombre">Nombre: </label>
               <input id="nombre" name="nombre" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>
-                  <div class="text-danger">
+                  <div class="text-danger msg">
                     <%= errors.nombre.msg %> 
                   </div>
                 <% } %>
@@ -44,7 +44,7 @@
               <label for="apellido">Apellido: </label>
               <input id="apellido" name="apellido" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
               <% if (locals.errors && errors.apellido) { %>
-                <div class="text-danger">
+                <div class="text-danger msg">
                   <%= errors.apellido.msg %> 
                 </div>
               <% } %>
@@ -54,7 +54,7 @@
               <label for="email">Mail: </label>
               <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
               <% if (locals.errors && errors.email) { %>
-                <div class="text-danger">
+                <div class="text-danger msg">
                   <%= errors.email.msg %> 
                 </div>
               <% } %>
@@ -64,7 +64,7 @@
               <label for="contraseña">Contraseña: </label>
               <input id="pwd" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
               <% if (locals.errors && errors.password) { %>
-                <div class="text-danger">
+                <div class="text-danger msg">
                   <%= errors.password.msg %> 
                 </div>
               <% } %>
@@ -74,7 +74,7 @@
               <label for="nombreDelLugar">Nombre del lugar: </label>
               <input type="text" class="form-control <%= locals.errors && errors.nombreDelLugar ? 'is-invalid' : null %>" id="nombreDelLugar" name="nombreDelLugar" value="<%= locals.oldData ? oldData.nombreDelLugar : null %>">
               <% if (locals.errors && errors.nombreDelLugar) { %>
-                <div class="text-danger">
+                <div class="text-danger msg">
                   <%= errors.nombreDelLugar.msg %> 
                 </div>
               <% } %>
@@ -83,7 +83,7 @@
             <label for="direccion">Dirección:</label>
             <input type="text" class="form-control <%= locals.errors && errors.direccion ? 'is-invalid' : null %>" id="direccion" name="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
             <% if (locals.errors && errors.direccion) { %>
-              <div class="text-danger">
+              <div class="text-danger msg">
                 <%= errors.direccion.msg %> 
               </div>
             <% } %>

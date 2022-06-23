@@ -33,7 +33,7 @@ const upload = multer({ storage: storage })
 const validations = [
   body("nombre").notEmpty().withMessage('Tienes que escribir un nombre'),
   body("apellido").notEmpty().withMessage('Tienes que escribir un apellido'),
-  body("email").notEmpty().isEmail().withMessage('Tienes que escribir un email'),
+  body("email").notEmpty().withMessage('Tienes que escribir un email'),
   body("password").notEmpty().withMessage('Tienes que escribir una contraseña'),
   body("nombreDelLugar").notEmpty().withMessage('Tienes que escribir un nombre del lugar'),
   body("direccion").notEmpty().withMessage('Tienes que escribir una direccion')
