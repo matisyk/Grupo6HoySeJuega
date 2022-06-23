@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const { validationResult } = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -32,6 +33,14 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
+
+		const resultValidation = validationResult(req);
+		if(resultValidation.errors.length > 0){
+			return res.render("partial/register/formularioDatosCancha", {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 
 		let image;
 		if(req.files[0] != undefined){
@@ -122,7 +131,18 @@ const controller = {
 
 		res.redirect("/")
 
+	},
+
+	//validations
+	processRegister: (req, res) => {
+		const resultValidation = validationResult(req);
+		if(resultValidation.errors.length > 0){
+			return res.render("partial/register/formularioDatosCancha", {
+				errors: resultValidation.mapped()
+			});
+		}
 	}
+	
 };
 
 module.exports = controller;

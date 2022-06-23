@@ -32,31 +32,61 @@
           <div class="entre-divs">
             <div>
               <label for="nombre">Nombre: </label>
-              <input id="nombre" name="nombre" class="form-control" type="nombre" required>
+              <input id="nombre" name="nombre" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+                <% if (locals.errors && errors.nombre) { %>
+                  <div class="text-danger">
+                    <%= errors.nombre.msg %> 
+                  </div>
+                <% } %>
             </div>
             <br>
             <div>
               <label for="apellido">Apellido: </label>
-              <input id="apellido" name="apellido" class="form-control" type="apellido" required>
+              <input id="apellido" name="apellido" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+              <% if (locals.errors && errors.apellido) { %>
+                <div class="text-danger">
+                  <%= errors.apellido.msg %> 
+                </div>
+              <% } %>
             </div>
             <br>
             <div>
               <label for="email">Mail: </label>
-              <input id="email" class="form-control" name="email" type="email" required>
+              <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
+              <% if (locals.errors && errors.email) { %>
+                <div class="text-danger">
+                  <%= errors.email.msg %> 
+                </div>
+              <% } %>
             </div>
             <br>
             <div>
               <label for="contraseña">Contraseña: </label>
-              <input id="pwd" name="password" class="form-control" type="password" required>
+              <input id="pwd" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
+              <% if (locals.errors && errors.password) { %>
+                <div class="text-danger">
+                  <%= errors.password.msg %> 
+                </div>
+              <% } %>
             </div>
             <br>
             <div>
               <label for="nombreDelLugar">Nombre del lugar: </label>
-              <input type="text" class="form-control" id="nombreDelLugar" name="nombreDelLugar" />
+              <input type="text" class="form-control <%= locals.errors && errors.nombreDelLugar ? 'is-invalid' : null %>" id="nombreDelLugar" name="nombreDelLugar" value="<%= locals.oldData ? oldData.nombreDelLugar : null %>">
+              <% if (locals.errors && errors.nombreDelLugar) { %>
+                <div class="text-danger">
+                  <%= errors.nombreDelLugar.msg %> 
+                </div>
+              <% } %>
             </div>
             <br>
             <label for="direccion">Dirección:</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" />
+            <input type="text" class="form-control <%= locals.errors && errors.direccion ? 'is-invalid' : null %>" id="direccion" name="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
+            <% if (locals.errors && errors.direccion) { %>
+              <div class="text-danger">
+                <%= errors.direccion.msg %> 
+              </div>
+            <% } %>
             <label for="telefono">Telefono:</label>
             <input type="number" class="form-control" id="telefono" name="telefono" />
             <label for="telefono2">Contacto de emergencia:</label>
