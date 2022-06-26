@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const {
+	validationResult
+} = require('express-validator');
 
 const productsFilePath = path.join(__dirname, '../database/userPlayerDataBase.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -27,6 +30,14 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
+
+		const resultValidation = validationResult(req);
+		if (resultValidation.errors.length > 0) {
+			return res.render("partial/register/formularioDatosJugador", {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		}
 
 		let image;
 		if(req.files[0] != undefined){

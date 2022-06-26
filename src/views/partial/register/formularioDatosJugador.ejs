@@ -31,30 +31,60 @@
         <div class="input-group">
           <div>
             <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="nombre" required>
+            <input type="text" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" id="nombre" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
+            <% if (locals.errors && errors.nombre) { %>
+              <div class="text-danger msg">
+                <%= errors.nombre.msg %> 
+              </div>
+            <% } %>
           </div>
           <div class="entre-divs">
             <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" required>
+            <input type="text" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" id="apellido" name="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+            <% if (locals.errors && errors.apellido) { %>
+              <div class="text-danger msg">
+                <%= errors.apellido.msg %> 
+              </div>
+            <% } %>
           </div>
           <br>
           <div class="entre-divs">
             <label for="email">Mail: </label>
-            <input id="email" class="form-control" name="email" type="email" required>
+            <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
+            <% if (locals.errors && errors.email) { %>
+              <div class="text-danger msg">
+                <%= errors.email.msg %> 
+              </div>
+            <% } %>
           </div>
           <br>
           <div class="contrasena">
             <label for="contraseña" >Contraseña: </label>
-            <input id="pwd" name="password" class="form-control" type="password" required>
+            <input id="pwd" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
+            <% if (locals.errors && errors.password) { %>
+              <div class="text-danger msg">
+                <%= errors.password.msg %> 
+              </div>
+            <% } %>
           </div>
           <br>
           <div class="entre-divs">
             <label for="edad">Edad:</label>
-            <input type="number" class="form-control" id="edad" name="edad" required>
+            <input type="number" class="form-control <%= locals.errors && errors.edad ? 'is-invalid' : null %>" id="edad" name="edad" value="<%= locals.oldData ? oldData.edad : null %>">
+            <% if (locals.errors && errors.edad) { %>
+              <div class="text-danger msg">
+                <%= errors.edad.msg %> 
+              </div>
+            <% } %>
           </div>
           <div class="entre-divs2">
             <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono" required>
+            <input type="number" class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>" id="telefono" name="telefono" value="<%= locals.oldData ? oldData.telefono : null %>">
+            <% if (locals.errors && errors.telefono) { %>
+              <div class="text-danger msg">
+                <%= errors.telefono.msg %> 
+              </div>
+            <% } %>
           </div>
           <div class="entre-divs3">
             <label for="telefono2">Contacto de emergencia:</label>
@@ -62,7 +92,12 @@
           </div>
           <div class="entre-divs3">
             <label for="categoria">Posición:</label>
-            <input type="text" class="form-control" id="categoria" name="categoria" required>
+            <input type="text" class="form-control <%= locals.errors && errors.categoria ? 'is-invalid' : null %>" id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
+            <% if (locals.errors && errors.categoria) { %>
+              <div class="text-danger msg">
+                <%= errors.categoria.msg %> 
+              </div>
+            <% } %>
           </div>
           <div class="entre-divs4">
             <label for="autoValoracion">Auto valoración:</label>

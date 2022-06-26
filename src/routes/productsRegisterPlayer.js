@@ -1,8 +1,9 @@
 // ************ Require's ************
 const express = require('express');
 const router = express.Router();
-const multer = require('multer')
-const path = require ('path')
+const multer = require('multer');
+const path = require ('path');
+const { body } = require('express-validator');
 
 
 // ************ Controller Require ************
@@ -27,13 +28,23 @@ const storage = multer.diskStorage({
 
 })
 
-const upload = multer({ storage: storage })
+const upload = multer({ storage: storage });
+
+const validations = [
+  body("nombre").notEmpty().withMessage('Tienes que escribir un nombre'),
+  body("apellido").notEmpty().withMessage('Tienes que escribir un apellido'),
+  body("email").notEmpty().withMessage('Tienes que escribir un email'),
+  body("password").notEmpty().withMessage('Tienes que escribir una contraseña'),
+  body("edad").notEmpty().withMessage('Tienes que escribir una edad'),
+  body("telefono").notEmpty().withMessage('Tienes que escribir un telefono'),
+  body("categoria").notEmpty().withMessage('Tienes que escribir una posicion')
+];
 
 
 /*** CREATE ONE PRODUCT ***/ 
 
 router.get('/registerPlayer', productsController.create); 
-router.post('/registerPlayer', upload.any("img-cancha"), productsController.store); 
+router.post('/registerPlayer', upload.any("img-cancha"), validations, productsController.store); 
 
 /*** REDIRECT ***/ 
 
