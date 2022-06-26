@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
 
-const productsFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
+const productsFilePath = path.join(__dirname, '../database/userOwner.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");

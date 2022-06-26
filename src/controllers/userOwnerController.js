@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const ownersFilePath = path.join(__dirname, '../database/userOwnerDataBase.json');
+const ownersFilePath = path.join(__dirname, '../database/userOwner.json');
 const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 
 //Canchas 
