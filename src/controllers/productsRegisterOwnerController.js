@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { validationResult } = require('express-validator');
+const User = require('../models/User')
 
 const productsFilePath = path.join(__dirname, '../database/userOwner.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -57,7 +58,7 @@ const controller = {
 
 		products.push(newProduct);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
 		res.redirect("/register/userOwner/welcome/");
 
