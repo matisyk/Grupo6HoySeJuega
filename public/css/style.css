@@ -168,16 +168,6 @@ MAIN
   font-size: 40px;
 }
 
-.bottom_main {
-  display: flex;
-  flex-direction: column;
-  padding: 30px;
-  margin: 8px;
-  text-align: justify;
-  border: solid 5px #ebebeb;
-  background-color: #ebebeb;
-  border-radius: 10px;
-}
 .image_field {
   width: 35vw;
 }
@@ -240,6 +230,22 @@ MAIN
 .imagen-cancha {
   padding-bottom: 15px;
 }
+
+
+
+.recuadro-mapa{
+background-color: #ebebeb;
+width: fit-content;
+margin: auto;
+padding: 20px;
+border-radius: 10px;
+}
+
+.titulo-mapa{
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+}
+
 /*=============================================
 MEDIA Q
 =============================================*/
@@ -297,16 +303,7 @@ MEDIA Q
     margin: 10px 10px 0px 90px;
     padding: 5px;
   }
-  .bottom_main {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    margin: 8px;
-    text-align: justify;
-    border: solid 5px #ebebeb;
-    background-color: #ebebeb;
-    border-radius: 10px;
-  }
+ 
   .image_field {
     width: 35vw;
   }
@@ -432,16 +429,6 @@ MEDIA Q
     right: 6px;
   }
 
-  .bottom_main {
-    display: flex;
-    flex-direction: column;
-    padding: 30px;
-    margin: 8px;
-    text-align: justify;
-    border: solid 5px #ebebeb;
-    background-color: #ebebeb;
-    border-radius: 10px;
-  }
   .image_field {
     width: 35vw;
   }
@@ -593,10 +580,7 @@ MEDIA Q
   img.img-publicidad2 {
     margin-left: 30px;
   }
-  .bottom_main {
-    position: absolute;
-    top: 1250px;
-  }
+
   .player_mobile {
     margin: 25px 0px 0 45px;
   }
