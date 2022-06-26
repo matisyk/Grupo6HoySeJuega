@@ -43,7 +43,7 @@ const controller = {
 
 		products.push(newProduct);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
 		res.redirect("/register/userPlayer/welcome/");
 
