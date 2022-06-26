@@ -37,13 +37,9 @@ SLIDESHOW
 }
 .prev {
   font-size: 13px !important;
-  top: 70px !important;
-  left: -15px !important;
 }
 .next {
   font-size: 13px !important;
-  top: 70px !important;
-  left: 362px !important;
 }
 
 /*=============================================
@@ -232,7 +228,6 @@ MAIN
 }
 
 
-
 .recuadro-mapa{
 background-color: #ebebeb;
 width: fit-content;
@@ -252,13 +247,9 @@ MEDIA Q
 @media (min-width: 425px) {
   .prev {
     font-size: 13px !important;
-    top: 70px !important;
-    left: -15px !important;
   }
   .next {
     font-size: 13px !important;
-    top: 70px !important;
-    left: 412px !important;
   }
   .slide-text {
     position: absolute;
@@ -379,26 +370,18 @@ MEDIA Q
   }
   .prev {
     font-size: 23px !important;
-    top: 120px !important;
-    left: -17px !important;
   }
   .next {
     font-size: 23px !important;
-    top: 120px !important;
-    left: 746px !important;
   }
 }
 
 @media (min-width: 1024px) {
   .prev {
     font-size: 33px !important;
-    top: 150px !important;
-    left: -15px !important;
   }
   .next {
     font-size: 33px !important;
-    top: 150px !important;
-    left: 993px !important;
   }
   .datos-lucas {
     font-family: "Kalam", cursive;
@@ -549,13 +532,9 @@ MEDIA Q
   }
   .prev {
     font-size: 43px !important;
-    top: 250px !important;
-    left: -17px !important;
   }
   .next {
     font-size: 43px !important;
-    top: 250px !important;
-    left: 1400px !important;
   }
   .datos-lucas {
     font-family: "Kalam", cursive;
@@ -591,13 +570,9 @@ MEDIA Q
 @media (min-width: 1600px) {
   .prev {
     font-size: 43px !important;
-    top: 250px !important;
-    left: -17px !important;
   }
   .next {
     font-size: 43px !important;
-    top: 250px !important;
-    left: 1559px !important;
   }
   .imagen-jugador img {
     right: 560px;

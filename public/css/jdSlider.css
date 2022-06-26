@@ -61,13 +61,10 @@
 }
 
 /* line 52, public/src/scss/jquery.jdSlider.scss */
-.jd-slider .prev {
-	left: 385px;
-}
 
 /* line 57, public/src/scss/jquery.jdSlider.scss */
 .jd-slider .next {
-	right: 385px;
+	right: 0;
 }
 
 /* line 62, public/src/scss/jquery.jdSlider.scss */
