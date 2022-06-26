@@ -1,7 +1,6 @@
 const express = require('express');
-
+var session = require('express-session')
 const app = express();
-
 const path = require("path");
 
 app.use(express.static('public'));
