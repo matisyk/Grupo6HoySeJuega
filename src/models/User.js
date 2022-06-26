@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 const User = {
-  fileName: './database/userOwner.json',
+  fileName: '../database/userOwner.json',
   
   getData: function () {
     return JSON.parse(fs.readFileSync)(this.fileName, 'utf8');
@@ -17,3 +17,5 @@ const User = {
     return userFound;
   }
 }
+
+module.exports = User;
