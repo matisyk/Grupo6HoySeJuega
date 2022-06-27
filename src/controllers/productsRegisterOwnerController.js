@@ -47,17 +47,7 @@ const controller = {
 				oldData: req.body
 			});
 		}
-		let userInDB = User.findByField('email', req.body.email);
 
-		if (userInDB) {
-			return res.render("partial/register/formularioDatosCancha", {
-				errors: {
-					msg: 'Este email ya está regustrado'
-				},
-				oldData: req.body
-			});
-
-		}
 		let image;
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename;
@@ -65,11 +55,23 @@ const controller = {
 			image = "imagenCancha-1654372985364-494608673.jpg";
 		}
 
+		let userInDB = User.findByField('email', req.body.email);
+		if (userInDB) {
+			return res.render("partial/register/formularioDatosCancha", {
+				errors: {
+					email: {
+						msg: 'Este mail ya está registrado, intenta con otro'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
-			password: bcryptjs.hashSync(req.body.password, 10),
-			image: image
+			image: image,
+			password: bcryptjs.hashSync(req.body.password, 10)
 		}
 
 		products.push(newProduct);

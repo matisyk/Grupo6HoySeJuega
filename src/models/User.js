@@ -1,11 +1,12 @@
 const fs = require('fs');
+const path = require('path');
+const usersFilePath = path.join(__dirname, '../database/userOwner.json');
+const usersDB = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const User = {
 
-  fileName: '../database/userOwner',
-  
   getData: function () {
-    return JSON.parse(fs.readFileSync)(this.fileName, 'utf8');
+    return usersDB;
   },
 
   findAll: function () {
@@ -16,7 +17,14 @@ const User = {
     let allUsers = this.findAll();
     let userFound = allUsers.find(oneUser => oneUser[field] === text);
     return userFound;
+  },
+  delete: function (id) {
+    let allUsers = this.findAll();
+    let finalUsers = allUsers.filter(oneUser => oneUser.id !== id);
+    fs.writeFileSync(this.usersDB, JSON.stringify(finalUsers, null, ' '));
+    return true;
   }
 }
+
 
 module.exports = User;
