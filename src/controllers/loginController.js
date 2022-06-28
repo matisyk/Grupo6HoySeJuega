@@ -25,7 +25,7 @@ const controllerLogin = {
 
         delete userToLogin.password;
         req.session.userLoggedOwner = userToLogin
-        return res.redirect("/register/userOwner/welcome/")
+        return res.redirect("/userOwner/vistaCancha/" + req.session.userLoggedOwner.id)
       }
 
       return res.render('partial/login/loginCourt', {
@@ -45,8 +45,10 @@ const controllerLogin = {
       }
     });
 
-
-
+  },
+  logout: (req, res) => {
+    req.session.destroy();
+    return res.redirect("/")
   },
 
   loginPlayer: (req, res) => {
