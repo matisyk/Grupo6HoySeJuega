@@ -19,7 +19,11 @@ app.use(methodOverride('_method'))
 
 //session
 const session = require ('express-session')
-app.use (session({secret:'Es un secreto nuestro'}))
+app.use(session({
+  secret: 'Es un secreto nuestro',
+  resave: false,
+  saveUninitialized: false,
+}))
 
 // home
 const homeRouter = require('./routes/homeRout');

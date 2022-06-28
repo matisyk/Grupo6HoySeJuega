@@ -48,11 +48,6 @@
   <!-- CONTENIDO -->
 
   <div class="contenedor-mayor">
-    <% if (locals.errors && errors.email) { %>
-    <div class="text-danger msg">
-      <%= errors.email.msg %>
-    </div>
-    <% } %>
     <form action="/login/loginCourt" method="POST">
       <div class="card">
         <h4 class="title">Iniciar sesión!</h4>
@@ -63,6 +58,11 @@
             </path>
           </svg>
           <input autocomplete="off" id="email" placeholder="Usuario" class="input-field" name="email" type="email">
+          <% if (locals.errors && errors.email) { %>
+          <div class="text-danger msg">
+            <%= errors.email.msg %>
+          </div>
+          <% } %>
         </div>
         <div class="field">
           <svg class="input-icon" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
@@ -72,6 +72,11 @@
           </svg>
           <input autocomplete="off" id="pass" placeholder="Contraseña" class="input-field" name="password"
             type="password">
+            <% if (locals.errors && errors.password) { %>
+            <div class="text-danger msg">
+              <%= errors.password.msg %>
+            </div>
+            <% } %>
         </div>
 
         <div class="recordar">

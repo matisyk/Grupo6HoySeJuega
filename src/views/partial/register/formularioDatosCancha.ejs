@@ -32,60 +32,69 @@
           <div class="entre-divs">
             <div>
               <label for="nombre">Nombre: </label>
-              <input id="nombre" name="nombre" class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
-                <% if (locals.errors && errors.nombre) { %>
-                  <div class="text-danger msg">
-                    <%= errors.nombre.msg %> 
-                  </div>
-                <% } %>
+              <input id="nombre" name="nombre"
+                class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="nombre"
+                value="<%= locals.oldData ? oldData.nombre : null %>">
+              <% if (locals.errors && errors.nombre) { %>
+              <div class="text-danger msg">
+                <%= errors.nombre.msg %>
+              </div>
+              <% } %>
             </div>
             <br>
             <div>
               <label for="apellido">Apellido: </label>
-              <input id="apellido" name="apellido" class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
+              <input id="apellido" name="apellido"
+                class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="apellido"
+                value="<%= locals.oldData ? oldData.apellido : null %>">
               <% if (locals.errors && errors.apellido) { %>
-                <div class="text-danger msg">
-                  <%= errors.apellido.msg %> 
-                </div>
+              <div class="text-danger msg">
+                <%= errors.apellido.msg %>
+              </div>
               <% } %>
             </div>
             <br>
             <div>
               <label for="email">Mail: </label>
-              <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>" name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
+              <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+                name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
               <% if (locals.errors && errors.email) { %>
-                <div class="text-danger msg">
-                  <%= errors.email.msg %> 
-                </div>
+              <div class="text-danger msg">
+                <%= errors.email.msg %>
+              </div>
               <% } %>
             </div>
             <br>
             <div>
               <label for="contraseña">Contraseña: </label>
-              <input id="pwd" name="password" class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
+              <input id="pwd" name="password"
+                class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
               <% if (locals.errors && errors.password) { %>
-                <div class="text-danger msg">
-                  <%= errors.password.msg %> 
-                </div>
+              <div class="text-danger msg">
+                <%= errors.password.msg %>
+              </div>
               <% } %>
             </div>
             <br>
             <div>
               <label for="nombreDelLugar">Nombre del lugar: </label>
-              <input type="text" class="form-control <%= locals.errors && errors.nombreDelLugar ? 'is-invalid' : null %>" id="nombreDelLugar" name="nombreDelLugar" value="<%= locals.oldData ? oldData.nombreDelLugar : null %>">
+              <input type="text"
+                class="form-control <%= locals.errors && errors.nombreDelLugar ? 'is-invalid' : null %>"
+                id="nombreDelLugar" name="nombreDelLugar" value="<%= locals.oldData ? oldData.nombreDelLugar : null %>">
               <% if (locals.errors && errors.nombreDelLugar) { %>
-                <div class="text-danger msg">
-                  <%= errors.nombreDelLugar.msg %> 
-                </div>
+              <div class="text-danger msg">
+                <%= errors.nombreDelLugar.msg %>
+              </div>
               <% } %>
             </div>
             <br>
             <label for="direccion">Dirección:</label>
-            <input type="text" class="form-control <%= locals.errors && errors.direccion ? 'is-invalid' : null %>" id="direccion" name="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
+            <input type="text" class="form-control <%= locals.errors && errors.direccion ? 'is-invalid' : null %>"
+              id="direccion" name="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
             <% if (locals.errors && errors.direccion) { %>
-              <div class="text-danger msg">
-                <%= errors.direccion.msg %> 
-              </div>
+            <div class="text-danger msg">
+              <%= errors.direccion.msg %>
+            </div>
             <% } %>
             <label for="telefono">Telefono:</label>
             <input type="number" class="form-control" id="telefono" name="telefono" />
@@ -95,45 +104,46 @@
           <div class="entre-divs" style="margin-left: 100px;">
             <div class="servicios">
               <label>Servicios:</label><br /> <br />
-              
 
-              <label class="funcionalidades1" for="iluminacion">Iluminación  <select name="iluminacion" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br />
-              <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br /> 
+
+              <label class="funcionalidades1" for="iluminacion">Iluminación <select name="iluminacion" size="1">
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
+              <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento"
+                  size="1">
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
               <label class="funcionalidades1" for="wifi">Wifi <select name="wifi" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br /> 
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
               <label class="funcionalidades1" for="vestuarios">Vestuarios <select name="vestuarios" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br /> 
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
               <label class="funcionalidades1" for="duchas">Duchas <select name="duchas" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br /> 
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
               <label class="funcionalidades1" for="parrilla">Parrilla <select name="parrilla" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br /> 
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
               <label class="funcionalidades1" for="quincho">Quincho <select name="quincho" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br /> <br />
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br /> <br />
             </div>
             <div class="medios-de-pago">
               <label>Medios de pago aceptados:</label>
               <br>
               <br>
               <label class="funcionalidades1" for="transferencia"> Transferencia <select name="transferencia" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label>
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label>
               <br />
               <label class="funcionalidades1" for="mercadoPago">Mercado
                 Pago <select name="mercadoPago" size="1">
@@ -143,14 +153,14 @@
               </label>
               <br />
               <label class="funcionalidades1" for="modo">Modo <select name="modo" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select>
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select>
               </label><br />
               <label class="funcionalidades1" for="efectivo">Efectivo <select name="efectivo" size="1">
-                <option label="Si" value="Si"></option>
-                <option selected="selected" label="No" value="No"></option>
-              </select></label><br />
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br />
               </label>
             </div>
           </div>

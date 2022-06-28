@@ -90,5 +90,28 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "asd@gmail.com",
+  "password": "$2a$10$OSn2Ozb3I8iyE1HlDKw5seUEKmfDBc/PPOB1sLWTEZj1bJBV2eBoe",
+  "nombreDelLugar": "Se Pico",
+  "direccion": "Sauces 500",
+  "telefono": "",
+  "telefono2": "",
+  "iluminacion": "No",
+  "estacionamiento": "No",
+  "wifi": "No",
+  "vestuarios": "No",
+  "duchas": "No",
+  "parrilla": "No",
+  "quincho": "No",
+  "transferencia": "No",
+  "mercadoPago": "No",
+  "modo": "No",
+  "efectivo": "No",
+  "image": "imagenCancha-1654372985364-494608673.jpg"
  }
 ]

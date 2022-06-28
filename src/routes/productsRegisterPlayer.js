@@ -4,6 +4,7 @@ const router = express.Router();
 const multer = require('multer');
 const path = require ('path');
 const { body } = require('express-validator');
+const logueadoOwner = require('../middlewares/logeadoOwner')
 
 
 // ************ Controller Require ************
@@ -43,12 +44,12 @@ const validations = [
 
 /*** CREATE ONE PRODUCT ***/ 
 
-router.get('/registerPlayer', productsController.create); 
+router.get('/registerPlayer', logueadoOwner, productsController.create);
 router.post('/registerPlayer', upload.any("img-cancha"), validations, productsController.store); 
 
 /*** REDIRECT ***/ 
 
-router.get('/userPlayer/welcome', productsController.redirect); 
+router.get('/userPlayer/welcome', logueadoOwner, productsController.redirect);
 
 // /*** GET ONE PRODUCT ***/ 
 
@@ -56,7 +57,7 @@ router.get('/userPlayer/welcome', productsController.redirect);
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-router.get('/editPlayerForm/:id/', productsController.edit); 
+router.get('/editPlayerForm/:id/', logueadoOwner, productsController.edit);
 router.patch('/editPlayerForm/:id/',upload.any(), productsController.update); 
 
 
