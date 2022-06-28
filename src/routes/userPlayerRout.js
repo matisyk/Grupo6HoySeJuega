@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
-const logueadoOwner = require('../middlewares/logeadoOwner')
-const noLogueadoOwner = require('../middlewares/noLogeadoOwner')
+const logueadoPlayer = require('../middlewares/logueadoPlayer')
+const noLogueadoPlayer = require('../middlewares/noLogueadoPlayer')
 
 // const multer = require('multer');
 
@@ -9,20 +9,20 @@ const noLogueadoOwner = require('../middlewares/noLogeadoOwner')
 
 const userPlayerController = require('../controllers/userPlayerController')
 
-router.get('/',noLogueadoOwner,logueadoOwner, userPlayerController.vistaJugador);
+router.get('/',noLogueadoPlayer,logueadoPlayer, userPlayerController.vistaJugador);
 
-router.get('/perfilDeJugador/:id',noLogueadoOwner,logueadoOwner, userPlayerController.perfilDeJugador);
-router.post('/perfilDeJugador', userPlayerController.perfilDeJugador);
+router.get('/perfilDeJugador/:id',noLogueadoPlayer,logueadoPlayer, userPlayerController.perfilDeJugador);
+router.post('/perfilDeJugador',noLogueadoPlayer,logueadoPlayer, userPlayerController.perfilDeJugador);
 
-router.get('/carrito',noLogueadoOwner,logueadoOwner, userPlayerController.carrito);
+router.get('/carrito',noLogueadoPlayer,logueadoPlayer, userPlayerController.carrito);
 
-router.get('/reservarCancha',noLogueadoOwner,logueadoOwner, userPlayerController.reservarCancha);
+router.get('/reservarCancha',noLogueadoPlayer,logueadoPlayer, userPlayerController.reservarCancha);
 
-router.get('/vistaCanchaInfo/:id',noLogueadoOwner,logueadoOwner, userPlayerController.vistaCanchaInfo);
-router.post('/vistaCanchaInfo', userPlayerController.vistaCanchaInfo);
+router.get('/vistaCanchaInfo/:id',noLogueadoPlayer,logueadoPlayer, userPlayerController.vistaCanchaInfo);
+router.post('/vistaCanchaInfo',noLogueadoPlayer,logueadoPlayer, userPlayerController.vistaCanchaInfo);
 
-router.get('/elegirCancha',noLogueadoOwner,logueadoOwner, userPlayerController.elegirCancha);
+router.get('/elegirCancha',noLogueadoPlayer,logueadoPlayer, userPlayerController.elegirCancha);
 
-router.get('/equipo',noLogueadoOwner,logueadoOwner, userPlayerController.equipo);
+router.get('/equipo',noLogueadoPlayer,logueadoPlayer, userPlayerController.equipo);
 
 module.exports = router;

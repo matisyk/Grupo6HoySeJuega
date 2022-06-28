@@ -4,7 +4,7 @@ const router = express.Router();
 const multer = require('multer')
 const path = require ('path')
 const { body } = require('express-validator');
-const logueadoOwner = require('../middlewares/logeadoOwner')
+const logueadoOwner = require('../middlewares/logueadoOwner')
 
 
 // ************ Controller Require ************
@@ -40,7 +40,7 @@ const validations = [
   body("direccion").notEmpty().withMessage('Tienes que escribir una direccion')
 ];
 
-router.get('/', logueadoOwner, productsController.register);
+router.get('/', productsController.register);
 
 /*** CREATE ONE PRODUCT ***/ 
 
@@ -49,7 +49,7 @@ router.post('/registerOwner', upload.any("img-cancha"), validations, productsCon
 
 /*** REDIRECT ***/ 
 
-router.get('/userOwner/welcome', productsController.redirect); 
+router.get('/userOwner/welcome', logueadoOwner, productsController.redirect); 
 
 // /*** GET ONE PRODUCT ***/ 
 
@@ -57,7 +57,7 @@ router.get('/userOwner/welcome', productsController.redirect);
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-router.get('/editOwnerForm/:id/', productsController.edit);
+router.get('/editOwnerForm/:id/', logueadoOwner, productsController.edit);
 router.patch('/editOwnerForm/:id/',upload.any(), productsController.update); 
 
 

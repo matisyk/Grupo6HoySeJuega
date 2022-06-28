@@ -1,0 +1,35 @@
+[
+ {
+  "id": 1,
+  "nombre": "p",
+  "apellido": "a",
+  "email": "a@hotmail.com",
+  "password": "$2a$10$am6/7mBGO6eV60l9KGzTeOU7Nrk7E7lRXyT9E.lSQWPsXahFiwO7K",
+  "edad": "18",
+  "telefono": "11039218",
+  "telefono2": "",
+  "categoria": "abajo",
+  "deporte1": "",
+  "deporte2": "",
+  "deporte3": [
+   "",
+   ""
+  ],
+  "zonaDeJuego": "",
+  "dia1": "",
+  "dia2": "",
+  "dia3": "",
+  "dia4": "",
+  "dia5": "",
+  "dia6": "",
+  "dia7": "",
+  "hora1": "",
+  "hora2": "",
+  "hora3": "",
+  "hora4": "",
+  "hora5": "",
+  "hora6": "",
+  "hora7": "",
+  "image": "imagenJugador-1654556031834-517220025.jpeg"
+ }
+]

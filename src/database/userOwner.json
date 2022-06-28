@@ -182,5 +182,28 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
+ },
+ {
+  "id": 9,
+  "nombre": "Mat",
+  "apellido": "Syk",
+  "email": "mati@hotmail.com",
+  "password": "$2a$10$LfsSHBSKGGJNp.WsxDSYieRG6a4WsU0Ph7tpYfA7Th6KeuldCB2ki",
+  "nombreDelLugar": "la fortaleza",
+  "direccion": "siempre viva 212",
+  "telefono": "",
+  "telefono2": "",
+  "iluminacion": "No",
+  "estacionamiento": "No",
+  "wifi": "No",
+  "vestuarios": "No",
+  "duchas": "No",
+  "parrilla": "No",
+  "quincho": "No",
+  "transferencia": "No",
+  "mercadoPago": "No",
+  "modo": "No",
+  "efectivo": "No",
+  "image": "imagenCancha-1654372985364-494608673.jpg"
  }
 ]

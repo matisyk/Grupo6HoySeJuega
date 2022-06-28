@@ -6,8 +6,8 @@ const {
   body
 } = require('express-validator');
 const bcryptjs = require('bcryptjs');
-const User = require('../models/User')
-
+const userOwner = require('../models/UserOwner')
+const userPlayer = require('../models/UserPlayer')
 
 const controllerLogin = {
 
@@ -15,17 +15,17 @@ const controllerLogin = {
     res.render("partial/login/loginCourt")
   },
 
-  processLogin: (req, res) => {
+  processLoginOwner: (req, res) => {
 
-    let userToLogin = User.findByField('email', req.body.email)
+    let userOwnerToLogin = userOwner.findByField('email', req.body.email)
 
-    if (userToLogin) {
-      let isOkPassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
+    if (userOwnerToLogin) {
+      let isOkPassword = bcryptjs.compareSync(req.body.password, userOwnerToLogin.password);
       if (isOkPassword) {
 
-        delete userToLogin.password;
-        req.session.userLoggedOwner = userToLogin
-        return res.redirect("/userOwner/vistaCancha/" + req.session.userLoggedOwner.id)
+        delete userOwnerToLogin.password;
+        req.session.userOwnerLoggedOwner = userOwnerToLogin
+        return res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLoggedOwner.id)
       }
 
       return res.render('partial/login/loginCourt', {
@@ -52,9 +52,37 @@ const controllerLogin = {
   },
 
   loginPlayer: (req, res) => {
-
     res.render("partial/login/loginPlayer")
   },
+  processLoginPlayer: (req, res) => {
 
+    let userPlayerToLogin = userPlayer.findByField('email', req.body.email)
+
+    if (userPlayerToLogin) {
+      let isOkPassword = bcryptjs.compareSync(req.body.password, userPlayerToLogin.password);
+      if (isOkPassword) {
+
+        delete userPlayerToLogin.password;
+        req.session.userPlayerLoggedPlayer = userPlayerToLogin
+        return res.redirect("/userPlayer/perfilDeJugador/" + req.session.userPlayerLoggedPlayer.id)
+      }
+
+      return res.render('partial/login/loginPlayer', {
+        errors: {
+          password: {
+            msg: 'Error en tu contraseña'
+          }
+        }
+      });
+    }
+
+    return res.render('partial/login/loginPlayer', {
+      errors: {
+        email: {
+          msg: 'No se encuentra registrado este mail'
+        }
+      }
+    });
+  }
 }
 module.exports = controllerLogin

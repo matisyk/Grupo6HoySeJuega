@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const PlayerFilePath = path.join(__dirname, '../database/userPlayerDataBase.json');
+const PlayerFilePath = path.join(__dirname, '../database/userPlayer.json');
 const players = JSON.parse(fs.readFileSync(PlayerFilePath, 'utf-8'));
 const ownersFilePath = path.join(__dirname, '../database/userOwner.json');
 const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));

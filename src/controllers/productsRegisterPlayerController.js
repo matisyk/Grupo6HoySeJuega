@@ -3,8 +3,9 @@ const path = require('path');
 const {
 	validationResult
 } = require('express-validator');
+const bcryptjs = require('bcryptjs');
 
-const productsFilePath = path.join(__dirname, '../database/userPlayerDataBase.json');
+const productsFilePath = path.join(__dirname, '../database/userPlayer.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -39,6 +40,18 @@ const controller = {
 			});
 		}
 
+		let userInDB = User.findByField('email', req.body.email);
+		if (userInDB) {
+			return res.render("partial/register/formularioDatosJugador", {
+				errors: {
+					email: {
+						msg: 'Este mail ya está registrado, intenta con otro'
+					}
+				},
+				oldData: req.body
+			});
+		}
+
 		let image;
 		if(req.files[0] != undefined){
 			image = req.files[0].filename;
@@ -49,7 +62,8 @@ const controller = {
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
 			...req.body, 
-			image: image
+			image: image,
+			password: bcryptjs.hashSync(req.body.password, 10)
 		}
 
 		products.push(newProduct);
