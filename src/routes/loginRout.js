@@ -13,11 +13,11 @@ const validations = [
 
 const loginController = require('../controllers/loginController')
 
-router.get('/loginCourt', logueadoOwner, loginController.loginCourt);
+router.get('/loginCourt', loginController.loginCourt);
 router.post('/loginCourt', loginController.processLoginOwner);
 router.get('/logoutCourt', loginController.logout);
 
-router.get('/loginPlayer', logueadoPlayer, loginController.loginPlayer);
+router.get('/loginPlayer',  loginController.loginPlayer);
 router.post('/loginPlayer', loginController.processLoginPlayer);
 router.get('/logoutPlayer', loginController.logout);
 

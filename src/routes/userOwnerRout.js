@@ -13,8 +13,8 @@ router.get('/crearTorneo',noLogueadoOwner,logueadoOwner, userOwnerController.cre
 router.get('/registrarCancha',noLogueadoOwner,logueadoOwner, userOwnerController.registrarCancha);
 router.get('/registrarEscuelita',noLogueadoOwner,logueadoOwner, userOwnerController.registrarEscuelita);
 router.get('/reservaCancha',noLogueadoOwner,logueadoOwner, userOwnerController.reservaCancha);
-router.get('/vistaCancha/:id',noLogueadoOwner,logueadoOwner, userOwnerController.vistaCancha);
-router.get('/vistaCancha/:id',noLogueadoOwner,logueadoOwner, userOwnerController.canchas);
+router.get('/vistaCancha/:id', logueadoOwner, noLogueadoOwner, userOwnerController.vistaCancha);
+router.get('/vistaCancha/:id', logueadoOwner, noLogueadoOwner, userOwnerController.canchas);
 router.post('/vistaCancha',noLogueadoOwner,logueadoOwner, userOwnerController.vistaCancha);
 
 

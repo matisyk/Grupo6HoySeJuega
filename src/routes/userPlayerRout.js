@@ -18,8 +18,8 @@ router.get('/carrito',noLogueadoPlayer,logueadoPlayer, userPlayerController.carr
 
 router.get('/reservarCancha',noLogueadoPlayer,logueadoPlayer, userPlayerController.reservarCancha);
 
-router.get('/vistaCanchaInfo/:id',noLogueadoPlayer,logueadoPlayer, userPlayerController.vistaCanchaInfo);
-router.post('/vistaCanchaInfo',noLogueadoPlayer,logueadoPlayer, userPlayerController.vistaCanchaInfo);
+router.get('/vistaCanchaInfo/:id',logueadoPlayer, userPlayerController.vistaCanchaInfo);
+router.post('/vistaCanchaInfo',logueadoPlayer, userPlayerController.vistaCanchaInfo);
 
 router.get('/elegirCancha',noLogueadoPlayer,logueadoPlayer, userPlayerController.elegirCancha);
 
