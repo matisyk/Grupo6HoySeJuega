@@ -11,8 +11,8 @@ const userPlayerController = require('../controllers/userPlayerController')
 
 router.get('/',noLogueadoPlayer,logueadoPlayer, userPlayerController.vistaJugador);
 
-router.get('/perfilDeJugador/:id',noLogueadoPlayer,logueadoPlayer, userPlayerController.perfilDeJugador);
-router.post('/perfilDeJugador',noLogueadoPlayer,logueadoPlayer, userPlayerController.perfilDeJugador);
+router.get('/perfilDeJugador/:id',logueadoPlayer, userPlayerController.perfilDeJugador);
+router.post('/perfilDeJugador',logueadoPlayer, userPlayerController.perfilDeJugador);
 
 router.get('/carrito',noLogueadoPlayer,logueadoPlayer, userPlayerController.carrito);
 
