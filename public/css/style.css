@@ -52,7 +52,6 @@ MAIN
   color: white;
   background-color: black;
   border-radius: 5px;
-  padding: 30px 5px 0;
   background: rgb(2, 0, 36);
   background: linear-gradient(
     181deg,
@@ -60,8 +59,7 @@ MAIN
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 0) 100%
   );
-  height: 1200px;
-  height: 1010px;
+  height:fit-content
 }
 
 .titulito-home {
@@ -106,7 +104,7 @@ MAIN
 }
 
 .jugador-home {
-  width: 50%;
+  width: 100%;
 }
 
 .imagen-jugador img {
@@ -180,21 +178,17 @@ MAIN
   display: flex;
   flex-direction: column;
 }
-.jugador-home {
-  width: 100%;
-}
 
 .player_mobile {
   background-color: rgba(235, 235, 235, 0.25);
-  margin-left: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 20px;
 }
 .player_mobile2 {
   background-color: rgba(235, 235, 235, 0.25);
-  margin-left: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,12 +220,131 @@ MAIN
 .imagen-cancha {
   padding-bottom: 15px;
 }
+.formulario-home{
+  display: none;
+}
 
+.banner-publicitario{
+  position: relative;
+}
+.banner-publicitario .publicidad{
+  position: relative;
+  margin: 60px auto;
+  width: 90%;
+}
 
+.titulo-publicidad{
+  font-family: "Bebas Neue", cursive;
+  font-size: 20px;
+  position:absolute;
+  top: -30px;
+  left: 35px;
+  color: #ebebeb;
+}
+.banner-publicitario img{
+display: flex;
+margin:auto;
+width: inherit;
+
+}
+/*Boton publicidad*/
+/* From uiverse.io */
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+ }
+ 
+ button.learn-more {
+  width: 12rem;
+  height: auto;
+  position: absolute;
+  bottom: -40px;
+  left: 40px;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 3rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #fff;
+ }
+ /*--MAPA--*/
 .recuadro-mapa{
 background-color: #ebebeb;
 width: fit-content;
-margin: auto;
+max-width: 100%;
+margin: 60px auto;
 padding: 20px;
 border-radius: 10px;
 }
@@ -241,6 +354,9 @@ border-radius: 10px;
   font-size: 30px;
 }
 
+.mapa-grande{
+display: none;
+}
 /*=============================================
 MEDIA Q
 =============================================*/
@@ -267,6 +383,7 @@ MEDIA Q
   .publicidades img {
     width: 170px;
   }
+
 }
 @media (min-width: 768px) {
   .datos-lucas {
@@ -286,6 +403,7 @@ MEDIA Q
   }
   .titulito-home2 {
     font-size: 40px;
+    margin-bottom: 0;
   }
   .imagen-jugador img {
     border-radius: 100px;
@@ -293,10 +411,17 @@ MEDIA Q
     display: block;
     margin: 10px 10px 0px 90px;
     padding: 5px;
+    width: 50%
+  }
+  .recuadro-cancha{
+    background-color: rgba(235, 235, 235, 0.25);;
+    padding-top: 20px;
   }
  
   .image_field {
-    width: 35vw;
+    width: 80%;
+    margin-top: 40px;
+    border: solid black 4px;
   }
 
   .redes {
@@ -309,12 +434,8 @@ MEDIA Q
 
   .principal-home {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
-    height: 1200px;
-  }
-  .jugador-home {
-    width: 100%;
   }
 
   .player_mobile {
@@ -323,11 +444,12 @@ MEDIA Q
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 20px;
+    margin: 25px;
+    padding-bottom: 13px;
   }
   .player_mobile2 {
-    background-color: rgba(235, 235, 235, 0.25);
-    margin: 20px;
+    background: none;
+    margin: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -349,13 +471,14 @@ MEDIA Q
     align-items: center;
   }
 
+  .jugador-home{
+    width: 50%;
+  }
   .cancha-home {
-    margin-top: 15px;
+    width: 50%;
+    margin-top: 0px;
   }
 
-  .image_field {
-    width: 60vw;
-  }
   .imagen-cancha {
     padding-bottom: 15px;
   }
@@ -368,12 +491,94 @@ MEDIA Q
   img.img-publicidad1 {
     margin-left: 150px;
   }
+  .banner-publicitario .publicidad{
+    margin: 200px auto;
+    margin-bottom: 0;
+  }
+  button.learn-more{
+    left: 80px;
+  }
   .prev {
     font-size: 23px !important;
   }
   .next {
     font-size: 23px !important;
   }
+  .mapa-grande{
+    display: block;
+  }
+  .mapa-mobil{
+    display: none;
+  }
+  
+  .formulario-home{
+    display: flex;
+    background-color: #15215c;
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    bottom: -460px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 20px 0 20px 20px;
+    box-shadow: 15px 15px 30px #080e4b,
+              0px 0px 0px #ffffff;
+  }
+  .formulario-home form{
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+  }
+  .date{
+    display: flex;
+    flex-direction: row;
+  }
+  .input{
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+  }
+  /* From uiverse.io */
+  .button-form a{
+    text-decoration: none;
+  }
+  .button-form {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 90% ;
+  margin: 10px auto;
+}
+
+.button-form:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.button-form:active {
+  transform: translateY(-1px);
+}
+  /* From uiverse.io by @adamgiebl */
+.card {
+  width: 190px;
+  height: 254px;
+  border-radius: 30px;
+  background: #e0e0e0;
+  
+ }
 }
 
 @media (min-width: 1024px) {
@@ -391,16 +596,17 @@ MEDIA Q
   .cita-lucas {
     margin-top: 10px;
     position: relative;
-    top: -370px;
-    right: 261px;
+    top: -185px;
+    left: 60px;
     font-size: 17px;
   }
 
   .titulito-home {
     font-size: 40px;
     position: relative;
-    top: -440px;
-    right: 180px;
+    top: -240px;
+    right: -160px;
+    
   }
   .titulito-home2 {
     font-size: 40px;
@@ -424,37 +630,27 @@ MEDIA Q
     font-size: 20px;
   }
 
-  .principal-home {
-    display: flex;
-    flex-direction: column;
-  }
-  .jugador-home {
-    width: 100%;
-  }
+
 
   .player_mobile {
     background-color: rgba(235, 235, 235, 0.25);
-    margin: 25px 15px 0 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 400px;
-    height: 500px;
-  }
-  .player_mobile2 {
-    background-color: rgba(235, 235, 235, 0.25);
-    margin: -5px 0 0 15px;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 450px;
     height: 500px;
-    position: relative;
-    top: -847px;
-    right: -500px;
-    padding-top: 10px;
+  }
+  .player_mobile2 {
+    background-color: rgba(235, 235, 235, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 450px;
+    height: 500px;
+    margin: 40px auto;
   }
   .imagen-jugador img {
     border-radius: 50px;
@@ -462,8 +658,8 @@ MEDIA Q
     display: block;
     margin: 8px;
     padding: 5px;
-    position: relative;
-    right: 295px;
+    position: absolute;
+    left: 40px;
     top: -300px;
   }
   .imagen-jugador {
@@ -471,6 +667,7 @@ MEDIA Q
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
+    position: absolute;
   }
   .image_lucas {
     width: 50%;
@@ -482,13 +679,10 @@ MEDIA Q
     align-items: center;
   }
 
-  .cancha-home {
-    margin-top: 15px;
+  .recuadro-cancha{
+    background: none;
   }
 
-  .image_field {
-    width: 95%;
-  }
   .imagen-cancha {
     padding-bottom: 15px;
   }
@@ -508,13 +702,31 @@ MEDIA Q
   .publicidades img {
     width: 200px;
   }
-  .principal-home {
-    height: 550px;
+  .banner-publicitario .publicidad{
+    margin: 100px auto;
+  }
+  button.learn-more{
+    left: 150px;
+  }
+
+  .formulario-home{
+    display: block;
+    position: relative;
+    bottom: 0;
+    width: 80%;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .fecha{
+    width: 50%;
+  }
+  .hora{
+    width: 50%;
   }
 }
 @media (min-width: 1440px) {
   .principal-home {
-    display: flex;
     position: relative;
     color: white;
     background-color: black;
@@ -527,7 +739,6 @@ MEDIA Q
       rgba(9, 9, 121, 1) 35%,
       rgba(0, 212, 255, 0) 100%
     );
-    height: 600px;
     padding: 0px;
   }
   .prev {
@@ -547,7 +758,7 @@ MEDIA Q
     right: 472px;
   }
   .titulito-home {
-    right: 380px;
+    right: 200px;
   }
   .publicidades {
     margin: 20px 0 20px 0;
@@ -566,6 +777,10 @@ MEDIA Q
   .player_mobile2 {
     right: -480px;
   }
+  .titulo-publicidad{
+    left:170px;
+    font-size: 40px;
+  }
 }
 @media (min-width: 1600px) {
   .prev {
@@ -581,7 +796,7 @@ MEDIA Q
     right: 534px;
   }
   .titulito-home {
-    right: 445px;
+ 
     font-size: 50px;
   }
   .player_mobile2 {

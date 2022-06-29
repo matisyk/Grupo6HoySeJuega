@@ -80,7 +80,7 @@
   </div>
 
   <main class="main-home">
-    <div class="principal-home">
+    <section class="principal-home">
       <div class="jugador-home">    
         <div class="player_mobile">
           <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
@@ -104,12 +104,14 @@
 
       <div class="cancha-home">
         <div class="player_mobile2">
-          <p><span class="titulito-home2">Si sos dueño de cancha podés:</span></p>
-          <ol>
-            <li class="home_info">Registrar tu cancha</li>
-            <li class="home_info">Ofrecer tus servicios</li>
-            <li class="home_info">Crear torneos</li>
-          </ol>  
+          <div class="recuadro-cancha">
+            <p class="titulito-home2">Si sos dueño de cancha podés:</p>
+            <ol>
+              <li class="home_info">Registrar tu cancha</li>
+              <li class="home_info">Ofrecer tus servicios</li>
+              <li class="home_info">Crear torneos</li>
+            </ol>  
+          </div>
           <div class="imagen-cancha imagen-cancha-fondo">
             <img src="/img/img-canchas/cancha-home.jpg" alt="imagen-cancha" class="image_field">
           </div>      
@@ -117,17 +119,45 @@
         
       </div>
 
-    </div>
+    </section>
 
-    <div class="publicidades">
+    <section class="formulario-home">
+<form class="buscar-cancha" action="">
+  <select class="input" name="deporte" id="deporte">
+    <option value="">Futbol</option>
+    <option value="">Voley</option>
+    <option value="">Hockey</option>
+  </select>
+ <div class="date"><input class="input fecha" type="date">
+  <input class="input hora" type="time"></div> 
+  <button class="button-form" type="submit"><a href="../login/loginPlayer">Buscar</a></button>
+</form>
+    </section>
+  <!--- <div class="publicidades">
       <img src="/img/publicidad/publicidad.png" alt="imagen publicitaria" class="img-publicidad1">
       <img src="/img/publicidad/publicidad1.png" alt="imagen publicitaria" class="img-publicidad2">
-    </div>
+    </div>--> 
+
+    <section class="banner-publicitario">
+      
+      <div class="publicidad">
+        <img src = "/img/publicidad/banner-rectangular.jpeg">
+        <div class="titulo-publicidad">No te lo pierdas!!</div>
+      </div>
+      <button type="submit" class="learn-more"> <a href="https://www.head.com/es_ES/padel.html">
+        <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+        </span>
+        <span class="button-text">  Ir a la página</span></a>
+      </button>
+    </section>
 
   <section class="seccion-mapa">
       <div class="recuadro-mapa">
         <div class="titulo-mapa">Encontrá nuestras canchas:</div>
-        <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13137.528426543311!2d-58.40592325!3d-34.59449805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1656256043937!5m2!1ses-419!2sar" 
+        <iframe class="mapa-mobil" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13137.528426543311!2d-58.40592325!3d-34.59449805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1656256043937!5m2!1ses-419!2sar" 
+        height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="mapa-grande" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13137.528426543311!2d-58.40592325!3d-34.59449805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1656256043937!5m2!1ses-419!2sar" 
         width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
