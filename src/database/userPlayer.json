@@ -31,5 +31,40 @@
   "hora6": "",
   "hora7": "",
   "image": "imagenJugador-1654556031834-517220025.jpeg"
+ },
+ {
+  "id": 2,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "frangarcia93@icloud.com",
+  "password": "$2a$10$otH4Az62et5uRMhDVEjVsuDfreBZ0JCvIXMCoV0NMjGnmYja/74Sy",
+  "edad": "28",
+  "telefono": "2615995585",
+  "telefono2": "2613356722",
+  "categoria": "delantero",
+  "autoValoracion": "Estrella",
+  "ubicacion": "Juego",
+  "deporte1": "Futbol",
+  "deporte2": "",
+  "deporte3": [
+   "",
+   ""
+  ],
+  "zonaDeJuego": "Tigre",
+  "dia1": "lunes",
+  "dia2": "lunes",
+  "dia3": "Martes",
+  "dia4": "Martes",
+  "dia5": "Jueves",
+  "dia6": "Sabado",
+  "dia7": "Sabado",
+  "hora1": "00:14",
+  "hora2": "23:16",
+  "hora3": "01:14",
+  "hora4": "02:14",
+  "hora5": "03:14",
+  "hora6": "04:14",
+  "hora7": "02:14",
+  "image": "imagenJugador-1656469000279-693753967.jpg"
  }
 ]

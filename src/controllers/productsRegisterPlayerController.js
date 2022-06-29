@@ -4,6 +4,7 @@ const {
 	validationResult
 } = require('express-validator');
 const bcryptjs = require('bcryptjs');
+const User = require('../models/UserPlayer')
 
 const productsFilePath = path.join(__dirname, '../database/userPlayer.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -12,13 +13,15 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 const controller = {
 
-    // Detail - Detail from one product
+	// Detail - Detail from one product
 	detalle: (req, res) => {
 
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("detalle", {product})
+		res.render("detalle", {
+			product
+		})
 
 	},
 
@@ -28,7 +31,7 @@ const controller = {
 		res.render("partial/register/formularioDatosJugador")
 
 	},
-	
+
 	// Create -  Method to store
 	store: (req, res) => {
 
@@ -39,7 +42,13 @@ const controller = {
 				oldData: req.body
 			});
 		}
-
+		let image;
+		if (req.files[0] != undefined) {
+			image = req.files[0].filename;
+		} else {
+			image = "imagenJugador-1654556031834-517220025.jpeg";
+		}
+		
 		let userInDB = User.findByField('email', req.body.email);
 		if (userInDB) {
 			return res.render("partial/register/formularioDatosJugador", {
@@ -52,16 +61,11 @@ const controller = {
 			});
 		}
 
-		let image;
-		if(req.files[0] != undefined){
-			image = req.files[0].filename;
-		}else{
-			image = "imagenJugador-1654556031834-517220025.jpeg";
-		}
+
 
 		let newProduct = {
 			id: products[products.length - 1].id + 1,
-			...req.body, 
+			...req.body,
 			image: image,
 			password: bcryptjs.hashSync(req.body.password, 10)
 		}
@@ -69,7 +73,7 @@ const controller = {
 		products.push(newProduct);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-		
+
 		res.redirect("/register/userPlayer/welcome/");
 
 	},
@@ -78,48 +82,54 @@ const controller = {
 	redirect: (req, res) => {
 
 		let id = products.length;
-		res.render("partial/register/redireccion2", {id});
+		res.render("partial/register/redireccion2", {
+			id
+		});
 
 	},
 
 	// Update - Form to edit
 	edit: (req, res) => {
-		
+
 		let id = req.params.id
 		let product = products.find(product => product.id == id)
 
-		res.render("partial/register/editPlayerForm", {product})
+		res.render("partial/register/editPlayerForm", {
+			product
+		})
 
 	},
 	// Update - Method to update
 	update: (req, res) => {
-	
+
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
 
-		
+
 		console.log("🚀 ~ file: productsController.js ~ line 78 ~ req.files", req.files)
 
 
 		let image
-		if(req.files[0] != undefined){
+		if (req.files[0] != undefined) {
 			image = req.files[0].filename
-		}else{
+		} else {
 			image = productToEdit.image
 		}
-		
-		
+
+
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,
 			image: image,
 		}
-		
+
 		let newProduct = products.map(product => {
 
 			if (product.id == productToEdit.id) {
 
-				return product = {...productToEdit};
+				return product = {
+					...productToEdit
+				};
 			}
 
 			return product
@@ -133,8 +143,8 @@ const controller = {
 	},
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		
+	destroy: (req, res) => {
+
 		let id = req.params.id
 		let productToDelete = products.filter(product => product.id != id)
 
