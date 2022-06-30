@@ -2,11 +2,10 @@ function userLoggedOwner(req, res, next) {
 
   res.locals.isLogged = false;
 
-  if (req.session && req.session.userOwnerLoggedOwner) {
+  if (req.session && req.session.userOwnerLogged) {
     res.locals.isLogged = true;
-    res.locals.userOwnerLoggedOwner = req.session.userOwnerLoggedOwner;
+    res.locals.userOwnerLogged = req.session.userOwnerLogged;
   }
-  console.log(res.locals.userOwnerLoggedOwner)
   next();
 }
 
