@@ -27,7 +27,7 @@ body {
   text-align: center;
   align-items: center;
   font-size: 20px;
-  width: 400px;
+  width: 450px;
   height: 460px;
   padding: 20px;
   margin: 30px auto;
@@ -62,7 +62,7 @@ body {
 }
 /* From uiverse.io by @alexruix */
 .card {
- width: 300px;
+ width: 350px;
  padding: 1.9rem 1.2rem;
  text-align: center;
  background: #2a2b38;
