@@ -210,7 +210,7 @@
   "id": 10,
   "nombre": "Maria",
   "apellido": "Perez",
-  "email": "Mape@gmail.com",
+  "email": "mape@gmail.com",
   "password": "$2a$10$J915rFOifcX4Ywl7qxXtWe8uUeY2pvm7dGQgwmhfl4YMEycr8ay7i",
   "nombreDelLugar": "club10",
   "direccion": "calle tucuman 234",
