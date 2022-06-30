@@ -1,21 +1,10 @@
 const express = require('express');
-
 const app = express();
 const path = require("path");
-
-app.use(express.static('public'));
-
 const publicPath = path.resolve('../public');
-
-app.use(express.static(publicPath));
-
-app.use(express.urlencoded({ extended: false }));
-
-app.set('view engine', 'ejs');
-app.set('views', path.resolve('src/views'))
-
 const methodOverride = require('method-override');
-app.use(methodOverride('_method'))
+
+const userLoggedOwner = require('./middlewares/userLoggedOwner')
 
 //session
 const session = require ('express-session')
@@ -24,6 +13,17 @@ app.use(session({
   resave: false,
   saveUninitialized: false,
 }))
+
+app.use(userLoggedOwner);
+
+app.use(express.static('public'));
+app.use(express.static(publicPath));
+app.use(express.urlencoded({
+  extended: false
+}));
+app.set('view engine', 'ejs');
+app.set('views', path.resolve('src/views'))
+app.use(methodOverride('_method'))
 
 // home
 const homeRouter = require('./routes/homeRout');

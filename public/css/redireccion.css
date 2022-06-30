@@ -1,0 +1,25 @@
+body {
+  background-image: url(../img/welcome.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover !important;
+  font-family: "Bangers", cursive !important;
+}
+
+.title {
+ margin-bottom: 1rem;
+ font-size: 4.5em;
+ font-weight: 500;
+ color: #000000;
+ -webkit-text-stroke: 1px rgb(255, 255, 255);
+
+}
+
+.container{
+
+  position: relative;
+  top: 700px;
+   background-color: rgba(141, 141, 141, 0.338);
+   border-radius: 100px
+}
