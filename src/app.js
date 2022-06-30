@@ -14,7 +14,7 @@ app.use(session({
   saveUninitialized: false,
 }))
 
-app.use(userLoggedOwner);
+// app.use(userLoggedOwner);
 
 app.use(express.static('public'));
 app.use(express.static(publicPath));

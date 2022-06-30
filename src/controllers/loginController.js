@@ -9,6 +9,7 @@ const bcryptjs = require('bcryptjs');
 const userOwner = require('../models/UserOwner')
 const userPlayer = require('../models/UserPlayer')
 
+
 const controllerLogin = {
 
   loginCourt: (req, res) => {
@@ -24,8 +25,8 @@ const controllerLogin = {
       if (isOkPassword) {
 
         delete userOwnerToLogin.password;
-        req.session.userOwnerLoggedOwner = userOwnerToLogin
-        return res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLoggedOwner.id)
+        req.session.userOwnerLogged = userOwnerToLogin
+        return res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLogged.id)
       }
 
       return res.render('partial/login/loginCourt', {
@@ -48,8 +49,10 @@ const controllerLogin = {
   },
   logout: (req, res) => {
     req.session.destroy();
+    console.log(req.session)
     return res.redirect("/")
   },
+  
 
   loginPlayer: (req, res) => {
     res.render("partial/login/loginPlayer")
@@ -63,8 +66,8 @@ const controllerLogin = {
       if (isOkPassword) {
 
         delete userPlayerToLogin.password;
-        req.session.userPlayerLoggedPlayer = userPlayerToLogin
-        return res.redirect("/userPlayer/perfilDeJugador/" + req.session.userPlayerLoggedPlayer.id)
+        req.session.userLoggedPlayer = userPlayerToLogin
+        return res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer.id)
       }
 
       return res.render('partial/login/loginPlayer', {
@@ -83,6 +86,8 @@ const controllerLogin = {
         }
       }
     });
+    
   }
-}
+};
 module.exports = controllerLogin
+

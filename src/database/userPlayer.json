@@ -66,5 +66,40 @@
   "hora6": "04:14",
   "hora7": "02:14",
   "image": "imagenJugador-1656469000279-693753967.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "s@s",
+  "password": "$2a$10$snA316K.k7oG1O2z0W2DGu5E4WZB6T.etiPtm48GjLMgzCdmDlrOy",
+  "edad": "28",
+  "telefono": "2615995585",
+  "telefono2": "2615995585",
+  "categoria": "Arquera",
+  "autoValoracion": "Estrella",
+  "ubicacion": "Estrella",
+  "deporte1": "",
+  "deporte2": "",
+  "deporte3": [
+   "",
+   ""
+  ],
+  "zonaDeJuego": "",
+  "dia1": "",
+  "dia2": "",
+  "dia3": "",
+  "dia4": "",
+  "dia5": "",
+  "dia6": "",
+  "dia7": "",
+  "hora1": "",
+  "hora2": "",
+  "hora3": "",
+  "hora4": "",
+  "hora5": "",
+  "hora6": "",
+  "hora7": "",
+  "image": "imagenJugador-1654556031834-517220025.jpeg"
  }
 ]

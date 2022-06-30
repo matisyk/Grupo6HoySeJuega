@@ -1,6 +1,5 @@
 const express = require('express')
 const router = express.Router();
-const logueadoOwner = require('../middlewares/logueadoOwner');
 const noLogueadoOwner = require('../middlewares/noLogueadoOwner');
 // const multer = require('multer');
 
@@ -8,14 +7,14 @@ const noLogueadoOwner = require('../middlewares/noLogueadoOwner');
 
 const userOwnerController = require('../controllers/userOwnerController')
 
-router.get('/agenda',noLogueadoOwner,logueadoOwner, userOwnerController.agenda);
-router.get('/crearTorneo',noLogueadoOwner,logueadoOwner, userOwnerController.crearTorneo);
-router.get('/registrarCancha',noLogueadoOwner,logueadoOwner, userOwnerController.registrarCancha);
-router.get('/registrarEscuelita',noLogueadoOwner,logueadoOwner, userOwnerController.registrarEscuelita);
-router.get('/reservaCancha',noLogueadoOwner,logueadoOwner, userOwnerController.reservaCancha);
-router.get('/vistaCancha/:id', logueadoOwner, noLogueadoOwner, userOwnerController.vistaCancha);
-router.get('/vistaCancha/:id', logueadoOwner, noLogueadoOwner, userOwnerController.canchas);
-router.post('/vistaCancha',noLogueadoOwner,logueadoOwner, userOwnerController.vistaCancha);
+router.get('/agenda',noLogueadoOwner, userOwnerController.agenda);
+router.get('/crearTorneo',noLogueadoOwner, userOwnerController.crearTorneo);
+router.get('/registrarCancha',noLogueadoOwner, userOwnerController.registrarCancha);
+router.get('/registrarEscuelita',noLogueadoOwner, userOwnerController.registrarEscuelita);
+router.get('/reservaCancha',noLogueadoOwner, userOwnerController.reservaCancha);
+router.get('/vistaCancha/:id',   userOwnerController.vistaCancha);
+router.get('/vistaCancha/:id', noLogueadoOwner,  userOwnerController.canchas);
+router.post('/vistaCancha', userOwnerController.vistaCancha);
 
 
 module.exports = router;
