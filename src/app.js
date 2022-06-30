@@ -3,18 +3,17 @@ const app = express();
 const path = require("path");
 const publicPath = path.resolve('../public');
 const methodOverride = require('method-override');
-
+const session = require ('express-session')
 const userLoggedOwner = require('./middlewares/userLoggedOwner')
 
 //session
-const session = require ('express-session')
 app.use(session({
   secret: 'Es un secreto nuestro',
   resave: false,
   saveUninitialized: false,
 }))
 
-app.use(userLoggedOwner);
+
 
 app.use(express.static('public'));
 app.use(express.static(publicPath));
@@ -24,7 +23,7 @@ app.use(express.urlencoded({
 app.set('view engine', 'ejs');
 app.set('views', path.resolve('src/views'))
 app.use(methodOverride('_method'))
-
+app.use(userLoggedOwner);
 // home
 const homeRouter = require('./routes/homeRout');
 app.use('/', homeRouter);
