@@ -50,11 +50,11 @@ Sprint 5 ->
 
 1. Comenzar a hacer: 
 
-- Mayor organización en reuniones y trabajo grupal.
+- Mayor disponibilidad grupal.
 
 2. Hacer más:
 
-- Mejorar la interpretación de las consignas pedidas, y consultar ante la duda.
+- Hacer commits mas especificos y comunicativos
 
 3. Continuar haciendo:
 
@@ -62,7 +62,7 @@ Sprint 5 ->
 
 4. Hacer menos:
 
-- Invertir menos horas individuales y solicitar más ayuda del grupo.
+- Avanzar menos de manera individual y desorganizada.
 
 5. Dejar de hacer:
 
