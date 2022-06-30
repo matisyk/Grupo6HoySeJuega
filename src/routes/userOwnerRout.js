@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router();
 const logueadoOwner = require('../middlewares/logueadoOwner');
-const noLogueadoOwner = require('../middlewares/nologueadoOwner');
+const noLogueadoOwner = require('../middlewares/noLogueadoOwner');
 // const multer = require('multer');
 
 

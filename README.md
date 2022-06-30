@@ -81,4 +81,4 @@ Integrantes del equipo:
 
 
 
-Archivo de trello: https://trello.com/invite/b/EvxqMdmK/c12a26a46ee5357764c279936764fb00/grupo06-proyecto-integrador
+Archivo de trello:https://trello.com/invite/b/qGQ6ny2e/3a0eb88501f017ef3163b563beca28b0/grupo-6-proyecto-integrador
