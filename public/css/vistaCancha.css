@@ -34,6 +34,7 @@ h1 {
 
 .nombre-del-lugar{
   margin: 0;
+  font-size: 50px;
 }
 .logo-club img{
   margin-right: 15px;
@@ -95,14 +96,14 @@ img.user-img {
 .volver{
   position: absolute;
   top: 50%;
-  left: 100px;
-  font-size: 1.5em;
+  left: -220px;
+  font-size: 2em;
 }
 .prox{
   position: absolute;
   top: 50%;
-  right: 100px;
-  font-size: 1.5em;
+  right: -220px;
+  font-size: 2em;
 }
 .boton-editar-superior {
   color: #ebebeb;
@@ -470,7 +471,12 @@ h2 {
   
 }
 @media (min-width: 768px) {
-
+  .volver{
+    left: -150px;
+  }
+  .prox{
+    right: -150px;
+  }
   .datos-del-lugar h2 {
     width: 50%;
     font-size: 4rem;
@@ -511,7 +517,13 @@ h2 {
   .logo-club img{
     margin-right: 30px;
   }
-  
+  .volver{
+    left: 0px;
+
+  }
+  .prox{
+    right: 0px;
+  }
   .datos-del-lugar {
     height: 400px;
   }
@@ -598,6 +610,13 @@ h2 {
   }
 }
 @media (min-width: 1440px) {
+  .volver{
+    left: 150px;
+
+  }
+  .prox{
+    right: 150px;
+  }
   .logo-club img{
     margin-right: 80px;
   }
