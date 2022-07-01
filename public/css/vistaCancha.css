@@ -34,10 +34,10 @@ h1 {
 
 .nombre-del-lugar{
   margin: 0;
-  font-size: 50px;
-}
-.logo-club img{
-  margin-right: 15px;
+  font-size: 40px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .datos-del-lugar {
@@ -514,8 +514,10 @@ h2 {
   }
 }
 @media (min-width: 1024px) {
-  .logo-club img{
-    margin-right: 30px;
+
+  .nombre-del-lugar{
+    font-size: 50px;
+    width: 50%;
   }
   .volver{
     left: 0px;
@@ -617,9 +619,7 @@ h2 {
   .prox{
     right: 150px;
   }
-  .logo-club img{
-    margin-right: 80px;
-  }
+
   .datos-del-lugar h2 {
     width: 60%;
     font-size: 5rem;
