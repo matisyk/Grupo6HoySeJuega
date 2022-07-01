@@ -101,5 +101,40 @@
   "hora6": "",
   "hora7": "",
   "image": "imagenJugador-1654556031834-517220025.jpeg"
+ },
+ {
+  "id": 4,
+  "nombre": "Candela",
+  "apellido": "Rios",
+  "email": "candy@gmail.com",
+  "password": "$2a$10$sfXCGoDiQUj3aufqFasB.uRZWWJQYI9OBVDo787EWq6SXUnxMsL76",
+  "edad": "23",
+  "telefono": "1153482264",
+  "telefono2": "1155739205",
+  "categoria": "delantero",
+  "autoValoracion": "Copadito",
+  "ubicacion": "Copadito",
+  "deporte1": "Futbol",
+  "deporte2": "",
+  "deporte3": [
+   "",
+   ""
+  ],
+  "zonaDeJuego": "",
+  "dia1": "Martes",
+  "dia2": "Jueves",
+  "dia3": "",
+  "dia4": "",
+  "dia5": "",
+  "dia6": "",
+  "dia7": "",
+  "hora1": "20:00",
+  "hora2": "19:00",
+  "hora3": "",
+  "hora4": "",
+  "hora5": "",
+  "hora6": "",
+  "hora7": "",
+  "image": "imagenJugador-1656708728371-852758602.jpg"
  }
 ]
