@@ -27,21 +27,18 @@ h1 {
   color: #ebebeb;
   height: 250px;
   margin-bottom: 50px;
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .nombre-del-lugar{
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  padding-top: 100px;
+  margin: 0;
+}
+.logo-club img{
+  margin-right: 15px;
 }
 
-.logo-club img{
-  position: absolute;
-  top: 90px;
-  left: 15%;
-}
 .datos-del-lugar {
   color: #ebebeb;
   margin: 40px auto;
@@ -52,7 +49,7 @@ h1 {
   width: 80%;
   background-color: rgba(225, 225, 225, 0.2);
   border-radius: 10px;
-  padding: 100px;
+  padding: 30px;
 }
 
 .datos-del-lugar h2 {
@@ -511,6 +508,10 @@ h2 {
   }
 }
 @media (min-width: 1024px) {
+  .logo-club img{
+    margin-right: 30px;
+  }
+  
   .datos-del-lugar {
     height: 400px;
   }
@@ -597,7 +598,9 @@ h2 {
   }
 }
 @media (min-width: 1440px) {
-  
+  .logo-club img{
+    margin-right: 80px;
+  }
   .datos-del-lugar h2 {
     width: 60%;
     font-size: 5rem;
