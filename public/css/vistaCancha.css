@@ -22,21 +22,37 @@ h1 {
   font-family: Bangers;
   width: 100px;
 }
-
-.datos-del-lugar {
+.encabezado-club{
   background-color: rgb(22, 24, 30);
   color: #ebebeb;
-  /* padding: 100px; */
-  /* margin-bottom: 100px; */
-  /* max-width: 1200px; */
-  /* margin: auto; */
-  margin-bottom: 40px;
+  height: 250px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.nombre-del-lugar{
+  margin: auto;
   display: flex;
-  /* justify-content: space-around; */
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.logo-club img{
+  position: absolute;
+  top: 90px;
+  left: 15%;
+}
+.datos-del-lugar {
+  color: #ebebeb;
+  margin: 40px auto;
+  display: flex;
   align-items: center;
   position: relative;
-  /* margin: 5px; */
   height: 550px;
+  width: 80%;
+  background-color: rgba(225, 225, 225, 0.2);
+  border-radius: 10px;
+  padding: 100px;
 }
 
 .datos-del-lugar h2 {
@@ -50,32 +66,24 @@ h1 {
   bottom: 200px;
   left: -10px;
 }
-/* .datos2-del-lugar {
-  position: absolute;
-  left: 202px;
-  width: 86%;
-  top: 254px;
-} */
+
+.datos2-del-lugar{
+  width: 50%;
+}
 .datos2-del-lugar ol {
   padding-left: 0;
   width: 50%;
-  position: absolute;
-  left: 85px;
-  bottom: 230px;
+  flex-direction: column;
+}
+.datos3-del-lugar{
+  width: 50%;
 }
 .datos3-del-lugar ol {
   padding-left: 0;
-  width: 78%;
-  position: absolute;
-  left: 85px;
-  top: 300px;
-}
-ol li .detalle2 {
   width: 50%;
-  position: relative;
-  top: 140px;
-  right: 340px;
+  flex-direction: column;
 }
+
 .datos2-del-lugar ol li a {
   text-decoration: none;
   color: #ebebeb;
@@ -113,7 +121,7 @@ img.user-img {
   border-radius: 14px;
 }
 
-.detalle2 {
+.detalle {
   margin-top: 10px;
 }
 .lapizUser i {
@@ -121,8 +129,7 @@ img.user-img {
   color: white !important;
 }
 .titulo1 {
-  margin-left: 10px;
-  margin-bottom: 20px;
+  margin: 100px 0 20px 10px;
   font-size: 28px;
 }
 .titulo2 {
@@ -462,17 +469,8 @@ h2 {
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 50%;
-    position: absolute;
-    left: 15px;
-    bottom: 92px;
   }
-  .datos3-del-lugar ol {
-    padding-left: 0;
-    width: 50%;
-    position: absolute;
-    left: 212px;
-    top: 132px;
-  }
+  
 }
 @media (min-width: 768px) {
 
@@ -484,16 +482,11 @@ h2 {
   }
   .datos2-del-lugar ol {
     width: 50%;
-    left: 145px;
-    bottom: 20px;
     font-size: 20px;
   }
   .datos3-del-lugar ol {
     padding-left: 0;
     width: 47%;
-    position: absolute;
-    left: 402px;
-    top: 147px;
     font-size: 17px;
   }
   .jd-slider .prev {
@@ -505,12 +498,8 @@ h2 {
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 85%;
-    position: absolute;
-    left: 75px;
-    bottom: 175px;
     font-size: 20px;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
@@ -518,14 +507,7 @@ h2 {
   .datos3-del-lugar ol {
     padding-left: 0;
     width: 100%;
-    position: absolute;
-    left: 7px;
-    top: 245px;
     font-size: 17px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
   }
 }
 @media (min-width: 1024px) {
@@ -545,12 +527,8 @@ h2 {
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 98%;
-    position: absolute;
-    left: -85px;
-    bottom: 120px;
     font-size: 17px;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: baseline;
@@ -558,14 +536,6 @@ h2 {
   .datos3-del-lugar ol {
     padding-left: 0;
     width: 90%;
-    position: absolute;
-    left: 45px;
-    top: 275px;
-    /* font-size: 17px; */
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
     font-size: 18px;
   }
   .jd-slider .prev {
@@ -577,12 +547,8 @@ h2 {
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 106%;
-    position: absolute;
-    left: -121px;
-    bottom: 100px;
     font-size: 18px;
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
@@ -590,14 +556,7 @@ h2 {
   .datos3-del-lugar ol {
     padding-left: 0;
     width: 87%;
-    position: absolute;
-    left: 55px;
-    top: 295px;
     font-size: 17px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
   }
   .boton-editar-superior {
     color: #ebebeb;
@@ -655,13 +614,7 @@ h2 {
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 90%;
-    position: absolute;
-    left: 42px;
-    bottom: 100px;
     font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
   }
@@ -770,15 +723,7 @@ h2 {
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 90%;
-    position: absolute;
-    left: 42px;
-    bottom: 90px;
     font-size: 18px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: baseline;
   }
   .fa-solid,
   .fas {
@@ -870,13 +815,7 @@ h2 {
   .datos3-del-lugar ol {
     padding-left: 0;
     width: 87%;
-    position: absolute;
-    left: 55px;
-    top: 305px;
     font-size: 17px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
   }
   .boton-editar-superior {

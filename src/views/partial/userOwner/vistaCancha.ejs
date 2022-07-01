@@ -25,7 +25,7 @@
   <main>
 
     <!---<p class="sin-canchas">Aún no tienes canchas registradas</p>--->
-    <div class="datos-del-lugar background">
+    <div class="encabezado-club">
       <div class="logo-club"> 
         <% if (typeof userOwner.logo != "undefined") { %>
         <img class="user-img" src="/img/products/<%= userOwner.logo %>">
@@ -34,67 +34,8 @@
         <% } %>
       </div>
 
-      <h2><%= userOwner.nombreDelLugar %></h2>
-      <div class="datos2-del-lugar">
-        <ol>
-          <li class="detalle1">
-            <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
-              <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.direccion %></span>
-            </a>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.iluminacion%></span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.vestuarios%> </span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.duchas%> </span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.parrilla%></span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quincho%></span>
-          </li>
-          <li class="detalle2">
-            <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.wifi%></span>
-          </li>
-        </ol>
-      </div>
-      <div class="datos3-del-lugar">
-        <ol>
-          <li class="detalle2">
-            <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.estacionamiento%></span>
-          </li>
-          <li class="detalle2">
-            <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.transferencia%></span>
-          </li>
-          <li class="detalle2">
-            <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.mercadoPago%></span>
-          </li>
-          <li class="detalle2">
-            <span><i class="fa-solid fa-mobile-retro"></i> Modo </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.modo%></span>
-          </li>
-          <li class="detalle2">
-            <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
-                class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.efectivo%></span>
-          </li>
-
-          </li>
-
-        </ol>
-      </div>
+      <h2 class="nombre-del-lugar"><%= userOwner.nombreDelLugar %></h2>
+      
       <button class="boton-editar-superior"><a class='lapizUser'
           href='../../register/editOwnerForm/<%= userOwner.id%>'><i class="fa-solid fa-pencil"></i></a></button>
     </div>
@@ -304,9 +245,71 @@
       </button>
     </div>
 
-    <br>
-    <br>
-    <br>
+    <section>
+      <h2 class="titulo2">Nuestro Club</h2>
+      <div class="datos-del-lugar">
+        <div class="datos2-del-lugar">
+          <ol>
+            <li class="detalle">
+              <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
+                <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.direccion %></span>
+              </a>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.iluminacion%></span>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.vestuarios%> </span>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.duchas%> </span>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.parrilla%></span>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quincho%></span>
+            </li>
+          </ol>
+        </div>
+        <div class="datos3-del-lugar">
+          <ol>
+            <li class="detalle">
+              <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.wifi%></span>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.estacionamiento%></span>
+            </li>
+            <li class="detalle">
+              <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.transferencia%></span>
+            </li>
+            <li class="detalle">
+              <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.mercadoPago%></span>
+            </li>
+            <li class="detalle">
+              <span><i class="fa-solid fa-mobile-retro"></i> Modo </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.modo%></span>
+            </li>
+            <li class="detalle">
+              <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.efectivo%></span>
+            </li>
+
+            </li>
+
+          </ol>
+        </div>
+      </div>
+    </section>
 
     <%- include('../footer') %>
 
