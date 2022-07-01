@@ -81,13 +81,23 @@ ol li .detalle2 {
   color: #ebebeb;
 }
 img.user-img {
-  max-width: 100px;
-  margin: 20px;
-  position: relative;
-  top: -200px;
-  right: 0px;
-  max-height: 200px;
   border-radius: 25px;
+  min-width: 400px;
+  margin: auto;
+  position: relative;
+}
+
+.volver{
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  font-size: 1.5em;
+}
+.prox{
+  position: absolute;
+  top: 50%;
+  right: 100px;
+  font-size: 1.5em;
 }
 .boton-editar-superior {
   color: #ebebeb;
@@ -449,11 +459,6 @@ h2 {
     left: -5px;
     bottom: 138px;
   }
-  img.user-img {
-    max-width: 120px;
-    top: -140px;
-    right: -10px;
-  }
   .datos2-del-lugar ol {
     padding-left: 0;
     width: 50%;
@@ -470,11 +475,7 @@ h2 {
   }
 }
 @media (min-width: 768px) {
-  img.user-img {
-    max-width: 240px;
-    top: -110px;
-    right: -30px;
-  }
+
   .datos-del-lugar h2 {
     width: 50%;
     font-size: 4rem;
@@ -531,11 +532,7 @@ h2 {
   .datos-del-lugar {
     height: 400px;
   }
-  img.user-img {
-    max-width: 350px;
-    top: -82px;
-    right: -67px;
-  }
+ 
   .datos-del-lugar h2 {
     width: 45%;
     font-size: 5rem;
@@ -641,11 +638,7 @@ h2 {
   }
 }
 @media (min-width: 1440px) {
-  img.user-img {
-    max-width: 370px;
-    top: -82px;
-    right: -170px;
-  }
+  
   .datos-del-lugar h2 {
     width: 60%;
     font-size: 5rem;
@@ -760,11 +753,7 @@ h2 {
 }
 
 @media (min-width: 1600px) {
-  img.user-img {
-    max-width: 370px;
-    top: -82px;
-    right: -170px;
-  }
+
   .datos-del-lugar h2 {
     width: 60%;
     font-size: 5rem;
