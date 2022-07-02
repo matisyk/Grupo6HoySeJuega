@@ -44,11 +44,11 @@ const controller = {
 
 		products.push(newProduct);
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ''));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
-		res.redirect("/userOwner/vistaCancha/10");
+		res.redirect("/userOwner/vistaCancha/" + newProduct.id);
 
-	},
+	}, 
 
 	// Update - Form to edit
 	edit: (req, res) => {

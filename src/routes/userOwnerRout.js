@@ -8,10 +8,10 @@ const logueadoPlayer = require('../middlewares/logueadoPlayer')
 
 const userOwnerController = require('../controllers/userOwnerController')
 
-router.get('/agenda',noLogueadoOwner, logueadoPlayer,userOwnerController.agenda);
+router.get('/agenda',logueadoPlayer,userOwnerController.agenda);
 router.get('/crearTorneo',noLogueadoOwner,logueadoPlayer, userOwnerController.crearTorneo);
-router.get('/registrarCancha',noLogueadoOwner, logueadoPlayer,userOwnerController.registrarCancha);
-router.get('/registrarEscuelita',noLogueadoOwner, logueadoPlayer,userOwnerController.registrarEscuelita);
+router.get('/registrarCancha',logueadoPlayer,userOwnerController.registrarCancha);
+router.get('/registrarEscuelita',logueadoPlayer,userOwnerController.registrarEscuelita);
 router.get('/reservaCancha',noLogueadoOwner, logueadoPlayer,userOwnerController.reservaCancha);
 router.get('/vistaCancha/:id',  logueadoPlayer, userOwnerController.vistaCancha);
 router.get('/vistaCancha/:id', noLogueadoOwner, logueadoPlayer, userOwnerController.canchas);
