@@ -19,11 +19,14 @@
             </a>
 
             <div class="menu-cont4">
-              <a class="txtNav1" href="/userOwner/vistaCancha/<%= userOwner.id %>">Mi perfil</a>
-              <a class="txtNav1" href="/userOwner/registrarCancha">Registrar canchas</a>
-              <a class="txtNav1" href="/userOwner/registrarEscuelita"><i class="fa-solid fa-futbol"></i> Escuelita</a>
-              <a class="txtNav4" href="/userOwner/crearTorneo"><i class="fa-solid fa-trophy"></i> Torneos</a>
-              <a class="txtNav5" href="/userOwner/reservaCancha">
+              <a class="txtNav1" href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>">Mi perfil</a>
+              <a class="txtNav1" href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarCancha">Registrar
+                canchas</a>
+              <a class="txtNav1" href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita"><i
+                  class="fa-solid fa-futbol"></i> Escuelita</a>
+              <a class="txtNav4" href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/crearTorneo"><i
+                  class="fa-solid fa-trophy"></i> Torneos</a>
+              <a class="txtNav5" href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/reservaCancha">
                 <i class="fa-solid fa-calendar-days"></i> Reservas
               </a>
               <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>

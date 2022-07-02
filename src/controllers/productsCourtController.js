@@ -46,7 +46,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
-		res.redirect("/userOwner/vistaCancha/" + newProduct.id);
+		res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLogged.id);
 
 	}, 
 
@@ -64,9 +64,6 @@ const controller = {
 	
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-
-		
-		console.log("🚀 ~ file: productsController.js ~ line 78 ~ req.files", req.files)
 
 
 		let image
@@ -96,7 +93,8 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
 
-		res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
+		res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLogged.id);
+
 
 	},
 
@@ -107,7 +105,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete));
 
-		res.redirect("/userOwner/vistaCancha/" + id)
+		res.redirect("/userOwner/vistaCancha/")
 
 	}
 };

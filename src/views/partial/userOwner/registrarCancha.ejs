@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cancha</title>
     <link rel="stylesheet" href="/css/registrarCancha.css">
+     <%- include('../css-externos') %>
+
 </head>
 <body>
+ <%- include('./headerOwner.ejs') %>
 
-<form action="/userOwner/registrarCancha" method="POST" enctype="multipart/form-data">
+<form action="/userOwner/vistacancha/:id/registrarCancha" method="POST" enctype="multipart/form-data">
 
     <div class="tarjeta">
         <div class="item-tarjeta">
@@ -42,7 +45,7 @@
             <label>Tipo de cancha</label>
                 <select id="deporte" name="tipoDeCancha">
                     <option value="" disabled selected>Elegir una clase</option>
-                    <option value="cespedS">Césped sintético</option>
+                    <option value="cesped Sintetico">Césped sintético</option>
                     <option value="cesped">Césped</option>
                     <option value="cemento">Cemento</option>
                     <option value="parque">Parqué</option>

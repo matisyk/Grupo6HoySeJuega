@@ -2,7 +2,8 @@
 const express = require('express');
 const router = express.Router();
 const multer = require('multer')
-const path = require ('path')
+const path = require('path')
+const logueadoPlayer = require('../middlewares/logueadoPlayer')
 
 
 // ************ Controller Require ************
@@ -32,8 +33,8 @@ const upload = multer({ storage: storage })
 
 /*** CREATE ONE PRODUCT ***/ 
 
-router.get('/registrarCancha', productsController.create); 
-router.post('/registrarCancha', upload.any("img-cancha"), productsController.store); 
+router.get('/vistaCancha/:id/registrarCancha', logueadoPlayer,productsController.create);
+router.post('/vistaCancha/:id/registrarCancha', logueadoPlayer, upload.any("img-cancha"), productsController.store); 
 
 
 // /*** GET ONE PRODUCT ***/ 
@@ -42,12 +43,12 @@ router.post('/registrarCancha', upload.any("img-cancha"), productsController.sto
 
 // /*** EDIT ONE PRODUCT ***/ 
 
-router.get('/editCourt/:id/', productsController.edit);
-router.patch('/editCourt/:id/',upload.any(), productsController.update); 
+router.get('/vistaCancha/:id/editCourt/:id/', logueadoPlayer,productsController.edit);
+router.patch('/vistaCancha/:id/editCourt/:id/', upload.any(),logueadoPlayer, productsController.update);
 
 
 // /*** DELETE ONE PRODUCT***/ 
-router.delete('/delete/court/:id', productsController.destroy); 
+router.delete('/delete/court/:id', logueadoPlayer, productsController.destroy);
 
 
 module.exports = router;
