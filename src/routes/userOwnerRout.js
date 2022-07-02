@@ -12,7 +12,7 @@ router.get('/agenda',logueadoPlayer,userOwnerController.agenda);
 router.get('/crearTorneo',noLogueadoOwner,logueadoPlayer, userOwnerController.crearTorneo);
 router.get('/registrarCancha',logueadoPlayer,userOwnerController.registrarCancha);
 router.get('/registrarEscuelita',logueadoPlayer,userOwnerController.registrarEscuelita);
-router.get('/reservaCancha',noLogueadoOwner, logueadoPlayer,userOwnerController.reservaCancha);
+router.get('/reservaCancha', logueadoPlayer,userOwnerController.reservaCancha);
 router.get('/vistaCancha/:id',  logueadoPlayer, userOwnerController.vistaCancha);
 router.get('/vistaCancha/:id', noLogueadoOwner, logueadoPlayer, userOwnerController.canchas);
 router.post('/vistaCancha', userOwnerController.vistaCancha);

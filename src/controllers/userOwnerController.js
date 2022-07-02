@@ -51,7 +51,13 @@ const userOwnerController = {
       vistaCancha: (req, res) => {
         let id = req.params.id
         let userOwner = owners.find(userOwner => userOwner.id == id)
-        res.render("partial/userOwner/vistaCancha", {userOwner, canchas, escuelitas, torneos})
+        res.render("partial/userOwner/vistaCancha", {
+          userOwner,
+          canchas,
+          escuelitas,
+          torneos,
+          userOwner: req.session.userOwnerLogged
+        })
       },
       canchas: (req, res) => {
         let id = req.params.id
