@@ -1,12 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-const {
-  check,
-  validationResult,
-  body
-} = require('express-validator');
 const bcryptjs = require('bcryptjs');
-const userOwner = require('../models/UserOwner')
 const userPlayer = require('../models/UserPlayer')
 
 

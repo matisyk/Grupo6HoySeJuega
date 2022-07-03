@@ -78,7 +78,9 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
-		res.redirect("/register/userOwner/welcome/");
+		res.redirect("/userOwner/loginCourt/");
+
+
 
 	},
 
@@ -87,6 +89,7 @@ const controller = {
 
 		let id = products.length;
 		res.render("partial/register/redireccion", {
+					userOwnerLogged: req.session.userOwnerLogged,
 			id
 		});
 
@@ -108,9 +111,6 @@ const controller = {
 
 		let id = req.params.id
 		let productToEdit = products.find(product => product.id == id)
-
-
-		console.log("🚀 ~ file: productsController.js ~ line 78 ~ req.files", req.files)
 
 
 		let image

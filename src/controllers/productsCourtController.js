@@ -93,7 +93,8 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
-		res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLogged.id);
+			res.redirect("/register/userOwner/welcome/");
+    
 
 
 	},
