@@ -1,4 +1,4 @@
-console.log("entre")
+
  var current = 0;
  var imagenes = new Array();
 
@@ -50,4 +50,3 @@ console.log("entre")
    });
  });
 
- console.log("entre")

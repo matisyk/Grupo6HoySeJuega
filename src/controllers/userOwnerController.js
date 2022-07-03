@@ -73,7 +73,6 @@ const userOwnerController = {
   logout: (req, res) => {
     res.clearCookie('userOwnerEmail');
     req.session.destroy();
-    console.log(req.session)
     return res.redirect("/")
   },
 

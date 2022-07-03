@@ -34,7 +34,7 @@
         <% } %>
       </div>
 
-      <h2 class="nombre-del-lugar"><%= userOwner.nombreDelLugar %></h2>
+      <h2 class="nombre-del-lugar"><%= locals.userOwnerLogged.nombreDelLugar %></h2>
       
     </div>
 
@@ -85,7 +85,8 @@
                   <h3><%= cancha.identificacion %></h3>
                   <h3>$ <%= cancha.valor %></h3>
 
-                  <form action="/userOwner/delete/court/<%= cancha.id %>?_method=DELETE" method="POST">
+                  <form action="/userOwner/vistacancha/<%= userOwner.id %>/delete/court/<%= cancha.id%>?_method=DELETE"
+                    method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
