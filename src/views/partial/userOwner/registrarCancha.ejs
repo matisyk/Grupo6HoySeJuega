@@ -1,48 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cancha</title>
     <link rel="stylesheet" href="/css/registrarCancha.css">
-     <%- include('../css-externos') %>
+    <%- include('../css-externos') %>
 
 </head>
+
 <body>
- <%- include('./headerOwner.ejs') %>
+    <%- include('./headerOwner.ejs') %>
 
-<form action="/userOwner/vistacancha/:id/registrarCancha" method="POST" enctype="multipart/form-data">
+    <form action="/userOwner/vistacancha/:id/registrarCancha" method="POST" enctype="multipart/form-data">
 
-    <div class="tarjeta">
-        <div class="item-tarjeta">
-            <label>Identificación de la cancha:</label>
-            <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required >
-        </div>
-<div style="display:none">
-    <select name="category" >
-    <option value="cancha">cancha</option>
-</div>
-        <div class="item-tarjeta">
-            <label>Deporte:</label>
+        <div class="tarjeta">
+            <div class="item-tarjeta">
+                <label>Identificación de la cancha:</label>
+                <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required>
+            </div>
+            <div style="display:none">
+                <select name="category">
+                    <option selected="selected" value="cancha">cancha</option>
+            </select>
+            </div>
+            <div class="item-tarjeta">
+                <label>Deporte:</label>
                 <select id="deporte" name="deporte">
-                    <option value="" >Elegir un deporte</option>
+                    <option value="">Elegir un deporte</option>
                     <option value="futbol">Futbol</option>
                     <option value="padel">Padel</option>
                     <option value="basquet">Basquet</option>
                     <option value="tenis">Tenis</option>
                     <option value="voley">Voley</option>
                 </select>
-        </div>
+            </div>
 
-        
-        <div class="item-tarjeta">
-            <label>Cantidad de jugadores:</label>
-            <input type="number" name="capacidad" placeholder="Ej: 10">
-        </div> 
 
-        <div class="item-tarjeta">
-            <label>Tipo de cancha</label>
+            <div class="item-tarjeta">
+                <label>Cantidad de jugadores:</label>
+                <input type="number" name="capacidad" placeholder="Ej: 10">
+            </div>
+
+            <div class="item-tarjeta">
+                <label>Tipo de cancha</label>
                 <select id="deporte" name="tipoDeCancha">
                     <option value="" disabled selected>Elegir una clase</option>
                     <option value="cesped Sintetico">Césped sintético</option>
@@ -51,22 +54,23 @@
                     <option value="parque">Parqué</option>
                     <option value="ladrillo">Ladrillo</option>
                 </select>
-        </div>
+            </div>
 
-        <div class="item-tarjeta">
-            <label>Cargar imagen</label>
-            <input class="foto" type="file" name="image" accept=".jpg" multiple>
-        </div>
-       
-        <div class="item-tarjeta">
-            <label>Precio:</label> <span> $ </span>
-            <input type="number" name="valor" placeholder="Ej:pesos argentinos ">
-        </div> 
+            <div class="item-tarjeta">
+                <label>Cargar imagen</label>
+                <input class="foto" type="file" name="image" accept=".jpg" multiple>
+            </div>
 
-        <div class="item-tarjeta">
-          <button type="submit">Enviar</button>
+            <div class="item-tarjeta">
+                <label>Precio:</label> <span> $ </span>
+                <input type="number" name="valor" placeholder="Ej:pesos argentinos ">
+            </div>
+
+            <div class="item-tarjeta">
+                <button type="submit">Enviar</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 </body>
+
 </html

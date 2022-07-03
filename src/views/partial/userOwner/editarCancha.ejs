@@ -25,16 +25,49 @@
             <div style="display:none">
                 <select name="category">
                     <option value="cancha">cancha</option>
+                </select>
             </div>
             <div class="item-tarjeta">
                 <label>Deporte:</label>
-                <select id="deporte" name="deporte">
-                    <option value="<%= product.identificacion %>">Elegir un deporte</option>
+                <select id="deporte" name="deporte" required>
+                    <% if (product.deporte == "") { %>
+                    <option value="">Elegir un deporte</option>
                     <option value="futbol">Futbol</option>
                     <option value="padel">Padel</option>
                     <option value="basquet">Basquet</option>
                     <option value="tenis">Tenis</option>
                     <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "futbol") { %>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "padel") { %>
+                        <option value="padel">Padel</option>
+                        <option value="futbol">Futbol</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "basquet") { %>
+                        <option value="basquet">Basquet</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "tenis") { %>
+                        <option value="tenis">Tenis</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "voley") { %>
+                        <option value="voley">Voley</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                      <% } %>
                 </select>
             </div>
 
@@ -46,7 +79,7 @@
 
             <div class="item-tarjeta">
                 <label>Tipo de cancha</label>
-                <select id="deporte" name="tipoDeCancha">
+                <select id="deporte" name="tipoDeCancha" required>
                     <% if (product.tipoDeCancha == "") { %>
                     <option label="Césped Sintético" value="cesped sintetico"></option>
                     <option label="Césped" value="cesped"></option>
