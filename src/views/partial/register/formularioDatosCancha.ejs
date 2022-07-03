@@ -25,11 +25,15 @@
 
 <body>
   <h1>Registro de Dueño</h1>
-  <div class="formulario-div2">
+  <div class="contenedor-general">
+    <div class="contenedor-imagen">
+      <div class="logo"><img src="/img/logo-fondo-transparente.png" alt=""></div></div>
+    <div class="formulario-div2">
     <form class="div2" action="/register/registerOwner" method="POST" enctype="multipart/form-data">
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
+            <div class="horizontal">
             <div>
               <label for="nombre">Nombre: </label>
               <input id="nombre" name="nombre"
@@ -53,7 +57,9 @@
               </div>
               <% } %>
             </div>
+          </div>
             <br>
+            <div class="horizontal">
             <div>
               <label for="email">Mail: </label>
               <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
@@ -75,7 +81,9 @@
               </div>
               <% } %>
             </div>
+          </div>
             <br>
+            <div class="horizontal">
             <div>
               <label for="nombreDelLugar">Nombre del lugar: </label>
               <input type="text"
@@ -88,6 +96,7 @@
               <% } %>
             </div>
             <br>
+            <div>
             <label for="direccion">Dirección:</label>
             <input type="text" class="form-control <%= locals.errors && errors.direccion ? 'is-invalid' : null %>"
               id="direccion" name="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
@@ -96,12 +105,24 @@
               <%= errors.direccion.msg %>
             </div>
             <% } %>
+          </div>
+          </div>
+          <br>
+          <div class="horizontal">
+            <div>
             <label for="telefono">Telefono:</label>
             <input type="number" class="form-control" id="telefono" name="telefono" />
+          </div>
+          <br>
+          <div>
             <label for="telefono2">Contacto de emergencia:</label>
             <input type="number" class="form-control" id="telefono2" name="telefono2" />
           </div>
-          <div class="entre-divs" style="margin-left: 100px;">
+          </div>
+        </div>
+        <br>
+          <div class="entre-divs">
+            <div class="horizontal">
             <div class="servicios">
               <label>Servicios:</label><br /> <br />
 
@@ -166,22 +187,20 @@
           </div>
         </div>
       </div>
+    </div>
       <br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
       <div class="form-group">
-        <div class="input-group">
-          <br>
+        <div class="input-group imagenes">
           <div class="img-cancha">
             <label for="imagenCancha">Cargar imágenes de la cancha:
               <input type="file" name="imagenCancha" accept=".jpg" multiple /></label>
           </div>
           <br>
-          <br>
           <div class="img-cancha">
             <label for="imagenComedor">Cargar imágenes de la parrilla:
               <input type="file" name="imagenComedor" accept=".jpg" multiple /></label>
           </div>
-          <br>
           <br>
           <div class="img-cancha">
             <label for="imagenOtras">Cargar imágenes extras del lugar:
@@ -189,7 +208,9 @@
           </div>
           <br>
         </div>
+
         <div class="entre-divs9">
+          <div class="horizontal">
           <a href="/register/registerOwner/">
             <button>
               <div class="svg-wrapper-1">
@@ -204,23 +225,22 @@
               <span>DALE...</span>
             </button>
           </a>
+            <div>
+              <button class="volver"><a href="/register">Volver</a></button>
+            </div>
         </div>
       </div>
-  </div>
-  </form>
-  <br />
-  <br />
-  <div class="container">
-    <div>
-      <a href="/register"><button class="volver">Volver</button></a>
-    </div>
     <br />
     <br />
     <div class="alert alert-success divAlerta">
       ¡Gracias por registrarse!
     </div>
   </div>
+  </div>  
+      </div>
   </div>
+  </form>
+
 </body>
 
 </html>
