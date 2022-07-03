@@ -47,7 +47,13 @@
             <div class="item-tarjeta">
                 <label>Tipo de cancha</label>
                 <select id="deporte" name="tipoDeCancha">
-                    <% if (product.tipoDeCancha == "cesped Sintetico") { %>
+                    <% if (product.tipoDeCancha == "") { %>
+                    <option label="Césped Sintético" value="cesped sintetico"></option>
+                    <option label="Césped" value="cesped"></option>
+                    <option label="Cemento" value="cemento"></option>
+                    <option label="Parqué" value="parque"></option>
+                    <option label="Ladrillo" value="ladrillo"></option>
+                    <% } else if (product.tipoDeCancha == "cesped Sintetico") { %>
                     <option label="Césped Sintético" value="cesped sintetico"></option>
                     <option label="Césped" value="cesped"></option>
                     <option label="Cemento" value="cemento"></option>

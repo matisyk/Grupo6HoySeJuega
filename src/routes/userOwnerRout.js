@@ -40,12 +40,12 @@ const upload = multer({
 
 // DUEÑO DE CANCHA
 router.get('/vistaCancha/:id/agenda', logueadoPlayer, userOwnerController.agenda);
-router.get('/vistaCancha/:id/crearTorneo', noLogueadoOwner, logueadoPlayer, userOwnerController.crearTorneo);
+router.get('/vistaCancha/:id/crearTorneo', logueadoPlayer, userOwnerController.crearTorneo);
 router.get('/vistaCancha/:id/registrarCancha',logueadoPlayer,userOwnerController.registrarCancha);
 router.get('/vistaCancha/:id/registrarEscuelita', logueadoPlayer, userOwnerController.registrarEscuelita);
 router.get('/vistaCancha/:id/reservaCancha', logueadoPlayer, userOwnerController.reservaCancha);
 router.get('/vistaCancha/:id', logueadoPlayer, userOwnerController.vistaCancha);
-router.get('/vistaCancha/:id', noLogueadoOwner, logueadoPlayer, userOwnerController.canchas);
+router.get('/vistaCancha/:id', logueadoPlayer, userOwnerController.canchas);
 router.post('/vistaCancha', userOwnerController.vistaCancha);
 
 
