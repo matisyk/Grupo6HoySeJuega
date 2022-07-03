@@ -32,6 +32,9 @@ h1 {
   justify-content: center;
 }
 
+.logo-club img{
+  max-width: 200px;
+}
 .nombre-del-lugar{
   margin: 0;
   font-size: 40px;
