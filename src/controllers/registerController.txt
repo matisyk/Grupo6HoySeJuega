@@ -62,7 +62,7 @@ const registerController = {
 			return owner
 		})
 
-		fs.writeFileSync(ownersFilePath, JSON.stringify(newowner));
+		fs.writeFileSync(ownersFilePath, JSON.stringify(newowner, null, ' '));
 
 		res.redirect('../userOwner/vistaCancha' + ownerToEdit.id)
 	},

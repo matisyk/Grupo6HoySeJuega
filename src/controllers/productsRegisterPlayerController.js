@@ -136,7 +136,7 @@ const controller = {
 		})
 
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct));
+		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
 		res.redirect("/userPlayer/perfilDeJugador/" + productToEdit.id)
 
@@ -148,7 +148,7 @@ const controller = {
 		let id = req.params.id
 		let productToDelete = products.filter(product => product.id != id)
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete));
+		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete, null, ' '));
 
 		res.redirect("/")
 
