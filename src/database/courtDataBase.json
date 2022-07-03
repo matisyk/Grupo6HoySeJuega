@@ -1,12 +1,12 @@
 [
  {
   "id": 1,
-  "identificacion": "Cancha 1  ",
+  "identificacion": "La primera   ",
   "category": "cancha",
   "capacidad": "4",
   "tipoDeCancha": "cesped",
   "valor": "800",
-  "image": "estrella-gris.png"
+  "image": "image-1656865655081-848446656.jpg"
  },
  {
   "id": 2,
@@ -115,5 +115,23 @@
   "tipoDeCancha": "cemento",
   "valor": "1000",
   "image": "image-1656863262485-713070356.jpg"
+ },
+ {
+  "id": 14,
+  "identificacion": "cancha 100",
+  "category": "cancha",
+  "capacidad": "20",
+  "tipoDeCancha": "cemento",
+  "valor": "2000",
+  "image": "image-1656865386506-276631948.jpg"
+ },
+ {
+  "id": 15,
+  "identificacion": "La ultima",
+  "category": "cancha",
+  "capacidad": "12",
+  "tipoDeCancha": "parque",
+  "valor": "1212121",
+  "image": "image-1656865697610-419157778.jpg"
  }
 ]

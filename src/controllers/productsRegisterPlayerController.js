@@ -106,9 +106,6 @@ const controller = {
 		let productToEdit = products.find(product => product.id == id)
 
 
-		console.log("🚀 ~ file: productsController.js ~ line 78 ~ req.files", req.files)
-
-
 		let image
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename
