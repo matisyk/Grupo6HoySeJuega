@@ -46,9 +46,17 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
-		res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLogged.id);
+		 return res.redirect("/userOwner/update")
 
 	}, 
+	redirect: (req, res) => {
+
+		res.render("partial/userOwner/redireccionUpdate", {
+			userOwnerLogged: req.session.userOwnerLogged
+		});
+
+	},
+
 
 	// Update - Form to edit
 	edit: (req, res) => {
@@ -93,7 +101,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
-			res.redirect("/register/userOwner/welcome/");
+			return res.redirect("/userOwner/update")
     
 
 
@@ -106,7 +114,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete, null, ' '));
 
-		res.redirect("/userOwner/vistaCancha/")
+		return res.redirect("/userOwner/update")
 
 	}
 };

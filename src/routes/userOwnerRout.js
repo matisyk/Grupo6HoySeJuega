@@ -44,6 +44,7 @@ router.post('/loginCourt', userOwnerController.processLoginOwner);
 router.get('/logoutCourt', userOwnerController.logout);
 
 // DUEÑO DE CANCHA
+router.get('/update', productsControllerC.redirect);
 router.get('/vistaCancha/:id/agenda', logueadoPlayer, userOwnerController.agenda);
 router.get('/vistaCancha/:id/crearTorneo', logueadoPlayer, userOwnerController.crearTorneo);
 router.get('/vistaCancha/:id/registrarCancha',logueadoPlayer,userOwnerController.registrarCancha);
