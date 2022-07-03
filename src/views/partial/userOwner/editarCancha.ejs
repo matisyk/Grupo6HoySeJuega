@@ -44,30 +44,30 @@
                     <option value="tenis">Tenis</option>
                     <option value="voley">Voley</option>
                     <% } else if (product.deporte == "padel") { %>
-                        <option value="padel">Padel</option>
-                        <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="futbol">Futbol</option>
                     <option value="basquet">Basquet</option>
                     <option value="tenis">Tenis</option>
                     <option value="voley">Voley</option>
                     <% } else if (product.deporte == "basquet") { %>
-                        <option value="basquet">Basquet</option>
+                    <option value="basquet">Basquet</option>
                     <option value="futbol">Futbol</option>
                     <option value="padel">Padel</option>
                     <option value="tenis">Tenis</option>
                     <option value="voley">Voley</option>
                     <% } else if (product.deporte == "tenis") { %>
-                        <option value="tenis">Tenis</option>
+                    <option value="tenis">Tenis</option>
                     <option value="futbol">Futbol</option>
                     <option value="padel">Padel</option>
                     <option value="basquet">Basquet</option>
                     <option value="voley">Voley</option>
                     <% } else if (product.deporte == "voley") { %>
-                        <option value="voley">Voley</option>
+                    <option value="voley">Voley</option>
                     <option value="futbol">Futbol</option>
                     <option value="padel">Padel</option>
                     <option value="basquet">Basquet</option>
                     <option value="tenis">Tenis</option>
-                      <% } %>
+                    <% } %>
                 </select>
             </div>
 
@@ -130,10 +130,9 @@
             <div class="item-tarjeta">
                 <label>Cargar imagen</label>
                 <input class="foto" type="file" name="image" accept=".jpg" multiple>
-                <label> <img style="width: 130px;
-    margin-top: 40px;
-    border-radius: 70px;" src="/img/products/<%= product.image%>">
+                <label> <img style="width: 130px; margin-top: 40px; border-radius: 70px;" src="/img/products/<%= product.image%>">
                 </label>
+                <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6>
             </div>
 
             <div class="item-tarjeta">

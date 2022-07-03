@@ -1,16 +1,23 @@
 [
  {
-  "id": 3,
-  "deporte": "padel",
+  "id": 1
+ },
+ {
+  "id": 2,
+  "deporte": "futbol",
   "category": "escuelita",
-  "cancha": "",
-  "alumnos": "50",
-  "categoria": "2000",
-  "profesor": "Marcelo",
-  "genero": "femenino",
+  "cancha": "Cancha 5",
+  "alumnos": "100",
+  "categoria": "1993",
+  "profesor": "Franco",
+  "genero": "masculino",
   "dia": "lunes",
   "registroHorarios": "17:00",
-  "valor": "1500",
+  "dia2": "miercoles",
+  "registroHorarios2": "19:00",
+  "dia3": "un solo dias",
+  "registroHorarios3": "00:00",
+  "valor": "2000",
   "image": "estrella-gris.png"
  }
 ]

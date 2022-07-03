@@ -413,5 +413,28 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1656869810203-598436148.jpg"
+ },
+ {
+  "id": 19,
+  "nombre": "Noemi",
+  "apellido": "Sanchez",
+  "email": "noemisanches@gmail.com",
+  "password": "$2a$10$xv9yU5FwdTLfmNUdpFSy8uSoExjG6iW769thNVVoulJEIhC4M3LNy",
+  "nombreDelLugar": "Los sotos",
+  "direccion": "J. Ingenieros 2491",
+  "telefono": "11111",
+  "telefono2": "11111",
+  "iluminacion": "No",
+  "estacionamiento": "No",
+  "wifi": "No",
+  "vestuarios": "No",
+  "duchas": "No",
+  "parrilla": "No",
+  "quincho": "No",
+  "transferencia": "No",
+  "mercadoPago": "No",
+  "modo": "No",
+  "efectivo": "No",
+  "image": "imagenCancha-1656886165120-95980971.jpg"
  }
 ]

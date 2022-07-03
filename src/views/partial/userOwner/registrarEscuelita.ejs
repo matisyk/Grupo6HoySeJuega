@@ -19,7 +19,7 @@
 
 <body>
 
-    <form action="/userOwner/registrarEscuelita" enctype="multipart/form-data" method="POST">
+    <form action="/userOwner/vistaCancha/:id/registrarEscuelita" enctype="multipart/form-data" method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label>Deporte:</label>
@@ -32,66 +32,104 @@
                     <option value="tenis">Tenis</option>
                 </select>
             </div>
-<div style="display:none">
-    <select name="category">
-        <option value="escuelita">escuelita</option>
-</div>
-            <div class="edad">
-                <div class="item-tarjeta">
-                <label>Cancha a utilizar:</label>
-                <input type="number" name="cancha" id="cancha">
-            </div>
-
-            <div class="item-tarjeta">
-                <label>Cantidad máx. de alumnos:</label>
-                <input type="number" name="alumnos" id="alumnos">
-            </div>
-    
-            <div class="edad">
-                <div class="item-tarjeta">
-                <label name="categoria">Categoría</label>
-                <input type="number" name="categoria" id="categoria">
-            </div>
-
-            <div class="item-tarjeta">
-                <label name="profesor">Profesor</label>
-                <input type="text" placeholder="Nombre del profesor" name="profesor" id="profesor">
-            </div>
-    
-            <div class="item-tarjeta">
-                <label>Género:</label>
-                <select name="genero" id="genero">
-                    <option selected disabled>Elegir opción</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="mixto">Mixto</option>
+            <div style="display:none">
+                <select name="category">
+                    <option value="escuelita">escuelita</option>
                 </select>
             </div>
-    
-            <div class="otro-item-tarjeta">
-                <div class="item-tarjeta"><label>Día a realizarse:</label></div>
-                <select name="dia" id="dia">
-                    <option selected disabled>Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="martes">Martes</option>
-                    <option value="miercoles">Miércoles</option>
-                    <option value="jueves">Jueves</option>
-                    <option value="viernes">Viernes</option>
-                    <option value="sabado">Sabado</option>
-                    <option value="domingo">Domingo</option>
-                </select>
-                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
-            </div>
-    
-            <div class="item-tarjeta">
-                <label name="premio">Valor mensual</label>
-                <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor">
-            </div>
-    
-            <div class="item-tarjeta boton-enviar">
-                <button type="submit">Registrar</button>
-            </div>
-        </div>
+            <div class="edad">
+                <div class="item-tarjeta">
+                    <label>Cancha a utilizar:</label>
+                    <input type="text" name="cancha" id="cancha" placeholder="Cancha en la que realiza la actividad">
+                </div>
+
+                <div class="item-tarjeta">
+                    <label>Cantidad de alumnos:</label>
+                    <input type="number" name="alumnos" id="alumnos"
+                        placeholder="Cantidad de alumnos que se pueden inscribir">
+                </div>
+
+                <div class="edad">
+                    <div class="item-tarjeta">
+                        <label name="categoria">Categoría</label>
+                        <input type="number" name="categoria" id="categoria" placeholder="Categoria de los alumnos">
+                    </div>
+
+                    <div class="item-tarjeta">
+                        <label name="profesor">Profesor</label>
+                        <input type="text" placeholder="Nombre del profesor" name="profesor" id="profesor">
+                    </div>
+
+                    <div class="item-tarjeta">
+                        <label>Género:</label>
+                        <select name="genero" id="genero" required>
+                            <option selected disabled>Elegir opción</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="mixto">Mixto</option>
+                        </select>
+                    </div>
+
+                    <div class="otro-item-tarjeta">
+                        <div class="item-tarjeta"><label>Día a realizarse:</label></div>
+                        <select name="dia" id="dia">
+                            <option selected disabled>Elegir día</option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sabado</option>
+                            <option value="domingo">Domingo</option>
+                            <option value="un solo dia">Un solo día</option>
+                        </select>
+                        <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
+                    </div>
+                    <br>
+                    <div class="otro-item-tarjeta">
+                        <select name="dia2" id="dia">
+                            <option selected disabled>Elegir día</option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sabado</option>
+                            <option value="domingo">Domingo</option>
+                            <option value="un solo dia">Un solo día</option>
+                        </select>
+                        <input type="time" class="form-control horaio" id="horarios" name="registroHorarios2">
+                    </div>
+                    <br>
+                    <div class="otro-item-tarjeta">
+                        <select name="dia3" id="dia">
+                            <option selected disabled>Elegir día</option>
+                            <option value="lunes">Lunes</option>
+                            <option value="martes">Martes</option>
+                            <option value="miercoles">Miércoles</option>
+                            <option value="jueves">Jueves</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sabado</option>
+                            <option value="domingo">Domingo</option>
+                            <option value="un solo dias">Un solo día</option>
+                        </select>
+                        <input type="time" class="form-control horaio" id="horarios" name="registroHorarios3">
+                    </div>
+
+                    <div class="item-tarjeta">
+                        <label name="premio">Valor mensual</label>
+                        <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor">
+                    </div>
+
+                    <div class="item-tarjeta">
+                        <label>Cargar imagen</label>
+                        <input class="foto" type="file" name="image" accept=".jpg" multiple>
+                    </div>
+
+                    <div class="item-tarjeta boton-enviar">
+                        <button type="submit">Registrar</button>
+                    </div>
+                </div>
     </form>
 
 </body>
