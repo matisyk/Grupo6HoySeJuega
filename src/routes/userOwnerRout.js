@@ -76,10 +76,10 @@ router.patch('/vistaCancha/:id/editTorneo/:id/', logueadoPlayer,upload.any(), pr
 
 // ESCUELAS
 
-router.get('/registrarEscuelita', productsControllerS.create);
-router.post('/registrarEscuelita', upload.any(), productsControllerS.store);
-router.get('/editSchool/:id/', productsControllerS.edit);
-router.patch('/editSchool/:id/', upload.any(), productsControllerS.update);
-router.delete('/delete/school/:id', productsControllerS.destroy);
+router.get('/vistaCancha/:id/registrarEscuelita', productsControllerS.create);
+router.post('/vistaCancha/:id/registrarEscuelita', upload.any(), productsControllerS.store);
+router.get('/vistaCancha/:id/editSchool/:id/', productsControllerS.edit);
+router.patch('/vistaCancha/:id/editSchool/:id/', upload.any(), productsControllerS.update);
+router.delete('/vistaCancha/:id/delete/school/:id', productsControllerS.destroy);
 
 module.exports = router;

@@ -53,6 +53,7 @@
        <li>
         <% if (typeof userOwner.image != "undefined") { %>
           <img class="user-img" src="/img/products/<%= userOwner.image %>">
+          
           <% } else {%>
           <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
           <% } %>
@@ -111,7 +112,8 @@
     </div>
     <div class="botones-registro registroCP">
       <button class="learn-more">
-        <a href="/userOwner/registrarCancha"><span class="circle01 circle" aria-hidden="true">
+        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarCancha"><span class="circle01 circle"
+            aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
           <span class="button-text registroC">Registrá tus Canchas</span></a>
@@ -130,6 +132,7 @@
       <section class="jd-slider slideshow">
         <div class="slide-inner">
           <ul class="slide-area">
+            
             <% escuelitas.forEach (escuelitas => { %>
             <li>
               <div class="tarjetas">
@@ -153,7 +156,8 @@
                   </form>
 
 
-                  <button class="boton-editar"><a href="/userOwner/editSchool/<%= escuelitas.id%>"><i
+                  <button class="boton-editar"><a
+                      href="/userOwner/vistacancha/<%= userOwner.id %>/editSchool/<%= escuelitas.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
@@ -171,13 +175,11 @@
     </div>
     <div class="botones-registro">
       <button class="learn-more">
-        <a href="/userOwner/registrarEscuelita"><span class="circle03 circle" aria-hidden="true">
+        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita"><span class="circle03 circle"
+            aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
           <span class="button-text">escuelitas</span></a>
-      </button>
-      <button>
-        <a href="/userOwner/registrarEscuelita" class="boton-registrar-cancha"> </a>
       </button>
     </div>
 
@@ -231,7 +233,7 @@
     </div>
     <div class="botones-registro">
       <button class="learn-more">
-        <a href="/userOwner/crearTorneo"><span class="circle" aria-hidden="true">
+        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/crearTorneo"><span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
           <span class="circle02 button-text"> Torneos</span></a>

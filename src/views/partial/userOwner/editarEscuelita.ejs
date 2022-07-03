@@ -24,46 +24,88 @@
             <div class="item-tarjeta">
                 <label name="registroDeDeporte">Deporte:</label>
                 <select name="deporte" id="deporte">
-                    <option selected disabled>Seleccionar</option>
-                    <option value="Futbol">Futbol</option>
-                    <option value="Padel">Padel</option>
-                    <option value="Basquet">Basquet</option>
-                    <option value="Hockey">Hockey</option>
-                    <option value="Tenis">Tenis</option>
+                    <% if (product.deporte == "") { %>
+                    <option value="">Elegir un deporte</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "futbol") { %>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "padel") { %>
+                    <option value="padel">Padel</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "basquet") { %>
+                    <option value="basquet">Basquet</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "tenis") { %>
+                    <option value="tenis">Tenis</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="voley">Voley</option>
+                    <% } else if (product.deporte == "voley") { %>
+                    <option value="voley">Voley</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <% } %>
                 </select>
             </div>
             <div class="item-tarjeta">
                 <label name="cantidad">Cantidad máx. de alumnos:</label>
                 <input type="number" name="alumnos" id="alumnos" value="<%= product.alumnos %>">
             </div>
-    
+
             <div class="edad">
                 <div class="item-tarjeta">
-                <label name="categoria">Categoria</label>
-                <input type="number" name="categoria" id="categoria" value="<%= product.categoria %>">
-            </div>
-            
-            <div class="item-tarjeta">
-                <label name="profesor">Profesor</label>
-                <input type="text" placeholder="Nombre del profesor" name="profesor" id="profesor" value="<%= product.profesor %>">
+                    <label name="categoria">Categoria</label>
+                    <input type="number" name="categoria" id="categoria" value="<%= product.categoria %>">
+                </div>
+
+                <div class="item-tarjeta">
+                    <label name="profesor">Profesor</label>
+                    <input type="text" placeholder="Nombre del profesor" name="profesor" id="profesor"
+                        value="<%= product.profesor %>">
+                </div>
             </div>
 
             <div class="item-tarjeta">
-                <label name="edad-max">Edad máxima:</label>
-                <input type="number" name="edadMax" id="edadMax" value="<%= product.edadMax %>">
-            </div>
-            </div>
-    
-            <div class="item-tarjeta">
                 <label name="lugar">Género:</label>
-                <select name="genero" id="genero">
-                    <option selected disabled>Seleccionar</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Mixto">Mixto</option>
+                <select name="genero" id="genero" required>
+                    <% if (product.genero == "") { %>
+                    <option value="">Elegir genenro</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="mixto">Mixto</option>
+                    <% } else if (product.genero == "femenino") { %>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="mixto">Mixto</option>
+                    <% } else if (product.genero == "masculino") { %>
+                        <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="mixto">Mixto</option>
+                    <% } else if (product.genero == "mixto") { %>
+                        <option value="mixto">Mixto</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <% } %>
                 </select>
             </div>
-    
+
             <div class="otro-item-tarjeta">
                 <div class="item-tarjeta"><label name="horarios">Día a realizarse:</label></div>
                 <select name="dia" id="dia">
@@ -76,14 +118,16 @@
                     <option value="Sabado">Sabado</option>
                     <option value="Domingo">Domingo</option>
                 </select>
-                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios" value="<%= product.registroHorarios %>">
+                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios"
+                    value="<%= product.registroHorarios %>">
             </div>
-    
+
             <div class="item-tarjeta">
                 <label name="premio">Valor mensual</label>
-                <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor" value="<%= product.valor %>">
+                <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor"
+                    value="<%= product.valor %>">
             </div>
-    
+
             <div class="item-tarjeta boton-enviar">
                 <button type="submit">Registrar</button>
             </div>
