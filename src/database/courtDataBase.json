@@ -106,5 +106,14 @@
   "tipoDeCancha": "parque",
   "valor": "5000",
   "image": "image-1656858696224-735786721.jpeg"
+ },
+ {
+  "id": 13,
+  "identificacion": "20",
+  "category": "cancha",
+  "capacidad": "10",
+  "tipoDeCancha": "cemento",
+  "valor": "1000",
+  "image": "image-1656863262485-713070356.jpg"
  }
 ]
