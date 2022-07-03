@@ -28,12 +28,12 @@
  },
  {
   "id": 4,
-  "identificacion": "cancha 10",
+  "identificacion": "Cancha 4",
   "category": "cancha",
-  "capacidad": "10",
-  "tipoDeCancha": "cesped_Sintetico",
-  "valor": "12000",
-  "image": "image-1656796595170-823033394.jpg"
+  "capacidad": "15",
+  "tipoDeCancha": "cesped sintetico",
+  "valor": "3000",
+  "image": "image-1656858409447-485983727.jpg"
  },
  {
   "id": 5,
@@ -97,5 +97,14 @@
   "tipoDeCancha": "ladrillo",
   "valor": "3000",
   "image": "image-1656856393310-517652098.jpg"
+ },
+ {
+  "id": 12,
+  "identificacion": "Cancha 25",
+  "category": "cancha",
+  "capacidad": "20",
+  "tipoDeCancha": "parque",
+  "valor": "5000",
+  "image": "image-1656858696224-735786721.jpeg"
  }
 ]

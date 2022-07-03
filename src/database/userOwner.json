@@ -1,4 +1,5 @@
-[{
+[
+ {
   "id": 1,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -20,7 +21,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 2,
   "nombre": "dsad",
   "apellido": "asdas",
@@ -42,7 +44,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 3,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -64,7 +67,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 4,
   "nombre": "Francov",
   "apellido": "Garciav",
@@ -86,7 +90,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 5,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -108,7 +113,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 6,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -130,7 +136,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 7,
   "nombre": "Franco",
   "apellido": "Castillo",
@@ -152,7 +159,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 8,
   "nombre": "Matias",
   "apellido": "Juarez",
@@ -174,7 +182,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 9,
   "nombre": "Mat",
   "apellido": "Syk",
@@ -196,7 +205,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 10,
   "nombre": "Maria",
   "apellido": "Perez",
@@ -219,7 +229,8 @@
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg",
   "logo": "club-deportivo-los-olivos-de-general-guemes.png"
-}, {
+ },
+ {
   "id": 11,
   "nombre": "Fabio",
   "apellido": "Clemente",
@@ -241,7 +252,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 12,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -263,7 +275,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 13,
   "nombre": "Franco",
   "apellido": "Castillo",
@@ -285,7 +298,8 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}, {
+ },
+ {
   "id": 14,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -307,4 +321,51 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
-}]
+ },
+ {
+  "id": 15,
+  "nombre": "1",
+  "apellido": "1",
+  "email": "2@q",
+  "password": "$2a$10$6y8/1o8IIHwCVVrX.XOPH.39I.Nj59ivVBRtXiLPUQ3hlbWKAazNu",
+  "nombreDelLugar": "111",
+  "direccion": "1111",
+  "telefono": "111",
+  "telefono2": "1111",
+  "iluminacion": "No",
+  "estacionamiento": "No",
+  "wifi": "No",
+  "vestuarios": "No",
+  "duchas": "No",
+  "parrilla": "No",
+  "quincho": "No",
+  "transferencia": "No",
+  "mercadoPago": "No",
+  "modo": "No",
+  "efectivo": "No",
+  "image": "imagenCancha-1654372985364-494608673.jpg"
+ },
+ {
+  "id": 16,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "asdfg@gmail.com",
+  "password": "$2a$10$hY3SpA2/HGDRgQvVGCCvzOuaLB/8E8qiYGbzUV4X98bYwH1js55dm",
+  "nombreDelLugar": "Los Alamos",
+  "direccion": "sobremonte 60",
+  "telefono": "111111",
+  "telefono2": "111111",
+  "iluminacion": "No",
+  "estacionamiento": "No",
+  "wifi": "No",
+  "vestuarios": "No",
+  "duchas": "No",
+  "parrilla": "No",
+  "quincho": "No",
+  "transferencia": "No",
+  "mercadoPago": "No",
+  "modo": "No",
+  "efectivo": "No",
+  "image": "imagenCancha-1656859981628-288749303.jpg"
+ }
+]

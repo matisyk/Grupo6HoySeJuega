@@ -42,7 +42,7 @@ const userOwnerController = {
 
           delete userOwnerToLogin.password;
           req.session.userOwnerLogged = userOwnerToLogin
-          return res.redirect("/userOwner/vistaCancha/" + req.session.userOwnerLogged.id)
+          return res.redirect("/register/userOwner/welcome")
         }
 
         return res.render('partial/login/loginCourt', {

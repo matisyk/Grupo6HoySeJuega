@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <META HTTP-EQUIV="REFRESH" CONTENT="3;URL=/userOwner/vistaCancha/<%- id %>">
+    <META HTTP-EQUIV="REFRESH" CONTENT="4;URL=/userOwner/vistaCancha/<%- userOwnerLogged.id %>">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=320" />
@@ -29,11 +29,14 @@
             <h1 class="title" style="text-align: center;">Bienvenido</h1>
             <br>
 
-            <h1 class="title" style="text-align: center;"> <%- id.nombre %>
+            <h1 class="title" style="text-align: center;"> <%- userOwnerLogged.nombre %>
+                
             </h1>
-
             <br>
-            <h2 class="title" style="text-align: center;">Serás redireccionado a tu perfil</h2>
+            <h2 class="title" style="text-align: center;">Serás dirigido a tu perfil de </h2>
+            <br>
+            <h2 class="title" style="text-align: center;">
+                <%- userOwnerLogged.nombreDelLugar %> </h2>
         </div>
 
 
