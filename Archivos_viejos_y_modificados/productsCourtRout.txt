@@ -36,11 +36,6 @@ const upload = multer({ storage: storage })
 router.get('/vistaCancha/:id/registrarCancha', logueadoPlayer,productsController.create);
 router.post('/vistaCancha/:id/registrarCancha', logueadoPlayer, upload.any("img-cancha"), productsController.store); 
 
-
-// /*** GET ONE PRODUCT ***/ 
-
-// router.get('/detail/:id/', productsController.detail); 
-
 // /*** EDIT ONE PRODUCT ***/ 
 
 router.get('/vistaCancha/:id/editCourt/:id/', logueadoPlayer,productsController.edit);
