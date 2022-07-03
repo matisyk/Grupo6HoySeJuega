@@ -7,7 +7,6 @@ const path = require('path')
 
 
 // ************ REQUERIMIENTO DE CONTROLADORES  ************
-
 const userOwnerController = require('../controllers/userOwnerController')
 const productsControllerC = require('../controllers/productsCourtController');
 const productsControllerS = require('../controllers/productsSchoolController');
@@ -37,6 +36,12 @@ const upload = multer({
 })
 
 //************ RUTAS ************
+
+// LOGIN
+
+router.get('/loginCourt', userOwnerController.loginCourt);
+router.post('/loginCourt', userOwnerController.processLoginOwner);
+router.get('/logoutCourt', userOwnerController.logout);
 
 // DUEÑO DE CANCHA
 router.get('/vistaCancha/:id/agenda', logueadoPlayer, userOwnerController.agenda);

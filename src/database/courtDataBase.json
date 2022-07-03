@@ -88,5 +88,14 @@
   "tipoDeCancha": "ladrillo",
   "valor": "1200",
   "image": "image-1656805415125-98217157.jpg"
+ },
+ {
+  "id": 11,
+  "identificacion": "Cancha 20",
+  "category": "cancha",
+  "capacidad": "10",
+  "tipoDeCancha": "ladrillo",
+  "valor": "3000",
+  "image": "image-1656856393310-517652098.jpg"
  }
 ]

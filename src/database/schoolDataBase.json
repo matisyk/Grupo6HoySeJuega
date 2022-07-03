@@ -1,30 +1,44 @@
 [
-    {
-        "id": 1,
-        "profesor": "Roberto",
-        "deporte": "Basquet",
-        "cancha": "5",
-        "alumnos": "24",
-        "categoria": "1998",
-        "genero": "Mixto",
-        "dia": "domingo",
-        "registroHorarios": "10:00",
-        "valor": "4000",
-        "image": "estrella-gris.png",
-        "category": "escuelita"
-    },
-    {
-        "id": 2,
-        "profesor": "Fran",
-        "deporte": "Basquet",
-        "cancha": "5",
-        "alumnos": "24",
-        "categoria": "2005",
-        "genero": "Mixto",
-        "dia": "domingo",
-        "registroHorarios": "10:00",
-        "valor": "4000",
-        "image": "estrella-gris.png",
-        "category": "escuelita"
-    }
+ {
+  "id": 1,
+  "profesor": "Roberto",
+  "deporte": "Basquet",
+  "cancha": "5",
+  "alumnos": "24",
+  "categoria": "1998",
+  "genero": "Mixto",
+  "dia": "domingo",
+  "registroHorarios": "10:00",
+  "valor": "4000",
+  "image": "estrella-gris.png",
+  "category": "escuelita"
+ },
+ {
+  "id": 2,
+  "profesor": "Fran",
+  "deporte": "Basquet",
+  "cancha": "5",
+  "alumnos": "24",
+  "categoria": "2005",
+  "genero": "Mixto",
+  "dia": "domingo",
+  "registroHorarios": "10:00",
+  "valor": "4000",
+  "image": "estrella-gris.png",
+  "category": "escuelita"
+ },
+ {
+  "id": 3,
+  "deporte": "Padel",
+  "category": "escuelita",
+  "cancha": "",
+  "alumnos": "50",
+  "categoria": "2000",
+  "profesor": "Marcelo",
+  "genero": "Femenino",
+  "dia": "lunes",
+  "registroHorarios": "17:00",
+  "valor": "1500",
+  "image": "estrella-gris.png"
+ }
 ]
