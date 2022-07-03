@@ -1,5 +1,4 @@
-[
- {
+[{
   "id": 1,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -21,8 +20,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 2,
   "nombre": "dsad",
   "apellido": "asdas",
@@ -44,8 +42,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 3,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -67,8 +64,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 4,
   "nombre": "Francov",
   "apellido": "Garciav",
@@ -90,8 +86,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 5,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -99,8 +94,8 @@
   "password": "$2a$10$OSn2Ozb3I8iyE1HlDKw5seUEKmfDBc/PPOB1sLWTEZj1bJBV2eBoe",
   "nombreDelLugar": "Se Pico",
   "direccion": "Sauces 500",
-  "telefono": "",
-  "telefono2": "",
+  "telefono": "2615995585",
+  "telefono2": "11232142",
   "iluminacion": "No",
   "estacionamiento": "No",
   "wifi": "No",
@@ -112,10 +107,8 @@
   "mercadoPago": "No",
   "modo": "No",
   "efectivo": "No",
-  "image": "imagenCancha-1654372985364-494608673.jpg",
-  "logo": "imagenCancha-1654727965396-941071930.jpg"
- },
- {
+  "image": "imagenCancha-1654372985364-494608673.jpg"
+}, {
   "id": 6,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -137,8 +130,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 7,
   "nombre": "Franco",
   "apellido": "Castillo",
@@ -160,8 +152,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 8,
   "nombre": "Matias",
   "apellido": "Juarez",
@@ -183,8 +174,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 9,
   "nombre": "Mat",
   "apellido": "Syk",
@@ -206,8 +196,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 10,
   "nombre": "Maria",
   "apellido": "Perez",
@@ -230,8 +219,7 @@
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg",
   "logo": "club-deportivo-los-olivos-de-general-guemes.png"
- },
- {
+}, {
   "id": 11,
   "nombre": "Fabio",
   "apellido": "Clemente",
@@ -253,8 +241,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 12,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -276,8 +263,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 13,
   "nombre": "Franco",
   "apellido": "Castillo",
@@ -299,8 +285,7 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- },
- {
+}, {
   "id": 14,
   "nombre": "Franco",
   "apellido": "Garcia",
@@ -322,5 +307,4 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1654372985364-494608673.jpg"
- }
-]
+}]

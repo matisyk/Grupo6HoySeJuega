@@ -34,23 +34,37 @@
               <label for="nombre">Nombre: </label>
               <input id="nombre" name="nombre" class="form-control" type="nombre" value = '<%=product.nombre%>' required>
             </div>
-            <br><br>
+            <br>
             <div>
               <label for="apellido">Apellido: </label>
               <input id="apellido" name="apellido" class="form-control" type="apellido" value='<%=product.apellido%>' required>
             </div>
-            <br><br>
+            <br>
+            <div>
+              <label for="email">Mail: </label>
+              <input id="email" class="form-control" name="email" value="<%= product.email%>"
+              />
+            </div>
+            <br>
+            <div style="display:none">
+              <label for="contraseña">Contraseña: </label>
+              <input id="pwd" name="password"
+                class="form-control" type="text"
+                value="<%= product.password%>"/>
+             
+            </div>
+            <br>
             <div>
               <label for="nombreDelLugar">Nombre del lugar: </label>
               <input type="text" class="form-control" id="nombreDelLugar" name="nombreDelLugar" value='<%=product.nombreDelLugar%>'/>
             </div>
-            <br><br>
+            <br>
             <label for="direccion">Dirección:</label>
             <input type="text" class="form-control" id="direccion" name="direccion" value='<%=product.direccion%>' />
-            <br><br>
+            <br>
             <label for="telefono">Telefono:</label>
             <input type="number" class="form-control" id="telefono" name="telefono" value='<%=product.telefono%>' />
-            <br><br>
+            <br>
             <label for="telefono2">Contacto de emergencia:</label>
             <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=product.telefono2%>' />
           </div>
@@ -175,21 +189,19 @@
         </div>
       </div>
       <br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <div class="form-group">
-        <div class="input-group">
+      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      <div class="form-group" >
+        <div style="display:flex; justify-content:center ;flex-direction:column; flex-wrap:wrap" class="input-group">
           <br>
           <div class="img-cancha">
             <label for="imagenCancha">Cargar imágenes de la cancha:
               <input type="file" name="imagenCancha" accept=".jpg" multiple /></label>
           </div>
           <br>
-          <br>
           <div class="img-cancha">
             <label for="imagenComedor">Cargar imágenes de la parrilla:
               <input type="file" name="imagenComedor" accept=".jpg" multiple /></label>
           </div>
-          <br>
           <br>
           <div class="img-cancha">
             <label for="imagenOtras">Cargar imágenes extras del lugar:
@@ -216,14 +228,12 @@
       </div>
   </div>
   </form>
-  <br />
-  <br />
+  
   <div class="container">
     <div>
       <a href="/register"><button class="volver">Volver</button></a>
     </div>
-    <br />
-    <br />
+    
     <div class="alert alert-success divAlerta">
       ¡Gracias por registrarse!
     </div>
