@@ -4,22 +4,111 @@ header {
   text-align: center;
 }
 
+/** EMPIEZA MENU HAMBURGESA **/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+.top-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  color: #FFF;
+  padding-left: 60%;
+}
+
 .menu {
-  height: 135px;
+  position: absolute;
+  top: 0;
+  margin-top: 20%;
+  left: 30%;
+  flex-direction: column;
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu > li {
+  margin: 0 1rem;
+  overflow: hidden;
+  background-color: #000000;
+}
+
+.menu-button-container {
+  display: flex;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle ~ .menu li {
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+#menu-toggle:checked ~ .menu li {
+  border: 1px solid #333;
+  height: 2.5em;
+  padding: 0.5em;
+  transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/** TERMINA MENU HAMBURGESA **/
+
+.menu-header {
+  height: 8.2rem;
   width: 100vw;
   background: linear-gradient(to right, #000000, #000000, #0166f7, #bd6cca);
   color: white;
   text-align: center;
   position: fixed;
   z-index: 5;
-}
-
-.menu-hamburguesa i {
-  position: absolute;
-  right: 20px;
-  top: 50px;
-  font-size: 40px;
-  color: white;
 }
 
 .menu-cont {
@@ -31,7 +120,7 @@ header {
   visibility: hidden;
 }
 
-.menu a {
+.menu-header a {
   padding: 8px;
   display: block;
   font-size: 100%;
@@ -40,8 +129,8 @@ header {
   font-size: 20px;
 }
 
-.menu a:hover,
-.menu a:focus {
+.menu-header a:hover,
+.menu-header a:focus {
   background-color: black;
   text-decoration: none;
   color: #fff;
@@ -141,7 +230,7 @@ header {
 }
 
 @media (min-width: 768px) {
-  .menu {
+  .menu-header {
     background: linear-gradient(
       to right,
       #000000,
@@ -154,19 +243,19 @@ header {
       #bd6cca
     );
   }
-  .menu a {
+  .menu-header a {
     font-size: 180%;
   }
   .menu-cont {
     visibility: visible;
     font-size: 10px;
   }
-  .menu-hamburguesa {
-    visibility: hidden;
+  .menu-hamburguesa, .top-nav {
+    display: none;
   }
 }
 @media (min-width: 1024px) {
-  .menu a {
+  .menu-header a {
     font-size: 140%;
   }
   .menu-cont {
