@@ -115,5 +115,14 @@
   "tipoDeCancha": "cesped sintetico",
   "valor": "1000",
   "image": "image-1656868059388-501451495.jpg"
+ },
+ {
+  "id": 30,
+  "identificacion": "Catalina",
+  "category": "cancha",
+  "capacidad": "20",
+  "tipoDeCancha": "cesped Sintetico",
+  "valor": "3000",
+  "image": "image-1656869619532-644440076.jpg"
  }
 ]

@@ -72,16 +72,16 @@
           </svg>
           <input autocomplete="off" id="pass" placeholder="Contraseña" class="input-field" name="password"
             type="password">
-            <% if (locals.errors && errors.password) { %>
-            <div class="text-danger msg">
-              <%= errors.password.msg %>
-            </div>
-            <% } %>
+          <% if (locals.errors && errors.password) { %>
+          <div class="text-danger msg">
+            <%= errors.password.msg %>
+          </div>
+          <% } %>
         </div>
 
         <div class="recordar">
-          <label>Recordarme</label>
-          <input type="checkbox" name="recordarOwner">
+          <label style="font-size: 28px; margin-right: 18px;">Recordarme</label>
+          <input type="checkbox" checked="checked" name="recordarOwner" style="width: 30px; height: 25px;">
         </div>
 
         <button type="submit" class="btn btn-primary">Ingresar</button>
