@@ -7,19 +7,9 @@
   "identificacion": "Cancha 1",
   "category": "cancha",
   "deporte": "futbol",
-  "capacidad": "22",
-  "tipoDeCancha": "cesped",
-  "valor": "3000",
-  "image": "image-1656886408265-726182120.jpg"
- },
- {
-  "id": 3,
-  "identificacion": "Cancha 2",
-  "category": "cancha",
-  "deporte": "futbol",
-  "capacidad": "10",
+  "capacidad": "20",
   "tipoDeCancha": "cesped Sintetico",
-  "valor": "1500",
-  "image": "image-1656886474904-198634419.jpg"
- }
+  "valor": "3000",
+  "image": "image-1656897962591-201541937.jpg"
+}
 ]

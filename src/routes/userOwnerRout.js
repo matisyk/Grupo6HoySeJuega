@@ -70,8 +70,7 @@ router.get('/vistaCancha/:id/crearTorneo',logueadoPlayer, productsControllerT.cr
 router.post('/vistaCancha/:id/crearTorneo',logueadoPlayer, upload.any(), productsControllerT.store);
 router.get('/vistaCancha/:id/editTorneo/:id/',logueadoPlayer, productsControllerT.edit);
 router.patch('/vistaCancha/:id/editTorneo/:id/', logueadoPlayer,upload.any(), productsControllerT.update);
-// /*** DELETE ONE PRODUCT***/ 
-//router.delete('/delete/torneo/:id', productsController.destroy); 
+router.delete('/vistaCancha/:id/delete/torneo/:id', productsControllerT.destroy);
 
 
 // ESCUELAS

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+<main>
     <form action="/userOwner/vistaCancha/:id/editSchool/<%= product.id %>?_method=PATCH" enctype="multipart/form-data"
         method="POST">
         <div class="tarjeta">
@@ -94,7 +94,7 @@
                 </div>
 
                 <div class="item-tarjeta">
-                    <label name="lugar">Género:</label>
+                    <label>Género:</label>
                     <select name="genero" id="genero" required>
                         <% if (product.genero == "") { %>
                         <option value="">Elegir genenro</option>
@@ -120,7 +120,7 @@
                 <div class="otro-item-tarjeta">
                     <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                     <select name="dia" id="dia">
-                        <option value="<%= product.dia %>">Seleccionar</option>
+                        <option value="<%= product.dia %>"><%= product.dia %>"</option>
                         <option value="Lunes">Lunes</option>
                         <option value="Martes">Martes</option>
                         <option value="Miercoles">Miércoles</option>
@@ -136,7 +136,7 @@
                 <br>
                 <div class="otro-item-tarjeta">
                     <select name="dia2" id="dia">
-                        <option value="<%= product.dia2 %>">Seleccionar</option>
+                        <option value="<%= product.dia2 %>"><%= product.dia %>"</option>
                         <option value="Lunes">Lunes</option>
                         <option value="Martes">Martes</option>
                         <option value="Miercoles">Miércoles</option>
@@ -152,7 +152,7 @@
                 <br>
                 <div class="otro-item-tarjeta">
                     <select name="dia3" id="dia">
-                        <option selected disabled>Elegir día</option>
+                        <option selected disabled><%= product.dia %>"</option>
                         <option value="lunes">Lunes</option>
                         <option value="martes">Martes</option>
                         <option value="miercoles">Miércoles</option>
@@ -184,7 +184,10 @@
                 </div>
             </div>
     </form>
-
+    </main>
+    <div class="item-tarjeta boton-enviar2">
+        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>"><button type="submit">Volver</button></a>
+    </div>
 </body>
 
 </html>

@@ -33,7 +33,7 @@ const controller = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename;
 		}else{
-			image = "estrella-gris.png";
+			image = "png-clipart-sports-school-inter-iit-sports-meet-sports-day-school-sports-elementary-school-thumbnail.png";
 		}
 
 		let newProduct = {

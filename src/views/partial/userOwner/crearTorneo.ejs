@@ -18,16 +18,18 @@
 </head>
 
 <body>
-
-    <form action="/userOwner/crearTorneo" method="POST" enctype="multipart/form-data">
+<main>
+    <form action="/userOwner/vistacancha/:id/crearTorneo" method="POST" enctype="multipart/form-data">
         <div class="tarjeta">
             <div class="item-tarjeta">
-                <label name="registroDeDeporte">Deporte:</label>
-                <select name="deporte" id="deporte" name="registroDeDeporte">
-                    <option value="" disabled selected>Elegir deporte</option>
-                    <option value="Futbol">Futbol</option>
-                    <option value="Paddle">Paddle</option>
-                    <option value="Basquet">Basquet</option>
+                <label>Deporte:</label>
+                <select name="deporte" id="deporte" required>
+                    <option value="">Elegir un deporte</option>
+                    <option value="futbol">Futbol</option>
+                    <option value="padel">Padel</option>
+                    <option value="basquet">Basquet</option>
+                    <option value="tenis">Tenis</option>
+                    <option value="voley">Voley</option>
                 </select>
             </div>
 
@@ -39,24 +41,24 @@
 
             <div class="item-tarjeta">
                 <label>Cantidad de Equipos:</label>
-                <input name="cantidadEquipos" type="number">
+                <input name="cantidadEquipos" type="number" placeholder="Elegir cantidad de equipos que participan">
             </div>
 
             <div class="edad">
                 <div class="item-tarjeta">
                     <label>Categoría:</label>
-                    <input name="categoria" type="number">
+                    <input name="categoria" type="number" placeholder="Elegir año de categoria a jugar">
                 </div>
 
             </div>
 
             <div class="item-tarjeta">
                 <label>Género:</label>
-                <select name="genero">
-                    <option value="" disabled selected>Elegir opción</option>
-                    <option value="Femenino">Femenino</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Mixto">Mixto</option>
+                <select name="genero" id="genero" required>
+                    <option selected disabled>Elegir opción</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="mixto">Mixto</option>
                 </select>
             </div>
 
@@ -75,13 +77,13 @@
                 <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                 <select name="dia">
                     <option value="" disabled selected>Elegir día</option>
-                    <option value="Lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Miércoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sabado</option>
-                    <option value="Domingo">Domingo</option>
+                    <option value="lunes">Lunes</option>
+                    <option value="martes">Martes</option>
+                    <option value="miercoles">Miércoles</option>
+                    <option value="jueves">Jueves</option>
+                    <option value="viernes">Viernes</option>
+                    <option value="sabado">Sabado</option>
+                    <option value="domingo">Domingo</option>
                 </select>
                 <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
             </div>
@@ -93,13 +95,19 @@
                 <label>Premio</label>
                 <input type="number" name="premio" placeholder="$">
             </div>
-
+<div class="item-tarjeta">
+    <label>Cargar imagen</label>
+    <input class="foto" type="file" name="image" accept=".jpg" multiple>
+</div>
             <div class="item-tarjeta boton-enviar">
                 <button type="submit">Crear Torneo</button>
             </div>
         </div>
     </form>
-
+</main>
+<div class="item-tarjeta boton-enviar2">
+    <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>"><button type="submit">Volver</button></a>
+</div>
 </body>
 
 </html>

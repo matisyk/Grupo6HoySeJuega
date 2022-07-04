@@ -210,12 +210,15 @@
                       <li>Premio: $ <%= torneos.premio%></li>
                     </ul>
                   </p>
-                  <form action="/userOwner/delete/torneo/<%= torneos.id %>?_method=DELETE" method="POST">
+                  <form
+                    action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/torneo/<%= torneos.id %>?_method=DELETE"
+                    method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
 
-                  <button class="boton-editar"><a href="/userOwner/editTorneo/<%= torneos.id%>"><i
+                  <button class="boton-editar"><a
+                      href="/userOwner/vistaCancha/<%= userOwner.id %>/editTorneo/<%= torneos.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
