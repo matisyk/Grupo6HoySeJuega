@@ -93,11 +93,11 @@
  },
  {
   "id": 5,
-  "nombre": "Franco",
+  "nombre": "Franck",
   "apellido": "Garcia",
   "email": "frangarcia93@icloud.com",
   "password": "$2a$10$OSn2Ozb3I8iyE1HlDKw5seUEKmfDBc/PPOB1sLWTEZj1bJBV2eBoe",
-  "nombreDelLugar": "Se Pico",
+  "nombreDelLugar": "La mendocina",
   "direccion": "Sauces 500",
   "telefono": "2615995585",
   "telefono2": "11232142",
@@ -112,8 +112,7 @@
   "mercadoPago": "No",
   "modo": "Si",
   "efectivo": "Si",
-  "image": "imagenCancha-1654372985364-494608673.jpg",
-  "logo": "club-deportivo-los-olivos-de-general-guemes.png"
+  "image": "imagenCancha-1654372985364-494608673.jpg"
  },
  {
   "id": 6,
