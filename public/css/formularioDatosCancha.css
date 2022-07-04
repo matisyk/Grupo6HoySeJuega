@@ -18,7 +18,10 @@ h1 {
   background-image: url(/img/rectangulo-register.jpg);
   background-repeat: no-repeat;
   width: 40%;
-  position: relative
+  position: relative;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: -30px 10px 60px -10px rgb(0 0 0 / 75%);
 }
 .logo img{
   width: 100%;
