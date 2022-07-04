@@ -63,6 +63,10 @@ body {
  background: #2a2b38;
 }
 
+.container{
+  width: auto !important;
+}
+
 /*Inputs*/
 .field {
  margin-top: .5rem;
