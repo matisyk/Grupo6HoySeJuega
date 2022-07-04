@@ -437,5 +437,28 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1656886165120-95980971.jpg"
+ },
+ {
+  "id": 20,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "francodj93@gmail.com",
+  "password": "$2a$10$iUV1i2J1KvGNt9cvomU8keML4SHX3kspO.xy8hxpzoJdOgWQfBv7u",
+  "nombreDelLugar": "La mendocina",
+  "direccion": "sobremonte 60",
+  "telefono": "2615995585",
+  "telefono2": "12445454",
+  "iluminacion": "Si",
+  "estacionamiento": "Si",
+  "wifi": "Si",
+  "vestuarios": "No",
+  "duchas": "No",
+  "parrilla": "Si",
+  "quincho": "Si",
+  "transferencia": "Si",
+  "mercadoPago": "No",
+  "modo": "No",
+  "efectivo": "No",
+  "image": "imagenCancha-1656899084441-225461975.jpg"
  }
 ]
