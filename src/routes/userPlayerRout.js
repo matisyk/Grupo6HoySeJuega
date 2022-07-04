@@ -2,12 +2,22 @@ const express = require('express')
 const router = express.Router();
 const logueadoOwner = require('../middlewares/logueadoOwner')
 const noLogueadoPlayer = require('../middlewares/noLogueadoPlayer')
+const logueadoPlayer = require('../middlewares/logueadoPlayer');
 
 // const multer = require('multer');
 
 
 
 const userPlayerController = require('../controllers/userPlayerController')
+
+
+// LOGIN
+
+router.get('/loginPlayer', userPlayerController.loginPlayer);
+router.post('/loginPlayer', userPlayerController.processLoginPlayer);
+router.get('/logoutPlayer', userPlayerController.logout);
+
+// JUGADOR
 
 router.get('/',noLogueadoPlayer,  logueadoOwner,userPlayerController.vistaJugador);
 

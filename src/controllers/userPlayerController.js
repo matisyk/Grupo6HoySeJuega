@@ -8,6 +8,46 @@ const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 
 const userPlayerController = {
 
+  loginPlayer: (req, res) => {
+    res.render("partial/login/loginPlayer")
+  },
+  processLoginPlayer: (req, res) => {
+
+    let userPlayerToLogin = userPlayer.findByField('email', req.body.email)
+
+    if (userPlayerToLogin) {
+      let isOkPassword = bcryptjs.compareSync(req.body.password, userPlayerToLogin.password);
+      if (isOkPassword) {
+
+        delete userPlayerToLogin.password;
+        req.session.userLoggedPlayer = userPlayerToLogin
+        return res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer.id)
+      }
+
+      return res.render('partial/login/loginPlayer', {
+        errors: {
+          password: {
+            msg: 'Error en tu contraseña'
+          }
+        }
+      });
+    }
+
+    return res.render('partial/login/loginPlayer', {
+      errors: {
+        email: {
+          msg: 'No se encuentra registrado este mail'
+        }
+      }
+    });
+
+  },
+  logout: (req, res) => {
+    res.clearCookie('userPlayerEmail');
+    req.session.destroy();
+    return res.redirect("/")
+  },
+
   vistaJugador: (req, res) => {
 
     res.render("partial/userPlayer/vistaJugador")
@@ -34,9 +74,11 @@ const userPlayerController = {
   vistaCanchaInfo: (req, res) => {
     let id = req.params.id
     let userOwner = owners.find(userOwner => userOwner.id == id)
-    res.render("partial/userPlayer/vistaCanchaInfo", {userOwner})
+    res.render("partial/userPlayer/vistaCanchaInfo", {
+      userOwner
+    })
   },
-  
+
   elegirCancha: (req, res) => {
 
     res.render("partial/userPlayer/elegirCancha")

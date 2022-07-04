@@ -1,7 +1,7 @@
 function noLogueadoPlayer(req, res, next) {
     if (!req.session.userLoggedPlayer) {
 
-      return res.redirect("/login/loginPlayer")
+      return res.redirect("/userPlayer/loginPlayer")
     }
     next();
   }

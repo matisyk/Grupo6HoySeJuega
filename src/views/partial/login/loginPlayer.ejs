@@ -48,7 +48,7 @@
   <!-- CONTENIDO -->
 
   <div class="contenedor-mayor">
-    <form action="/login/loginPlayer" method="POST">
+    <form action="/userPlayer/loginPlayer" method="POST">
       <div class="card">
         <h4 class="title">Iniciar sesión!</h4>
         <form>
@@ -81,8 +81,8 @@
                 <% } %>
           </div>
           <div class="recordar">
-            <input type="radio" name="opcion" value="recordar">
-            Recordarme
+            <label style="font-size: 28px; margin-right: 18px;">Recordarme</label>
+            <input type="checkbox" checked="checked" name="recordarOwner" style="width: 30px; height: 25px;">
           </div>
           <button type="submit" class="btn btn-primary">Ingresar</button>
           <a href="#" class="btn-link">Olvidaste tu clave?</a>
