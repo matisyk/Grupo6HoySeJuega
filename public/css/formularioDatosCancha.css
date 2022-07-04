@@ -7,19 +7,21 @@ h1 {
   text-align: center;
   margin: 50px;
   font-size: 50px;
-  color: #ebebeb
 }
 .contenedor-general{
   display: flex;
   flex-direction: row;
-  margin: 50px auto;
-  width: 80%;
+
+  width: 100%;
 }
 .contenedor-imagen{
   background-image: url(/img/rectangulo-register.jpg);
   background-repeat: no-repeat;
   width: 40%;
-  position: relative
+  position: relative;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  box-shadow: -30px 10px 60px -10px rgb(0 0 0 / 75%);
 }
 .logo img{
   width: 100%;
@@ -50,9 +52,7 @@ h1 {
 .input-group{
   display: block;
 }
-.imagenes{
-  margin-left: 30px;
-}
+
 .div1 {
   padding: 20px;
   padding-bottom: 50px;
@@ -214,7 +214,47 @@ button:hover span {
 button:active {
   transform: scale(0.95);
 }
+input{
+  max-width: 80%;
+ }
 
+@media (min-width: 768px){
+  .contenedor-general{
+   margin: 60px auto;
+width: 80%; 
+  }
+  input{
+    max-width: 100%;
+   }
+   .img-cancha{
+    margin-left: 10px;
+   }
+}
+
+@media (min-width: 1024px){
+  .contenedor-general{
+   margin: 100px auto;
+width: 70%; 
+  }
+
+}
+@media (min-width: 1440px){
+  .contenedor-general{
+   margin: 100px auto;
+width: 60%; 
+  }
+  .img-cancha{
+    margin-left: 30px;
+   }
+
+}
+
+@media (min-width: 1700px){
+  .img-cancha{
+    margin-left: 60px;
+   }
+
+}
 @keyframes fly-1 {
   from {
     transform: translateY(0.1em);

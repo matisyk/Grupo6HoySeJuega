@@ -86,13 +86,13 @@
                   <h3><%= cancha.identificacion %></h3>
                   <h3>$ <%= cancha.valor %></h3>
 
-                  <form action="/userOwner/vistacancha/<%= userOwner.id %>/delete/court/<%= cancha.id%>?_method=DELETE"
+                  <form action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/court/<%= cancha.id%>?_method=DELETE"
                     method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
 
-                  <button class="boton-editar"><a href="/userOwner/vistacancha/<%= userOwner.id %>/editCourt/<%= cancha.id%>"><i
+                  <button class="boton-editar"><a href="/userOwner/vistaCancha/<%= userOwner.id %>/editCourt/<%= cancha.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
@@ -138,7 +138,7 @@
               <div class="tarjetas">
                 <div class="tarjeta tarjeta-esc">
                   <div class="blob"></div>
-                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/<%= escuelitas.image %>"
+                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/products/<%= escuelitas.image %>"
                         alt=""></a></span>
                   <h3><%= escuelitas.deporte %> <br><span class="categoria">Categoría
                       <%= escuelitas.categoria %> </span> </h3>
@@ -146,18 +146,22 @@
                     <ul>
                       <li>Profesor: <%= escuelitas.profesor %> </li>
                       <li>Día: <%= escuelitas.dia %> - <%= escuelitas.registroHorarios %> </li>
+                      <li>Día: <%= escuelitas.dia2 %> - <%= escuelitas.registroHorarios2 %> </li>
+                      <li>Día: <%= escuelitas.dia3 %> - <%= escuelitas.registroHorarios3 %> </li>
                       <li>Cancha: <%= escuelitas.cancha %> </li>
                       <li>Cantidad de alumnos: <%= escuelitas.alumnos %></li>
                       <li>Precio: <%= escuelitas.valor %></li>
                     </ul>
                   </p>
-                  <form action="/userOwner/delete/school/<%= escuelitas.id %>?_method=DELETE" method="POST">
+                  <form
+                    action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/school/<%= escuelitas.id %>?_method=DELETE"
+                    method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
 
                   <button class="boton-editar"><a
-                      href="/userOwner/vistacancha/<%= userOwner.id %>/editSchool/<%= escuelitas.id%>"><i
+                      href="/userOwner/vistaCancha/<%= userOwner.id %>/editSchool/<%= escuelitas.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
@@ -206,12 +210,15 @@
                       <li>Premio: $ <%= torneos.premio%></li>
                     </ul>
                   </p>
-                  <form action="/userOwner/delete/torneo/<%= torneos.id %>?_method=DELETE" method="POST">
+                  <form
+                    action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/torneo/<%= torneos.id %>?_method=DELETE"
+                    method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
 
-                  <button class="boton-editar"><a href="/userOwner/editTorneo/<%= torneos.id%>"><i
+                  <button class="boton-editar"><a
+                      href="/userOwner/vistaCancha/<%= userOwner.id %>/editTorneo/<%= torneos.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>

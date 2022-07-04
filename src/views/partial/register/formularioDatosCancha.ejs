@@ -24,12 +24,12 @@
 </head>
 
 <body>
-  <h1>Registro de Dueño</h1>
   <div class="contenedor-general">
     <div class="contenedor-imagen">
       <div class="logo"><img src="/img/logo-fondo-transparente.png" alt=""></div></div>
     <div class="formulario-div2">
     <form class="div2" action="/register/registerOwner" method="POST" enctype="multipart/form-data">
+      <h1>Registro de Dueño</h1>
       <div class="form-group">
         <div class="input-group">
           <div class="entre-divs">
@@ -157,6 +157,7 @@
                   <option selected="selected" label="No" value="No"></option>
                 </select></label><br /> <br />
             </div>
+            <br>
             <div class="medios-de-pago">
               <label>Medios de pago aceptados:</label>
               <br>
@@ -193,17 +194,17 @@
       <div class="form-group">
         <div class="input-group imagenes">
           <div class="img-cancha">
-            <label for="imagenCancha">Cargar imágenes de la cancha:
+            <label for="imagenCancha">Cargar imágenes de la cancha: <br>
               <input type="file" name="imagenCancha" accept=".jpg" multiple /></label>
           </div>
           <br>
           <div class="img-cancha">
-            <label for="imagenComedor">Cargar imágenes de la parrilla:
+            <label for="imagenComedor">Cargar imágenes de la parrilla: <br>
               <input type="file" name="imagenComedor" accept=".jpg" multiple /></label>
           </div>
           <br>
           <div class="img-cancha">
-            <label for="imagenOtras">Cargar imágenes extras del lugar:
+            <label for="imagenOtras">Cargar imágenes extras del lugar: <br>
               <input type="file" name="imagenOtras" accept=".jpg" multiple /></label>
           </div>
           <br>

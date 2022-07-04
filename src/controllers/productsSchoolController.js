@@ -33,7 +33,7 @@ const controller = {
 		if(req.files[0] != undefined){
 			image = req.files[0].filename;
 		}else{
-			image = "estrella-gris.png";
+			image = "png-clipart-sports-school-inter-iit-sports-meet-sports-day-school-sports-elementary-school-thumbnail.png";
 		}
 
 		let newProduct = {
@@ -46,7 +46,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
-		res.redirect("/userOwner/vistaCancha/10");
+		return res.redirect("/userOwner/update")
 
 	},
 
@@ -93,7 +93,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
-		res.redirect("/userOwner/vistaCancha/10")
+		return res.redirect("/userOwner/update")
 
 	},
 
@@ -104,7 +104,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete, null, ' '));
 
-		res.redirect("/userOwner/vistaCancha/" + id)
+		return res.redirect("/userOwner/update")
 
 	}
 };

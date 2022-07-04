@@ -1,1 +1,15 @@
-[]
+[
+ {
+  "id": 1
+ },
+ {
+  "id": 2,
+  "identificacion": "Cancha 1",
+  "category": "cancha",
+  "deporte": "futbol",
+  "capacidad": "20",
+  "tipoDeCancha": "cesped Sintetico",
+  "valor": "3000",
+  "image": "image-1656897962591-201541937.jpg"
+ }
+]
