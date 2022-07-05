@@ -134,5 +134,40 @@
   "hora6": "",
   "hora7": "",
   "image": "imagenJugador-1656708728371-852758602.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "Franco",
+  "apellido": "Garcia",
+  "email": "frangarcia93@icloud.com",
+  "password": "$2a$10$mnVjg9uy4R.zaZqjCvP7H.NglRW1zFCfnzohj1NinLXKQLAaINF72",
+  "edad": "28",
+  "telefono": "2615995585",
+  "telefono2": "2613356722",
+  "categoria": "Centro",
+  "autoValoracion": "Copadito",
+  "ubicacion": "Juego",
+  "deporte1": "Futbol",
+  "deporte2": "Padel",
+  "deporte3": [
+   "",
+   ""
+  ],
+  "zonaDeJuego": "Tigre",
+  "dia1": "lunes",
+  "dia2": "Miercoles",
+  "dia3": "Viernes",
+  "dia4": "Sabado",
+  "dia5": "",
+  "dia6": "",
+  "dia7": "",
+  "hora1": "17:00",
+  "hora2": "18:00",
+  "hora3": "21:00",
+  "hora4": "18:00",
+  "hora5": "",
+  "hora6": "",
+  "hora7": "",
+  "image": "imagenJugador-1657064030821-962734972.jpg"
  }
 ]
