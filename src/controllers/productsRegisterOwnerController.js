@@ -56,6 +56,9 @@ const controller = {
 			logo = req.files[3].filename;
 		} else {
 			image = "imagenCancha-1654372985364-494608673.jpg";
+			image2 = "imagenCancha-1654372985364-494608673.jpg";
+			image3 = "imagenCancha-1654372985364-494608673.jpg";
+			logo = "imagenCancha-1654372985364-494608673.jpg";
 		}
 
 		let userInDB = User.findByField('email', req.body.email);
