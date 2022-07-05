@@ -5,8 +5,8 @@ function userLoggedPlayer(req, res, next) {
 
   res.locals.isLogged = false;
 
-  let emailInCookie = req.cookies.userPlayerEmail;
-  let userPlayerCookie = userPlayer.findByField('email', emailInCookie);
+  let emailInCookiePlayer = req.cookies.userPlayerEmail;
+  let userPlayerCookie = userPlayer.findByField('email', emailInCookiePlayer);
  
 
   if (userPlayerCookie) {
