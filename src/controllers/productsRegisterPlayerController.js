@@ -74,7 +74,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
-		res.redirect("/register/userPlayer/welcome/");
+		res.redirect("/userPlayer/loginPlayer");
 
 	},
 
@@ -83,6 +83,7 @@ const controller = {
 
 		let id = products.length;
 		res.render("partial/register/redireccion2", {
+			userLoggedPlayer: req.session.userLoggedPlayer ,
 			id
 		});
 
@@ -135,7 +136,7 @@ const controller = {
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
-		res.redirect("/userPlayer/perfilDeJugador/" + productToEdit.id)
+		res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer)
 
 	},
 

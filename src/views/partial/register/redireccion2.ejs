@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <META HTTP-EQUIV="REFRESH" CONTENT="3;URL=/userPlayer/perfilDeJugador/<%- id %>">
+    <META HTTP-EQUIV="REFRESH" CONTENT="3;URL=/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=320" />
@@ -29,21 +29,24 @@
             <h1 class="title" style="text-align: center;">Bienvenido</h1>
             <br>
 
-            <h1 class="title" style="text-align: center;">
+            <h1 class="title" style="text-align: center;"> <%- userLoggedPlayer.nombre %> 
+                <%- userLoggedPlayer.apellido %> </h2>
+
             </h1>
-
             <br>
-            <h2 class="title" style="text-align: center;">Serás redireccionado a tu perfil</h2>
+            <h2 class="title" style="text-align: center;">Serás dirigido a tu perfil </h2>
+            <br>
+            
         </div>
 
 
 
 
 
-        </div>
+        
     </main>
 
-    </div>
+  
 </body>
 
 </html>

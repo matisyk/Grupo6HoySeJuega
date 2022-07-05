@@ -1,9 +1,13 @@
 const fs = require('fs');
 const path = require('path');
+
+// Login
+const bcryptjs = require('bcryptjs');
+const userPlayer = require('../models/UserPlayer')
+
+// DATABA BASE JUGADOR
 const PlayerFilePath = path.join(__dirname, '../database/userPlayer.json');
 const players = JSON.parse(fs.readFileSync(PlayerFilePath, 'utf-8'));
-const ownersFilePath = path.join(__dirname, '../database/userOwner.json');
-const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
 
 
 const userPlayerController = {
@@ -21,7 +25,14 @@ const userPlayerController = {
 
         delete userPlayerToLogin.password;
         req.session.userLoggedPlayer = userPlayerToLogin
-        return res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer.id)
+
+if (req.body.recordarPlayer) {
+  res.cookie('userPlayerEmail', req.body.email, {
+    maxAge: (1000 * 60) * 60
+  })
+}
+
+        return res.redirect("/register/userPlayer/welcome")
       }
 
       return res.render('partial/login/loginPlayer', {

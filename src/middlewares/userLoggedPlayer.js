@@ -1,26 +1,26 @@
-const userOwner = require('../models/UserOwner')
+const userPlayer = require('../models/UserPlayer')
 
-function userLoggedOwner(req, res, next) {
+function userLoggedPlayer(req, res, next) {
 
 
   res.locals.isLogged = false;
 
-  let emailInCookie = req.cookies.userOwnerEmail;
-  let userOwnerCookie = userOwner.findByField('email', emailInCookie);
+  let emailInCookie = req.cookies.userPlayerEmail;
+  let userPlayerCookie = userPlayer.findByField('email', emailInCookie);
  
 
-  if (userOwnerCookie) {
+  if (userPlayerCookie) {
     
-    req.session.userOwnerLogged = userOwnerCookie;
+    req.session.userLoggedPlayer = userPlayerCookie;
   }
 
-  if (req.session.userOwnerLogged) {
+  if (req.session.userLoggedPlayer) {
     res.locals.isLogged = true;
-    res.locals.userOwnerLogged = req.session.userOwnerLogged;
+    res.locals.userLoggedPlayer = req.session.userLoggedPlayer;
   }
   
   next();
 }
 
 
-module.exports = userLoggedOwner
+module.exports = userLoggedPlayer
