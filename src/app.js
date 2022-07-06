@@ -5,6 +5,7 @@ const publicPath = path.resolve('../public');
 const methodOverride = require('method-override');
 const session = require ('express-session')
 const userLoggedOwner = require('./middlewares/userLoggedOwner')
+const userLoggedPlayer = require('./middlewares/userLoggedPlayer')
 const cookies = require('cookie-parser');
 
 //session
@@ -17,6 +18,7 @@ app.use(session({
 app.use(cookies());
 
 app.use(userLoggedOwner);
+app.use(userLoggedPlayer);
 
 app.use(express.static('public'));
 app.use(express.static(publicPath));
@@ -35,8 +37,8 @@ const homeRouter = require('./routes/homeRout');
 app.use('/', homeRouter);
 
 // login
-const loginRouter = require('./routes/loginRout');
-app.use('/login', loginRouter);
+// const loginRouter = require('./routes/loginRout');
+// app.use('/login', loginRouter);
 
 // register
 //const registerRouter = require('./routes/registerRout');

@@ -80,5 +80,10 @@ Integrantes del equipo:
   -> Me gusta mas la parte del Back pero quiero ser Fullstack para llegar a ser dev de web3.
 
 
+Appi de futbol:
+
+https://api.unidadeditorial.es/sports/v1/classifications/current/?site=2&type=10&tournament=0152
+
+
 
 Archivo de trello:https://trello.com/invite/b/qGQ6ny2e/3a0eb88501f017ef3163b563beca28b0/grupo-6-proyecto-integrador

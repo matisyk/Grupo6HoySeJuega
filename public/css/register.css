@@ -27,15 +27,8 @@ body {
   align-items: center;
   margin: 30px auto;
   font-size: 20px;
-  width: 470px;
   height: 340px;
   padding: 20px;
-  background: #edebeb;
-  border: 2px solid rgba(0, 0, 0, 0.657);
-  border-radius: 20px;
-  box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
-  -moz-box-shadow: 10px 10px 64px 0px rgba(102, 100, 98, 0.75);
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -87,6 +80,10 @@ body {
   background-color: #1f2029;
   border-radius: 4px;
   padding: 0.5em 1em;
+}
+
+.container{
+  width: auto !important;
 }
 
 .input-icon {
@@ -154,4 +151,16 @@ body {
 .nav-pills .show > .nav-link {
   color: #fff !important;
   background-color: #1f444b !important;
+}
+
+@media (min-width: 768px){
+  .contenedor-mayor{
+  width: 470px;
+  background: #edebeb;
+  border: 2px solid rgba(0, 0, 0, 0.657);
+  border-radius: 20px;
+  box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
+  -moz-box-shadow: 10px 10px 64px 0px rgba(102, 100, 98, 0.75);
+  }
 }

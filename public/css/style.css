@@ -344,7 +344,7 @@ button {
 background-color: #ebebeb;
 width: fit-content;
 max-width: 100%;
-margin: 60px auto;
+margin: 7rem auto;
 padding: 20px;
 border-radius: 10px;
 }
@@ -515,14 +515,16 @@ MEDIA Q
     display: flex;
     background-color: #15215c;
     width: fit-content;
-    position: absolute;
     right: 0;
-    bottom: -460px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    padding: 20px 0 20px 20px;
-    box-shadow: 15px 15px 30px #080e4b,
-              0px 0px 0px #ffffff;
+    margin: 5rem auto -5rem;
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 15px 15px 30px #080e4b, 0px 0px 0px #ffffff;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-end;
   }
   .formulario-home form{
     display: flex;

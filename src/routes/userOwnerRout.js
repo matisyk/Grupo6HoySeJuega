@@ -45,31 +45,31 @@ router.get('/logoutCourt', userOwnerController.logout);
 
 // DUEÑO DE CANCHA
 router.get('/update', productsControllerC.redirect);
-router.get('/vistaCancha/:id/agenda', logueadoPlayer, userOwnerController.agenda);
-router.get('/vistaCancha/:id/crearTorneo', logueadoPlayer, userOwnerController.crearTorneo);
-router.get('/vistaCancha/:id/registrarCancha',logueadoPlayer,userOwnerController.registrarCancha);
-router.get('/vistaCancha/:id/registrarEscuelita', logueadoPlayer, userOwnerController.registrarEscuelita);
-router.get('/vistaCancha/:id/reservaCancha', logueadoPlayer, userOwnerController.reservaCancha);
-router.get('/vistaCancha/:id', logueadoPlayer, userOwnerController.vistaCancha);
-router.get('/vistaCancha/:id', logueadoPlayer, userOwnerController.canchas);
+router.get('/vistaCancha/:id/agenda',  userOwnerController.agenda);
+router.get('/vistaCancha/:id/crearTorneo',  userOwnerController.crearTorneo);
+router.get('/vistaCancha/:id/registrarCancha',userOwnerController.registrarCancha);
+router.get('/vistaCancha/:id/registrarEscuelita',  userOwnerController.registrarEscuelita);
+router.get('/vistaCancha/:id/reservaCancha',  userOwnerController.reservaCancha);
+router.get('/vistaCancha/:id',  userOwnerController.vistaCancha);
+router.get('/vistaCancha/:id',  userOwnerController.canchas);
 router.post('/vistaCancha', userOwnerController.vistaCancha);
 
 
 // CANCHAS
 
-router.get('/vistaCancha/:id/registrarCancha', logueadoPlayer, productsControllerC.create);
-router.post('/vistaCancha/:id/registrarCancha', logueadoPlayer, upload.any("img-cancha"), productsControllerC.store);
-router.get('/vistaCancha/:id/editCourt/:id/', logueadoPlayer, productsControllerC.edit);
-router.patch('/vistaCancha/:id/editCourt/:id/', upload.any(), logueadoPlayer, productsControllerC.update);
-router.delete('/vistaCancha/:id/delete/court/:id', logueadoPlayer, productsControllerC.destroy);
+router.get('/vistaCancha/:id/registrarCancha',  productsControllerC.create);
+router.post('/vistaCancha/:id/registrarCancha',  upload.any("img-cancha"), productsControllerC.store);
+router.get('/vistaCancha/:id/editCourt/:id/',  productsControllerC.edit);
+router.patch('/vistaCancha/:id/editCourt/:id/', upload.any(),  productsControllerC.update);
+router.delete('/vistaCancha/:id/delete/court/:id',  productsControllerC.destroy);
 
 
 // TORNEOS
 
-router.get('/vistaCancha/:id/crearTorneo',logueadoPlayer, productsControllerT.create);
-router.post('/vistaCancha/:id/crearTorneo',logueadoPlayer, upload.any(), productsControllerT.store);
-router.get('/vistaCancha/:id/editTorneo/:id/',logueadoPlayer, productsControllerT.edit);
-router.patch('/vistaCancha/:id/editTorneo/:id/', logueadoPlayer,upload.any(), productsControllerT.update);
+router.get('/vistaCancha/:id/crearTorneo', productsControllerT.create);
+router.post('/vistaCancha/:id/crearTorneo', upload.any(), productsControllerT.store);
+router.get('/vistaCancha/:id/editTorneo/:id/', productsControllerT.edit);
+router.patch('/vistaCancha/:id/editTorneo/:id/', upload.any(), productsControllerT.update);
 router.delete('/vistaCancha/:id/delete/torneo/:id', productsControllerT.destroy);
 
 

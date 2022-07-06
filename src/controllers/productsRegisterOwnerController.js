@@ -51,8 +51,14 @@ const controller = {
 		let image;
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename;
+			image2 = req.files[1].filename;
+			image3 = req.files[2].filename;
+			logo = req.files[3].filename;
 		} else {
 			image = "imagenCancha-1654372985364-494608673.jpg";
+			image2 = "imagenCancha-1654372985364-494608673.jpg";
+			image3 = "imagenCancha-1654372985364-494608673.jpg";
+			logo = "imagenCancha-1654372985364-494608673.jpg";
 		}
 
 		let userInDB = User.findByField('email', req.body.email);
@@ -71,6 +77,9 @@ const controller = {
 			id: products[products.length - 1].id + 1,
 			...req.body,
 			image: image,
+			image2: image2,
+			image3: image3,
+			logo: logo,
 			password: bcryptjs.hashSync(req.body.password, 10)
 		}
 
