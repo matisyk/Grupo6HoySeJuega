@@ -460,5 +460,28 @@
   "modo": "No",
   "efectivo": "No",
   "image": "imagenCancha-1656899084441-225461975.jpg"
+ },
+ {
+  "id": 21,
+  "nombre": "Mercedes",
+  "apellido": "torrez",
+  "email": "merchu@gmail.com",
+  "password": "$2a$10$mAME50BhzWFTBsKft5m1Yu5kOYmlknWrNPfqVwd6kMhLZnmLliVMi",
+  "nombreDelLugar": "Guindas",
+  "direccion": "av. libertador 3845",
+  "telefono": "1192834404",
+  "telefono2": "1102947382",
+  "iluminacion": "Si",
+  "estacionamiento": "Si",
+  "wifi": "Si",
+  "vestuarios": "Si",
+  "duchas": "Si",
+  "parrilla": "Si",
+  "quincho": "Si",
+  "transferencia": "Si",
+  "mercadoPago": "Si",
+  "modo": "No",
+  "efectivo": "Si",
+  "image": "imagenCancha-1657038155851-947201746.jpg"
  }
 ]
