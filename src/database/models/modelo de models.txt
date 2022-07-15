@@ -1,0 +1,16 @@
+module.exports = (sequelize, dataTypes) => {
+
+  let alias = 'UserPlayer';
+  let cols = {
+
+  };
+  let config = {
+
+  }
+  const UserPlayer = sequelize.define(alias, cols, config);
+
+// aca va la relacion
+
+return UserPlayer;
+
+}
