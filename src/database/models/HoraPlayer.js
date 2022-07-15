@@ -17,18 +17,18 @@ module.exports = (sequelize, dataTypes) => {
   }
   const HoraPlayer = sequelize.define(alias, cols, config);
 
-  HoraPlayer.associate = function (models) {
+  // HoraPlayer.associate = function (models) {
 
-    HoraPlayer.belongsToMany(models.UserPlayer, models.DiaPlayer, {
-      as: "dia_hora",
-      through: 'dias_horarios_users_players',
-      foreignKey: 'horas_players_id',
-      otherKey: 'dias_players_id',
-      otherKey: 'user_players_id',
-      timestamps: false
-    })
+  //   HoraPlayer.belongsToMany(models.UserPlayer, models.DiaPlayer, {
+  //     as: "dia_hora",
+  //     through: 'dias_horarios_users_players',
+  //     foreignKey: 'horas_players_id',
+  //     otherKey: 'dias_players_id',
+  //     otherKey: 'user_players_id',
+  //     timestamps: false
+  //   })
 
-  }
+  // }
 
   return HoraPlayer;
 

@@ -8,6 +8,8 @@ const User = require('../models/UserPlayer')
 
 const productsFilePath = path.join(__dirname, '../database/userPlayer.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const db = require ('../database/models');
+const { Console } = require('console');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
@@ -28,10 +30,9 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 
-		res.render("partial/register/formularioDatosJugador")
+		res.render("partial/register/formularioDatosJugador")},
 
-	},
-
+	
 	// Create -  Method to store
 	store: (req, res) => {
 
@@ -59,22 +60,46 @@ const controller = {
 				},
 				oldData: req.body
 			});
+
 		}
 
+//create
 
+		db.UserPlayer.create({
+			nombre: req.body.nombre,
+			apellido: req.body.apellido,
+			email: req.body.email,
+			password: req.body.password,
+			fecha_nacimiento: req.body.edad,
+			zonas_de_juego_id: 1,
+			
+		})
+		// db.Telefono.create({
+		// 	telefono: req.body.telefono,
+		// 	telefono: req.body.telefono2,
+		// 	user_players_id: 4,
+		// })
+		// db.ImagenPlayer.create({
+		// 	link: req.body.imagenJugador,
+		// 	user_players_id: req.body.user_players_id,
+		// })
+		// db.HoraPlayer.create({
+		// 	hora: req.body.hora1
+		// })
+		.then(()=> {
+			return res.redirect("/userPlayer/loginPlayer");
+		})
+		.catch(error => res.send(error))
+		// let newProduct = {
+		// 	id: products[products.length - 1].id + 1,
+		// 	...req.body,
+		// 	image: image,
+		// 	password: bcryptjs.hashSync(req.body.password, 10)
+		// }
 
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
-			image: image,
-			password: bcryptjs.hashSync(req.body.password, 10)
-		}
+		// products.push(newProduct);
 
-		products.push(newProduct);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-		res.redirect("/userPlayer/loginPlayer");
+		//fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
 	},
 

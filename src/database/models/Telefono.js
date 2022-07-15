@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-  let alias = 'Telefono';
+  let alias = 'telefonosplayers';
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(45),
       allowNull: false
     },
-    deportes_id: dataTypes.BIGINT(10)
+    user_players_id: dataTypes.BIGINT(10)
   };
   let config = {
     timestamps: false
