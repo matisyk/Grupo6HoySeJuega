@@ -135,16 +135,16 @@
                 </select>
               </div>
               <br>
-              <div class="entre-divs">
+              <!-- <div class="entre-divs">
                 <label for="Ubicacion">Ubicación:</label>
                 <br>
                 <select name="ubicacion" id="ubicacion" required>
-                  <option selected disabled value="-"> Elegir opción</option>
-                  <option value="Estrella">Belgrano</option>
-                  <option value="Copadito">Palermo</option>
-                  <option value="Juego">Tigre</option>
+                  <option value="" disabled selected> Elegir opción</option>
+                  
+                  foreach va aca de api
+
                 </select>
-              </div>
+              </div> -->
             </div>
             <br>
 
@@ -152,31 +152,30 @@
               <div class="entre-divs">
                 <label for="deporte">Deporte que juego:</label>
                   <br>
-                  <select id="deporte1" name="deporte1">
-                   <option value="" disabled selected> Elegir opción</option>
+                  <select id="deporte1" name="deporte1" required>
+                   <option value="" disabled selected> Elegir</option>
                    <% deportes.forEach(deporte => { %>
                    <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
                    <% }); %>
                   </select>
+                  <br>
+                  <br>
                   <select id="deporte2" name="deporte2">
-                    <option value="">Elegir opción</option>
-                    <option value="Padel">Padel</option>
-                    <option value="">-</option>
-                  </select>
-                  <select id="deporte3" name="deporte3">
-                    <option value="">Elegir opción</option>
-                    <option value="Basquet">Basquet</option>
-                    <option value="">-</option>
-                  </select>
-                  <select id="deporte4" name="deporte3">
-                    <option value="">Elegir opción</option>
-                    <option value="Tenis">Tenis</option>
-                    <option value="">-</option>
+                    <option value="" disabled selected> Elegir</option>
+                    <% deportes.forEach(deporte => { %>
+                    <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                    <% }); %>
                   </select>
               </div>
               <div class="entre-divs">
-                <label for="zonaDeJuego">Zona de juego:</label>
-                <input type="text" class="form-control" id="zonaDeJuego" name="zonaDeJuego">
+                 <label for="zonaDeJuego">Zona de juego:</label>
+                 <select id="zonaDeJuego" name="zonasdejuego">
+                  <option value="" disabled selected> Zona de juego:</option>
+                  <% zonasdejuego.forEach(zonasdejuego => { %>
+                  <option value="<%= zonasdejuego.id %>"><%= zonasdejuego.provincia %></option>
+                  <% }); %>
+                </select>
+               
               </div>
             </div>
             <br>
@@ -185,7 +184,7 @@
               <div class="entre-divs">
                 <label for="dias">Dias para jugar:</label>
                 <div class="divDias2">
-                  <select id="dia1" name="dia1">
+                  <select id="dia1" name="dia1" required>
                     <option value="">Elegir día</option>
                     <option value="lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -198,7 +197,7 @@
                   </select>
                 </div>
                 <div class="divDias">
-                  <select id="dia2" name="dia2">
+                  <select id="dia2" name="dia2" required>
                     <option value="">Elegir día</option>
                     <option value="lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -211,59 +210,7 @@
                   </select>
                 </div>
                 <div class="divDias">
-                  <select id="dia3" name="dia3">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia4" name="dia4">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia5" name="dia5">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia6" name="dia6">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia7" name="dia7">
+                  <select id="dia3" name="dia3" required>
                     <option value="">Elegir día</option>
                     <option value="lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -279,13 +226,9 @@
 
               <div class="entre-divs">
                 <label for="horarios">Horarios para jugar:</label>
-                <input type="time" class="form-control" id="horarios" name="hora1">
-                <input type="time" class="form-control" id="horarios" name="hora2">
-                <input type="time" class="form-control" id="horarios" name="hora3">
-                <input type="time" class="form-control" id="horarios" name="hora4">
-                <input type="time" class="form-control" id="horarios" name="hora5">
-                <input type="time" class="form-control" id="horarios" name="hora6">
-                <input type="time" class="form-control" id="horarios" name="hora7">
+                <input type="time" class="form-control" id="horarios" name="hora1" required>
+                <input type="time" class="form-control" id="horarios" name="hora2" required>
+                <input type="time" class="form-control" id="horarios" name="hora3" required>
               </div>
             </div>
 

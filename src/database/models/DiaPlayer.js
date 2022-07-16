@@ -13,6 +13,7 @@ module.exports = (sequelize, dataTypes) => {
     }
   };
   let config = {
+    tableName: 'dias_players',
     timestamps: false
   }
   const DiaPlayer = sequelize.define(alias, cols, config);

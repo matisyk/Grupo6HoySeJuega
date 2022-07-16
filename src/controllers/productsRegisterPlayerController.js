@@ -12,22 +12,9 @@ const db = require('../database/models');
 const {
 	Console
 } = require('console');
-
-const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
 const fetch = require('node-fetch');
 
-module.exports = {
-
-	list: async (req, res) => {
-		fetch("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre")
-			.then(response => response.json())
-			.then(geoubicacion => {
-				return res.render(geoubicacion);
-			})
-	}
-
-}
+const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 // constantes de las bases de datos de sequelize modules
 const UserPlayer = db.UserPlayer;
@@ -35,8 +22,13 @@ const Telefono = db.Telefono;
 const AutoValoracion = db.AutoValoracion;
 const DeportesPlayers = db.Deporte;
 const ImagenPlayer = db.ImagenPlayer;
+const HoraPlayer = db.HoraPlayer;
+const DiaPlayer = db.DiaPlayer;
+const ZonasDeJuego = db.ZonaDeJuego
 
-// APPIS
+// APIS
+
+const API = "https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre";
 
 
 const controller = {
@@ -58,13 +50,23 @@ const controller = {
 
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
+		let zonasdejuego = ZonasDeJuego.findAll();
+		let dias = DiaPlayer.findAll()
+		// fetch(API)
+		// 	.then(response => response.json)
+		// 	.then((result) => {
+		// 		const geoubicacion = result.id
+		// 	})
+		// 	.catch(error => console.log(error));
 
 		Promise
-			.all([valoraciones, deportes])
-			.then(([valoraciones, deportes]) => {
+			.all([valoraciones, deportes, zonasdejuego])
+			.then(([valoraciones, deportes, zonasdejuego]) => {
 
 				res.render("partial/register/formularioDatosJugador", {
-					valoraciones, deportes
+					valoraciones,
+					deportes,
+					zonasdejuego
 				})
 			})
 	},
@@ -108,7 +110,7 @@ const controller = {
 				email: req.body.email,
 				password: bcryptjs.hashSync(req.body.password, 10),
 				fecha_nacimiento: req.body.edad,
-				zonas_de_juego_id: 1,
+				zonas_de_juego_id: req.body.zonasdejuego,
 				auto_valoracion_id: req.body.autoValoracion,
 				deportes_players_id: req.body.deporte1
 
@@ -125,8 +127,10 @@ const controller = {
 					foto: image,
 					users_players_id: idPlayer
 				})
-				db.HoraPlayer.create({
-					hora: req.body.hora1
+				HoraPlayer.create({
+					hora: req.body.hora1,
+					hora2: req.body.hora2,
+					hora3: req.body.hora3
 				})
 			})
 
