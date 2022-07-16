@@ -31,6 +31,7 @@ module.exports = (sequelize, dataTypes) => {
     zonas_de_juego_id: dataTypes.BIGINT(10)
   };
   let config = {
+    tableName: 'users_players',
     timestamps: false,
     // createdAt: 'created_at',
     // updatedAt: 'updated_at',
@@ -38,7 +39,7 @@ module.exports = (sequelize, dataTypes) => {
   }
   const UserPlayer = sequelize.define(alias, cols, config);
 
-  // UserPlayer.associate = function (models) {
+   UserPlayer.associate = function (models) {
 
   //   UserPlayer.belongsToMany(models.Deporte, {
   //     as: "deporte",
@@ -47,10 +48,10 @@ module.exports = (sequelize, dataTypes) => {
   //     otherKey: 'deportes_id',
   //     timestamps: false
   //   })
-  //   UserPlayer.hasMany(models.Telefono, {
-  //     as: "telefono",
-  //     foreignKey: "user_players_id"
-  //   })
+    UserPlayer.hasMany(models.Telefono, {
+      as: "telefono",
+     foreignKey: "user_players_id"
+   })
   //   UserPlayer.belongsTo(models.ImagenPlayer, {
   //     as: "imagenPlayer",
   //     foreignKey: "user_players_id"
@@ -63,7 +64,7 @@ module.exports = (sequelize, dataTypes) => {
   //     otherKey: 'horas_players_id',
   //     timestamps: false
   //   })
-  // }
+  }
 
 
   return UserPlayer;

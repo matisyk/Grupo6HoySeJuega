@@ -37,7 +37,7 @@ const validations = [
   body("email").notEmpty().withMessage('Tienes que escribir un email'),
   body("password").notEmpty().withMessage('Tienes que escribir una contraseña'),
   body("edad").notEmpty().withMessage('Tienes que escribir una edad'),
-  body("telefono").notEmpty().withMessage('Tienes que escribir un telefono'),
+  // body("telefono").notEmpty().withMessage('Tienes que escribir un telefono'),
   body("categoria").notEmpty().withMessage('Tienes que escribir una posicion')
 ];
 
@@ -45,7 +45,8 @@ const validations = [
 /*** CREATE ONE PRODUCT ***/ 
 
 router.get('/registerPlayer', productsController.create);
-router.post('/registerPlayer', upload.any("img-cancha"), validations, productsController.store); 
+router.post('/registerPlayer', upload.any("img-cancha"), validations, productsController.store);
+
 
 /*** REDIRECT ***/ 
 

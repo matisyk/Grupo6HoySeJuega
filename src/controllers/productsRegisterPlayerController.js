@@ -8,10 +8,16 @@ const User = require('../models/UserPlayer')
 
 const productsFilePath = path.join(__dirname, '../database/userPlayer.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const db = require ('../database/models');
-const { Console } = require('console');
+const db = require('../database/models');
+const {
+	Console
+} = require('console');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+
+const UserPlayer = db.UserPlayer;
+const Telefono = db.Telefono
 
 const controller = {
 
@@ -30,9 +36,10 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 
-		res.render("partial/register/formularioDatosJugador")},
+		res.render("partial/register/formularioDatosJugador")
+	},
 
-	
+
 	// Create -  Method to store
 	store: (req, res) => {
 
@@ -49,7 +56,7 @@ const controller = {
 		} else {
 			image = "imagenJugador-1654556031834-517220025.jpeg";
 		}
-		
+
 		let userInDB = User.findByField('email', req.body.email);
 		if (userInDB) {
 			return res.render("partial/register/formularioDatosJugador", {
@@ -63,33 +70,38 @@ const controller = {
 
 		}
 
-//create
+		//create
 
-		db.UserPlayer.create({
-			nombre: req.body.nombre,
-			apellido: req.body.apellido,
-			email: req.body.email,
-			password: req.body.password,
-			fecha_nacimiento: req.body.edad,
-			zonas_de_juego_id: 1,
-			
-		})
-		// db.Telefono.create({
-		// 	telefono: req.body.telefono,
-		// 	telefono: req.body.telefono2,
-		// 	user_players_id: 4,
-		// })
-		// db.ImagenPlayer.create({
-		// 	link: req.body.imagenJugador,
-		// 	user_players_id: req.body.user_players_id,
-		// })
-		// db.HoraPlayer.create({
-		// 	hora: req.body.hora1
-		// })
-		.then(()=> {
-			return res.redirect("/userPlayer/loginPlayer");
-		})
-		.catch(error => res.send(error))
+		UserPlayer
+			.create({
+				nombre: req.body.nombre,
+				apellido: req.body.apellido,
+				email: req.body.email,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				fecha_nacimiento: req.body.edad,
+				zonas_de_juego_id: 1,
+
+			}).then(() => {
+				
+			})
+
+		Telefono.create({
+			telefono: req.body.telefono,
+			telefono2: req.body.telefono2,
+				users_players_id: 8
+			})
+
+			// db.ImagenPlayer.create({
+			// 	link: req.body.imagenJugador,
+			// 	user_players_id: req.body.user_players_id,
+			// })
+			// db.HoraPlayer.create({
+			// 	hora: req.body.hora1
+			// })
+			.then(() => {
+				return res.redirect("/userPlayer/loginPlayer");
+			})
+			.catch(error => res.send(error))
 		// let newProduct = {
 		// 	id: products[products.length - 1].id + 1,
 		// 	...req.body,
@@ -108,7 +120,7 @@ const controller = {
 
 		let id = products.length;
 		res.render("partial/register/redireccion2", {
-			userLoggedPlayer: req.session.userLoggedPlayer ,
+			userLoggedPlayer: req.session.userLoggedPlayer,
 			id
 		});
 
