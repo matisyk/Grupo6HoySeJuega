@@ -7,13 +7,13 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    link: {
-      type: dataTypes.STRING(45),
-      allowNull: false
+    foto: {
+      type: dataTypes.STRING(100),
     },
-    user_players_id: dataTypes.BIGINT(10)
+    users_players_id: dataTypes.BIGINT(10)
   };
   let config = {
+    tableName: 'imagenes_players',
     timestamps: false
   }
   const ImagenPlayer = sequelize.define(alias, cols, config);

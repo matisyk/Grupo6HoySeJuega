@@ -71,7 +71,6 @@ const controller = {
 		}
 
 		//create
-
 		UserPlayer
 			.create({
 				nombre: req.body.nombre,
@@ -81,23 +80,24 @@ const controller = {
 				fecha_nacimiento: req.body.edad,
 				zonas_de_juego_id: 1,
 
-			}).then(() => {
-				
+			})
+			.then((result) => {
+				const idPlayer = result.id
+				Telefono.create({
+					telefono: req.body.telefono,
+					telefono2: req.body.telefono2,
+					users_players_id: idPlayer
+				})
+
+				db.ImagenPlayer.create({
+					foto: image,
+					users_players_id: idPlayer
+				})
+				db.HoraPlayer.create({
+					hora: req.body.hora1
+				})
 			})
 
-		Telefono.create({
-			telefono: req.body.telefono,
-			telefono2: req.body.telefono2,
-				users_players_id: 8
-			})
-
-			// db.ImagenPlayer.create({
-			// 	link: req.body.imagenJugador,
-			// 	user_players_id: req.body.user_players_id,
-			// })
-			// db.HoraPlayer.create({
-			// 	hora: req.body.hora1
-			// })
 			.then(() => {
 				return res.redirect("/userPlayer/loginPlayer");
 			})
