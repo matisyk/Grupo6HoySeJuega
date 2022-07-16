@@ -532,8 +532,7 @@ class BelongsToMany extends Association {
     };
 
     return this.get(sourceInstance, options).then(associatedObjects =>
-      _.differenceWith(instancePrimaryKeys, associatedObjects,
-        (a, b) => _.isEqual(a[this.targetKey], b[this.targetKey])).length === 0
+      _.differenceBy(instancePrimaryKeys, associatedObjects, this.targetKey).length === 0
     );
   }
 

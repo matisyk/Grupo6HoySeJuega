@@ -28,7 +28,9 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.DATEONLY(),
       allowNull: false
     },
-    zonas_de_juego_id: dataTypes.BIGINT(10)
+    zonas_de_juego_id: dataTypes.BIGINT(10),
+    auto_valoracion_id: dataTypes.BIGINT(10),
+    deportes_players_id: dataTypes.BIGINT(10)
   };
   let config = {
     tableName: 'users_players',

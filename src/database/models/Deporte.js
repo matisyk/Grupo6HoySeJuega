@@ -17,25 +17,26 @@ module.exports = (sequelize, dataTypes) => {
     }
   };
   let config = {
+    tableName: "deportes_players",
     timestamps: false
   }
   const Deporte = sequelize.define(alias, cols, config);
 
-  Deporte.associate = function (models) { 
+  // Deporte.associate = function (models) { 
 
-    Deporte.belongsToMany(models.UserPlayer, { 
-      as: "userPlayer",
-      through: 'deportes_users_player',
-      foreignKey: 'deportes_id',
-      otherKey: 'user_players_id',
-      timestamps: false
-    })
-    Deporte.belongsTo(models.Categoria, {
-      as: "categoria",
-      foreignKey: "deportes_id"
-    })
+  //   Deporte.belongsToMany(models.UserPlayer, { 
+  //     as: "userPlayer",
+  //     through: 'deportes_users_player',
+  //     foreignKey: 'deportes_id',
+  //     otherKey: 'user_players_id',
+  //     timestamps: false
+  //   })
+  //   Deporte.belongsTo(models.Categoria, {
+  //     as: "categoria",
+  //     foreignKey: "deportes_id"
+  //   })
 
-  }
+  // }
 
   return Deporte;
 

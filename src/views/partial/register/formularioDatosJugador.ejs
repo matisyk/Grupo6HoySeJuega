@@ -128,10 +128,10 @@
                 <label for="autoValoracion">Auto valoración:</label>
                 <br>
                 <select name="autoValoracion" id="autoValoracion" required>
-                  <option selected disabled value="-"> Elegir opción</option>
-                  <option value="Estrella">Estrella</option>
-                  <option value="Copadito">Copadito</option>
-                  <option value="Juego">Juego</option>
+                  <option value="" disabled selected > Elegir opción</option>
+                  <% valoraciones.forEach(valor => { %>
+                  <option value="<%= valor.id %>"><%= valor.tipo %></option>
+                  <% }); %>
                 </select>
               </div>
               <br>
@@ -153,9 +153,10 @@
                 <label for="deporte">Deporte que juego:</label>
                   <br>
                   <select id="deporte1" name="deporte1">
-                    <option value="">Elegir opción</option>
-                    <option value="Futbol">Futbol</option>
-                    <option value="">-</option>
+                   <option value="" disabled selected> Elegir opción</option>
+                   <% deportes.forEach(deporte => { %>
+                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                   <% }); %>
                   </select>
                   <select id="deporte2" name="deporte2">
                     <option value="">Elegir opción</option>

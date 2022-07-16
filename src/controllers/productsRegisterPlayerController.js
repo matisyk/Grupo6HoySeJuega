@@ -15,13 +15,20 @@ const {
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+// constantes de las bases de datos de sequelize modules
 
 const UserPlayer = db.UserPlayer;
-const Telefono = db.Telefono
+const Telefono = db.Telefono;
+const AutoValoracion = db.AutoValoracion;
+const DeportesPlayers = db.Deporte;
+const ImagenPlayer = db.ImagenPlayer;
+
+// APPIS
+
 
 const controller = {
 
-	// Detail - Detail from one product
+	// Detail - Detalle de un producto
 	detalle: (req, res) => {
 
 		let id = req.params.id
@@ -33,14 +40,24 @@ const controller = {
 
 	},
 
-	// Create - Form to create
+	// Create - Formulario de creacion 
 	create: (req, res) => {
 
-		res.render("partial/register/formularioDatosJugador")
+		let valoraciones = AutoValoracion.findAll();
+		let deportes = DeportesPlayers.findAll();
+
+		Promise
+			.all([valoraciones, deportes])
+			.then(([valoraciones, deportes]) => {
+
+				res.render("partial/register/formularioDatosJugador", {
+					valoraciones, deportes
+				})
+			})
 	},
 
 
-	// Create -  Method to store
+	// Create -  Metodo de creacion 
 	store: (req, res) => {
 
 		const resultValidation = validationResult(req);
@@ -79,6 +96,8 @@ const controller = {
 				password: bcryptjs.hashSync(req.body.password, 10),
 				fecha_nacimiento: req.body.edad,
 				zonas_de_juego_id: 1,
+				auto_valoracion_id: req.body.autoValoracion,
+				deportes_players_id: req.body.deporte1
 
 			})
 			.then((result) => {
@@ -89,7 +108,7 @@ const controller = {
 					users_players_id: idPlayer
 				})
 
-				db.ImagenPlayer.create({
+				ImagenPlayer.create({
 					foto: image,
 					users_players_id: idPlayer
 				})
