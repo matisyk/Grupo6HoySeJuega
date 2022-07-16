@@ -6,7 +6,7 @@ module.exports = {
     fetch("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre")
       .then(response => response.json())
       .then(geoubicacion => {
-      return res.json(geoubicacion);
+      return res.render(geoubicacion);
     })
 }
 

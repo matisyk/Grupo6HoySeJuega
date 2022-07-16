@@ -15,8 +15,21 @@ const {
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-// constantes de las bases de datos de sequelize modules
+const fetch = require('node-fetch');
 
+module.exports = {
+
+	list: async (req, res) => {
+		fetch("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre")
+			.then(response => response.json())
+			.then(geoubicacion => {
+				return res.render(geoubicacion);
+			})
+	}
+
+}
+
+// constantes de las bases de datos de sequelize modules
 const UserPlayer = db.UserPlayer;
 const Telefono = db.Telefono;
 const AutoValoracion = db.AutoValoracion;
