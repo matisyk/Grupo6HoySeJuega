@@ -169,5 +169,27 @@
   "hora6": "",
   "hora7": "",
   "image": "imagenJugador-1657064030821-962734972.jpg"
+ },
+ {
+  "id": 6,
+  "nombre": "Fernando",
+  "apellido": "gareca",
+  "email": "fergareca@gmail.com",
+  "password": "$2a$10$0l06ghAA8J0kIjatRzNaiOsqGHPTt1fHNOtkjXdWUdD1z7bDtYCcC",
+  "telefono": "26159955",
+  "telefono2": "1111",
+  "edad": "1993-10-31",
+  "categoria": "arquero",
+  "autoValoracion": "2",
+  "deporte1": "1",
+  "deporte2": "1",
+  "zonasdejuego": "2",
+  "dia1": "Martes",
+  "dia2": "Martes",
+  "dia3": "lunes",
+  "hora1": "17:00",
+  "hora2": "17:00",
+  "hora3": "17:00",
+  "image": "imagenJugador-1658074617826-60677115.jpg"
  }
 ]

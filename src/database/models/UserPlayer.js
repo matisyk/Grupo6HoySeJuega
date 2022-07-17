@@ -50,7 +50,7 @@ module.exports = (sequelize, dataTypes) => {
   //     otherKey: 'deportes_id',
   //     timestamps: false
   //   })
-    UserPlayer.hasMany(models.Telefono, {
+    UserPlayer.hasMany(models.TelefonoPlayer, {
       as: "telefono",
      foreignKey: "user_players_id"
    })

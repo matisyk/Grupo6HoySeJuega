@@ -129,8 +129,8 @@
                 <br>
                 <select name="autoValoracion" id="autoValoracion" required>
                   <option value="" disabled selected > Elegir opción</option>
-                  <% valoraciones.forEach(valor => { %>
-                  <option value="<%= valor.id %>"><%= valor.tipo %></option>
+                  <%valoraciones.forEach(valoraciones => { %>
+                  <option value="<%=valoraciones.id%>"><%=valoraciones.tipo%></option>
                   <% }); %>
                 </select>
               </div>

@@ -18,7 +18,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 // constantes de las bases de datos de sequelize modules
 const UserPlayer = db.UserPlayer;
-const Telefono = db.Telefono;
+const TelefonoPlayer = db.TelefonoPlayer;
 const AutoValoracion = db.AutoValoracion;
 const DeportesPlayers = db.Deporte;
 const ImagenPlayer = db.ImagenPlayer;
@@ -117,7 +117,7 @@ const controller = {
 			})
 			.then((result) => {
 				const idPlayer = result.id
-				Telefono.create({
+				TelefonoPlayer.create({
 					telefono: req.body.telefono,
 					telefono2: req.body.telefono2,
 					users_players_id: idPlayer
@@ -138,16 +138,17 @@ const controller = {
 				return res.redirect("/userPlayer/loginPlayer");
 			})
 			.catch(error => res.send(error))
-		// let newProduct = {
-		// 	id: products[products.length - 1].id + 1,
-		// 	...req.body,
-		// 	image: image,
-		// 	password: bcryptjs.hashSync(req.body.password, 10)
-		// }
+		
+		let newProduct = {
+		 	id: products[products.length - 1].id + 1,
+			...req.body,
+			image: image,
+			password: bcryptjs.hashSync(req.body.password, 10)
+		 }
 
-		// products.push(newProduct);
+		 products.push(newProduct);
 
-		//fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 
 	},
 
