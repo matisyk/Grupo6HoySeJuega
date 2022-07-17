@@ -79,7 +79,10 @@ const controller = {
 		if (resultValidation.errors.length > 0) {
 			return res.render("partial/register/formularioDatosJugador", {
 				errors: resultValidation.mapped(),
-				oldData: req.body
+				oldData: req.body,
+				valoraciones,
+				deportes,
+				zonasdejuego
 			});
 		}
 		let image;
@@ -89,19 +92,47 @@ const controller = {
 			image = "imagenJugador-1654556031834-517220025.jpeg";
 		}
 
-		let userInDB = User.findByField('email', req.body.email);
-		if (userInDB) {
-			return res.render("partial/register/formularioDatosJugador", {
-				errors: {
-					email: {
-						msg: 'Este mail ya está registrado, intenta con otro'
-					}
-				},
-				oldData: req.body
-			});
+		// let userInDB = User.findByField('email', req.body.email);
+		// if (userInDB) {
+		// 	return res.render("partial/register/formularioDatosJugador", {
+		// 		errors: {
+		// 			email: {
+		// 				msg: 'Este mail ya está registrado, intenta con otro'
+		// 			}
+		// 		},
+		// 		oldData: req.body,
+		// 		valoraciones,
+		// 		deportes,
+		// 		zonasdejuego
+		// 	});
 
-		}
+		// }
 
+		UserPlayer.findAll({
+			where: {
+				email: req.body.email
+			}
+		}).then(userInDB => {
+
+			if (userInDB && userInDB.Email === req.body.email) {
+				console.log("🚀 ~ file: productsRegisterPlayerController.js ~ line 118 ~ req.body.email", req.body.email)
+				console.log("🚀 ~ file: productsRegisterPlayerController.js ~ line 118 ~ userInDB.Email", userInDB.Email)
+				console.log("🚀 ~ file: productsRegisterPlayerController.js ~ line 118 ~ userInDB", userInDB)
+
+				return res.render("partial/register/formularioDatosJugador", {
+					errors: {
+						email: {
+							msg: 'Este mail ya está registrado, intenta con otro'
+						}
+					},
+					oldData: req.body,
+					valoraciones,
+					deportes,
+					zonasdejuego
+				});
+			}
+		})
+		
 		//create
 		UserPlayer
 			.create({
@@ -138,15 +169,15 @@ const controller = {
 				return res.redirect("/userPlayer/loginPlayer");
 			})
 			.catch(error => res.send(error))
-		
+
 		let newProduct = {
-		 	id: products[products.length - 1].id + 1,
+			id: products[products.length - 1].id + 1,
 			...req.body,
 			image: image,
 			password: bcryptjs.hashSync(req.body.password, 10)
-		 }
+		}
 
-		 products.push(newProduct);
+		products.push(newProduct);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 

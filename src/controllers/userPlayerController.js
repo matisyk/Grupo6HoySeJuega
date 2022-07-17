@@ -6,9 +6,8 @@ const bcryptjs = require('bcryptjs');
 const userPlayer = require('../models/UserPlayer')
 
 // DATABA BASE JUGADOR
-const PlayerFilePath = path.join(__dirname, '../database/userPlayer.json');
-const players = JSON.parse(fs.readFileSync(PlayerFilePath, 'utf-8'));
-
+const db = require('../database/models')
+let UserPlayer = db.UserPlayer
 
 const userPlayerController = {
 
@@ -17,40 +16,49 @@ const userPlayerController = {
   },
   processLoginPlayer: (req, res) => {
 
-    let userPlayerToLogin = userPlayer.findByField('email', req.body.email)
+    // let userPlayerToLogin = userPlayer.findByField('email', req.body.email)
 
-    if (userPlayerToLogin) {
-      let isOkPassword = bcryptjs.compareSync(req.body.password, userPlayerToLogin.password);
-      if (isOkPassword) {
+    UserPlayer.findOne({
+      where: {
+        email: req.body.email
+      }
+    }).then((userPlayerToLogin) => {
 
-        delete userPlayerToLogin.password;
-        req.session.userLoggedPlayer = userPlayerToLogin
+      if (userPlayerToLogin) {
+        let isOkPassword = bcryptjs.compareSync(req.body.password, userPlayerToLogin.password);
+        console.log("🚀 ~ file: userPlayerController.js ~ line 32 ~ userPlayerToLogin", userPlayerToLogin.password)
+        if (isOkPassword) {
+          console.log("🚀 ~ file: userPlayerController.js ~ line 34 ~ isOkPassword", isOkPassword)
 
-if (req.body.recordarPlayer) {
-  res.cookie('userPlayerEmail', req.body.email, {
-    maxAge: (1000 * 60) * 60
-  })
-}
+          delete userPlayerToLogin.password;
+          req.session.userLoggedPlayer = userPlayerToLogin
 
-        return res.redirect("/register/userPlayer/welcome")
+          if (req.body.recordarPlayer) {
+            res.cookie('userPlayerEmail', req.body.email, {
+              maxAge: (1000 * 60) * 60
+            })
+          }
+
+          return res.redirect("/register/userPlayer/welcome")
+        }
+
+        return res.render('partial/login/loginPlayer', {
+          errors: {
+            password: {
+              msg: 'Error en tu contraseña'
+            }
+          }
+        });
       }
 
       return res.render('partial/login/loginPlayer', {
         errors: {
-          password: {
-            msg: 'Error en tu contraseña'
+          email: {
+            msg: 'No se encuentra registrado este mail'
           }
         }
       });
-    }
-
-    return res.render('partial/login/loginPlayer', {
-      errors: {
-        email: {
-          msg: 'No se encuentra registrado este mail'
-        }
-      }
-    });
+    })
 
   },
   logout: (req, res) => {
