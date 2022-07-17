@@ -129,7 +129,7 @@ const controller = {
 				});
 			}
 		})
-		
+
 		//create
 		UserPlayer
 			.create({
@@ -183,7 +183,7 @@ const controller = {
 	// Redirect
 	redirect: (req, res) => {
 
-		
+
 		res.render("partial/register/redireccion2", {
 			userLoggedPlayer: req.session.userLoggedPlayer
 		});
@@ -193,12 +193,23 @@ const controller = {
 	// Update - Form to edit
 	edit: (req, res) => {
 
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-
-		res.render("partial/register/editPlayerForm", {
-			product
-		})
+		let userPlayerID = req.params.id
+		let userPlayer = UserPlayer.findByPk(userPlayerID)
+		let valoraciones = AutoValoracion.findAll();
+		let deportes = DeportesPlayers.findAll();
+		let zonasdejuego = ZonasDeJuego.findAll();
+		let dias = DiaPlayer.findAll()
+		Promise
+			.all([userPlayer, userPlayerID, valoraciones, deportes, zonasdejuego])
+			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego]) => {
+				res.render("partial/register/editPlayerForm", {
+					userplayer,
+					userPlayerID,
+					valoraciones,
+					deportes,
+					zonasdejuego
+				})
+			})
 
 	},
 	// Update - Method to update

@@ -6,11 +6,11 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Editar <%- product.nombre %> <%- product.apellido %> </title>
+  <title>Editar perfil de:<%- userplayer.nombre %> <%- userplayer.apellido %> </title>
 
   <!--=====================================
-	PLUGINS DE CSS
-	======================================-->
+  PLUGINS DE CSS
+  ======================================-->
 
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -24,105 +24,148 @@
 </head>
 
 <body>
-  <h1>Modificar datos personales</h1>
-    <div class="formulario-div">
-    <form class="div1" action="/register/editPlayerForm/<%=product.id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <div class="input-group">
-          <div>
-            <label for="nombre">Nombre: </label>
-            <input type="text" class="form-control" id="nombre" name="nombre" value="<%= product.nombre %>">
-          </div>
-          <div class="entre-divs">
-            <label for="apellido">Apellido:</label>
-            <input type="text" class="form-control" id="apellido" name="apellido" value="<%= product.apellido %>">
-          </div>
-          <div class="entre-divs">
-            <label for="edad">Edad:</label>
-            <input type="number" class="form-control" id="edad" name="edad" value="<%= product.edad%>">
-          </div>
-          <div class="entre-divs2">
-            <label for="telefono">Teléfono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono" value="<%= product.telefono%>">
-          </div>
-          <div class="entre-divs3">
-            <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="telefono2" value="<%= product.telefono2%>">
-          </div>
-          <div class="entre-divs3">
-            <label for="categoria">Posición:</label>
-            <input type="text" class="form-control" id="categoria" name="categoria"
-              value="<%= product.categoria%>">
-          </div>
-          <div class="entre-divs4">
-            <label for="autoValoracion">Auto valoración:</label>
-            <br>
-            <select name="autovaloracion" id="autoValoracion" name="autoValoracion">
-              <option value="<%= product.autoValoracion %>"> <%- product.autoValoracion %></option>
-              <option value="Estrella">Estrella</option>
-              <option value="Copadito">Copadito</option>
-              <option value="Juego">Juego</option>
-            </select>
-          </div>
-          <div class="entre-divs4">
-            <label for="Ubicacion">Ubicación:</label>
-            <br>
-            <select name="ubicacion" id="ubicacion" required>
-              <option value="<%= product.ubicacion %>"> <%- product.ubicacion %></option>
-              <option value="Estrella">Belgrano</option>
-              <option value="Copadito">Palermo</option>
-              <option value="Juego">Tigre</option>
-            </select>
-          </div>
-        </div>
+  <div class="contenedor-general">
+    <div class="contenedor-imagen">
+      <div class="logo">
+        <img src="/img/logo-fondo-transparente.png" alt="">
       </div>
+    </div>
 
-      <div class="form-group">
-        <div class="input-group">
-          <div class="entre-divs10">
-            <label for="deporte">Deporte que juego:</label>
-            <div>
-              <select id="deporte1" name="deporte1">
-                <option value="">Elegir opción</option>
-                <option value="Futbol">Futbol</option>
-                <option value="">-</option>
-              </select>
-              <select id="deporte2" name="deporte2">
-                <option value="">Elegir opción</option>
-                <option value="Padel">Padel</option>
-                <option value="">-</option>
-              </select>
-              <select id="deporte3" name="deporte3">
-                <option value="">Elegir opción</option>
-                <option value="Basquet">Basquet</option>
-                <option value="">-</option>
-              </select>
-              <select id="deporte4" name="deporte3">
-                <option value="">Elegir opción</option>
-                <option value="Tenis">Tenis</option>
-                <option value="">-</option>
-              </select>
+    <div class="formulario-div">
+      <form class="div1" action="/register/editPlayerForm/<%=userLoggedPlayer.id%>?_method=PATCH" method="POST"
+        enctype="multipart/form-data">
+        <h1>Modificación de datos personales</h1>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="horizontal">
+              <div class="entre-divs">
+                <label for="nombre">Nombre: </label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="<%= userplayer.nombre%>">
+              </div>
+              <br>
+              <div class="entre-divs">
+                <label for="apellido">Apellido:</label>
+                <input type="text" class="form-control" id="apellido" name="apellido"
+                  value="<%= userplayer.apellido %>">
+              </div>
             </div>
-          </div>
-          <br>
-          <br>
-          <br>
-          <br>
-          <br>
-          <div class="entre-divs">
-            <label for="zonaDeJuego">Zona de juego:</label>
-            <input type="text" class="form-control" id="zonaDeJuego" name="zonaDeJuego">
-          </div>
-        </div>
-      </div>
-      <div class="form-group">
-        <div class="input-group">
-          <div>
-            <div class="entre-divs6">
-              <div class="entre-divs5">
+            <br>
+
+            <div class="horizontal">
+              <div class="entre-divs">
+                <label for="email">Mail: </label>
+                <input id="email" class="form-control" name="email" type="email" value="<%= userplayer.email %>">
+              </div>
+              <br>
+              <div class="entre-divs">
+                <label for="contraseña">Contraseña: </label>
+                <input id="pwd" name="password" class="form-control" <%= userplayer.password %> type="password">
+              </div>
+            </div>
+            <br>
+
+            <div class="horizontal">
+              <div class="entre-divs">
+                <label for="telefono">Telefono:</label>
+                <input type="number" class="form-control" id="telefono" name="telefono"
+                  value="<%= userplayer.telefono %>">
+              </div>
+              <br>
+              <div class="entre-divs">
+                <label for="telefono2">Contacto de emergencia:</label>
+                <input type="number" class="form-control" id="telefono2" name="telefono2"
+                  value="<%= userplayer.telefono %>">
+              </div>
+            </div>
+            <br>
+
+            <div class="horizontal">
+              <div class="entre-divs">
+                <label for="edad">Fecha de Nacimiento:</label>
+                <input type="date" class="form-control" id="edad" name="edad"
+                  value="<%= userplayer.fecha_nacimiento %>">
+                <% if (locals.errors && errors.edad) { %>
+                <div class="text-danger msg">
+                  <%= errors.edad.msg %>
+                </div>
+                <% } %>
+              </div>
+              <br>
+              <div class="entre-divs">
+                <label for="categoria">Posición:</label>
+                <input type="text" class="form-control <%= locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                  id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
+                <% if (locals.errors && errors.categoria) { %>
+                <div class="text-danger msg">
+                  <%= errors.categoria.msg %>
+                </div>
+                <% } %>
+              </div>
+            </div>
+            <br>
+
+            <div class="horizontal">
+              <div class="entre-divs">
+                <label for="autoValoracion">Auto valoración:</label>
+                <br>
+                <select name="autoValoracion" id="autoValoracion" >
+                  <option value="" disabled selected> Elegir opción</option>
+                  <%valoraciones.forEach(valoraciones => { %>
+                  <option value="<%=valoraciones.id%>"><%=valoraciones.tipo%></option>
+                  <% }); %>
+                </select>
+              </div>
+              <br>
+              <!-- <div class="entre-divs">
+                <label for="Ubicacion">Ubicación:</label>
+                <br>
+                <select name="ubicacion" id="ubicacion" >
+                  <option value="" disabled selected> Elegir opción</option>
+                  
+                  foreach va aca de api
+
+                </select>
+              </div> -->
+            </div>
+            <br>
+
+            <div class="horizontal">
+              <div class="entre-divs">
+                <label for="deporte">Deporte que juego:</label>
+                <br>
+                <select id="deporte1" name="deporte1" >
+                  <option value="" disabled selected> Elegir</option>
+                  <% deportes.forEach(deporte => { %>
+                  <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                  <% }); %>
+                </select>
+                <br>
+                <br>
+                <select id="deporte2" name="deporte2">
+                  <option value="" disabled selected> Elegir</option>
+                  <% deportes.forEach(deporte => { %>
+                  <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                  <% }); %>
+                </select>
+              </div>
+              <div class="entre-divs">
+                <label for="zonaDeJuego">Zona de juego:</label>
+                <select id="zonaDeJuego" name="zonasdejuego">
+                  <option value="" disabled selected> Zona de juego:</option>
+                  <% zonasdejuego.forEach(zonasdejuego => { %>
+                  <option value="<%= zonasdejuego.id %>"><%= zonasdejuego.provincia %></option>
+                  <% }); %>
+                </select>
+
+              </div>
+            </div>
+            <br>
+
+            <div class="horizontal">
+              <div class="entre-divs">
                 <label for="dias">Dias para jugar:</label>
                 <div class="divDias2">
-                  <select id="dia1" name="dia1">
+                  <select id="dia1" name="dia1" >
                     <option value="">Elegir día</option>
                     <option value="lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -135,7 +178,7 @@
                   </select>
                 </div>
                 <div class="divDias">
-                  <select id="dia2" name="dia2">
+                  <select id="dia2" name="dia2" >
                     <option value="">Elegir día</option>
                     <option value="lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -148,59 +191,7 @@
                   </select>
                 </div>
                 <div class="divDias">
-                  <select id="dia3" name="dia3">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia4" name="dia4">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia5" name="dia5">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia6" name="dia6">
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia7" name="dia7">
+                  <select id="dia3" name="dia3" >
                     <option value="">Elegir día</option>
                     <option value="lunes">Lunes</option>
                     <option value="Martes">Martes</option>
@@ -213,52 +204,50 @@
                   </select>
                 </div>
               </div>
-              <div class="entre-divs7">
+
+              <div class="entre-divs">
                 <label for="horarios">Horarios para jugar:</label>
-                <input type="time" class="form-control" id="horarios" name="hora1">
-                <input type="time" class="form-control" id="horarios" name="hora2">
-                <input type="time" class="form-control" id="horarios" name="hora3">
-                <input type="time" class="form-control" id="horarios" name="hora4">
-                <input type="time" class="form-control" id="horarios" name="hora5">
-                <input type="time" class="form-control" id="horarios" name="hora6">
-                <input type="time" class="form-control" id="horarios" name="hora7">
-              </div>
-              <div class="entre-divs8">
-                <label for="image" class="form-label">
-                  <figure>
-                    <img class="fotoPerfil" src="/img/jugadores/<%= product.image %>" alt="imagen de producto">
-                  </figure>
-                </label>
-                <input type="file" name="image" class="form-input" style="padding: 10px 0 10px 10px; width: 100%;">
+                <input type="time" class="form-control" id="horarios" name="hora1" >
+                <input type="time" class="form-control" id="horarios" name="hora2" >
+                <input type="time" class="form-control" id="horarios" name="hora3" >
               </div>
             </div>
-          </div> 
-    <div class="entre-divs9">
-      <a href="/product/perfilDeJugador/">
-        <button>
-          <div class="svg-wrapper-1">
-            <div class="svg-wrapper">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path
-                  d="M177.1 228.6L207.9 320h96.5l29.62-91.38L256 172.1L177.1 228.6zM255.1 0C114.6 0 .0001 114.6 .0001 256S114.6 512 256 512s255.1-114.6 255.1-255.1S397.4 0 255.1 0zM416.6 360.9l-85.4-1.297l-25.15 81.59C290.1 445.5 273.4 448 256 448s-34.09-2.523-50.09-6.859L180.8 359.6l-85.4 1.297c-18.12-27.66-29.15-60.27-30.88-95.31L134.3 216.4L106.6 135.6c21.16-26.21 49.09-46.61 81.06-58.84L256 128l68.29-51.22c31.98 12.23 59.9 32.64 81.06 58.84L377.7 216.4l69.78 49.1C445.8 300.6 434.8 333.2 416.6 360.9z" />
-              </svg>
+
+            <div class="entre-divs8">
+              <label for="">Cargar imagen de perfil:</label>
+              <input type="file" name="imagenJugador" accept=".jpg" multiple class="form-input">
             </div>
           </div>
-          <span>DALE...</span>
-        </button>
-      </a>
+
+          <div class="entre-divs9">
+            <div class="horizontal">
+              <a href="/register/registerPlayer/">
+                <button>
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          d="M177.1 228.6L207.9 320h96.5l29.62-91.38L256 172.1L177.1 228.6zM255.1 0C114.6 0 .0001 114.6 .0001 256S114.6 512 256 512s255.1-114.6 255.1-255.1S397.4 0 255.1 0zM416.6 360.9l-85.4-1.297l-25.15 81.59C290.1 445.5 273.4 448 256 448s-34.09-2.523-50.09-6.859L180.8 359.6l-85.4 1.297c-18.12-27.66-29.15-60.27-30.88-95.31L134.3 216.4L106.6 135.6c21.16-26.21 49.09-46.61 81.06-58.84L256 128l68.29-51.22c31.98 12.23 59.9 32.64 81.06 58.84L377.7 216.4l69.78 49.1C445.8 300.6 434.8 333.2 416.6 360.9z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <span>DALE...</span>
+                </button>
+              </a>
+              <!-- <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div> -->
+              <div>
+                <button class="volver">
+                  <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>">Volver</a>
+                </button>
+              </div>
+              <div>
+              </div>
+
+            </div>
+      </form>
     </div>
-    </div>
-    <!-- <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div> -->
-    </div>
-    </form>
-    </div>
-    <br>
-    <div>
-      <a href="/product/perfilDeJugador/1">
-        <button5 class="volver">Volver</button5>
-      </a>
-    </div>
-  
+  </div>
 </body>
+
+</html>
