@@ -7,7 +7,15 @@ const userPlayer = require('../models/UserPlayer')
 
 // DATABA BASE JUGADOR
 const db = require('../database/models')
-let UserPlayer = db.UserPlayer
+// constantes de las bases de datos de sequelize modules
+const UserPlayer = db.UserPlayer;
+const TelefonoPlayer = db.TelefonoPlayer;
+const AutoValoracion = db.AutoValoracion;
+const DeportesPlayers = db.Deporte;
+const ImagenPlayer = db.ImagenPlayer;
+const HoraPlayer = db.HoraPlayer;
+const DiaPlayer = db.DiaPlayer;
+const ZonasDeJuego = db.ZonaDeJuego
 
 const userPlayerController = {
 
@@ -26,9 +34,9 @@ const userPlayerController = {
 
       if (userPlayerToLogin) {
         let isOkPassword = bcryptjs.compareSync(req.body.password, userPlayerToLogin.password);
-        console.log("🚀 ~ file: userPlayerController.js ~ line 32 ~ userPlayerToLogin", userPlayerToLogin.password)
+  
         if (isOkPassword) {
-          console.log("🚀 ~ file: userPlayerController.js ~ line 34 ~ isOkPassword", isOkPassword)
+          
 
           delete userPlayerToLogin.password;
           req.session.userLoggedPlayer = userPlayerToLogin
@@ -74,11 +82,17 @@ const userPlayerController = {
 
   perfilDeJugador: (req, res) => {
 
-    let id = req.params.id
-    let userPlayer = players.find(userPlayer => userPlayer.id == id)
-    res.render("partial/userPlayer/perfilDeJugador", {
-      userPlayer
-    })
+    let userPlayerID = req.params.id
+    let userPlayer = UserPlayer.findByPk(userPlayerID)  
+    Promise
+        .all([userPlayer, userPlayerID])
+      .then(([userplayer, userPlayerID]) => {
+        res.render("partial/userPlayer/perfilDeJugador", {
+          userplayer,
+          userPlayerID
+        })
+      })
+
   },
 
   carrito: (req, res) => {
