@@ -40,18 +40,22 @@ module.exports = (sequelize, dataTypes) => {
   
      UserOwner.associate = function (models) {
   
-    //   UserOwner.belongsTo(models.DetalleLugarOwners, {
-    //     as: "detalleLugar",
-    //     foreignKey: 'user_owners_id',
-    //   })
+     UserOwner.belongsTo(models.DetalleLugarOwners, {
+       as: "detalleLugar",
+       foreignKey: 'user_owners_id',
+     })
+     UserOwner.belongsTo(models.MedioDePago, {
+        as: "medioDePago",
+        foreignKey: 'user_owners_id',
+      })
       UserOwner.hasMany(models.TelefonoOwner, {
         as: "telefono",
        foreignKey: "user_players_id"
      })
-    //   UserOwner.belongsTo(models.ImagenPlayer, {
-    //     as: "imagenPlayer",
-    //     foreignKey: "user_players_id"
-    //   })
+      UserOwner.hasMany(models.ImagenOwner, {
+        as: "imagenOwner",
+        foreignKey: "user_owners_id"
+     })
     //   UserOwner.belongsToMany(models.DiaPlayer, models.HoraPlayer, {
     //     as: "dia_hora",
     //     through: 'dias_horarios_users_players',
