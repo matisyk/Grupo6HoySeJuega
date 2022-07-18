@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'medioDePago';
+    let alias = 'MedioDePago';
     let cols = {
       id: {
         type: dataTypes.INTEGER,
@@ -30,16 +30,16 @@ module.exports = (sequelize, dataTypes) => {
       tableName: 'medios_de_pago',
       timestamps: false
     }
-    const medioDePago = sequelize.define(alias, cols, config);
+    const MedioDePago = sequelize.define(alias, cols, config);
   
-    medioDePago.associate = function (models) {
+    MedioDePago.associate = function (models) {
   
-        medioDePago.belongsTo(models.UserOwner, {
+        MedioDePago.belongsTo(models.UserOwner, {
          as: "userOwner",
          foreignKey: "users_owners_id"
         })
     }
   
-    return medioDePago;
+    return MedioDePago;
   
   }

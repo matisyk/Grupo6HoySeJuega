@@ -48,6 +48,10 @@ module.exports = (sequelize, dataTypes) => {
         as: "medioDePago",
         foreignKey: 'user_owners_id',
       })
+      UserOwner.belongsTo(models.Ubicacion, {
+        as: "ubicacion",
+        foreignKey: 'user_owners_id',
+      })
       UserOwner.hasMany(models.TelefonoOwner, {
         as: "telefono",
        foreignKey: "user_players_id"
