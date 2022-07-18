@@ -58,20 +58,17 @@ module.exports = (sequelize, dataTypes) => {
       })
       UserOwner.hasMany(models.TelefonoOwner, {
         as: "telefono",
-       foreignKey: "user_players_id"
+       foreignKey: "user_owners_id"
      })
+     UserOwner.hasMany(models.Cancha, {
+      as: "cancha",
+     foreignKey: "user_owners_id"
+   })
       UserOwner.hasMany(models.ImagenOwner, {
         as: "imagenOwner",
         foreignKey: "user_owners_id"
      })
-    //   UserOwner.belongsToMany(models.DiaPlayer, models.HoraPlayer, {
-    //     as: "dia_hora",
-    //     through: 'dias_horarios_users_players',
-    //     foreignKey: 'user_players_id',
-    //     otherKey: 'dias_players_id',
-    //     otherKey: 'horas_players_id',
-    //     timestamps: false
-    //   })
+    
     }
   
   
