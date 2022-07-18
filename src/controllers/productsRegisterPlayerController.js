@@ -215,40 +215,47 @@ const controller = {
 	// Update - Method to update
 	update: (req, res) => {
 
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
+		let userPlayerID = req.params.id
+		let userPlayer = UserPlayer.findByPk(userPlayerID)
+
+		UserPlayer
+			.update({
+				nombre: req.body.nombre,
+				apellido: req.body.apellido,
+				email: req.body.email,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				fecha_nacimiento: req.body.edad,
+				zonas_de_juego_id: req.body.zonasdejuego,
+				auto_valoracion_id: req.body.autoValoracion,
+				deportes_players_id: req.body.deporte1
+
+			})
+			.then((result) => {
+				const idPlayer = result.id
+				TelefonoPlayer.update({
+					telefono: req.body.telefono,
+					telefono2: req.body.telefono2,
+					users_players_id: idPlayer
+				})
+
+				ImagenPlayer.update({
+					foto: image,
+					users_players_id: idPlayer
+				})
+				HoraPlayer.update({
+					hora: req.body.hora1,
+					hora2: req.body.hora2,
+					hora3: req.body.hora3
+				})
+			})
+
+			.then(() => {
+				res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer)
+			})
+			.catch(error => res.send(error))
 
 
-		let image
-		if (req.files[0] != undefined) {
-			image = req.files[0].filename
-		} else {
-			image = productToEdit.image
-		}
-
-
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-
-		let newProduct = products.map(product => {
-
-			if (product.id == productToEdit.id) {
-
-				return product = {
-					...productToEdit
-				};
-			}
-
-			return product
-		})
-
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-
-		res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer)
+		
 
 	},
 
