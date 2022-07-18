@@ -40,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
   
      UserOwner.associate = function (models) {
   
-     UserOwner.belongsTo(models.DetalleLugarOwners, {
+     UserOwner.belongsTo(models.DetalleLugarOwner, {
        as: "detalleLugar",
        foreignKey: 'user_owners_id',
      })
@@ -50,6 +50,10 @@ module.exports = (sequelize, dataTypes) => {
       })
       UserOwner.belongsTo(models.Ubicacion, {
         as: "ubicacion",
+        foreignKey: 'user_owners_id',
+      })
+      UserOwner.belongsTo(models.LogoOwner, {
+        as: "logoOwner",
         foreignKey: 'user_owners_id',
       })
       UserOwner.hasMany(models.TelefonoOwner, {

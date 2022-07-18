@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'DetalleLugarOwners';
+    let alias = 'DetalleLugarOwner';
     let cols = {
       id: {
         type: dataTypes.INTEGER,
@@ -49,16 +49,16 @@ module.exports = (sequelize, dataTypes) => {
       tableName: 'detalle_lugar_owners',
       timestamps: false
     }
-    const DetalleLugarOwners = sequelize.define(alias, cols, config);
+    const DetalleLugarOwner = sequelize.define(alias, cols, config);
   
-    DetalleLugarOwners.associate = function (models) {
+    DetalleLugarOwner.associate = function (models) {
   
-        DetalleLugarOwners.belongsTo(models.UserOwner, {
+        DetalleLugarOwner.belongsTo(models.UserOwner, {
          as: "userOwner",
          foreignKey: "users_owners_id"
         })
     }
   
-    return DetalleLugarOwners;
+    return DetalleLugarOwner;
   
   }
