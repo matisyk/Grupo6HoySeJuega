@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const ownersFilePath = path.join(__dirname, '../database/userOwner.json');
 const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
-
+const db = require('../database/models')
 
 // Login
 const bcryptjs = require('bcryptjs');
@@ -25,6 +25,17 @@ const torneoFilePath = path.join(__dirname, '../database/torneoDataBase.json');
 const torneos1 = JSON.parse(fs.readFileSync(torneoFilePath, 'utf-8'));
 
 const torneos = torneos1.filter(torneo => torneo.category == 'torneo');
+
+// constantes de las bases de datos de sequelize modules
+const UserOwner = db.UserOwner;
+const TelefonoOwner = db.TelefonoOwner;
+const MedioDePago = db.MedioDePago;
+const LogoOwner = db.LogoOwner;
+const ImagenOwner = db.ImagenOwner;
+const DetalleLugarOwner = db.DetalleLugarOwner;
+const Cancha = db.Cancha;
+const Ubicacion = db.Ubicacion
+
 
 const userOwnerController = {
 

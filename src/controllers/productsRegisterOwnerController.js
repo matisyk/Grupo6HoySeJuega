@@ -8,8 +8,22 @@ const bcryptjs = require('bcryptjs');
 
 const productsFilePath = path.join(__dirname, '../database/userOwner.json');
 const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
+const db = require('../database/models');
+const {
+	Console
+} = require('console');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+
+// constantes de las bases de datos de sequelize modules
+const UserOwner = db.UserOwner;
+const TelefonoOwner = db.TelefonoOwner;
+const MedioDePago = db.MedioDePago;
+const LogoOwner = db.LogoOwner;
+const ImagenOwner = db.ImagenOwner;
+const DetalleLugarOwner = db.DetalleLugarOwner;
+const Cancha = db.Cancha;
+const Ubicacion = db.Ubicacion
+
 
 const controller = {
 
@@ -30,13 +44,36 @@ const controller = {
 
 	},
 
-	// Create - Form to create
+	//Create - Form to create
 	create: (req, res) => {
 
-		res.render("partial/register/formularioDatosCancha");
+		let userOwner = UserOwner.findAll();
+		let telefonoOwner = TelefonoOwner.findAll();
+		let medioDePago = MedioDePago.findAll();
+		let logoOwner = LogoOwner.findAll();
+		let imagenOwner = ImagenOwner.findAll();
+		let detalleLugarOwner = DetalleLugarOwner.findAll();
+		let cancha = Cancha.findAll();
+		let ubicacion = Ubicacion.findAll();
 
+		Promise
+			.all([userOwner, telefonoOwner, medioDePago, logoOwner, imagenOwner, detalleLugarOwner, cancha, ubicacion])
+			.then(([userOwner, telefonoOwner, medioDePago, logoOwner, imagenOwner, detalleLugarOwner, cancha, ubicacion]) => {
+
+				res.render("partial/register/formularioDatosCancha", {
+					userOwner, 
+					telefonoOwner, 
+					medioDePago, 
+					logoOwner, 
+					imagenOwner, 
+					detalleLugarOwner, 
+					cancha, 
+					ubicacion
+				})
+			})
 	},
 
+	
 	// Create -  Method to store
 	store: (req, res) => {
 
@@ -61,37 +98,89 @@ const controller = {
 			logo = "imagenCancha-1654372985364-494608673.jpg";
 		}
 
-		let userInDB = User.findByField('email', req.body.email);
-		if (userInDB) {
-			return res.render("partial/register/formularioDatosCancha", {
-				errors: {
-					email: {
-						msg: 'Este mail ya está registrado, intenta con otro'
-					}
-				},
-				oldData: req.body
-			});
-		}
+		// let userInDB = User.findByField('email', req.body.email);
+		// if (userInDB) {
+		// 	return res.render("partial/register/formularioDatosCancha", {
+		// 		errors: {
+		// 			email: {
+		// 				msg: 'Este mail ya está registrado, intenta con otro'
+		// 			}
+		// 		},
+		// 		oldData: req.body
+		// 	});
+		// }
 
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body,
-			image: image,
-			image2: image2,
-			image3: image3,
-			logo: logo,
-			password: bcryptjs.hashSync(req.body.password, 10)
-		}
+		UserOwner.findAll({
+			where: {
+				email: req.body.email
+			}
+		}).then(userInDB => {
+	
+			if (userInDB && userInDB.Email === req.body.email) {
+	
+				return res.render("partial/register/formularioDatosCancha", {
+					errors: {
+						email: {
+							msg: 'Este mail ya está registrado, intenta con otro'
+						}
+					},
+					oldData: req.body,
+					valoraciones,
+					deportes,
+					zonasdejuego
+				});
+			}
+		})
 
-		products.push(newProduct);
+		UserOwner
+		.create({
+			nombre: req.body.nombre,
+			apellido: req.body.apellido,
+			email: req.body.email,
+			password: bcryptjs.hashSync(req.body.password, 10),
+			nombre_del_lugar: req.body.nombreDelLugar,
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+		})
+		.then((result) => {
+			const idOwner = result.id
+			TelefonoOwner.create({
+				telefono: req.body.telefono,
+				telefono2: req.body.telefono2,
+				users_owners_id: idOwner
+			})
 
-		res.redirect("/userOwner/loginCourt/");
+			ImagenOwner.create({
+				foto: image,
+				users_owners_id: idOwner
+			})
+		})
 
-
-
+		.then(() => {
+			return res.redirect("/userPlayer/loginPlayer");
+		})
+		.catch(error => res.send(error))
 	},
+
+
+		//let newProduct = {
+		//	id: products[products.length - 1].id + 1,
+		//	...req.body,
+		//	image: image,
+		//	image2: image2,
+		//	image3: image3,
+		//	logo: logo,
+		//	password: bcryptjs.hashSync(req.body.password, 10)
+		//}
+
+		// products.push(newProduct);
+
+		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+
+		//res.redirect("/userOwner/loginCourt/");
+
+
+
+	//},
 
 	// Redirect
 	redirect: (req, res) => {
