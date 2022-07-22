@@ -1,0 +1,31 @@
+module.exports = (sequelize, dataTypes) => {
+
+    let alias = 'ImagenOwner';
+    let cols = {
+      id: {
+        type: dataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true
+      },
+      foto: {
+        type: dataTypes.STRING(100),
+      },
+      users_owners_id: dataTypes.BIGINT(10)
+    };
+    let config = {
+      tableName: 'imagenes_owners',
+      timestamps: false
+    }
+    const ImagenOwner = sequelize.define(alias, cols, config);
+  
+    ImagenOwner.associate = function (models) {
+  
+      ImagenOwner.belongsTo(models.UserPlayer, {
+        as: "userOwner",
+        foreignKey: "user_owners_id"
+      })
+    }
+  
+    return ImagenOwner;
+  
+  }
