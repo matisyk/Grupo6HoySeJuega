@@ -125,8 +125,13 @@ if (userOwnerToLogin) {
   vistaCancha: (req, res) => {
     let userOwnerID = req.params.id
     let userOwner = UserOwner.findByPk(userOwnerID)
-  //  let canchas = Canchas.findAll()
-  // le mediosP = MedioDePago.findAll({where: {users_owners_id: "userOwnerID"}})
+    // let canchas = Cancha.findAll({where: {users_owners_id: "userOwnerID"}})
+    // // let mediosP = MedioDePago.findAll({where: {users_owners_id: "userOwnerID"}});
+    // UserOwner.findAll({
+    // include: [
+    //    { association: "detalleLugar"}
+    //  ]
+    // })
     Promise
     .all([userOwner, userOwnerID])
     .then(([userOwner, userOwnerID])=> {
@@ -135,7 +140,7 @@ if (userOwnerToLogin) {
       canchas,
       escuelitas,
       torneos,
-      //mediosP,
+    //  mediosP,
       userOwnerLogged: req.session.userOwnerLogged
     })
     })
