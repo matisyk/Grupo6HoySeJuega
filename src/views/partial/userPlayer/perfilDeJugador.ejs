@@ -78,8 +78,8 @@
                 <img src="/img/jugadores/<%- userLoggedPlayer.image %>">
                 <ol>
                   <li>
-                    <h2 class="nombre" name="nombre"> <%- userplayer.nombre %> <span
-                        class="nombre" name="apellido"><%- userplayer.apellido %></span>
+                    <h2 class="nombre" name="nombre"> <%- userLoggedPlayer.nombre %> <span
+                        class="nombre" name="apellido"><%- userLoggedPlayer.apellido %></span>
                     </h2>
                   </li>
                 </ol>
@@ -97,11 +97,11 @@
                   </li>
                   <li>
                     <h6 class="autoValoracion" name="autoValoracion">Auto Valoración: <span
-                        class="autoValoracion"><%- userplayer.auto_valoracion_id %></span></h6>
+                        class="autoValoracion"><%- userLoggedPlayer.auto_valoracion_id %></span></h6>
                   </li>
                   <li>
                     <h6 class="telem" name="zonaDeJuego">Posición: <span
-                        class="telem"><%- userplayer.categoria %></span></h6>
+                        class="telem"><%- userLoggedPlayer.categoria %></span></h6>
                   </li>
                   <button5 class="boton-editar-superior"><a
                       href='../../register/editPlayerForm/<%-userLoggedPlayer.id%>'><i

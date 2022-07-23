@@ -128,8 +128,9 @@ const controller = {
 					zonasdejuego
 				});
 			}
+		}).then(() => {
+			
 		})
-
 		//create
 		UserPlayer
 			.create({
@@ -166,6 +167,7 @@ const controller = {
 				return res.redirect("/userPlayer/loginPlayer");
 			})
 			.catch(error => res.send(error))
+
 
 		// let newProduct = {
 		// 	id: products[products.length - 1].id + 1,
