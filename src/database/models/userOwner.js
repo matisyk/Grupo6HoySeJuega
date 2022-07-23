@@ -38,12 +38,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const UserOwner = sequelize.define(alias, cols, config);
   
-  //    UserOwner.associate = function (models) {
+    //  UserOwner.associate = function (models) {
   
-  //    UserOwner.belongsTo(models.DetalleLugarOwner, {
-  //      as: "detalleLugar",
-  //      foreignKey: 'user_owners_id',
-  //    })
+    //  UserOwner.belongsTo(models.DetalleLugarOwner, {
+    //    as: "detalleLugar",
+    //    foreignKey: 'user_owners_id',
+    //  })
   //    UserOwner.belongsTo(models.MedioDePago, {
   //       as: "medioDePago",
   //       foreignKey: 'user_owners_id',
@@ -69,7 +69,7 @@ module.exports = (sequelize, dataTypes) => {
   //       foreignKey: "user_owners_id"
   //    })
     
-  //  }
+   //}
   
   
     return UserOwner;

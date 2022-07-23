@@ -29,13 +29,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Cancha = sequelize.define(alias, cols, config);
   
-    Cancha.associate = function (models) {
+    // Cancha.associate = function (models) {
   
-    Cancha.belongsTo(models.UserOwner, {
-      as: "userOwner",
-      foreignKey: "users_owners_id"
-    })
-    }
+    // Cancha.belongsTo(models.UserOwner, {
+    //   as: "userOwner",
+    //   foreignKey: "users_owners_id"
+    // })
+    // }
   
     return Cancha;
   

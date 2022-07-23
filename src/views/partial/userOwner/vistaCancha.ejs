@@ -58,6 +58,14 @@
           <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
           <% } %>
      </li>
+     <li>
+      <% if (typeof userOwner.image != "undefined") { %>
+        <img class="user-img" src="/img/products/<%= userOwner.image3 %>">
+        
+        <% } else {%>
+        <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
+        <% } %>
+   </li>
       </ul>
     </div>
 
@@ -260,7 +268,7 @@
           <ol>
             <li class="detalle">
               <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
-                <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.direccion %></span>
+                <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.ubicacion %></span>
               </a>
             </li>
             <li class="detalle">
@@ -269,11 +277,11 @@
             </li>
             <li class="detalle">
               <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.vestuarios%> </span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.vestuario%> </span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.duchas%> </span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.ducha%> </span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
@@ -282,6 +290,10 @@
             <li class="detalle">
               <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
                   class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quincho%></span>
+            </li>
+            <li class="detalle">
+              <i class="fa-solid fa-utensils"></i><span> Quiosco</span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quiosco%></span>
             </li>
           </ol>
         </div>
@@ -301,11 +313,11 @@
             </li>
             <li class="detalle">
               <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.mercadoPago%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.mercado_pago%></span>
             </li>
             <li class="detalle">
-              <span><i class="fa-solid fa-mobile-retro"></i> Modo </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.modo%></span>
+              <span><i class="fa-solid fa-mobile-retro"></i> Tarjeta </span><span> <i
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.tarjeta%></span>
             </li>
             <li class="detalle">
               <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
