@@ -34,7 +34,7 @@
         <% } %>
       </div>
 
-      <h2 class="nombre-del-lugar"><%= locals.userOwnerLogged.nombreDelLugar %></h2>
+      <h2 class="nombre-del-lugar"><%= userOwner.nombre_del_lugar %></h2>
       
     </div>
 
@@ -52,7 +52,7 @@
        </li>
        <li>
         <% if (typeof userOwner.image != "undefined") { %>
-          <img class="user-img" src="/img/products/<%= userOwner.image %>">
+          <img class="user-img" src="/img/products/<%= userOwner.image2 %>">
           
           <% } else {%>
           <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">

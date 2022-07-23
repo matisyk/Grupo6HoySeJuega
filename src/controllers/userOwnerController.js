@@ -123,15 +123,24 @@ if (userOwnerToLogin) {
   },
 
   vistaCancha: (req, res) => {
-    let id = req.params.id
-    let userOwner = owners.find(userOwner => userOwner.id == id)
-    res.render("partial/userOwner/vistaCancha", {
+    let userOwnerID = req.params.id
+    let userOwner = UserOwner.findByPk(userOwnerID)
+  //  let canchas = Canchas.findAll()
+  // le mediosP = MedioDePago.findAll({where: {users_owners_id: "userOwnerID"}})
+    Promise
+    .all([userOwner, userOwnerID])
+    .then(([userOwner, userOwnerID])=> {
+      res.render("partial/userOwner/vistaCancha", {
       userOwner,
       canchas,
       escuelitas,
       torneos,
+      //mediosP,
       userOwnerLogged: req.session.userOwnerLogged
     })
+    })
+      console.log("🚀 ~ file: userOwnerController.js ~ line 140 ~ .then ~ userOwner", userOwner)
+    
   },
   canchas: (req, res) => {
     let id = req.params.id
