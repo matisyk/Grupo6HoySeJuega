@@ -768,7 +768,6 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `hoy_se_juega`;
-INSERT INTO `hoy_se_juega`.`deportes` (`id`, `deporte`, `active`) VALUES (id, 'deporte', active);
 INSERT INTO `hoy_se_juega`.`deportes` (`id`, `deporte`, `active`) VALUES (1, 'Futbol', 1);
 INSERT INTO `hoy_se_juega`.`deportes` (`id`, `deporte`, `active`) VALUES (2, 'Voley', 1);
 INSERT INTO `hoy_se_juega`.`deportes` (`id`, `deporte`, `active`) VALUES (3, 'Basquet', 1);
@@ -783,7 +782,6 @@ COMMIT;
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `hoy_se_juega`;
-INSERT INTO `hoy_se_juega`.`zonas_de_juego` (`id`, `provincia`, `localidad`, `municipio`) VALUES (id, 'provincia', 'localidad', 'municipio');
 INSERT INTO `hoy_se_juega`.`zonas_de_juego` (`id`, `provincia`, `localidad`, `municipio`) VALUES (1, 'Buenos Aires', 'San fernando', 'Carupa');
 
 COMMIT;
