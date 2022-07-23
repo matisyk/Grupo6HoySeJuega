@@ -164,52 +164,21 @@
             <div class="horizontal">
               <div class="entre-divs">
                 <label for="dias">Dias para jugar:</label>
-                <div class="divDias2">
-                  <select id="dia1" name="dia1" >
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia2" name="dia2" >
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
-                <div class="divDias">
-                  <select id="dia3" name="dia3" >
-                    <option value="">Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="Martes">Martes</option>
-                    <option value="Miercoles">Míercoles</option>
-                    <option value="Jueves">Jueves</option>
-                    <option value="Viernes">Viernes</option>
-                    <option value="Sabado">Sábado</option>
-                    <option value="Domingo">Domingo</option>
-                    <option value="No juego">No juego</option>
-                  </select>
-                </div>
+                <select id="dias" name="dia1">
+                  <option value="" disabled selected> dias para jugar</option>
+                  <% dias.forEach(dias => { %>
+                  <option value="<%= dias.id %>"><%= dias.dia %></option>
+                  <% }); %>
+                </select>
               </div>
-
               <div class="entre-divs">
                 <label for="horarios">Horarios para jugar:</label>
-                <input type="time" class="form-control" id="horarios" name="hora1" >
-                <input type="time" class="form-control" id="horarios" name="hora2" >
-                <input type="time" class="form-control" id="horarios" name="hora3" >
+                <select id="horarios" name="hora1">
+                  <option value="" disabled selected> Horarios para jugar</option>
+                  <% horarios.forEach(horarios => { %>
+                  <option value="<%= horarios.id %>"><%= horarios.hora %></option>
+                  <% }); %>
+                </select>
               </div>
             </div>
 

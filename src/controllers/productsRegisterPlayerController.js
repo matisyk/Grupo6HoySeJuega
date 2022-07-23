@@ -54,12 +54,6 @@ const controller = {
 		let zonasdejuego = ZonasDeJuego.findAll();
 		let horarios = HoraPlayer.findAll();
 		let dias = DiaPlayer.findAll()
-		// fetch(API)
-		// 	.then(response => response.json)
-		// 	.then((result) => {
-		// 		const geoubicacion = result.id
-		// 	})
-		// 	.catch(error => console.log(error));
 
 		Promise
 			.all([valoraciones, deportes, zonasdejuego, horarios, dias])
@@ -135,7 +129,7 @@ const controller = {
 				});
 			}
 		}).then(() => {
-			
+
 		})
 		//create
 		UserPlayer
@@ -174,18 +168,6 @@ const controller = {
 			})
 			.catch(error => res.send(error))
 
-
-		// let newProduct = {
-		// 	id: products[products.length - 1].id + 1,
-		// 	...req.body,
-		// 	image: image,
-		// 	password: bcryptjs.hashSync(req.body.password, 10)
-		// }
-
-		// products.push(newProduct);
-
-		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
 	},
 
 	// Redirect
@@ -206,16 +188,20 @@ const controller = {
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
 		let zonasdejuego = ZonasDeJuego.findAll();
+		let horarios = HoraPlayer.findAll();
 		let dias = DiaPlayer.findAll()
+
 		Promise
-			.all([userPlayer, userPlayerID, valoraciones, deportes, zonasdejuego])
-			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego]) => {
+			.all([userPlayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias])
+			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias]) => {
 				res.render("partial/register/editPlayerForm", {
 					userplayer,
 					userPlayerID,
 					valoraciones,
 					deportes,
-					zonasdejuego
+					zonasdejuego,
+					horarios,
+					dias
 				})
 			})
 
@@ -263,7 +249,7 @@ const controller = {
 			.catch(error => res.send(error))
 
 
-		
+
 
 	},
 
