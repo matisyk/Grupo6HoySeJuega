@@ -32,7 +32,7 @@
     </div>
 
     <div class="formulario-div">
-      <form class="div1" action="/register/editPlayerForm/<%=userLoggedPlayer.id%>?_method=PATCH" method="POST"
+      <form class="div1" action="/register/editPlayerForm/<%= userplayer.id %>?_method=PATCH" method="POST"
         enctype="multipart/form-data">
         <h1>Modificación de datos personales</h1>
         <div class="form-group">
@@ -51,7 +51,7 @@
             </div>
             <br>
 
-            <div class="horizontal">
+            <!-- <div class="horizontal">
               <div class="entre-divs">
                 <label for="email">Mail: </label>
                 <input id="email" class="form-control" name="email" type="email" value="<%= userplayer.email %>">
@@ -62,7 +62,7 @@
                 <input id="pwd" name="password" class="form-control" <%= userplayer.password %> type="password">
               </div>
             </div>
-            <br>
+            <br> -->
 
             <div class="horizontal">
               <div class="entre-divs">
@@ -207,7 +207,7 @@
               <!-- <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div> -->
               <div>
                 <button class="volver">
-                  <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>">Volver</a>
+                  <a href="/userPlayer/perfilDeJugador/<%- userplayer.id %>">Volver</a>
                 </button>
               </div>
               <div>
