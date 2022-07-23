@@ -87,7 +87,6 @@ const userPlayerController = {
     Promise
         .all([userPlayer, userPlayerID])
       .then(([userplayer, userPlayerID]) => {
-        console.log("🚀 ~ file: userPlayerController.js ~ line 92 ~ .then ~ userPlayerID", userPlayerID)
         res.render("partial/userPlayer/perfilDeJugador", {
           userplayer,
           userPlayerID
