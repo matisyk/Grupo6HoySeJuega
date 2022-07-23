@@ -47,20 +47,7 @@ const controller = {
 	//Create - Form to create
 	create: (req, res) => {
 
-		let medioDePago = MedioDePago.findAll();
-		let detalleLugarOwner = DetalleLugarOwner.findAll();
-		let ubicacion = Ubicacion.findAll();
-
-		Promise
-			.all([ medioDePago, detalleLugarOwner, ubicacion])
-			.then(([medioDePago, detalleLugarOwner, ubicacion]) => {
-
-				res.render("partial/register/formularioDatosCancha", {
-					medioDePago, 
-					detalleLugarOwner, 
-					ubicacion
-				})
-			})
+				res.render("partial/register/formularioDatosCancha")
 	},
 
 	
@@ -100,27 +87,24 @@ const controller = {
 		// 	});
 		// }
 
-		UserOwner.findAll({
-			where: {
-				email: req.body.email
-			}
-		}).then(userInDB => {
+		// UserOwner.findAll({
+		// 	where: {
+		// 		email: req.body.email
+		// 	}
+		// }).then(userInDB => {
 	
-			if (userInDB && userInDB.Email === req.body.email) {
+		// 	if (userInDB && userInDB.Email === req.body.email) {
 	
-				return res.render("partial/register/formularioDatosCancha", {
-					errors: {
-						email: {
-							msg: 'Este mail ya está registrado, intenta con otro'
-						}
-					},
-					oldData: req.body,
-					medioDePago,
-					detalleLugarOwner,
-					ubicacion
-				});
-			}
-		})
+		// 		return res.render("partial/register/formularioDatosCancha", {
+		// 			errors: {
+		// 				email: {
+		// 					msg: 'Este mail ya está registrado, intenta con otro'
+		// 				}
+		// 			},
+		// 			oldData: req.body
+		// 		});
+		// 	}
+		// })
 
 		UserOwner
 		.create({
@@ -140,9 +124,47 @@ const controller = {
 			})
 
 			ImagenOwner.create({
-				foto: image,
+				image: image,
+				image2: image2,
+				image3: image3,
 				users_owners_id: idOwner
 			})
+
+			LogoOwner.create({
+				logo: logo,
+				users_owners_id: idOwner
+			})
+
+			DetalleLugarOwner.create({
+				iluminacion: req.body.iluminacion,
+				estacionamiento: req.body.estacionamiento,
+				wifi: req.body.wifi,
+				vestuario: req.body.vestuarios,
+				ducha: req.body.duchas,
+				parrilla: req.body.parrilla,
+				quincho: req.body.quincho, 
+				quiosco: req.body.quiosco,
+				users_owners_id: idOwner
+			})
+
+			MedioDePago.create({
+				transferencia: req.body.transferencia,
+				mercado_pago: req.body.mercadoPago,
+				efectivo: req.body.efectivo,
+				tarjeta: req.body.tarjeta,
+				users_owners_id: idOwner,
+
+			})
+
+			Ubicacion.create({
+				provincia: req.body.provincia,
+				localidad: req.body.localidad,
+				municipio: req.body.municipio,
+				calle: req.body.calle,
+				numeracion: req.body.numeracion,
+				users_owners_id: idOwner
+			})
+		
 		})
 
 		.then(() => {

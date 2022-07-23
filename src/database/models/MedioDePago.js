@@ -8,19 +8,19 @@ module.exports = (sequelize, dataTypes) => {
         autoIncrement: true
       },
       transferencia: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       mercado_pago: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       efectivo: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       tarjeta: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       users_owners_id: dataTypes.BIGINT(10)
@@ -32,13 +32,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const MedioDePago = sequelize.define(alias, cols, config);
   
-    MedioDePago.associate = function (models) {
+    // MedioDePago.associate = function (models) {
   
-        MedioDePago.belongsTo(models.UserOwner, {
-         as: "userOwner",
-         foreignKey: "users_owners_id"
-        })
-    }
+    //     MedioDePago.belongsTo(models.UserOwner, {
+    //      as: "userOwner",
+    //      foreignKey: "users_owners_id"
+    //     })
+    // }
   
     return MedioDePago;
   
