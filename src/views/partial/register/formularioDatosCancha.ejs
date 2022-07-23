@@ -81,7 +81,8 @@
                 class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
               <% if (locals.errors && errors.password) { %>
               <div class="text-danger msg">
-                <%= errors.password.msg %>
+                <%= errors.password.msg 
+                %>
               </div>
               <% } %>
             </div>
