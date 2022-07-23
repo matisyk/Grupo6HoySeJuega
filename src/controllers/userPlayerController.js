@@ -83,10 +83,11 @@ const userPlayerController = {
   perfilDeJugador: (req, res) => {
 
     let userPlayerID = req.params.id
-    let userPlayer = UserPlayer.findByPk(userPlayerID)  
+    let userPlayer = UserPlayer.findByPk(userPlayerID,)
     Promise
         .all([userPlayer, userPlayerID])
       .then(([userplayer, userPlayerID]) => {
+        console.log("🚀 ~ file: userPlayerController.js ~ line 92 ~ .then ~ userPlayerID", userPlayerID)
         res.render("partial/userPlayer/perfilDeJugador", {
           userplayer,
           userPlayerID

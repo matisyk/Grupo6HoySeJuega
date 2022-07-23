@@ -26,20 +26,23 @@ module.exports = (sequelize, dataTypes) => {
   }
   const ZonaDeJuego = sequelize.define(alias, cols, config);
 
-  // ZonaDeJuego.associate = function (models) { 
+  // ZonaDeJuego.associate = function (models) {
 
-  //   ZonaDeJuego.belongsToMany(models.UserPlayer, { 
+    //   ZonaDeJuego.belongsToMany(models.UserPlayer, { 
+    //     as: "userPlayer",
+    //     through: 'ZonaDeJuegos_users_player',
+    //     foreignKey: 'ZonaDeJuegos_id',
+    //     otherKey: 'user_players_id',
+    //     timestamps: false
+    //   })
+    //   ZonaDeJuego.belongsTo(models.Categoria, {
+    //     as: "categoria",
+    //     foreignKey: "ZonaDeJuegos_id"
+    //   })
+  //   ZonaDeJuego.belongsTo(models.UserPlayer, {
   //     as: "userPlayer",
-  //     through: 'ZonaDeJuegos_users_player',
-  //     foreignKey: 'ZonaDeJuegos_id',
-  //     otherKey: 'user_players_id',
-  //     timestamps: false
+  //     foreignKey: "zonas_de_juegos_id"
   //   })
-  //   ZonaDeJuego.belongsTo(models.Categoria, {
-  //     as: "categoria",
-  //     foreignKey: "ZonaDeJuegos_id"
-  //   })
-
   // }
 
   return ZonaDeJuego;
