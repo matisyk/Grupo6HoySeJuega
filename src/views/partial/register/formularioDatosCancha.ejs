@@ -102,16 +102,60 @@
             </div>
             <br>
             <div>
-            <label for="direccion">Dirección:</label>
-            <input type="text" class="form-control <%= locals.errors && errors.direccion ? 'is-invalid' : null %>"
-              id="direccion" name="direccion" value="<%= locals.oldData ? oldData.direccion : null %>">
-            <% if (locals.errors && errors.direccion) { %>
+              <label for="provincia">Provincia:</label>
+              <input type="text" class="form-control <%= locals.errors && errors.provincia ? 'is-invalid' : null %>"
+                id="provincia" name="provincia" value="<%= locals.oldData ? oldData.provincia : null %>">
+              <% if (locals.errors && errors.provincia) { %>
+              <div class="text-danger msg">
+                <%= errors.provincia.msg %>
+              </div>
+              <% } %>
+            </div>
+            </div>
+            <br>
+            <div class="horizontal">
+            <div>
+              <label for="localidad">Localidad:</label>
+              <input type="text" class="form-control <%= locals.errors && errors.localidad ? 'is-invalid' : null %>"
+                id="localidad" name="localidad" value="<%= locals.oldData ? oldData.localidad : null %>">
+              <% if (locals.errors && errors.localidad) { %>
+              <div class="text-danger msg">
+                <%= errors.localidad.msg %>
+              </div>
+              <% } %>
+            </div>
+            <br>
+            <div>
+              <label for="municipio">Municipio:</label>
+              <input type="text" class="form-control <%= locals.errors && errors.municipio ? 'is-invalid' : null %>"
+                id="municipio" name="municipio" value="<%= locals.oldData ? oldData.municipio : null %>">
+              <% if (locals.errors && errors.municipio) { %>
+              <div class="text-danger msg">
+                <%= errors.municipio.msg %>
+              </div>
+              <% } %>
+            </div>
+            </div>
+          </div>
+            <br>
+            <div class="horizontal">
+            <div>
+            <label for="calle">Calle:</label>
+            <input type="text" class="form-control <%= locals.errors && errors.calle ? 'is-invalid' : null %>"
+              id="calle" name="calle" value="<%= locals.oldData ? oldData.calle : null %>">
+            <% if (locals.errors && errors.calle) { %>
             <div class="text-danger msg">
-              <%= errors.direccion.msg %>
+              <%= errors.calle.msg %>
             </div>
             <% } %>
           </div>
+          <br>
+          <div>
+            <label for="numeracion">Numeración:</label>
+            <input type="number" class="form-control" id="numeracion" name="numeracion"> 
           </div>
+          </div>
+        </div>
           <br>
           <div class="horizontal">
             <div>
@@ -161,6 +205,10 @@
                   <option label="Si" value="Si"></option>
                   <option selected="selected" label="No" value="No"></option>
                 </select></label><br /> <br />
+                <label class="funcionalidades1" for="quiosco">Quiosco <select name="quiosco" size="1">
+                  <option label="Si" value="Si"></option>
+                  <option selected="selected" label="No" value="No"></option>
+                </select></label><br /> <br />
             </div>
             <br>
             <div class="medios-de-pago">
@@ -179,7 +227,7 @@
                 </select>
               </label>
               <br />
-              <label class="funcionalidades1" for="modo">Modo <select name="modo" size="1">
+              <label class="funcionalidades1" for="modo">Tarjeta <select name="tarjeta" size="1">
                   <option label="Si" value="Si"></option>
                   <option selected="selected" label="No" value="No"></option>
                 </select>
@@ -245,9 +293,6 @@
       </div>
     <br />
     <br />
-    <div class="alert alert-success divAlerta">
-      ¡Gracias por registrarse!
-    </div>
   </div>
   </div>  
       </div>

@@ -8,39 +8,35 @@ module.exports = (sequelize, dataTypes) => {
         autoIncrement: true
       },
       iluminacion: {
-        type: dataTypes.BOOLEAN,
-        allowNull: false
-      },
-      iluminacion: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       estacionamiento: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       wifi: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       vestuario: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       }, 
       ducha: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       }, 
       parrilla: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       }, 
       quincho: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       quiosco: {
-        type: dataTypes.BOOLEAN,
+        type: dataTypes.STRING(2),
         allowNull: false
       },
       users_owners_id: dataTypes.BIGINT(10)
@@ -51,13 +47,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const DetalleLugarOwner = sequelize.define(alias, cols, config);
   
-    DetalleLugarOwner.associate = function (models) {
+    // DetalleLugarOwner.associate = function (models) {
   
-        DetalleLugarOwner.belongsTo(models.UserOwner, {
-         as: "userOwner",
-         foreignKey: "users_owners_id"
-        })
-    }
+    //     DetalleLugarOwner.belongsTo(models.UserOwner, {
+    //      as: "userOwner",
+    //      foreignKey: "users_owners_id"
+    //     })
+    // }
   
     return DetalleLugarOwner;
   

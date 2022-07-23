@@ -7,7 +7,13 @@ module.exports = (sequelize, dataTypes) => {
         primaryKey: true,
         autoIncrement: true
       },
-      foto: {
+      image: {
+        type: dataTypes.STRING(100),
+      },
+      image2: {
+        type: dataTypes.STRING(100),
+      },
+      image3: {
         type: dataTypes.STRING(100),
       },
       users_owners_id: dataTypes.BIGINT(10)
