@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const ownersFilePath = path.join(__dirname, '../database/userOwner.json');
-const owners = JSON.parse(fs.readFileSync(ownersFilePath, 'utf-8'));
+
 const db = require('../database/models')
 
 // Login
@@ -45,10 +44,19 @@ const userOwnerController = {
 
   processLoginOwner: (req, res) => {
 
-    let userOwnerToLogin = userOwner.findByField('email', req.body.email)
-
-    if (userOwnerToLogin) {
+    //let userOwnerToLogin = userOwner.findByField('email', req.body.email)
+UserOwner.findOne({
+  where: {
+    email: req.body.email
+  }
+})
+.then((userOwnerToLogin)=> {
+console.log("🚀 ~ file: userOwnerController.js ~ line 54 ~ .then ~ userOwnerToLogin", userOwnerToLogin)
+if (userOwnerToLogin) {
       let isOkPassword = bcryptjs.compareSync(req.body.password, userOwnerToLogin.password);
+      console.log("🚀 ~ file: userOwnerController.js ~ line 57 ~ .then ~ req.body.password", req.body.password)
+      console.log("🚀 ~ file: userOwnerController.js ~ line 57 ~ .then ~  userOwnerToLogin.password",  userOwnerToLogin.password)
+      console.log("🚀 ~ file: userOwnerController.js ~ line 57 ~ .then ~ isOkPassword", isOkPassword)
       if (isOkPassword) {
 
         delete userOwnerToLogin.password;
@@ -79,6 +87,8 @@ const userOwnerController = {
         }
       }
     });
+})
+    
 
   },
   logout: (req, res) => {
