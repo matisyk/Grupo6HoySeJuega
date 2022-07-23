@@ -24,7 +24,8 @@ const DeportesPlayers = db.Deporte;
 const ImagenPlayer = db.ImagenPlayer;
 const HoraPlayer = db.HoraPlayer;
 const DiaPlayer = db.DiaPlayer;
-const ZonasDeJuego = db.ZonaDeJuego
+const ZonasDeJuego = db.ZonaDeJuego;
+const DiaHorarioPlayer = db.DiaHorarioPlayer
 
 // APIS
 
@@ -161,8 +162,10 @@ const controller = {
 					foto: image,
 					users_players_id: idPlayer
 				})
-				HoraPlayer.create({
-					hora: req.body.hora1,
+				DiaHorarioPlayer.create({
+					dias_players_id: req.body.dia1,
+					horas_players_id: req.body.hora1,
+					users_players_id: idPlayer
 				})
 			})
 
