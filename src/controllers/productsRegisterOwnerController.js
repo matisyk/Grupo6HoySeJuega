@@ -47,27 +47,17 @@ const controller = {
 	//Create - Form to create
 	create: (req, res) => {
 
-		let userOwner = UserOwner.findAll();
-		let telefonoOwner = TelefonoOwner.findAll();
 		let medioDePago = MedioDePago.findAll();
-		let logoOwner = LogoOwner.findAll();
-		let imagenOwner = ImagenOwner.findAll();
 		let detalleLugarOwner = DetalleLugarOwner.findAll();
-		let cancha = Cancha.findAll();
 		let ubicacion = Ubicacion.findAll();
 
 		Promise
-			.all([userOwner, telefonoOwner, medioDePago, logoOwner, imagenOwner, detalleLugarOwner, cancha, ubicacion])
-			.then(([userOwner, telefonoOwner, medioDePago, logoOwner, imagenOwner, detalleLugarOwner, cancha, ubicacion]) => {
+			.all([ medioDePago, detalleLugarOwner, ubicacion])
+			.then(([medioDePago, detalleLugarOwner, ubicacion]) => {
 
 				res.render("partial/register/formularioDatosCancha", {
-					userOwner, 
-					telefonoOwner, 
 					medioDePago, 
-					logoOwner, 
-					imagenOwner, 
 					detalleLugarOwner, 
-					cancha, 
 					ubicacion
 				})
 			})
@@ -125,9 +115,9 @@ const controller = {
 						}
 					},
 					oldData: req.body,
-					valoraciones,
-					deportes,
-					zonasdejuego
+					medioDePago,
+					detalleLugarOwner,
+					ubicacion
 				});
 			}
 		})
