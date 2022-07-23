@@ -168,7 +168,7 @@ const controller = {
 		})
 
 		.then(() => {
-			return res.redirect("/userPlayer/loginPlayer");
+			return res.redirect("/userOwner/loginCourt");
 		})
 		.catch(error => res.send(error))
 	},
