@@ -51,6 +51,7 @@ const controller = {
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
 		let zonasdejuego = ZonasDeJuego.findAll();
+		let horarios = HoraPlayer.findAll();
 		let dias = DiaPlayer.findAll()
 		// fetch(API)
 		// 	.then(response => response.json)
@@ -60,13 +61,15 @@ const controller = {
 		// 	.catch(error => console.log(error));
 
 		Promise
-			.all([valoraciones, deportes, zonasdejuego])
-			.then(([valoraciones, deportes, zonasdejuego]) => {
+			.all([valoraciones, deportes, zonasdejuego, horarios, dias])
+			.then(([valoraciones, deportes, zonasdejuego, horarios, dias]) => {
 
 				res.render("partial/register/formularioDatosJugador", {
 					valoraciones,
 					deportes,
-					zonasdejuego
+					zonasdejuego,
+					horarios,
+					dias
 				})
 			})
 	},
@@ -82,7 +85,9 @@ const controller = {
 				oldData: req.body,
 				valoraciones,
 				deportes,
-				zonasdejuego
+				zonasdejuego,
+				dias,
+				horarios
 			});
 		}
 		let image;
@@ -158,8 +163,6 @@ const controller = {
 				})
 				HoraPlayer.create({
 					hora: req.body.hora1,
-					hora2: req.body.hora2,
-					hora3: req.body.hora3
 				})
 			})
 
