@@ -11,14 +11,6 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.TIME(),
       allowNull: false
     },
-    hora2: {
-      type: dataTypes.TIME(),
-      allowNull: false
-    },
-    hora3: {
-      type: dataTypes.TIME(),
-      allowNull: false
-    }
   };
   let config = {
     tableName: 'horas_players',
