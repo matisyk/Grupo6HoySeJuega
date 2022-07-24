@@ -51,18 +51,6 @@
             </div>
             <br>
 
-            <!-- <div class="horizontal">
-              <div class="entre-divs">
-                <label for="email">Mail: </label>
-                <input id="email" class="form-control" name="email" type="email" value="<%= userplayer.email %>">
-              </div>
-              <br>
-              <div class="entre-divs">
-                <label for="contraseña">Contraseña: </label>
-                <input id="pwd" name="password" class="form-control" <%= userplayer.password %> type="password">
-              </div>
-            </div>
-            <br> -->
 
             <div class="horizontal">
               <div class="entre-divs">
@@ -109,23 +97,23 @@
                 <label for="autoValoracion">Auto valoración:</label>
                 <br>
                 <select name="autoValoracion" id="autoValoracion" >
-                  <option value="" disabled selected> Elegir opción</option>
                   <%valoraciones.forEach(valoraciones => { %>
-                  <option value="<%=valoraciones.id%>"><%=valoraciones.tipo%></option>
+                  <option value="<%=valoraciones.id%>" <% if (userplayer.autoV.id == valoraciones.id) { %><%= 'selected'  %><% }; %>> <%= valoraciones.tipo %></option>
                   <% }); %>
                 </select>
               </div>
               <br>
-              <!-- <div class="entre-divs">
-                <label for="Ubicacion">Ubicación:</label>
+              <div class="entre-divs">
+                <label for="Ubicacion">Recidencia:</label>
                 <br>
                 <select name="ubicacion" id="ubicacion" >
-                  <option value="" disabled selected> Elegir opción</option>
-                  
-                  foreach va aca de api
-
+                  <% zonasdejuego.forEach(zonasdejuego => { %>
+                  <option value="<%= zonasdejuego.id %>"
+                    <% if (userplayer.zonas.id == zonasdejuego.id) { %><%= 'selected'  %><% }; %>>
+                    <%= zonasdejuego.provincia %></option>
+                  <% }); %>
                 </select>
-              </div> -->
+              </div>
             </div>
             <br>
 
@@ -151,9 +139,10 @@
               <div class="entre-divs">
                 <label for="zonaDeJuego">Zona de juego:</label>
                 <select id="zonaDeJuego" name="zonasdejuego">
-                  <option value="" disabled selected> Zona de juego:</option>
                   <% zonasdejuego.forEach(zonasdejuego => { %>
-                  <option value="<%= zonasdejuego.id %>"><%= zonasdejuego.provincia %></option>
+                  <option value="<%= zonasdejuego.id %>"
+                    <% if (userplayer.zonas.id == zonasdejuego.id) { %><%= 'selected'  %><% }; %>>
+                    <%= zonasdejuego.municipio %></option>
                   <% }); %>
                 </select>
 

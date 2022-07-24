@@ -68,10 +68,14 @@ module.exports = (sequelize, dataTypes) => {
     //     otherKey: 'horas_players_id',
     //     timestamps: false
     //   })
-    // UserPlayer.belongsTo(models.ZonaDeJuego, {
-    //   as: "zonas_de_juegos",
-    //   foreignKey: "user_players_id"
-    // })
+     UserPlayer.belongsTo(models.ZonaDeJuego, {
+       as: "zonas",
+       foreignKey: "zonas_de_juego_id"
+     })
+    UserPlayer.belongsTo(models.AutoValoracion, {
+      as: "autoV",
+      foreignKey: "auto_valoracion_id"
+    })
   }
 
 

@@ -83,7 +83,9 @@ const userPlayerController = {
   perfilDeJugador: (req, res) => {
 
     let userPlayerID = req.params.id
-    let userPlayer = UserPlayer.findByPk(userPlayerID)
+    let userPlayer = UserPlayer.findByPk(userPlayerID, {
+    include: ['zonas', 'autoV']
+    })
     let img = ImagenPlayer.findByPk(userPlayerID, {
       include: [
         "userPlayerI"
@@ -92,15 +94,19 @@ const userPlayerController = {
     let telefono = TelefonoPlayer.findByPk(userPlayerID, {
       include: ['userPlayerT']
     })
+    let zona = ZonasDeJuego.findAll()
+    let autoV = AutoValoracion.findAll()
     Promise
-      .all([userPlayer, userPlayerID, img, telefono])
-      .then(([userPlayer, userPlayerID, img, telefono]) => {
+      .all([userPlayer, userPlayerID, img, telefono, zona, autoV])
+      .then(([userPlayer, userPlayerID, img, telefono, zona, autoV]) => {
 
         res.render("partial/userPlayer/perfilDeJugador", {
           userPlayer,
           userPlayerID,
           img,
-          telefono
+          telefono,
+          zona,
+          autoV
         })
       })
 
