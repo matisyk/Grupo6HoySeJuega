@@ -39,10 +39,26 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
     const Torneo = sequelize.define(alias, cols, config);
-    Torneo.belongsToMany(models.Cancha,{
-      as: "torneoCancha",
-      foreignKey: "canchas_id"
-    })
+
+
+    //CAMBIAR A REL. MUCHOS A MUCHOS EN DIAGRAMA
+  //   Torneo.associate = function (models) {
+  //   Torneo.belongsToMany(models.Cancha, {
+  //     as: "torneoCancha",
+  //     through: "torneos_canchas",
+  //     foreignKey: "torneos_id",
+  //     otherKey: "canchas_id",
+  //     timestamps: false
+  //   })
+
+
+  // Torneo.hasMany(models.ImagenTorneo, {
+  //   as:"imagenTorneo",
+  //   foreignKey: "torneos_id"
+  // })
+
+  // }
+
   
   return Torneo;
   
