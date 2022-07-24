@@ -43,6 +43,11 @@ module.exports = (sequelize, dataTypes) => {
 
   UserPlayer.associate = function (models) {
 
+     UserPlayer.hasMany(models.ImagenPlayer, {
+         as: "imagenPlayer",
+         foreignKey: "users_players_id"
+     })
+       
     //   UserPlayer.belongsToMany(models.Deporte, {
     //     as: "deporte",
     //     through: 'deportes_users_player',
@@ -50,14 +55,11 @@ module.exports = (sequelize, dataTypes) => {
     //     otherKey: 'deportes_id',
     //     timestamps: false
     //   })
-    //   UserPlayer.hasMany(models.TelefonoPlayer, {
-    //     as: "telefono",
-    //    foreignKey: "user_players_id"
-    //  })
-    //  UserPlayer.belongsTo(models.ImagenPlayer, {
-    //    as: "imagenPlayer",
-    //    foreignKey: "user_players_id"
-    //  })
+       UserPlayer.hasMany(models.TelefonoPlayer, {
+        as: "telefono",
+        foreignKey: "users_players_id"
+      })
+      
     //   UserPlayer.belongsToMany(models.DiaPlayer, models.HoraPlayer, {
     //     as: "dia_hora",
     //     through: 'dias_horarios_users_players',
