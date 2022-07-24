@@ -19,12 +19,12 @@ module.exports = (sequelize, dataTypes) => {
     }
     const UserOwner = sequelize.define(alias, cols, config);
   
-    TipoDeCancha.associate = function (models) {
-        TipoDeCancha.hasMany(models.Cancha, {
-             as: "cancha",
-            foreignKey: "tipo_de_cancha_id"
-          })
-        }
+    // TipoDeCancha.associate = function (models) {
+    //     TipoDeCancha.hasMany(models.Cancha, {
+    //          as: "cancha",
+    //         foreignKey: "tipo_de_cancha_id"
+    //       })
+    //     }
   
   return UserOwner;
   
