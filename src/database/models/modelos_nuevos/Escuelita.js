@@ -1,51 +1,54 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'Cancha';
+    let alias = 'Escuelita';
     let cols = {
       id: {
         type: dataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
       },
-      identificacion: {
-        type: dataTypes.STRING(45),
-        allowNull: false
-      },
-      capacidad: {
-        type: dataTypes.INTEGER,
-        allowNull: false
-      },
+      // ASI ESTA EN DIAGRAMA:
+    //   identificacion_cancha: {
+    //     type: dataTypes.STRING(45),
+    //     allowNull: false
+    //   },
       valor: {
         type: dataTypes.INTEGER,
         allowNull: false
       },
-      users_owners_id: dataTypes.BIGINT(10),
+      genero_id: dataTypes.BIGINT(10),
       deporte_id: dataTypes.BIGINT(10),
-      tipo_de_cancha_id: dataTypes.BIGINT(10)
     };
     let config = {
-      tableName: 'canchas',
+      tableName: 'escuelitas',
       timestamps: false
     }
-    const Cancha = sequelize.define(alias, cols, config);
+    const Escuelita = sequelize.define(alias, cols, config);
   
-    // Cancha.associate = function (models) {
+    // Escuelita.associate = function (models) {
   
 
-    // Cancha.belongsTo(models.UserOwner, {
+    // Escuelita.belongsTo(models.Deporte, {
     //   as: "userOwner",
     //   foreignKey: "users_owners_id"
     // })
-    // Cancha.belongsTo(models.TipoDeCancha,{
+    // Escuelita.belongsTo(models.Genero,{
     //   as: "tipoDeCancha",
     //   foreignKey: "tipo_de_cancha_id"
     // })
-    // Cancha.hasMany(models.ImagenCancha,{
+    // Escuelita.hasMany(models.ImagenEscuelita,{
     //   as: "imagenCancha",
     //   foreignKey: "canchas_id"
     // })
     // CAMBIAR TORNEOS A REL. MUCHOS A MUCHOS EN DIAGRAMA
-      //  Cancha.belongsToMany(models.Torneo, {
+      //  Escuelita.belongsToMany(models.profesorEscuelita, {
+  //     as: "torneoCancha",
+  //     through: "torneos_canchas",
+  //     foreignKey: "canchas_id",
+  //     otherKey: "torneos_id",
+  //     timestamps: false
+  //   })
+  //  Escuelita.belongsToMany(models. HORARIO , {
   //     as: "torneoCancha",
   //     through: "torneos_canchas",
   //     foreignKey: "canchas_id",
@@ -55,6 +58,6 @@ module.exports = (sequelize, dataTypes) => {
     // }
 
   
-    return Cancha;
+    return Escuelita;
   
   }

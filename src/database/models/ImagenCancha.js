@@ -1,31 +1,32 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'UserOwner';
+    let alias = 'ImagenCancha';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
           },
-          material: {
+          link: {
             type: dataTypes.STRING(45),
             allowNull: false
           },
           canchas_id: dataTypes.BIGINT(10),
     };
     let config = {
-        tableName: 'tipo_de_cancha',
+        tableName: 'imagen_canchas',
         timestamps: false
     }
-    const UserOwner = sequelize.define(alias, cols, config);
+    const ImagenCancha = sequelize.define(alias, cols, config);
   
-        // TipoDeCancha.associate = function (models) {
-        //TipoDeCancha.hasMany(models.Cancha, {
-        //     as: "cancha",
-        //    foreignKey: "user_owners_id"
-        //  })
-        //}
+    ImagenCancha.associate = function (models) {
   
-  return UserOwner;
+      ImagenCancha.belongsTo(models.Cancha, {
+        as: "imagenCancha",
+        foreignKey: "canchas_id"
+      })
+      }
+  
+  return ImagenCancha;
   
   }

@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'UserOwner';
+    let alias = 'Torneo';
     let cols = {
         id: {
             type: dataTypes.INTEGER,
@@ -35,12 +35,31 @@ module.exports = (sequelize, dataTypes) => {
           canchas_id: dataTypes.BIGINT(10),
     };
     let config = {
-        tableName: 'tipo_de_cancha',
+        tableName: 'torneos',
         timestamps: false
     }
-    const UserOwner = sequelize.define(alias, cols, config);
+    const Torneo = sequelize.define(alias, cols, config);
+
+
+    //CAMBIAR A REL. MUCHOS A MUCHOS EN DIAGRAMA
+  //   Torneo.associate = function (models) {
+  //   Torneo.belongsToMany(models.Cancha, {
+  //     as: "torneoCancha",
+  //     through: "torneos_canchas",
+  //     foreignKey: "torneos_id",
+  //     otherKey: "canchas_id",
+  //     timestamps: false
+  //   })
+
+
+  // Torneo.hasMany(models.ImagenTorneo, {
+  //   as:"imagenTorneo",
+  //   foreignKey: "torneos_id"
+  // })
+
+  // }
+
   
-  
-  return UserOwner;
+  return Torneo;
   
   }
