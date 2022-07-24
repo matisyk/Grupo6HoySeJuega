@@ -39,6 +39,14 @@ module.exports = (sequelize, dataTypes) => {
       as: "tipoDeCancha",
       foreignKey: "tipo_de_cancha_id"
     })
+    Cancha.hasMany(models.ImagenCancha,{
+      as: "imagenCancha",
+      foreignKey: "canchas_id"
+    })
+    Cancha.belongsToMany(models.Torneo,{
+      as: "torneoCancha",
+      foreignKey: "canchas_id"
+    })
     }
   
     return Cancha;
