@@ -6,8 +6,6 @@ const {
 const bcryptjs = require('bcryptjs');
 const User = require('../models/UserPlayer')
 
-const productsFilePath = path.join(__dirname, '../database/userPlayer.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models');
 const {
 	Console
@@ -184,15 +182,14 @@ const controller = {
 	edit: (req, res) => {
 
 		let userPlayerID = req.params.id
-		let userPlayer = UserPlayer.findByPk(userPlayerID)
+		let userplayer = UserPlayer.findByPk(userPlayerID)
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
 		let zonasdejuego = ZonasDeJuego.findAll();
 		let horarios = HoraPlayer.findAll();
 		let dias = DiaPlayer.findAll()
-
 		Promise
-			.all([userPlayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias])
+			.all([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias])
 			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias]) => {
 				res.render("partial/register/editPlayerForm", {
 					userplayer,
@@ -216,40 +213,38 @@ const controller = {
 			.update({
 				nombre: req.body.nombre,
 				apellido: req.body.apellido,
-				email: req.body.email,
-				password: bcryptjs.hashSync(req.body.password, 10),
 				fecha_nacimiento: req.body.edad,
 				zonas_de_juego_id: req.body.zonasdejuego,
 				auto_valoracion_id: req.body.autoValoracion,
 				deportes_players_id: req.body.deporte1
-
+			}, {
+				where: {
+					id: userPlayerID
+				}
 			})
-			.then((result) => {
-				const idPlayer = result.id
+			.then(() => {
 				TelefonoPlayer.update({
 					telefono: req.body.telefono,
 					telefono2: req.body.telefono2,
-					users_players_id: idPlayer
+				}, {
+					where: {
+						users_players_id: userPlayerID
+					}
 				})
-
-				ImagenPlayer.update({
-					foto: image,
-					users_players_id: idPlayer
-				})
-				HoraPlayer.update({
-					hora: req.body.hora1,
-					hora2: req.body.hora2,
-					hora3: req.body.hora3
+			}).then(() => {
+				DiaHorarioPlayer.update({
+					dias_players_id: req.body.dia1,
+					horas_players_id: req.body.hora1,
+				}, {
+					where: {
+						users_players_id: userPlayerID
+					}
 				})
 			})
-
 			.then(() => {
-				res.redirect("/userPlayer/perfilDeJugador/" + req.session.userLoggedPlayer)
+				res.redirect("/userPlayer/loginPlayer")
 			})
 			.catch(error => res.send(error))
-
-
-
 
 	},
 

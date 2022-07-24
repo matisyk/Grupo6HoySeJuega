@@ -53,11 +53,11 @@
         </a>
 
         <div class="menu-cont2">
-          <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/reservarCancha">Buscar
+          <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userPlayer.id %>/reservarCancha">Buscar
             Canchas</a>
-          <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/equipo">Mi equipo</a>
+          <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userPlayer.id %>/equipo">Mi equipo</a>
           <a class="txtNav4" href="#"> <i class="fa-solid fa-person-running"></i> Nos falta uno</a>
-          <a class="txtNav5" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/carrito">
+          <a class="txtNav5" href="/userPlayer/perfilDeJugador/<%- userPlayer.id %>/carrito">
             <i class="fa-solid fa-cart-shopping"></i> Mi reserva
           </a>
           <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
@@ -75,36 +75,36 @@
           <div class="container-fluid">
             <div class="datos-del-lugar datos-del-lugar-b">
               <div class="img-container1">
-                <img src="/img/jugadores/<%- userLoggedPlayer.image %>">
+                <img src="/img/jugadores/<%- userPlayer.image %>">
                 <ol>
                   <li>
-                    <h2 class="nombre" name="nombre"> <%- userplayer.nombre %> <span
-                        class="nombre" name="apellido"><%- userLoggedPlayer.apellido %></span>
+                    <h2 class="nombre" name="nombre"> <%- userPlayer.nombre %> <span
+                        class="nombre" name="apellido"><%- userPlayer.apellido %></span>
                     </h2>
                   </li>
                 </ol>
                 <ol2>
                   <li>
-                    <h6 class="edad" name="edad">Nacido: <span><%- userLoggedPlayer.fecha_nacimiento %></span></h6>
+                    <h6 class="edad" name="edad">Nacido: <span><%- userPlayer.fecha_nacimiento %></span></h6>
                   </li>
                   <li>
-                    <h6 class="tel" name="telefono">Teléfono: <span class="tel"><%- userLoggedPlayer.telefonos_player %></span>
+                    <h6 class="tel" name="telefono">Teléfono: <span class="tel"><%- userPlayer.telefonos_player %></span>
                     </h6>
                   </li>
                   <li>
                     <h6 class="telem" name="zonaDeJuego">Ubicación: <span
-                        class="telem"><%- userLoggedPlayer.zonas_de_juego_id %></span></h6>
+                        class="telem"><%- userPlayer.zonas_de_juego_id %></span></h6>
                   </li>
                   <li>
                     <h6 class="autoValoracion" name="autoValoracion">Auto Valoración: <span
-                        class="autoValoracion"><%- userLoggedPlayer.auto_valoracion_id %></span></h6>
+                        class="autoValoracion"><%- userPlayer.auto_valoracion_id %></span></h6>
                   </li>
                   <li>
                     <h6 class="telem" name="zonaDeJuego">Posición: <span
-                        class="telem"><%- userLoggedPlayer.categoria %></span></h6>
+                        class="telem"><%- userPlayer.categoria %></span></h6>
                   </li>
                   <button5 class="boton-editar-superior"><a
-                      href='../../register/editPlayerForm/<%-userLoggedPlayer.id%>'><i
+                      href='../../register/editPlayerForm/<%-userPlayer.id%>'><i
                         class="fa-solid fa-pencil"></i></a></button5>
                 </ol2>
               </div>
@@ -135,7 +135,7 @@
           <div class="señal">
             <section class="batiSeñalEquipo">
               <h1>Llamá a tu equipo con la </h1>
-              <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/equipo">
+              <a href="/userPlayer/perfilDeJugador/<%- userPlayer.id %>/equipo">
                 <button>
                   <span>BATI SEÑAL</span>
                 </button>

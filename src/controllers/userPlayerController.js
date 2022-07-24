@@ -86,12 +86,13 @@ const userPlayerController = {
     let userPlayer = UserPlayer.findByPk(userPlayerID,)
     Promise
         .all([userPlayer, userPlayerID])
-      .then(([userplayer, userPlayerID]) => {
+      .then(([userPlayer, userPlayerID]) => {
         res.render("partial/userPlayer/perfilDeJugador", {
-          userplayer,
+          userPlayer,
           userPlayerID
         })
       })
+       
 
   },
 
