@@ -140,7 +140,7 @@ const controller = {
 				zonas_de_juego_id: req.body.zonasdejuego,
 				auto_valoracion_id: req.body.autoValoracion,
 				deportes_players_id: req.body.deporte1,
-				deportes_players_id2: req.body.deporte1
+				deportes_players_id2: req.body.deporte2
 
 			})
 			.then((result) => {
@@ -232,7 +232,8 @@ const controller = {
 				fecha_nacimiento: req.body.edad,
 				zonas_de_juego_id: req.body.zonasdejuego,
 				auto_valoracion_id: req.body.autoValoracion,
-				deportes_players_id: req.body.deporte1
+				deportes_players_id: req.body.deporte1,
+				deportes_players_id2: req.body.deporte2
 			}, {
 				where: {
 					id: userPlayerID
