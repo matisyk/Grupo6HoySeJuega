@@ -6,8 +6,6 @@ const {
 const User = require('../models/UserOwner')
 const bcryptjs = require('bcryptjs');
 
-const productsFilePath = path.join(__dirname, '../database/userOwner.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const db = require('../database/models');
 const {
 	Console
