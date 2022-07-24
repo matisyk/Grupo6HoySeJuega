@@ -68,13 +68,13 @@
               <div class="entre-divs">
                 <label for="telefono">Telefono:</label>
                 <input type="number" class="form-control" id="telefono" name="telefono"
-                  value="<%= userplayer.telefono %>">
+                  value="<%= telefono.telefono %>">
               </div>
               <br>
               <div class="entre-divs">
                 <label for="telefono2">Contacto de emergencia:</label>
                 <input type="number" class="form-control" id="telefono2" name="telefono2"
-                  value="<%= userplayer.telefono %>">
+                  value="<%= telefono.telefono2 %>">
               </div>
             </div>
             <br>
@@ -184,6 +184,10 @@
 
             <div class="entre-divs8">
               <label for="">Cargar imagen de perfil:</label>
+              <label> <img style="width: 130px; margin-top: 40px; border-radius: 70px; margin-left: 50px; margin-bottom: 20px"
+                  src="/img/jugadores/<%- img.foto %>">
+              </label>
+               <!-- <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6> -->
               <input type="file" name="imagenJugador" accept=".jpg" multiple class="form-input">
             </div>
           </div>
@@ -206,7 +210,7 @@
               </a>
               <!-- <div class="alert alert-success divAlerta">¡Gracias por registrarse! Hora de jugar</div> -->
               <div>
-                <button class="volver">
+                <button class="volver" style="margin-left: 30px">
                   <a href="/userPlayer/perfilDeJugador/<%- userplayer.id %>">Volver</a>
                 </button>
               </div>

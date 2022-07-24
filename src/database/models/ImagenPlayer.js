@@ -18,13 +18,13 @@ module.exports = (sequelize, dataTypes) => {
   }
   const ImagenPlayer = sequelize.define(alias, cols, config);
 
-  // ImagenPlayer.associate = function (models) {
+    ImagenPlayer.associate = function (models) {
 
-  //   ImagenPlayer.belongsTo(models.UserPlayer, {
-  //     as: "userPlayer",
-  //     foreignKey: "user_players_id"
-  //   })
-  // }
+       ImagenPlayer.belongsTo(models.UserPlayer, {
+        as: "userPlayerI",
+        foreignKey: "users_players_id"
+       })
+    }
 
   return ImagenPlayer;
 

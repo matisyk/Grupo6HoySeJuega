@@ -188,9 +188,17 @@ const controller = {
 		let zonasdejuego = ZonasDeJuego.findAll();
 		let horarios = HoraPlayer.findAll();
 		let dias = DiaPlayer.findAll()
+		let img = ImagenPlayer.findByPk(userPlayerID, {
+			include: [
+				"userPlayerI"
+			]
+		})
+		let telefono = TelefonoPlayer.findByPk(userPlayerID, {
+			include: ['userPlayerT']
+		})
 		Promise
-			.all([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias])
-			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias]) => {
+			.all([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias, img, telefono,])
+			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias, img, telefono,]) => {
 				res.render("partial/register/editPlayerForm", {
 					userplayer,
 					userPlayerID,
@@ -198,7 +206,11 @@ const controller = {
 					deportes,
 					zonasdejuego,
 					horarios,
-					dias
+					dias,
+					img,
+					telefono,
+					
+
 				})
 			})
 

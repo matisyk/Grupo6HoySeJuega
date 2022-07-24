@@ -44,7 +44,7 @@ MAIN
 .datos-del-lugar img {
   border-radius: 100px;
   width: 150px;
-  margin: 22px 18px 18px 0px;
+  margin: 6px 18px 18px 0px;
   height: fit-content;
 }
 
@@ -1002,7 +1002,7 @@ button5.boton-editar-superior {
   .datos-del-lugar img {
     border-radius: 100px;
     width: 190px;
-    margin: 6px 18px 15px 17px;
+    margin: -20px 18px 15px 17px;
     height: fit-content;
   }
 }
@@ -1116,7 +1116,7 @@ button5.boton-editar-superior {
   .datos-del-lugar img {
     border-radius: 100px;
     width: 190px;
-    margin: 6px 18px 15px 17px;
+    margin: -17px 18px 15px 17px;
     height: fit-content;
   }
 }
@@ -1233,7 +1233,7 @@ button5.boton-editar-superior {
   .datos-del-lugar img {
     border-radius: 100px;
     width: 190px;
-    margin: 1px 18px 15px 17px;
+    margin: -20px 18px 15px 17px;
     height: fit-content;
   }
 }

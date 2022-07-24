@@ -29,25 +29,27 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Cancha = sequelize.define(alias, cols, config);
   
-    Cancha.associate = function (models) {
+    // Cancha.associate = function (models) {
   
-    Cancha.belongsTo(models.UserOwner, {
-      as: "userOwner",
-      foreignKey: "users_owners_id"
-    })
-    Cancha.belongsTo(models.TipoDeCancha,{
-      as: "tipoDeCancha",
-      foreignKey: "tipo_de_cancha_id"
-    })
-    Cancha.hasMany(models.ImagenCancha,{
-      as: "imagenCancha",
-      foreignKey: "canchas_id"
-    })
-    Cancha.belongsToMany(models.Torneo,{
-      as: "torneoCancha",
-      foreignKey: "canchas_id"
-    })
-    }
+
+    // Cancha.belongsTo(models.UserOwner, {
+    //   as: "userOwner",
+    //   foreignKey: "users_owners_id"
+    // })
+    // Cancha.belongsTo(models.TipoDeCancha,{
+    //   as: "tipoDeCancha",
+    //   foreignKey: "tipo_de_cancha_id"
+    // })
+    // Cancha.hasMany(models.ImagenCancha,{
+    //   as: "imagenCancha",
+    //   foreignKey: "canchas_id"
+    // })
+    // Cancha.belongsToMany(models.Torneo,{
+    //   as: "torneoCancha",
+    //   foreignKey: "canchas_id"
+    // })
+    // }
+
   
     return Cancha;
   

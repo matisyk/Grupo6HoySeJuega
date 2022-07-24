@@ -34,9 +34,9 @@ const userPlayerController = {
 
       if (userPlayerToLogin) {
         let isOkPassword = bcryptjs.compareSync(req.body.password, userPlayerToLogin.password);
-  
+
         if (isOkPassword) {
-          
+
 
           delete userPlayerToLogin.password;
           req.session.userLoggedPlayer = userPlayerToLogin
@@ -83,16 +83,27 @@ const userPlayerController = {
   perfilDeJugador: (req, res) => {
 
     let userPlayerID = req.params.id
-    let userPlayer = UserPlayer.findByPk(userPlayerID,)
+    let userPlayer = UserPlayer.findByPk(userPlayerID)
+    let img = ImagenPlayer.findByPk(userPlayerID, {
+      include: [
+        "userPlayerI"
+      ]
+    })
+    let telefono = TelefonoPlayer.findByPk(userPlayerID, {
+      include: ['userPlayerT']
+    })
     Promise
-        .all([userPlayer, userPlayerID])
-      .then(([userPlayer, userPlayerID]) => {
+      .all([userPlayer, userPlayerID, img, telefono])
+      .then(([userPlayer, userPlayerID, img, telefono]) => {
+
         res.render("partial/userPlayer/perfilDeJugador", {
           userPlayer,
-          userPlayerID
+          userPlayerID,
+          img,
+          telefono
         })
       })
-       
+
 
   },
 
