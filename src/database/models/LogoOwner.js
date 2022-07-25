@@ -11,6 +11,7 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.STRING(100),
         allowNull: false
       },
+      users_owners_id: dataTypes.BIGINT(10)
     };
     let config = {
       tableName: "logo_owners",

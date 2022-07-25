@@ -8,11 +8,11 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true
     },
     telefono: {
-      type: dataTypes.INTEGER(100),
+      type: dataTypes.STRING(200),
       allowNull: false
     },
     telefono2: {
-      type: dataTypes.INTEGER(100),
+      type: dataTypes.STRING(200),
       allowNull: false
     },
     users_owners_id: dataTypes.BIGINT(10)

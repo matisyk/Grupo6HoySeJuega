@@ -164,14 +164,14 @@ const controller = {
 				users_owners_id: idOwner
 			})
 			
-			Cancha.create({
-			identificacion: req.body.identificacion,
-			capacidad: req.body.capacidad,
-			valor: req.body.valor,
-			deporte_id: idDeporte,
-			tipo_de_cancha_id: req.body.tipoDeCancha,
-			users_owners_id: idOwner,
-		})
+		// 	Cancha.create({
+		// 	identificacion: req.body.identificacion,
+		// 	capacidad: req.body.capacidad,
+		// 	valor: req.body.valor,
+		// 	deporte_id: idDeporte,
+		// 	tipo_de_cancha_id: req.body.tipoDeCancha,
+		// 	users_owners_id: idOwner,
+		// })
 		
 		})
 

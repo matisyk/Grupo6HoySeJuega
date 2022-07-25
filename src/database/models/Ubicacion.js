@@ -27,6 +27,7 @@ module.exports = (sequelize, dataTypes) => {
         type: dataTypes.INTEGER,
         allowNull: false
       },
+      users_owners_id: dataTypes.BIGINT(10)
     };
     let config = {
       tableName: "ubicacion",
