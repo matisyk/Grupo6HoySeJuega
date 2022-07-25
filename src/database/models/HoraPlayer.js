@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
   let config = {
-    tableName: 'horas_players',
+    tableName: 'horas',
     timestamps: false
   }
   const HoraPlayer = sequelize.define(alias, cols, config);

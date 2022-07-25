@@ -23,31 +23,9 @@ module.exports = (sequelize, dataTypes) => {
     const Profesor = sequelize.define(alias, cols, config);
   
     // Profesor.associate = function (models) {
-  
 
-    // Escuelita.belongsTo(models.Deporte, {
-    //   as: "deporteE",
-    //   foreignKey: "deporte_id"
-    // })
-    // Escuelita.belongsTo(models.Genero,{
-    //   as: "genero",
-    //   foreignKey: "genero_id"
-    // })
-    // Escuelita.hasMany(models.ImagenEscuelita,{
-    //   as: "imagenEscuelita",
-    //   foreignKey: "escuelita_id"
-    // })
-    // CAMBIAR TORNEOS A REL. MUCHOS A MUCHOS EN DIAGRAMA
-      //  Profesor.belongsToMany(models.profesorEscuelita, {
-  //     as: "torneoCancha",
-  //     through: "torneos_canchas",
-  //     foreignKey: "canchas_id",
-  //     otherKey: "torneos_id",
-  //     timestamps: false
-  //   })
-
-  //  Profesor.belongsToMany(models. HORARIO , {
-  //     as: "torneoCancha",
+  //  Profesor.belongsToMany(models.escuelita , {
+  //     as: "escuelita",
   //     through: "torneos_canchas",
   //     foreignKey: "canchas_id",
   //     otherKey: "torneos_id",
