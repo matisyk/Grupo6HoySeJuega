@@ -124,7 +124,14 @@ if (userOwnerToLogin) {
 
   vistaCancha: (req, res) => {
     let userOwnerID = req.params.id
-    let userOwner = UserOwner.findByPk(userOwnerID)
+    let userOwner = UserOwner.findByPk(userOwnerID, {
+      include: []
+    })
+    let img = ImagenOwner.findByPk(userOwnerID, {
+      include: [
+        "userOwnerI"
+      ]
+    })
 
     Promise
     .all([userOwner, userOwnerID])
