@@ -32,7 +32,8 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DATE,
             allowNull: false
           },
-          canchas_id: dataTypes.BIGINT(10),
+          deporte_id: dataTypes.BIGINT(10),
+          genero_id: dataTypes.BIGINT(10),
     };
     let config = {
         tableName: 'torneos',
@@ -41,22 +42,19 @@ module.exports = (sequelize, dataTypes) => {
     const Torneo = sequelize.define(alias, cols, config);
 
 
-    //CAMBIAR A REL. MUCHOS A MUCHOS EN DIAGRAMA
-  //   Torneo.associate = function (models) {
-  //   Torneo.belongsToMany(models.Cancha, {
-  //     as: "torneoCancha",
-  //     through: "torneos_canchas",
-  //     foreignKey: "torneos_id",
-  //     otherKey: "canchas_id",
-  //     timestamps: false
-  //   })
-
 
   // Torneo.hasMany(models.ImagenTorneo, {
   //   as:"imagenTorneo",
   //   foreignKey: "torneos_id"
   // })
-
+  // Torneo.belongsTo(models.Deporte, {
+  //   as: "deporte",
+  //   foreignKey: "deporte_id"
+  // })
+  //Torneo.belongsTo(models.Genero, {
+    //   as: "genero",
+    //   foreignKey: "genero_id"
+    // })
   // }
 
   

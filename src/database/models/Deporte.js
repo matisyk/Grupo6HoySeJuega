@@ -24,6 +24,8 @@ module.exports = (sequelize, dataTypes) => {
 
   // Deporte.associate = function (models) { 
 
+// USER PLAYER
+
   //   Deporte.belongsToMany(models.UserPlayer, { 
   //     as: "userPlayer",
   //     through: 'deportes_users_player',
@@ -35,6 +37,21 @@ module.exports = (sequelize, dataTypes) => {
   //     as: "categoria",
   //     foreignKey: "deportes_id"
   //   })
+
+  // USER OWNER
+
+  //   Deporte.hasMany(models.Escuelita, {
+  //     as: "escuelita",
+  //     foreignKey: "deporte_id"
+  // })
+  // Deporte.hasMany(models.Cancha, {
+  //     as: "cancha",
+  //     foreignKey: "deporte_id"
+  // })
+  // Deporte.hasMany(models.Torneo, {
+  //     as: "torneo",
+  //     foreignKey: "deporte_id"
+  // })
 
   // }
 

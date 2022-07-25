@@ -52,6 +52,10 @@ module.exports = (sequelize, dataTypes) => {
   //     otherKey: "torneos_id",
   //     timestamps: false
   //   })
+  // Cancha.belongsTo(models.Deporte) {
+  //   as: "deporte",
+  //   foreignKey: "deporte_id"
+  // }
     // }
 
   

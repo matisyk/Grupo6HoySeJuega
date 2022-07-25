@@ -29,16 +29,16 @@ module.exports = (sequelize, dataTypes) => {
   
 
     // Escuelita.belongsTo(models.Deporte, {
-    //   as: "userOwner",
-    //   foreignKey: "users_owners_id"
+    //   as: "deporteE",
+    //   foreignKey: "deporte_id"
     // })
     // Escuelita.belongsTo(models.Genero,{
-    //   as: "tipoDeCancha",
-    //   foreignKey: "tipo_de_cancha_id"
+    //   as: "genero",
+    //   foreignKey: "genero_id"
     // })
     // Escuelita.hasMany(models.ImagenEscuelita,{
-    //   as: "imagenCancha",
-    //   foreignKey: "canchas_id"
+    //   as: "imagenEscuelita",
+    //   foreignKey: "escuelita_id"
     // })
     // CAMBIAR TORNEOS A REL. MUCHOS A MUCHOS EN DIAGRAMA
       //  Escuelita.belongsToMany(models.profesorEscuelita, {
