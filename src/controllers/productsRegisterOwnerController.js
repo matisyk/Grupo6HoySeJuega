@@ -196,10 +196,10 @@ const controller = {
 	// Redirect
 	redirect: (req, res) => {
 
-		let id = products.length;
+		//let id = products.length;
 		res.render("partial/register/redireccion", {
 					userOwnerLogged: req.session.userOwnerLogged,
-			id
+		//	id
 		});
 
 	},
