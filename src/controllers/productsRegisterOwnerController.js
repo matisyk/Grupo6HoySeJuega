@@ -10,6 +10,7 @@ const db = require('../database/models');
 const {
 	Console
 } = require('console');
+const fetch = require('node-fetch');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 // constantes de las bases de datos de sequelize modules

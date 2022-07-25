@@ -48,10 +48,10 @@ module.exports = (sequelize, dataTypes) => {
   //   as: "deporte",
   //   foreignKey: "deporte_id"
   // }
-  Cancha.hasMany(models.DiaHorarioEscuelita, {
-    as: "diaYhora",
-    foreignKey: "canchas_id"
-  })
+  // Cancha.hasMany(models.DiaHorarioEscuelita, {
+  //   as: "diaYhora",
+  //   foreignKey: "canchas_id"
+  // })
     // }
 
   

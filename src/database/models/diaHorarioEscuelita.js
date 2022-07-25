@@ -21,22 +21,22 @@ module.exports = (sequelize, dataTypes) => {
     }
     const DiaHorarioEscuelita = sequelize.define(alias, cols, config);
   
-    DiaHorarioEscuelita.associate = function (models) {
+    // DiaHorarioEscuelita.associate = function (models) {
   
-      DiaHorarioEscuelita.belongsTo(models.Escuelita, {
-        as: "dyhEsc",
-        foreignKey: "escuelitas_id"
-      })
-      DiaHorarioEscuelita.belongsTo(models.HoraPlayer, {
-        as: "horaEsc",
-        foreignKey: "horas_id"
-      })
-      DiaHorarioEscuelita.belongsTo(models.DiaPlayer, {
-        as: "diaEsc",
-        foreignKey: "dias_id"
-      })
+    //   DiaHorarioEscuelita.belongsTo(models.Escuelita, {
+    //     as: "dyhEsc",
+    //     foreignKey: "escuelitas_id"
+    //   })
+    //   DiaHorarioEscuelita.belongsTo(models.HoraPlayer, {
+    //     as: "horaEsc",
+    //     foreignKey: "horas_id"
+    //   })
+    //   DiaHorarioEscuelita.belongsTo(models.DiaPlayer, {
+    //     as: "diaEsc",
+    //     foreignKey: "dias_id"
+    //   })
   
-    }
+    // }
   
     return DiaHorarioEscuelita;
   

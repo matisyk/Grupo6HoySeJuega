@@ -19,13 +19,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const ImagenEscuelita = sequelize.define(alias, cols, config);
   
-    ImagenEscuelita.associate = function (models) {
+    // ImagenEscuelita.associate = function (models) {
   
-        ImagenEscuelita.belongsTo(models.Escuelita, {
-        as: "escuelita",
-        foreignKey: "escuelitas_id"
-      })
-      }
+    //     ImagenEscuelita.belongsTo(models.Escuelita, {
+    //     as: "escuelita",
+    //     foreignKey: "escuelitas_id"
+    //   })
+    //   }
   
   return ImagenEscuelita;
   

@@ -21,22 +21,22 @@ module.exports = (sequelize, dataTypes) => {
   }
   const DiaHorarioPlayer = sequelize.define(alias, cols, config);
 
-  DiaHorarioPlayer.associate = function (models) {
+  // DiaHorarioPlayer.associate = function (models) {
 
-    DiaHorarioPlayer.belongsTo(models.UserPlayer, {
-      as: "dyh",
-      foreignKey: "users_players_id"
-    })
-    DiaHorarioPlayer.belongsTo(models.HoraPlayer, {
-      as: "horaP",
-      foreignKey: "horas_players_id"
-    })
-    DiaHorarioPlayer.belongsTo(models.DiaPlayer, {
-      as: "diaP",
-      foreignKey: "dias_players_id"
-    })
+  //   // DiaHorarioPlayer.belongsTo(models.UserPlayer, {
+  //   //   as: "dyh",
+  //   //   foreignKey: "users_players_id"
+  //   // })
+  //   // DiaHorarioPlayer.belongsTo(models.HoraPlayer, {
+  //   //   as: "horaP",
+  //   //   foreignKey: "horas_players_id"
+  //   // })
+  //   // DiaHorarioPlayer.belongsTo(models.DiaPlayer, {
+  //   //   as: "diaP",
+  //   //   foreignKey: "dias_players_id"
+  //   // })
 
-  }
+  // }
 
   return DiaHorarioPlayer;
 

@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-    let alias = 'DiaPlayer';
+    let alias = 'DiaHorarioCancha';
     let cols = {
       id: {
         type: dataTypes.INTEGER,
@@ -13,28 +13,28 @@ module.exports = (sequelize, dataTypes) => {
       }
     };
     let config = {
-      tableName: 'dias',
+      tableName: 'dias_y_horas_canchas',
       timestamps: false
     }
-    const DiaPlayer = sequelize.define(alias, cols, config);
+    const DiaHorarioCancha = sequelize.define(alias, cols, config);
   
-    DiaPlayer.associate = function (models) {
+    DiaHorarioCancha.associate = function (models) {
   
-      //    DiaPlayer.belongsToMany(models.UserPlayer, models.HoraPlayer, {
-      //      as: "dia_hora",
-      //      through: 'dias_horarios_users_players',
-      //     foreignKey: 'dias_players_id',
-      //      otherKey: 'horas_players_id',
-      //     otherKey: 'user_players_id',
-      //      timestamps: false
-      //    })
-      DiaPlayer.hasMany(models.DiaHorarioPlayer, {
-        as: "diaYhoraD",
-        foreignKey: "dias_players_id"
-      })
+    // DiaHorarioCancha.belongsTo(models.Cancha, {
+    //   as: "dyh",
+    //   foreignKey: "canchas_id"
+    // })
+    // DiaHorarioCancha.belongsTo(models.HoraPlayer, {
+    //   as: "horaP",
+    //   foreignKey: "horas_id"
+    // })
+    // DiaHorarioCancha.belongsTo(models.DiaPlayer, {
+    //   as: "diaP",
+    //   foreignKey: "dias_id"
+    // })
   
     }
   
-    return DiaPlayer;
+    return DiaHorarioCancha;
   
   }

@@ -33,23 +33,23 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: "dias_players_id"
     })
 
-//DIAS CANCHA
-DiaPlayer.hasMany(models.DiaHorarioCancha, {
-  as: "diaYhoraD",
-  foreignKey: "dias_id"
-})
+// //DIAS CANCHA
+// DiaPlayer.hasMany(models.DiaHorarioCancha, {
+//   as: "diaCancha",
+//   foreignKey: "dias_id"
+// })
 
-//DIAS ESCUELITA
-DiaPlayer.hasMany(models.DiaHorarioEscuelita, {
-  as: "diaYhoraD",
-  foreignKey: "dias_id"
-})
+// //DIAS ESCUELITA
+// DiaPlayer.hasMany(models.DiaHorarioEscuelita, {
+//   as: "diaEsc",
+//   foreignKey: "dias_id"
+// })
 
-//DIAS TORNEO
-DiaPlayer.hasMany(models.DiaHorarioTorneo, {
-  as: "diaYhoraD",
-  foreignKey: "dias_id"
-})
+// //DIAS TORNEO
+// DiaPlayer.hasMany(models.DiaHorarioTorneo, {
+//   as: "diaTorneo",
+//   foreignKey: "dias_id"
+// })
 
   }
 

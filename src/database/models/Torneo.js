@@ -55,10 +55,10 @@ module.exports = (sequelize, dataTypes) => {
     //   as: "genero",
     //   foreignKey: "genero_id"
     // })
-    Torneo.hasMany(models.DiaHorarioEscuelita, {
-      as: "diaYhora",
-      foreignKey: "torneos_id"
-    })
+    // Torneo.hasMany(models.DiaHorarioEscuelita, {
+    //   as: "diaYhora",
+    //   foreignKey: "torneos_id"
+    // })
   // }
 
   

@@ -24,13 +24,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const ImagenOwner = sequelize.define(alias, cols, config);
   
-    ImagenOwner.associate = function (models) {
+    // ImagenOwner.associate = function (models) {
   
-      ImagenOwner.belongsTo(models.UserPlayer, {
-        as: "userOwner",
-        foreignKey: "user_owners_id"
-      })
-    }
+    //   ImagenOwner.belongsTo(models.UserPlayer, {
+    //     as: "userOwner",
+    //     foreignKey: "user_owners_id"
+    //   })
+    // }
   
     return ImagenOwner;
   
