@@ -36,17 +36,59 @@ const controller = {
 			image = "estrella-gris.png";
 		}
 
-		let newProduct = {
-			id: products[products.length - 1].id + 1,
-			...req.body, 
-			image: image
-		}
+		Cancha
+		.create({
+			identificacion: req.body.identificacion,
+			capacidad: req.body.capacidad,
+			valor: req.body.valor,
+			users_owners_id: idOwner,
+			deporte_id: idDeporte,
+			tipo_de_cancha_id: req.body.tipoDeCancha
+		})
+		.then((result) => {
+			const idCancha = result.id
+			TipoDeCancha.create({
+				material: req.body.material,
+				canchas_id: idCancha
+			})
 
-		products.push(newProduct);
+			ImagenCancha.create({
+				image: image,
+				canchas_id: idCancha
+			})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
+			Deporte.create({
+				deporte: req.body.deporte,
+				active: req.body.active,
+				canchas_id: idCancha
+			})
+
+			DiaHorarioCancha.create({
+				dias_id: req.body.dias,
+				horas_id: req.body.horas,
+				canchas_id: idCancha
+			})
+
+		})
+
+		.then(() => {
+			return res.redirect("/userOwner/loginCourt");
+		})
+		.catch(error => res.send(error))
+	
+
+
+		// let newProduct = {
+		// 	id: products[products.length - 1].id + 1,
+		// 	...req.body, 
+		// 	image: image
+		// }
+
+		// products.push(newProduct);
+
+		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
 		
-		 return res.redirect("/userOwner/update")
+		//  return res.redirect("/userOwner/update")
 
 	}, 
 	redirect: (req, res) => {

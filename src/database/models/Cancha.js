@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false
       },
       users_owners_id: dataTypes.BIGINT(10),
-      deporte_id: dataTypes.BIGINT(10),
+      deportes_players_id: dataTypes.BIGINT(10),
       tipo_de_cancha_id: dataTypes.BIGINT(10)
     };
     let config = {
@@ -29,13 +29,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Cancha = sequelize.define(alias, cols, config);
   
-    // Cancha.associate = function (models) {
+    Cancha.associate = function (models) {
   
 
-    // Cancha.belongsTo(models.UserOwner, {
-    //   as: "userOwner",
-    //   foreignKey: "users_owners_id"
-    // })
+    Cancha.belongsTo(models.UserOwner, {
+      as: "userOwner",
+      foreignKey: "users_owners_id"
+    })
     // Cancha.belongsTo(models.TipoDeCancha,{
     //   as: "tipoDeCancha",
     //   foreignKey: "tipo_de_cancha_id"
@@ -48,13 +48,11 @@ module.exports = (sequelize, dataTypes) => {
   //   as: "deporte",
   //   foreignKey: "deporte_id"
   // }
-  // Cancha.hasMany(models.DiaHorarioEscuelita, {
+  // Cancha.hasMany(models.DiaHorarioCancha, {
   //   as: "diaYhora",
   //   foreignKey: "canchas_id"
   // })
-    // }
-
+   }
   
-    return Cancha;
-  
+    return Cancha 
   }

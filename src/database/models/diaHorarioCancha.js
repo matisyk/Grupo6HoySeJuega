@@ -7,10 +7,9 @@ module.exports = (sequelize, dataTypes) => {
         primaryKey: true,
         autoIncrement: true
       },
-      dia: {
-        type: dataTypes.STRING(45),
-        allowNull: false
-      }
+      canchas_id: dataTypes.BIGINT(10),
+      dias_id: dataTypes.BIGINT(10),
+      horas_id: dataTypes.BIGINT(10),
     };
     let config = {
       tableName: 'dias_y_horas_canchas',

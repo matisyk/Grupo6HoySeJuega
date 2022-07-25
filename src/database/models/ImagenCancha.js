@@ -19,13 +19,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const ImagenCancha = sequelize.define(alias, cols, config);
   
-    // ImagenCancha.associate = function (models) {
+    ImagenCancha.associate = function (models) {
   
-    //   ImagenCancha.belongsTo(models.Cancha, {
-    //     as: "imagenCancha",
-    //     foreignKey: "canchas_id"
-    //   })
-    //   }
+      ImagenCancha.belongsTo(models.Cancha, {
+        as: "imagenCancha",
+        foreignKey: "canchas_id"
+      })
+      }
   
   return ImagenCancha;
   

@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
   
       ImagenOwner.belongsTo(models.UserOwner, {
         as: "userOwnerI",
-        foreignKey: "user_owners_id"
+        foreignKey: "users_owners_id"
       })
     }
   
