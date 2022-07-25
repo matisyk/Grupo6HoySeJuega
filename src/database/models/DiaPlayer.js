@@ -19,7 +19,7 @@ module.exports = (sequelize, dataTypes) => {
   const DiaPlayer = sequelize.define(alias, cols, config);
 
   DiaPlayer.associate = function (models) {
-
+//DIAS PLAYER
     //    DiaPlayer.belongsToMany(models.UserPlayer, models.HoraPlayer, {
     //      as: "dia_hora",
     //      through: 'dias_horarios_users_players',
@@ -32,6 +32,24 @@ module.exports = (sequelize, dataTypes) => {
       as: "diaYhoraD",
       foreignKey: "dias_players_id"
     })
+
+//DIAS CANCHA
+DiaPlayer.hasMany(models.DiaHorarioCancha, {
+  as: "diaYhoraD",
+  foreignKey: "dias_id"
+})
+
+//DIAS ESCUELITA
+DiaPlayer.hasMany(models.DiaHorarioEscuelita, {
+  as: "diaYhoraD",
+  foreignKey: "dias_id"
+})
+
+//DIAS TORNEO
+DiaPlayer.hasMany(models.DiaHorarioTorneo, {
+  as: "diaYhoraD",
+  foreignKey: "dias_id"
+})
 
   }
 

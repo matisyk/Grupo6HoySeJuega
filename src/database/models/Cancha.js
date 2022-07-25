@@ -44,18 +44,14 @@ module.exports = (sequelize, dataTypes) => {
     //   as: "imagenCancha",
     //   foreignKey: "canchas_id"
     // })
-    // CAMBIAR TORNEOS A REL. MUCHOS A MUCHOS EN DIAGRAMA
-      //  Cancha.belongsToMany(models.Torneo, {
-  //     as: "torneoCancha",
-  //     through: "torneos_canchas",
-  //     foreignKey: "canchas_id",
-  //     otherKey: "torneos_id",
-  //     timestamps: false
-  //   })
   // Cancha.belongsTo(models.Deporte) {
   //   as: "deporte",
   //   foreignKey: "deporte_id"
   // }
+  Cancha.hasMany(models.DiaHorarioEscuelita, {
+    as: "diaYhora",
+    foreignKey: "canchas_id"
+  })
     // }
 
   
