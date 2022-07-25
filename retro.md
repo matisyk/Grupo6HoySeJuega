@@ -67,3 +67,25 @@ Sprint 5 ->
 5. Dejar de hacer:
 
 - No hacer commits globales, sino más específicos de cada cambio, por si en algún momento hay que volver atrás.
+
+Sprint 6 ->
+
+1. Comenzar a hacer: 
+
+- Mayor disponibilidad grupal.
+
+2. Hacer más:
+
+- Hacer commits mas especificos y comunicativos
+
+3. Continuar haciendo:
+
+- Perserverancia en las ideas base del proyecto y a lo que apunta en su amplitud de servicio. 
+
+4. Hacer menos:
+
+- Avanzar menos de manera individual y desorganizada.
+
+5. Dejar de hacer:
+
+- No hacer commits globales, sino más específicos de cada cambio, por si en algún momento hay que volver atrás.
