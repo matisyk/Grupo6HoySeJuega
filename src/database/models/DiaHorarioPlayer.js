@@ -13,7 +13,7 @@ module.exports = (sequelize, dataTypes) => {
     users_players_id: dataTypes.BIGINT(10)
   };
   let config = {
-    tableName: 'dias_horarios_users_players',
+    tableName: 'dias_y_horas_player',
     timestamps: false,
     // createdAt: 'created_at',
     // updatedAt: 'updated_at',
@@ -21,7 +21,22 @@ module.exports = (sequelize, dataTypes) => {
   }
   const DiaHorarioPlayer = sequelize.define(alias, cols, config);
 
-  // aca va la relacion
+  DiaHorarioPlayer.associate = function (models) {
+
+    DiaHorarioPlayer.belongsTo(models.UserPlayer, {
+      as: "dyh",
+      foreignKey: "users_players_id"
+    })
+    DiaHorarioPlayer.belongsTo(models.HoraPlayer, {
+      as: "horaP",
+      foreignKey: "horas_players_id"
+    })
+    DiaHorarioPlayer.belongsTo(models.DiaPlayer, {
+      as: "diaP",
+      foreignKey: "dias_players_id"
+    })
+
+  }
 
   return DiaHorarioPlayer;
 

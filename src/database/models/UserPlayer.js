@@ -60,7 +60,10 @@ module.exports = (sequelize, dataTypes) => {
         as: "telefono",
         foreignKey: "users_players_id"
       })
-      
+      UserPlayer.hasMany(models.DiaHorarioPlayer, {
+        as: "diaYhora",
+        foreignKey: "users_players_id"
+      })
       //  UserPlayer.belongsToMany(models.DiaPlayer, HoraPlayer, {
       //   as: "dia_hora",
       //   through: 'dias_horarios_users_players',

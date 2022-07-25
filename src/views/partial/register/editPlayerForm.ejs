@@ -96,9 +96,11 @@
               <div class="entre-divs">
                 <label for="autoValoracion">Auto valoración:</label>
                 <br>
-                <select name="autoValoracion" id="autoValoracion" >
+                <select name="autoValoracion" id="autoValoracion">
                   <%valoraciones.forEach(valoraciones => { %>
-                  <option value="<%=valoraciones.id%>" <% if (userplayer.autoV.id == valoraciones.id) { %><%= 'selected'  %><% }; %>> <%= valoraciones.tipo %></option>
+                  <option value="<%=valoraciones.id%>"
+                    <% if (userplayer.autoV.id == valoraciones.id) { %><%= 'selected'  %><% }; %>>
+                    <%= valoraciones.tipo %></option>
                   <% }); %>
                 </select>
               </div>
@@ -106,7 +108,7 @@
               <div class="entre-divs">
                 <label for="Ubicacion">Recidencia:</label>
                 <br>
-                <select name="ubicacion" id="ubicacion" >
+                <select name="ubicacion" id="ubicacion">
                   <% zonasdejuego.forEach(zonasdejuego => { %>
                   <option value="<%= zonasdejuego.id %>"
                     <% if (userplayer.zonas.id == zonasdejuego.id) { %><%= 'selected'  %><% }; %>>
@@ -121,7 +123,7 @@
               <div class="entre-divs">
                 <label for="deporte">Deporte que juego:</label>
                 <br>
-                <select id="deporte1" name="deporte1" >
+                <select id="deporte1" name="deporte1">
                   <option value="" disabled selected> Elegir</option>
                   <% deportes.forEach(deporte => { %>
                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
@@ -154,9 +156,11 @@
               <div class="entre-divs">
                 <label for="dias">Dias para jugar:</label>
                 <select id="dias" name="dia1">
-                  <option value="" disabled selected> dias para jugar</option>
                   <% dias.forEach(dias => { %>
-                  <option value="<%= dias.id %>"><%= dias.dia %></option>
+                  <option value="<%= dias.id %>"
+                    <% if (diasYhoras.diaP.id == dias.id) { %><%= 'selected'  %><% }; %>>
+                    <%= dias.dia %>
+                  </option>
                   <% }); %>
                 </select>
               </div>
@@ -165,7 +169,10 @@
                 <select id="horarios" name="hora1">
                   <option value="" disabled selected> Horarios para jugar</option>
                   <% horarios.forEach(horarios => { %>
-                  <option value="<%= horarios.id %>"><%= horarios.hora %></option>
+                  <option value="<%= horarios.id %>" 
+                    <% if (diasYhoras.horaP.id == horarios.id) { %><%= 'selected'  %><% }; %>>
+                    <%= horarios.hora %>
+                  </option>
                   <% }); %>
                 </select>
               </div>
@@ -173,10 +180,11 @@
 
             <div class="entre-divs8">
               <label for="">Cargar imagen de perfil:</label>
-              <label> <img style="width: 130px; margin-top: 40px; border-radius: 70px; margin-left: 50px; margin-bottom: 20px"
+              <label> <img
+                  style="width: 130px; margin-top: 40px; border-radius: 70px; margin-left: 50px; margin-bottom: 20px"
                   src="/img/jugadores/<%- img.foto %>">
               </label>
-               <!-- <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6> -->
+              <!-- <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6> -->
               <input type="file" name="imagenJugador" accept=".jpg" multiple class="form-input">
             </div>
           </div>
