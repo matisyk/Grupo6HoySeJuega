@@ -125,17 +125,21 @@
                 <br>
                 <select id="deporte1" name="deporte1">
                   <option value="" disabled selected> Elegir</option>
-                  <% deportes.forEach(deporte => { %>
-                  <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
-                  <% }); %>
+                   <% deportes.forEach(deportes => { %>
+                   <option value="<%= deportes.id %>"
+                     <% if (userplayer.deporte1.id == deportes.id) { %><%= 'selected'  %><% }; %>>
+                     <%= deportes.deporte %></option>
+                   <% }); %>
                 </select>
                 <br>
                 <br>
                 <select id="deporte2" name="deporte2">
                   <option value="" disabled selected> Elegir</option>
-                  <% deportes.forEach(deporte => { %>
-                  <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
-                  <% }); %>
+                   <% deportes.forEach(deportes => { %>
+                   <option value="<%= deportes.id %>"
+                     <% if (userplayer.deporte2.id == deportes.id) { %><%= 'selected'  %><% }; %>>
+                     <%= deportes.deporte %></option>
+                   <% }); %>
                 </select>
               </div>
               <div class="entre-divs">

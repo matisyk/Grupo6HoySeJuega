@@ -31,7 +31,7 @@ module.exports = (sequelize, dataTypes) => {
     zonas_de_juego_id: dataTypes.BIGINT(10),
     auto_valoracion_id: dataTypes.BIGINT(10),
     deportes_players_id: dataTypes.BIGINT(10),
-     deportes_players_id2: dataTypes.BIGINT(10)
+    deportes_players_id2: dataTypes.BIGINT(10)
   };
   let config = {
     tableName: 'users_players',
@@ -44,11 +44,11 @@ module.exports = (sequelize, dataTypes) => {
 
   UserPlayer.associate = function (models) {
 
-     UserPlayer.hasMany(models.ImagenPlayer, {
-         as: "imagenPlayer",
-         foreignKey: "users_players_id"
-     })
-       
+    UserPlayer.hasMany(models.ImagenPlayer, {
+      as: "imagenPlayer",
+      foreignKey: "users_players_id"
+    })
+
     //   UserPlayer.belongsToMany(models.Deporte, {
     //     as: "deporte",
     //     through: 'deportes_users_player',
@@ -56,29 +56,37 @@ module.exports = (sequelize, dataTypes) => {
     //     otherKey: 'deportes_id',
     //     timestamps: false
     //   })
-       UserPlayer.hasMany(models.TelefonoPlayer, {
-        as: "telefono",
-        foreignKey: "users_players_id"
-      })
-      UserPlayer.hasMany(models.DiaHorarioPlayer, {
-        as: "diaYhora",
-        foreignKey: "users_players_id"
-      })
-      //  UserPlayer.belongsToMany(models.DiaPlayer, HoraPlayer, {
-      //   as: "dia_hora",
-      //   through: 'dias_horarios_users_players',
-      //   foreignKey: 'user_players_id',
-      //   otherKey: 'dias_players_id',
-      //   otherKey: 'horas_players_id',
-      //   timestamps: false
-      //  })
-     UserPlayer.belongsTo(models.ZonaDeJuego, {
-       as: "zonas",
-       foreignKey: "zonas_de_juego_id"
-     })
+    UserPlayer.hasMany(models.TelefonoPlayer, {
+      as: "telefono",
+      foreignKey: "users_players_id"
+    })
+    UserPlayer.hasMany(models.DiaHorarioPlayer, {
+      as: "diaYhora",
+      foreignKey: "users_players_id"
+    })
+    //  UserPlayer.belongsToMany(models.DiaPlayer, HoraPlayer, {
+    //   as: "dia_hora",
+    //   through: 'dias_horarios_users_players',
+    //   foreignKey: 'user_players_id',
+    //   otherKey: 'dias_players_id',
+    //   otherKey: 'horas_players_id',
+    //   timestamps: false
+    //  })
+    UserPlayer.belongsTo(models.ZonaDeJuego, {
+      as: "zonas",
+      foreignKey: "zonas_de_juego_id"
+    })
     UserPlayer.belongsTo(models.AutoValoracion, {
       as: "autoV",
       foreignKey: "auto_valoracion_id"
+    })
+    UserPlayer.belongsTo(models.Deporte, {
+      as: "deporte1",
+      foreignKey: "deportes_players_id"
+    })
+    UserPlayer.belongsTo(models.Deporte, {
+      as: "deporte2",
+      foreignKey: "deportes_players_id2"
     })
   }
 

@@ -183,7 +183,7 @@ const controller = {
 
 		let userPlayerID = req.params.id
 		let userplayer = UserPlayer.findByPk(userPlayerID, {
-			include: ['zonas', 'autoV' ]
+			include: ['zonas', 'autoV', 'deporte1', 'deporte2' ]
 		})
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
