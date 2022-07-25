@@ -33,7 +33,8 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
           },
           deporte_id: dataTypes.BIGINT(10),
-          genero_id: dataTypes.BIGINT(10),
+      genero_id: dataTypes.BIGINT(10),
+          users_owners_id: dataTypes.BIGINT(10),
     };
     let config = {
         tableName: 'torneos',

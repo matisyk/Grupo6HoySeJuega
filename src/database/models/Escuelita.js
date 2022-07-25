@@ -7,17 +7,14 @@ module.exports = (sequelize, dataTypes) => {
         primaryKey: true,
         autoIncrement: true
       },
-      // ASI ESTA EN DIAGRAMA:
-    //   identificacion_cancha: {
-    //     type: dataTypes.STRING(45),
-    //     allowNull: false
-    //   },
       valor: {
         type: dataTypes.INTEGER,
         allowNull: false
       },
       genero_id: dataTypes.BIGINT(10),
       deporte_id: dataTypes.BIGINT(10),
+      canchas_id: dataTypes.BIGINT(10),
+      users_owners_id: dataTypes.BIGINT(10),
     };
     let config = {
       tableName: 'escuelitas',

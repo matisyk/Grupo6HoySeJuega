@@ -34,6 +34,8 @@ const ImagenOwner = db.ImagenOwner;
 const DetalleLugarOwner = db.DetalleLugarOwner;
 const Cancha = db.Cancha;
 const Ubicacion = db.Ubicacion
+const Escuelita = db.Escuelita;
+const Torneo = db.Torneo
 
 
 const userOwnerController = {
@@ -51,12 +53,10 @@ UserOwner.findOne({
   }
 })
 .then((userOwnerToLogin)=> {
-console.log("🚀 ~ file: userOwnerController.js ~ line 54 ~ .then ~ userOwnerToLogin", userOwnerToLogin)
+
 if (userOwnerToLogin) {
       let isOkPassword = bcryptjs.compareSync(req.body.password, userOwnerToLogin.password);
-      console.log("🚀 ~ file: userOwnerController.js ~ line 57 ~ .then ~ req.body.password", req.body.password)
-      console.log("🚀 ~ file: userOwnerController.js ~ line 57 ~ .then ~  userOwnerToLogin.password",  userOwnerToLogin.password)
-      console.log("🚀 ~ file: userOwnerController.js ~ line 57 ~ .then ~ isOkPassword", isOkPassword)
+  
       if (isOkPassword) {
 
         delete userOwnerToLogin.password;
@@ -130,27 +130,37 @@ if (userOwnerToLogin) {
         "userOwnerI"
       ]
     })
-    let canchas = Cancha.findByPk(userOwnerID, {
-      include: [
-        "userOwner"
-      ]
+    // let canchas = Cancha.findByPk(userOwnerID, {
+    //   include: [
+    //     "userOwner"
+    //   ]
+    // })
+    let canchas = Cancha.findAll({ where: { users_owners_id: userOwnerID } })
+    let escuelitas = Escuelita.findAll({
+      where: {
+        users_owners_id: userOwnerID
+      }
     })
-
+const torneos = Torneo.findAll({
+  where: {
+    users_owners_id: userOwnerID
+  }
+})
     Promise
-    .all([userOwner, userOwnerID, img, canchas])
-    .then(([userOwner, userOwnerID, img, canchas])=> {
+    .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos])
+    .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos]) => {
+      
       res.render("partial/userOwner/vistaCancha", {
       userOwner,
       userOwnerID,
       img,
       canchas,
-      // escuelitas,
-      // torneos,
+     escuelitas,
+    torneos,
     //  mediosP,
       userOwnerLogged: req.session.userOwnerLogged
     })
     })
-      console.log("🚀 ~ file: userOwnerController.js ~ line 140 ~ .then ~ userOwner", userOwner)
     
   },
   canchas: (req, res) => {

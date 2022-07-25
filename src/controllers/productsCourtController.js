@@ -123,7 +123,6 @@ const controller = {
 			image = productToEdit.image
 		}
 		
-		
 		productToEdit = {
 			id: productToEdit.id,
 			...req.body,

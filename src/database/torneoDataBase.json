@@ -1,20 +1,5 @@
 [
  {
-  "id": 1
- },
- {
-  "id": 2,
-  "deporte": "futbol",
-  "category": "torneo",
-  "cantidadEquipos": "50",
-  "categoria": "2000",
-  "genero": "femenino",
-  "fechaInicio": "2022-10-31",
-  "fechaFinal": "2022-11-30",
-  "dia": "lunes",
-  "registroHorarios": "17:00",
-  "valor": "1000",
-  "premio": "100000",
-  "image": "png-clipart-trophy-medal-organization-competition-mobile-app-development-copa-del-rey-child-company.png"
+  "id": 0
  }
 ]

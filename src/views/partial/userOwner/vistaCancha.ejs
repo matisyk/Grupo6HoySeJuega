@@ -43,6 +43,7 @@
   <section class="jd-slider slideshow">
     <div class="slide-inner">
       <ul class="slide-area">
+
         <li>
           <% if (typeof img.image != "undefined") { %>
             <img class="user-img" src="/img/products/<%= img.image %>">
@@ -85,22 +86,22 @@
       <section class="jd-slider slideshow">
         <div class="slide-inner">
           <ul class="slide-area">
-            <% canchas.forEach (cancha => { %>
+            <% canchas.forEach (canchas => { %>
             <li>
               <div class="tarjetas tarjetas-canchas">
                 <div class="tarjeta">
                   <div class="blob"></div>
-                  <span class="img"><a href="/userOwner/agenda"><img src="/img/products/<%= cancha.image %>" alt=""></a></span>
-                  <h3><%= cancha.identificacion %></h3>
-                  <h3>$ <%= cancha.valor %></h3>
+                  <span class="img"><a href="/userOwner/agenda"><img src="/img/products/" alt=""></a></span>
+                  <h3><%= canchas.identificacion %></h3>
+                  <h3>$ <%= canchas.valor %></h3>
 
-                  <form action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/court/<%= cancha.id%>?_method=DELETE"
+                  <form action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/court/<%= canchas.id%>?_method=DELETE"
                     method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
 
 
-                  <button class="boton-editar"><a href="/userOwner/vistaCancha/<%= userOwner.id %>/editCourt/<%= cancha.id%>"><i
+                  <button class="boton-editar"><a href="/userOwner/vistaCancha/<%= userOwner.id %>/editCourt/<%= canchas.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>
               </div>
