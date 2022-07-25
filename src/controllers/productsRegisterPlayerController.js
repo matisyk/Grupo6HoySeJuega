@@ -139,7 +139,8 @@ const controller = {
 				fecha_nacimiento: req.body.edad,
 				zonas_de_juego_id: req.body.zonasdejuego,
 				auto_valoracion_id: req.body.autoValoracion,
-				deportes_players_id: req.body.deporte1
+				deportes_players_id: req.body.deporte1,
+				deportes_players_id2: req.body.deporte2
 
 			})
 			.then((result) => {
@@ -182,12 +183,15 @@ const controller = {
 	edit: (req, res) => {
 
 		let userPlayerID = req.params.id
-		let userplayer = UserPlayer.findByPk(userPlayerID)
+		let userplayer = UserPlayer.findByPk(userPlayerID, {
+			include: ['zonas', 'autoV', 'dyh']
+		})
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
 		let zonasdejuego = ZonasDeJuego.findAll();
 		let horarios = HoraPlayer.findAll();
 		let dias = DiaPlayer.findAll()
+		let diasYhoras = DiaHorarioPlayer.findAll()
 		let img = ImagenPlayer.findByPk(userPlayerID, {
 			include: [
 				"userPlayerI"
@@ -228,7 +232,8 @@ const controller = {
 				fecha_nacimiento: req.body.edad,
 				zonas_de_juego_id: req.body.zonasdejuego,
 				auto_valoracion_id: req.body.autoValoracion,
-				deportes_players_id: req.body.deporte1
+				deportes_players_id: req.body.deporte1,
+				deportes_players_id2: req.body.deporte2
 			}, {
 				where: {
 					id: userPlayerID

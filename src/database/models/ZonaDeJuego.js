@@ -26,7 +26,7 @@ module.exports = (sequelize, dataTypes) => {
   }
   const ZonaDeJuego = sequelize.define(alias, cols, config);
 
-  // ZonaDeJuego.associate = function (models) {
+   ZonaDeJuego.associate = function (models) {
 
     //   ZonaDeJuego.belongsToMany(models.UserPlayer, { 
     //     as: "userPlayer",
@@ -39,11 +39,11 @@ module.exports = (sequelize, dataTypes) => {
     //     as: "categoria",
     //     foreignKey: "ZonaDeJuegos_id"
     //   })
-  //   ZonaDeJuego.belongsTo(models.UserPlayer, {
-  //     as: "userPlayer",
-  //     foreignKey: "zonas_de_juegos_id"
-  //   })
-  // }
+     ZonaDeJuego.hasMany(models.UserPlayer, {
+       as: "userPlayer",
+       foreignKey: "zonas_de_juego_id"
+     })
+   }
 
   return ZonaDeJuego;
 

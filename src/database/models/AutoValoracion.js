@@ -18,13 +18,13 @@ module.exports = (sequelize, dataTypes) => {
   }
   const AutoValoracion = sequelize.define(alias, cols, config);
 
-  // AutoValoracion.associate = function (models) {
+   AutoValoracion.associate = function (models) {
 
-  //   AutoValoracion.belongsTo(models.UserPlayer, {
-  //     as: "userPlayer",
-  //     foreignKey: "user_players_id"
-  //   })
-  // }
+     AutoValoracion.hasMany(models.UserPlayer, {
+      as: "userPlayer",
+       foreignKey: "auto_valoracion_id"
+     })
+ }
 
   return AutoValoracion;
 

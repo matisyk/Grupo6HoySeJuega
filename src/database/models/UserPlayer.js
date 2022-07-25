@@ -30,7 +30,8 @@ module.exports = (sequelize, dataTypes) => {
     },
     zonas_de_juego_id: dataTypes.BIGINT(10),
     auto_valoracion_id: dataTypes.BIGINT(10),
-    deportes_players_id: dataTypes.BIGINT(10)
+    deportes_players_id: dataTypes.BIGINT(10),
+     deportes_players_id2: dataTypes.BIGINT(10)
   };
   let config = {
     tableName: 'users_players',
@@ -60,18 +61,22 @@ module.exports = (sequelize, dataTypes) => {
         foreignKey: "users_players_id"
       })
       
-    //   UserPlayer.belongsToMany(models.DiaPlayer, models.HoraPlayer, {
-    //     as: "dia_hora",
-    //     through: 'dias_horarios_users_players',
-    //     foreignKey: 'user_players_id',
-    //     otherKey: 'dias_players_id',
-    //     otherKey: 'horas_players_id',
-    //     timestamps: false
-    //   })
-    // UserPlayer.belongsTo(models.ZonaDeJuego, {
-    //   as: "zonas_de_juegos",
-    //   foreignKey: "user_players_id"
-    // })
+      //  UserPlayer.belongsToMany(models.DiaPlayer, HoraPlayer, {
+      //   as: "dia_hora",
+      //   through: 'dias_horarios_users_players',
+      //   foreignKey: 'user_players_id',
+      //   otherKey: 'dias_players_id',
+      //   otherKey: 'horas_players_id',
+      //   timestamps: false
+      //  })
+     UserPlayer.belongsTo(models.ZonaDeJuego, {
+       as: "zonas",
+       foreignKey: "zonas_de_juego_id"
+     })
+    UserPlayer.belongsTo(models.AutoValoracion, {
+      as: "autoV",
+      foreignKey: "auto_valoracion_id"
+    })
   }
 
 
