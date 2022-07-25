@@ -47,48 +47,48 @@ const userOwnerController = {
   processLoginOwner: (req, res) => {
 
     //let userOwnerToLogin = userOwner.findByField('email', req.body.email)
-UserOwner.findOne({
-  where: {
-    email: req.body.email
-  }
-})
-.then((userOwnerToLogin)=> {
-
-if (userOwnerToLogin) {
-      let isOkPassword = bcryptjs.compareSync(req.body.password, userOwnerToLogin.password);
-  
-      if (isOkPassword) {
-
-        delete userOwnerToLogin.password;
-        req.session.userOwnerLogged = userOwnerToLogin
-
-        if (req.body.recordarOwner) {
-          res.cookie('userOwnerEmail', req.body.email, {
-            maxAge: (1000 * 60) * 60
-          })
+    UserOwner.findOne({
+        where: {
+          email: req.body.email
         }
+      })
+      .then((userOwnerToLogin) => {
 
-        return res.redirect("/register/userOwner/welcome")
-      }
+        if (userOwnerToLogin) {
+          let isOkPassword = bcryptjs.compareSync(req.body.password, userOwnerToLogin.password);
 
-      return res.render('partial/login/loginCourt', {
-        errors: {
-          password: {
-            msg: 'Error en tu contraseña'
+          if (isOkPassword) {
+
+            delete userOwnerToLogin.password;
+            req.session.userOwnerLogged = userOwnerToLogin
+
+            if (req.body.recordarOwner) {
+              res.cookie('userOwnerEmail', req.body.email, {
+                maxAge: (1000 * 60) * 60
+              })
+            }
+
+            return res.redirect("/register/userOwner/welcome")
           }
-        }
-      });
-    }
 
-    return res.render('partial/login/loginCourt', {
-      errors: {
-        email: {
-          msg: 'No se encuentra registrado este mail'
+          return res.render('partial/login/loginCourt', {
+            errors: {
+              password: {
+                msg: 'Error en tu contraseña'
+              }
+            }
+          });
         }
-      }
-    });
-})
-    
+
+        return res.render('partial/login/loginCourt', {
+          errors: {
+            email: {
+              msg: 'No se encuentra registrado este mail'
+            }
+          }
+        });
+      })
+
 
   },
   logout: (req, res) => {
@@ -130,38 +130,54 @@ if (userOwnerToLogin) {
         "userOwnerI"
       ]
     })
-    // let canchas = Cancha.findByPk(userOwnerID, {
-    //   include: [
-    //     "userOwner"
-    //   ]
-    // })
-    let canchas = Cancha.findAll({ where: { users_owners_id: userOwnerID } })
+    let detalles = DetalleLugarOwner.findByPk(userOwnerID, {
+      include: [
+        "userOwnerD"
+      ]
+    })
+    let canchas = Cancha.findAll({
+      where: {
+        users_owners_id: userOwnerID
+      }
+    })
     let escuelitas = Escuelita.findAll({
       where: {
         users_owners_id: userOwnerID
       }
     })
-const torneos = Torneo.findAll({
-  where: {
-    users_owners_id: userOwnerID
-  }
-})
+    const torneos = Torneo.findAll({
+      where: {
+        users_owners_id: userOwnerID
+      }
+    })
+    const mediosdepago = MedioDePago.findByPk(userOwnerID, {
+      include: ["userOwnerMP"]
+    })
+    const ubicacion = Ubicacion.findByPk(userOwnerID, {
+      include: ["userOwnerU"]
+    })
+    const logo = LogoOwner.findByPk(userOwnerID, {
+      include: ["userOwnerL"]
+    })
     Promise
-    .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos])
-    .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos]) => {
-      
-      res.render("partial/userOwner/vistaCancha", {
-      userOwner,
-      userOwnerID,
-      img,
-      canchas,
-     escuelitas,
-    torneos,
-    //  mediosP,
-      userOwnerLogged: req.session.userOwnerLogged
-    })
-    })
-    
+      .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo, ])
+      .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo, ]) => {
+
+        res.render("partial/userOwner/vistaCancha", {
+          userOwner,
+          userOwnerID,
+          img,
+          canchas,
+          escuelitas,
+          torneos,
+          mediosdepago,
+          detalles,
+          ubicacion,
+          logo,
+          userOwnerLogged: req.session.userOwnerLogged
+        })
+      })
+
   },
   canchas: (req, res) => {
     let id = req.params.id

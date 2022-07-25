@@ -15,9 +15,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Kalam&family=Roboto&display=swap"
         rel="stylesheet">
+        <%- include('../css-externos') %>
 </head>
 
 <body>
+    <%- include('./headerOwner') %>
 <main>
     <form action="/userOwner/vistacancha/:id/crearTorneo" method="POST" enctype="multipart/form-data">
         <div class="tarjeta">

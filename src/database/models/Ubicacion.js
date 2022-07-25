@@ -35,14 +35,14 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Ubicacion = sequelize.define(alias, cols, config);
   
-    // Ubicacion.associate = function (models) { 
+     Ubicacion.associate = function (models) { 
   
-    //     Ubicacion.belongsTo(models.UserOwner, {
-    //         as: "userOwner",
-    //         foreignKey: "users_owners_id"
-    //        })
+         Ubicacion.belongsTo(models.UserOwner, {
+             as: "userOwnerU",
+            foreignKey: "users_owners_id"
+            })
   
-    // }
+     }
   
     return Ubicacion;
   

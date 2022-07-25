@@ -47,13 +47,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const DetalleLugarOwner = sequelize.define(alias, cols, config);
   
-    // DetalleLugarOwner.associate = function (models) {
+     DetalleLugarOwner.associate = function (models) {
   
-    //     DetalleLugarOwner.belongsTo(models.UserOwner, {
-    //      as: "userOwner",
-    //      foreignKey: "users_owners_id"
-    //     })
-    // }
+         DetalleLugarOwner.belongsTo(models.UserOwner, {
+          as: "userOwnerD",
+         foreignKey: "users_owners_id"
+         })
+    }
   
     return DetalleLugarOwner;
   

@@ -40,22 +40,22 @@ module.exports = (sequelize, dataTypes) => {
   
      UserOwner.associate = function (models) {
   
-    //  UserOwner.belongsTo(models.DetalleLugarOwner, {
-    //    as: "detalleLugar",
-    //    foreignKey: 'users_owners_id',
-    //  })
-  //    UserOwner.belongsTo(models.MedioDePago, {
-  //       as: "medioDePago",
-  //       foreignKey: 'users_owners_id',
-  //     })
-  //     UserOwner.belongsTo(models.Ubicacion, {
-  //       as: "ubicacion",
-  //       foreignKey: 'users_owners_id',
-  //     })
-  //     UserOwner.belongsTo(models.LogoOwner, {
-  //       as: "logoOwner",
-  //       foreignKey: 'users_owners_id',
-  //     })
+      UserOwner.hasMany(models.DetalleLugarOwner, {
+        as: "detalleLugar",
+        foreignKey: 'users_owners_id',
+      })
+      UserOwner.hasMany(models.MedioDePago, {
+         as: "medioDePago",
+         foreignKey: 'users_owners_id',
+       })
+       UserOwner.hasMany(models.Ubicacion, {
+         as: "ubicacion",
+         foreignKey: 'users_owners_id',
+       })
+       UserOwner.hasMany(models.LogoOwner, {
+         as: "logoOwner",
+         foreignKey: 'users_owners_id',
+       })
   //     UserOwner.hasMany(models.TelefonoOwner, {
   //       as: "telefono",
   //      foreignKey: "users_owners_id"

@@ -27,8 +27,8 @@
     <!---<p class="sin-canchas">Aún no tienes canchas registradas</p>--->
     <div class="encabezado-club">
       <div class="logo-club"> 
-        <% if (typeof userOwner.logo != "undefined") { %>
-        <img src="/img/products/<%= userOwner.logo %>">
+        <% if (typeof logo.logo != "undefined") { %>
+        <img src="/img/products/<%= logo.logo %>">
         <% } else {%>
         <img src="/img/products/imagenCancha-1654372985364-494608673.jpg" > 
         <% } %>
@@ -263,38 +263,40 @@
     </div>
 
     <section>
-      <h2 class="titulo2">Nuestro Club</h2>
+      <h2 class="titulo2">Detalles del Club</h2>
       <div class="datos-del-lugar">
         <div class="datos2-del-lugar">
           <ol>
             <li class="detalle">
               <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
-                <i class="fa-solid fa-location-dot"></i> <span><%= userOwner.ubicacion %></span>
+                <i class="fa-solid fa-location-dot"></i> Calle
+                  <span><%= ubicacion.calle %></span> -
+                <span><%= ubicacion.numeracion %></span> - <span><%= ubicacion.localidad %>
               </a>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.iluminacion%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.iluminacion%></span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.vestuario%> </span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.vestuario%> </span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.ducha%> </span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.ducha%> </span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.parrilla%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.parrilla%></span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quincho%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.quincho%></span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-utensils"></i><span> Quiosco</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.quiosco%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.quiosco%></span>
             </li>
           </ol>
         </div>
@@ -302,27 +304,27 @@
           <ol>
             <li class="detalle">
               <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.wifi%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.wifi%></span>
             </li>
             <li class="detalle">
               <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.estacionamiento%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.estacionamiento%></span>
             </li>
             <li class="detalle">
               <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.transferencia%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.transferencia%></span>
             </li>
             <li class="detalle">
               <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.mercado_pago%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.mercado_pago%></span>
             </li>
             <li class="detalle">
               <span><i class="fa-solid fa-mobile-retro"></i> Tarjeta </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.tarjeta%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.tarjeta%></span>
             </li>
             <li class="detalle">
               <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= userOwner.efectivo%></span>
+                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.efectivo%></span>
             </li>
 
             </li>

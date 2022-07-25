@@ -32,13 +32,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const MedioDePago = sequelize.define(alias, cols, config);
   
-    // MedioDePago.associate = function (models) {
+   MedioDePago.associate = function (models) {
   
-    //     MedioDePago.belongsTo(models.UserOwner, {
-    //      as: "userOwner",
-    //      foreignKey: "users_owners_id"
-    //     })
-    // }
+         MedioDePago.belongsTo(models.UserOwner, {
+          as: "userOwnerMP",
+          foreignKey: "users_owners_id"
+        })
+     }
   
     return MedioDePago;
   
