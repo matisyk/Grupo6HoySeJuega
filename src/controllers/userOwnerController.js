@@ -125,21 +125,27 @@ if (userOwnerToLogin) {
   vistaCancha: (req, res) => {
     let userOwnerID = req.params.id
     let userOwner = UserOwner.findByPk(userOwnerID)
-    // let canchas = Cancha.findAll({where: {users_owners_id: "userOwnerID"}})
-    // // let mediosP = MedioDePago.findAll({where: {users_owners_id: "userOwnerID"}});
-    // UserOwner.findAll({
-    // include: [
-    //    { association: "detalleLugar"}
-    //  ]
-    // })
+    let img = ImagenOwner.findByPk(userOwnerID, {
+      include: [
+        "userOwnerI"
+      ]
+    })
+    let canchas = Cancha.findByPk(userOwnerID, {
+      include: [
+        "userOwner"
+      ]
+    })
+
     Promise
-    .all([userOwner, userOwnerID])
-    .then(([userOwner, userOwnerID])=> {
+    .all([userOwner, userOwnerID, img, canchas])
+    .then(([userOwner, userOwnerID, img, canchas])=> {
       res.render("partial/userOwner/vistaCancha", {
       userOwner,
+      userOwnerID,
+      img,
       canchas,
-      escuelitas,
-      torneos,
+      // escuelitas,
+      // torneos,
     //  mediosP,
       userOwnerLogged: req.session.userOwnerLogged
     })

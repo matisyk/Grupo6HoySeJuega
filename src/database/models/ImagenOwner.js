@@ -26,9 +26,9 @@ module.exports = (sequelize, dataTypes) => {
   
     ImagenOwner.associate = function (models) {
   
-      ImagenOwner.belongsTo(models.UserPlayer, {
-        as: "userOwner",
-        foreignKey: "user_owners_id"
+      ImagenOwner.belongsTo(models.UserOwner, {
+        as: "userOwnerI",
+        foreignKey: "users_owners_id"
       })
     }
   

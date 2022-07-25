@@ -10,6 +10,7 @@ const db = require('../database/models');
 const {
 	Console
 } = require('console');
+const fetch = require('node-fetch');
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 // constantes de las bases de datos de sequelize modules
@@ -162,6 +163,15 @@ const controller = {
 				numeracion: req.body.numeracion,
 				users_owners_id: idOwner
 			})
+			
+			Cancha.create({
+			identificacion: req.body.identificacion,
+			capacidad: req.body.capacidad,
+			valor: req.body.valor,
+			deporte_id: idDeporte,
+			tipo_de_cancha_id: req.body.tipoDeCancha,
+			users_owners_id: idOwner,
+		})
 		
 		})
 
@@ -195,10 +205,10 @@ const controller = {
 	// Redirect
 	redirect: (req, res) => {
 
-		let id = products.length;
+		//let id = products.length;
 		res.render("partial/register/redireccion", {
 					userOwnerLogged: req.session.userOwnerLogged,
-			id
+		//	id
 		});
 
 	},

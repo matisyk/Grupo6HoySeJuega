@@ -19,13 +19,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const ImagenTorneo = sequelize.define(alias, cols, config);
   
-    ImagenTorneo.associate = function (models) {
+    // ImagenTorneo.associate = function (models) {
   
-      ImagenTorneo.belongsTo(models.Torneo, {
-        as: "TorneoI",
-        foreignKey: "torneos_id"
-      })
-      }
+    //   ImagenTorneo.belongsTo(models.Torneo, {
+    //     as: "TorneoI",
+    //     foreignKey: "torneos_id"
+    //   })
+    //   }
   
   return ImagenTorneo;
   

@@ -18,14 +18,14 @@ module.exports = (sequelize, dataTypes) => {
     }
     const LogoOwner = sequelize.define(alias, cols, config);
   
-    LogoOwner.associate = function (models) { 
+    // LogoOwner.associate = function (models) { 
   
-           LogoOwner.belongsTo(models.UserOwner, {
-            as: "userOwner",
-            foreignKey: "users_owners_id"
-           })
+    //        LogoOwner.belongsTo(models.UserOwner, {
+    //         as: "userOwner",
+    //         foreignKey: "users_owners_id"
+    //        })
   
-    }
+    // }
   
     return LogoOwner;
   

@@ -38,38 +38,38 @@ module.exports = (sequelize, dataTypes) => {
     }
     const UserOwner = sequelize.define(alias, cols, config);
   
-    //  UserOwner.associate = function (models) {
+     UserOwner.associate = function (models) {
   
     //  UserOwner.belongsTo(models.DetalleLugarOwner, {
     //    as: "detalleLugar",
-    //    foreignKey: 'user_owners_id',
+    //    foreignKey: 'users_owners_id',
     //  })
   //    UserOwner.belongsTo(models.MedioDePago, {
   //       as: "medioDePago",
-  //       foreignKey: 'user_owners_id',
+  //       foreignKey: 'users_owners_id',
   //     })
   //     UserOwner.belongsTo(models.Ubicacion, {
   //       as: "ubicacion",
-  //       foreignKey: 'user_owners_id',
+  //       foreignKey: 'users_owners_id',
   //     })
   //     UserOwner.belongsTo(models.LogoOwner, {
   //       as: "logoOwner",
-  //       foreignKey: 'user_owners_id',
+  //       foreignKey: 'users_owners_id',
   //     })
   //     UserOwner.hasMany(models.TelefonoOwner, {
   //       as: "telefono",
-  //      foreignKey: "user_owners_id"
+  //      foreignKey: "users_owners_id"
   //    })
-  //    UserOwner.hasMany(models.Cancha, {
-  //     as: "cancha",
-  //    foreignKey: "user_owners_id"
-  //  })
-  //     UserOwner.hasMany(models.ImagenOwner, {
-  //       as: "imagenOwner",
-  //       foreignKey: "user_owners_id"
-  //    })
+     UserOwner.hasMany(models.Cancha, {
+      as: "canchas",
+     foreignKey: "users_owners_id"
+   })
+      UserOwner.hasMany(models.ImagenOwner, {
+        as: "imagenOwner",
+        foreignKey: "users_owners_id"
+     })
     
-   //}
+   }
   
   
     return UserOwner;

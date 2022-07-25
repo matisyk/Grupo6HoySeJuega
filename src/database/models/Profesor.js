@@ -34,6 +34,6 @@ module.exports = (sequelize, dataTypes) => {
     // }
 
   
-    return Escuelita;
+    return Profesor;
   
   }

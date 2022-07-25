@@ -40,7 +40,6 @@ module.exports = (sequelize, dataTypes) => {
     //   as: "imagenEscuelita",
     //   foreignKey: "escuelita_id"
     // })
-    // CAMBIAR TORNEOS A REL. MUCHOS A MUCHOS EN DIAGRAMA
       //  Escuelita.belongsToMany(models.profesorEscuelita, {
   //     as: "torneoCancha",
   //     through: "torneos_canchas",
@@ -48,13 +47,10 @@ module.exports = (sequelize, dataTypes) => {
   //     otherKey: "torneos_id",
   //     timestamps: false
   //   })
-  //  Escuelita.belongsToMany(models. HORARIO , {
-  //     as: "torneoCancha",
-  //     through: "torneos_canchas",
-  //     foreignKey: "canchas_id",
-  //     otherKey: "torneos_id",
-  //     timestamps: false
-  //   })
+  // Escuelita.hasMany(models.DiaHorarioEscuelita, {
+  //   as: "diaYhora",
+  //   foreignKey: "escuelitas_id"
+  // })
     // }
 
   

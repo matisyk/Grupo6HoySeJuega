@@ -44,23 +44,23 @@
     <div class="slide-inner">
       <ul class="slide-area">
         <li>
-          <% if (typeof userOwner.image != "undefined") { %>
-            <img class="user-img" src="/img/products/<%= userOwner.image %>">
+          <% if (typeof img.image != "undefined") { %>
+            <img class="user-img" src="/img/products/<%= img.image %>">
             <% } else {%>
             <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
             <% } %>
        </li>
        <li>
-        <% if (typeof userOwner.image != "undefined") { %>
-          <img class="user-img" src="/img/products/<%= userOwner.image2 %>">
+        <% if (typeof img.image2 != "undefined") { %>
+          <img class="user-img" src="/img/products/<%= img.image2 %>">
           
           <% } else {%>
           <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
           <% } %>
      </li>
      <li>
-      <% if (typeof userOwner.image != "undefined") { %>
-        <img class="user-img" src="/img/products/<%= userOwner.image3 %>">
+      <% if (typeof img.image3 != "undefined") { %>
+        <img class="user-img" src="/img/products/<%= img.image3 %>">
         
         <% } else {%>
         <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
@@ -120,7 +120,7 @@
     </div>
     <div class="botones-registro registroCP">
       <button class="learn-more">
-        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarCancha"><span class="circle01 circle"
+        <a href="/userOwner/vistaCancha/<%= userOwner.id %>/registrarCancha"><span class="circle01 circle"
             aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
@@ -187,7 +187,7 @@
     </div>
     <div class="botones-registro">
       <button class="learn-more">
-        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita"><span class="circle03 circle"
+        <a href="/userOwner/vistaCancha/<%= userOwner.id %>/registrarEscuelita"><span class="circle03 circle"
             aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
@@ -211,9 +211,9 @@
                   <h3><%= torneos.deporte%> <br><span class="categoria"><%= torneos.categoria%></span> </h3>
                   <p class="descrip-tarjeta-esc">
                     <ul>
-                      <li>Día Inicio: <%= torneos.fechaInicio%> - <%= torneos.registroHorarios%> </li>
-                      <li>Día Fin: <%= torneos.fechaFinal%> - <%= torneos.registroHorarios%>. </li>
-                      <li>Cantidad de equipos: <%= torneos.cantidadEquipos%></li>
+                      <li>Día Inicio: <%= torneos.fecha_inicio%>  <!-- - < torneos.registroHorarios%> --> </li>
+                      <li>Día Fin: <%= torneos.fecha_fin%> <!-- - < torneos.registroHorarios%>. --></li>
+                      <li>Cantidad de equipos: <%= torneos.cantidad_equipos%></li>
                       <li>Precio: $ <%= torneos.valor%></li>
                       <li>Premio: $ <%= torneos.premio%></li>
                     </ul>
@@ -248,7 +248,7 @@
     </div>
     <div class="botones-registro">
       <button class="learn-more">
-        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/crearTorneo"><span class="circle" aria-hidden="true">
+        <a href="/userOwner/vistaCancha/<%= userOwner.id %>/crearTorneo"><span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
           <span class="circle02 button-text"> Torneos</span></a>
