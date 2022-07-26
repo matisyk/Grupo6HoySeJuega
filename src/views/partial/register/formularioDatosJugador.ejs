@@ -118,23 +118,29 @@
               </div>
               <br>
               <div class="entre-divs">
-                <label for="categoria">Posición:</label>
-                <input type="text" class="form-control <%= locals.errors && errors.categoria ? 'is-invalid' : null %>"
-                  id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
-                <% if (locals.errors && errors.categoria) { %>
-                <div class="text-danger msg">
-                  <%= errors.categoria.msg %>
-                </div>
-                <% } %>
+                <label for="">Cargar imagen de perfil:</label>
+                <div class="contenedor-input">
+                  <input class="input-imagen-escondido imagen" type="file" name="imagenJugador" accept=".jpg" multiple>
+                <!---  <div class="input-imagen-visible">Elegir archivos</div>-->
+                </div> 
               </div>
             </div>
             <br>
 
             <div class="horizontal">
               <div class="entre-divs">
+                <label for="zonaDeJuego">Zona de juego:</label>
+                <select class="form-control id="zonaDeJuego" name="zonasdejuego">
+                  <option value="" disabled selected> Zona de juego:</option>
+                  <% zonasdejuego.forEach(zonasdejuego => { %>
+                  <option value="<%= zonasdejuego.id %>"><%= zonasdejuego.provincia %></option>
+                  <% }); %>
+                </select>
+              </div>
+              <div class="entre-divs">
                 <label for="autoValoracion">Auto valoración:</label>
                 <br>
-                <select name="autoValoracion" id="autoValoracion" required>
+                <select class="form-control name="autoValoracion" id="autoValoracion" required>
                   <option value="" disabled selected> Elegir opción</option>
                   <%valoraciones.forEach(valoraciones => { %>
                   <option value="<%=valoraciones.id%>"><%=valoraciones.tipo%></option>
@@ -149,15 +155,14 @@
               <div class="entre-divs">
                 <label for="deporte">Deporte que juego:</label>
                 <br>
-                <select id="deporte1" name="deporte1" required>
+                <select class="form-control id="deporte1" name="deporte1" required>
                   <option value="" disabled selected> Elegir</option>
                   <% deportes.forEach(deporte => { %>
                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
                   <% }); %>
                 </select>
                 <br>
-                <br>
-                <select id="deporte2" name="deporte2">
+                <select class="form-control id="deporte2" name="deporte2">
                   <option value="" disabled selected> Elegir</option>
                   <% deportes.forEach(deporte => { %>
                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
@@ -165,14 +170,22 @@
                 </select>
               </div>
               <div class="entre-divs">
-                <label for="zonaDeJuego">Zona de juego:</label>
-                <select id="zonaDeJuego" name="zonasdejuego">
-                  <option value="" disabled selected> Zona de juego:</option>
-                  <% zonasdejuego.forEach(zonasdejuego => { %>
-                  <option value="<%= zonasdejuego.id %>"><%= zonasdejuego.provincia %></option>
-                  <% }); %>
-                </select>
-
+                <label for="categoria">Posición:</label>
+                <input type="text" class="form-control <%= locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                  id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
+                <% if (locals.errors && errors.categoria) { %>
+                <div class="text-danger msg">
+                  <%= errors.categoria.msg %>
+                </div>
+                <% } %>
+                <br>
+                <input type="text" class="form-control <%= locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                  id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
+                <% if (locals.errors && errors.categoria) { %>
+                <div class="text-danger msg">
+                  <%= errors.categoria.msg %>
+                </div>
+                <% } %>
               </div>
             </div>
             <br>
@@ -180,7 +193,7 @@
             <div class="horizontal">
               <div class="entre-divs">
                 <label for="dias">Dias para jugar:</label>
-                <select id="dias" name="dia1">
+                <select class="form-control id="dias" name="dia1">
                   <option value="" disabled selected> dias para jugar</option>
                   <% dias.forEach(dias => { %>
                   <option value="<%= dias.id %>"><%= dias.dia %></option>
@@ -189,7 +202,7 @@
               </div>
               <div class="entre-divs">
                 <label for="horarios">Horarios para jugar:</label>
-                <select id="horarios" name="hora1">
+                <select class="form-control id="horarios" name="hora1">
                   <option value="" disabled selected> Horarios para jugar</option>
                   <% horarios.forEach(horarios => { %>
                   <option value="<%= horarios.id %>"><%= horarios.hora %></option>
@@ -197,10 +210,7 @@
                 </select>
               </div>
             </div>
-            <div class="entre-divs8">
-              <label for="">Cargar imagen de perfil:</label>
-              <input type="file" name="imagenJugador" accept=".jpg" multiple class="form-input">
-            </div>
+            
             <div class="entre-divs9">
               <div class="horizontal">
                 <a href="/register/registerPlayer/">

@@ -54,7 +54,6 @@ h1 {
 
 .div1 {
   padding: 20px;
-  padding-bottom: 50px;
   background: #ffffff;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -81,7 +80,6 @@ h1 {
 }
 
 select{
-  margin-left: 5px;
   padding: 2px;
   border: 1px solid #ced4da;
   border-radius: 5px;
@@ -99,11 +97,34 @@ select{
     /* flex-direction: row; */
     /* justify-content: center; */
     /* margin-left: 300px; */
-    /* margin-top: 20px; */
     height: 50px;
     width: 310px;
-    margin: auto;
+    margin: 50px auto;
 }
+
+.contenedor-input{
+  position: relative;
+  
+}
+
+.imagen{
+  width: 100%;
+}
+/* .input-imagen-escondido{
+  font-size: 10px;
+  height: 20px;
+  opacity: 1;
+  z-index: 0;
+  left: 0;
+  -moz-opacity: 0;
+}
+.input-imagen-visible{
+position: absolute;
+top: 0px;
+z-index: 1;
+font-size: 20px;
+
+} */
 
 .divCargar{
 font-size: 10px;
