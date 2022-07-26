@@ -19,8 +19,6 @@ h1 {
   background-repeat: no-repeat;
   width: 40%;
   position: relative;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
   box-shadow: -30px 10px 60px -10px rgb(0 0 0 / 75%);
 }
 .logo img{
@@ -28,6 +26,14 @@ h1 {
   position: absolute;
   left: 0;
   visibility: hidden
+}
+
+.label-img{
+  margin: 0;
+}
+
+.input-img{
+  margin: 10px 0;
 }
 .horizontal{
   display: flex;
@@ -68,8 +74,6 @@ h1 {
   padding: 20px;
   padding-bottom: 50px;
   background: #ffffff;
-  border-bottom-right-radius: 20px;
-  border-top-right-radius: 20px;
   box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
   -moz-box-shadow: 10px 10px 64px 0px rgba(102, 100, 98, 0.75);
@@ -235,6 +239,14 @@ width: 80%;
    }
    .img-cancha{
     margin-left: 10px;
+   }
+   .div2{
+    border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+   }
+   .contenedor-imagen{
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
    }
 }
 

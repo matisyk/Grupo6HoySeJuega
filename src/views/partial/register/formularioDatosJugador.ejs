@@ -179,13 +179,7 @@
                 </div>
                 <% } %>
                 <br>
-                <input type="text" class="form-control <%= locals.errors && errors.categoria ? 'is-invalid' : null %>"
-                  id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
-                <% if (locals.errors && errors.categoria) { %>
-                <div class="text-danger msg">
-                  <%= errors.categoria.msg %>
-                </div>
-                <% } %>
+                <input type="text" class="form-control">
               </div>
             </div>
             <br>
