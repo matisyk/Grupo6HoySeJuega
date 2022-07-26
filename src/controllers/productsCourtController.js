@@ -16,6 +16,8 @@ const DetalleLugarOwner = db.DetalleLugarOwner;
 const Cancha = db.Cancha;
 const Ubicacion = db.Ubicacion
 const ImagenCancha = db.ImagenCancha
+const TipoCh = db.TipoDeCancha;
+const Deportes = db.Deporte
 
 const controller = {
 
@@ -34,8 +36,21 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
+		
+		let deportes = Deportes.findAll();
+		let tiposCancha = TipoCh.findAll();
 
-		res.render("partial/userOwner/registrarCancha")
+		Promise
+			.all([ deportes,tiposCancha])
+			.then(([deportes, tiposCancha]) => {
+
+				res.render("partial/userOwner/registrarCancha", {
+		
+					deportes,
+					tiposCancha
+				})
+			})
+		
 
 	},
 
@@ -49,22 +64,21 @@ const controller = {
 			image = "estrella-gris.png";
 		}
 		let userPlayerID = req.params.id
-		
+
 		Cancha
 			.create({
 				identificacion: req.body.identificacion,
 				capacidad: req.body.capacidad,
 				valor: req.body.valor,
 				users_owners_id: userPlayerID,
-				deportes_players_id: 1,
-				tipo_de_cancha_id: 1
+				deportes_players_id: req.body.deporte,
+				tipo_de_cancha_id: req.body.tipocancha
 			})
 			.then((result) => {
 				const idCancha = result.id
-        console.log("🚀 ~ file: productsCourtController.js ~ line 56 ~ .then ~ result.id", result.id)
-				
+
 				ImagenCancha.create({
-					image: image,
+					img_c: image,
 					canchas_id: idCancha
 				})
 
@@ -79,7 +93,7 @@ const controller = {
 			})
 
 
-			
+
 
 
 		// let newProduct = {

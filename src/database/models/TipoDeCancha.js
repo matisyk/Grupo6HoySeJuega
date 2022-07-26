@@ -11,7 +11,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false
           },
-          canchas_id: dataTypes.BIGINT(10),
+          
     };
     let config = {
         tableName: 'tipo_de_cancha',

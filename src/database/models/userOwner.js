@@ -67,7 +67,8 @@ module.exports = (sequelize, dataTypes) => {
       UserOwner.hasMany(models.ImagenOwner, {
         as: "imagenOwner",
         foreignKey: "users_owners_id"
-     })
+      })
+       
     
    }
   
