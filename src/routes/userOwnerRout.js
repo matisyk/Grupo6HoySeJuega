@@ -57,8 +57,8 @@ router.post('/vistaCancha', userOwnerController.vistaCancha);
 
 // CANCHAS
 
-router.get('/vistaCancha/:id/registrarCancha',  productsControllerC.create);
-router.post('/vistaCancha/:id/registrarCancha',  upload.any("img-cancha"), productsControllerC.store);
+router.get('/vistaCancha/:id/registrarCancha/:id',  productsControllerC.create);
+router.post('/vistaCancha/:id/registrarCancha/',  upload.any("img-cancha"), productsControllerC.store);
 router.get('/vistaCancha/:id/editCourt/:id/',  productsControllerC.edit);
 router.patch('/vistaCancha/:id/editCourt/:id/', upload.any(),  productsControllerC.update);
 router.delete('/vistaCancha/:id/delete/court/:id',  productsControllerC.destroy);
