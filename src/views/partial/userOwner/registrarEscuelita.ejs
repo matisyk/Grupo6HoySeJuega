@@ -15,10 +15,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Kalam&family=Roboto&display=swap"
         rel="stylesheet">
+        <%- include('../css-externos') %>
 </head>
 
 <body>
-
+    <%- include('./headerOwner.ejs') %>
     <form action="/userOwner/vistaCancha/:id/registrarEscuelita" enctype="multipart/form-data" method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
@@ -70,8 +71,8 @@
                         </select>
                     </div>
 
+                    <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                     <div class="otro-item-tarjeta">
-                        <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                         <select name="dia" id="dia">
                             <option selected disabled>Elegir día</option>
                             <option value="lunes">Lunes</option>
