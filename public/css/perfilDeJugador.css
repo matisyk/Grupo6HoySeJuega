@@ -688,6 +688,7 @@ div.container-fluid {
 .container {
   width: 100vw;
   padding: 0px !important;
+  margin: 0 !important;
 }
 p.reserva {
   margin-left: 30px;
