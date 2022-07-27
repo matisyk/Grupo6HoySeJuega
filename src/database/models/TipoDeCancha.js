@@ -17,15 +17,15 @@ module.exports = (sequelize, dataTypes) => {
         tableName: 'tipo_de_cancha',
         timestamps: false
     }
-    const UserOwner = sequelize.define(alias, cols, config);
+    const TipoDeCancha = sequelize.define(alias, cols, config);
   
-    // TipoDeCancha.associate = function (models) {
-    //     TipoDeCancha.hasMany(models.Cancha, {
-    //          as: "cancha",
-    //         foreignKey: "tipo_de_cancha_id"
-    //       })
-    //     }
+     TipoDeCancha.associate = function (models) {
+         TipoDeCancha.hasMany(models.Cancha, {
+              as: "cancha",
+             foreignKey: "tipo_de_cancha_id"
+           })
+         }
   
-  return UserOwner;
+  return TipoDeCancha;
   
   }

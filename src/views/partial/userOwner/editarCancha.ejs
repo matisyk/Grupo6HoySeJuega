@@ -19,19 +19,16 @@
             <div class="tarjeta">
                 <div class="item-tarjeta">
                     <label>Identificación de la cancha:</label>
-                    <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required>
-                </div>
-                <div style="display:none">
-                    <select name="category">
-                        <option selected="selected" value="cancha">cancha</option>
-                    </select>
+                    <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required
+                        value="<%= canchas.identificacion %>">
                 </div>
                 <div class="item-tarjeta">
                     <label>Deporte:</label>
                     <select class="form-control" id="deporte" name="deporte">
-                        <option value="" disabled selected> Elegir</option>
                         <% deportes.forEach(deporte => { %>
-                        <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                        <option value="<%= deporte.id %>"
+                            <% if (canchas.deporte.id == canchas.id) { %><%= 'selected'  %><% }; %>><%= deporte.deporte %>
+                            </option>
                         <% }); %>
                     </select>
                 </div>
@@ -39,27 +36,32 @@
 
                 <div class="item-tarjeta">
                     <label>Cantidad de jugadores:</label>
-                    <input type="number" name="capacidad" placeholder="Ej: 10">
+                    <input type="number" name="capacidad" placeholder="Ej: 10" value="<%= canchas.capacidad %>">
                 </div>
 
                 <div class="item-tarjeta">
                     <label>Tipo de cancha</label>
                     <select class="form-control" id="deporte" name="tipocancha">
-                        <option value="" disabled selected> Elegir</option>
                         <% tiposCancha.forEach(tiposCancha => { %>
-                        <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
+                        <option value="<%= tiposCancha.id %>"
+                            <% if (canchas.tipoDeCancha.id == canchas.id) { %><%= 'selected'  %><% }; %>><%= tiposCancha.material %>
+                            </option>
                         <% }); %>
                     </select>
                 </div>
 
                 <div class="item-tarjeta">
-                    <label>Cargar imagen</label>
-                    <input class="foto" type="file" name="image" accept=".jpg" multiple>
+                    <label>Modificar imagen:</label>
+                    <label> <img
+                            style="width: 130px; margin-top: 40px; border-radius: 70px; margin-left: 50px; margin-bottom: 20px"
+                            src="/img/products/<%- canchas.img_c %>">
+                    </label>
+                    <input class="foto" type="file" name="image" accept=".jpg" multiple value="<%= canchas.img_c %>">
                 </div>
 
                 <div class="item-tarjeta">
                     <label>Precio:</label> <span> $ </span>
-                    <input type="number" name="valor" placeholder="Ej:pesos argentinos ">
+                    <input type="number" name="valor" placeholder="Ej:pesos argentinos" value="<%= canchas.valor %>">
                 </div>
 
                 <div class="item-tarjeta">

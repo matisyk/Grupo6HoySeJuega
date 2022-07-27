@@ -41,10 +41,10 @@ module.exports = (sequelize, dataTypes) => {
   //     as: "escuelita",
   //     foreignKey: "deporte_id"
   // })
-  // Deporte.hasMany(models.Cancha, {
-  //     as: "cancha",
-  //     foreignKey: "deporte_id"
-  // })
+   Deporte.hasMany(models.Cancha, {
+       as: "cancha",
+       foreignKey: "deportes_players_id"
+   })
   // Deporte.hasMany(models.Torneo, {
   //     as: "torneo",
   //     foreignKey: "deporte_id"

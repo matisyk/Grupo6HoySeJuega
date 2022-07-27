@@ -101,7 +101,9 @@ const controller = {
 	edit: (req, res) => {
 
 		let canchaID = req.params.id
-		let canchas = Cancha.findByPk(canchaID)
+		let canchas = Cancha.findByPk(canchaID, {
+			include: ['tipoDeCancha', 'deporte']
+		})
 		let deportes = Deportes.findAll();
 		let tiposCancha = TipoCh.findAll();
 
@@ -118,41 +120,25 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
+let image;
+if (req.files[0] != undefined) {
+	image = req.files[0].filename;
+} else {
+	image = "estrella-gris.png";
+}
 
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-
-
-		let image
-		if (req.files[0] != undefined) {
-			image = req.files[0].filename
-		} else {
-			image = productToEdit.image
-		}
-
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-
-		let newProduct = products.map(product => {
-
-			if (product.id == productToEdit.id) {
-
-				return product = {
-					...productToEdit
-				};
-			}
-
-			return product
-		})
-
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-
-		return res.redirect("/userOwner/update")
-
+		Cancha
+			.update({
+				identificacion: req.body.identificacion,
+				capacidad: req.body.capacidad,
+				valor: req.body.valor,
+				deportes_players_id: req.body.deporte,
+				tipo_de_cancha_id: req.body.tipocancha,
+				img_c: image,
+			},{where: {id: req.params.id}})
+			.then(() => {
+				return res.redirect("/userOwner/update")
+			})
 
 
 	},
