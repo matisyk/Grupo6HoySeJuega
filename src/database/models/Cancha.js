@@ -19,6 +19,10 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       allowNull: false
     },
+    img_c: {
+      type: dataTypes.STRING(200),
+      allowNull: false
+    },
     users_owners_id: dataTypes.BIGINT(10),
     tipo_de_cancha_id: dataTypes.BIGINT(10),
     deportes_players_id: dataTypes.BIGINT(10),
@@ -38,7 +42,6 @@ module.exports = (sequelize, dataTypes) => {
       foreignKey: "users_owners_id"
     })
     Cancha.hasMany(models.ImagenCancha, {
-      as: "imagenCancha",
       foreignKey: "canchas_id"
     })
     // Cancha.belongsTo(models.TipoDeCancha,{

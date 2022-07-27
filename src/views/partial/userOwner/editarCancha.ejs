@@ -5,148 +5,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar cancha <%- product.id %> </title>
+    <title>Editar cancha <%- canchas.id %> </title>
     <link rel="stylesheet" href="/css/registrarCancha.css">
 
     <%- include('../css-externos') %>
 </head>
 
 <body>
-   
+    <%- include('./headerOwner.ejs') %>
     <main>
-        <form action="/userOwner/vistaCancha/:id/editCourt/<%= product.id %>?_method=PATCH" method="POST"
+        <form action="/userOwner/vistaCancha/:id/editCourt/<%= canchas.id %>?_method=PATCH" method="POST"
             enctype="multipart/form-data">
             <div class="tarjeta">
                 <div class="item-tarjeta">
                     <label>Identificación de la cancha:</label>
-                    <input type="text" placeholder="Ej: Cancha 1" name="identificacion"
-                        value="<%= product.identificacion %> " required>
+                    <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required>
                 </div>
                 <div style="display:none">
                     <select name="category">
-                        <option value="cancha">cancha</option>
+                        <option selected="selected" value="cancha">cancha</option>
                     </select>
                 </div>
                 <div class="item-tarjeta">
                     <label>Deporte:</label>
-                    <select id="deporte" name="deporte" required>
-                        <% if (product.deporte == "") { %>
-                        <option value="">Elegir un deporte</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "futbol") { %>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "padel") { %>
-                        <option value="padel">Padel</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "basquet") { %>
-                        <option value="basquet">Basquet</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "tenis") { %>
-                        <option value="tenis">Tenis</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "voley") { %>
-                        <option value="voley">Voley</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <% } %>
+                    <select class="form-control" id="deporte" name="deporte">
+                        <option value="" disabled selected> Elegir</option>
+                        <% deportes.forEach(deporte => { %>
+                        <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                        <% }); %>
                     </select>
                 </div>
 
 
                 <div class="item-tarjeta">
                     <label>Cantidad de jugadores:</label>
-                    <input type="number" name="capacidad" placeholder="Ej: 10" value="<%= product.capacidad %>">
+                    <input type="number" name="capacidad" placeholder="Ej: 10">
                 </div>
 
                 <div class="item-tarjeta">
                     <label>Tipo de cancha</label>
-                    <select id="deporte" name="tipoDeCancha" required>
-                        <% if (product.tipoDeCancha == "") { %>
-                        <option label="Césped Sintético" value="cesped sintetico"></option>
-                        <option label="Césped" value="cesped"></option>
-                        <option label="Cemento" value="cemento"></option>
-                        <option label="Parqué" value="parque"></option>
-                        <option label="Ladrillo" value="ladrillo"></option>
-                        <% } else if (product.tipoDeCancha == "cesped Sintetico") { %>
-                        <option label="Césped Sintético" value="cesped sintetico"></option>
-                        <option label="Césped" value="cesped"></option>
-                        <option label="Cemento" value="cemento"></option>
-                        <option label="Parqué" value="parque"></option>
-                        <option label="Ladrillo" value="ladrillo"></option>
-                        <% }else if (product.tipoDeCancha == "cesped") { %>
-                        <option label="Césped" value="cesped"></option>
-                        <option label="Césped Sintético" value="cesped sintetico"></option>
-                        <option label="Cemento" value="cemento"></option>
-                        <option label="Parqué" value="parque"></option>
-                        <option label="Ladrillo" value="ladrillo"></option>
-                        </option>
-                        <% } else if (product.tipoDeCancha == "cemento") { %>
-                        <option label="Cemento" value="cemento"></option>
-                        <option label="Césped Sintético" value="cesped sintetico"></option>
-                        <option label="Césped" value="cesped"></option>
-                        <option label="Parqué" value="parque"></option>
-                        <option label="Ladrillo" value="ladrillo"></option>
-                        </option>
-                        <% } else if (product.tipoDeCancha == "parque") { %>
-                        <option label="Parqué" value="parque"></option>
-                        <option label="Césped Sintético" value="cesped sintetico"></option>
-                        <option label="Césped" value="cesped"></option>
-                        <option label="Cemento" value="cemento"></option>
-                        <option label="Ladrillo" value="ladrillo"></option>
-                        </option>
-                        <% } else if (product.tipoDeCancha == "ladrillo") { %>
-                        <option label="Ladrillo" value="ladrillo"></option>
-                        </option>
-                        <option label="Césped Sintético" value="cesped sintetico"></option>
-                        <option label="Césped" value="cesped"></option>
-                        <option label="Cemento" value="cemento"></option>
-                        <option label="Parqué" value="parque"></option>
-                        <% } %>
-
-
-
+                    <select class="form-control" id="deporte" name="tipocancha">
+                        <option value="" disabled selected> Elegir</option>
+                        <% tiposCancha.forEach(tiposCancha => { %>
+                        <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
+                        <% }); %>
                     </select>
                 </div>
 
                 <div class="item-tarjeta">
                     <label>Cargar imagen</label>
                     <input class="foto" type="file" name="image" accept=".jpg" multiple>
-                    <label> <img style="width: 130px; margin-top: 40px; border-radius: 70px;"
-                            src="/img/products/<%= product.image%>">
-                    </label>
-                    <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6>
                 </div>
 
                 <div class="item-tarjeta">
                     <label>Precio:</label> <span> $ </span>
-                    <input type="number" name="valor" placeholder="Ej:pesos argentinos" value="<%= product.valor %>">
+                    <input type="number" name="valor" placeholder="Ej:pesos argentinos ">
                 </div>
 
                 <div class="item-tarjeta">
                     <button type="submit">Enviar</button>
                 </div>
             </div>
-
-        </form>
+            </form>
     </main>
     <div class="item-tarjeta boton-enviar2">
         <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>"><button type="submit">Volver</button></a>

@@ -22,7 +22,7 @@ module.exports = (sequelize, dataTypes) => {
     ImagenCancha.associate = function (models) {
   
       ImagenCancha.belongsTo(models.Cancha, {
-        as: "userOwnerCh",
+        as: "imagenCancha",
         foreignKey: "canchas_id"
       })
       }

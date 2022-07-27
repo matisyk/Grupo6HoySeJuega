@@ -140,6 +140,8 @@ const userOwnerController = {
       where: {
         users_owners_id: userOwnerID
       }
+    }, {
+      include: ['ImagenCancha']
     })
     let escuelitas = Escuelita.findAll({
       where: {
@@ -160,13 +162,14 @@ const userOwnerController = {
     const logo = LogoOwner.findByPk(userOwnerID, {
       include: ["userOwnerL"]
     })
-    const imgCancha = ImagenCancha.findByPk(userOwnerID, {
-      include: ['userOwnerCh']
-    })
+    // let imgCancha = ImagenCancha.findByPk(userOwnerID, {
+    //   include: ['userOwnerCh']
+    // })
     Promise
-      .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo,imgCancha ])
-      .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo,imgCancha ]) => {
-  
+      .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo])
+      .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo]) => {
+      console.log("🚀 ~ file: userOwnerController.js ~ line 171 ~ .then ~ canchas", canchas)
+    
 
         res.render("partial/userOwner/vistaCancha", {
           userOwner,
@@ -179,7 +182,7 @@ const userOwnerController = {
           detalles,
           ubicacion,
           logo,
-          imgCancha,
+          
           userOwnerLogged: req.session.userOwnerLogged
         })
       })
