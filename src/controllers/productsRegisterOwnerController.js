@@ -68,10 +68,10 @@ const controller = {
 			image3 = req.files[2].filename;
 			logo = req.files[3].filename;
 		} else {
-			image = "imagenCancha-1654372985364-494608673.jpg";
-			image2 = "imagenCancha-1654372985364-494608673.jpg";
-			image3 = "imagenCancha-1654372985364-494608673.jpg";
-			logo = "imagenCancha-1654372985364-494608673.jpg";
+			image = "estrella-gris.png";
+			image2 = "estrella-gris.png";
+			image3 = "estrella-gris.png";
+			logo = "estrella-gris.png";
 		}
 
 		// let userInDB = User.findByField('email', req.body.email);
@@ -172,26 +172,6 @@ const controller = {
 		.catch(error => res.send(error))
 	},
 
-
-		//let newProduct = {
-		//	id: products[products.length - 1].id + 1,
-		//	...req.body,
-		//	image: image,
-		//	image2: image2,
-		//	image3: image3,
-		//	logo: logo,
-		//	password: bcryptjs.hashSync(req.body.password, 10)
-		//}
-
-		// products.push(newProduct);
-
-		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-		//res.redirect("/userOwner/loginCourt/");
-
-
-
-	//},
 
 	// Redirect
 	redirect: (req, res) => {

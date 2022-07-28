@@ -26,17 +26,15 @@
 
 
         <div class="container">
-            <h1 class="title" style="text-align: center;">Estamos actualizando tus datos</h1>
+            <h1 class="title" style="text-align: center;">Bienvenido</h1> <span>
+                <h1 class="title" style="text-align: center;"> <%- userOwnerLogged.nombre %>
+            </span>
             <br>
+            <h2 class="title" style="text-align: center;">Serás dirigido a tu perfil de </h2> <span>
+                <h2 class="title" style="text-align: center;">
+                    <%- userOwnerLogged.nombre_del_lugar %> </h2>
+            </span>
 
-            <h1 class="title" style="text-align: center;"> <%- userOwnerLogged.nombre %>
-                
-            </h1>
-            <br>
-            <h2 class="title" style="text-align: center;">Serás dirigido a tu perfil de </h2>
-            <br>
-            <h2 class="title" style="text-align: center;">
-                <%- userOwnerLogged.nombre_del_lugar %> </h2>
         </div>
 
 

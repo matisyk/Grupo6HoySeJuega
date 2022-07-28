@@ -57,7 +57,7 @@ const controller = {
 	// Create -  Method to store
 	store: (req, res) => {
 
-		let image;
+		let image ;
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename;
 		} else {
@@ -121,12 +121,10 @@ const controller = {
 	// Update - Method to update
 	update: (req, res) => {
 
-		let image
-    console.log("🚀 ~ file: productsCourtController.js ~ line 125 ~ image", image)
-    console.log("🚀 ~ file: productsCourtController.js ~ line 125 ~ image", image)
+		let image = req.body.image
 if (req.files[0] != undefined) {
 	image = req.files[0].filename;
-  console.log("🚀 ~ file: productsCourtController.js ~ line 128 ~ image", image)
+  
 } else {
 	image = "estrella-gris.png";
 }
@@ -140,7 +138,7 @@ if (req.files[0] != undefined) {
 				tipo_de_cancha_id: req.body.tipocancha,
 				img_c: image,
         
-			},{where: {id: req.params.id}})
+			}, { where: { id: req.params.id } })
 			.then(() => {
 				return res.redirect("/userOwner/update")
 			})
