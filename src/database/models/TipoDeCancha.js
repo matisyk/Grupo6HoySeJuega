@@ -11,21 +11,21 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.STRING(45),
             allowNull: false
           },
-          canchas_id: dataTypes.BIGINT(10),
+          
     };
     let config = {
         tableName: 'tipo_de_cancha',
         timestamps: false
     }
-    const UserOwner = sequelize.define(alias, cols, config);
+    const TipoDeCancha = sequelize.define(alias, cols, config);
   
-    // TipoDeCancha.associate = function (models) {
-    //     TipoDeCancha.hasMany(models.Cancha, {
-    //          as: "cancha",
-    //         foreignKey: "tipo_de_cancha_id"
-    //       })
-    //     }
+     TipoDeCancha.associate = function (models) {
+         TipoDeCancha.hasMany(models.Cancha, {
+              as: "cancha",
+             foreignKey: "tipo_de_cancha_id"
+           })
+         }
   
-  return UserOwner;
+  return TipoDeCancha;
   
   }

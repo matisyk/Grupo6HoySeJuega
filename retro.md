@@ -72,20 +72,20 @@ Sprint 6 ->
 
 1. Comenzar a hacer: 
 
-- Mayor disponibilidad grupal.
+- Mayor division y tiempo para dedicarle juntos
 
 2. Hacer más:
 
-- Hacer commits mas especificos y comunicativos
+- Hacer commits mas especificos y comunicativos -- sigue
 
 3. Continuar haciendo:
 
-- Perserverancia en las ideas base del proyecto y a lo que apunta en su amplitud de servicio. 
+- Sacarle provecho al gusto en comun que tenemos por el trabajo
 
 4. Hacer menos:
 
-- Avanzar menos de manera individual y desorganizada.
+- Avanzar menos de manera individual y desorganizada -- sigue
 
 5. Dejar de hacer:
 
-- No hacer commits globales, sino más específicos de cada cambio, por si en algún momento hay que volver atrás.
+- No hacer commits globales, sino más específicos de cada cambio, por si en algún momento hay que volver atrás

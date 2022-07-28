@@ -91,16 +91,15 @@
               <div class="tarjetas tarjetas-canchas">
                 <div class="tarjeta">
                   <div class="blob"></div>
-                  <span class="img"><a href="/userOwner/agenda"><img src="/img/products/" alt=""></a></span>
+                  <span class="img"><a href="/userOwner/agenda"><img
+                        src="/img/products/<%- canchas.img_c %>"
+                        alt=""></a></span>
                   <h3><%= canchas.identificacion %></h3>
                   <h3>$ <%= canchas.valor %></h3>
-
                   <form action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/court/<%= canchas.id%>?_method=DELETE"
                     method="POST">
                     <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
                   </form>
-
-
                   <button class="boton-editar"><a href="/userOwner/vistaCancha/<%= userOwner.id %>/editCourt/<%= canchas.id%>"><i
                         class="fa-solid fa-pencil"></i></a></button>
                 </div>

@@ -34,13 +34,11 @@
             </div>
             <div class="item-tarjeta">
                 <label>Deporte:</label>
-                <select id="deporte" name="deporte">
-                    <option value="">Elegir un deporte</option>
-                    <option value="1">Futbol</option>
-                    <option value="2">Padel</option>
-                    <option value="3">Basquet</option>
-                    <option value="4">Tenis</option>
-                    <option value="5">Voley</option>
+                <select class="form-control" id="deporte" name="deporte">
+                    <option value="" disabled selected> Elegir</option>
+                    <% deportes.forEach(deporte => { %>
+                    <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                    <% }); %>
                 </select>
             </div>
 
@@ -52,13 +50,11 @@
 
             <div class="item-tarjeta">
                 <label>Tipo de cancha</label>
-                <select id="deporte" name="tipoDeCancha">
-                    <option value="" disabled selected>Elegir una clase</option>
-                    <option value="1">Césped sintético</option>
-                    <option value="2">Césped</option>
-                    <option value="3">Cemento</option>
-                    <option value="4">Parqué</option>
-                    <option value="5">Ladrillo</option>
+                <select class="form-control" id="deporte" name="tipocancha">
+                    <option value="" disabled selected> Elegir</option>
+                    <% tiposCancha.forEach(tiposCancha => { %>
+                    <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
+                    <% }); %>
                 </select>
             </div>
 

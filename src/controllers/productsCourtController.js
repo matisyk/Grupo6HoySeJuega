@@ -16,6 +16,8 @@ const DetalleLugarOwner = db.DetalleLugarOwner;
 const Cancha = db.Cancha;
 const Ubicacion = db.Ubicacion
 const ImagenCancha = db.ImagenCancha
+const TipoCh = db.TipoDeCancha;
+const Deportes = db.Deporte
 
 const controller = {
 
@@ -35,7 +37,20 @@ const controller = {
 	// Create - Form to create
 	create: (req, res) => {
 
-		res.render("partial/userOwner/registrarCancha")
+		let deportes = Deportes.findAll();
+		let tiposCancha = TipoCh.findAll();
+
+		Promise
+			.all([deportes, tiposCancha])
+			.then(([deportes, tiposCancha]) => {
+
+				res.render("partial/userOwner/registrarCancha", {
+
+					deportes,
+					tiposCancha
+				})
+			})
+
 
 	},
 
@@ -49,24 +64,19 @@ const controller = {
 			image = "estrella-gris.png";
 		}
 		let userPlayerID = req.params.id
-		
+
 		Cancha
 			.create({
 				identificacion: req.body.identificacion,
 				capacidad: req.body.capacidad,
 				valor: req.body.valor,
 				users_owners_id: userPlayerID,
-				deportes_players_id: 1,
-				tipo_de_cancha_id: 1
+				deportes_players_id: req.body.deporte,
+				tipo_de_cancha_id: req.body.tipocancha,
+				img_c: image,
 			})
 			.then((result) => {
 				const idCancha = result.id
-        console.log("🚀 ~ file: productsCourtController.js ~ line 56 ~ .then ~ result.id", result.id)
-				
-				ImagenCancha.create({
-					image: image,
-					canchas_id: idCancha
-				})
 
 				// DiaHorarioCancha.create({
 				// 	dias_id: req.body.dias,
@@ -78,22 +88,6 @@ const controller = {
 				return res.redirect("/userOwner/update")
 			})
 
-
-			
-
-
-		// let newProduct = {
-		// 	id: products[products.length - 1].id + 1,
-		// 	...req.body, 
-		// 	image: image
-		// }
-
-		// products.push(newProduct);
-
-		// fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
-
-		//  return res.redirect("/userOwner/update")
-
 	},
 	redirect: (req, res) => {
 
@@ -103,55 +97,48 @@ const controller = {
 
 	},
 
-
 	// Update - Form to edit
 	edit: (req, res) => {
 
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-
-		res.render("partial/userOwner/editarCancha", {
-			product
+		let canchaID = req.params.id
+		let canchas = Cancha.findByPk(canchaID, {
+			include: ['tipoDeCancha', 'deporte']
 		})
+		let deportes = Deportes.findAll();
+		let tiposCancha = TipoCh.findAll();
 
+		Promise
+			.all([deportes, tiposCancha, canchas])
+			.then(([deportes, tiposCancha, canchas]) => {
+
+				res.render("partial/userOwner/editarCancha", {
+					canchas,
+					deportes,
+					tiposCancha
+				})
+			})
 	},
 	// Update - Method to update
 	update: (req, res) => {
+let image;
+if (req.files[0] != undefined) {
+	image = req.files[0].filename;
+} else {
+	image = "estrella-gris.png";
+}
 
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-
-
-		let image
-		if (req.files[0] != undefined) {
-			image = req.files[0].filename
-		} else {
-			image = productToEdit.image
-		}
-
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-
-		let newProduct = products.map(product => {
-
-			if (product.id == productToEdit.id) {
-
-				return product = {
-					...productToEdit
-				};
-			}
-
-			return product
-		})
-
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-
-		return res.redirect("/userOwner/update")
-
+		Cancha
+			.update({
+				identificacion: req.body.identificacion,
+				capacidad: req.body.capacidad,
+				valor: req.body.valor,
+				deportes_players_id: req.body.deporte,
+				tipo_de_cancha_id: req.body.tipocancha,
+				img_c: image,
+			},{where: {id: req.params.id}})
+			.then(() => {
+				return res.redirect("/userOwner/update")
+			})
 
 
 	},
