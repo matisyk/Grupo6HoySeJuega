@@ -43,7 +43,7 @@ const controller = {
 		Promise
 			.all([deportes, tiposCancha])
 			.then(([deportes, tiposCancha]) => {
-      console.log("🚀 ~ file: productsCourtController.js ~ line 46 ~ .then ~ deportes", deportes)
+   
 
 				res.render("partial/userOwner/registrarCancha", {
 					deportes,
@@ -120,9 +120,13 @@ const controller = {
 	},
 	// Update - Method to update
 	update: (req, res) => {
-let image;
+
+		let image
+    console.log("🚀 ~ file: productsCourtController.js ~ line 125 ~ image", image)
+    console.log("🚀 ~ file: productsCourtController.js ~ line 125 ~ image", image)
 if (req.files[0] != undefined) {
 	image = req.files[0].filename;
+  console.log("🚀 ~ file: productsCourtController.js ~ line 128 ~ image", image)
 } else {
 	image = "estrella-gris.png";
 }
@@ -135,6 +139,7 @@ if (req.files[0] != undefined) {
 				deportes_players_id: req.body.deporte,
 				tipo_de_cancha_id: req.body.tipocancha,
 				img_c: image,
+        
 			},{where: {id: req.params.id}})
 			.then(() => {
 				return res.redirect("/userOwner/update")
