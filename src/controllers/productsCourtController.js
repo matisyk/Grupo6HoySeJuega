@@ -43,9 +43,9 @@ const controller = {
 		Promise
 			.all([deportes, tiposCancha])
 			.then(([deportes, tiposCancha]) => {
+      console.log("🚀 ~ file: productsCourtController.js ~ line 46 ~ .then ~ deportes", deportes)
 
 				res.render("partial/userOwner/registrarCancha", {
-
 					deportes,
 					tiposCancha
 				})

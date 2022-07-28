@@ -35,9 +35,9 @@
             <div class="item-tarjeta">
                 <label>Deporte:</label>
                 <select class="form-control" id="deporte" name="deporte">
-                    <option value="" disabled selected> Elegir</option>
-                    <% deportes.forEach(deporte => { %>
-                    <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                    <option value="" disabled selected> Elegir deporte</option>
+                    <% deportes.forEach(deportes => { %>
+                    <option value="<%= deportes.id %>"><%= deportes.deporte %></option>
                     <% }); %>
                 </select>
             </div>
@@ -51,7 +51,7 @@
             <div class="item-tarjeta">
                 <label>Tipo de cancha</label>
                 <select class="form-control" id="deporte" name="tipocancha">
-                    <option value="" disabled selected> Elegir</option>
+                    <option value="" disabled selected> Elegir material de la cancha</option>
                     <% tiposCancha.forEach(tiposCancha => { %>
                     <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
                     <% }); %>
@@ -64,8 +64,8 @@
             </div>
 
             <div class="item-tarjeta">
-                <label>Precio:</label> <span> $ </span>
-                <input type="number" name="valor" placeholder="Ej:pesos argentinos ">
+                <label>Precio:</label>
+                <input type="number" name="valor" placeholder="Valor en pesos argentinos ">
             </div>
 
             <div class="item-tarjeta">
