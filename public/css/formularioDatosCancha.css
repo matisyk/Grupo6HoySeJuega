@@ -147,7 +147,15 @@ select{
     width: 310px;
     margin: auto;
 }
-
+.direccion{
+  width: 35%;
+}
+.numeracion{
+  width:10%
+}
+.label-vacio{
+  margin-bottom: 0.5rem;
+}
 .divCargar{
 font-size: 10px;
 }

@@ -56,11 +56,17 @@
                   <input type="text" class="form-control" id="nombre_del_lugar" name="nombre_del_lugar" value='<%=userOwner.nombre_del_lugar%>'/>
                 </div>
                 <br>
+                <div class="horizontal direccion">
                 <div>
-                  <label for="direccion">Dirección:</label>
-                  <input type="text" class="form-control" id="direccion" name="direccion" value='<%=direccion.calle%> <%=direccion.numeracion%>' />
+                  <label for="direccion">Direccion:</label>
+                  <input type="text" class="form-control" id="direccion" name="direccion" value='<%=direccion.calle%>' placeholder="Calle" />
+                </div>
+                <div class="numeracion">
+                  <div class="label-vacio"><label class="label-vacio" for="numeracion">    </label></div>
+                  <input type="number" class="form-control" id="numeracion" name="numeracion" value='<%=direccion.numeracion%>' placeholder="Numeracion" />
                 </div>
               </div>
+            </div>
               <br>
               <div class="horizontal">
                 <div>

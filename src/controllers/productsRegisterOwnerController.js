@@ -205,42 +205,122 @@ const controller = {
 	// Update - Method to update
 	update: (req, res) => {
 
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
+		let userOwnerID = req.params.id
+		let userOwner = UserOwner.findByPk(userOwnerID)
 
+		UserOwner
+		.update({
+			nombre: req.body.nombre,
+			apellido: req.body.apellido,
+			nombre_del_lugar: req.body.nombre_del_lugar,
 
-		let image
-		if (req.files[0] != undefined) {
-			image = req.files[0].filename
-		} else {
-			image = productToEdit.image
-		}
+		}, {
+			where: {
+				id: userOwnerID
+			} })
+		.then(() => {
+			TelefonoOwner.update({
+				telefono: req.body.telefono,
+				telefono2: req.body.telefono2
+			}, {
+				where: {
+					users_owners_id: userOwnerID
+				}
+			}) })
+			.then((result) => {
+			DetalleLugarOwner.update({
+				iluminacion: req.body.iluminacion,
+				estacionamiento: req.body.estacionamiento,
+				wifi: req.body.wifi,
+				vestuario: req.body.vestuario,
+				ducha: req.body.ducha,
+				parrilla: req.body.parrilla,
+				quincho: req.body.quincho, 
+				quiosco: req.body.quiosco,
+			}, {
+				where: {
+					users_owners_id: userOwnerID
+				}
+			})
+			 })
 
+			 .then(() => {
+				MedioDePago.update({
+				transferencia: req.body.transferencia,
+				mercado_pago: req.body.mercado_pago,
+				efectivo: req.body.efectivo,
+				tarjeta: req.body.tarjeta,
+			}, {
+				where: {
+					users_owners_id: userOwnerID
+				}
+			})
 
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-
-		let newProduct = products.map(product => {
-
-			if (product.id == productToEdit.id) {
-
-				return product = {
-					...productToEdit
-				};
-			}
-
-			return product
+			Ubicacion.update({
+				calle: req.body.direccion,
+				numeracion: req.body.numeracion,
+			}, {
+				where: {
+					users_owners_id: userOwnerID
+				}
+			})
+		
 		})
 
+		.then(() => {
+			return res.redirect("/userOwner/loginCourt");
+		})
+		.catch(error => res.send(error))
+	},
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
-		res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
+	// Redirect
+	redirect: (req, res) => {
+
+		//let id = products.length;
+		res.render("partial/register/redireccion", {
+					userOwnerLogged: req.session.userOwnerLogged,
+		//	id
+		});
 
 	},
+
+		// let id = req.params.id
+		// let productToEdit = products.find(product => product.id == id)
+
+
+		// // let image
+		// // if (req.files[0] != undefined) {
+		// // 	image = req.files[0].filename
+		// // } else {
+		// // 	image = productToEdit.image
+		// // }
+
+
+		// productToEdit = {
+		// 	id: productToEdit.id,
+		// 	...req.body,
+		// 	image: image,
+		// }
+
+		// let newProduct = products.map(product => {
+
+		// 	if (product.id == productToEdit.id) {
+
+		// 		return product = {
+		// 			...productToEdit
+		// 		};
+		// 	}
+
+		// 	return product
+		// })
+
+
+		// fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
+
+		// res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
+
+	//},
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
