@@ -148,12 +148,20 @@ if (req.files[0] != undefined) {
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
-		let id = req.params.id
-		let productToDelete = products.filter(product => product.id != id)
+		let canchaID = req.params.id
+		
+		Cancha.destroy({
+			where: { id: canchaID },
+			force: true
+			})
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete, null, ' '));
+			.then(() => {
+				return res.redirect("/userOwner/update")
+			})
+		 .catch(error => res.send(error))
 
-		return res.redirect("/userOwner/update")
+
+	
 
 	}
 };
