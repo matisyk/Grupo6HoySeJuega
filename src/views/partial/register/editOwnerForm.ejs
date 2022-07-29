@@ -24,207 +24,215 @@
 </head>
 
 <body>
-  <h1>Modificar Datos</h1>
-  <div class="formulario-div2">
-    <form class="div2" action="/register/editOwnerForm/<%=userOwner.id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
-      <div class="form-group">
-        <div class="input-group">
-          <div class="entre-divs">
-            <div>
-              <label for="nombre">Nombre: </label>
-              <input id="nombre" name="nombre" class="form-control" type="nombre" value = '<%=userOwner.nombre%>' required>
-            </div>
-            <br>
-            <div>
-              <label for="apellido">Apellido: </label>
-              <input id="apellido" name="apellido" class="form-control" type="apellido" value='<%=userOwner.apellido%>' required>
-            </div>
-            <br>
-            <br>
-            <div>
-              <label for="nombre_del_lugar">Nombre del lugar: </label>
-              <input type="text" class="form-control" id="nombre_del_lugar" name="nombre_del_lugar" value='<%=userOwner.nombre_del_lugar%>'/>
-            </div>
-            <br>
-            <label for="direccion">Dirección:</label>
-            <input type="text" class="form-control" id="direccion" name="direccion" value='<%=userOwner.direccion%>' />
-            <br>
-            <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono" value='<%=userOwner.telefono%>' />
-            <br>
-            <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=userOwner.telefono2%>' />
-          </div>
-          <div class="entre-divs" style="margin-left: 100px;">
+  <div class="contenedor-general">
+    <div class="contenedor-imagen">
+      <div class="logo">
+        <img src="/img/logo-fondo-transparente.png" alt="">
+      </div>
+    </div>
 
-            <div class="servicios">
-              <label>Servicios:</label><br /> <br />
-              <label class="funcionalidades1" for="iluminacion">Iluminación  <select name="iluminacion" size="1">
-                <% if(userOwner.iluminacion == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br />
-              <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento" size="1">
-                <% if(userOwner.estacionamiento == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br /> 
-              <label class="funcionalidades1" for="wifi">Wifi <select name="wifi" size="1">
-                <% if(userOwner.wifi == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br /> 
-              <label class="funcionalidades1" for="vestuarios">Vestuarios <select name="vestuarios" size="1">
-                <% if(userOwner.vestuarios == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br /> 
-              <label class="funcionalidades1" for="duchas">Duchas <select name="duchas" size="1">
-                <% if(userOwner.duchas == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br /> 
-              <label class="funcionalidades1" for="parrilla">Parrilla <select name="parrilla" size="1">
-                <% if(userOwner.parrilla == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br /> 
-              <label class="funcionalidades1" for="quincho">Quincho <select name="quincho" size="1">
-                <% if(userOwner.quincho == "Si"){ %>
-                  <option selected="selected" label="Si" value="Si"></option>
-                  <option label="No" value="No"></option>
-                <% } else { %>
-                  <option selected="selected" label="No" value="No"></option>
-                  <option label="Si" value="Si"></option>
-                <% } %>
-              </select></label><br /> <br />
+    <div class="formulario-div2">
+      <form class="div2" action="/register/editOwnerForm/<%=userOwner.id%>?_method=PATCH" method="POST" enctype="multipart/form-data">
+        <h1>Modificar Datos</h1>
+        <div class="form-group">
+          <div class="input-group">
+            <div class="entre-divs">
+              <div class="horizontal">
+                <div>
+                  <label for="nombre">Nombre: </label>
+                  <input id="nombre" name="nombre" class="form-control" type="nombre" value = '<%=userOwner.nombre%>' required>
+                </div>
+                <br>
+                <div>
+                  <label for="apellido">Apellido: </label>
+                  <input id="apellido" name="apellido" class="form-control" type="apellido" value='<%=userOwner.apellido%>' required>
+                </div>
+              </div>  
+              <br>
+              <br>
+              <div class="horizontal">
+                <div>
+                  <label for="nombre_del_lugar">Nombre del lugar: </label>
+                  <input type="text" class="form-control" id="nombre_del_lugar" name="nombre_del_lugar" value='<%=userOwner.nombre_del_lugar%>'/>
+                </div>
+                <br>
+                <div>
+                  <label for="direccion">Dirección:</label>
+                  <input type="text" class="form-control" id="direccion" name="direccion" value='<%=userOwner.direccion%>' />
+                </div>
+              </div>
+              <br>
+              <div class="horizontal">
+                <div>
+                  <label for="telefono">Telefono:</label>
+                  <input type="number" class="form-control" id="telefono" name="telefono" value='<%=userOwner.telefono%>' />
+                </div>
+                <br>
+                <div>
+                  <label for="telefono2">Contacto de emergencia:</label>
+                  <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=userOwner.telefono2%>' />
+                </div>
+              </div>
+              
             </div>
-
-              <div class="medios-de-pago">
-                <label>Medios de pago aceptados:</label>
-                <br>
-                <br>
-                <label class="funcionalidades1" for="transferencia"> Transferencia <select name="transferencia" size="1">
-                  <% if(userOwner.transferencia == "Si"){ %>
-                    <option selected="selected" label="Si" value="Si"></option>
-                    <option label="No" value="No"></option>
-                  <% } else { %>
-                    <option selected="selected" label="No" value="No"></option>
-                    <option label="Si" value="Si"></option>
-                  <% } %>
-                </select></label>
-                <br />
-                <label class="funcionalidades1" for="mercadoPago">Mercado
-                  Pago <select name="mercadoPago" size="1">
-                    <% if(userOwner.mercadoPago == "Si"){ %>
+              <br>
+            <div class="entre-divs">
+              <div class="horizontal">
+                <div class="servicios">
+                  <label>Servicios:</label>
+                  <br>
+                  <label class="funcionalidades1" for="iluminacion">Iluminación  <select name="iluminacion" size="1">
+                    <% if(userOwner.iluminacion == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
                       <option selected="selected" label="No" value="No"></option>
                       <option label="Si" value="Si"></option>
                     <% } %>
-                  </select>
-                </label>
-                <br />
-                <label class="funcionalidades1" for="modo">Modo <select name="modo" size="1">
-                  <% if(userOwner.modo == "Si"){ %>
-                    <option selected="selected" label="Si" value="Si"></option>
-                    <option label="No" value="No"></option>
-                  <% } else { %>
-                    <option selected="selected" label="No" value="No"></option>
-                    <option label="Si" value="Si"></option>
-                  <% } %>
-                </select>
-                </label><br />
-                <label class="funcionalidades1" for="efectivo">Efectivo <select name="efectivo" size="1">
-                  <% if(userOwner.efectivo == "Si"){ %>
-                    <option selected="selected" label="Si" value="Si"></option>
-                    <option label="No" value="No"></option>
-                  <% } else { %>
-                    <option selected="selected" label="No" value="No"></option>
-                    <option label="Si" value="Si"></option>
-                  <% } %>
-                </select></label><br />
-                </label>
-              </div>
+                  </select></label><br />
+                  <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento" size="1">
+                    <% if(userOwner.estacionamiento == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                  </select></label><br /> 
+                  <label class="funcionalidades1" for="wifi">Wifi <select name="wifi" size="1">
+                    <% if(userOwner.wifi == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                  </select></label><br /> 
+                  <label class="funcionalidades1" for="vestuarios">Vestuarios <select name="vestuarios" size="1">
+                    <% if(userOwner.vestuarios == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                  </select></label><br /> 
+                  <label class="funcionalidades1" for="duchas">Duchas <select name="duchas" size="1">
+                    <% if(userOwner.duchas == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                  </select></label><br /> 
+                  <label class="funcionalidades1" for="parrilla">Parrilla <select name="parrilla" size="1">
+                    <% if(userOwner.parrilla == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                  </select></label><br /> 
+                  <label class="funcionalidades1" for="quincho">Quincho 
+                    <select name="quincho" size="1">
+                    <% if(userOwner.quincho == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                    </select>
+                  </label><br> <br>
+                </div>
+
+                <div class="medios-de-pago">
+                  <label>Medios de pago aceptados:</label>
+                  <br>
+                  <label class="funcionalidades1" for="transferencia"> Transferencia <select name="transferencia" size="1">
+                    <% if(userOwner.transferencia == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                  </select></label>
+                  <br />
+                  <label class="funcionalidades1" for="mercadoPago">Mercado
+                    Pago <select name="mercadoPago" size="1">
+                      <% if(userOwner.mercadoPago == "Si"){ %>
+                        <option selected="selected" label="Si" value="Si"></option>
+                        <option label="No" value="No"></option>
+                      <% } else { %>
+                        <option selected="selected" label="No" value="No"></option>
+                        <option label="Si" value="Si"></option>
+                      <% } %>
+                    </select>
+                  </label>
+                  <br/>
+                  <label class="funcionalidades1" for="modo">Modo 
+                    <select name="modo" size="1">
+                    <% if(userOwner.modo == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                    </select>
+                  </label>
+                  <br>
+                  <label class="funcionalidades1" for="efectivo">Efectivo 
+                    <select name="efectivo" size="1">
+                    <% if(userOwner.efectivo == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>          
+                    </select>
+                  </label>
+                  <br>
+                </div>
+
             </div>
           </div>
-        </div>
-      </div>
-      <br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <div class="form-group" >
-        <div style="display:flex; justify-content:center ;flex-direction:column; flex-wrap:wrap" class="input-group">
+
+
           <br>
-          <div class="img-cancha">
-            <label for="imagenCancha">Cargar imágenes de la cancha:
-              <input type="file" name="imagenCancha" accept=".jpg" multiple /></label>
-          </div>
-          <br>
-          <div class="img-cancha">
-            <label for="imagenComedor">Cargar imágenes de la parrilla:
-              <input type="file" name="imagenComedor" accept=".jpg" multiple /></label>
-          </div>
-          <br>
-          <div class="img-cancha">
-            <label for="imagenOtras">Cargar imágenes extras del lugar:
-              <input type="file" name="imagenOtras" accept=".jpg" multiple /></label>
-          </div>
-          <br>
-        </div>
-        <div class="entre-divs9">
-          <a href="/register/registerOwner/">
-            <button type="submit">
-              <div class="svg-wrapper-1">
-                <div class="svg-wrapper">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" widthh="24" height="24">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path
-                      d="M177.1 228.6L207.9 320h96.5l29.62-91.38L256 172.1L177.1 228.6zM255.1 0C114.6 0 .0001 114.6 .0001 256S114.6 512 256 512s255.1-114.6 255.1-255.1S397.4 0 255.1 0zM416.6 360.9l-85.4-1.297l-25.15 81.59C290.1 445.5 273.4 448 256 448s-34.09-2.523-50.09-6.859L180.8 359.6l-85.4 1.297c-18.12-27.66-29.15-60.27-30.88-95.31L134.3 216.4L106.6 135.6c21.16-26.21 49.09-46.61 81.06-58.84L256 128l68.29-51.22c31.98 12.23 59.9 32.64 81.06 58.84L377.7 216.4l69.78 49.1C445.8 300.6 434.8 333.2 416.6 360.9z" />
-                  </svg>
-                </div>
+        
+          <div class="entre-divs9">
+            <div class="horizontal">
+              <div>
+                <a href="/register"><button class="volver">Volver</button></a>
               </div>
-              <span>DALE...</span>
-            </button>
-          </a>
+              
+              <a href="/register/registerOwner/">
+                <button type="submit">
+                  <div class="svg-wrapper-1">
+                    <div class="svg-wrapper">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" widthh="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path
+                          d="M177.1 228.6L207.9 320h96.5l29.62-91.38L256 172.1L177.1 228.6zM255.1 0C114.6 0 .0001 114.6 .0001 256S114.6 512 256 512s255.1-114.6 255.1-255.1S397.4 0 255.1 0zM416.6 360.9l-85.4-1.297l-25.15 81.59C290.1 445.5 273.4 448 256 448s-34.09-2.523-50.09-6.859L180.8 359.6l-85.4 1.297c-18.12-27.66-29.15-60.27-30.88-95.31L134.3 216.4L106.6 135.6c21.16-26.21 49.09-46.61 81.06-58.84L256 128l68.29-51.22c31.98 12.23 59.9 32.64 81.06 58.84L377.7 216.4l69.78 49.1C445.8 300.6 434.8 333.2 416.6 360.9z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <span>DALE...</span>
+                </button>
+              </a>
+                  
+                  
+            </div>
+          </div>
+          
         </div>
-      </div>
-  </div>
-  </form>
-  
-  <div class="container">
-    <div>
-      <a href="/register"><button class="volver">Volver</button></a>
+      </form>
     </div>
-    
-    <div class="alert alert-success divAlerta">
-      ¡Gracias por registrarse!
-    </div>
-  </div>
   </div>
 </body>
 
