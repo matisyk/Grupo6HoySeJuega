@@ -12,6 +12,7 @@
   <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/jdSliderVistaCancha.css" rel="stylesheet" />
   <link href="/css/vistaCancha.css" rel="stylesheet" />
+  
 
 
   <%- include('../css-externos') %>
@@ -39,46 +40,59 @@
     </div>
 
 <!---Imagenes Club-->
-<div class="container-fluid p-0 bajar-slider">
-  <section class="jd-slider slideshow">
-    <div class="slide-inner">
-      <ul class="slide-area">
 
-        <li>
-          <% if (typeof img.image != "undefined") { %>
-            <img class="user-img" src="/img/products/<%= img.image %>">
-            <% } else {%>
-            <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
-            <% } %>
-       </li>
-       <li>
-        <% if (typeof img.image2 != "undefined") { %>
-          <img class="user-img" src="/img/products/<%= img.image2 %>">
-          
-          <% } else {%>
-          <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
-          <% } %>
-     </li>
-     <li>
-      <% if (typeof img.image3 != "undefined") { %>
-        <img class="user-img" src="/img/products/<%= img.image3 %>">
-        
-        <% } else {%>
-        <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
-        <% } %>
-   </li>
-      </ul>
+<div class="">
+  <h2 class="titulo1">Galería de fotos:</h2>
+  <ul class="galeria">
+    <li><a href="#img1"><img src="/img/products/<%= img.image %>">
+        <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+      </a>
+  </ul>
+
+  <div class="modal" id="img1">
+    <h3>Canchas</h3>
+    <div class="imagen">
+      <a href="">&#60;</a>
+      <a href=""><img src="/img/products/<%= img.image %>"></a>
+      <a href=""><img src="/img/products/<%= img.image2 %>"></a>
+      <a href=""><img src="/img/products/<%= img.image3 %>"> </a>
+      <a href="#img2">></a>
+
+
     </div>
-
-  <div class="volver" href="#">
-    <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+    <a class="cerrar" href="">X</a>
   </div>
-  <div class="prox" href="#">
-    <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
-  </div>
-</section>
 
+  <div class="modal" id="img2">
+    <h3>Parrilla y bufete</h3>
+    <div class="imagen">
+      <a href="#img1">&#60;</a>
+      <a href=""><img src="/img/products/<%= img.image2 %>"></a>
+      <a href=""><img src="/img/products/<%= img.image3 %>"></a>
+      <a href=""><img src="/img/products/<%= img.image %>"></a>
+      <a href="#img3">></a>
+    </div>
+    <a class="cerrar" href="">X</a>
+  </div>
+
+  <div class="modal" id="img3">
+    <h3>Estacionamiento</h3>
+    <div class="imagen">
+      <a href="#img2">&#60;</a>
+      <a href=""><img src="/img/products/<%= img.image3 %>"></a>
+      <a href=""><img src="/img/products/<%= img.image %>"></a>
+      <a href=""><img src="/img/products/<%= img.image2 %>"></a>
+      <a href="#img1">></a>
+    </div>
+    <a class="cerrar" href="">X</a>
+  </div>
 </div>
+
+
+
+
+<div class="container-fluid p-0 bajar-slider">
+
 
     <h2 class="titulo1">Tus canchas:</h2>
 
