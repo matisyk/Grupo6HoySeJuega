@@ -147,11 +147,13 @@ select{
     width: 310px;
     margin: auto;
 }
-.direccion{
-  width: 35%;
+
+
+.calle{
+  width: max-content;
 }
 .numeracion{
-  width:10%
+  width: 25%
 }
 .label-vacio{
   margin-bottom: 0.5rem;
