@@ -58,19 +58,19 @@
                 <br>
                 <div>
                   <label for="direccion">Dirección:</label>
-                  <input type="text" class="form-control" id="direccion" name="direccion" value='<%=userOwner.direccion%>' />
+                  <input type="text" class="form-control" id="direccion" name="direccion" value='<%=direccion.calle%> <%=direccion.numeracion%>' />
                 </div>
               </div>
               <br>
               <div class="horizontal">
                 <div>
                   <label for="telefono">Telefono:</label>
-                  <input type="number" class="form-control" id="telefono" name="telefono" value='<%=userOwner.telefono%>' />
+                  <input type="number" class="form-control" id="telefono" name="telefono" value='<%=telefono.telefono%>' />
                 </div>
                 <br>
                 <div>
                   <label for="telefono2">Contacto de emergencia:</label>
-                  <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=userOwner.telefono2%>' />
+                  <input type="number" class="form-control" id="telefono2" name="telefono2" value='<%=telefono.telefono2%>' />
                 </div>
               </div>
               
@@ -82,7 +82,7 @@
                   <label>Servicios:</label>
                   <br>
                   <label class="funcionalidades1" for="iluminacion">Iluminación  <select name="iluminacion" size="1">
-                    <% if(userOwner.iluminacion == "Si"){ %>
+                    <% if(detalleLugar.iluminacion == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -91,7 +91,7 @@
                     <% } %>
                   </select></label><br />
                   <label class="funcionalidades1" for="estacionamiento"> Estacionamiento <select name="estacionamiento" size="1">
-                    <% if(userOwner.estacionamiento == "Si"){ %>
+                    <% if(detalleLugar.estacionamiento == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -100,7 +100,7 @@
                     <% } %>
                   </select></label><br /> 
                   <label class="funcionalidades1" for="wifi">Wifi <select name="wifi" size="1">
-                    <% if(userOwner.wifi == "Si"){ %>
+                    <% if(detalleLugar.wifi == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -109,7 +109,7 @@
                     <% } %>
                   </select></label><br /> 
                   <label class="funcionalidades1" for="vestuarios">Vestuarios <select name="vestuarios" size="1">
-                    <% if(userOwner.vestuarios == "Si"){ %>
+                    <% if(detalleLugar.vestuario == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -118,7 +118,7 @@
                     <% } %>
                   </select></label><br /> 
                   <label class="funcionalidades1" for="duchas">Duchas <select name="duchas" size="1">
-                    <% if(userOwner.duchas == "Si"){ %>
+                    <% if(detalleLugar.ducha == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -127,7 +127,7 @@
                     <% } %>
                   </select></label><br /> 
                   <label class="funcionalidades1" for="parrilla">Parrilla <select name="parrilla" size="1">
-                    <% if(userOwner.parrilla == "Si"){ %>
+                    <% if(detalleLugar.parrilla == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -137,7 +137,7 @@
                   </select></label><br /> 
                   <label class="funcionalidades1" for="quincho">Quincho 
                     <select name="quincho" size="1">
-                    <% if(userOwner.quincho == "Si"){ %>
+                    <% if(detalleLugar.quincho == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -145,14 +145,25 @@
                       <option label="Si" value="Si"></option>
                     <% } %>
                     </select>
-                  </label><br> <br>
+                  </label><br> 
+                  <label class="funcionalidades1" for="quiosco">Quiosco
+                    <select name="quiosco" size="1">
+                    <% if(detalleLugar.quiosco == "Si"){ %>
+                      <option selected="selected" label="Si" value="Si"></option>
+                      <option label="No" value="No"></option>
+                    <% } else { %>
+                      <option selected="selected" label="No" value="No"></option>
+                      <option label="Si" value="Si"></option>
+                    <% } %>
+                    </select>
+                  </label><br>
                 </div>
 
                 <div class="medios-de-pago">
                   <label>Medios de pago aceptados:</label>
                   <br>
                   <label class="funcionalidades1" for="transferencia"> Transferencia <select name="transferencia" size="1">
-                    <% if(userOwner.transferencia == "Si"){ %>
+                    <% if(medioDePago.transferencia == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -163,7 +174,7 @@
                   <br />
                   <label class="funcionalidades1" for="mercadoPago">Mercado
                     Pago <select name="mercadoPago" size="1">
-                      <% if(userOwner.mercadoPago == "Si"){ %>
+                      <% if(medioDePago.mercado_pago == "Si"){ %>
                         <option selected="selected" label="Si" value="Si"></option>
                         <option label="No" value="No"></option>
                       <% } else { %>
@@ -173,9 +184,9 @@
                     </select>
                   </label>
                   <br/>
-                  <label class="funcionalidades1" for="modo">Modo 
-                    <select name="modo" size="1">
-                    <% if(userOwner.modo == "Si"){ %>
+                  <label class="funcionalidades1" for="tarjeta">Tarjeta 
+                    <select name="tarjeta" size="1">
+                    <% if(medioDePago.tarjeta == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>
@@ -187,7 +198,7 @@
                   <br>
                   <label class="funcionalidades1" for="efectivo">Efectivo 
                     <select name="efectivo" size="1">
-                    <% if(userOwner.efectivo == "Si"){ %>
+                    <% if(medioDePago.efectivo == "Si"){ %>
                       <option selected="selected" label="Si" value="Si"></option>
                       <option label="No" value="No"></option>
                     <% } else { %>

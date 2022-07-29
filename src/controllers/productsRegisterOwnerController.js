@@ -189,12 +189,16 @@ const controller = {
 
 		let idOwner = req.params.id
 		let userOwner = UserOwner.findByPk(idOwner)
+		let direccion = Ubicacion.findByPk(idOwner)
+		let telefono = TelefonoOwner.findByPk(idOwner)
+		let detalleLugar = DetalleLugarOwner.findByPk(idOwner)
+		let medioDePago = MedioDePago.findByPk(idOwner)
 			
 		Promise
-			.all([userOwner, ])
-			.then(([userOwner, ]) => {
+			.all([userOwner, direccion, telefono, detalleLugar, medioDePago])
+			.then(([userOwner, direccion, telefono, detalleLugar, medioDePago]) => {
 			 res.render("partial/register/editOwnerForm", {
-			userOwner,
+			userOwner, direccion, telefono, detalleLugar, medioDePago
 		})
 		})
 	},
