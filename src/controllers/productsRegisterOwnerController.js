@@ -188,16 +188,15 @@ const controller = {
 	edit: (req, res) => {
 
 		let idOwner = req.params.id
-		UserOwner.findByPk(idOwner)
-			.then((userOwner) => {
-    console.log("🚀 ~ file: productsRegisterOwnerController.js ~ line 193 ~ .then ~ userOwner", userOwner)
+		let userOwner = UserOwner.findByPk(idOwner)
+			
+		Promise
+			.all([userOwner, ])
+			.then(([userOwner, ]) => {
 			 res.render("partial/register/editOwnerForm", {
-			userOwner
+			userOwner,
 		})
 		})
-
-		
-
 	},
 	// Update - Method to update
 	update: (req, res) => {

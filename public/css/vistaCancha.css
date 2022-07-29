@@ -482,18 +482,18 @@ h2 {
 }
 
 .galeria img {
-  width: 140px;
-  height: 100px;
+  width: 280px;
+height: 193px;
 }
 .fa-circle-plus:before,
 .fa-plus-circle:before {
   content: "\f055";
   color: white;
-  position: relative;
-  left: 117px;
-  /* top: 10px; */
-  bottom: 55px;
-  font-size: 20px;
+position: relative;
+left: 129px;
+top: -45px;
+bottom: 55px;
+font-size: 40px;
 }
 /*Estilos del modal*/
 

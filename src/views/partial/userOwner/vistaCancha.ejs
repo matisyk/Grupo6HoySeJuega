@@ -12,7 +12,7 @@
   <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/jdSliderVistaCancha.css" rel="stylesheet" />
   <link href="/css/vistaCancha.css" rel="stylesheet" />
-  
+
 
 
   <%- include('../css-externos') %>
@@ -27,329 +27,339 @@
 
     <!---<p class="sin-canchas">Aún no tienes canchas registradas</p>--->
     <div class="encabezado-club">
-      <div class="logo-club"> 
+      <div class="logo-club">
         <% if (typeof logo.logo != "undefined") { %>
         <img src="/img/products/<%= logo.logo %>">
         <% } else {%>
-        <img src="/img/products/imagenCancha-1654372985364-494608673.jpg" > 
+        <img src="/img/products/imagenCancha-1654372985364-494608673.jpg">
         <% } %>
       </div>
 
       <h2 class="nombre-del-lugar"><%= userOwner.nombre_del_lugar %></h2>
-      
-    </div>
-
-<!---Imagenes Club-->
-
-<div class="">
-  <h2 class="titulo1">Galería de fotos:</h2>
-  <ul class="galeria">
-    <li><a href="#img1"><img src="/img/products/<%= img.image %>">
-        <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
-      </a>
-  </ul>
-
-  <div class="modal" id="img1">
-    <h3>Canchas</h3>
-    <div class="imagen">
-      <a href="">&#60;</a>
-      <a href=""><img src="/img/products/<%= img.image %>"></a>
-      <a href=""><img src="/img/products/<%= img.image2 %>"></a>
-      <a href=""><img src="/img/products/<%= img.image3 %>"> </a>
-      <a href="#img2">></a>
-
 
     </div>
-    <a class="cerrar" href="">X</a>
-  </div>
 
-  <div class="modal" id="img2">
-    <h3>Parrilla y bufete</h3>
-    <div class="imagen">
-      <a href="#img1">&#60;</a>
-      <a href=""><img src="/img/products/<%= img.image2 %>"></a>
-      <a href=""><img src="/img/products/<%= img.image3 %>"></a>
-      <a href=""><img src="/img/products/<%= img.image %>"></a>
-      <a href="#img3">></a>
-    </div>
-    <a class="cerrar" href="">X</a>
-  </div>
+    <!---Imagenes Club-->
 
-  <div class="modal" id="img3">
-    <h3>Estacionamiento</h3>
-    <div class="imagen">
-      <a href="#img2">&#60;</a>
-      <a href=""><img src="/img/products/<%= img.image3 %>"></a>
-      <a href=""><img src="/img/products/<%= img.image %>"></a>
-      <a href=""><img src="/img/products/<%= img.image2 %>"></a>
-      <a href="#img1">></a>
-    </div>
-    <a class="cerrar" href="">X</a>
-  </div>
-</div>
+    <div class="">
+      <h2 class="titulo1">Galería de fotos:</h2>
+      <ul class="galeria">
+        <li><a href="#img1"><img src="/img/products/<%= img.image %>">
+            <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+          </a>
+        </li>
+        <li><a href="#img1"><img src="/img/products/<%= img.image2 %>">
+            <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+          </a>
+        </li>
+        <li><a href="#img1"><img src="/img/products/<%= img.image3 %>">
+            <h2><i class="fa-solid fa-circle-plus signomas"></i></h2>
+          </a>
+        </li>
+      </ul>
 
-
-
-
-<div class="container-fluid p-0 bajar-slider">
+      <div class="modal" id="img1">
+        <h3>Canchas</h3>
+        <div class="imagen">
+          <a href="">&#60;</a>
+          <a href=""><img src="/img/products/<%= img.image %>"></a>
+          <a href=""><img src="/img/products/<%= img.image2 %>"></a>
+          <a href=""><img src="/img/products/<%= img.image3 %>"> </a>
+          <a href="#img2">></a>
 
 
-    <h2 class="titulo1">Tus canchas:</h2>
-
-    <div class="container-fluid p-0 bajar-slider">
-      <section class="jd-slider slideshow">
-        <div class="slide-inner">
-          <ul class="slide-area">
-            <% canchas.forEach (canchas => { %>
-            <li>
-              <div class="tarjetas tarjetas-canchas">
-                <div class="tarjeta">
-                  <div class="blob"></div>
-                  <span class="img"><a href="/userOwner/agenda"><img
-                        src="/img/products/<%- canchas.img_c %>"
-                        alt=""></a></span>
-                  <h3><%= canchas.identificacion %></h3>
-                  <h3>$ <%= canchas.valor %></h3>
-                  <form action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/court/<%= canchas.id%>?_method=DELETE"
-                    method="POST">
-                    <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-                  </form>
-                  <button class="boton-editar"><a href="/userOwner/vistaCancha/<%= userOwner.id %>/editCourt/<%= canchas.id%>"><i
-                        class="fa-solid fa-pencil"></i></a></button>
-                </div>
-              </div>
-            </li>
-            <% }) %>
-          </ul>
         </div>
-
-        <a class="prev" href="#">
-          <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
-        </a>
-        <a class="next" href="#">
-          <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
-        </a>
-      </section>
-
-    </div>
-    <div class="botones-registro registroCP">
-      <button class="learn-more">
-        <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarCancha/<%= userOwnerLogged.id %>"><span
-            class="circle01 circle"
-            aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text registroC">Registrá tus Canchas</span></a>
-
-      </button>
-    </div>
-
-    <h2 class="titulo2">Tus escuelitas:</h2>
-
-    <div class="container-fluid p-0 bajar-slider">
-      <section class="jd-slider slideshow">
-        <div class="slide-inner">
-          <ul class="slide-area">
-            
-            <% escuelitas.forEach (escuelitas => { %>
-            <li>
-              <div class="tarjetas">
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/products/<%= escuelitas.image %>"
-                        alt=""></a></span>
-                  <h3><%= escuelitas.deporte %> <br><span class="categoria">Categoría
-                      <%= escuelitas.categoria %> </span> </h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Profesor: <%= escuelitas.profesor %> </li>
-                      <li>Día: <%= escuelitas.dia %> - <%= escuelitas.registroHorarios %> </li>
-                      <li>Día: <%= escuelitas.dia2 %> - <%= escuelitas.registroHorarios2 %> </li>
-                      <li>Día: <%= escuelitas.dia3 %> - <%= escuelitas.registroHorarios3 %> </li>
-                      <li>Cancha: <%= escuelitas.cancha %> </li>
-                      <li>Cantidad de alumnos: <%= escuelitas.alumnos %></li>
-                      <li>Precio: <%= escuelitas.valor %></li>
-                    </ul>
-                  </p>
-                  <form
-                    action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/school/<%= escuelitas.id %>?_method=DELETE"
-                    method="POST">
-                    <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-                  </form>
-
-
-                  <button class="boton-editar"><a
-                      href="/userOwner/vistaCancha/<%= userOwner.id %>/editSchool/<%= escuelitas.id%>"><i
-                        class="fa-solid fa-pencil"></i></a></button>
-                </div>
-              </div>
-            </li>
-            <% }) %>
-          </ul>
-        </div>
-        <a class="prev" href="#">
-          <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
-        </a>
-        <a class="next" href="#">
-          <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
-        </a>
-      </section>
-    </div>
-    <div class="botones-registro">
-      <button class="learn-more">
-        <a href="/userOwner/vistaCancha/<%= userOwner.id %>/registrarEscuelita"><span class="circle03 circle"
-            aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">escuelitas</span></a>
-      </button>
-    </div>
-
-    <h2 class="titulo2">Torneos:</h2>
-
-    <div class="container-fluid p-0 bajar-slider">
-      <section class="jd-slider slideshow">
-        <div class="slide-inner">
-          <ul class="slide-area">
-            <% torneos.forEach (torneos => { %>
-            <li>
-              <div class="tarjetas">
-                <div class="tarjeta tarjeta-esc">
-                  <div class="blob"></div>
-                  <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/<%= torneos.image%>"
-                        alt=""></a></span>
-                  <h3><%= torneos.deporte%> <br><span class="categoria"><%= torneos.categoria%></span> </h3>
-                  <p class="descrip-tarjeta-esc">
-                    <ul>
-                      <li>Día Inicio: <%= torneos.fecha_inicio%>  <!-- - < torneos.registroHorarios%> --> </li>
-                      <li>Día Fin: <%= torneos.fecha_fin%> <!-- - < torneos.registroHorarios%>. --></li>
-                      <li>Cantidad de equipos: <%= torneos.cantidad_equipos%></li>
-                      <li>Precio: $ <%= torneos.valor%></li>
-                      <li>Premio: $ <%= torneos.premio%></li>
-                    </ul>
-                  </p>
-                  <form
-                    action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/torneo/<%= torneos.id %>?_method=DELETE"
-                    method="POST">
-                    <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
-                  </form>
-
-
-                  <button class="boton-editar"><a
-                      href="/userOwner/vistaCancha/<%= userOwner.id %>/editTorneo/<%= torneos.id%>"><i
-                        class="fa-solid fa-pencil"></i></a></button>
-                </div>
-              </div>
-            </li>
-            <% }) %>
-          </ul>
-        </div>
-        <a class="prev" href="#">
-          <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
-        </a>
-        <a class="next" href="#">
-          <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
-        </a>
-      </section>
-    </div>
-
-    <div class="botones-registro">
-
-    </div>
-    <div class="botones-registro">
-      <button class="learn-more">
-        <a href="/userOwner/vistaCancha/<%= userOwner.id %>/crearTorneo"><span class="circle" aria-hidden="true">
-            <span class="icon arrow"></span>
-          </span>
-          <span class="circle02 button-text"> Torneos</span></a>
-
-      </button>
-
-
-      <button>
-        <a href="/userOwner/crearTorneo" class="boton-registrar-cancha"> </a>
-      </button>
-    </div>
-
-    <section>
-      <h2 class="titulo2">Detalles del Club</h2>
-      <div class="datos-del-lugar">
-        <div class="datos2-del-lugar">
-          <ol>
-            <li class="detalle">
-              <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
-                <i class="fa-solid fa-location-dot"></i> Calle
-                  <span><%= ubicacion.calle %></span> -
-                <span><%= ubicacion.numeracion %></span> - <span><%= ubicacion.localidad %>
-              </a>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.iluminacion%></span>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.vestuario%> </span>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.ducha%> </span>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.parrilla%></span>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.quincho%></span>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-utensils"></i><span> Quiosco</span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.quiosco%></span>
-            </li>
-          </ol>
-        </div>
-        <div class="datos3-del-lugar">
-          <ol>
-            <li class="detalle">
-              <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.wifi%></span>
-            </li>
-            <li class="detalle">
-              <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.estacionamiento%></span>
-            </li>
-            <li class="detalle">
-              <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.transferencia%></span>
-            </li>
-            <li class="detalle">
-              <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.mercado_pago%></span>
-            </li>
-            <li class="detalle">
-              <span><i class="fa-solid fa-credit-card"></i> Tarjeta </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.tarjeta%></span>
-            </li>
-            <li class="detalle">
-              <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
-                  class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.efectivo%></span>
-            </li>
-
-            </li>
-<button class="boton-editar-superior"><a class='lapizUser'
-          href='../../register/editOwnerForm/<%= userOwner.id%>'><i class="fa-solid fa-pencil"></i></a></button>
-          </ol>
-        </div>
+        <a class="cerrar" href="">X</a>
       </div>
-    </section>
 
-    <%- include('../footer') %>
+      <div class="modal" id="img2">
+        <h3>Parrilla y bufete</h3>
+        <div class="imagen">
+          <a href="#img1">&#60;</a>
+          <a href=""><img src="/img/products/<%= img.image2 %>"></a>
+          <a href=""><img src="/img/products/<%= img.image3 %>"></a>
+          <a href=""><img src="/img/products/<%= img.image %>"></a>
+          <a href="#img3">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+      </div>
+
+      <div class="modal" id="img3">
+        <h3>Estacionamiento</h3>
+        <div class="imagen">
+          <a href="#img2">&#60;</a>
+          <a href=""><img src="/img/products/<%= img.image3 %>"></a>
+          <a href=""><img src="/img/products/<%= img.image %>"></a>
+          <a href=""><img src="/img/products/<%= img.image2 %>"></a>
+          <a href="#img1">></a>
+        </div>
+        <a class="cerrar" href="">X</a>
+      </div>
+    </div>
+
+    <div class="container-fluid p-0 bajar-slider">
+
+
+      <h2 class="titulo1">Tus canchas:</h2>
+
+      <div class="container-fluid p-0 bajar-slider">
+        <section class="jd-slider slideshow">
+          <div class="slide-inner">
+            <ul class="slide-area">
+              <% canchas.forEach (canchas => { %>
+              <li>
+                <div class="tarjetas tarjetas-canchas">
+                  <div class="tarjeta">
+                    <div class="blob"></div>
+                    <span class="img"><a href="/userOwner/agenda"><img src="/img/products/<%- canchas.img_c %>"
+                          alt=""></a></span>
+                    <h3><%= canchas.identificacion %></h3>
+                    <h3>$ <%= canchas.valor %></h3>
+                    <form
+                      action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/court/<%= canchas.id%>?_method=DELETE"
+                      method="POST">
+                      <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+                    <button class="boton-editar"><a
+                        href="/userOwner/vistaCancha/<%= userOwner.id %>/editCourt/<%= canchas.id%>"><i
+                          class="fa-solid fa-pencil"></i></a></button>
+                  </div>
+                </div>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+
+          <a class="prev" href="#">
+            <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+          </a>
+          <a class="next" href="#">
+            <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
+          </a>
+        </section>
+
+      </div>
+      <div class="botones-registro registroCP">
+        <button class="learn-more">
+          <a href="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarCancha/<%= userOwnerLogged.id %>"><span
+              class="circle01 circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text registroC">Registrá tus Canchas</span></a>
+
+        </button>
+      </div>
+
+      <h2 class="titulo2">Tus escuelitas:</h2>
+
+      <div class="container-fluid p-0 bajar-slider">
+        <section class="jd-slider slideshow">
+          <div class="slide-inner">
+            <ul class="slide-area">
+
+              <% escuelitas.forEach (escuelitas => { %>
+              <li>
+                <div class="tarjetas">
+                  <div class="tarjeta tarjeta-esc">
+                    <div class="blob"></div>
+                    <span class="img img-escuelitas"><a href="/userOwner/agenda"><img
+                          src="/img/products/<%= escuelitas.image %>" alt=""></a></span>
+                    <h3><%= escuelitas.deporte %> <br><span class="categoria">Categoría
+                        <%= escuelitas.categoria %> </span> </h3>
+                    <p class="descrip-tarjeta-esc">
+                      <ul>
+                        <li>Profesor: <%= escuelitas.profesor %> </li>
+                        <li>Día: <%= escuelitas.dia %> - <%= escuelitas.registroHorarios %> </li>
+                        <li>Día: <%= escuelitas.dia2 %> - <%= escuelitas.registroHorarios2 %> </li>
+                        <li>Día: <%= escuelitas.dia3 %> - <%= escuelitas.registroHorarios3 %> </li>
+                        <li>Cancha: <%= escuelitas.cancha %> </li>
+                        <li>Cantidad de alumnos: <%= escuelitas.alumnos %></li>
+                        <li>Precio: <%= escuelitas.valor %></li>
+                      </ul>
+                    </p>
+                    <form
+                      action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/school/<%= escuelitas.id %>?_method=DELETE"
+                      method="POST">
+                      <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+
+
+                    <button class="boton-editar"><a
+                        href="/userOwner/vistaCancha/<%= userOwner.id %>/editSchool/<%= escuelitas.id%>"><i
+                          class="fa-solid fa-pencil"></i></a></button>
+                  </div>
+                </div>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <a class="prev" href="#">
+            <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+          </a>
+          <a class="next" href="#">
+            <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
+          </a>
+        </section>
+      </div>
+      <div class="botones-registro">
+        <button class="learn-more">
+          <a href="/userOwner/vistaCancha/<%= userOwner.id %>/registrarEscuelita"><span class="circle03 circle"
+              aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">escuelitas</span></a>
+        </button>
+      </div>
+
+      <h2 class="titulo2">Torneos:</h2>
+
+      <div class="container-fluid p-0 bajar-slider">
+        <section class="jd-slider slideshow">
+          <div class="slide-inner">
+            <ul class="slide-area">
+              <% torneos.forEach (torneos => { %>
+              <li>
+                <div class="tarjetas">
+                  <div class="tarjeta tarjeta-esc">
+                    <div class="blob"></div>
+                    <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/<%= torneos.image%>"
+                          alt=""></a></span>
+                    <h3><%= torneos.deporte%> <br><span class="categoria"><%= torneos.categoria%></span> </h3>
+                    <p class="descrip-tarjeta-esc">
+                      <ul>
+                        <li>Día Inicio: <%= torneos.fecha_inicio%>
+                          <!-- - < torneos.registroHorarios%> -->
+                        </li>
+                        <li>Día Fin: <%= torneos.fecha_fin%>
+                          <!-- - < torneos.registroHorarios%>. -->
+                        </li>
+                        <li>Cantidad de equipos: <%= torneos.cantidad_equipos%></li>
+                        <li>Precio: $ <%= torneos.valor%></li>
+                        <li>Premio: $ <%= torneos.premio%></li>
+                      </ul>
+                    </p>
+                    <form
+                      action="/userOwner/vistaCancha/<%= userOwner.id %>/delete/torneo/<%= torneos.id %>?_method=DELETE"
+                      method="POST">
+                      <button type="submit" class="boton-eliminar"><i class="fa-solid fa-trash"></i></button>
+                    </form>
+
+
+                    <button class="boton-editar"><a
+                        href="/userOwner/vistaCancha/<%= userOwner.id %>/editTorneo/<%= torneos.id%>"><i
+                          class="fa-solid fa-pencil"></i></a></button>
+                  </div>
+                </div>
+              </li>
+              <% }) %>
+            </ul>
+          </div>
+          <a class="prev" href="#">
+            <i class="fas fa-angle-left fa-2x text-white pl-3"></i>
+          </a>
+          <a class="next" href="#">
+            <i class="fas fa-angle-right fa-2x text-white pr-3"></i>
+          </a>
+        </section>
+      </div>
+
+      <div class="botones-registro">
+
+      </div>
+      <div class="botones-registro">
+        <button class="learn-more">
+          <a href="/userOwner/vistaCancha/<%= userOwner.id %>/crearTorneo"><span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="circle02 button-text"> Torneos</span></a>
+
+        </button>
+
+
+        <button>
+          <a href="/userOwner/crearTorneo" class="boton-registrar-cancha"> </a>
+        </button>
+      </div>
+
+      <section>
+        <h2 class="titulo2">Detalles del Club</h2>
+        <div class="datos-del-lugar">
+          <div class="datos2-del-lugar">
+            <ol>
+              <li class="detalle">
+                <a href="https://goo.gl/maps/7KofjWncWWmHwyLp9">
+                  <i class="fa-solid fa-location-dot"></i> Calle
+                  <span><%= ubicacion.calle %></span> -
+                  <span><%= ubicacion.numeracion %></span> - <span><%= ubicacion.localidad %>
+                </a>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-lightbulb"></i><span> Iluminación </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.iluminacion%></span>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-shirt"></i> <span>Vestuarios</span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.vestuario%> </span>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-shower"></i> <span>Duchas</span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.ducha%> </span>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-utensils"></i><span> Parrilas </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.parrilla%></span>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-utensils"></i><span> Quincho</span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.quincho%></span>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-utensils"></i><span> Quiosco</span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.quiosco%></span>
+              </li>
+            </ol>
+          </div>
+          <div class="datos3-del-lugar">
+            <ol>
+              <li class="detalle">
+                <i class="fa-solid fa-wifi"></i><span> Wifi </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.wifi%></span>
+              </li>
+              <li class="detalle">
+                <i class="fa-solid fa-car"></i><span> Estacionamiento </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= detalles.estacionamiento%></span>
+              </li>
+              <li class="detalle">
+                <span><i class="fa-solid fa-building-columns"></i> Transferencia </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.transferencia%></span>
+              </li>
+              <li class="detalle">
+                <span><i class="fa-solid fa-mobile-retro"></i> Mercado Pago </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.mercado_pago%></span>
+              </li>
+              <li class="detalle">
+                <span><i class="fa-solid fa-credit-card"></i> Tarjeta </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.tarjeta%></span>
+              </li>
+              <li class="detalle">
+                <span><i class="fa-solid fa-money-bill-1"></i> Efectivo </span><span> <i
+                    class="fa-solid fa-arrow-right-long"></i></span><span> <%= mediosdepago.efectivo%></span>
+              </li>
+
+              </li>
+              <button class="boton-editar-superior"><a class='lapizUser'
+                  href='../../register/editOwnerForm/<%= userOwner.id%>'><i class="fa-solid fa-pencil"></i></a></button>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <%- include('../footer') %>
 
   </main>
   <script src="/js/script.js"></script>
-  
- 
+
+
 </body>
 
 </html>
