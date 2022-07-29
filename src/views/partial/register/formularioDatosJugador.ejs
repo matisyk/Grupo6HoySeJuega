@@ -39,7 +39,7 @@
             <div class="horizontal">
               <div class="entre-divs">
                 <label for="nombre">Nombre: </label>
-                <input type="text" class="form-control" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>"
+                <input type="text" class="form-control" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>
                   id="nombre" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>
                 <div class="text-danger msg">
@@ -50,7 +50,7 @@
               <br>
               <div class="entre-divs">
                 <label for="apellido">Apellido:</label>
-                <input type="text" class="form-control" <%= locals.errors && errors.apellido ? 'is-invalid' : null %>"
+                <input type="text" class="form-control" <%= locals.errors && errors.apellido ? 'is-invalid' : null %>
                   id="apellido" name="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                 <% if (locals.errors && errors.apellido) { %>
                 <div class="text-danger msg">
@@ -89,7 +89,7 @@
             <div class="horizontal">
               <div class="entre-divs">
                 <label for="telefono">Telefono:</label>
-                <input type="number" class="form-control" <%= locals.errors && errors.telefono ? 'is-invalid' : null %>"
+                <input type="number" class="form-control" <%= locals.errors && errors.telefono ? 'is-invalid' : null %>
                   id="telefono" name="telefono" value="<%= locals.oldData ? oldData.telefono : null %>">
                 <% if (locals.errors && errors.telefono) { %>
                 <div class="text-danger msg">
@@ -100,7 +100,7 @@
               <br>
               <div class="entre-divs">
                 <label for="telefono2">Contacto de emergencia:</label>
-                <input type="number" class="form-control"" id="telefono2" name="telefono2">
+                <input type="number" class="form-control" id="telefono2" name="telefono2">
               </div>
             </div>
             <br>
@@ -171,7 +171,7 @@
               </div>
               <div class="entre-divs">
                 <label for="categoria">Posición:</label>
-                <input type="text" class="form-control" <%= locals.errors && errors.categoria ? 'is-invalid' : null %>"
+                <input type="text" class="form-control" <%= locals.errors && errors.categoria ? 'is-invalid' : null %>
                   id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
                 <% if (locals.errors && errors.categoria) { %>
                 <div class="text-danger msg">
@@ -179,7 +179,7 @@
                 </div>
                 <% } %>
                 <br>
-                <input type="text" class="form-control"">
+                <input type="text" class="form-control">
               </div>
             </div>
             <br>

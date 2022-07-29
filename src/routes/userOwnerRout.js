@@ -75,7 +75,7 @@ router.delete('/vistaCancha/:id/delete/torneo/:id', productsControllerT.destroy)
 
 // ESCUELAS
 
-router.get('/vistaCancha/:id/registrarEscuelita', productsControllerS.create);
+router.get('/vistaCancha/:id/registrarEscuelita/:id', productsControllerS.create);
 router.post('/vistaCancha/:id/registrarEscuelita', upload.any(), productsControllerS.store);
 router.get('/vistaCancha/:id/editSchool/:id/', productsControllerS.edit);
 router.patch('/vistaCancha/:id/editSchool/:id/', upload.any(), productsControllerS.update);

@@ -20,18 +20,21 @@
 
 <body>
     <%- include('./headerOwner.ejs') %>
-    <form action="/userOwner/vistaCancha/:id/registrarEscuelita" enctype="multipart/form-data" method="POST">
+
+    <form action="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita" enctype="multipart/form-data"
+        method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
-                <label>Deporte:</label>
-                <select name="deporte" id="deporte">
-                    <option selected disabled>Elegir opcion</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="hockey">Hockey</option>
-                    <option value="tenis">Tenis</option>
-                </select>
+                <h4 style="text-align: center"> Registrar escuelita</h4>
+                <br>
+                    <label>Deporte:</label>
+                    <select class="form-control" id="deporte" name="deporte">
+                        <option value="" disabled selected>Elegir deporte: </option>
+                        <% deportes.forEach( deportes => { %>
+                            <option value="<%= deportes.id %>"><%= deportes.deporte %></option>
+                            <% }) %> 
+                    </select>
+             
             </div>
             <div style="display:none">
                 <select name="category">
@@ -41,7 +44,12 @@
             <div class="edad">
                 <div class="item-tarjeta">
                     <label>Cancha a utilizar:</label>
-                    <input type="text" name="cancha" id="cancha" placeholder="Cancha en la que realiza la actividad">
+                     <select class="form-control" id="cancha" name="cancha">
+                         <option value="" disabled selected> Elegir entre tus canchas</option>
+                         <% cancha.forEach( canchas => { %>
+                         <option value="<%= canchas.id %>"><%= canchas.identificacion %></option>
+                         <% }) %>
+                     </select>
                 </div>
 
                 <div class="item-tarjeta">
@@ -53,70 +61,44 @@
                 <div class="edad">
                     <div class="item-tarjeta">
                         <label name="categoria">Categoría</label>
-                        <input type="number" name="categoria" id="categoria" placeholder="Categoria de los alumnos">
+                        <input type="number" name="categoria" id="categoria" placeholder="Categoria por año de los alumnos">
                     </div>
 
                     <div class="item-tarjeta">
-                        <label name="profesor">Profesor</label>
-                        <input type="text" placeholder="Nombre del profesor" name="profesor" id="profesor">
+                        <label >Nombre profesor: </label>
+                        <input type="text" placeholder="Nombre del profesor" name="nprofesor" id="nprofesor">
                     </div>
+                     <div class="item-tarjeta">
+                         <label >Apellido profesor: </label>
+                         <input type="text" placeholder="Apellido del profesor" name="aprofesor" id="aprofesor">
+                     </div>
 
                     <div class="item-tarjeta">
                         <label>Género:</label>
-                        <select name="genero" id="genero" required>
-                            <option selected disabled>Elegir opción</option>
-                            <option value="femenino">Femenino</option>
-                            <option value="masculino">Masculino</option>
-                            <option value="mixto">Mixto</option>
+                        <select class="form-control" id="genero" name="genero">
+                            <option value="" disabled selected> Elegir género</option>
+                            <% genero.forEach( generos => { %>
+                            <option value="<%= generos.id %>"><%= generos.genero %></option>
+                            <% }) %>
                         </select>
                     </div>
 
                     <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                     <div class="otro-item-tarjeta">
                         <select name="dia" id="dia">
-                            <option selected disabled>Elegir día</option>
-                            <option value="lunes">Lunes</option>
-                            <option value="martes">Martes</option>
-                            <option value="miercoles">Miércoles</option>
-                            <option value="jueves">Jueves</option>
-                            <option value="viernes">Viernes</option>
-                            <option value="sabado">Sabado</option>
-                            <option value="domingo">Domingo</option>
-                            <option value="un solo dia">Un solo día</option>
+                            <option value="" disabled selected> Elegir día</option>
+                            <% dias.forEach( dias => { %>
+                            <option value="<%= dias.id %>"><%= dias.dia %></option>
+                            <% }) %>
                         </select>
-                        <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
-                    </div>
-                    <br>
-                    <div class="otro-item-tarjeta">
-                        <select name="dia2" id="dia">
-                            <option selected disabled>Elegir día</option>
-                            <option value="lunes">Lunes</option>
-                            <option value="martes">Martes</option>
-                            <option value="miercoles">Miércoles</option>
-                            <option value="jueves">Jueves</option>
-                            <option value="viernes">Viernes</option>
-                            <option value="sabado">Sabado</option>
-                            <option value="domingo">Domingo</option>
-                            <option value="un solo dia">Un solo día</option>
+                        <select name="hora" id="hora">
+                            <option value="" disabled selected> Elegir horario</option>
+                            <% horarios.forEach( horarios => { %>
+                            <option value="<%= horarios.id %>"><%= horarios.hora %></option>
+                            <% }) %>
                         </select>
-                        <input type="time" class="form-control horaio" id="horarios" name="registroHorarios2">
+                      
                     </div>
-                    <br>
-                    <div class="otro-item-tarjeta">
-                        <select name="dia3" id="dia">
-                            <option selected disabled>Elegir día</option>
-                            <option value="lunes">Lunes</option>
-                            <option value="martes">Martes</option>
-                            <option value="miercoles">Miércoles</option>
-                            <option value="jueves">Jueves</option>
-                            <option value="viernes">Viernes</option>
-                            <option value="sabado">Sabado</option>
-                            <option value="domingo">Domingo</option>
-                            <option value="un solo dias">Un solo día</option>
-                        </select>
-                        <input type="time" class="form-control horaio" id="horarios" name="registroHorarios3">
-                    </div>
-
                     <div class="item-tarjeta">
                         <label name="premio">Valor mensual</label>
                         <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor">
@@ -124,7 +106,7 @@
 
                     <div class="item-tarjeta">
                         <label>Cargar imagen</label>
-                        <input class="foto" type="file" name="image" accept=".jpg" multiple>
+                        <input class="foto" type="file" name="image" accept="all" multiple>
                     </div>
 
                     <div class="item-tarjeta boton-enviar">
