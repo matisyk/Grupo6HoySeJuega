@@ -33,5 +33,6 @@ router.post('/perfilDeJugador/:id/vistaCanchaInfo', userPlayerController.vistaCa
 router.get('/perfilDeJugador/:id/elegirCancha',userPlayerController.elegirCancha);
 
 router.get('/perfilDeJugador/:id/equipo', userPlayerController.equipo);
+router.get('/buscarJugador', userPlayerController.buscarJugador);
 
 module.exports = router;
