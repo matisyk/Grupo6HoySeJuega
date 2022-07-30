@@ -16,6 +16,7 @@ module.exports = (sequelize, dataTypes) => {
         allowNull: false
       },
       users_owners_id: dataTypes.BIGINT(10),
+      escuelitas_id: dataTypes.BIGINT(10),
     };
     let config = {
       tableName: 'profesor',
@@ -23,16 +24,20 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Profesor = sequelize.define(alias, cols, config);
   
-    // Profesor.associate = function (models) {
+     Profesor.associate = function (models) {
 
-  //  Profesor.belongsToMany(models.escuelita , {
-  //     as: "escuelita",
-  //     through: "torneos_canchas",
-  //     foreignKey: "canchas_id",
-  //     otherKey: "torneos_id",
-  //     timestamps: false
-  //   })
-    // }
+    // Profesor.belongsToMany(models.escuelita , {
+    //    as: "escuelita",
+    //    through: "torneos_canchas",
+    //    foreignKey: "canchas_id",
+    //    otherKey: "torneos_id",
+    //    timestamps: false
+    //  })
+       Profesor.hasMany(models.Escuelita, {
+         as: "escuelita",
+         foreignKey: "id"
+       })
+     }
 
   
     return Profesor;

@@ -163,16 +163,15 @@
                   <div class="tarjeta tarjeta-esc">
                     <div class="blob"></div>
                     <span class="img img-escuelitas"><a href="/userOwner/agenda"><img
-                          src="/img/products/<%= escuelitas.image %>" alt=""></a></span>
-                    <h3><%= escuelitas.deporte %> <br><span class="categoria">Categoría
+                          src="/img/products/<%= escuelitas.img_e %>" alt=""></a></span>
+                    <h3><%= escuelitas.genero.genero %><br><span class="categoria">Categoría
                         <%= escuelitas.categoria %> </span> </h3>
                     <p class="descrip-tarjeta-esc">
                       <ul>
-                        <li>Profesor: <%= escuelitas.profesor %> </li>
-                        <li>Día: <%= escuelitas.dia %> - <%= escuelitas.registroHorarios %> </li>
-                        <li>Día: <%= escuelitas.dia2 %> - <%= escuelitas.registroHorarios2 %> </li>
-                        <li>Día: <%= escuelitas.dia3 %> - <%= escuelitas.registroHorarios3 %> </li>
-                        <li>Cancha: <%= escuelitas.cancha %> </li>
+                        <li>Profesor: <%= escuelitas.profesor.nombre %> <span> <%= escuelitas.profesor.apellido %></span>
+                        </li>
+                        <li>Día: <%= escuelitas.diaYhora.dias_id %> - <%= escuelitas.diaYhora.horas_id %> </li>
+                        <li>Cancha: <%= escuelitas.cancha.identificacion %> </li>
                         <li>Cantidad de alumnos: <%= escuelitas.alumnos %></li>
                         <li>Precio: <%= escuelitas.valor %></li>
                       </ul>

@@ -11,6 +11,14 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       allowNull: false
     },
+    categoria: {
+      type: dataTypes.INTEGER,
+      allowNull: false
+    },
+    alumnos: {
+      type: dataTypes.INTEGER,
+      allowNull: false
+    },
     img_e: {
       type: dataTypes.STRING(200),
       allowNull: false
@@ -33,10 +41,10 @@ module.exports = (sequelize, dataTypes) => {
       as: "deporteE",
       foreignKey: "deportes_players_id"
     })
-    // Escuelita.belongsTo(models.Genero,{
-    //   as: "genero",
-    //   foreignKey: "genero_id"
-    // })
+     Escuelita.belongsTo(models.Genero,{
+       as: "genero",
+       foreignKey: "genero_id"
+     })
     // Escuelita.hasMany(models.ImagenEscuelita,{
     //   as: "imagenEscuelita",
     //   foreignKey: "escuelita_id"
@@ -48,10 +56,18 @@ module.exports = (sequelize, dataTypes) => {
     //     otherKey: "torneos_id",
     //     timestamps: false
     //   })
-    // Escuelita.hasMany(models.DiaHorarioEscuelita, {
-    //   as: "diaYhora",
-    //   foreignKey: "escuelitas_id"
-    // })
+      Escuelita.belongsTo(models.DiaHorarioEscuelita, {
+        as: "diaYhora",
+       foreignKey: "id"
+      })
+    Escuelita.belongsTo(models.Cancha, {
+      as: "cancha",
+      foreignKey: "canchas_id"
+    })
+    Escuelita.belongsTo(models.Profesor, {
+      as: "profesor",
+      foreignKey: "id"
+    })
   }
 
 

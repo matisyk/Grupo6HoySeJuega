@@ -18,17 +18,17 @@ module.exports = (sequelize, dataTypes) => {
     }
     const Genero = sequelize.define(alias, cols, config);
   
-    // Genero.associate = function (models) {
+     Genero.associate = function (models) {
   
-    // Genero.hasMany(models.Escuelita,{
-    //   as: "escuelita",
-    //   foreignKey: "genero_id"
-    // })
+     Genero.hasMany(models.Escuelita,{
+       as: "escuelita",
+       foreignKey: "genero_id"
+     })
     // Genero.hasMany(models.Torneo,{
     //   as: "torneo",
     //   foreignKey: "genero_id"
     // })
-    // }
+     }
 
   
     return Genero;

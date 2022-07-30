@@ -51,7 +51,6 @@ router.get('/vistaCancha/:id/registrarCancha',userOwnerController.registrarCanch
 router.get('/vistaCancha/:id/registrarEscuelita',  userOwnerController.registrarEscuelita);
 router.get('/vistaCancha/:id/reservaCancha',  userOwnerController.reservaCancha);
 router.get('/vistaCancha/:id',  userOwnerController.vistaCancha);
-router.get('/vistaCancha/:id',  userOwnerController.canchas);
 router.post('/vistaCancha', userOwnerController.vistaCancha);
 
 

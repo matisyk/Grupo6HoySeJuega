@@ -7,23 +7,6 @@ const db = require('../database/models')
 const bcryptjs = require('bcryptjs');
 const userOwner = require('../models/UserOwner')
 
-//Canchas 
-const courtFilePath = path.join(__dirname, '../database/courtDataBase.json');
-const courts = JSON.parse(fs.readFileSync(courtFilePath, 'utf-8'));
-
-const canchas = courts.filter(court => court.category == 'cancha');
-
-//Escuelitas 
-const schoolFilePath = path.join(__dirname, '../database/schoolDataBase.json');
-const schools = JSON.parse(fs.readFileSync(schoolFilePath, 'utf-8'));
-
-const escuelitas = schools.filter(school => school.category == 'escuelita');
-
-//Torneos 
-const torneoFilePath = path.join(__dirname, '../database/torneoDataBase.json');
-const torneos1 = JSON.parse(fs.readFileSync(torneoFilePath, 'utf-8'));
-
-const torneos = torneos1.filter(torneo => torneo.category == 'torneo');
 
 // constantes de las bases de datos de sequelize modules
 const UserOwner = db.UserOwner;
@@ -143,9 +126,10 @@ const userOwnerController = {
     }, {
       include: ['ImagenCancha']
     })
-    let escuelitas = Escuelita.findAll({
-      where: {
-        users_owners_id: userOwnerID
+    let escuelitas = Escuelita.findAll( {
+      include: ['deporteE', 'genero', "profesor", "diaYhora", "cancha"],
+        where: {
+          users_owners_id: userOwnerID
       }
     })
     const torneos = Torneo.findAll({
@@ -162,12 +146,11 @@ const userOwnerController = {
     const logo = LogoOwner.findByPk(userOwnerID, {
       include: ["userOwnerL"]
     })
-    // let imgCancha = ImagenCancha.findByPk(userOwnerID, {
-    //   include: ['userOwnerCh']
-    // })
+   
     Promise
       .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo])
       .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo]) => {
+      console.log("🚀 ~ file: userOwnerController.js ~ line 154 ~ .then ~ escuelitas", escuelitas)
     
 
         res.render("partial/userOwner/vistaCancha", {
@@ -184,30 +167,8 @@ const userOwnerController = {
           
           userOwnerLogged: req.session.userOwnerLogged
         })
-      })
+      }).catch(error => res.send(error))
 
-  },
-  canchas: (req, res) => {
-    let id = req.params.id
-    let cancha = courts.find(cancha => cancha.id == id)
-    res.render("partial/userOwner/vistaCancha", {
-      cancha,
-      userOwnerLogged: req.session.userOwnerLogged
-    })
-  },
-  escuelitas: (req, res) => {
-    let id = req.params.id
-    let escuelita = schools.find(escuelita => escuelita.id == id)
-    res.render("partial/userOwner/vistaCancha", {
-      escuelita
-    })
-  },
-  torneos: (req, res) => {
-    let id = req.params.id
-    let torneo = torneos1.find(torneo => torneo.id == id)
-    res.render("partial/userOwner/vistaCancha", {
-      torneo
-    })
   },
 
   detalle: (req, res) => {

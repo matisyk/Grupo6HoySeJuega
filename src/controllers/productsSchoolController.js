@@ -57,8 +57,6 @@ const controller = {
 		Promise
 			.all([deportes, genero, cancha, dias, horarios])
 			.then(([deportes, genero, cancha, dias, horarios]) => {
-      console.log("🚀 ~ file: productsSchoolController.js ~ line 60 ~ .then ~ genero", genero)
-      console.log("🚀 ~ file: productsSchoolController.js ~ line 60 ~ .then ~ deportes", deportes)
 
 				res.render("partial/userOwner/registrarEscuelita", {
 					deportes,
@@ -89,8 +87,10 @@ const controller = {
 				valor: req.body.valor,
 				genero_id: req.body.genero,
 				deportes_players_id: req.body.deporte,
-				canchas_id: req.body.cancha,
-				img_e: image,
+			canchas_id: req.body.cancha,
+				categoria: req.body.categoria,
+			img_e: image,
+				alumnos: req.body.alumnos,
 				users_owners_id: ownerID
 		})
 			.then((result) => {
@@ -103,7 +103,8 @@ const controller = {
 				Profesor.create({
 						users_owners_id: ownerID,
 						nombre: req.body.nprofesor,
-						apellido: req.body.aprofesor
+					apellido: req.body.aprofesor,
+						escuelitas_id: idEscuela,
 				})
 			}).then(() => {
 				return res.redirect("/userOwner/update")
