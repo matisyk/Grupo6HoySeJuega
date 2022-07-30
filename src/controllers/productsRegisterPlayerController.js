@@ -24,6 +24,7 @@ const HoraPlayer = db.HoraPlayer;
 const DiaPlayer = db.DiaPlayer;
 const ZonasDeJuego = db.ZonaDeJuego;
 const DiaHorarioPlayer = db.DiaHorarioPlayer
+const HomePlayer = db.HomePlayer
 
 // APIS
 
@@ -150,14 +151,22 @@ const controller = {
 					telefono2: req.body.telefono2,
 					users_players_id: idPlayer
 				})
-				ImagenPlayer.create({
-					foto: image,
-					users_players_id: idPlayer
-				})
 				DiaHorarioPlayer.create({
 					dias_players_id: req.body.dia1,
 					horas_players_id: req.body.hora1,
 					users_players_id: idPlayer
+				})
+				ImagenPlayer.create({
+					foto: image,
+					users_players_id: idPlayer
+				}).then((result2) => {
+					let imgID = result2.id
+					HomePlayer.create({
+						nombre: req.body.nombre,
+						apellido: req.body.apellido,
+						users_players_id: idPlayer,
+						imagenes_players_id: imgID
+					})
 				})
 			})
 
@@ -183,7 +192,7 @@ const controller = {
 
 		let userPlayerID = req.params.id
 		let userplayer = UserPlayer.findByPk(userPlayerID, {
-			include: ['zonas', 'autoV', 'deporte1', 'deporte2' ]
+			include: ['zonas', 'autoV', 'deporte1', 'deporte2']
 		})
 		let valoraciones = AutoValoracion.findAll();
 		let deportes = DeportesPlayers.findAll();
@@ -204,7 +213,7 @@ const controller = {
 		Promise
 			.all([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias, img, telefono, diasYhoras])
 			.then(([userplayer, userPlayerID, valoraciones, deportes, zonasdejuego, horarios, dias, img, telefono, diasYhoras]) => {
-      
+
 				res.render("partial/register/editPlayerForm", {
 					userplayer,
 					userPlayerID,
