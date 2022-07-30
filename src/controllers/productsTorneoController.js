@@ -121,9 +121,6 @@ const controller = {
 		Promise
 			.all([torneos, deportes, genero, dias, horarios])
 			.then(([torneos, deportes, genero, dias, horarios]) => {
-      console.log("🚀 ~ file: productsTorneoController.js ~ line 124 ~ .then ~ torneos", torneos.diahora)
-console.log("🚀 ~ file: productsTorneoController.js ~ line 134 ~ .then ~ torneos", torneos.genero.genero)
-console.log("🚀 ~ file: productsTorneoController.js ~ line 135 ~ .then ~ torneos", torneos.deporteT.deporte)
 				res.render("partial/userOwner/editarTorneo", {
 					torneos,
 					deportes,
@@ -138,51 +135,53 @@ console.log("🚀 ~ file: productsTorneoController.js ~ line 135 ~ .then ~ torne
 	// Update - Method to update
 	update: (req, res) => {
 
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-
+		let torneosID = req.params.id
 
 		let image
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename
 		} else {
-			image = productToEdit.image
+			image = torneosID.image
 		}
-
-
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-
-		let newProduct = products.map(product => {
-
-			if (product.id == productToEdit.id) {
-
-				return product = {
-					...productToEdit
-				};
+		Torneo.update({
+			cantidad_equipos: req.body.cantidadEquipos,
+				categoria: req.body.categoria,
+				valor: req.body.valor,
+				premio: req.body.premio,
+				fecha_inicio: req.body.fechaInicio,
+				fecha_fin: req.body.fechaFin,
+				deportes_players_id: req.body.deporte,
+				genero_id: req.body.genero,
+				img_t: image
+		}, {
+			where: {
+				id: req.params.id
 			}
-
-			return product
+		})
+		DiaYhora.update({
+			dias_id: req.body.dia,
+			horas_id: req.body.hora
+		}, {
+			where: {
+				id: req.params.id
+			}
+		}).then(() => {
+			return res.redirect("/userOwner/update")
 		})
 
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-
-		return res.redirect("/userOwner/update")
 
 	},
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
-		let id = req.params.id
-		let productToDelete = products.filter(product => product.id != id)
+		let torneosID = req.params.id
 
-		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete, null, ' '));
-
-		return res.redirect("/userOwner/update")
+		Torneo.destroy({
+			where: { id: torneosID },
+			force: true
+		}).then(() => {
+			return res.redirect("/userOwner/update")
+		})
 
 	}
 };
