@@ -21,24 +21,17 @@
 <body>
     <%- include('./headerOwner') %>
 <main>
-    <form action="/userOwner/vistacancha/:id/crearTorneo" method="POST" enctype="multipart/form-data">
+    <form action="/userOwner/vistacancha/<%= userOwnerLogged.id %>/crearTorneo" method="POST"
+        enctype="multipart/form-data">
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label>Deporte:</label>
                 <select name="deporte" id="deporte" required>
-                    <option value="">Elegir un deporte</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="tenis">Tenis</option>
-                    <option value="voley">Voley</option>
+                        <option value="" disabled selected> Elegir deporte</option>
+                        <% deportes.forEach(deportes => { %>
+                        <option value="<%= deportes.id %>"><%= deportes.deporte %></option>
+                        <% }); %>        
                 </select>
-            </div>
-
-            <div class="edad">
-                <div style="display:none">
-                    <input name="category" value="torneo" type="text">
-                </div>
             </div>
 
             <div class="item-tarjeta">
@@ -57,10 +50,10 @@
             <div class="item-tarjeta">
                 <label>Género:</label>
                 <select name="genero" id="genero" required>
-                    <option selected disabled>Elegir opción</option>
-                    <option value="femenino">Femenino</option>
-                    <option value="masculino">Masculino</option>
-                    <option value="mixto">Mixto</option>
+                    <option value="" disabled selected> Elegir género</option>
+                    <% genero.forEach( generos => { %>
+                    <option value="<%= generos.id %>"><%= generos.genero %></option>
+                    <% }) %>
                 </select>
             </div>
 
@@ -72,23 +65,23 @@
                 <input name="fechaInicio" type="date">
                 <br>
                 <br>
-                Hasta: <input name="fechaFinal" type="date">
+                Hasta: <input name="fechaFin" type="date">
             </div>
 
             <div class="item-tarjeta">
                 <label class="label-dia">Día a realizarse:</label>
             <div class="otro-item-tarjeta torneo-dias">     
                 <select name="dia">
-                    <option value="" disabled selected>Elegir día</option>
-                    <option value="lunes">Lunes</option>
-                    <option value="martes">Martes</option>
-                    <option value="miercoles">Miércoles</option>
-                    <option value="jueves">Jueves</option>
-                    <option value="viernes">Viernes</option>
-                    <option value="sabado">Sabado</option>
-                    <option value="domingo">Domingo</option>
+                    <% dias.forEach( dias => { %>
+                    <option value="<%= dias.id %>"><%= dias.dia %></option>
+                    <% }) %>
                 </select>
-                <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
+               <select name="hora" id="hora">
+                            <option value="" disabled selected> Elegir horario</option>
+                            <% horarios.forEach( horarios => { %>
+                            <option value="<%= horarios.id %>"><%= horarios.hora %></option>
+                            <% }) %>
+                        </select>
             </div>
             </div>
             <div class="item-tarjeta">

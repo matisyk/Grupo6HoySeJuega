@@ -31,8 +31,12 @@ module.exports = (sequelize, dataTypes) => {
           fecha_fin: {
             type: dataTypes.DATE,
             allowNull: false
+      },
+          img_t: {
+            type: dataTypes.STRING(200),
+            allowNull: false
           },
-          deporte_id: dataTypes.BIGINT(10),
+          deportes_players_id: dataTypes.BIGINT(10),
       genero_id: dataTypes.BIGINT(10),
           users_owners_id: dataTypes.BIGINT(10),
     };
