@@ -138,6 +138,11 @@ const userPlayerController = {
 
     res.render("partial/userPlayer/equipo")
   },
+  buscarJugador: (req, res) => {
+
+    res.render("partial/userPlayer/buscarJugador")
+  },
 }
+
 
 module.exports = userPlayerController

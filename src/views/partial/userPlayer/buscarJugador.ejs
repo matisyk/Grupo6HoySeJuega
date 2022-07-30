@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Hoy se juega</title>
+
+
+
+  <!-- CSS EXTERNOS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Inika&family=Kalam&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/bootstraps/plugins/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- PLUGINS DE JS -->
+  <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="/js/jdSlider.js"></script>
+
+  <!--CSS PROPIOS-->
+  <link rel="stylesheet" href="/css/equipo.css">
+  <link href="/css/jdSlider.css" rel="stylesheet" />
+  <link href="/css/buscarJugador.css" rel="stylesheet" />
+  <link href="/css/headerJugador.css" rel="stylesheet" />
+  <link href="/css/footer.css" rel="stylesheet" />
+
+</head>
+<body>
+  <header class="main-header">
+    <div class="menu">
+      <div class="copy-header">
+        <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
+
+        <a href="#" class="menu-hamburguesa">
+          <i class="fa-solid fa-bars"></i>
+        </a>
+
+        <div class="menu-cont2">
+          <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/reservarCancha">Buscar
+            Canchas</a>
+          <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/equipo">Mi equipo</a>
+          <a class="txtNav4" href="#"> <i class="fa-solid fa-person-running"></i> Nos falta uno</a>
+          <a class="txtNav5" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/carrito">
+            <i class="fa-solid fa-cart-shopping"></i> Mi reserva
+          </a>
+          <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
+          <a class="txtNav6" href="/userPlayer/logoutPlayer"><i class="fa-solid fa-arrow-right-from-bracket"></i> Chau
+          </a>
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+<main>
+  <h1>Jugadores</h1> 
+
+
+  <ul class="cards">
+    
+    <li>
+      <a href="" class="card">
+        <img src="/img/jugadores/imagenJugador-1659184859461-13095629.jpg" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <img class="card__thumb" src="/img/jugadores/imagenJugador-1659184859461-13095629.jpg" alt="" />
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">posicion: <br> Autovaloracion:</p>
+        </div>
+      </a>      
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+        <div class="card__overlay">        
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+            <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+            <div class="card__header-text">
+              <h3 class="card__title">kim Cattrall</h3>
+              <span class="card__status">3 hours ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://i.imgur.com/oYiTqum.jpg" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+            <img class="card__thumb" src="https://i.imgur.com/7D7I6dI.png" alt="" />
+            <div class="card__header-text">
+              <h3 class="card__title">Jessica Parker</h3>
+              <span class="card__tagline">Lorem ipsum dolor sit amet consectetur</span>            
+              <span class="card__status">1 hour ago</span>
+            </div>
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>
+    </li>
+    <li>
+      <a href="" class="card">
+        <img src="https://i.imgur.com/2DhmtJ4.jpg" class="card__image" alt="" />
+        <div class="card__overlay">
+          <div class="card__header">
+            <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+            <img class="card__thumb" src="https://i.imgur.com/sjLMNDM.png" alt="" />
+            <div class="card__header-text">
+              <h3 class="card__title">kim Cattrall</h3>
+              <span class="card__status">3 hours ago</span>
+            </div>          
+          </div>
+          <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?</p>
+        </div>
+      </a>
+    </li>    
+  </ul>
+
+
+</main>
+
+<%- include('../footer') %>
+
+
+</body>
