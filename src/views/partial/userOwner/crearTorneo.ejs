@@ -71,7 +71,8 @@
             <div class="item-tarjeta">
                 <label class="label-dia">Día a realizarse:</label>
             <div class="otro-item-tarjeta torneo-dias">     
-                <select name="dia">
+                <select name="dia" id="dia">
+                    <option value="" disabled selected> Elegir día de la semana</option>
                     <% dias.forEach( dias => { %>
                     <option value="<%= dias.id %>"><%= dias.dia %></option>
                     <% }) %>

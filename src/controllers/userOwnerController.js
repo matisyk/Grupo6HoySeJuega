@@ -133,6 +133,7 @@ const userOwnerController = {
       }
     })
     const torneos = Torneo.findAll({
+      include: ['deporteT'],
       where: {
         users_owners_id: userOwnerID
       }

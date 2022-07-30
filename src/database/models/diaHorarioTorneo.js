@@ -17,8 +17,13 @@ module.exports = (sequelize, dataTypes) => {
     }
     const DiaHorarioTorneo = sequelize.define(alias, cols, config);
   
-    // DiaHorarioTorneo.associate = function (models) {
+     DiaHorarioTorneo.associate = function (models) {
 
+       DiaHorarioTorneo.hasMany(models.Torneo, {
+         
+         foreignKey: "id"
+       })
+       
     //   DiaHorarioTorneo.belongsTo(models.Torneo, {
     //     as: "dyh",
     //     foreignKey: "torneos_id"
@@ -32,7 +37,7 @@ module.exports = (sequelize, dataTypes) => {
     //     foreignKey: "dias_id"
     //   })
   
-    // }
+    }
   
     return DiaHorarioTorneo;
   

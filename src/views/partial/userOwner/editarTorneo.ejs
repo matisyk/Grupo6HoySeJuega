@@ -19,50 +19,18 @@
 
 <body>
     <main>
-        <form action="/userOwner/vistaCancha/:id/editTorneo/<%= product.id %>?_method=PATCH" method="POST"
+        <form action="/userOwner/vistaCancha/:id/editTorneo/<%= torneos.id %>?_method=PATCH" method="POST"
             enctype="multipart/form-data">
             <div class="tarjeta">
                 <div class="item-tarjeta">
                     <label>Deporte:</label>
                     <select id="deporte" name="deporte" required>
-                        <% if (product.deporte == "") { %>
-                        <option value="">Elegir un deporte</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "futbol") { %>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "padel") { %>
-                        <option value="padel">Padel</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "basquet") { %>
-                        <option value="basquet">Basquet</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="tenis">Tenis</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "tenis") { %>
-                        <option value="tenis">Tenis</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="voley">Voley</option>
-                        <% } else if (product.deporte == "voley") { %>
-                        <option value="voley">Voley</option>
-                        <option value="futbol">Futbol</option>
-                        <option value="padel">Padel</option>
-                        <option value="basquet">Basquet</option>
-                        <option value="tenis">Tenis</option>
-                        <% } %>
+                        <% deportes.forEach(deportes => { %>
+                        <option value="<%= deportes.id %>"
+                            <% if (torneos.deporteT.id == deportes.id) { %><%= 'selected'  %><% }; %>>
+                            <%= deportes.deporte %>
+                        </option>
+                        <% }); %>
                     </select>
                 </div>
 
@@ -74,13 +42,13 @@
 
                 <div class="item-tarjeta">
                     <label>Cantidad de Equipos:</label>
-                    <input name="cantidadEquipos" type="number" value="<%= product.cantidadEquipos %>">
+                    <input name="cantidadEquipos" type="number" value="<%= torneos.cantidad_equipos %>">
                 </div>
 
                 <div class="edad">
                     <div class="item-tarjeta">
                         <label>Categoría:</label>
-                        <input name="categoria" type="number" value="<%= product.categoria %>">
+                        <input name="categoria" type="number" value="<%= torneos.categoria %>">
                     </div>
 
                 </div>
@@ -88,24 +56,12 @@
                 <div class="item-tarjeta">
                     <label>Género:</label>
                     <select name="genero" id="genero" required>
-                        <% if (product.genero == "") { %>
-                        <option value="">Elegir genenro</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="mixto">Mixto</option>
-                        <% } else if (product.genero == "femenino") { %>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="mixto">Mixto</option>
-                        <% } else if (product.genero == "masculino") { %>
-                        <option value="masculino">Masculino</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="mixto">Mixto</option>
-                        <% } else if (product.genero == "mixto") { %>
-                        <option value="mixto">Mixto</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <% } %>
+                        <% genero.forEach(genero => { %>
+                        <option value="<%= genero.id %>"
+                            <% if (torneos.genero.id == genero.id) { %><%= 'selected'  %><% }; %>>
+                            <%= genero.genero %>
+                        </option>
+                        <% }); %>
                     </select>
                 </div>
 
@@ -113,41 +69,44 @@
                     <label>Fecha del torneo</label>
                     <br>
                     <br> Desde:
-                    <input name="fechaInicio" type="date" value="<%=product.fechaInicio%>">
+                    <input name="fechaInicio" type="date" value="<%=torneos.fecha_inicio%>">
                     <br>
                     <br>
-                    Hasta: <input name="fechaFinal" type="date" value="<%=product.fechaFinal%>">
+                    Hasta: <input name="fechaFinal" type="date" value="<%=torneos.fecha_fin%>">
                 </div>
 
                 <div class="otro-item-tarjeta">
                     <div class="item-tarjeta"><label>Día y horario a realizarse:</label></div>
                     <select name="dia" id="dia">
-                        <option value="<%= product.dia %>"><%= product.dia %></option>
-                        <option value="Lunes">Lunes</option>
-                        <option value="Martes">Martes</option>
-                        <option value="Miercoles">Miércoles</option>
-                        <option value="Jueves">Jueves</option>
-                        <option value="Viernes">Viernes</option>
-                        <option value="Sabado">Sabado</option>
-                        <option value="Domingo">Domingo</option>
-                        <option value="un solo dia">Un solo día</option>
+                        <% dias.forEach(dias => { %>
+                        <option value="<%= dias.id %>"
+                            <% if (torneos.diahora.dias_id == dias.id) { %><%= 'selected'  %><% }; %>>
+                            <%= dias.dia %>
+                        </option>
+                        <% }); %>
                     </select>
-                    <input type="time" class="form-control horaio" id="horarios" name="registroHorarios"
-                        value="<%= product.registroHorarios %>">
+                     <select name="hora" id="hora">
+                         <% horarios.forEach(horarios => { %>
+                         <option value="<%= horarios.id %>"
+                             <% if (torneos.diahora.horas_id == horarios.id) { %><%= 'selected'  %><% }; %>>
+                             <%= horarios.hora %>
+                         </option>
+                         <% }); %>
+                     </select>
                 </div>
                 <div class="item-tarjeta">
                     <label>Valor por equipo:</label>
-                    <input type="number" name="valor" placeholder="$" value="<%= product.valor %>">
+                    <input type="number" name="valor" placeholder="$" value="<%= torneos.valor %>">
                 </div>
                 <div class="item-tarjeta">
                     <label>Premio</label>
-                    <input type="number" name="premio" placeholder="$" value="<%= product.premio %>">
+                    <input type="number" name="premio" placeholder="$" value="<%= torneos.premio %>">
                 </div>
                 <div class="item-tarjeta">
                     <label>Cargar imagen</label>
-                    <input class="foto" type="file" name="image" accept=".jpg" multiple>
+                    <input class="foto" type="file" name="image" accept="all" value="<%= torneos.img_t %>">
                     <label> <img style="width: 130px; margin-top: 40px; border-radius: 70px;"
-                            src="/img/products/<%= product.image%>">
+                            src="/img/products/<%= torneos.img_t%>">
                     </label>
                     <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6>
                 </div>

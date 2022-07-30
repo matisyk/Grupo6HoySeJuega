@@ -227,16 +227,14 @@
                 <div class="tarjetas">
                   <div class="tarjeta tarjeta-esc">
                     <div class="blob"></div>
-                    <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/<%= torneos.image%>"
+                    <span class="img img-escuelitas"><a href="/userOwner/agenda"><img src="/img/products/<%= torneos.img_t%>"
                           alt=""></a></span>
-                    <h3><%= torneos.deporte%> <br><span class="categoria"><%= torneos.categoria%></span> </h3>
+                    <h3><%= torneos.deporteT.deporte%> <br><span class="categoria"><%= torneos.categoria%></span> </h3>
                     <p class="descrip-tarjeta-esc">
                       <ul>
                         <li>Día Inicio: <%= torneos.fecha_inicio%>
-                          <!-- - < torneos.registroHorarios%> -->
                         </li>
                         <li>Día Fin: <%= torneos.fecha_fin%>
-                          <!-- - < torneos.registroHorarios%>. -->
                         </li>
                         <li>Cantidad de equipos: <%= torneos.cantidad_equipos%></li>
                         <li>Precio: $ <%= torneos.valor%></li>

@@ -23,7 +23,7 @@ const Genero = db.Genero
 const HoraOwner = db.HoraPlayer;
 const DiaOwner = db.DiaPlayer;
 const Escuelita = db.Escuelita;
-const DiaYhora = db.DiaHorarioEscuelita;
+const DiaYhora = db.DiaHorarioTorneo;
 const Profesor = db.Profesor
 const Torneo = db.Torneo
 
@@ -90,7 +90,17 @@ const controller = {
 				deportes_players_id: req.body.deporte,
 				genero_id: req.body.genero,
 				users_owners_id: ownerID,
-				
+				img_t: image
+		
+			}).then((result) => {
+				let torneoID = result.id
+				DiaYhora.create({
+					torneos_id: torneoID,
+					dias_id: req.body.dia,
+					horas_id: req.body.hora
+				})
+			}).then(() => {
+				return res.redirect("/userOwner/update")
 			})
 		
 
@@ -99,13 +109,31 @@ const controller = {
 	// Update - Form to edit
 	edit: (req, res) => {
 
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-
-		res.render("partial/userOwner/editarTorneo", {
-			product
+		let torneosID = req.params.id
+		let torneos = Torneo.findByPk(torneosID, {
+			include: ['deporteT', 'genero', 'diahora'],
 		})
+		let deportes = Deportes.findAll();
+		let genero = Genero.findAll();
+		let dias = DiaOwner.findAll();
+		let horarios = HoraOwner.findAll();
 
+		Promise
+			.all([torneos, deportes, genero, dias, horarios])
+			.then(([torneos, deportes, genero, dias, horarios]) => {
+      console.log("🚀 ~ file: productsTorneoController.js ~ line 124 ~ .then ~ torneos", torneos.diahora)
+console.log("🚀 ~ file: productsTorneoController.js ~ line 134 ~ .then ~ torneos", torneos.genero.genero)
+console.log("🚀 ~ file: productsTorneoController.js ~ line 135 ~ .then ~ torneos", torneos.deporteT.deporte)
+				res.render("partial/userOwner/editarTorneo", {
+					torneos,
+					deportes,
+					genero,
+					dias,
+					horarios
+				})
+			})
+      
+      
 	},
 	// Update - Method to update
 	update: (req, res) => {
