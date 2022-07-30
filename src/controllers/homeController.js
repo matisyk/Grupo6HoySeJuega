@@ -7,24 +7,23 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const db = require('../database/models');
 
 const HomeP = db.HomePlayer;
-const HomO = db.HomeOwner
+const HomeO = db.HomeOwner
 
 
 const controller = {
 
   index: (req, res) => {
 
-    let homep = HomeP.findAll({
-      include: ['imagenPlayer']
-    });
+    let homep = HomeP.findAll();
+    let homeo = HomeO.findAll();
 
     Promise
-      .all([homep])
-      .then(([homep]) => {
-      console.log("🚀 ~ file: homeController.js ~ line 24 ~ .then ~ homep", homep.imagenPlayer)
+      .all([homep, homeo])
+      .then(([homep, homeo]) => {
       
         res.render("partial/home/index", {
-          homep
+          homep,
+          homeo
         })
     })
   },
