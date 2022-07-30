@@ -158,20 +158,18 @@ const controller = {
 					users_owners_id: idOwner
 				})
 				ImagenOwner.create({
-						image: image,
-						image2: image2,
-						image3: image3,
-						users_owners_id: idOwner
-					})
-					.then((result) => {
-						let imgOwner = result.id
-						HomeOwner.create({
-							nombre_del_lugar: req.body.nombreDelLugar,
-							users_owners_id: idOwner,
-							imagenes_owners_id: imgOwner,
-							logo_owners_id: imgOwner
-						})
-					})
+					image: image,
+					image2: image2,
+					image3: image3,
+					users_owners_id: idOwner
+				})
+				HomeOwner.create({
+					nombre_del_lugar: req.body.nombreDelLugar,
+					users_owners_id: idOwner,
+					img_ho: image,
+					img_hl: logo
+				})
+
 
 			})
 

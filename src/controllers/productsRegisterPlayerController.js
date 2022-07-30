@@ -159,15 +159,14 @@ const controller = {
 				ImagenPlayer.create({
 					foto: image,
 					users_players_id: idPlayer
-				}).then((result2) => {
-					let imgID = result2.id
+				})
 					HomePlayer.create({
 						nombre: req.body.nombre,
 						apellido: req.body.apellido,
 						users_players_id: idPlayer,
-						imagenes_players_id: imgID
+						img_hp: image
 					})
-				})
+				
 			})
 
 			.then(() => {
