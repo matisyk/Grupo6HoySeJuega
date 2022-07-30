@@ -46,22 +46,22 @@ const controller = {
 		let ownerID = req.params.id
 		let deportes = Deportes.findAll();
 		let genero = Genero.findAll();
-		let cancha = Cancha.findAll({
+		let canchas = Cancha.findAll({
 			where: {
-				id: ownerID
+				users_owners_id: ownerID
 			}
 		});
 		let dias = DiaOwner.findAll();
 		let horarios = HoraOwner.findAll();
 
 		Promise
-			.all([deportes, genero, cancha, dias, horarios])
-			.then(([deportes, genero, cancha, dias, horarios]) => {
+			.all([deportes, genero, canchas, dias, horarios])
+			.then(([deportes, genero, canchas, dias, horarios]) => {
 
 				res.render("partial/userOwner/registrarEscuelita", {
 					deportes,
 					genero,
-					cancha,
+					canchas,
 					dias,
 					horarios
 				})
@@ -87,12 +87,12 @@ const controller = {
 				valor: req.body.valor,
 				genero_id: req.body.genero,
 				deportes_players_id: req.body.deporte,
-			canchas_id: req.body.cancha,
+				canchas_id: req.body.cancha,
 				categoria: req.body.categoria,
-			img_e: image,
+				img_e: image,
 				alumnos: req.body.alumnos,
 				users_owners_id: ownerID
-		})
+			})
 			.then((result) => {
 				let idEscuela = result.id
 				DiaYhora.create({
@@ -101,10 +101,10 @@ const controller = {
 					horas_id: req.body.hora
 				})
 				Profesor.create({
-						users_owners_id: ownerID,
-						nombre: req.body.nprofesor,
+					users_owners_id: ownerID,
+					nombre: req.body.nprofesor,
 					apellido: req.body.aprofesor,
-						escuelitas_id: idEscuela,
+					escuelitas_id: idEscuela,
 				})
 			}).then(() => {
 				return res.redirect("/userOwner/update")
@@ -116,63 +116,90 @@ const controller = {
 	// Update - Form to edit
 	edit: (req, res) => {
 
-		let id = req.params.id
-		let product = products.find(product => product.id == id)
-
-		res.render("partial/userOwner/editarEscuelita", {
-			product
+		let escuelitaID = req.params.id
+		let escuelitas = Escuelita.findByPk(escuelitaID, {
+			include: ['deporteE', 'genero', "profesor", "diaYhora", "cancha"],
 		})
+		let deportes = Deportes.findAll();
+		let canchas = Cancha.findAll();
+		let genero = Genero.findAll();
+		let profesor = Profesor.findAll();
+		let dias = DiaOwner.findAll();
+		let horarios = HoraOwner.findAll();
 
+		Promise
+			.all([escuelitas, deportes, canchas, genero, profesor, dias, horarios])
+			.then(([escuelitas, deportes, canchas, genero, profesor, dias, horarios]) => {
+
+				res.render("partial/userOwner/editarEscuelita", {
+					canchas,
+					deportes,
+					escuelitas,
+					genero,
+					profesor,
+					dias,
+					horarios
+				})
+			})
 	},
 	// Update - Method to update
 	update: (req, res) => {
-
-		let id = req.params.id
-		let productToEdit = products.find(product => product.id == id)
-
+		let escuelitaID = req.params.id
 
 		let image
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename
 		} else {
-			image = productToEdit.image
+			image = escuelitaID.image
 		}
-
-
-		productToEdit = {
-			id: productToEdit.id,
-			...req.body,
-			image: image,
-		}
-
-		let newProduct = products.map(product => {
-
-			if (product.id == productToEdit.id) {
-
-				return product = {
-					...productToEdit
-				};
+		Escuelita
+			.update({
+			valor: req.body.valor,
+				genero_id: req.body.genero,
+				deportes_players_id: req.body.deporte,
+				canchas_id: req.body.cancha,
+				categoria: req.body.categoria,
+				img_e: image,
+				alumnos: req.body.alumnos,
+			}, {
+				where: {
+					id: req.params.id
+				}
+			})
+		DiaYhora
+			.update({
+			dias_id: req.body.dia,
+			horas_id: req.body.hora
+		}, {
+			where: {
+				id: req.params.id
 			}
-
-			return product
 		})
-
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
-
-		return res.redirect("/userOwner/update")
+		Profesor
+			.update({
+			nombre: req.body.nprofesor,
+			apellido: req.body.aprofesor,
+			}, {
+				where: {
+					id: req.params.id
+				}
+			})
+			.then(() => {
+			return res.redirect("/userOwner/update")
+		})
 
 	},
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
-		let id = req.params.id
-		let productToDelete = products.filter(product => product.id != id)
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(productToDelete, null, ' '));
-
-		return res.redirect("/userOwner/update")
-
+		let escuelitaID = req.params.id
+		
+		Escuelita.destroy({
+			where: { id: escuelitaID },
+			force: true
+		}).then(() => {
+			return res.redirect("/userOwner/update")
+		})
 	}
 };
 

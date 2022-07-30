@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear Escuelita <%- product.id %></title>
+    <title>Crear Escuelita <%- escuelitas.id %></title>
 
     <!--CSS PROPIOS-->
     <link rel="stylesheet" href="/css/registrarCancha.css">
@@ -19,162 +19,93 @@
 
 <body>
 <main>
-    <form action="/userOwner/vistaCancha/:id/editSchool/<%= product.id %>?_method=PATCH" enctype="multipart/form-data"
+    <form action="/userOwner/vistaCancha/:id/editSchool/<%= escuelitas.id %>?_method=PATCH"
+        enctype="multipart/form-data"
         method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label name="registroDeDeporte">Deporte:</label>
                 <select name="deporte" id="deporte">
-                    <% if (product.deporte == "") { %>
-                    <option value="">Elegir un deporte</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="tenis">Tenis</option>
-                    <option value="voley">Voley</option>
-                    <% } else if (product.deporte == "futbol") { %>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="tenis">Tenis</option>
-                    <option value="voley">Voley</option>
-                    <% } else if (product.deporte == "padel") { %>
-                    <option value="padel">Padel</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="tenis">Tenis</option>
-                    <option value="voley">Voley</option>
-                    <% } else if (product.deporte == "basquet") { %>
-                    <option value="basquet">Basquet</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="tenis">Tenis</option>
-                    <option value="voley">Voley</option>
-                    <% } else if (product.deporte == "tenis") { %>
-                    <option value="tenis">Tenis</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="voley">Voley</option>
-                    <% } else if (product.deporte == "voley") { %>
-                    <option value="voley">Voley</option>
-                    <option value="futbol">Futbol</option>
-                    <option value="padel">Padel</option>
-                    <option value="basquet">Basquet</option>
-                    <option value="tenis">Tenis</option>
-                    <% } %>
-                </select>
-            </div>
-            <div style="display:none">
-                <select name="category">
-                    <option value="escuelita" selected="selected">escuelita</option>
+                    <% deportes.forEach(deporte => { %>
+                    <option value="<%= deporte.id %>"
+                        <% if (escuelitas.deporteE.id == deporte.id) { %><%= 'selected'  %><% }; %>><%= deporte.deporte %>
+                    </option>
+                    <% }); %>
                 </select>
             </div>
             <div class="edad">
                 <div class="item-tarjeta">
                     <label>Cancha a utilizar:</label>
-                    <input type="text" name="cancha" id="cancha" value="<%= product.cancha %>">
+                    <select name="cancha" id="cancha">
+                        <% canchas.forEach(canchas => { %>
+                            <option value="<%= canchas.id %>"
+                                <% if (escuelitas.cancha.id == canchas.id) { %><%= 'selected'  %><% }; %>>
+                                <%= canchas.identificacion %>
+                            </option>
+                            <% }); %>
+                        </select>
                 </div>
                 <div class="item-tarjeta">
                     <label name="cantidad">Cantidad de alumnos:</label>
-                    <input type="number" name="alumnos" id="alumnos" value="<%= product.alumnos %>">
+                    <input type="number" name="alumnos" id="alumnos" value="<%= escuelitas.alumnos %>">
                 </div>
 
                 <div class="edad">
                     <div class="item-tarjeta">
                         <label name="categoria">Categoria</label>
-                        <input type="number" name="categoria" id="categoria" value="<%= product.categoria %>">
+                        <input type="number" name="categoria" id="categoria" value="<%= escuelitas.categoria %>">
                     </div>
 
                     <div class="item-tarjeta">
                         <label name="profesor">Profesor</label>
-                        <input type="text" placeholder="Nombre del profesor" name="profesor" id="profesor"
-                            value="<%= product.profesor %>">
+                        <input type="text" placeholder="Nombre del profesor" name="nprofesor" id="nprofesor"
+                            value="<%= escuelitas.profesor.nombre %>"> <span> <input type="text" placeholder="Apellido del profesor" name="aprofesor" id="aprofesor"
+                                value="<%= escuelitas.profesor.apellido %>"> </span>
+                            
                     </div>
                 </div>
 
                 <div class="item-tarjeta">
                     <label>Género:</label>
                     <select name="genero" id="genero" required>
-                        <% if (product.genero == "") { %>
-                        <option value="">Elegir genenro</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="mixto">Mixto</option>
-                        <% } else if (product.genero == "femenino") { %>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="mixto">Mixto</option>
-                        <% } else if (product.genero == "masculino") { %>
-                        <option value="masculino">Masculino</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="mixto">Mixto</option>
-                        <% } else if (product.genero == "mixto") { %>
-                        <option value="mixto">Mixto</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="masculino">Masculino</option>
-                        <% } %>
+                        <% genero.forEach(genero => { %>
+                        <option value="<%= genero.id %>"
+                            <% if (escuelitas.genero.id == genero.id) { %><%= 'selected'  %><% }; %>>
+                            <%= genero.genero %>
+                        </option>
+                        <% }); %>
                     </select>
                 </div>
 
                 <div class="otro-item-tarjeta">
                     <div class="item-tarjeta"><label>Día a realizarse:</label></div>
                     <select name="dia" id="dia">
-                        <option value="<%= product.dia %>"><%= product.dia %>"</option>
-                        <option value="Lunes">Lunes</option>
-                        <option value="Martes">Martes</option>
-                        <option value="Miercoles">Miércoles</option>
-                        <option value="Jueves">Jueves</option>
-                        <option value="Viernes">Viernes</option>
-                        <option value="Sabado">Sabado</option>
-                        <option value="Domingo">Domingo</option>
-                        <option value="un solo dia">Un solo día</option>
+                     <% dias.forEach(dias => { %>
+                     <option value="<%= dias.id %>"
+                         <% if (escuelitas.diaYhora.dias_id == dias.id) { %><%= 'selected'  %><% }; %>>
+                         <%= dias.dia %>
+                     </option>
+                     <% }); %>
                     </select>
-                    <input type="time" class="form-control horaio" id="horarios" name="registroHorarios"
-                        value="<%= product.registroHorarios %>">
-                </div>
-                <br>
-                <div class="otro-item-tarjeta">
-                    <select name="dia2" id="dia">
-                        <option value="<%= product.dia2 %>"><%= product.dia %>"</option>
-                        <option value="Lunes">Lunes</option>
-                        <option value="Martes">Martes</option>
-                        <option value="Miercoles">Miércoles</option>
-                        <option value="Jueves">Jueves</option>
-                        <option value="Viernes">Viernes</option>
-                        <option value="Sabado">Sabado</option>
-                        <option value="Domingo">Domingo</option>
-                        <option value="un solo dia">Un solo día</option>
+                    <select name="hora" id="hora">
+                        <% horarios.forEach(horarios => { %>
+                        <option value="<%= horarios.id %>"
+                            <% if (escuelitas.diaYhora.horas_id == horarios.id) { %><%= 'selected'  %><% }; %>>
+                            <%= horarios.hora %>
+                        </option>
+                        <% }); %>
                     </select>
-                    <input type="time" class="form-control horaio" id="horarios" name="registroHorarios2"
-                        value="<%= product.registroHorarios2 %>">
-                </div>
-                <br>
-                <div class="otro-item-tarjeta">
-                    <select name="dia3" id="dia">
-                        <option selected disabled><%= product.dia %>"</option>
-                        <option value="lunes">Lunes</option>
-                        <option value="martes">Martes</option>
-                        <option value="miercoles">Miércoles</option>
-                        <option value="jueves">Jueves</option>
-                        <option value="viernes">Viernes</option>
-                        <option value="sabado">Sabado</option>
-                        <option value="domingo">Domingo</option>
-                        <option value="un solo dias">Un solo día</option>
-                    </select>
-                    <input type="time" class="form-control horaio" id="horarios" name="registroHorarios3"
-                        value="<%= product.registroHorarios3 %>">
                 </div>
                 <div class="item-tarjeta">
                     <label name="premio">Valor mensual</label>
                     <input type="number" placeholder="El valor mensual por alumno" name="valor" id="valor"
-                        value="<%= product.valor %>">
+                        value="<%= escuelitas.valor %>">
                 </div>
                 <div class="item-tarjeta">
                     <label>Cargar imagen</label>
-                    <input class="foto" type="file" name="image" accept=".jpg" multiple>
+                    <input class="foto" type="file" name="image" accept="all" value="<%= escuelitas.img_e %>">
                     <label> <img style="width: 130px; margin-top: 40px; border-radius: 70px;"
-                            src="/img/products/<%= product.image%>">
+                            src="/img/products/<%= escuelitas.img_e%>">
                     </label>
                     <h6 style="margin-left: 20px; color: red">Imagen seleccionada </h6>
                 </div>

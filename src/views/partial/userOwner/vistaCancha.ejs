@@ -164,11 +164,16 @@
                     <div class="blob"></div>
                     <span class="img img-escuelitas"><a href="/userOwner/agenda"><img
                           src="/img/products/<%= escuelitas.img_e %>" alt=""></a></span>
-                    <h3><%= escuelitas.genero.genero %><br><span class="categoria">Categoría
+                    <h3>Profe:
+                        <%= escuelitas.profesor.apellido %>
+                        <br>
+                        <br>
+                        <span
+                        class="categoria">Categoría:
                         <%= escuelitas.categoria %> </span> </h3>
                     <p class="descrip-tarjeta-esc">
                       <ul>
-                        <li>Profesor: <%= escuelitas.profesor.nombre %> <span> <%= escuelitas.profesor.apellido %></span>
+                        <li>Género: <%= escuelitas.genero.genero %> 
                         </li>
                         <li>Día: <%= escuelitas.diaYhora.dias_id %> - <%= escuelitas.diaYhora.horas_id %> </li>
                         <li>Cancha: <%= escuelitas.cancha.identificacion %> </li>
@@ -268,7 +273,8 @@
       </div>
       <div class="botones-registro">
         <button class="learn-more">
-          <a href="/userOwner/vistaCancha/<%= userOwner.id %>/crearTorneo"><span class="circle" aria-hidden="true">
+          <a href="/userOwner/vistaCancha/<%= userOwner.id %>/crearTorneo/<%= userOwnerLogged.id %>"><span
+              class="circle" aria-hidden="true">
               <span class="icon arrow"></span>
             </span>
             <span class="circle02 button-text"> Torneos</span></a>

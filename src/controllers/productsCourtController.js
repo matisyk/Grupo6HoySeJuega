@@ -122,12 +122,13 @@ const controller = {
 	// Update - Method to update
 	update: (req, res) => {
 
+		let canchaID = req.params.id
 		let image = req.body.image
 if (req.files[0] != undefined) {
 	image = req.files[0].filename;
   
 } else {
-	image = "estrella-gris.png";
+	image = canchaID.img;
 }
 
 		Cancha

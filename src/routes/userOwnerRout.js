@@ -65,7 +65,7 @@ router.delete('/vistaCancha/:id/delete/court/:id',  productsControllerC.destroy)
 
 // TORNEOS
 
-router.get('/vistaCancha/:id/crearTorneo', productsControllerT.create);
+router.get('/vistaCancha/:id/crearTorneo/:id', productsControllerT.create);
 router.post('/vistaCancha/:id/crearTorneo', upload.any(), productsControllerT.store);
 router.get('/vistaCancha/:id/editTorneo/:id/', productsControllerT.edit);
 router.patch('/vistaCancha/:id/editTorneo/:id/', upload.any(), productsControllerT.update);

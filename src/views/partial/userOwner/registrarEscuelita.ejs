@@ -21,7 +21,7 @@
 <body>
     <%- include('./headerOwner.ejs') %>
 
-    <form action="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita" enctype="multipart/form-data"
+    <form action="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita/" enctype="multipart/form-data"
         method="POST">
         <div class="tarjeta">
             <div class="item-tarjeta">
@@ -46,7 +46,7 @@
                     <label>Cancha a utilizar:</label>
                      <select class="form-control" id="cancha" name="cancha">
                          <option value="" disabled selected> Elegir entre tus canchas</option>
-                         <% cancha.forEach( canchas => { %>
+                         <% canchas.forEach( canchas => { %>
                          <option value="<%= canchas.id %>"><%= canchas.identificacion %></option>
                          <% }) %>
                      </select>
