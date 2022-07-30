@@ -150,9 +150,7 @@ const userOwnerController = {
     Promise
       .all([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo])
       .then(([userOwner, userOwnerID, img, canchas, escuelitas, torneos, mediosdepago, detalles, ubicacion,logo]) => {
-      console.log("🚀 ~ file: userOwnerController.js ~ line 154 ~ .then ~ escuelitas", escuelitas)
     
-
         res.render("partial/userOwner/vistaCancha", {
           userOwner,
           userOwnerID,
