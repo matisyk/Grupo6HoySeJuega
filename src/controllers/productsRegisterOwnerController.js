@@ -22,6 +22,7 @@ const ImagenOwner = db.ImagenOwner;
 const DetalleLugarOwner = db.DetalleLugarOwner;
 const Cancha = db.Cancha;
 const Ubicacion = db.Ubicacion
+const HomeOwner = db.HomeOwner
 
 
 const controller = {
@@ -46,10 +47,10 @@ const controller = {
 	//Create - Form to create
 	create: (req, res) => {
 
-				res.render("partial/register/formularioDatosCancha")
+		res.render("partial/register/formularioDatosCancha")
 	},
 
-	
+
 	// Create -  Method to store
 	store: (req, res) => {
 
@@ -91,9 +92,9 @@ const controller = {
 		// 		email: req.body.email
 		// 	}
 		// }).then(userInDB => {
-	
+
 		// 	if (userInDB && userInDB.Email === req.body.email) {
-	
+
 		// 		return res.render("partial/register/formularioDatosCancha", {
 		// 			errors: {
 		// 				email: {
@@ -106,70 +107,78 @@ const controller = {
 		// })
 
 		UserOwner
-		.create({
-			nombre: req.body.nombre,
-			apellido: req.body.apellido,
-			email: req.body.email,
-			password: bcryptjs.hashSync(req.body.password, 10),
-			nombre_del_lugar: req.body.nombreDelLugar,
-
-		})
-		.then((result) => {
-			const idOwner = result.id
-			TelefonoOwner.create({
-				telefono: req.body.telefono,
-				telefono2: req.body.telefono2,
-				users_owners_id: idOwner
-			})
-
-			ImagenOwner.create({
-				image: image,
-				image2: image2,
-				image3: image3,
-				users_owners_id: idOwner
-			})
-
-			LogoOwner.create({
-				logo: logo,
-				users_owners_id: idOwner
-			})
-
-			DetalleLugarOwner.create({
-				iluminacion: req.body.iluminacion,
-				estacionamiento: req.body.estacionamiento,
-				wifi: req.body.wifi,
-				vestuario: req.body.vestuarios,
-				ducha: req.body.duchas,
-				parrilla: req.body.parrilla,
-				quincho: req.body.quincho, 
-				quiosco: req.body.quiosco,
-				users_owners_id: idOwner
-			})
-
-			MedioDePago.create({
-				transferencia: req.body.transferencia,
-				mercado_pago: req.body.mercadoPago,
-				efectivo: req.body.efectivo,
-				tarjeta: req.body.tarjeta,
-				users_owners_id: idOwner,
+			.create({
+				nombre: req.body.nombre,
+				apellido: req.body.apellido,
+				email: req.body.email,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				nombre_del_lugar: req.body.nombreDelLugar,
 
 			})
+			.then((result) => {
+				const idOwner = result.id
+				TelefonoOwner.create({
+					telefono: req.body.telefono,
+					telefono2: req.body.telefono2,
+					users_owners_id: idOwner
+				})
 
-			Ubicacion.create({
-				provincia: req.body.provincia,
-				localidad: req.body.localidad,
-				municipio: req.body.municipio,
-				calle: req.body.calle,
-				numeracion: req.body.numeracion,
-				users_owners_id: idOwner
+				LogoOwner.create({
+					logo: logo,
+					users_owners_id: idOwner
+				})
+
+				DetalleLugarOwner.create({
+					iluminacion: req.body.iluminacion,
+					estacionamiento: req.body.estacionamiento,
+					wifi: req.body.wifi,
+					vestuario: req.body.vestuarios,
+					ducha: req.body.duchas,
+					parrilla: req.body.parrilla,
+					quincho: req.body.quincho,
+					quiosco: req.body.quiosco,
+					users_owners_id: idOwner
+				})
+
+				MedioDePago.create({
+					transferencia: req.body.transferencia,
+					mercado_pago: req.body.mercadoPago,
+					efectivo: req.body.efectivo,
+					tarjeta: req.body.tarjeta,
+					users_owners_id: idOwner,
+
+				})
+
+				Ubicacion.create({
+					provincia: req.body.provincia,
+					localidad: req.body.localidad,
+					municipio: req.body.municipio,
+					calle: req.body.calle,
+					numeracion: req.body.numeracion,
+					users_owners_id: idOwner
+				})
+				ImagenOwner.create({
+						image: image,
+						image2: image2,
+						image3: image3,
+						users_owners_id: idOwner
+					})
+					.then((result) => {
+						let imgOwner = result.id
+						HomeOwner.create({
+							nombre_del_lugar: req.body.nombreDelLugar,
+							users_owners_id: idOwner,
+							imagenes_owners_id: imgOwner,
+							logo_owners_id: imgOwner
+						})
+					})
+
 			})
-		
-		})
 
-		.then(() => {
-			return res.redirect("/userOwner/loginCourt");
-		})
-		.catch(error => res.send(error))
+			.then(() => {
+				return res.redirect("/userOwner/loginCourt");
+			})
+			.catch(error => res.send(error))
 	},
 
 
@@ -178,8 +187,8 @@ const controller = {
 
 		//let id = products.length;
 		res.render("partial/register/redireccion", {
-					userOwnerLogged: req.session.userOwnerLogged,
-		//	id
+			userOwnerLogged: req.session.userOwnerLogged,
+			//	id
 		});
 
 	},
@@ -193,14 +202,18 @@ const controller = {
 		let telefono = TelefonoOwner.findByPk(idOwner)
 		let detalleLugar = DetalleLugarOwner.findByPk(idOwner)
 		let medioDePago = MedioDePago.findByPk(idOwner)
-			
+
 		Promise
 			.all([userOwner, direccion, telefono, detalleLugar, medioDePago])
 			.then(([userOwner, direccion, telefono, detalleLugar, medioDePago]) => {
-			 res.render("partial/register/editOwnerForm", {
-			userOwner, direccion, telefono, detalleLugar, medioDePago
-		})
-		})
+				res.render("partial/register/editOwnerForm", {
+					userOwner,
+					direccion,
+					telefono,
+					detalleLugar,
+					medioDePago
+				})
+			})
 	},
 	// Update - Method to update
 	update: (req, res) => {
@@ -209,68 +222,70 @@ const controller = {
 		let userOwner = UserOwner.findByPk(userOwnerID)
 
 		UserOwner
-		.update({
-			nombre: req.body.nombre,
-			apellido: req.body.apellido,
-			nombre_del_lugar: req.body.nombre_del_lugar,
+			.update({
+				nombre: req.body.nombre,
+				apellido: req.body.apellido,
+				nombre_del_lugar: req.body.nombre_del_lugar,
 
-		}, {
-			where: {
-				id: userOwnerID
-			} })
-		.then(() => {
-			TelefonoOwner.update({
-				telefono: req.body.telefono,
-				telefono2: req.body.telefono2
 			}, {
 				where: {
-					users_owners_id: userOwnerID
+					id: userOwnerID
 				}
-			}) })
+			})
+			.then(() => {
+				TelefonoOwner.update({
+					telefono: req.body.telefono,
+					telefono2: req.body.telefono2
+				}, {
+					where: {
+						users_owners_id: userOwnerID
+					}
+				})
+			})
 			.then((result) => {
-			DetalleLugarOwner.update({
-				iluminacion: req.body.iluminacion,
-				estacionamiento: req.body.estacionamiento,
-				wifi: req.body.wifi,
-				vestuario: req.body.vestuario,
-				ducha: req.body.ducha,
-				parrilla: req.body.parrilla,
-				quincho: req.body.quincho, 
-				quiosco: req.body.quiosco,
-			}, {
-				where: {
-					users_owners_id: userOwnerID
-				}
+				DetalleLugarOwner.update({
+					iluminacion: req.body.iluminacion,
+					estacionamiento: req.body.estacionamiento,
+					wifi: req.body.wifi,
+					vestuario: req.body.vestuario,
+					ducha: req.body.ducha,
+					parrilla: req.body.parrilla,
+					quincho: req.body.quincho,
+					quiosco: req.body.quiosco,
+				}, {
+					where: {
+						users_owners_id: userOwnerID
+					}
+				})
 			})
-			 })
 
-			 .then(() => {
+			.then(() => {
 				MedioDePago.update({
-				transferencia: req.body.transferencia,
-				mercado_pago: req.body.mercado_pago,
-				efectivo: req.body.efectivo,
-				tarjeta: req.body.tarjeta,
-			}, {
-				where: {
-					users_owners_id: userOwnerID
-				}
+					transferencia: req.body.transferencia,
+					mercado_pago: req.body.mercado_pago,
+					efectivo: req.body.efectivo,
+					tarjeta: req.body.tarjeta,
+				}, {
+					where: {
+						users_owners_id: userOwnerID
+					}
+				})
+
+				Ubicacion.update({
+					calle: req.body.direccion,
+					numeracion: req.body.numeracion,
+				}, {
+					where: {
+						users_owners_id: userOwnerID
+					}
+				})
+
 			})
 
-			Ubicacion.update({
-				calle: req.body.direccion,
-				numeracion: req.body.numeracion,
-			}, {
-				where: {
-					users_owners_id: userOwnerID
-				}
+			.then(() => {
+				return res.redirect("/userOwner/loginCourt");
 			})
-		
-		})
-
-		.then(() => {
-			return res.redirect("/userOwner/loginCourt");
-		})
-		.catch(error => res.send(error))
+			.catch(error => res.send(error))
 	},
 
 
@@ -279,46 +294,46 @@ const controller = {
 
 		//let id = products.length;
 		res.render("partial/register/redireccion", {
-					userOwnerLogged: req.session.userOwnerLogged,
-		//	id
+			userOwnerLogged: req.session.userOwnerLogged,
+			//	id
 		});
 
 	},
 
-		// let id = req.params.id
-		// let productToEdit = products.find(product => product.id == id)
+	// let id = req.params.id
+	// let productToEdit = products.find(product => product.id == id)
 
 
-		// // let image
-		// // if (req.files[0] != undefined) {
-		// // 	image = req.files[0].filename
-		// // } else {
-		// // 	image = productToEdit.image
-		// // }
+	// // let image
+	// // if (req.files[0] != undefined) {
+	// // 	image = req.files[0].filename
+	// // } else {
+	// // 	image = productToEdit.image
+	// // }
 
 
-		// productToEdit = {
-		// 	id: productToEdit.id,
-		// 	...req.body,
-		// 	image: image,
-		// }
+	// productToEdit = {
+	// 	id: productToEdit.id,
+	// 	...req.body,
+	// 	image: image,
+	// }
 
-		// let newProduct = products.map(product => {
+	// let newProduct = products.map(product => {
 
-		// 	if (product.id == productToEdit.id) {
+	// 	if (product.id == productToEdit.id) {
 
-		// 		return product = {
-		// 			...productToEdit
-		// 		};
-		// 	}
+	// 		return product = {
+	// 			...productToEdit
+	// 		};
+	// 	}
 
-		// 	return product
-		// })
+	// 	return product
+	// })
 
 
-		// fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
+	// fs.writeFileSync(productsFilePath, JSON.stringify(newProduct, null, ' '));
 
-		// res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
+	// res.redirect("/userOwner/vistaCancha/" + productToEdit.id)
 
 	//},
 

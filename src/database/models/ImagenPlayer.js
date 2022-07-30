@@ -24,10 +24,6 @@ module.exports = (sequelize, dataTypes) => {
         as: "userPlayerI",
         foreignKey: "users_players_id"
        })
-      ImagenPlayer.belongsTo(models.HomePlayer, {
-        as: "imageH",
-        foreignKey: "users_players_id"
-      })
     }
 
   return ImagenPlayer;

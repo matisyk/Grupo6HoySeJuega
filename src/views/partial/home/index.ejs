@@ -66,6 +66,7 @@
   <main class="main-home">
     <section class="principal-home">
       <div class="jugador-home">    
+        <% homep.forEach (homep => { %>
         <div class="player_mobile">
           <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
           <ol>
@@ -77,15 +78,14 @@
           </div>
         <div class="imagen-jugador imagen-jugador-fondo">
           <div >
-            <img src="/img/jugador-home.jpg" alt="imagen-jugador" class="image_lucas">
+            <img src="/img/products/<%= homep.imagenPlayer.foto %>" alt="imagen-jugador" class="image_lucas">
           </div>
           <div class="datos-lucas" > 
-            <p class="titulito-home"  >Lucas Díaz</p>             
-            <p class="cita-lucas" class="home_info"> "Nunca me quedo con las ganas de jugar un partido"</p>
+            <p class="titulito-home"><%= homep.nombre %>  <%= homep.nombre %> </p>
           </div>
         </div>
       </div>
-
+ <% }) %>
       <div class="cancha-home">
         <div class="player_mobile2">
           <div class="recuadro-cancha">

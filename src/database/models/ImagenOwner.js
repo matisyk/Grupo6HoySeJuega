@@ -30,6 +30,7 @@ module.exports = (sequelize, dataTypes) => {
         as: "userOwnerI",
         foreignKey: "users_owners_id"
       })
+      
     }
   
     return ImagenOwner;

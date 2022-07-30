@@ -1,6 +1,6 @@
 module.exports = (sequelize, dataTypes) => {
 
-  let alias = 'HomePlayer';
+  let alias = 'HomeOwner';
   let cols = {
 
     id: {
@@ -8,34 +8,33 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    nombre: {
+   nombre_del_lugar: {
       type: dataTypes.STRING(100),
       allowNull: false
     },
-    apellido: {
-      type: dataTypes.STRING(100),
-      allowNull: false
-    },
-    img_hp: {
+    img_ho: {
       type: dataTypes.STRING(100),
     },
-    users_players_id: dataTypes.BIGINT(10),
+    img_hl: {
+      type: dataTypes.STRING(100),
+    },
+    users_owners_id: dataTypes.BIGINT(10),
   };
   let config = {
-    tableName: 'home_players',
+    tableName: 'home_owners',
     timestamps: false,
     // createdAt: 'created_at',
     // updatedAt: 'updated_at',
     // deletedAt: false
   }
-  const HomePlayer = sequelize.define(alias, cols, config);
+  const HomeOwner = sequelize.define(alias, cols, config);
 
-  HomePlayer.associate = function (models) {
+  HomeOwner.associate = function (models) {
 
     
   }
 
 
-  return HomePlayer;
+  return HomeOwner;
 
 }
