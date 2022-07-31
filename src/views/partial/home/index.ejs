@@ -10,7 +10,7 @@
 
   <!--CSS PROPIOS-->
   <link href="/css/style.css" rel="stylesheet" />
-  <link href="/css/jdSlider.css" rel="stylesheet" />
+  <!-- <link href="/css/jdSlider.css" rel="stylesheet" /> -->
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
   
@@ -30,14 +30,14 @@
   <!-- PLUGINS DE JS -->
   <script src="https://kit.fontawesome.com/22284035c9.js" crossorigin="anonymous"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="/js/jdSlider.js"></script>
+  <!-- <script src="/js/jdSlider.js"></script> -->
 
 </head>
 
 <body>
   <%- include('../header') %>
 
-  <div class="container-fluid p-0 bajar-slider">
+  <!-- <div class="container-fluid p-0 bajar-slider">
     <section class="jd-slider slideshow">
       <div class="slide-inner" id="slide">
         <ul class="slide-area">
@@ -64,7 +64,7 @@
       </a>
     </section>
 
-  </div>
+  </div> -->
 
   <main class="main-home">
     <section class="principal-home">
@@ -84,10 +84,9 @@
               <ul>
                 <% homep.forEach (homep => { %>
                 <li>
-                  <div>
                     <img src="/img/jugadores/<%= homep.img_hp %>" alt="imagen-jugador" class="image_lucas">
-                  </div>  
-                  <div class="datos-lucas">
+                    
+                  <div class="datos-lucas textoSlide">
                     <p class="titulito-home"><%= homep.nombre %> <%= homep.apellido %> </p>                   
                   </div>
                 </li>
@@ -216,7 +215,7 @@
 
   <%- include('../footer') %>
 
-  <script src="/js/script.js"></script>
+  <!-- <script src="/js/script.js"></script> -->
   <script src="/js/paginacion.js"></script>
   <script src="/js/slide.js"></script>
 </body>
