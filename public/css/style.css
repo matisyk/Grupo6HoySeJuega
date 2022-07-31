@@ -65,6 +65,10 @@ MAIN
 .titulito-home {
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
+  background-color: #cac1c15c;
+  padding: 5px 10px;
+  color: black;
+  border-radius: 20px;
 }
 .titulito-home1 {
   font-family: "Bebas Neue", cursive;
@@ -97,7 +101,9 @@ MAIN
   text-decoration: none;
   color: #ebebeb;
 }
-
+ul{
+  padding: 0;
+}
 .main-home ol li:hover {
   font-size: 30px;
 }
@@ -113,7 +119,7 @@ MAIN
   border-radius: 100px;
   background: rgb(7, 7, 49);
   display: block;
-  margin: 8px;
+  margin: auto;
   padding: 5px;
 }
 
@@ -147,22 +153,12 @@ MAIN
 
 .datos-lucas {
   font-family: "Kalam", cursive;
-  margin: 15px 5px;
 }
 
 .cita-lucas {
   margin-top: 10px;
 }
 
-.titulito-home {
-  font-size: 40px;
-}
-.titulito-home1 {
-  font-size: 40px;
-}
-.titulito-home2 {
-  font-size: 40px;
-}
 
 .image_field {
   width: 35vw;
@@ -366,6 +362,7 @@ display: none;
 	margin: auto;
 	width:100%;
 	overflow: hidden;
+  padding-bottom: 25%;
 }
 
 #slide ul{
@@ -385,7 +382,9 @@ display: none;
 }	
 
 #slide ul li img{
-	width:100%;
+	width:auto;
+  margin-top: 30px;
+  height: 150px;
 }
 
 #slide #paginacion{
@@ -393,7 +392,7 @@ display: none;
 	width:100%;
 	margin:auto;
 	text-align: center;
-	bottom:10px;
+	bottom:-6px;
 	left:0;
 	z-index:1;
 }
@@ -420,23 +419,22 @@ display: none;
 }
 
 #slide #retroceder{
-	top:45%;
+	top:30%;
 	left:2%;
 }
 
 #slide #avanzar{
-	top:45%;
+	top:30%;
 	right:2%;
 }
 
 #slide ul li .textoSlide{
 	position:absolute;
 	width:100%;
-	bottom:40px;
-	left:0;
 	text-align:center;
 	z-index:1;
-	color:white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #slide ul li .textoSlide h1{
@@ -453,6 +451,10 @@ display: none;
 MEDIA Q
 =============================================*/
 @media (min-width: 425px) {
+  #slide ul li img{
+    height: 180px;
+  }
+
   .prev {
     font-size: 13px !important;
   }
@@ -478,6 +480,12 @@ MEDIA Q
 
 }
 @media (min-width: 768px) {
+  #slide{
+    top: -343px;
+  }
+  #slide ul li img{
+    margin-top: 0;
+  }
   .datos-lucas {
     font-family: "Kalam", cursive;
     margin: 15px 5px;
@@ -509,12 +517,13 @@ MEDIA Q
     background-color: rgba(235, 235, 235, 0.25);;
     padding: 21px;
     margin-bottom: 25px;
+    padding-bottom: 87%;
   }
  
-  .image_field {
+  img.image_field {
     width: 100%;
-    margin-top: 40px;
     border: solid black 4px;
+    margin: 0px;
   }
 
   .redes {
@@ -538,7 +547,7 @@ MEDIA Q
     align-items: center;
     text-align: center;
     margin: 25px;
-    padding-bottom: 13px;
+    padding-bottom: 80%;
   }
   .player_mobile2 {
     background: none;
@@ -746,10 +755,10 @@ MEDIA Q
     margin: 40px auto;
   }
   .imagen-jugador img {
-    border-radius: 50px;
+    border-radius: 100px;
     background: rgb(7, 7, 49);
     display: block;
-    margin: 8px;
+    margin: 10px 0 10px 10px;
     padding: 5px;
   }
   .imagen-jugador {
