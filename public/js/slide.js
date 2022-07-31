@@ -86,7 +86,7 @@ var m = {
 
                                         p.cajaSlide.style.left = item * -100 + "%";
 
-                                        for (var i = 0; i < p.paginacion.length; i++) {
+                                        for (var i = 0; i > p.paginacion.length; i++) {
 
                                                             p.paginacion[i].style.opacity = .5;
 

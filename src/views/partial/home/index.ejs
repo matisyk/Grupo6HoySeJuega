@@ -79,38 +79,33 @@
             <li class="home_info">Y a jugar!!!</li>
           </ol>
         
-        <% if(homep.length>=1){ %>
+        <% if(homep.length>=1){ %>    
 
-        <div class="imagen-jugador imagen-jugador-fondo" id="slide">
-          <ul class="justify-content-center">
-            <% homep.forEach (homep => { %>
-            <li>
-              <img src="/img/jugadores/<%= homep.img_hp %>" alt="imagen-jugador" class="image_lucas">
-
-              <div class="datos-lucas textoSlide">
-                <p class="titulito-home"><%= homep.nombre %> <%= homep.apellido %> </p>
-              </div>
-            </li>
-            <% }) %>
-          </ul>
-          <ol id="paginacion">
-
-            <li item="1"><span class="fa fa-circle"></span></li>
-            <li item="2"><span class="fa fa-circle"></span></li>
-            <li item="3"><span class="fa fa-circle"></span></li>
-            <li item="4"><span class="fa fa-circle"></span></li>
-            <li item="5"><span class="fa fa-circle"></span></li>
-
-          </ol>
-
-          <div class="flechas" id="retroceder">
-            <span class="fa fa-chevron-left"></span>
+          <div id='slide' class='row1'>
+            <ul class='nav justify-content-center'>
+              <% homep.forEach (homep => { %>
+                <li>
+                  <img src='/img/jugadores/<%= homep.img_hp %>' alt='imagen-jugador' class='image_lucas'>
+                  <div class='datos-lucas textoSlide'>
+                    <p class='titulito-home'><%= homep.nombre %> <%= homep.apellido %> </p>
+                  </div>
+                </li>
+                <% }) %>
+            </ul>
+            <ol id='paginacion' >
+              <% homep.forEach (homep => { %>
+              <li item=''>
+                <span class='fa fa-circle'></span>
+              </li>
+              <% }) %>
+            </ol>
+            <div class='flechas' id='retroceder' style='display:none'>
+              <span class='fa fa-chevron-left'></span>
+            </div>
+            <div class='flechas' id='avanzar' style='display:none'>
+              <span class='fa fa-chevron-right'></span>
+            </div>
           </div>
-          <div class="flechas" id="avanzar">
-            <span class="fa fa-chevron-right"></span>
-          </div>
-        </div>
-
         <% } else { %>
         <div class="imagen-jugador imagen-jugador-fondo">
           <div>
@@ -123,6 +118,8 @@
         </div>
       </div>
       <% } %>
+
+
       </div>
     </div>
 
@@ -194,7 +191,7 @@
         <img src="/img/publicidad/banner-rectangular.jpeg">
         <div class="titulo-publicidad">No te lo pierdas!!</div>
       </div>
-      <button type="submit" class="learn-more"> <a target=”_blank” href="https://www.head.com/es_ES/padel.html">
+      <button type="submit" class="learn-more"> <a target='_blank' href="https://www.head.com/es_ES/padel.html">
           <span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
