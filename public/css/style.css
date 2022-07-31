@@ -732,6 +732,11 @@ MEDIA Q
   .hora{
     width: 50%;
   }
+  .image_field {
+  width: 78%;
+  margin-top: -66px;
+  border: solid black 4px;
+}
 }
 @media (min-width: 1440px) {
   .principal-home {
@@ -749,6 +754,11 @@ MEDIA Q
     );
     padding: 0px;
   }
+  .image_field {
+  width: 100%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
   .prev {
     font-size: 43px !important;
   }
@@ -799,8 +809,27 @@ MEDIA Q
   .titulo-publicidad{
     left:170px;
   }
+  .imagen-jugador img {
+  margin-left: 100px;
+  width: 60%;
+}
+.titulito-home {
+  bottom: 160px;
+  right: -255px;
+}
 }
 @media (min-width: 1600px) {
+  .image_field {
+  width: 50%;
+}
+.imagen-jugador img {
+  margin-left: 100px;
+  width: 60%;
+}
+.titulito-home {
+  bottom: 160px;
+  right: -275px;
+}
   .prev {
     font-size: 43px !important;
   }
