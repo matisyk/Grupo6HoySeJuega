@@ -73,6 +73,8 @@ MAIN
 .titulito-home2 {
   font-family: "Bebas Neue", cursive;
   font-size: 30px;
+  width: 80%;
+  margin: auto;
 }
 
 .main-home ol {
@@ -415,11 +417,12 @@ MEDIA Q
   }
   .recuadro-cancha{
     background-color: rgba(235, 235, 235, 0.25);;
-    padding-top: 20px;
+    padding: 21px;
+    margin-bottom: 25px;
   }
  
   .image_field {
-    width: 80%;
+    width: 100%;
     margin-top: 40px;
     border: solid black 4px;
   }
@@ -606,8 +609,8 @@ MEDIA Q
   .titulito-home {
     font-size: 40px;
     position: relative;
-    top: -240px;
-    left: 190px;
+    bottom: 150px;
+    right: -160px;
     
   }
   .titulito-home2 {
@@ -638,8 +641,9 @@ MEDIA Q
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 450px;
+    width: 90%;
     height: 500px;
+    position: relative;
   }
   .player_mobile2 {
     background-color: rgba(235, 235, 235, 0.25);
@@ -647,7 +651,7 @@ MEDIA Q
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 450px;
+    width: 90%;
     height: 500px;
     margin: 40px auto;
   }
@@ -657,9 +661,6 @@ MEDIA Q
     display: block;
     margin: 8px;
     padding: 5px;
-    position: absolute;
-    left: 90px;
-    top: -300px;
   }
   .imagen-jugador {
     display: flex;
@@ -667,6 +668,9 @@ MEDIA Q
     align-items: center;
     margin-top: 15px;
     position: absolute;
+    bottom: -30px;
+    left: 5%;
+    width: 300px;
   }
   .image_lucas {
     width: 50%;
@@ -769,10 +773,7 @@ MEDIA Q
     left:160px;
     top: -205px;
   }
-  .titulito-home {
-    left: 270px;
-    top: -265px;
-  }
+  
   .publicidades {
     margin: 20px 0 20px 0;
     position: relative;
@@ -789,7 +790,7 @@ MEDIA Q
   
   .player_mobile2 {
     right: -480px;
-    margin: 40px auto;
+    margin: 40px ;
     width: 90%;
   }
   .image_field{
@@ -811,10 +812,6 @@ MEDIA Q
   }
   .cita-lucas {
     right: 534px;
-  }
-  .titulito-home {
- left: 340px;
-    font-size: 50px;
   }
   .player_mobile2 {
     top: -862px;
