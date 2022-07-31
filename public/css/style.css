@@ -74,6 +74,12 @@ MAIN
   font-size: 30px;
 }
 .titulito-home2 {
+  font-family: "Bebas Neue", cursive;
+  font-size: 30px;
+  width: 80%;
+  margin: auto;
+}
+.titulito-home3 {
     font-family: "Bebas Neue", cursive;
     font-size: 30px;
     background-color: #cac1c15c;
@@ -82,6 +88,7 @@ MAIN
     border-radius: 20px;
     width: fit-content;
     margin: auto;
+    margin-bottom: 20px;
   }
 
 
@@ -197,6 +204,7 @@ position: relative;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-top: 20px;
 }
 .imagen-jugador {
   display: flex;
@@ -407,7 +415,6 @@ display: none;
   }
   .titulito-home2 {
     font-size: 40px;
-    margin-bottom: 0;
   }
   .imagen-jugador img {
     border-radius: 100px;
@@ -416,10 +423,6 @@ display: none;
     margin: 10px 10px 0px 90px;
     padding: 5px;
     width: 50%
-  }
-  .recuadro-cancha{
-    background-color: rgba(235, 235, 235, 0.25);;
-    padding: 21px;
   }
  
   img.image_field {
@@ -441,7 +444,9 @@ display: none;
     flex-direction: row;
     padding: 0;
   }
-
+.ol-jugador{
+  padding: 17px;
+}
   .player_mobile {
     background-color: rgba(235, 235, 235, 0.25);
     display: flex;
@@ -451,12 +456,12 @@ display: none;
     margin: 25px;
   }
   .player_mobile2 {
-    background: none;
     margin: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    height: 552px;
   }
   .imagen-jugador {
     display: flex;
@@ -647,7 +652,20 @@ img.image_field {
     font-size: 20px;
   }
   .player_mobile2 {
-  background-color: rgba(235, 235, 235, 0.25);
+
+    background-color: rgba(235, 235, 235, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 90%;
+    margin: 25px auto;
+    justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 30px;
+  }
+
+  /* background-color: rgba(235, 235, 235, 0.25);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -655,7 +673,8 @@ img.image_field {
   width: 90%;
   height: 544px;
   margin: 25px auto;
-}
+} */
+
 
   .recuadro-cancha{
     background: none;
@@ -778,11 +797,17 @@ img.image_field {
   }
   
   .player_mobile2 {
-  right: -480px;
+
+    right: -480px;
+    width: 90%;
+  }
+
+  /* right: -480px;
   margin: 25px 40px;
   width: 90%;
   height: 633px;
-}
+} */
+
   .image_field{
     width: 60%;
   }
@@ -826,12 +851,7 @@ img.image_field {
   margin-left: 203px;
   width: 45%;
 }
-.player_mobile2 {
-  right: -480px;
-  margin: 25px 40px;
-  width: 90%;
-  height: 710px;
-}
+
 .titulito-home {
   bottom: 160px;
   right: -275px;

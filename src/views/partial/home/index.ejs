@@ -74,7 +74,7 @@
       <div class="jugador-home">
         <div class="player_mobile">
           <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
-          <ol>
+          <ol class="ol-jugador">
             <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
             <li class="home_info">Formar o sumarte a un equipo</li>
             <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
@@ -94,7 +94,9 @@
                 </li>
                 <% }) %>
             </ul>
-            <ol id='paginacion1' style='display:none'>
+
+            <ol id='paginacion1' style='display:none' >
+
               <% homep.forEach (homep => { %>
               <li item1='<%= homep.id %>'>
                 <span class='fa fa-circle'></span>
@@ -140,10 +142,15 @@
             <ul class='nav justify-content-center'>
               <% homeo.forEach (homeo => { %>
                 <li>
-                  <p class="titulito-home2"><%=homeo.nombre_del_lugar%></p>
+
+                  <p class="titulito-home3"><%=homeo.nombre_del_lugar%></p>
+                  <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
+
+                  <!-- <p class="titulito-home2"><%=homeo.nombre_del_lugar%></p>
                   <br>
                   <br>
-                  <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field1">
+                  <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field1"> -->
+
                 </li>
                 <% }) %>
             </ul>
@@ -163,7 +170,9 @@
             </div>
           </div>
         <% } else { %>
-        <p class="titulito-home">La mendocina club</p>
+
+        <p class="titulito-home3"><%= homeo.nombre_del_lugar %> </p>
+
         <div class="imagen-cancha imagen-cancha-fondo">
           <img src="/img/equipos/club-personas-equipo.png" alt="imagen-cancha" class="image_field">
         </div>

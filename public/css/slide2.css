@@ -1,9 +1,8 @@
 #slide2{
     position: relative;
-      margin: auto;
+      margin: 0 auto;
       width:100%;
       overflow: hidden;
-    padding-bottom: 20px;
   }
   
   #slide2 ul{
@@ -20,6 +19,7 @@
       position: relative;
       float:left;
       width:25%;
+      margin: 8px auto;
   }	
   
   #slide2 ul li img{
@@ -116,6 +116,11 @@
           right: 9%;
         }
         #slide2 ul li img{
-          margin: 0 auto;
+          margin: 6px auto;
         }
          }
+
+
+         
+      
+         
