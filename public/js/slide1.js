@@ -3,7 +3,7 @@ console.log('LLEGUE A SLIDE1')
 OBJETO CON LAS PROPIEDADES DEL SLIDE1
 =============================================*/
 
-var p = {
+var pp = {
 
                     paginacion1: document.querySelectorAll("#paginacion1 li"),
                     item1: 0,
@@ -21,94 +21,94 @@ var p = {
 OBJETO CON LOS MÉTODOS DEL SLIDE1
 =============================================*/
 
-var m = {
+var mp = {
 
                     inicioSlide1: function () {
 
-                                        for (var i = 0; i < p.paginacion1.length; i++) {
+                                        for (var i = 0; i < pp.paginacion1.length; i++) {
 
-                                                            p.paginacion1[i].addEventListener("click", m.paginacion1Slide1);
-                                                            p.imgSlide1[i].style.width = (100 / p.paginacion1.length) + "%";
+                                                            pp.paginacion1[i].addEventListener("click", mp.paginacion1Slide1);
+                                                            pp.imgSlide1[i].style.width = (100 / pp.paginacion1.length) + "%";
 
                                         }
 
-                                        p.avanzar1.addEventListener("click", m.avanzar1)
-                                        p.retroceder1.addEventListener("click", m.retroceder1)
+                                        pp.avanzar1.addEventListener("click", mp.avanzar1)
+                                        pp.retroceder1.addEventListener("click", mp.retroceder1)
 
-                                        m.intervalo();
+                                        mp.intervalo();
 
-                                        p.cajaSlide1.style.width = (p.paginacion1.length * 100) + "%";
+                                        pp.cajaSlide1.style.width = (pp.paginacion1.length * 100) + "%";
 
                     },
 
                     paginacion1Slide1: function (item1) {
 
-                                        p.item1 = item1.target.parentNode.getAttribute("item1") - 1;
+                                        pp.item1 = item1.target.parentNode.getAttribute("item1") - 1;
 
-                                        m.movimientoSlide1(p.item1);
+                                        mp.movimientoSlide1(pp.item1);
 
                     },
 
                     avanzar1: function () {
 
-                                        if (p.item1 == p.imgSlide1.length - 1) {
+                                        if (pp.item1 == pp.imgSlide1.length - 1) {
 
-                                                            p.item1 = 0;
+                                                            pp.item1 = 0;
 
                                         } else {
 
-                                                            p.item1++;
+                                                            pp.item1++;
 
                                         }
 
-                                        m.movimientoSlide1(p.item1);
+                                        mp.movimientoSlide1(pp.item1);
                     },
 
                     retroceder1: function () {
 
-                                        if (p.item1 == 0) {
+                                        if (pp.item1 == 0) {
 
-                                                            p.item1 = p.imgSlide1.length - 1;
+                                                            pp.item1 = pp.imgSlide1.length - 1;
 
                                         } else {
 
-                                                            p.item1--;
+                                                            pp.item1--;
 
                                         }
 
-                                        m.movimientoSlide1(p.item1);
+                                        mp.movimientoSlide1(pp.item1);
 
                     },
 
                     movimientoSlide1: function (item1) {
 
-                                        p.formatearLoop = true;
+                                        pp.formatearLoop = true;
 
-                                        p.cajaSlide1.style.left = item1 * -100 + "%";
+                                        pp.cajaSlide1.style.left = item1 * -100 + "%";
 
-                                        for (var i = 0; i > p.paginacion1.length; i++) {
+                                        for (var i = 0; i > pp.paginacion1.length; i++) {
 
-                                                            p.paginacion1[i].style.opacity = .5;
-
-                                        }
-
-                                        p.paginacion1[item1].style.opacity = 1;
-
-                                        if (p.animacionSilde1 == "slide1") {
-
-                                                            p.cajaSlide1.style.transition = ".7s left ease-in-out";
+                                                            pp.paginacion1[i].style.opacity = .5;
 
                                         }
 
-                                        if (p.animacionSilde1 == "fade") {
+                                        pp.paginacion1[item1].style.opacity = 1;
 
-                                                            p.imgSlide1[item1].style.opacity = 0;
+                                        if (pp.animacionSilde1 == "slide1") {
 
-                                                            p.imgSlide1[item1].style.transition = ".7s opacity ease-in-out";
+                                                            pp.cajaSlide1.style.transition = ".7s left ease-in-out";
+
+                                        }
+
+                                        if (pp.animacionSilde1 == "fade") {
+
+                                                            pp.imgSlide1[item1].style.opacity = 0;
+
+                                                            pp.imgSlide1[item1].style.transition = ".7s opacity ease-in-out";
 
                                                             setTimeout(function () {
 
-                                                                                p.imgSlide1[item1].style.opacity = 1;
+                                                                                pp.imgSlide1[item1].style.opacity = 1;
 
                                                             }, 500)
 
@@ -120,20 +120,20 @@ var m = {
 
                                         setInterval(function () {
 
-                                                            if (p.formatearLoop) {
+                                                            if (pp.formatearLoop) {
 
-                                                                                p.formatearLoop = false;
+                                                                                pp.formatearLoop = false;
 
                                                             } else {
 
-                                                                                m.avanzar1();
+                                                                                mp.avanzar1();
 
                                                             }
 
-                                        }, p.velocidadSlide1)
+                                        }, pp.velocidadSlide1)
 
                     }
 
 }
 
-m.inicioSlide1();
+mp.inicioSlide1();
