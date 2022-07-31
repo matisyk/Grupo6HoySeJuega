@@ -1,3 +1,4 @@
+console.log('LLEGUE A PAGINACION')
 /*=============================================
 OBJETO CON LAS PROPIEDADES DEL SLIDE
 =============================================*/

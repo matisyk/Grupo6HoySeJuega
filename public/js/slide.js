@@ -1,3 +1,4 @@
+console.log('LLEGUE A SLIDE')
 /*=============================================
 OBJETO CON LAS PROPIEDADES DEL SLIDE
 =============================================*/

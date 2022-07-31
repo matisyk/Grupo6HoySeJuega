@@ -69,38 +69,49 @@
   <main class="main-home">
     <section class="principal-home">
       <div class="jugador-home">
+        <div class="player_mobile">
+              <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
+              <ol>
+                <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
+                <li class="home_info">Formar o sumarte a un equipo</li>
+                <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
+                <li class="home_info">Y a jugar!!!</li>
+              </ol>
+        </div>
         <% if(homep.length>=1){ %>
-          <% homep.forEach (homep => { %>
-            <div class="player_mobile">
-              <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
-              <ol>
-                <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
-                <li class="home_info">Formar o sumarte a un equipo</li>
-                <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
-                <li class="home_info">Y a jugar!!!</li>
-              </ol>
+          
+            <div class="imagen-jugador imagen-jugador-fondo" id="slide" >
+              <ul>
+                <% homep.forEach (homep => { %>
+                <li>
+                  <div>
+                    <img src="/img/jugadores/<%= homep.img_hp %>" alt="imagen-jugador" class="image_lucas">
+                  </div>  
+                  <div class="datos-lucas">
+                    <p class="titulito-home"><%= homep.nombre %> <%= homep.apellido %> </p>                   
+                  </div>
+                </li>
+                <% }) %> 
+              </ul> 
+                <ol id="paginacion"> 
+
+                  <li item="1"><span class="fa fa-circle"></span></li>
+                  <li item="2"><span class="fa fa-circle"></span></li>
+                  <li item="3"><span class="fa fa-circle"></span></li>
+                  <li item="4"><span class="fa fa-circle"></span></li>
+                  <li item="5"><span class="fa fa-circle"></span></li>
+
+                </ol> 
+
+  <div class="flechas" id="retroceder">
+  <span class="fa fa-chevron-left"></span>
+  </div>
+  <div class="flechas" id="avanzar">
+  <span class="fa fa-chevron-right"></span>
+  </div>
             </div>
-            <div class="imagen-jugador imagen-jugador-fondo">
-              <div>
-                <img src="/img/jugadores/<%= homep.img_hp %>" alt="imagen-jugador" class="image_lucas">
-              </div>
-              <div class="datos-lucas">
-                <p class="titulito-home"><%= homep.nombre %> <%= homep.apellido %> </p>
-              </div>
-            </div>
-          </div>
-          <% }) %>
+          
           <% } else { %>
-            <div class="player_mobile">
-              <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
-              <ol>
-                <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
-                <li class="home_info">Formar o sumarte a un equipo</li>
-                <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
-                <li class="home_info">Y a jugar!!!</li>
-              </ol>
-              <br>
-            </div>
             <div class="imagen-jugador imagen-jugador-fondo">
               <div>
                 <img src="/img/jugadores/imagenJugador-1659200168673-343362733.jpg" alt="imagen-jugador" class="image_lucas">
@@ -111,39 +122,38 @@
             </div>
           </div>
           <% } %> 
-        
+      </div>
+
       <div class="cancha-home">
-        <div class="player_mobile2">
-          <% if(homeo.length>=1){ %>
-          <% homeo.forEach (homeo => { %>
-            <div class="recuadro-cancha">
+        <div class="player_mobile2"> 
+          <div class="recuadro-cancha">
               <p class="titulito-home2">Si sos dueño de cancha podés:</p>
               <ol>
                 <li class="home_info"><a href="../register/registerOwner"> Registrar tu cancha</a></li>
                 <li class="home_info">Ofrecer tus servicios</li>
                 <li class="home_info">Crear torneos</li>
               </ol> 
-            </div>
+          </div>
            
             <p class="titulito-home2">Club los Cedros </p>
-            <div class="imagen-cancha imagen-cancha-fondo">
-              <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
-            </div>
-            <!-- <div class="imagen-cancha imagen-cancha-fondo">
-              <img src="/img/products/< homeo.img_hl %>" alt="imagen-cancha" class="image_field">
-            </div> -->
+          <% if(homeo.length>=1){ %>
+            <div id="slide">
+            <ul>
+              <% homeo.forEach (homeo => { %>
+                <li>
+                  <div class="imagen-cancha imagen-cancha-fondo">
+                    <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
+                  </div>
+                  <!-- <div class="imagen-cancha imagen-cancha-fondo">
+                    <img src="/img/products/< homeo.img_hl %>" alt="imagen-cancha" class="image_field">
+                  </div> --> 
+                </li>
+              <% }) %> 
+           </ul>
           </div>
         </div>
-          <% }) %> 
+         
           <% } else { %>
-          <div class="recuadro-cancha">
-            <p class="titulito-home2">Si sos dueño de cancha podés:</p>
-            <ol>
-              <li class="home_info"><a href="../register/registerOwner"> Registrar tu cancha</a></li>
-              <li class="home_info">Ofrecer tus servicios</li>
-              <li class="home_info">Crear torneos</li>
-            </ol>
-          </div>
           <p class="titulito-home2"><%= homeo.nombre_del_lugar %> </p>
           <div class="imagen-cancha imagen-cancha-fondo">
             <img src="/img/equipos/club-personas-equipo.png" alt="imagen-cancha" class="image_field">
@@ -154,7 +164,7 @@
         </div>
       </div>
         <% }%>
-      
+    </div>
 
     </section>
 
@@ -207,6 +217,8 @@
   <%- include('../footer') %>
 
   <script src="/js/script.js"></script>
+  <script src="/js/paginacion.js"></script>
+  <script src="/js/slide.js"></script>
 </body>
 
 </html>
