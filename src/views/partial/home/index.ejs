@@ -31,7 +31,7 @@
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/slide1.css" rel="stylesheet" />
   <link href="/css/slide2.css" rel="stylesheet" />
-  <!-- <link href="/css/jdSlider.css" rel="stylesheet" /> -->
+ <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
 
@@ -40,7 +40,7 @@
 <body>
   <%- include('../header') %>
 
-  <!-- <div class="container-fluid p-0 bajar-slider">
+  <div class="container-fluid p-0 bajar-slider">
     <section class="jd-slider slideshow">
       <div class="slide-inner" id="slide">
         <ul class="slide-area">
@@ -67,7 +67,7 @@
       </a>
     </section>
 
-  </div> -->
+  </div>
 
   <main class="main-home">
     <section class="principal-home">
@@ -81,7 +81,7 @@
             <li class="home_info">Y a jugar!!!</li>
           </ol>
         
-        <% if(homep.length>1){ %>    
+        <% if(homep.length > 0 ){ %>    
 
           <div id='slide1' class='row1 imagen-jugador imagen-jugador-fondo'>
             <ul class='nav justify-content-center'>
@@ -94,7 +94,7 @@
                 </li>
                 <% }) %>
             </ul>
-            <ol id='paginacion1'>
+            <ol id='paginacion1' style='display:none'>
               <% homep.forEach (homep => { %>
               <li item1='<%= homep.id %>'>
                 <span class='fa fa-circle'></span>
@@ -135,7 +135,7 @@
               <li class="home_info">Crear torneos</li>
             </ol>
           </div>
-        <% if(homeo.length>1){ %>
+        <% if(homeo.length > 0){ %>
             <div id='slide2' class='row1'>
             <ul class='nav justify-content-center'>
               <% homeo.forEach (homeo => { %>
@@ -224,7 +224,7 @@
 
   <%- include('../footer') %>
 
-  <!-- <script src="/js/script.js"></script> -->
+  <script src="/js/script.js"></script>
   <script src="/js/paginacion1.js"></script>
   <script src="/js/paginacion2.js"></script>
   <script src="/js/slide1.js"></script>
