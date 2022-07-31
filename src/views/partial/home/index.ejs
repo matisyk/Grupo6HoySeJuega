@@ -128,7 +128,7 @@
       <div class="cancha-home">
         <div class="player_mobile2">
           <div class="recuadro-cancha">
-            <p class="titulito-home2">Si sos dueño de cancha podés:</p>
+            <p class="titulito-home1">Si sos dueño de cancha podés:</p>
             <ol>
               <li class="home_info"><a href="../register/registerOwner"> Registrar tu cancha</a></li>
               <li class="home_info">Ofrecer tus servicios</li>
@@ -136,7 +136,6 @@
             </ol>
           </div>
         <% if(homeo.length>1){ %>
-          
             <div id='slide2' class='row1'>
             <ul class='nav justify-content-center'>
               <% homeo.forEach (homeo => { %>
@@ -161,11 +160,8 @@
               <span class='fa fa-chevron-right'></span>
             </div>
           </div>
-
-        
-
         <% } else { %>
-        <p class="titulito-home"><%= homeo.nombre_del_lugar %> </p>
+        <p class="titulito-home">La mendocina club</p>
         <div class="imagen-cancha imagen-cancha-fondo">
           <img src="/img/equipos/club-personas-equipo.png" alt="imagen-cancha" class="image_field">
         </div>
