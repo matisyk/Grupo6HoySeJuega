@@ -16,6 +16,7 @@
 .mi-equipo{
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 50px;
 }
 .cancha{
   position: relative;
@@ -66,4 +67,7 @@
 .jugador11{
   left: 77%;
   top: 51%;
+}
+ul{
+  margin-left: 0px;
 }

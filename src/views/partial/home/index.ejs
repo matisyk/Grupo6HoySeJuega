@@ -13,6 +13,7 @@
   <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
+  
 
   <!-- CSS EXTERNOS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -68,29 +69,71 @@
   <main class="main-home">
     <section class="principal-home">
       <div class="jugador-home">
-        <% homep.forEach (homep => { %>
-        <div class="player_mobile">
-          <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
-          <ol>
-            <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
-            <li class="home_info">Formar o sumarte a un equipo</li>
-            <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
-            <li class="home_info">Y a jugar!!!</li>
-          </ol>
-        </div>
-        <div class="imagen-jugador imagen-jugador-fondo">
-          <div>
-            <img src="/img/jugadores/<%= homep.img_hp %>" alt="imagen-jugador" class="image_lucas">
+        <% if(homep.length>=1){ %>
+          <% homep.forEach (homep => { %>
+            <div class="player_mobile">
+              <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
+              <ol>
+                <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
+                <li class="home_info">Formar o sumarte a un equipo</li>
+                <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
+                <li class="home_info">Y a jugar!!!</li>
+              </ol>
+            </div>
+            <div class="imagen-jugador imagen-jugador-fondo">
+              <div>
+                <img src="/img/jugadores/<%= homep.img_hp %>" alt="imagen-jugador" class="image_lucas">
+              </div>
+              <div class="datos-lucas">
+                <p class="titulito-home"><%= homep.nombre %> <%= homep.apellido %> </p>
+              </div>
+            </div>
           </div>
-          <div class="datos-lucas">
-            <p class="titulito-home"><%= homep.nombre %> <%= homep.apellido %> </p>
+          <% }) %>
+          <% } else { %>
+            <div class="player_mobile">
+              <p> <span class="titulito-home1"> Si sos jugador podés:</span></p>
+              <ol>
+                <li><a href="/register" class="home_info"> Armar tu perfil de jugador</a></li>
+                <li class="home_info">Formar o sumarte a un equipo</li>
+                <li><a href="/elegirCancha" class="home_info" class="home_info">Encontrar tu cancha más cercana</a> </li>
+                <li class="home_info">Y a jugar!!!</li>
+              </ol>
+            </div>
+            <div class="imagen-jugador imagen-jugador-fondo">
+              <div>
+                <img src="/img/jugadores/imagenJugador-1659200168673-343362733.jpg" alt="imagen-jugador" class="image_lucas">
+              </div>
+              <div class="datos-lucas">
+                <p class="titulito-home">Franco Garcia</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <% }) %>
+          <% } %> 
+        
       <div class="cancha-home">
         <div class="player_mobile2">
+          <% if(homeo.length>=1){ %>
           <% homeo.forEach (homeo => { %>
+            <div class="recuadro-cancha">
+              <p class="titulito-home2">Si sos dueño de cancha podés:</p>
+              <ol>
+                <li class="home_info"><a href="../register/registerOwner"> Registrar tu cancha</a></li>
+                <li class="home_info">Ofrecer tus servicios</li>
+                <li class="home_info">Crear torneos</li>
+              </ol>
+            </div>
+            <p class="titulito-home2">Club los Cedros </p>
+            <div class="imagen-cancha imagen-cancha-fondo">
+              <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
+            </div>
+            <div class="imagen-cancha imagen-cancha-fondo">
+              <img src="/img/products/<%= homeo.img_hl %>" alt="imagen-cancha" class="image_field">
+            </div>
+          </div>
+        </div>
+          <% }) %> 
+          <% } else { %>
           <div class="recuadro-cancha">
             <p class="titulito-home2">Si sos dueño de cancha podés:</p>
             <ol>
@@ -101,14 +144,15 @@
           </div>
           <p class="titulito-home2"><%= homeo.nombre_del_lugar %> </p>
           <div class="imagen-cancha imagen-cancha-fondo">
-            <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
+            <img src="/img/equipos/club-personas-equipo.png" alt="imagen-cancha" class="image_field">
           </div>
           <div class="imagen-cancha imagen-cancha-fondo">
-            <img src="/img/products/<%= homeo.img_hl %>" alt="imagen-cancha" class="image_field">
+            <img src="/img/img-canchas/cancha-home.jpg" alt="imagen-cancha" class="image_field">
           </div>
         </div>
-        <% }) %>
       </div>
+        <% }%>
+      
 
     </section>
 

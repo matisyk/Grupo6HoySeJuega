@@ -20,11 +20,11 @@ const controller = {
     Promise
       .all([homep, homeo])
       .then(([homep, homeo]) => {
-      
         res.render("partial/home/index", {
           homep,
           homeo
         })
+        
     })
   },
 

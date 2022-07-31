@@ -135,8 +135,9 @@ const userPlayerController = {
     res.render("partial/userPlayer/elegirCancha")
   },
   equipo: (req, res) => {
-
-    res.render("partial/userPlayer/equipo")
+    res.render("partial/userPlayer/equipo", {
+      userPlayer
+    })
   },
   buscarJugador: (req, res) => {
 
