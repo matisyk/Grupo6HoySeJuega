@@ -48,7 +48,6 @@ MAIN
 
 .principal-home {
   display: flex;
-  position: relative;
   color: white;
   background-color: black;
   border-radius: 5px;
@@ -114,7 +113,9 @@ ul{
 .jugador-home {
   width: 100%;
 }
-
+.img-j{
+position: relative;
+}
 .imagen-jugador img {
   border-radius: 100px;
   background: rgb(7, 7, 49);
@@ -358,11 +359,11 @@ display: none;
 
 
 #slide{
-	position:relative;
+  position: relative;
 	margin: auto;
 	width:100%;
 	overflow: hidden;
-  padding-bottom: 25%;
+  padding-bottom: 20px;
 }
 
 #slide ul{
@@ -383,17 +384,13 @@ display: none;
 
 #slide ul li img{
 	width:auto;
-  margin-top: 30px;
   height: 150px;
 }
 
 #slide #paginacion{
-	position: absolute;
 	width:100%;
 	margin:auto;
 	text-align: center;
-	bottom:-6px;
-	left:0;
 	z-index:1;
 }
 
@@ -419,22 +416,22 @@ display: none;
 }
 
 #slide #retroceder{
-	top:30%;
+	top:15%;
 	left:2%;
 }
 
 #slide #avanzar{
-	top:30%;
+	top:15%;
 	right:2%;
 }
 
 #slide ul li .textoSlide{
-	position:absolute;
 	width:100%;
 	text-align:center;
 	z-index:1;
   padding: 10px;
   border-radius: 10px;
+  margin: 0;
 }
 
 #slide ul li .textoSlide h1{
@@ -446,7 +443,9 @@ display: none;
 	background: rgba(0,0,0,.5);
 	padding-bottom:10px;
 }
-
+p{
+  margin: 0;
+}
 /*=============================================
 MEDIA Q
 =============================================*/
@@ -480,11 +479,17 @@ MEDIA Q
 
 }
 @media (min-width: 768px) {
-  #slide{
-    top: -343px;
+
+  #slide #retroceder{
+    top:24%;
+    left:9%;
+  }
+  #slide #avanzar{
+    top: 24%;
+    right: 9%;
   }
   #slide ul li img{
-    margin-top: 0;
+    margin: 0 auto;
   }
   .datos-lucas {
     font-family: "Kalam", cursive;
@@ -547,7 +552,6 @@ MEDIA Q
     align-items: center;
     text-align: center;
     margin: 25px;
-    padding-bottom: 80%;
   }
   .player_mobile2 {
     background: none;
@@ -707,10 +711,6 @@ MEDIA Q
 
   .titulito-home {
     font-size: 40px;
-    position: relative;
-    bottom: 150px;
-    right: -160px;
-    
   }
   .titulito-home2 {
     font-size: 40px;
@@ -730,20 +730,6 @@ MEDIA Q
   .home_info {
     font-size: 20px;
   }
-
-
-
-  .player_mobile {
-    background-color: rgba(235, 235, 235, 0.25);
-    margin: 40px auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 90%;
-    height: 500px;
-    position: relative;
-  }
   .player_mobile2 {
     background-color: rgba(235, 235, 235, 0.25);
     display: flex;
@@ -753,32 +739,6 @@ MEDIA Q
     width: 90%;
     height: 500px;
     margin: 40px auto;
-  }
-  .imagen-jugador img {
-    border-radius: 100px;
-    background: rgb(7, 7, 49);
-    display: block;
-    margin: 10px 0 10px 10px;
-    padding: 5px;
-  }
-  .imagen-jugador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 15px;
-    position: absolute;
-    bottom: -30px;
-    left: 5%;
-    width: 300px;
-  }
-  .image_lucas {
-    width: 50%;
-  }
-
-  .datos-lucas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   .recuadro-cancha{
@@ -839,7 +799,6 @@ MEDIA Q
 }
 @media (min-width: 1440px) {
   .principal-home {
-    position: relative;
     color: white;
     background-color: black;
     border-radius: 5px;
