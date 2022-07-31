@@ -31,7 +31,7 @@
   <link href="/css/style.css" rel="stylesheet" />
   <link href="/css/slide1.css" rel="stylesheet" />
   <link href="/css/slide2.css" rel="stylesheet" />
-  <!-- <link href="/css/jdSlider.css" rel="stylesheet" /> -->
+ <link href="/css/jdSlider.css" rel="stylesheet" />
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
 
@@ -40,7 +40,7 @@
 <body>
   <%- include('../header') %>
 
-  <!-- <div class="container-fluid p-0 bajar-slider">
+  <div class="container-fluid p-0 bajar-slider">
     <section class="jd-slider slideshow">
       <div class="slide-inner" id="slide">
         <ul class="slide-area">
@@ -67,7 +67,7 @@
       </a>
     </section>
 
-  </div> -->
+  </div>
 
   <main class="main-home">
     <section class="principal-home">
@@ -81,7 +81,7 @@
             <li class="home_info">Y a jugar!!!</li>
           </ol>
         
-        <% if(homep.length>1){ %>    
+        <% if(homep.length > 0 ){ %>    
 
           <div id='slide1' class='row1 imagen-jugador imagen-jugador-fondo'>
             <ul class='nav justify-content-center'>
@@ -94,7 +94,9 @@
                 </li>
                 <% }) %>
             </ul>
+
             <ol id='paginacion1' style='display:none' >
+
               <% homep.forEach (homep => { %>
               <li item1='<%= homep.id %>'>
                 <span class='fa fa-circle'></span>
@@ -128,21 +130,27 @@
       <div class="cancha-home">
         <div class="player_mobile2">
           <div class="recuadro-cancha">
-            <p class="titulito-home2">Si sos dueño de cancha podés:</p>
+            <p class="titulito-home1">Si sos dueño de cancha podés:</p>
             <ol>
               <li class="home_info"><a href="../register/registerOwner"> Registrar tu cancha</a></li>
               <li class="home_info">Ofrecer tus servicios</li>
               <li class="home_info">Crear torneos</li>
             </ol>
           </div>
-        <% if(homeo.length>1){ %>
-          
+        <% if(homeo.length > 0){ %>
             <div id='slide2' class='row1'>
             <ul class='nav justify-content-center'>
               <% homeo.forEach (homeo => { %>
                 <li>
+
                   <p class="titulito-home3"><%=homeo.nombre_del_lugar%></p>
                   <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
+
+                  <!-- <p class="titulito-home2"><%=homeo.nombre_del_lugar%></p>
+                  <br>
+                  <br>
+                  <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field1"> -->
+
                 </li>
                 <% }) %>
             </ul>
@@ -161,11 +169,10 @@
               <span class='fa fa-chevron-right'></span>
             </div>
           </div>
-
-        
-
         <% } else { %>
+
         <p class="titulito-home3"><%= homeo.nombre_del_lugar %> </p>
+
         <div class="imagen-cancha imagen-cancha-fondo">
           <img src="/img/equipos/club-personas-equipo.png" alt="imagen-cancha" class="image_field">
         </div>
@@ -228,7 +235,7 @@
 
   <%- include('../footer') %>
 
-  <!-- <script src="/js/script.js"></script> -->
+  <script src="/js/script.js"></script>
   <script src="/js/paginacion1.js"></script>
   <script src="/js/paginacion2.js"></script>
   <script src="/js/slide1.js"></script>

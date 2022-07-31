@@ -21,7 +21,7 @@ body {
 SLIDESHOW
 =============================================*/
 
-/* .slide-area li {
+.slide-area li {
   position: relative;
 }
 
@@ -388,7 +388,11 @@ display: none;
   .publicidades img {
     width: 170px;
   }
-
+.image_field1 {
+  width: 50%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 
 
@@ -585,9 +589,28 @@ display: none;
   background: #e0e0e0;
   
  }
+ .image_field1 {
+  width: 50%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 
 @media (min-width: 1024px) {
+
+  .imagen-jugador img {
+  border-radius: 100px;
+  background: rgb(7, 7, 49);
+  display: block;
+  margin: -2px 10px 0px 135px;
+  padding: 5px;
+  width: 40%;
+}
+img.image_field {
+  width: 65%;
+  border: solid black 4px;
+  margin: 35px 0px;
+}
   .prev {
     font-size: 33px !important;
   }
@@ -629,6 +652,7 @@ display: none;
     font-size: 20px;
   }
   .player_mobile2 {
+
     background-color: rgba(235, 235, 235, 0.25);
     display: flex;
     flex-direction: column;
@@ -640,6 +664,17 @@ display: none;
     padding-bottom: 20px;
     padding-top: 30px;
   }
+
+  /* background-color: rgba(235, 235, 235, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  height: 544px;
+  margin: 25px auto;
+} */
+
 
   .recuadro-cancha{
     background: none;
@@ -694,6 +729,11 @@ display: none;
   .image_field {
   width: 78%;
   margin-top: -66px;
+  border: solid black 4px;
+}
+.image_field1 {
+  width: 70%;
+  margin-top: -65px;
   border: solid black 4px;
 }
 }
@@ -757,18 +797,31 @@ display: none;
   }
   
   .player_mobile2 {
+
     right: -480px;
     width: 90%;
   }
+
+  /* right: -480px;
+  margin: 25px 40px;
+  width: 90%;
+  height: 633px;
+} */
+
   .image_field{
     width: 60%;
   }
+  .image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
   .titulo-publicidad{
     left:170px;
   }
   .imagen-jugador img {
-  margin-left: 100px;
-  width: 60%;
+  margin-left: 195px;
+  width: 40%;
 }
 .titulito-home {
   bottom: 160px;
@@ -779,14 +832,30 @@ display: none;
 .image_field {
   width: 50%;
 }
+.image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 @media (min-width: 1600px) {
   .image_field {
   width: 50%;
 }
+  .image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 .imagen-jugador img {
-  margin-left: 100px;
-  width: 60%;
+  margin-left: 203px;
+  width: 45%;
+}
+.player_mobile2 {
+  right: -480px;
+  margin: 25px 40px;
+  width: 90%;
+  height: 710px;
 }
 .titulito-home {
   bottom: 160px;
