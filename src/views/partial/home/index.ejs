@@ -29,6 +29,8 @@
   
 <!--CSS PROPIOS-->
   <link href="/css/style.css" rel="stylesheet" />
+  <link href="/css/slide1.css" rel="stylesheet" />
+  <link href="/css/slide2.css" rel="stylesheet" />
   <!-- <link href="/css/jdSlider.css" rel="stylesheet" /> -->
   <link href="/css/header.css" rel="stylesheet" />
   <link href="/css/footer.css" rel="stylesheet" />
@@ -79,31 +81,30 @@
             <li class="home_info">Y a jugar!!!</li>
           </ol>
         
-        <% if(homep.length>=1){ %>    
+        <% if(homep.length>1){ %>    
 
-          <div id='slide' class='row1 imagen-jugador imagen-jugador-fondo
-          '>
+          <div id='slide1' class='row1 imagen-jugador imagen-jugador-fondo'>
             <ul class='nav justify-content-center'>
               <% homep.forEach (homep => { %>
                 <li>
                   <img src='/img/jugadores/<%= homep.img_hp %>' alt='imagen-jugador' class='image_lucas'>
-                  <div class='datos-lucas textoSlide'>
+                  <div class='datos-lucas textoSlide1'>
                     <p class='titulito-home'><%= homep.nombre %> <%= homep.apellido %> </p>
                   </div>
                 </li>
                 <% }) %>
             </ul>
-            <ol id='paginacion' style='display:none' >
+            <ol id='paginacion1'>
               <% homep.forEach (homep => { %>
-              <li item='<%= homep.item %>'>
+              <li item1='<%= homep.id %>'>
                 <span class='fa fa-circle'></span>
               </li>
               <% }) %>
             </ol>
-            <div class='flechas' id='retroceder' style='display:none'>
+            <div class='flechas' id='retroceder1' style='display:none'>
               <span class='fa fa-chevron-left'></span>
             </div>
-            <div class='flechas' id='avanzar' style='display:none'>
+            <div class='flechas' id='avanzar1' style='display:none'>
               <span class='fa fa-chevron-right'></span>
             </div>
           </div>
@@ -134,27 +135,37 @@
               <li class="home_info">Crear torneos</li>
             </ol>
           </div>
-
-          <p class="titulito-home2">Club los Cedros </p>
-          <% if(homeo.length>=1){ %>
-          <div id="slide">
-            <ul>
+        <% if(homeo.length>1){ %>
+          
+            <div id='slide2' class='row1'>
+            <ul class='nav justify-content-center'>
               <% homeo.forEach (homeo => { %>
-              <li>
-                <div class="imagen-cancha imagen-cancha-fondo">
+                <li>
+                  <p class="titulito-home2"><%=homeo.nombre_del_lugar%></p>
                   <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
-                </div>
-                <!-- <div class="imagen-cancha imagen-cancha-fondo">
-                    <img src="/img/products/< homeo.img_hl %>" alt="imagen-cancha" class="image_field">
-                  </div> -->
+                </li>
+                <% }) %>
+            </ul>
+
+            <ol id='paginacion2' >
+              <% homeo.forEach (homeo => { %>
+              <li item2='<%= homeo.id %>'>
+                <span class='fa fa-circle'></span>
               </li>
               <% }) %>
-            </ul>
+            </ol>
+            <div class='flechas' id='retroceder2' style='display:none'>
+              <span class='fa fa-chevron-left'></span>
+            </div>
+            <div class='flechas' id='avanzar2' style='display:none'>
+              <span class='fa fa-chevron-right'></span>
+            </div>
           </div>
+
         
 
         <% } else { %>
-        <p class="titulito-home2"><%= homeo.nombre_del_lugar %> </p>
+        <p class="titulito-home"><%= homeo.nombre_del_lugar %> </p>
         <div class="imagen-cancha imagen-cancha-fondo">
           <img src="/img/equipos/club-personas-equipo.png" alt="imagen-cancha" class="image_field">
         </div>
@@ -218,8 +229,10 @@
   <%- include('../footer') %>
 
   <!-- <script src="/js/script.js"></script> -->
-  <script src="/js/paginacion.js"></script>
-  <script src="/js/slide.js"></script>
+  <script src="/js/paginacion1.js"></script>
+  <script src="/js/paginacion2.js"></script>
+  <script src="/js/slide1.js"></script>
+  <script src="/js/slide2.js"></script>
 </body>
 
 </html>

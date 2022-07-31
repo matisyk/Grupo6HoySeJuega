@@ -1,0 +1,121 @@
+#slide1{
+    position: relative;
+      margin: auto;
+      width:100%;
+      overflow: hidden;
+    padding-bottom: 20px;
+  }
+  
+  #slide1 ul{
+      position:relative;
+      left:0%;
+      margin:auto;
+      height:auto;
+      width:500%;
+      clear:both;
+      display: table;
+  }
+  
+  #slide1 ul li{
+      position: relative;
+      float:left;
+      width:25%;
+  }	
+  
+  #slide1 ul li img{
+      width:auto;
+    height: 150px;
+  }
+  
+  #slide1 #paginacion1{
+      width:100%;
+      margin:auto;
+      text-align: center;
+      z-index:1;
+  }
+  
+  #slide1 #paginacion1 li{
+      display:inline-block;
+      margin:0px 5px;
+      cursor:pointer;
+      opacity:.5;
+      color:white;
+      text-shadow:0px 0px 5px #333;
+  }	
+  
+  #slide1 #paginacion1 li:first-child{
+      opacity:1;
+  }
+  
+  #slide1 .flechas{
+      position:absolute;
+      font-size:2em;
+      color:rgb(255, 255, 255);
+      cursor:pointer;
+      z-index:2;
+  }
+  
+  #slide1 #retroceder1{
+      top:15%;
+      left:2%;
+  }
+  
+  #slide1 #avanzar1{
+      top:15%;
+      right:2%;
+  }
+  
+  #slide1 ul li .textoSlide{
+      width:100%;
+      text-align:center;
+      z-index:1;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0;
+  }
+  
+  #slide1 ul li .textoSlide h1{
+      background: rgba(0,0,0,.5);
+      padding:5px 0;
+  }
+  
+  #slide1 ul li .textoSlide h3{
+      background: rgba(0,0,0,.5);
+      padding-bottom:10px;
+  }
+  p{
+    margin: 0;
+  }
+  /*=============================================
+  MEDIA Q
+  =============================================*/
+  @media (min-width: 425px) {
+    #slide1 ul li img{
+      height: 180px;
+    }
+    .slide1-text {
+        position: absolute;
+        color: #fff;
+        width: 60%;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 85%;
+        text-shadow: 0px 0px 5px black;
+      }
+     }
+
+     @media (min-width: 768px) {
+
+        #slide1 #retroceder1{
+          top:24%;
+          left:9%;
+        }
+        #slide1 #avanzar1{
+          top: 24%;
+          right: 9%;
+        }
+        #slide1 ul li img{
+          margin: 0 auto;
+        }
+         }

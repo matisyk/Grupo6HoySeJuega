@@ -1,13 +1,13 @@
-console.log('LLEGUE A PAGINACION')
+console.log('LLEGUE A PAGINACION1')
 /*=============================================
 OBJETO CON LAS PROPIEDADES DEL SLIDE
 =============================================*/
 
 var p = {
 
-                    paginacion: document.querySelectorAll("#paginacion li"),
+                    paginacion1: document.querySelectorAll("#paginacion1 li"),
                     item: 0,
-                    cajaSlide: document.querySelector("#slide ul")
+                    cajaSlide: document.querySelector("#slide1 ul")
 
 }
 
@@ -18,17 +18,17 @@ OBJETO CON LOS MÉTODOS DEL SLIDE
 
 var m = {
 
-                    inicioSlide: function () {
+                    inicioSlide1: function () {
 
-                                        for (var i = 0; i < p.paginacion.length; i++) {
+                                        for (var i = 0; i < p.paginacion1.length; i++) {
 
-                                                            p.paginacion[i].addEventListener("click", m.paginacionSlide)
+                                                            p.paginacion1[i].addEventListener("click", m.paginacion1Slide1)
 
                                         }
 
                     },
 
-                    paginacionSlide: function (item) {
+                    paginacion1Slide1: function (item) {
 
 
                                         p.item = item.target.parentNode.getAttribute("item") - 1;
@@ -37,9 +37,9 @@ var m = {
 
                     },
 
-                    movimientoSlide: function (item) {
+                    movimientoSlide1: function (item) {
 
-                                        p.cajaSlide.style.left = item * -100 + "%";
+                                        p.cajaSlide1.style.left = item * -100 + "%";
                                         console.log(item * -100 + "%");
 
 
@@ -47,4 +47,4 @@ var m = {
 
 }
 
-m.inicioSlide();
+m.inicioSlide1();

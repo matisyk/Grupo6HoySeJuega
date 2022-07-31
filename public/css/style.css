@@ -74,11 +74,16 @@ MAIN
   font-size: 30px;
 }
 .titulito-home2 {
-  font-family: "Bebas Neue", cursive;
-  font-size: 30px;
-  width: 80%;
-  margin: auto;
-}
+    font-family: "Bebas Neue", cursive;
+    font-size: 30px;
+    background-color: #cac1c15c;
+    padding: 5px 10px;
+    color: black;
+    border-radius: 20px;
+    width: fit-content;
+    margin: auto;
+  }
+
 
 .main-home ol {
   padding-left: 0;
@@ -358,118 +363,17 @@ display: none;
 }
 
 
-#slide{
-  position: relative;
-	margin: auto;
-	width:100%;
-	overflow: hidden;
-  padding-bottom: 20px;
-}
-
-#slide ul{
-	position:relative;
-	left:0%;
-	margin:auto;
-	height:auto;
-	width:500%;
-	clear:both;
-	display: table;
-}
-
-#slide ul li{
-	position: relative;
-	float:left;
-	width:25%;
-}	
-
-#slide ul li img{
-	width:auto;
-  height: 150px;
-}
-
-#slide #paginacion{
-	width:100%;
-	margin:auto;
-	text-align: center;
-	z-index:1;
-}
-
-#slide #paginacion li{
-	display:inline-block;
-	margin:0px 5px;
-	cursor:pointer;
-	opacity:.5;
-	color:white;
-	text-shadow:0px 0px 5px #333;
-}	
-
-#slide #paginacion li:first-child{
-	opacity:1;
-}
-
-#slide .flechas{
-	position:absolute;
-	font-size:2em;
-	color:rgb(255, 255, 255);
-	cursor:pointer;
-	z-index:2;
-}
-
-#slide #retroceder{
-	top:15%;
-	left:2%;
-}
-
-#slide #avanzar{
-	top:15%;
-	right:2%;
-}
-
-#slide ul li .textoSlide{
-	width:100%;
-	text-align:center;
-	z-index:1;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 0;
-}
-
-#slide ul li .textoSlide h1{
-	background: rgba(0,0,0,.5);
-	padding:5px 0;
-}
-
-#slide ul li .textoSlide h3{
-	background: rgba(0,0,0,.5);
-	padding-bottom:10px;
-}
-p{
-  margin: 0;
-}
 /*=============================================
-MEDIA Q
-=============================================*/
-@media (min-width: 425px) {
-  #slide ul li img{
-    height: 180px;
-  }
-
+  MEDIA Q
+  =============================================*/
+  @media (min-width: 425px) {
   .prev {
     font-size: 13px !important;
   }
   .next {
     font-size: 13px !important;
   }
-  .slide-text {
-    position: absolute;
-    color: #fff;
-    width: 60%;
-    text-align: center;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 85%;
-    text-shadow: 0px 0px 5px black;
-  }
+
   .publicidades {
     margin-left: 40px;
   }
@@ -478,19 +382,10 @@ MEDIA Q
   }
 
 }
-@media (min-width: 768px) {
 
-  #slide #retroceder{
-    top:24%;
-    left:9%;
-  }
-  #slide #avanzar{
-    top: 24%;
-    right: 9%;
-  }
-  #slide ul li img{
-    margin: 0 auto;
-  }
+
+
+@media (min-width: 768px) {
   .datos-lucas {
     font-family: "Kalam", cursive;
     margin: 15px 5px;
@@ -521,8 +416,6 @@ MEDIA Q
   .recuadro-cancha{
     background-color: rgba(235, 235, 235, 0.25);;
     padding: 21px;
-    margin-bottom: 25px;
-    padding-bottom: 87%;
   }
  
   img.image_field {
