@@ -380,7 +380,11 @@ display: none;
   .publicidades img {
     width: 170px;
   }
-
+.image_field1 {
+  width: 50%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 
 
@@ -580,6 +584,11 @@ display: none;
   background: #e0e0e0;
   
  }
+ .image_field1 {
+  width: 50%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 
 @media (min-width: 1024px) {
@@ -703,6 +712,11 @@ img.image_field {
   margin-top: -66px;
   border: solid black 4px;
 }
+.image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 @media (min-width: 1440px) {
   .principal-home {
@@ -772,6 +786,11 @@ img.image_field {
   .image_field{
     width: 60%;
   }
+  .image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
   .titulo-publicidad{
     left:170px;
   }
@@ -788,10 +807,20 @@ img.image_field {
 .image_field {
   width: 50%;
 }
+.image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
+}
 }
 @media (min-width: 1600px) {
   .image_field {
   width: 50%;
+}
+  .image_field1 {
+  width: 70%;
+  margin-top: -65px;
+  border: solid black 4px;
 }
 .imagen-jugador img {
   margin-left: 203px;

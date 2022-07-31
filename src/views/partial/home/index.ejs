@@ -141,12 +141,14 @@
               <% homeo.forEach (homeo => { %>
                 <li>
                   <p class="titulito-home2"><%=homeo.nombre_del_lugar%></p>
-                  <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field">
+                  <br>
+                  <br>
+                  <img src="/img/products/<%= homeo.img_ho %>" alt="imagen-cancha" class="image_field1">
                 </li>
                 <% }) %>
             </ul>
 
-            <ol id='paginacion2' >
+            <ol id='paginacion2' style='display:none'>
               <% homeo.forEach (homeo => { %>
               <li item2='<%= homeo.id %>'>
                 <span class='fa fa-circle'></span>
