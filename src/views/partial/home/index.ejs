@@ -81,7 +81,8 @@
         
         <% if(homep.length>=1){ %>    
 
-          <div id='slide' class='row1'>
+          <div id='slide' class='row1 imagen-jugador imagen-jugador-fondo
+          '>
             <ul class='nav justify-content-center'>
               <% homep.forEach (homep => { %>
                 <li>
@@ -92,9 +93,9 @@
                 </li>
                 <% }) %>
             </ul>
-            <ol id='paginacion' >
+            <ol id='paginacion' style='display:none' >
               <% homep.forEach (homep => { %>
-              <li item=''>
+              <li item='<%= homep.item %>'>
                 <span class='fa fa-circle'></span>
               </li>
               <% }) %>

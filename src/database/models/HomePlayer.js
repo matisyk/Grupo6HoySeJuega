@@ -19,6 +19,9 @@ module.exports = (sequelize, dataTypes) => {
     img_hp: {
       type: dataTypes.STRING(100),
     },
+    item: {
+      type: dataTypes.INTEGER,
+    },
     users_players_id: dataTypes.BIGINT(10),
   };
   let config = {
