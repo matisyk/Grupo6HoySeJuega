@@ -818,6 +818,11 @@ MEDIA Q
   right: -255px;
 }
 }
+  @media (min-width: 1550px){
+.image_field {
+  width: 50%;
+}
+}
 @media (min-width: 1600px) {
   .image_field {
   width: 50%;
