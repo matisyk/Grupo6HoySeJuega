@@ -41,6 +41,7 @@ const validations = [
   body("localidad").notEmpty().withMessage('Tienes que escribir una localidad'),
   body("municipio").notEmpty().withMessage('Tienes que escribir un municipio'),
   body("calle").notEmpty().withMessage('Tienes que escribir una calle'),
+  body("numeracion").notEmpty().withMessage('Tienes que escribir una numeracion')
 ];
 
 router.get('/', productsController.register);
