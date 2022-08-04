@@ -40,7 +40,7 @@
             <div class="horizontal">
             <div>
               <label for="nombre">Nombre: </label>
-              <input id="nombre" name="nombre"
+              <input id="nombre" name="nombre" autocapitalize="none"
                 class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="nombre"
                 value="<%= locals.oldData ? oldData.nombre : null %>">
               <% if (locals.errors && errors.nombre) { %>
