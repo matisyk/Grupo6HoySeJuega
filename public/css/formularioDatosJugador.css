@@ -50,6 +50,10 @@ h1 {
   display: block;
 }
 
+input{
+  font-family: 'Helvetica', Arial, Lucida Grande, sans-serif !important;
+}
+
 .div1 {
   padding: 20px;
   background: #ffffff;
