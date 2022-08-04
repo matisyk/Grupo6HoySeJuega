@@ -151,7 +151,13 @@
           <br>
           <div>
             <label for="numeracion">Numeración:</label>
-            <input type="number" class="form-control" id="numeracion" name="numeracion"> 
+            <input type="number" class="form-control <%= locals.errors && errors.numeracion ? 'is-invalid' : null %>" id="numeracion" name="numeracion"
+            value="<%= locals.oldData ? oldData.numeracion : null %>"> 
+            <% if (locals.errors && errors.numeracion) { %>
+              <div class="text-danger msg">
+                <%= errors.numeracion.msg %>
+              </div>
+            <% } %>
           </div>
           </div>
           <br>
