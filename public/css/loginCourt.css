@@ -77,6 +77,10 @@ body {
  fill: #ffeba7;
 }
 
+input{
+  font-family: 'Helvetica', Arial, Lucida Grande, sans-serif !important;
+}
+
 .input-field {
  background: none;
  border: none;
