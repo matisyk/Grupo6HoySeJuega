@@ -9,6 +9,5 @@ window.addEventListener('load', function(){
         
         this.classList.toggle("bi-eye");
     });
-    console.log("prueba")
 
 })
