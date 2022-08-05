@@ -1,9 +1,10 @@
 const express = require('express')
 const router = express.Router();
 const noLogueadoOwner = require('../middlewares/noLogueadoOwner');
-const logueadoPlayer = require('../middlewares/logueadoPlayer')
-const multer = require('multer')
-const path = require('path')
+const logueadoPlayer = require('../middlewares/logueadoPlayer');
+const multer = require('multer');
+const { body } = require('express-validator');
+const path = require('path');
 
 
 // ************ REQUERIMIENTO DE CONTROLADORES  ************
@@ -35,6 +36,17 @@ const upload = multer({
   storage: storage
 })
 
+//************ VALIDACIONES ************
+
+const validationsCancha = [
+  body("identificacion").notEmpty().withMessage('Tienes que escribir un nombre de cancha'),
+  body("deporte").notEmpty().withMessage('Tienes que seleccionar una opcion'),
+  body("capacidad").notEmpty().withMessage('Tienes que escribir una capacidad'),
+  body("tipocancha").notEmpty().withMessage('Tienes que seleccionar una opcion'),
+  body("image").notEmpty().withMessage('Tienes que seleccionar una imagen'),
+  body("valor").notEmpty().withMessage('Tienes que escribir un valor')
+];
+
 //************ RUTAS ************
 
 // LOGIN
@@ -57,7 +69,7 @@ router.post('/vistaCancha', userOwnerController.vistaCancha);
 // CANCHAS
 
 router.get('/vistaCancha/:id/registrarCancha/:id',  productsControllerC.create);
-router.post('/vistaCancha/:id/registrarCancha/',  upload.any("img-cancha"), productsControllerC.store);
+router.post('/vistaCancha/:id/registrarCancha/',  upload.any("img-cancha"), validationsCancha ,productsControllerC.store);
 router.get('/vistaCancha/:id/editCourt/:id/',  productsControllerC.edit);
 router.patch('/vistaCancha/:id/editCourt/:id/', upload.any(),  productsControllerC.update);
 router.delete('/vistaCancha/:id/delete/court/:id',  productsControllerC.destroy);

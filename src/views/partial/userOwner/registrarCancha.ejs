@@ -25,47 +25,72 @@
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label>Identificación de la cancha:</label>
-                <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required>
-            </div>
-            <div style="display:none">
-                <select name="category">
-                    <option selected="selected" value="cancha">cancha</option>
-            </select>
+                <input class="<%= locals.errors && errors.identificacion ? 'is-invalid' : null %>" type="text" placeholder="Ej: Cancha 1" name="identificacion" value="<%= locals.oldData ? oldData.identificacion : null %>">
+                <% if (locals.errors && errors.identificacion) { %>
+                    <div class="text-danger msg">
+                      <%= errors.identificacion.msg %>
+                    </div>
+                <% } %>
             </div>
             <div class="item-tarjeta">
                 <label>Deporte:</label>
-                <select class="form-control" id="deporte" name="deporte">
+                <select class="form-control <%= locals.errors && errors.deporte ? 'is-invalid' : null %>" id="deporte" name="deporte">
                     <option value="" disabled selected> Elegir deporte</option>
                     <% deportes.forEach(deportes => { %>
                     <option value="<%= deportes.id %>"><%= deportes.deporte %></option>
                     <% }); %>
                 </select>
+                <% if (locals.errors && errors.deporte) { %>
+                    <div class="text-danger msg">
+                      <%= errors.deporte.msg %>
+                    </div>
+                <% } %>
             </div>
 
 
             <div class="item-tarjeta">
                 <label>Cantidad de jugadores:</label>
-                <input type="number" name="capacidad" placeholder="Ej: 10">
+                <input type="number" name="capacidad" placeholder="Ej: 10" class="<%= locals.errors && errors.capacidad ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.capacidad : null %>">
+                <% if (locals.errors && errors.capacidad) { %>
+                    <div class="text-danger msg">
+                      <%= errors.capacidad.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="item-tarjeta">
                 <label>Tipo de cancha</label>
-                <select class="form-control" id="deporte" name="tipocancha">
+                <select class="form-control <%= locals.errors && errors.tipocancha ? 'is-invalid' : null %>" id="deporte" name="tipocancha">
                     <option value="" disabled selected> Elegir material de la cancha</option>
                     <% tiposCancha.forEach(tiposCancha => { %>
                     <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
                     <% }); %>
                 </select>
+                <% if (locals.errors && errors.tipocancha) { %>
+                    <div class="text-danger msg">
+                      <%= errors.tipocancha.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="item-tarjeta">
                 <label>Cargar imagen</label>
-                <input class="foto" type="file" name="image" accept="all"  multiple>
+                <input class="foto <%= locals.errors && errors.image ? 'is-invalid' : null %>" type="file" name="image" accept="all"  multiple value="<%= locals.oldData ? oldData.image : null %>">
+                <% if (locals.errors && errors.image) { %>
+                    <div class="text-danger msg">
+                      <%= errors.image.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="item-tarjeta">
                 <label>Precio:</label>
-                <input type="number" name="valor" placeholder="Valor en pesos argentinos ">
+                <input type="number" name="valor" placeholder="Valor en pesos argentinos " class="<%= locals.errors && errors.valor ? 'is-invalid' : null %>" value="<%= locals.oldData ? oldData.valor : null %>">
+                <% if (locals.errors && errors.valor) { %>
+                    <div class="text-danger msg">
+                      <%= errors.valor.msg %>
+                    </div>
+                <% } %>
             </div>
 
             <div class="item-tarjeta">
