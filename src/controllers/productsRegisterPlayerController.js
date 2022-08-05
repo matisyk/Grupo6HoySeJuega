@@ -72,18 +72,30 @@ const controller = {
 	// Create -  Metodo de creacion 
 	store: (req, res) => {
 
-		const resultValidation = validationResult(req);
-		if (resultValidation.errors.length > 0) {
-			return res.render("partial/register/formularioDatosJugador", {
-				errors: resultValidation.mapped(),
-				oldData: req.body,
-				valoraciones,
-				deportes,
-				zonasdejuego,
-				dias,
-				horarios
+		let valoraciones = AutoValoracion.findAll();
+		let deportes = DeportesPlayers.findAll();
+		let zonasdejuego = ZonasDeJuego.findAll();
+		let horarios = HoraPlayer.findAll();
+		let dias = DiaPlayer.findAll()
+
+		Promise
+			.all([valoraciones, deportes, zonasdejuego, horarios, dias])
+			.then(([valoraciones, deportes, zonasdejuego, horarios, dias]) => {
+
+				const resultValidation = validationResult(req);
+				if (resultValidation.errors.length > 0) {
+					return res.render("partial/register/formularioDatosJugador", {
+						errors: resultValidation.mapped(),
+						oldData: req.body,
+						valoraciones,
+						deportes,
+						zonasdejuego,
+						dias,
+						horarios
 			});
 		}
+			})
+
 		let image;
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename;

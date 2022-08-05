@@ -140,7 +140,7 @@
               <div class="entre-divs">
                 <label for="autoValoracion">Auto valoración:</label>
                 <br>
-                <select class="form-control" name="autoValoracion" id="autoValoracion" required>
+                <select class="form-control" name="autoValoracion" id="autoValoracion">
                   <option value="" disabled selected> Elegir opción</option>
                   <%valoraciones.forEach(valoraciones => { %>
                   <option value="<%=valoraciones.id%>"><%=valoraciones.tipo%></option>
@@ -155,7 +155,7 @@
               <div class="entre-divs">
                 <label for="deporte">Deporte que juego:</label>
                 <br>
-                <select class="form-control" id="deporte1" name="deporte1" required>
+                <select class="form-control" id="deporte1" name="deporte1">
                   <option value="" disabled selected> Elegir</option>
                   <% deportes.forEach(deporte => { %>
                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>

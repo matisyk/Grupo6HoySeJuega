@@ -37,8 +37,11 @@ const validations = [
   body("email").notEmpty().withMessage('Tienes que escribir un email'),
   body("password").notEmpty().withMessage('Tienes que escribir una contraseña'),
   body("edad").notEmpty().withMessage('Tienes que escribir una edad'),
-  // body("telefono").notEmpty().withMessage('Tienes que escribir un telefono'),
-  body("categoria").notEmpty().withMessage('Tienes que escribir una posicion')
+  body("telefono").notEmpty().withMessage('Tienes que escribir un telefono'),
+  body("categoria").notEmpty().withMessage('Tienes que escribir una posicion'),
+  body("autoValoracion").notEmpty().withMessage('Tienes que seleccionar una opcion'),
+  body("deporte1").notEmpty().withMessage('Tienes que seleccionar una opcion'),
+  body("deporte2").notEmpty().withMessage('Tienes que seleccionar una opcion')
 ];
 
 
