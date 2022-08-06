@@ -127,7 +127,7 @@ const userOwnerController = {
       include: ['ImagenCancha']
     })
     let escuelitas = Escuelita.findAll( {
-      include: ['deporteE', 'genero', "profesor", "diaYhora", "cancha"],
+      include: ['deporteE', 'genero', "profesor", "diaYhora"],
         where: {
           users_owners_id: userOwnerID
       }

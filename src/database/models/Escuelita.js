@@ -25,7 +25,6 @@ module.exports = (sequelize, dataTypes) => {
     },
     genero_id: dataTypes.BIGINT(10),
     deportes_players_id: dataTypes.BIGINT(10),
-    canchas_id: dataTypes.BIGINT(10),
     users_owners_id: dataTypes.BIGINT(10),
   };
   let config = {
@@ -60,10 +59,6 @@ module.exports = (sequelize, dataTypes) => {
         as: "diaYhora",
        foreignKey: "id"
       })
-    Escuelita.belongsTo(models.Cancha, {
-      as: "cancha",
-      foreignKey: "canchas_id"
-    })
     Escuelita.belongsTo(models.Profesor, {
       as: "profesor",
       foreignKey: "id"

@@ -46,22 +46,16 @@ const controller = {
 		let ownerID = req.params.id
 		let deportes = Deportes.findAll();
 		let genero = Genero.findAll();
-		let canchas = Cancha.findAll({
-			where: {
-				users_owners_id: ownerID
-			}
-		});
 		let dias = DiaOwner.findAll();
 		let horarios = HoraOwner.findAll();
 
 		Promise
-			.all([deportes, genero, canchas, dias, horarios])
-			.then(([deportes, genero, canchas, dias, horarios]) => {
+			.all([deportes, genero, dias, horarios])
+			.then(([deportes, genero, dias, horarios]) => {
 
 				res.render("partial/userOwner/registrarEscuelita", {
 					deportes,
 					genero,
-					canchas,
 					dias,
 					horarios
 				})
@@ -87,7 +81,6 @@ const controller = {
 				valor: req.body.valor,
 				genero_id: req.body.genero,
 				deportes_players_id: req.body.deporte,
-				canchas_id: req.body.cancha,
 				categoria: req.body.categoria,
 				img_e: image,
 				alumnos: req.body.alumnos,
@@ -119,29 +112,23 @@ const controller = {
     console.log("🚀 ~ file: productsSchoolController.js ~ line 119 ~ userID", userID)
 		let escuelitaID = req.params.id
 		let escuelitas = Escuelita.findByPk(escuelitaID, {
-			include: ['deporteE', 'genero', "profesor", "diaYhora", "cancha"],
+			include: ['deporteE', 'genero', "profesor", "diaYhora"],
 			 where: {
 			 	users_owners_id: userID
 			 },
 		})
 		let deportes = Deportes.findAll();
-		let canchas = Cancha.findAll({
-			where: {
-				users_owners_id: userID
-			}
-		});
 		let genero = Genero.findAll();
 		let profesor = Profesor.findAll();
 		let dias = DiaOwner.findAll();
 		let horarios = HoraOwner.findAll();
 
 		Promise
-			.all([escuelitas, deportes, canchas, genero, profesor, dias, horarios])
-			.then(([escuelitas, deportes, canchas, genero, profesor, dias, horarios]) => {
+			.all([escuelitas, deportes, genero, profesor, dias, horarios])
+			.then(([escuelitas, deportes, genero, profesor, dias, horarios]) => {
 
 
 				res.render("partial/userOwner/editarEscuelita", {
-					canchas,
 					deportes,
 					escuelitas,
 					genero,
@@ -166,7 +153,6 @@ const controller = {
 				valor: req.body.valor,
 				genero_id: req.body.genero,
 				deportes_players_id: req.body.deporte,
-				canchas_id: req.body.cancha,
 				categoria: req.body.categoria,
 				img_e: image,
 				alumnos: req.body.alumnos,
