@@ -115,13 +115,21 @@ const controller = {
 
 	// Update - Form to edit
 	edit: (req, res) => {
-
+		let userID = req.session.userOwnerLogged.id
+    console.log("🚀 ~ file: productsSchoolController.js ~ line 119 ~ userID", userID)
 		let escuelitaID = req.params.id
 		let escuelitas = Escuelita.findByPk(escuelitaID, {
 			include: ['deporteE', 'genero', "profesor", "diaYhora", "cancha"],
+			 where: {
+			 	users_owners_id: userID
+			 },
 		})
 		let deportes = Deportes.findAll();
-		let canchas = Cancha.findAll();
+		let canchas = Cancha.findAll({
+			where: {
+				users_owners_id: userID
+			}
+		});
 		let genero = Genero.findAll();
 		let profesor = Profesor.findAll();
 		let dias = DiaOwner.findAll();
@@ -130,6 +138,7 @@ const controller = {
 		Promise
 			.all([escuelitas, deportes, canchas, genero, profesor, dias, horarios])
 			.then(([escuelitas, deportes, canchas, genero, profesor, dias, horarios]) => {
+
 
 				res.render("partial/userOwner/editarEscuelita", {
 					canchas,
@@ -154,7 +163,7 @@ const controller = {
 		}
 		Escuelita
 			.update({
-			valor: req.body.valor,
+				valor: req.body.valor,
 				genero_id: req.body.genero,
 				deportes_players_id: req.body.deporte,
 				canchas_id: req.body.cancha,
@@ -168,34 +177,36 @@ const controller = {
 			})
 		DiaYhora
 			.update({
-			dias_id: req.body.dia,
-			horas_id: req.body.hora
-		}, {
-			where: {
-				id: req.params.id
-			}
-		})
+				dias_id: req.body.dia,
+				horas_id: req.body.hora
+			}, {
+				where: {
+					id: req.params.id
+				}
+			})
 		Profesor
 			.update({
-			nombre: req.body.nprofesor,
-			apellido: req.body.aprofesor,
+				nombre: req.body.nprofesor,
+				apellido: req.body.aprofesor,
 			}, {
 				where: {
 					id: req.params.id
 				}
 			})
 			.then(() => {
-			return res.redirect("/userOwner/update")
-		})
+				return res.redirect("/userOwner/update")
+			})
 
 	},
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
 		let escuelitaID = req.params.id
-		
+
 		Escuelita.destroy({
-			where: { id: escuelitaID },
+			where: {
+				id: escuelitaID
+			},
 			force: true
 		}).then(() => {
 			return res.redirect("/userOwner/update")

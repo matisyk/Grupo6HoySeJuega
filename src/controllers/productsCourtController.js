@@ -46,8 +46,8 @@ const controller = {
 		Promise
 			.all([deportes, tiposCancha])
 			.then(([deportes, tiposCancha]) => {
-    
-   
+
+
 
 				res.render("partial/userOwner/registrarCancha", {
 					deportes,
@@ -70,15 +70,15 @@ const controller = {
 				const resultValidation = validationResult(req);
 				if (resultValidation.errors.length > 0) {
 					return res.render("partial/userOwner/registrarEscuelita", {
-					errors: resultValidation.mapped(),
-					oldData: req.body,
-					deportes,
-					tiposCancha
-			});
-		}
+						errors: resultValidation.mapped(),
+						oldData: req.body,
+						deportes,
+						tiposCancha
+					});
+				}
 			})
 
-		let image ;
+		let image;
 		if (req.files[0] != undefined) {
 			image = req.files[0].filename;
 		} else {
@@ -144,12 +144,12 @@ const controller = {
 
 		let canchaID = req.params.id
 		let image = req.body.image
-if (req.files[0] != undefined) {
-	image = req.files[0].filename;
-  
-} else {
-	image = canchaID.img;
-}
+		if (req.files[0] != undefined) {
+			image = req.files[0].filename;
+
+		} else {
+			image = canchaID.img;
+		}
 
 		Cancha
 			.update({
@@ -159,8 +159,12 @@ if (req.files[0] != undefined) {
 				deportes_players_id: req.body.deporte,
 				tipo_de_cancha_id: req.body.tipocancha,
 				img_c: image,
-        
-			}, { where: { id: req.params.id } })
+
+			}, {
+				where: {
+					id: req.params.id
+				}
+			})
 			.then(() => {
 				return res.redirect("/userOwner/update")
 			})
@@ -171,19 +175,21 @@ if (req.files[0] != undefined) {
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
 		let canchaID = req.params.id
-		
+
 		Cancha.destroy({
-			where: { id: canchaID },
-			force: true
+				where: {
+					id: canchaID
+				},
+				force: true
 			})
 
 			.then(() => {
 				return res.redirect("/userOwner/update")
 			})
-		 .catch(error => res.send(error))
+			.catch(error => res.send(error))
 
 
-	
+
 
 	}
 };
