@@ -109,7 +109,6 @@ const controller = {
 	// Update - Form to edit
 	edit: (req, res) => {
 		let userID = req.session.userOwnerLogged.id
-    console.log("🚀 ~ file: productsSchoolController.js ~ line 119 ~ userID", userID)
 		let escuelitaID = req.params.id
 		let escuelitas = Escuelita.findByPk(escuelitaID, {
 			include: ['deporteE', 'genero', "profesor", "diaYhora"],
