@@ -77,19 +77,6 @@ INSERT INTO `canchas` (`id`, `identificacion`, `capacidad`, `valor`, `users_owne
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `canchas_horarios`
---
-
-DROP TABLE IF EXISTS `canchas_horarios`;
-CREATE TABLE `canchas_horarios` (
-  `canchas_id` int(11) NOT NULL,
-  `horas_owners_id` int(11) NOT NULL,
-  `dias_owners_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `categorias`
 --
 
@@ -271,7 +258,6 @@ CREATE TABLE `escuelitas` (
   `id` int(11) NOT NULL,
   `genero_id` int(11) NOT NULL,
   `valor` int(11) NOT NULL,
-  `canchas_id` int(11) NOT NULL,
   `users_owners_id` int(11) NOT NULL,
   `img_e` varchar(200) NOT NULL,
   `deportes_players_id` int(11) NOT NULL,
@@ -283,23 +269,10 @@ CREATE TABLE `escuelitas` (
 -- Volcado de datos para la tabla `escuelitas`
 --
 
-INSERT INTO `escuelitas` (`id`, `genero_id`, `valor`, `canchas_id`, `users_owners_id`, `img_e`, `deportes_players_id`, `categoria`, `alumnos`) VALUES
-(1, 1, 1500, 1, 1, 'image-1659308685778-205480734.jpg', 1, 2000, 20),
-(2, 1, 2000, 3, 1, 'image-1659308861429-14481913.png', 1, 1995, 50),
-(3, 3, 3000, 4, 3, 'image-1659309543491-725578043.jpg', 4, 2000, 6);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `escuelitas_horarios`
---
-
-DROP TABLE IF EXISTS `escuelitas_horarios`;
-CREATE TABLE `escuelitas_horarios` (
-  `escuelitas_id` int(11) NOT NULL,
-  `horas_owners_id` int(11) NOT NULL,
-  `dias_owners_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+INSERT INTO `escuelitas` (`id`, `genero_id`, `valor`, `users_owners_id`, `img_e`, `deportes_players_id`, `categoria`, `alumnos`) VALUES
+(1, 1, 1500, 1, 'image-1659308685778-205480734.jpg', 1, 2000, 20),
+(2, 1, 2000, 1, 'image-1659308861429-14481913.png', 1, 1995, 50),
+(3, 3, 3000, 3, 'image-1659309543491-725578043.jpg', 4, 2000, 6);
 
 -- --------------------------------------------------------
 
@@ -800,15 +773,6 @@ ALTER TABLE `canchas`
   ADD KEY `fk_canchas_deportes_players1_idx` (`deportes_players_id`);
 
 --
--- Indices de la tabla `canchas_horarios`
---
-ALTER TABLE `canchas_horarios`
-  ADD PRIMARY KEY (`canchas_id`,`horas_owners_id`,`dias_owners_id`),
-  ADD KEY `fk_canchas_has_horas_owners_horas_owners1_idx` (`horas_owners_id`),
-  ADD KEY `fk_canchas_has_horas_owners_canchas1_idx` (`canchas_id`),
-  ADD KEY `fk_canchas_has_horas_owners_dias_owners1_idx` (`dias_owners_id`);
-
---
 -- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
@@ -879,15 +843,6 @@ ALTER TABLE `escuelitas`
   ADD KEY `fk_escuelitas_canchas1_idx` (`canchas_id`),
   ADD KEY `fk_escuelitas_users_owners1_idx` (`users_owners_id`),
   ADD KEY `fk_escuelitas_deportes_players1_idx` (`deportes_players_id`);
-
---
--- Indices de la tabla `escuelitas_horarios`
---
-ALTER TABLE `escuelitas_horarios`
-  ADD PRIMARY KEY (`escuelitas_id`,`horas_owners_id`,`dias_owners_id`),
-  ADD KEY `fk_escuelitas_has_horas_owners_horas_owners1_idx` (`horas_owners_id`),
-  ADD KEY `fk_escuelitas_has_horas_owners_escuelitas1_idx` (`escuelitas_id`),
-  ADD KEY `fk_escuelitas_has_horas_owners_dias_owners1_idx` (`dias_owners_id`);
 
 --
 -- Indices de la tabla `genero`
