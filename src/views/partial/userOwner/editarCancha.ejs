@@ -33,7 +33,7 @@
                     <select class="form-control" id="deporte" name="deporte">
                         <% deportes.forEach(deporte => { %>
                         <option value="<%= deporte.id %>"
-                            <% if (canchas.deporte.id == canchas.id) { %><%= 'selected'  %><% }; %>><%= deporte.deporte %>
+                            <% if (canchas.deporte.id == deporte.id) { %><%= 'selected'  %><% }; %>><%= deporte.deporte %>
                             </option>
                         <% }); %>
                     </select>
@@ -50,7 +50,7 @@
                     <select class="form-control" id="deporte" name="tipocancha">
                         <% tiposCancha.forEach(tiposCancha => { %>
                         <option value="<%= tiposCancha.id %>"
-                            <% if (canchas.tipoDeCancha.id == canchas.id) { %><%= 'selected'  %><% }; %>><%= tiposCancha.material %>
+                            <% if (canchas.tipoDeCancha.id == tiposCancha.id) { %><%= 'selected'  %><% }; %>><%= tiposCancha.material %>
                             </option>
                         <% }); %>
                     </select>

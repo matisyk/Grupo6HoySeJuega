@@ -1,3 +1,4 @@
+-- INICIO
 -- phpMyAdmin SQL Dump
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
@@ -838,9 +839,8 @@ ALTER TABLE `dias_y_horas_torneos`
 -- Indices de la tabla `escuelitas`
 --
 ALTER TABLE `escuelitas`
-  ADD PRIMARY KEY (`id`,`genero_id`,`canchas_id`,`users_owners_id`,`deportes_players_id`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `fk_escuelitas_genero1_idx` (`genero_id`),
-  ADD KEY `fk_escuelitas_canchas1_idx` (`canchas_id`),
   ADD KEY `fk_escuelitas_users_owners1_idx` (`users_owners_id`),
   ADD KEY `fk_escuelitas_deportes_players1_idx` (`deportes_players_id`);
 
@@ -909,7 +909,7 @@ ALTER TABLE `medios_de_pago`
 -- Indices de la tabla `profesor`
 --
 ALTER TABLE `profesor`
-  ADD PRIMARY KEY (`id`,`users_owners_id`,`escuelitas_id`),
+  ADD PRIMARY KEY (`id`),
   ADD KEY `fk_profesor_users_owners1_idx` (`users_owners_id`),
   ADD KEY `fk_profesor_escuelitas1_idx` (`escuelitas_id`);
 
@@ -1171,14 +1171,6 @@ ALTER TABLE `canchas`
   ADD CONSTRAINT `fk_canchas_users_owners1` FOREIGN KEY (`users_owners_id`) REFERENCES `users_owners` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Filtros para la tabla `canchas_horarios`
---
-ALTER TABLE `canchas_horarios`
-  ADD CONSTRAINT `fk_canchas_has_horas_owners_canchas1` FOREIGN KEY (`canchas_id`) REFERENCES `canchas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_canchas_has_horas_owners_dias_owners1` FOREIGN KEY (`dias_owners_id`) REFERENCES `dias_owners` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_canchas_has_horas_owners_horas_owners1` FOREIGN KEY (`horas_owners_id`) REFERENCES `horas_owners` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
 -- Filtros para la tabla `categorias`
 --
 ALTER TABLE `categorias`
@@ -1226,18 +1218,9 @@ ALTER TABLE `dias_y_horas_torneos`
 -- Filtros para la tabla `escuelitas`
 --
 ALTER TABLE `escuelitas`
-  ADD CONSTRAINT `fk_escuelitas_canchas1` FOREIGN KEY (`canchas_id`) REFERENCES `canchas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_escuelitas_deportes_players1` FOREIGN KEY (`deportes_players_id`) REFERENCES `deportes_players` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_escuelitas_genero1` FOREIGN KEY (`genero_id`) REFERENCES `genero` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_escuelitas_users_owners1` FOREIGN KEY (`users_owners_id`) REFERENCES `users_owners` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
-
---
--- Filtros para la tabla `escuelitas_horarios`
---
-ALTER TABLE `escuelitas_horarios`
-  ADD CONSTRAINT `fk_escuelitas_has_horas_owners_dias_owners1` FOREIGN KEY (`dias_owners_id`) REFERENCES `dias_owners` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_escuelitas_has_horas_owners_escuelitas1` FOREIGN KEY (`escuelitas_id`) REFERENCES `escuelitas` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_escuelitas_has_horas_owners_horas_owners1` FOREIGN KEY (`horas_owners_id`) REFERENCES `horas_owners` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `home_owners`
@@ -1334,3 +1317,5 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
+/* FIN */

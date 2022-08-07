@@ -77,8 +77,8 @@ const controller = {
 		} else {
 			image = "estrella-gris.png";
 		}
-		let userOwnerID = req.params.id 
-			
+		let userOwnerID = req.params.id
+
 		Cancha.findAll({
 			where: {
 				users_owners_id: userOwnerID,
@@ -87,7 +87,7 @@ const controller = {
 			Cancha.findOne({
 				where: {
 					identificacion: req.body.identificacion,
-						users_owners_id: userOwnerID,
+					users_owners_id: userOwnerID,
 				}
 			}).then((canchaInDB) => {
 				let deportes = Deportes.findAll();
@@ -122,7 +122,6 @@ const controller = {
 								}).then(() => {
 									return res.redirect("/userOwner/update")
 								})
-
 						}
 					})
 			})
@@ -149,6 +148,7 @@ const controller = {
 		Promise
 			.all([deportes, tiposCancha, canchas])
 			.then(([deportes, tiposCancha, canchas]) => {
+      console.log("🚀 ~ file: productsCourtController.js ~ line 151 ~ .then ~ canchas", canchas.tipoDeCancha.id)
 
 				res.render("partial/userOwner/editarCancha", {
 					canchas,
