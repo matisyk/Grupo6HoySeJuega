@@ -187,7 +187,7 @@
             <div class="horizontal">
               <div class="entre-divs">
                 <label for="dias">Dias para jugar:</label>
-                <select class="form-control" id="dias" name="dia1">
+                <select class="form-control" id="dias" name="dia1" required>
                   <option value="" disabled selected> dias para jugar</option>
                   <% dias.forEach(dias => { %>
                   <option value="<%= dias.id %>"><%= dias.dia %></option>
@@ -196,7 +196,7 @@
               </div>
               <div class="entre-divs">
                 <label for="horarios">Horarios para jugar:</label>
-                <select class="form-control" id="horarios" name="hora1">
+                <select class="form-control" id="horarios" name="hora1" required>
                   <option value="" disabled selected> Horarios para jugar</option>
                   <% horarios.forEach(horarios => { %>
                   <option value="<%= horarios.id %>"><%= horarios.hora %></option>
