@@ -92,8 +92,8 @@ const controller = {
 						zonasdejuego,
 						dias,
 						horarios
-			});
-		}
+					});
+				}
 			})
 
 		let image;
@@ -103,88 +103,81 @@ const controller = {
 			image = "imagenJugador-1654556031834-517220025.jpeg";
 		}
 
-		// let userInDB = User.findByField('email', req.body.email);
-		// if (userInDB) {
-		// 	return res.render("partial/register/formularioDatosJugador", {
-		// 		errors: {
-		// 			email: {
-		// 				msg: 'Este mail ya está registrado, intenta con otro'
-		// 			}
-		// 		},
-		// 		oldData: req.body,
-		// 		valoraciones,
-		// 		deportes,
-		// 		zonasdejuego
-		// 	});
-
-		// }
-
-		UserPlayer.findAll({
+		UserPlayer.findOne({
 			where: {
 				email: req.body.email
 			}
 		}).then(userInDB => {
+			let valoraciones = AutoValoracion.findAll();
+			let deportes = DeportesPlayers.findAll();
+			let zonasdejuego = ZonasDeJuego.findAll();
+			let horarios = HoraPlayer.findAll();
+			let dias = DiaPlayer.findAll()
 
-			if (userInDB && userInDB.Email === req.body.email) {
+			Promise
+				.all([valoraciones, deportes, zonasdejuego, horarios, dias])
+				.then(([valoraciones, deportes, zonasdejuego, horarios, dias]) => {
+					if (userInDB != null) {
 
-				return res.render("partial/register/formularioDatosJugador", {
-					errors: {
-						email: {
-							msg: 'Este mail ya está registrado, intenta con otro'
-						}
-					},
-					oldData: req.body,
-					valoraciones,
-					deportes,
-					zonasdejuego
-				});
-			}
-		}).then(() => {
+						return res.render("partial/register/formularioDatosJugador", {
+							errors: {
+								email: {
+									msg: 'Este mail ya está registrado, intenta con otro'
+								}
+							},
+							oldData: req.body,
+							valoraciones,
+							deportes,
+							zonasdejuego,
+							horarios,
+							dias
+						});
+					} else {
+						//create
+						UserPlayer
+							.create({
+								nombre: req.body.nombre,
+								apellido: req.body.apellido,
+								email: req.body.email,
+								password: bcryptjs.hashSync(req.body.password, 10),
+								fecha_nacimiento: req.body.edad,
+								zonas_de_juego_id: req.body.zonasdejuego,
+								auto_valoracion_id: req.body.autoValoracion,
+								deportes_players_id: req.body.deporte1,
+								deportes_players_id2: req.body.deporte2
 
+							})
+							.then((result) => {
+								const idPlayer = result.id
+								TelefonoPlayer.create({
+									telefono: req.body.telefono,
+									telefono2: req.body.telefono2,
+									users_players_id: idPlayer
+								})
+								DiaHorarioPlayer.create({
+									dias_players_id: req.body.dia1,
+									horas_players_id: req.body.hora1,
+									users_players_id: idPlayer
+								})
+								ImagenPlayer.create({
+									foto: image,
+									users_players_id: idPlayer
+								})
+								HomePlayer.create({
+									nombre: req.body.nombre,
+									apellido: req.body.apellido,
+									users_players_id: idPlayer,
+									img_hp: image
+								})
+							})
+							.then(() => {
+								return res.redirect("/userPlayer/loginPlayer");
+							})
+							.catch(error => res.send(error))
+					}
+				})
 		})
-		//create
-		UserPlayer
-			.create({
-				nombre: req.body.nombre,
-				apellido: req.body.apellido,
-				email: req.body.email,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				fecha_nacimiento: req.body.edad,
-				zonas_de_juego_id: req.body.zonasdejuego,
-				auto_valoracion_id: req.body.autoValoracion,
-				deportes_players_id: req.body.deporte1,
-				deportes_players_id2: req.body.deporte2
 
-			})
-			.then((result) => {
-				const idPlayer = result.id
-				TelefonoPlayer.create({
-					telefono: req.body.telefono,
-					telefono2: req.body.telefono2,
-					users_players_id: idPlayer
-				})
-				DiaHorarioPlayer.create({
-					dias_players_id: req.body.dia1,
-					horas_players_id: req.body.hora1,
-					users_players_id: idPlayer
-				})
-				ImagenPlayer.create({
-					foto: image,
-					users_players_id: idPlayer
-				})
-					HomePlayer.create({
-						nombre: req.body.nombre,
-						apellido: req.body.apellido,
-						users_players_id: idPlayer,
-						img_hp: image
-					})
-				
-			})
-
-			.then(() => {
-				return res.redirect("/userPlayer/loginPlayer");
-			})
-			.catch(error => res.send(error))
 
 	},
 

@@ -11,14 +11,7 @@ const db = require('../database/models');
 
 // Modelo
 const UserOwner = db.UserOwner;
-const TelefonoOwner = db.TelefonoOwner;
-const MedioDePago = db.MedioDePago;
-const LogoOwner = db.LogoOwner;
-const ImagenOwner = db.ImagenOwner;
-const DetalleLugarOwner = db.DetalleLugarOwner;
 const Cancha = db.Cancha;
-const Ubicacion = db.Ubicacion
-const ImagenCancha = db.ImagenCancha
 const TipoCh = db.TipoDeCancha;
 const Deportes = db.Deporte
 
@@ -118,7 +111,7 @@ const controller = {
 
 	},
 
-	// Update - Form to edit
+	// Editar, vista
 	edit: (req, res) => {
 
 		let canchaID = req.params.id
@@ -139,7 +132,7 @@ const controller = {
 				})
 			})
 	},
-	// Update - Method to update
+	// Update - Metodo de actualizacion
 	update: (req, res) => {
 
 		let canchaID = req.params.id

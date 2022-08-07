@@ -20,7 +20,6 @@ const MedioDePago = db.MedioDePago;
 const LogoOwner = db.LogoOwner;
 const ImagenOwner = db.ImagenOwner;
 const DetalleLugarOwner = db.DetalleLugarOwner;
-const Cancha = db.Cancha;
 const Ubicacion = db.Ubicacion
 const HomeOwner = db.HomeOwner
 
@@ -75,108 +74,95 @@ const controller = {
 			logo = "estrella-gris.png";
 		}
 
-		// let userInDB = User.findByField('email', req.body.email);
-		// if (userInDB) {
-		// 	return res.render("partial/register/formularioDatosCancha", {
-		// 		errors: {
-		// 			email: {
-		// 				msg: 'Este mail ya está registrado, intenta con otro'
-		// 			}
-		// 		},
-		// 		oldData: req.body
-		// 	});
-		// }
+		UserOwner.findOne({
+			where: {
+				email: req.body.email
+			}
+		}).then((userInDB) => {
+			if (userInDB != null) {
 
-		// UserOwner.findAll({
-		// 	where: {
-		// 		email: req.body.email
-		// 	}
-		// }).then(userInDB => {
+				return res.render("partial/register/formularioDatosCancha", {
+					errors: {
+						email: {
+							msg: 'Este mail ya está registrado, intenta con otro'
+						}
+					},
+					oldData: req.body
+				});
+			} else {
+				UserOwner
+					.create({
+						nombre: req.body.nombre,
+						apellido: req.body.apellido,
+						email: req.body.email,
+						password: bcryptjs.hashSync(req.body.password, 10),
+						nombre_del_lugar: req.body.nombreDelLugar,
 
-		// 	if (userInDB && userInDB.Email === req.body.email) {
+					})
+					.then((result) => {
+						const idOwner = result.id
+						TelefonoOwner.create({
+							telefono: req.body.telefono,
+							telefono2: req.body.telefono2,
+							users_owners_id: idOwner
+						})
 
-		// 		return res.render("partial/register/formularioDatosCancha", {
-		// 			errors: {
-		// 				email: {
-		// 					msg: 'Este mail ya está registrado, intenta con otro'
-		// 				}
-		// 			},
-		// 			oldData: req.body
-		// 		});
-		// 	}
-		// })
+						LogoOwner.create({
+							logo: logo,
+							users_owners_id: idOwner
+						})
 
-		UserOwner
-			.create({
-				nombre: req.body.nombre,
-				apellido: req.body.apellido,
-				email: req.body.email,
-				password: bcryptjs.hashSync(req.body.password, 10),
-				nombre_del_lugar: req.body.nombreDelLugar,
+						DetalleLugarOwner.create({
+							iluminacion: req.body.iluminacion,
+							estacionamiento: req.body.estacionamiento,
+							wifi: req.body.wifi,
+							vestuario: req.body.vestuarios,
+							ducha: req.body.duchas,
+							parrilla: req.body.parrilla,
+							quincho: req.body.quincho,
+							quiosco: req.body.quiosco,
+							users_owners_id: idOwner
+						})
 
-			})
-			.then((result) => {
-				const idOwner = result.id
-				TelefonoOwner.create({
-					telefono: req.body.telefono,
-					telefono2: req.body.telefono2,
-					users_owners_id: idOwner
-				})
+						MedioDePago.create({
+							transferencia: req.body.transferencia,
+							mercado_pago: req.body.mercadoPago,
+							efectivo: req.body.efectivo,
+							tarjeta: req.body.tarjeta,
+							users_owners_id: idOwner,
 
-				LogoOwner.create({
-					logo: logo,
-					users_owners_id: idOwner
-				})
+						})
 
-				DetalleLugarOwner.create({
-					iluminacion: req.body.iluminacion,
-					estacionamiento: req.body.estacionamiento,
-					wifi: req.body.wifi,
-					vestuario: req.body.vestuarios,
-					ducha: req.body.duchas,
-					parrilla: req.body.parrilla,
-					quincho: req.body.quincho,
-					quiosco: req.body.quiosco,
-					users_owners_id: idOwner
-				})
-
-				MedioDePago.create({
-					transferencia: req.body.transferencia,
-					mercado_pago: req.body.mercadoPago,
-					efectivo: req.body.efectivo,
-					tarjeta: req.body.tarjeta,
-					users_owners_id: idOwner,
-
-				})
-
-				Ubicacion.create({
-					provincia: req.body.provincia,
-					localidad: req.body.localidad,
-					municipio: req.body.municipio,
-					calle: req.body.calle,
-					numeracion: req.body.numeracion,
-					users_owners_id: idOwner
-				})
-				ImagenOwner.create({
-					image: image,
-					image2: image2,
-					image3: image3,
-					users_owners_id: idOwner
-				})
-				HomeOwner.create({
-					nombre_del_lugar: req.body.nombreDelLugar,
-					users_owners_id: idOwner,
-					img_ho: image,
-					img_hl: logo
-				})
+						Ubicacion.create({
+							provincia: req.body.provincia,
+							localidad: req.body.localidad,
+							municipio: req.body.municipio,
+							calle: req.body.calle,
+							numeracion: req.body.numeracion,
+							users_owners_id: idOwner
+						})
+						ImagenOwner.create({
+							image: image,
+							image2: image2,
+							image3: image3,
+							users_owners_id: idOwner
+						})
+						HomeOwner.create({
+							nombre_del_lugar: req.body.nombreDelLugar,
+							users_owners_id: idOwner,
+							img_ho: image,
+							img_hl: logo
+						})
 
 
-			})
+					})
 
-			.then(() => {
-				return res.redirect("/userOwner/loginCourt");
-			})
-			.catch(error => res.send(error))
+					.then(() => {
+						return res.redirect("/userOwner/loginCourt");
+					})
+					.catch(error => res.send(error))
+			}
+		})
 	},
 
 
