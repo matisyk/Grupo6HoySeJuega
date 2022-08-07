@@ -25,12 +25,13 @@ router.post('/perfilDeJugador',  userPlayerController.perfilDeJugador);
 
 router.get('/perfilDeJugador/:id/carrito/', userPlayerController.carrito);
 
-router.get('/perfilDeJugador/:id/reservarCancha', userPlayerController.reservarCancha);
+router.get('/perfilDeJugador/:id/reservarCancha/:id', userPlayerController.reservarCancha);
 
 router.get('/perfilDeJugador/:id/vistaCanchaInfo/',  userPlayerController.vistaCanchaInfo);
 router.post('/perfilDeJugador/:id/vistaCanchaInfo', userPlayerController.vistaCanchaInfo);
 
-router.get('/perfilDeJugador/:id/elegirCancha',userPlayerController.elegirCancha);
+router.post('/perfilDeJugador/:id/elegirCancha/', userPlayerController.elegirCancha);
+
 
 router.get('/perfilDeJugador/:id/equipo', userPlayerController.equipo);
 router.get('/buscarJugador', userPlayerController.buscarJugador);

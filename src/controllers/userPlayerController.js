@@ -15,7 +15,10 @@ const DeportesPlayers = db.Deporte;
 const ImagenPlayer = db.ImagenPlayer;
 const HoraPlayer = db.HoraPlayer;
 const DiaPlayer = db.DiaPlayer;
-const ZonasDeJuego = db.ZonaDeJuego
+const ZonasDeJuego = db.ZonaDeJuego;
+const UserOwner = db.UserOwner;
+const TipoCh = db.TipoDeCancha;
+
 
 const userPlayerController = {
 
@@ -84,7 +87,7 @@ const userPlayerController = {
 
     let userPlayerID = req.params.id
     let userPlayer = UserPlayer.findByPk(userPlayerID, {
-    include: ['zonas', 'autoV']
+      include: ['zonas', 'autoV']
     })
     let img = ImagenPlayer.findByPk(userPlayerID, {
       include: [
@@ -118,8 +121,25 @@ const userPlayerController = {
     res.render("partial/userPlayer/carrito")
   },
   reservarCancha: (req, res) => {
+    let dueñosCancha = UserOwner.findAll()
+    let zonas = ZonasDeJuego.findAll();
+    let deportes = DeportesPlayers.findAll();
+    let tiposCancha = TipoCh.findAll();
+    let horarios = HoraPlayer.findAll();
+    let dias = DiaPlayer.findAll()
 
-    res.render("partial/userPlayer/reservarCancha")
+    Promise
+      .all([zonas, deportes, dueñosCancha, tiposCancha, dias, horarios])
+      .then(([zonas, deportes, dueñosCancha, tiposCancha, dias, horarios]) => {
+        res.render("partial/userPlayer/reservarCancha", {
+          zonas,
+          deportes,
+          dueñosCancha,
+          tiposCancha,
+          dias,
+          horarios
+        })
+      })
   },
 
   vistaCanchaInfo: (req, res) => {
@@ -134,6 +154,7 @@ const userPlayerController = {
 
     res.render("partial/userPlayer/elegirCancha")
   },
+
   equipo: (req, res) => {
     res.render("partial/userPlayer/equipo", {
       userPlayer

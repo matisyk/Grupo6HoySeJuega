@@ -44,96 +44,96 @@
 </head>
 
 <body>
-<header class="main-header">
-    <div class="menu">
-        <div class="copy-header">
-            <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
+    <header class="main-header">
+        <div class="menu">
+            <div class="copy-header">
+                <img src="/img/logo-rayas.png" alt="Logo de se juega?" class="logo">
 
-            <a href="#" class="menu-hamburguesa">
-                <i class="fa-solid fa-bars"></i>
-            </a>
-
-            <div class="menu-cont2">
-                <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>">Mi perfil</a>
-                <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/equipo">Mi equipo</a>
-                <a class="txtNav4" href="/userPlayer/buscarJugador/"> <i class="fa-solid fa-person-running"></i> Nos
-                    falta uno</a>
-                <a class="txtNav5" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/carrito">
-                    <i class="fa-solid fa-cart-shopping"></i> Mi reserva
-                </a>
-                <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
-                <a class="txtNav6" href="/userPlayer/logoutPlayer"><i class="fa-solid fa-arrow-right-from-bracket"></i>
-                    Chau
+                <a href="#" class="menu-hamburguesa">
+                    <i class="fa-solid fa-bars"></i>
                 </a>
 
+                <div class="menu-cont2">
+                    <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>">Mi perfil</a>
+                    <a class="txtNav1" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/equipo">Mi
+                        equipo</a>
+                    <a class="txtNav4" href="/userPlayer/buscarJugador/"> <i class="fa-solid fa-person-running"></i> Nos
+                        falta uno</a>
+                    <a class="txtNav5" href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/carrito">
+                        <i class="fa-solid fa-cart-shopping"></i> Mi reserva
+                    </a>
+                    <a class="txtNav2" href="#"><i class="fa-solid fa-bell"></i></a>
+                    <a class="txtNav6" href="/userPlayer/logoutPlayer"><i
+                            class="fa-solid fa-arrow-right-from-bracket"></i>
+                        Chau
+                    </a>
+
+                </div>
             </div>
         </div>
-    </div>
-</header>
-    <div class="tarjeta">
-        <div class="item-tarjeta">
-            <label name="registroDeDeporte">Deporte:</label>
-            <select name="posicion" id="deporte" name="registroDeDeporte">
-                <option value="0">-</option>
-                <option value="1">Futbol</option>
-                <option value="2">Paddle</option>
-                <option value="3">Basquet</option>
-            </select>
-        </div>
-        <div class="item-tarjeta">
-            <label name="lugar">Zona</label>
-            <input type="text" placeholder="Ej: San Fernando" required>
-        </div>
-        <div class="item-tarjeta">
-            <label name="lugar">Lugar:</label>
-            <select>
-                <option value="-">Elegir cancha</option>
-                <option value="lunes">Ladrones</option>
-                <option value="martes">Murales</option>
-                <option value="miercoles">Mérloc</option>
-                <option value="jueves">Jugada peligrosa</option>
-                <option value="viernes">Variables</option>
-                <option value="sabado">Salomón</option>
-                <option value="domingo">Dormiste</option>
-            </select>
-            <input type="text" placeholder="Ej: Club los Alamos" required>
-        </div>
+    </header>
+    <form action="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/elegirCancha" method="POST">
+        <div class="tarjeta">
+            <div class="item-tarjeta">
+                <label >Deporte:</label>
+                <select class="form-control" id="deporte1" name="deporte">
+                    <option value="" disabled selected>Buscar por deporte</option>
+                    <% deportes.forEach(deporte => { %>
+                    <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div class="item-tarjeta">
+                <label for="zonaDeJuego">Zona de juego:</label>
+                <select class="form-control" id="zonaDeJuego" name="zonas">
+                    <option value="" disabled selected> Buscar por zona de juego</option>
+                    <% zonas.forEach(zonas => { %>
+                    <option value="<%= zonas.id %>"><%= zonas.provincia %></option>
+                    <% }); %>
+                </select>
+            </div>
+            <div class="item-tarjeta">
+                <label >Lugar:</label>
+                 <select class="form-control" id="dueñosCancha" name="dueñosCancha">
+                     <option value="" disabled selected>Buscar por nombre del lugar</option>
+                     <% dueñosCancha.forEach(dueñosCancha => { %>
+                     <option value="<%= dueñosCancha.id %>"><%= dueñosCancha.nombre_del_lugar %></option>
+                     <% }); %>
+                 </select>
+                <!-- <input type="text" placeholder="Ej: Club los Alamos" required> -->
+            </div>
 
 
-        <div class="item-tarjeta">
-            <label name="id">Tipo de la cancha:</label>
-            <select name="posicion" id="deporte" name="registroDeDeporte">
-                <option value="0">-</option>
-                <option value="1">Futbol 5 / cintético</option>
-                <option value="2">Futbol 12 / Cesped</option>
-                <option value="3">Basquet / Madera </option>
-                <option value="4">Paddle simple </option>
-                <option value="5">Paddle parejas </option>
-            </select>
+            <div class="item-tarjeta">
+                <label >Tipo de la cancha:</label>
+                 <select class="form-control" id="tiposCancha" name="tiposCancha">
+                     <option value="" disabled selected>Buscar por material de la cancha</option>
+                     <% tiposCancha.forEach(tiposCancha => { %>
+                     <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
+                     <% }); %>
+                 </select>
+            </div>
+
+            <div class="otro-item-tarjeta">
+                <select class="form-control" id="dias" name="dia" >
+                    <option value="" disabled selected> Buscar por dia </option>
+                    <% dias.forEach(dias => { %>
+                    <option value="<%= dias.id %>"><%= dias.dia %></option>
+                    <% }); %>
+                </select>
+                <select class="form-control" id="horarios" name="hora" >
+                    <option value="" disabled selected> Buscar por horario </option>
+                    <% horarios.forEach(horarios => { %>
+                    <option value="<%= horarios.id %>"><%= horarios.hora %></option>
+                    <% }); %>
+                </select>
+            </div>
+            
+            <div class="item-tarjeta boton-enviar">
+                <button type="submit">Buscar</button></a>
+            </div>
         </div>
-
-        <div class="otro-item-tarjeta">
-            <div class="item-tarjeta"><label name="horarios">Buscar disponibilidad horaria:</label></div>
-            <select>
-                <option value="-">Elegir día</option>
-                <option value="lunes">Lunes</option>
-                <option value="martes">Martes</option>
-                <option value="miercoles">Miércoles</option>
-                <option value="jueves">Jueves</option>
-                <option value="viernes">Viernes</option>
-                <option value="sabado">Sabado</option>
-                <option value="domingo">Domingo</option>
-            </select>
-            <input type="time" class="form-control horaio" id="horarios" name="registroHorarios">
-        </div>
-
-
-        <div class="item-tarjeta boton-enviar">
-            <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/elegirCancha"><button type="submit"
-                    name="enviar">Buscar</button></a>
-        </div>
-    </div>
-
+    </form>
 </body>
 
 </html
