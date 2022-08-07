@@ -69,6 +69,19 @@
     <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/reservarCancha" class="buscar-nuevo">Hacer nueva
       búsqueda</a>
 
+<div>
+  <% canchas.forEach(canchas => { %>
+  <h1><%= canchas.identificacion %> </h1>
+  <h2>
+    <%= canchas.userOwner.nombre_del_lugar %>
+  </h2>
+  <h3><%= canchas.deporte.deporte %></h3>
+  <h4><%= canchas.tipoDeCancha.material %></h4>
+  <h5><%= canchas.ubicacionC.municipio %></h5>
+  <% }); %>
+</div>
+
+
     <section>
       <div class="separador1">
         <h1>Canchas de fútbol</h1>

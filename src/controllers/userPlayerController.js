@@ -1,5 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const {
+  Op
+} = require("sequelize");
 
 // Login
 const bcryptjs = require('bcryptjs');
@@ -18,6 +21,8 @@ const DiaPlayer = db.DiaPlayer;
 const ZonasDeJuego = db.ZonaDeJuego;
 const UserOwner = db.UserOwner;
 const TipoCh = db.TipoDeCancha;
+const Cancha = db.Cancha;
+const Ubicacion = db.Ubicacion
 
 
 const userPlayerController = {
@@ -122,7 +127,7 @@ const userPlayerController = {
   },
   reservarCancha: (req, res) => {
     let dueñosCancha = UserOwner.findAll()
-    let zonas = ZonasDeJuego.findAll();
+    let zonas = Ubicacion.findAll();
     let deportes = DeportesPlayers.findAll();
     let tiposCancha = TipoCh.findAll();
     let horarios = HoraPlayer.findAll();
@@ -151,8 +156,32 @@ const userPlayerController = {
   },
 
   elegirCancha: (req, res) => {
+    let dueñosCancha = req.body.dueñosCancha
+    let dias = req.body.dias
+    let horas = req.body.horas
+    let zona = req.body.zonas
+    let deporte = req.body.deporte
+    let tiposCancha = req.body.tiposCancha
+    
+    let canchas = Cancha.findAll({
+      include: ['userOwner', 'deporte', 'tipoDeCancha', 'ubicacionC'],
+      where: {
+        deportes_players_id: deporte,
+        tipo_de_cancha_id: tiposCancha,
+        
+      },
+      
+    })
+    
+    Promise
+      .all([canchas, ])
+      .then(([canchas, ]) => {
 
-    res.render("partial/userPlayer/elegirCancha")
+      res.render("partial/userPlayer/elegirCancha", {
+        canchas,
+        
+      })
+    })
   },
 
   equipo: (req, res) => {
