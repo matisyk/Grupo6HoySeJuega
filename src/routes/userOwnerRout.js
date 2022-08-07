@@ -43,7 +43,6 @@ const validationsCancha = [
   body("deporte").notEmpty().withMessage('Tienes que seleccionar una opcion'),
   body("capacidad").notEmpty().withMessage('Tienes que escribir una capacidad'),
   body("tipocancha").notEmpty().withMessage('Tienes que seleccionar una opcion'),
-  body("image").notEmpty().withMessage('Tienes que seleccionar una imagen'),
   body("valor").notEmpty().withMessage('Tienes que escribir un valor')
 ];
 

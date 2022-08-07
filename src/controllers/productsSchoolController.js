@@ -60,10 +60,6 @@ const controller = {
 					horarios
 				})
 			})
-
-
-
-
 	},
 
 	// Create -  Method to store

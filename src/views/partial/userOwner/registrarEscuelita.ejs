@@ -21,8 +21,7 @@
 <body>
     <%- include('./headerOwner.ejs') %>
 
-    <form action="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita/" enctype="multipart/form-data"
-        method="POST">
+    <form action="/userOwner/vistaCancha/<%= userOwnerLogged.id %>/registrarEscuelita/" method="POST" enctype="multipart/form-data">
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <h4 style="text-align: center"> Registrar escuelita</h4>
@@ -68,8 +67,8 @@
                         <label>Género:</label>
                         <select class="form-control" id="genero" name="genero">
                             <option value="" disabled selected> Elegir género</option>
-                            <% genero.forEach( generos => { %>
-                            <option value="<%= generos.id %>"><%= generos.genero %></option>
+                            <% genero.forEach( genero => { %>
+                            <option value="<%= genero.id %>"><%= genero.genero %></option>
                             <% }) %>
                         </select>
                     </div>

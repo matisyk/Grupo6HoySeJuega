@@ -19,8 +19,14 @@
             <div class="tarjeta">
                 <div class="item-tarjeta">
                     <label>Identificación de la cancha:</label>
-                    <input type="text" placeholder="Ej: Cancha 1" name="identificacion" required
+                    <input class="<%= locals.errors && errors.identificacion ? 'is-invalid' : null %>" type="text"
+                        placeholder="Ej: Cancha 1" name="identificacion" required
                         value="<%= canchas.identificacion %>">
+                        <% if (locals.errors && errors.identificacion) { %>
+                        <div class="text-danger msg">
+                            <%= errors.identificacion.msg %>
+                        </div>
+                        <% } %>
                 </div>
                 <div class="item-tarjeta">
                     <label>Deporte:</label>

@@ -62,7 +62,7 @@ const controller = {
 			.then(([deportes, tiposCancha]) => {
 				const resultValidation = validationResult(req);
 				if (resultValidation.errors.length > 0) {
-					return res.render("partial/userOwner/registrarEscuelita", {
+					return res.render("partial/userOwner/registrarCancha", {
 						errors: resultValidation.mapped(),
 						oldData: req.body,
 						deportes,
@@ -79,28 +79,46 @@ const controller = {
 		}
 		let userPlayerID = req.params.id
 
-		Cancha
-			.create({
+		Cancha.findOne({
+			where: {
 				identificacion: req.body.identificacion,
-				capacidad: req.body.capacidad,
-				valor: req.body.valor,
-				users_owners_id: userPlayerID,
-				deportes_players_id: req.body.deporte,
-				tipo_de_cancha_id: req.body.tipocancha,
-				img_c: image,
-			})
-			.then((result) => {
-				const idCancha = result.id
+			}
+		}).then((canchaInDB) => {
+			let deportes = Deportes.findAll();
+			let tiposCancha = TipoCh.findAll();
 
-				// DiaHorarioCancha.create({
-				// 	dias_id: req.body.dias,
-				// 	horas_id: req.body.horas,
-				// 	canchas_id: idCancha
-				// })
+			Promise
+				.all([deportes, tiposCancha])
+				.then(([deportes, tiposCancha]) => {
+					if (canchaInDB != null) {
+						return res.render("partial/userOwner/registrarCancha", {
+							errors: {
+								identificacion: {
 
-			}).then(() => {
-				return res.redirect("/userOwner/update")
-			})
+									msg: 'Ya se encuentra registrado, intenta con otro'
+								}
+							},
+							oldData: req.body,
+							deportes,
+							tiposCancha
+						})
+					} else {
+						Cancha
+							.create({
+								identificacion: req.body.identificacion,
+								capacidad: req.body.capacidad,
+								valor: req.body.valor,
+								users_owners_id: userPlayerID,
+								deportes_players_id: req.body.deporte,
+								tipo_de_cancha_id: req.body.tipocancha,
+								img_c: image,
+							}).then(() => {
+								return res.redirect("/userOwner/update")
+							})
+
+					}
+				})
+		})
 
 	},
 	redirect: (req, res) => {
@@ -143,26 +161,53 @@ const controller = {
 		} else {
 			image = canchaID.img;
 		}
-
-		Cancha
-			.update({
-				identificacion: req.body.identificacion,
-				capacidad: req.body.capacidad,
-				valor: req.body.valor,
-				deportes_players_id: req.body.deporte,
-				tipo_de_cancha_id: req.body.tipocancha,
-				img_c: image,
-
-			}, {
-				where: {
-					id: req.params.id
-				}
+		Cancha.findOne({
+			where: {
+				identificacion: req.body.identificacion
+			}
+		}).then((canchaInDB) => {
+			let canchaID = req.params.id
+			let canchas = Cancha.findByPk(canchaID, {
+				include: ['tipoDeCancha', 'deporte']
 			})
-			.then(() => {
-				return res.redirect("/userOwner/update")
-			})
+			let deportes = Deportes.findAll();
+			let tiposCancha = TipoCh.findAll();
 
+			Promise
+				.all([deportes, tiposCancha, canchas])
+				.then(([deportes, tiposCancha, canchas]) => {
+					if (canchaInDB != null ) {
+						return res.render("partial/userOwner/editarCancha", {
+							errors: {
+								identificacion: {
+									msg: 'Ya se encuentra registrado, intenta con otro'
+								}
+							},
+							oldData: req.body,
+							deportes,
+							tiposCancha, canchas
+						})
+					} else {
+						Cancha
+							.update({
+								identificacion: req.body.identificacion,
+								capacidad: req.body.capacidad,
+								valor: req.body.valor,
+								deportes_players_id: req.body.deporte,
+								tipo_de_cancha_id: req.body.tipocancha,
+								img_c: image,
 
+							}, {
+								where: {
+									id: req.params.id
+								}
+							})
+							.then(() => {
+								return res.redirect("/userOwner/update")
+							})
+					}
+				})
+		})
 	},
 
 	// Delete - Delete one product from DB
