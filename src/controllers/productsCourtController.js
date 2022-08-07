@@ -176,7 +176,7 @@ const controller = {
 			Promise
 				.all([deportes, tiposCancha, canchas])
 				.then(([deportes, tiposCancha, canchas]) => {
-					if (canchaInDB != null ) {
+					if (canchaInDB != null && canchaInDB.identificacion != req.body.identificacion) {
 						return res.render("partial/userOwner/editarCancha", {
 							errors: {
 								identificacion: {
