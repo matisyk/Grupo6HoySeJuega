@@ -77,49 +77,56 @@ const controller = {
 		} else {
 			image = "estrella-gris.png";
 		}
-		let userPlayerID = req.params.id
-
-		Cancha.findOne({
+		let userOwnerID = req.params.id 
+			
+		Cancha.findAll({
 			where: {
-				identificacion: req.body.identificacion,
+				users_owners_id: userOwnerID,
 			}
-		}).then((canchaInDB) => {
-			let deportes = Deportes.findAll();
-			let tiposCancha = TipoCh.findAll();
+		}).then(() => {
+			Cancha.findOne({
+				where: {
+					identificacion: req.body.identificacion,
+						users_owners_id: userOwnerID,
+				}
+			}).then((canchaInDB) => {
+				let deportes = Deportes.findAll();
+				let tiposCancha = TipoCh.findAll();
 
-			Promise
-				.all([deportes, tiposCancha])
-				.then(([deportes, tiposCancha]) => {
-					if (canchaInDB != null) {
-						return res.render("partial/userOwner/registrarCancha", {
-							errors: {
-								identificacion: {
+				Promise
+					.all([deportes, tiposCancha])
+					.then(([deportes, tiposCancha]) => {
 
-									msg: 'Ya se encuentra registrado, intenta con otro'
-								}
-							},
-							oldData: req.body,
-							deportes,
-							tiposCancha
-						})
-					} else {
-						Cancha
-							.create({
-								identificacion: req.body.identificacion,
-								capacidad: req.body.capacidad,
-								valor: req.body.valor,
-								users_owners_id: userPlayerID,
-								deportes_players_id: req.body.deporte,
-								tipo_de_cancha_id: req.body.tipocancha,
-								img_c: image,
-							}).then(() => {
-								return res.redirect("/userOwner/update")
+						if (canchaInDB != null) {
+							return res.render("partial/userOwner/registrarCancha", {
+								errors: {
+									identificacion: {
+
+										msg: 'Ya se encuentra registrado, intenta con otro'
+									}
+								},
+								oldData: req.body,
+								deportes,
+								tiposCancha
 							})
+						} else {
+							Cancha
+								.create({
+									identificacion: req.body.identificacion,
+									capacidad: req.body.capacidad,
+									valor: req.body.valor,
+									users_owners_id: userOwnerID,
+									deportes_players_id: req.body.deporte,
+									tipo_de_cancha_id: req.body.tipocancha,
+									img_c: image,
+								}).then(() => {
+									return res.redirect("/userOwner/update")
+								})
 
-					}
-				})
+						}
+					})
+			})
 		})
-
 	},
 	redirect: (req, res) => {
 
@@ -185,7 +192,8 @@ const controller = {
 							},
 							oldData: req.body,
 							deportes,
-							tiposCancha, canchas
+							tiposCancha,
+							canchas
 						})
 					} else {
 						Cancha
