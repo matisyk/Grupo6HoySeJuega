@@ -95,16 +95,16 @@
             </button4>
           </a>
           <div class="cinco-estrellas est-1">
-            <p>$ <%= canchas.valor %> - <%- canchas.tipoDeCancha.material %></p>
+           
             <!-- <img src="/img/estrella.png" alt="estrella">
             <img src="/img/estrella.png" alt="estrella">
             <img src="/img/estrella.png" alt="estrella">
             <img src="/img/estrella-gris.png" alt="estrella">
             <img src="/img/estrella-gris.png" alt="estrella"> -->
-          </div>
+          </div> 
+          <p class="cinco-estrellas est-1">$ <%= canchas.valor %> - <%- canchas.tipoDeCancha.material %></p>
           <p class="deporte" style="margin-bottom: 10px;"><%= canchas.userOwner.nombre_del_lugar %></p>
-          <p class="zona"><%= canchas.ubicacionC.municipio %> </p>
-          <p class="zona"><%= canchas.ubicacionC.provincia %></p>
+          <p class="zona"><%= canchas.ubicacionC.municipio %> - <%= canchas.ubicacionC.provincia %></p>
           <a href="/UserPlayer/carrito">
             <button class="boton-mas"><i class="fa-solid fa-cart-plus"></i></button>
           </a>
@@ -189,6 +189,8 @@
 
     </div>
   </main>
+<br>
+<br>
 
 
   <footer class="footer-main3">
