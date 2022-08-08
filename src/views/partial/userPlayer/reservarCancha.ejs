@@ -72,10 +72,13 @@
             </div>
         </div>
     </header>
-    <form action="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/elegirCancha" method="POST">
-        <div class="tarjeta">
+
+    <div class="tarjeta">
+        <label>Elije tu filtro:</label>
+        <form action="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/elegirCancha" method="POST">
+
             <div class="item-tarjeta">
-                <label >Deporte:</label>
+                <label>Deporte:</label>
                 <select class="form-control" id="deporte1" name="deporte" required>
                     <option value="" disabled selected>Buscar por deporte</option>
                     <% deportes.forEach(deporte => { %>
@@ -83,57 +86,59 @@
                     <% }); %>
                 </select>
             </div>
+
             <div class="item-tarjeta">
-                <label for="zonaDeJuego">Zona de juego:</label>
-                <select class="form-control" id="zonaDeJuego" name="zonas">
-                    <option value="" disabled selected> Buscar por zona de juego</option>
-                    <% zonas.forEach(zonas => { %>
-                    <option value="<%= zonas.provincia %>"><%= zonas.provincia %></option>
+                <label>Tipo de la cancha:</label>
+                <select class="form-control" id="tiposCancha" name="tiposCancha">
+                    <option value="" disabled selected>Buscar por material de la cancha</option>
+                    <% tiposCancha.forEach(tiposCancha => { %>
+                    <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
                     <% }); %>
                 </select>
             </div>
-            <div class="item-tarjeta">
-                <label >Lugar:</label>
-                 <select class="form-control" id="dueñosCancha" name="dueñosCancha">
-                     <option value="" disabled selected>Buscar por nombre del lugar</option>
-                     <% dueñosCancha.forEach(dueñosCancha => { %>
-                     <option value="<%= dueñosCancha.id %>"><%= dueñosCancha.nombre_del_lugar %></option>
-                     <% }); %>
-                 </select>
-                <!-- <input type="text" placeholder="Ej: Club los Alamos" required> -->
-            </div>
-
-
-            <div class="item-tarjeta">
-                <label >Tipo de la cancha:</label>
-                 <select class="form-control" id="tiposCancha" name="tiposCancha" required>
-                     <option value="" disabled selected>Buscar por material de la cancha</option>
-                     <% tiposCancha.forEach(tiposCancha => { %>
-                     <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
-                     <% }); %>
-                 </select>
-            </div>
-
-            <div class="otro-item-tarjeta">
-                <select class="form-control" id="dias" name="dia" >
-                    <option value="" disabled selected> Buscar por dia </option>
-                    <% dias.forEach(dias => { %>
-                    <option value="<%= dias.id %>"><%= dias.dia %></option>
-                    <% }); %>
-                </select>
-                <select class="form-control" id="horarios" name="hora" >
-                    <option value="" disabled selected> Buscar por horario </option>
-                    <% horarios.forEach(horarios => { %>
-                    <option value="<%= horarios.id %>"><%= horarios.hora %></option>
-                    <% }); %>
-                </select>
-            </div>
-            
             <div class="item-tarjeta boton-enviar">
                 <button type="submit">Buscar</button></a>
             </div>
-        </div>
-    </form>
+
+        </form>
+        <!-- <form action="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/elegirCancha" method="POST">
+
+            <div class="item-tarjeta">
+                <label for="zonaDeJuego">Zona de juego:</label>
+                <input type="text" placeholder="Ej: Provincia o municipio" name="zonas">
+            </div>
+            <div class="item-tarjeta boton-enviar">
+                <button type="submit">Buscar</button></a>
+            </div>
+
+        </form>
+        <form action="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/elegirCancha" method="POST">
+
+            <div class="item-tarjeta">
+                <label>Lugar:</label>
+                <input type="text" placeholder="Ej: Club los Alamos" name="nombreDelLugar">
+            </div>
+            <div class="item-tarjeta boton-enviar">
+                <button type="submit">Buscar</button></a>
+            </div>
+
+        </form> -->
+    </div>
+    <!-- <div class="otro-item-tarjeta">
+        <select class="form-control" id="dias" name="dia">
+            <option value="" disabled selected> Buscar por dia </option>
+            <% dias.forEach(dias => { %>
+            <option value="<%= dias.id %>"><%= dias.dia %></option>
+            <% }); %>
+        </select>
+        <select class="form-control" id="horarios" name="hora">
+            <option value="" disabled selected> Buscar por horario </option>
+            <% horarios.forEach(horarios => { %>
+            <option value="<%= horarios.id %>"><%= horarios.hora %></option>
+            <% }); %>
+        </select>
+    </div> -->
+
 </body>
 
 </html

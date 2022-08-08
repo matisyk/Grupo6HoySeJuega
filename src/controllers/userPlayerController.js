@@ -176,9 +176,7 @@ const userPlayerController = {
         }, {
           tipo_de_cancha_id: tiposCancha
           }],
-        //[Op.or]: [{
-          //ubicacionC_provincias: zona
-       // }]
+        
       },
       
     })
@@ -186,6 +184,7 @@ const userPlayerController = {
     Promise
       .all([canchas, ])
       .then(([canchas, ]) => {
+      console.log("🚀 ~ file: userPlayerController.js ~ line 189 ~ .then ~ canchas", canchas)
       
       
 

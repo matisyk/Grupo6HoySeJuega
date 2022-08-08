@@ -65,22 +65,29 @@
   </header>
 
   <main>
+    <div>
 
-    <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/reservarCancha/<%- userLoggedPlayer.id %>"
-      class="buscar-nuevo">Hacer nueva
-      búsqueda</a>
+      <a href="/userPlayer/perfilDeJugador/<%- userLoggedPlayer.id %>/reservarCancha/<%- userLoggedPlayer.id %>"
+        class="buscar-nuevo">Hacer nueva
+        búsqueda</a>
 
- 
+      <div class="separador1">
+        <h1>Filtrar búsqueda:
+          <input id="gfg" type="text" placeholder="Ej. zona" style="color: black;font-size: 20px;">
+        </h1>
+      </div>
 
+    </div>
 
-    <section> 
+    <section>
       <% if (canchas.length > 0) { %>
       <div class="separador1">
         <h1>¿Dónde se juega?</h1>
       </div>
-      <div class="main">
+
+      <div class="main" id="geeks">
         <% canchas.forEach(canchas => { %>
-        <div class="cancha">
+        <div class="cancha" >
           <img src="/img/products/<%- canchas.img_c %>" alt="imagen-cancha" class="imagen-cancha">
           <a href="#">
             <button4>
@@ -88,13 +95,13 @@
             </button4>
           </a>
           <div class="cinco-estrellas est-1">
-             <p>$ <%= canchas.valor %> - <%- canchas.tipoDeCancha.material %></p>
+            <p>$ <%= canchas.valor %> - <%- canchas.tipoDeCancha.material %></p>
             <!-- <img src="/img/estrella.png" alt="estrella">
             <img src="/img/estrella.png" alt="estrella">
             <img src="/img/estrella.png" alt="estrella">
             <img src="/img/estrella-gris.png" alt="estrella">
             <img src="/img/estrella-gris.png" alt="estrella"> -->
-          </div> 
+          </div>
           <p class="deporte" style="margin-bottom: 10px;"><%= canchas.userOwner.nombre_del_lugar %></p>
           <p class="zona"><%= canchas.ubicacionC.municipio %> </p>
           <p class="zona"><%= canchas.ubicacionC.provincia %></p>
@@ -105,9 +112,9 @@
         </div>
         <% }) %>
         <% } else { %>
-       <div class="separador2">
-         <h1>Disculpas pero no encontramos lo que buscabas. ¿Lo intentas de nuevo?</h1>
-       </div>
+        <div class="separador2">
+          <h1>Disculpas pero no encontramos lo que buscabas. ¿Lo intentas de nuevo?</h1>
+        </div>
         <% } %>
 
       </div>
@@ -208,7 +215,7 @@
     </ul>
 
   </footer>
-
+  <script src="/js/filtro.js"></script>
 </body>
 
 </html>
