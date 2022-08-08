@@ -39,7 +39,7 @@
           <div class="entre-divs">
             <div class="horizontal">
             <div>
-              <label for="nombre">Nombre: </label>
+              <label for="nombre">Nombre <span class="asterisco">*</span></label>
               <input id="nombre" name="nombre" autocapitalize="none"
                 class="form-control <%= locals.errors && errors.nombre ? 'is-invalid' : null %>" type="nombre"
                 value="<%= locals.oldData ? oldData.nombre : null %>">
@@ -51,7 +51,7 @@
             </div>
             <br>
             <div>
-              <label for="apellido">Apellido: </label>
+              <label for="apellido">Apellido <span class="asterisco">*</span></label>
               <input id="apellido" name="apellido"
                 class="form-control <%= locals.errors && errors.apellido ? 'is-invalid' : null %>" type="apellido"
                 value="<%= locals.oldData ? oldData.apellido : null %>">
@@ -65,7 +65,7 @@
             <br>
             <div class="horizontal">
             <div>
-              <label for="email">Mail: </label>
+              <label for="email">Mail <span class="asterisco">*</span></label>
               <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                 name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
               <% if (locals.errors && errors.email) { %>
@@ -76,7 +76,7 @@
             </div>
             <br>
             <div>
-              <label for="contraseña">Contraseña: </label>
+              <label for="contraseña">Contraseña <span class="asterisco">*</span></label>
               <input id="pwd" name="password"
                 class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
               <% if (locals.errors && errors.password) { %>
@@ -90,7 +90,7 @@
             <br>
             <div class="horizontal">
             <div>
-              <label for="nombreDelLugar">Nombre del lugar: </label>
+              <label for="nombreDelLugar">Nombre del lugar <span class="asterisco">*</span></label>
               <input type="text"
                 class="form-control <%= locals.errors && errors.nombreDelLugar ? 'is-invalid' : null %>"
                 id="nombreDelLugar" name="nombreDelLugar" value="<%= locals.oldData ? oldData.nombreDelLugar : null %>">
@@ -102,7 +102,7 @@
             </div>
             <br>
             <div>
-              <label for="provincia">Provincia:</label>
+              <label for="provincia">Provincia <span class="asterisco">*</span></label>
               <input type="text" class="form-control <%= locals.errors && errors.provincia ? 'is-invalid' : null %>"
                 id="provincia" name="provincia" value="<%= locals.oldData ? oldData.provincia : null %>">
               <% if (locals.errors && errors.provincia) { %>
@@ -115,7 +115,7 @@
             <br>
             <div class="horizontal">
             <div>
-              <label for="localidad">Localidad:</label>
+              <label for="localidad">Localidad <span class="asterisco">*</span></label>
               <input type="text" class="form-control <%= locals.errors && errors.localidad ? 'is-invalid' : null %>"
                 id="localidad" name="localidad" value="<%= locals.oldData ? oldData.localidad : null %>">
               <% if (locals.errors && errors.localidad) { %>
@@ -126,7 +126,7 @@
             </div>
             <br>
             <div>
-              <label for="municipio">Municipio:</label>
+              <label for="municipio">Municipio <span class="asterisco">*</span></label>
               <input type="text" class="form-control <%= locals.errors && errors.municipio ? 'is-invalid' : null %>"
                 id="municipio" name="municipio" value="<%= locals.oldData ? oldData.municipio : null %>">
               <% if (locals.errors && errors.municipio) { %>
@@ -139,7 +139,7 @@
             <br>
             <div class="horizontal">
             <div>
-            <label for="calle">Calle:</label>
+            <label for="calle">Calle <span class="asterisco">*</span></label>
             <input type="text" class="form-control <%= locals.errors && errors.calle ? 'is-invalid' : null %>"
               id="calle" name="calle" value="<%= locals.oldData ? oldData.calle : null %>">
             <% if (locals.errors && errors.calle) { %>
@@ -150,7 +150,7 @@
           </div>
           <br>
           <div>
-            <label for="numeracion">Numeración:</label>
+            <label for="numeracion">Numeración <span class="asterisco">*</span></label>
             <input type="number" class="form-control <%= locals.errors && errors.numeracion ? 'is-invalid' : null %>" id="numeracion" name="numeracion"
             value="<%= locals.oldData ? oldData.numeracion : null %>"> 
             <% if (locals.errors && errors.numeracion) { %>
@@ -163,13 +163,25 @@
           <br>
           <div class="horizontal">
             <div>
-            <label for="telefono">Telefono:</label>
-            <input type="number" class="form-control" id="telefono" name="telefono" />
+            <label for="telefono">Telefono <span class="asterisco">*</span></label>
+            <input type="number" class="form-control <%= locals.errors && errors.telefono ? 'is-invalid' : null %>" id="telefono" name="telefono" 
+            value="<%= locals.oldData ? oldData.telefono : null %>"/>
+            <% if (locals.errors && errors.telefono) { %>
+              <div class="text-danger msg">
+                <%= errors.telefono.msg %>
+              </div>
+            <% } %>
           </div>
           <br>
           <div>
-            <label for="telefono2">Contacto de emergencia:</label>
-            <input type="number" class="form-control" id="telefono2" name="telefono2" />
+            <label for="telefono2">Contacto de emergencia <span class="asterisco">*</span></label>
+            <input type="number" class="form-control <%= locals.errors && errors.telefono2 ? 'is-invalid' : null %>" id="telefono2" name="telefono2" 
+            value="<%= locals.oldData ? oldData.telefono2 : null %>"/>
+            <% if (locals.errors && errors.telefono2) { %>
+              <div class="text-danger msg">
+                <%= errors.telefono2.msg %>
+              </div>
+            <% } %>
           </div>
           </div>
         </div>
@@ -252,7 +264,7 @@
         <div class="input-group imagenes">
           
           <div class="img-cancha">
-            <label class="label-img" for="imagenCancha">Cargar imágenes del lugar <br>
+            <label class="label-img" for="imagenCancha">Cargar imágenes del lugar <span class="asterisco">*</span><br>
               <input class="input-img" type="file" name="imagenCancha" accept="all"  multiple /></label>
           </div>
           <div class="img-cancha">
@@ -263,7 +275,7 @@
           </div>
           <br>
           <div class="img-cancha">
-            <label for="imagenOtras">Cargar imágen del logo: <br>
+            <label for="imagenOtras">Cargar imágen del logo <span class="asterisco">*</span><br>
               <input type="file" name="logo" accept="all"   multiple /></label>
           </div>
           <br>

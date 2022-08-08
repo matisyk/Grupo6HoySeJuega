@@ -64,6 +64,12 @@ input{
   display: block;
 }
 
+.asterisco{
+  color:rgba(255, 0, 0, 0.721);
+  position: relative;
+  top: -0.3rem;
+}
+
 .div1 {
   padding: 20px;
   padding-bottom: 50px;
