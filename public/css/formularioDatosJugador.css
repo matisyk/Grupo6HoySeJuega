@@ -5,7 +5,7 @@ body{
 
 h1 {
   text-align: center;
-  margin: 50px;
+  margin: 50px 0;
   font-size: 50px;
 }
 .contenedor-general{
@@ -27,9 +27,11 @@ h1 {
   left: 0;
   visibility: hidden
 }
+
 .horizontal{
-  display: flex;
+  margin-top: -1rem;
 }
+
 .text-danger.msg{
   font-size: small;
   margin: 2px;
@@ -85,10 +87,6 @@ select{
   margin-bottom: 2%;
 }
 
-.entre-divs{
-  margin-left: 25px;
-}
-
 select{
   padding: 2px;
   border: 1px solid #ced4da;
@@ -141,8 +139,18 @@ font-size: 10px;
 }
 
 .entre-divs{
-  width: 50%;
+  width: 100%;
 }
+
+.mobile{
+  margin-left: -1.4rem;
+  display: flex;
+}
+
+.volver{
+  font-size: 1.5rem;
+}
+
 .divDias{
   margin-top: 20px;
 }
@@ -172,7 +180,7 @@ margin-bottom: 5px;
 /* Boton de enviar datos*/
 button {
   font-family: inherit;
-    font-size: 30px;
+    font-size: 1.5rem;
     text-align: center;
     background: rgb(14, 84, 225);
     color: rgb(0, 0, 0);
@@ -219,6 +227,32 @@ input{
  }
 
 @media (min-width: 768px){
+  .horizontal{
+    display: flex;
+    margin-top: auto;
+  }
+
+  .volver{
+    font-size: 30px;
+  }
+
+  .entre-divs{
+    margin-left: 25px;
+    width: 50%;
+  }
+
+  h1{
+    margin: 50px;
+  }
+
+  .mobile{
+    margin-left: auto;
+  }
+
+  button{
+    font-size: 30px;
+  }
+
   .contenedor-general{
    margin: 60px auto;
 width: 80%; 
