@@ -166,9 +166,19 @@ const userPlayerController = {
     let canchas = Cancha.findAll({
       include: ['userOwner', 'deporte', 'tipoDeCancha', 'ubicacionC'],
       where: {
-        deportes_players_id: deporte,
-        tipo_de_cancha_id: tiposCancha,
-        
+        [Op.and]: [{
+          deportes_players_id: deporte,
+        },{
+          tipo_de_cancha_id: tiposCancha
+          }], 
+        [Op.or]: [{
+          deportes_players_id: deporte,
+        }, {
+          tipo_de_cancha_id: tiposCancha
+          }],
+        [Op.or]: [{
+          ubicacionC_provincias: zona
+        }]
       },
       
     })
@@ -176,6 +186,8 @@ const userPlayerController = {
     Promise
       .all([canchas, ])
       .then(([canchas, ]) => {
+      
+      
 
       res.render("partial/userPlayer/elegirCancha", {
         canchas,

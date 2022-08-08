@@ -76,7 +76,7 @@
         <div class="tarjeta">
             <div class="item-tarjeta">
                 <label >Deporte:</label>
-                <select class="form-control" id="deporte1" name="deporte">
+                <select class="form-control" id="deporte1" name="deporte" required>
                     <option value="" disabled selected>Buscar por deporte</option>
                     <% deportes.forEach(deporte => { %>
                     <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
@@ -88,7 +88,7 @@
                 <select class="form-control" id="zonaDeJuego" name="zonas">
                     <option value="" disabled selected> Buscar por zona de juego</option>
                     <% zonas.forEach(zonas => { %>
-                    <option value="<%= zonas.id %>"><%= zonas.provincia %></option>
+                    <option value="<%= zonas.provincia %>"><%= zonas.provincia %></option>
                     <% }); %>
                 </select>
             </div>
@@ -106,7 +106,7 @@
 
             <div class="item-tarjeta">
                 <label >Tipo de la cancha:</label>
-                 <select class="form-control" id="tiposCancha" name="tiposCancha">
+                 <select class="form-control" id="tiposCancha" name="tiposCancha" required>
                      <option value="" disabled selected>Buscar por material de la cancha</option>
                      <% tiposCancha.forEach(tiposCancha => { %>
                      <option value="<%= tiposCancha.id %>"><%= tiposCancha.material %></option>
