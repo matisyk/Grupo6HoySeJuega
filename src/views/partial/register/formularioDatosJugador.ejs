@@ -228,7 +228,7 @@
               <div class="entre-divs">
                 <label for="horarios">Horarios para jugar <span class="asterisco">*</span></label>
                 <select class="form-control" id="horarios" name="hora1">
-                  <option value="" disabled selected> Horarios para jugar</option>
+                  <option value="" disabled selected> Seleccionar</option>
                   <% horarios.forEach(horarios => { %>
                   <option value="<%= horarios.id %>"><%= horarios.hora %></option>
                   <% }); %>
