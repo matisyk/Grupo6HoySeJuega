@@ -176,9 +176,9 @@ const userPlayerController = {
         }, {
           tipo_de_cancha_id: tiposCancha
           }],
-        [Op.or]: [{
-          ubicacionC_provincias: zona
-        }]
+        //[Op.or]: [{
+          //ubicacionC_provincias: zona
+       // }]
       },
       
     })
