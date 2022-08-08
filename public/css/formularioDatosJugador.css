@@ -39,7 +39,7 @@ h1 {
 }
 
 .formulario-div {
-  width: 70%;
+  width: 80%;
   font-size: 20px;
   margin: auto;
 }
@@ -67,7 +67,7 @@ select{
 }
 
 .div1 {
-  padding: 20px;
+  padding: 3.5%;
   background: #ffffff;
   box-shadow: 10px 10px 64px 0px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 10px 10px 64px 0px rgba(58, 58, 58, 0.75);
@@ -143,7 +143,6 @@ font-size: 10px;
 }
 
 .mobile{
-  margin-left: -1.4rem;
   display: flex;
 }
 
