@@ -38,7 +38,7 @@
           <div class="input-group">
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="nombre">Nombre: </label>
+                <label for="nombre">Nombre <span class="asterisco">*</span></label>
                 <input type="text" class="form-control" <%= locals.errors && errors.nombre ? 'is-invalid' : null %>
                   id="nombre" name="nombre" value="<%= locals.oldData ? oldData.nombre : null %>">
                 <% if (locals.errors && errors.nombre) { %>
@@ -49,7 +49,7 @@
               </div>
               <br>
               <div class="entre-divs">
-                <label for="apellido">Apellido:</label>
+                <label for="apellido">Apellido <span class="asterisco">*</span></label>
                 <input type="text" class="form-control" <%= locals.errors && errors.apellido ? 'is-invalid' : null %>
                   id="apellido" name="apellido" value="<%= locals.oldData ? oldData.apellido : null %>">
                 <% if (locals.errors && errors.apellido) { %>
@@ -63,7 +63,7 @@
 
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="email">Mail: </label>
+                <label for="email">Mail <span class="asterisco">*</span></label>
                 <input id="email" class="form-control" <%= locals.errors && errors.email ? 'is-invalid' : null %>"
                   name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
                 <% if (locals.errors && errors.email) { %>
@@ -74,7 +74,7 @@
               </div>
               <br>
               <div class="entre-divs">
-                <label for="contraseña">Contraseña: </label>
+                <label for="contraseña">Contraseña <span class="asterisco">*</span></label>
                 <input id="pwd" name="password"
                   class="form-control" <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
                 <% if (locals.errors && errors.password) { %>
@@ -88,7 +88,7 @@
 
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="telefono">Telefono:</label>
+                <label for="telefono">Telefono <span class="asterisco">*</span></label>
                 <input type="number" class="form-control" <%= locals.errors && errors.telefono ? 'is-invalid' : null %>
                   id="telefono" name="telefono" value="<%= locals.oldData ? oldData.telefono : null %>">
                 <% if (locals.errors && errors.telefono) { %>
@@ -99,7 +99,7 @@
               </div>
               <br>
               <div class="entre-divs">
-                <label for="telefono2">Contacto de emergencia:</label>
+                <label for="telefono2">Contacto de emergencia</label>
                 <input type="number" class="form-control" id="telefono2" name="telefono2">
               </div>
             </div>
@@ -107,7 +107,7 @@
 
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="edad">Fecha de Nacimiento:</label>
+                <label for="edad">Fecha de Nacimiento <span class="asterisco">*</span></label>
                 <input type="date" class="form-control" <%= locals.errors && errors.edad ? 'is-invalid' : null %>"
                   id="edad" name="edad" value="<%= locals.oldData ? oldData.edad : null %>">
                 <% if (locals.errors && errors.edad) { %>
@@ -118,7 +118,7 @@
               </div>
               <br>
               <div class="entre-divs">
-                <label for="">Cargar imagen de perfil:</label>
+                <label for="">Cargar imagen de perfil</label>
                 <div class="contenedor-input">
                   <input class="input-imagen-escondido imagen" type="file" name="imagenJugador" accept=".jpg" multiple>
                 <!---  <div class="input-imagen-visible">Elegir archivos</div>-->
@@ -129,16 +129,21 @@
 
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="zonaDeJuego">Zona de juego:</label>
+                <label for="zonaDeJuego">Zona de juego <span class="asterisco">*</span></label>
                 <select class="form-control" id="zonaDeJuego" name="zonasdejuego">
                   <option value="" disabled selected> Zona de juego:</option>
                   <% zonasdejuego.forEach(zonasdejuego => { %>
                   <option value="<%= zonasdejuego.id %>"><%= zonasdejuego.provincia %></option>
                   <% }); %>
                 </select>
+                <% if (locals.errors && errors.zonasdejuego) { %>
+                  <div class="text-danger msg">
+                    <%= errors.zonasdejuego.msg %>
+                  </div>
+                <% } %>
               </div>
               <div class="entre-divs">
-                <label for="autoValoracion">Auto valoración:</label>
+                <label for="autoValoracion">Auto valoración <span class="asterisco">*</span></label>
                 <br>
                 <select class="form-control" name="autoValoracion" id="autoValoracion">
                   <option value="" disabled selected> Elegir opción</option>
@@ -146,6 +151,11 @@
                   <option value="<%=valoraciones.id%>"><%=valoraciones.tipo%></option>
                   <% }); %>
                 </select>
+                <% if (locals.errors && errors.autoValoracion) { %>
+                  <div class="text-danger msg">
+                    <%= errors.autoValoracion.msg %>
+                  </div>
+                <% } %>
               </div>
               <br>
             </div>
@@ -153,7 +163,7 @@
 
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="deporte">Deporte que juego:</label>
+                <label for="deporte">Deporte que juego <span class="asterisco">*</span></label>
                 <br>
                 <select class="form-control" id="deporte1" name="deporte1">
                   <option value="" disabled selected> Elegir</option>
@@ -161,6 +171,11 @@
                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
                   <% }); %>
                 </select>
+                <% if (locals.errors && errors.deporte1) { %>
+                  <div class="text-danger msg">
+                    <%= errors.deporte1.msg %>
+                  </div>
+                <% } %>
                 <br>
                 <select class="form-control" id="deporte2" name="deporte2">
                   <option value="" disabled selected> Elegir</option>
@@ -168,9 +183,14 @@
                   <option value="<%= deporte.id %>"><%= deporte.deporte %></option>
                   <% }); %>
                 </select>
+                <% if (locals.errors && errors.deporte2) { %>
+                  <div class="text-danger msg">
+                    <%= errors.deporte2.msg %>
+                  </div>
+                <% } %>
               </div>
               <div class="entre-divs">
-                <label for="categoria">Posición:</label>
+                <label for="categoria">Posición <span class="asterisco">*</span></label>
                 <input type="text" class="form-control" <%= locals.errors && errors.categoria ? 'is-invalid' : null %>
                   id="categoria" name="categoria" value="<%= locals.oldData ? oldData.categoria : null %>">
                 <% if (locals.errors && errors.categoria) { %>
@@ -179,29 +199,45 @@
                 </div>
                 <% } %>
                 <br>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" <%= locals.errors && errors.categoria2 ? 'is-invalid' : null %>
+                  id="categoria" name="categoria2" value="<%= locals.oldData ? oldData.categoria2 : null %>">
+                <% if (locals.errors && errors.categoria2) { %>
+                <div class="text-danger msg">
+                  <%= errors.categoria2.msg %>
+                </div>
+                <% } %>
               </div>
             </div>
             <br>
 
             <div class="horizontal">
               <div class="entre-divs">
-                <label for="dias">Dias para jugar:</label>
-                <select class="form-control" id="dias" name="dia1" required>
+                <label for="dias">Dias para jugar <span class="asterisco">*</span></label>
+                <select class="form-control" id="dias" name="dia1">
                   <option value="" disabled selected> Dias para jugar</option>
                   <% dias.forEach(dias => { %>
                   <option value="<%= dias.id %>"><%= dias.dia %></option>
                   <% }); %>
                 </select>
+                <% if (locals.errors && errors.dia1) { %>
+                  <div class="text-danger msg">
+                    <%= errors.dia1.msg %>
+                  </div>
+                  <% } %>
               </div>
               <div class="entre-divs">
-                <label for="horarios">Horarios para jugar:</label>
-                <select class="form-control" id="horarios" name="hora1" required>
+                <label for="horarios">Horarios para jugar <span class="asterisco">*</span></label>
+                <select class="form-control" id="horarios" name="hora1">
                   <option value="" disabled selected> Horarios para jugar</option>
                   <% horarios.forEach(horarios => { %>
                   <option value="<%= horarios.id %>"><%= horarios.hora %></option>
                   <% }); %>
                 </select>
+                <% if (locals.errors && errors.hora1) { %>
+                  <div class="text-danger msg">
+                    <%= errors.hora1.msg %>
+                  </div>
+                  <% } %>
               </div>
             </div>
             

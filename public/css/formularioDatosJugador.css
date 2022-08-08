@@ -58,6 +58,12 @@ select{
   font-family: 'Helvetica', Arial, Lucida Grande, sans-serif !important;
 }
 
+.asterisco{
+  color:rgba(255, 0, 0, 0.721);
+  position: relative;
+  top: -0.3rem;
+}
+
 .div1 {
   padding: 20px;
   background: #ffffff;
