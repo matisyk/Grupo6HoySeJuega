@@ -20,6 +20,8 @@ h1 {
   width: 40%;
   position: relative;
   box-shadow: -30px 10px 60px -10px rgb(0 0 0 / 75%);
+  padding: 280px 2%;
+  color: white;
 }
 .logo img{
   width: 100%;
@@ -27,6 +29,46 @@ h1 {
   left: 0;
   visibility: hidden
 }
+/* Password strength */
+.show-pass{
+  position: absolute;
+  top: 25%;
+  left: 83%;
+}
+.progress {
+  height: 3px;
+}
+.progress-bar-danger {
+  background-color: #e90f10;
+}
+.progress-bar-warning {
+  background-color: #ffad00;
+}
+.progress-bar-success {
+  background-color: #02b502;
+}
+.password{
+  position: relative;
+}
+.fa-circle {
+  font-size: 6px;
+}
+.fa-check {
+  color:#02b502
+}
+.margin{
+  margin-bottom: 6px;
+}
+.center{
+  display: flex;
+  align-items: center;
+}
+.validate-form{
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 18px;
+}
+/* Password strength END */
 
 .horizontal{
   margin-top: -1rem;
@@ -50,6 +92,8 @@ h1 {
 }
 .input-group{
   display: block;
+  margin: auto;
+  width: 90%;
 }
 
 input{
@@ -117,6 +161,7 @@ select{
 
 .imagen{
   width: 100%;
+  font-size: 17px;
 }
 /* .input-imagen-escondido{
   font-size: 10px;
@@ -157,8 +202,7 @@ font-size: 10px;
   margin-top: 10px;
 }
 #horarios {
-font-size: 10px;
-width: 50%;
+font-size: 13px;
 margin-top: 5px;
 margin-bottom: 5px;
 }
@@ -221,9 +265,6 @@ button:hover span {
 button:active {
   transform: scale(0.95);
 }
-input{
-  max-width: 80%;
- }
 
 @media (min-width: 768px){
   .horizontal{
@@ -269,7 +310,11 @@ width: 80%;
    .contenedor-imagen{
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
+    padding: 300px 2%;
    }
+   .validate-form{
+    margin-bottom: 14px;
+  }
 }
 
 @media (min-width: 1024px){
@@ -277,7 +322,13 @@ width: 80%;
    margin: 100px auto;
 width: 70%; 
   }
-
+  .contenedor-imagen{
+    padding: 245px 2%;
+   }
+  .progress{
+    width: 95%;
+    margin: auto;
+  }
 }
 @media (min-width: 1440px){
   .contenedor-general{
@@ -287,14 +338,18 @@ width: 60%;
   .img-cancha{
     margin-left: 30px;
    }
-
+  .progress{
+    width: 80%;
+  }
 }
 
 @media (min-width: 1700px){
   .img-cancha{
     margin-left: 100px;
    }
-
+   .progress{
+    width: 66%;
+  }
 }
 @keyframes fly-1 {
   from {
