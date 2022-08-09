@@ -20,6 +20,8 @@ h1 {
   width: 40%;
   position: relative;
   box-shadow: -30px 10px 60px -10px rgb(0 0 0 / 75%);
+  padding: 185px 60px;
+  color: white;
 }
 .logo img{
   width: 100%;
@@ -27,6 +29,38 @@ h1 {
   left: 0;
   visibility: hidden
 }
+
+/* Password strength */
+.show-pass{
+  position: absolute;
+  top: 25%;
+  left: 83%;
+}
+.progress {
+  height: 3px;
+}
+.progress-bar-danger {
+  background-color: #e90f10;
+}
+.progress-bar-warning {
+  background-color: #ffad00;
+}
+.progress-bar-success {
+  background-color: #02b502;
+}
+.password{
+  position: relative;
+}
+.fa-circle {
+  font-size: 6px;
+}
+.fa-check {
+  color:#02b502
+}
+.margin{
+  margin-bottom: 6px;
+}
+/* Password strength END */
 
 .label-img{
   margin: 0;

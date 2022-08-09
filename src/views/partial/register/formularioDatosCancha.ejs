@@ -11,7 +11,7 @@
   <!--=====================================
 	PLUGINS DE CSS
 	======================================-->
-
+  <%- include('../css-externos') %>
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="/css/formularioDatosCancha.css" />
@@ -25,11 +25,87 @@
 
 <body>
   <div class="contenedor-general">
-    <div class="contenedor-imagen">
+
+    <section class="contenedor-imagen">
+
       <div class="logo">
         <img src="/img/logo-fondo-transparente.png" alt="">
       </div>
-    </div>
+
+      <div id="validateForm">
+
+        <div>
+          <label for="email">Mail <span class="asterisco">*</span></label>
+          <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+            name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
+          <% if (locals.errors && errors.email) { %>
+          <div class="text-danger msg">
+            <%= errors.email.msg %>
+          </div>
+          <% } %>
+        </div>
+
+        <br>
+        <div>
+          <label for="Contraseña" >Contraseña <span class="asterisco">*</span></label>
+            <input id="password" name="password"
+              class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
+            <% if (locals.errors && errors.password) { %>
+            <div class="text-danger msg">
+              <%= errors.password.msg 
+              %>
+            </div>
+            <% } %>
+            
+        </div>
+        
+        
+        <div id="popover-password" class="margin">
+          <p><span id="result"></span></p>
+          <div class="progress">
+            <div id="password-strength"
+              class="progress-bar"
+              role="progressbar" 
+              aria-valuenow="40"
+              aria-valuemin="0"
+              aria-valuemax="100"
+              style="width:0%">
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <ul class="list-unstyled">
+            <li>
+              <span class="low-upper-case">
+                <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene mayúsculas y minúsculas
+              </span>
+            </li>
+
+            <li>
+              <span class="one-number">
+                <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene números y letras
+              </span>
+            </li>
+
+            <li>
+              <span class="one-special-char">
+                <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene algún caracter especial
+              </span>
+            </li>
+
+            <li>
+              <span class="eight-character">
+                <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene más de siete caracteres
+              </span>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+    </section>
 
     <div class="formulario-div2">
     <form class="div2" action="/register/registerOwner" method="POST" enctype="multipart/form-data">
@@ -58,31 +134,6 @@
               <% if (locals.errors && errors.apellido) { %>
               <div class="text-danger msg">
                 <%= errors.apellido.msg %>
-              </div>
-              <% } %>
-            </div>
-          </div>
-            <br>
-            <div class="horizontal">
-            <div>
-              <label for="email">Mail <span class="asterisco">*</span></label>
-              <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
-                name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
-              <% if (locals.errors && errors.email) { %>
-              <div class="text-danger msg">
-                <%= errors.email.msg %>
-              </div>
-              <% } %>
-            </div>
-            <br>
-            <div>
-              <label for="contraseña">Contraseña <span class="asterisco">*</span></label>
-              <input id="pwd" name="password"
-                class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
-              <% if (locals.errors && errors.password) { %>
-              <div class="text-danger msg">
-                <%= errors.password.msg 
-                %>
               </div>
               <% } %>
             </div>
@@ -313,7 +364,7 @@
       </div>
   </div>
   </form>
-
+  <script src="/js/password.js"></script>
 </body>
 
 </html>
