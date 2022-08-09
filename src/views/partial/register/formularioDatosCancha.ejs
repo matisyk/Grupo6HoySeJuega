@@ -34,9 +34,9 @@
 
       <div id="validateForm">
 
-        <div>
+        <div class="validate-form">
           <label for="email">Mail <span class="asterisco">*</span></label>
-          <input id="email" class="form-control <%= locals.errors && errors.email ? 'is-invalid' : null %>"
+          <input id="email" class="form-control input <%= locals.errors && errors.email ? 'is-invalid' : null %>"
             name="email" type="email" value="<%= locals.oldData ? oldData.email : null %>">
           <% if (locals.errors && errors.email) { %>
           <div class="text-danger msg">
@@ -46,10 +46,10 @@
         </div>
 
         <br>
-        <div>
+        <div class="validate-form">
           <label for="Contraseña" >Contraseña <span class="asterisco">*</span></label>
             <input id="password" name="password"
-              class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
+              class="form-control input <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
             <% if (locals.errors && errors.password) { %>
             <div class="text-danger msg">
               <%= errors.password.msg 
@@ -74,28 +74,28 @@
           </div>
         </div>
 
-        <div>
+        <div class="validate-form">
           <ul class="list-unstyled">
             <li>
-              <span class="low-upper-case">
+              <span class="low-upper-case center">
                 <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene mayúsculas y minúsculas
               </span>
             </li>
 
             <li>
-              <span class="one-number">
+              <span class="one-number center">
                 <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene números y letras
               </span>
             </li>
 
             <li>
-              <span class="one-special-char">
+              <span class="one-special-char center">
                 <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene algún caracter especial
               </span>
             </li>
 
             <li>
-              <span class="eight-character">
+              <span class="eight-character center">
                 <i class="fas fa-circle" aria-hidden="true"></i>&nbsp;Tiene más de siete caracteres
               </span>
             </li>
@@ -327,7 +327,7 @@
           <br>
           <div class="img-cancha">
             <label for="imagenOtras">Cargar imágen del logo <span class="asterisco">*</span><br>
-              <input type="file" name="logo" accept="all"   multiple /></label>
+              <input class="input-img" type="file" name="logo" accept="all"   multiple /></label>
           </div>
           <br>
         </div>
