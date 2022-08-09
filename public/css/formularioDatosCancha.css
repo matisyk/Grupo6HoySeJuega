@@ -68,7 +68,22 @@ h1 {
   width: fit-content;
   margin: auto;
 }
+
+#popover-password{
+  width: 90%;
+  margin-bottom: 0.6rem;
+}
 /* Password strength END */
+
+.icon-div{
+  position: relative;
+}
+
+#togglePassword{
+  position: absolute;
+  right: 1%;
+  top: 20%;
+}
 
 .label-img{
   margin: 0;
@@ -136,10 +151,10 @@ input{
 }
 .form-control{
   margin-bottom: 2%;
-  max-width: 80%;
+  max-width: 100%;
 }
 .input{
-  max-width: 170px;
+  max-width: 100%;
 }
 
 .entre-divs {
