@@ -45,7 +45,7 @@
       <div class="validate-form">
         <label for="contraseña">Contraseña <span class="asterisco">*</span></label>
         <input id="password" name="password"
-          class="form-control" <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
+          class="form-control <%= locals.errors && errors.password ? 'is-invalid' : null %>" type="password">
         <% if (locals.errors && errors.password) { %>
         <div class="text-danger msg">
           <%= errors.password.msg %>
