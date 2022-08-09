@@ -104,6 +104,16 @@ select{
   font-family: 'Helvetica', Arial, Lucida Grande, sans-serif !important;
 }
 
+.icon-div{
+  position: relative;
+}
+
+#togglePassword{
+  position: absolute;
+  right: 1%;
+  top: 20%;
+}
+
 .asterisco{
   color:rgba(255, 0, 0, 0.721);
   position: relative;
